@@ -1,0 +1,85 @@
+"""One scan cycle: SCOUT -> ANALYST score -> AUDITOR -> log everything -> sample prices."""
+import time
+
+from .filters import scout, buys_per_buyer
+from .score import score as score_pool
+from .notify import telegram
+
+
+def fetch_candidates(gecko, cfg, log=print):
+    seen = {}
+    for page in range(1, cfg.get("gecko_new_pools_pages", 3) + 1):
+        try:
+            for p in gecko.new_pools(page):
+                seen.setdefault(p.address, p)
+        except Exception as e:
+            log(f"[scout] new_pools page {page} failed: {e}")
+    for page in range(1, cfg.get("gecko_trending_pages", 2) + 1):
+        try:
+            for p in gecko.trending_pools(page):
+                seen[p.address] = p  # trending data is at least as fresh
+        except Exception as e:
+            log(f"[scout] trending page {page} failed: {e}")
+    ignore = {s.upper() for s in cfg.get("ignore_base_symbols", [])}
+    return [p for p in seen.values() if (p.symbol or "").upper() not in ignore]
+
+
+def run_cycle(gecko, auditor, db, cfg, now=None, log=print, alert=True):
+    now = now if now is not None else time.time()
+    lab = cfg["lab"]
+    track_s = lab["track_hours"] * 3600
+    threshold = cfg["score"]["pass_threshold"]
+
+    pools = fetch_candidates(gecko, cfg, log)
+    results = []
+    for p in pools:
+        passed, kills, flags = scout(p, cfg, now)
+        sc, parts, final, audit = None, {}, False, None
+        if passed:
+            sc, parts = score_pool(p)
+            if sc < threshold:
+                kills = kills + [f"score_below({sc})"]
+            elif cfg["audit"].get("enabled", True) and auditor is not None:
+                audit = auditor.audit(p.token_mint)  # (ok, kills, notes)
+                kills = kills + audit[1]
+                final = audit[0]
+            else:
+                final = True
+
+        trackable = (p.liquidity_usd or 0) >= lab["min_liquidity_to_track_usd"]
+        db.upsert_first_seen(p, now, kills, now + track_s if trackable else now)
+        if audit is not None:
+            db.set_audit(p.address, *audit)
+        if final:
+            db.mark_first_pass(p.address, now, p.price_usd, sc)
+            db.extend_tracking(p.address, now + track_s)
+        # log an observation when the pool is new, when its decision changes, or while it passes scout
+        prev = db.last_obs_state(p.address)
+        if prev is None or passed or prev != (int(passed), int(final)):
+            db.add_observation(now, p, passed, kills, flags, sc, parts, final)
+        if (trackable or final) and db.sample_due(p.address, now):
+            db.add_sample(p.address, now, p.price_usd, p.liquidity_usd)
+        results.append(("pool", p, passed, kills, flags, sc, final))
+
+        if final and alert and not db.was_alerted(p.address):
+            bpb = buys_per_buyer(p)
+            msg = (f"TRENCHLAB PASS (paper)\n${p.symbol}  score {sc}\n"
+                   f"liq ${p.liquidity_usd:,.0f} | 1h vol ${p.vol_h1:,.0f}\n"
+                   f"buyers 1h {p.buyers_h1} | buys/buyer {bpb:.2f}\n"
+                   f"1h {p.chg_h1:+.0f}% | {' '.join(flags)}\n{p.gecko_url()}\n"
+                   "Verify holders + Bubblemaps yourself. NFA.")
+            telegram(msg)
+            db.mark_alerted(p.address, now)
+    db.commit()
+
+    # sample prices for everything still being tracked that we didn't just see
+    seen_now = {p.address for p in pools}
+    to_track = [a for a in db.tracked_addresses(now) if a not in seen_now and db.sample_due(a, now)]
+    if to_track:
+        try:
+            for tp in gecko.pools_multi(to_track):
+                db.add_sample(tp.address, now, tp.price_usd, tp.liquidity_usd)
+        except Exception as e:
+            log(f"[lab] tracking fetch failed: {e}")
+        db.commit()
+    return [r for r in results if r[0] == "pool"], len(to_track)

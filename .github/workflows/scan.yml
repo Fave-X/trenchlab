@@ -1,0 +1,71 @@
+name: trench-scan
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"   # every 10 min (GitHub may delay runs a few minutes)
+  workflow_dispatch: {}      # lets you click "Run workflow" manually
+
+permissions:
+  contents: write            # needed to update REPORT.md and the data release
+
+concurrency:
+  group: trench-scan         # never run two scans at once (protects the database)
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Restore database from the 'data' release
+        run: |
+          gh release view data >/dev/null 2>&1 || gh release create data --title "TrenchLab data" \
+            --notes "Rolling database store. trenchlab.db.gz is overwritten every run. Not a software release."
+          if gh release download data -p trenchlab.db.gz --clobber; then gunzip -f trenchlab.db.gz; fi
+          ls -la trenchlab.db 2>/dev/null || echo "no database yet - starting fresh"
+
+      - name: First-run probe (saves raw API samples for field checking)
+        if: ${{ hashFiles('probe/*.json') == '' }}
+        run: python -m trenchlab probe || true
+
+      - name: Scan
+        run: python -m trenchlab scan --db trenchlab.db
+
+      - name: Report
+        if: always()
+        run: |
+          if [ -f trenchlab.db ]; then
+            { echo "# TrenchLab report"; echo; echo "Updated: $(date -u '+%Y-%m-%d %H:%M UTC')"; echo;
+              echo '```'; python -m trenchlab report --db trenchlab.db; echo '```'; } > REPORT.md
+          fi
+
+      - name: Save database to the 'data' release
+        if: always()
+        run: |
+          if [ -f trenchlab.db ]; then
+            gzip -kf trenchlab.db
+            gh release upload data trenchlab.db.gz --clobber
+            # rolling daily backup, one slot per weekday (7 days of history)
+            cp trenchlab.db.gz "backup-$(date -u +%a).db.gz"
+            gh release upload data "backup-$(date -u +%a).db.gz" --clobber
+          fi
+
+      - name: Commit report (and probe files on first run)
+        if: always()
+        run: |
+          git config user.name "trenchlab-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add REPORT.md probe 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "report: $(date -u '+%Y-%m-%d %H:%M')" && git push || echo "push skipped"
+          fi

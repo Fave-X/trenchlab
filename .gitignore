@@ -1,0 +1,4 @@
+trenchlab.db
+trenchlab.db.gz
+backup-*.db.gz
+__pycache__/

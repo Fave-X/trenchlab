@@ -1,0 +1,48 @@
+{
+  "network": "solana",
+  "scan_interval_minutes": 5,
+  "gecko_min_seconds_between_calls": 2.5,
+  "gecko_new_pools_pages": 3,
+  "gecko_trending_pages": 2,
+
+  "scout": {
+    "min_liquidity_usd": 30000,
+    "min_vol_h1_to_liquidity": 1.0,
+    "require_buys_gt_sells_h1": true,
+    "min_age_hours": 1.0,
+    "max_age_hours": 12.0,
+    "min_unique_buyers_h1": 150,
+    "max_buys_per_buyer_h1": 3.0,
+    "max_price_change_h1_pct": 80,
+    "heating_up_multiplier": 12
+  },
+
+  "audit": {
+    "enabled": true,
+    "use_rugcheck": true,
+    "use_goplus": true,
+    "require_goplus": false,
+    "min_lp_locked_pct": 90,
+    "max_top10_pct": 30,
+    "kill_on_rugcheck_danger": true
+  },
+
+  "score": {
+    "pass_threshold": 60
+  },
+
+  "lab": {
+    "min_liquidity_to_track_usd": 10000,
+    "track_hours": 24,
+    "round_trip_cost_pct": 4.0,
+    "rug_liquidity_drop_pct": 80,
+    "rug_price_drop_pct": 90,
+    "exit_grid": {
+      "stops_pct": [-6, -10, -15, -25],
+      "trail_activate_pct": [12, 20, 30],
+      "trail_distance_pct": 10
+    }
+  },
+
+  "ignore_base_symbols": ["SOL", "WSOL", "USDC", "USDT", "JUP", "JTO", "BONK", "WIF", "RAY", "PYUSD", "USD1", "mSOL", "jitoSOL", "bSOL", "JupSOL"]
+}
