@@ -1,0 +1,2086 @@
+{
+  "data": [
+    {
+      "id": "solana_AMpu22RfszbsKvdQoeCWR196wne1zXo5nCdoGaF1c9MZ",
+      "type": "pool",
+      "attributes": {
+        "base_token_price_usd": "0.00000442608543975576796004144816835686398692049716025231194039827326",
+        "base_token_price_native_currency": "0.00000004587688807105",
+        "quote_token_price_usd": "1955.12307389237826700207660034438036124815828070008924518236526",
+        "quote_token_price_native_currency": "20.2650770408619",
+        "base_token_price_quote_token": "0.000000002263839806",
+        "quote_token_price_base_token": "441727368.462246",
+        "address": "AMpu22RfszbsKvdQoeCWR196wne1zXo5nCdoGaF1c9MZ",
+        "name": "GIF / OPENAI",
+        "pool_created_at": "2026-11-05T09:25:20Z",
+        "fdv_usd": "4494.013333",
+        "market_cap_usd": null,
+        "price_change_percentage": {
+          "m5": "7.804",
+          "m15": "7.804",
+          "m30": "7.804",
+          "h1": "7.804",
+          "h6": "7.804",
+          "h24": "7.804"
+        },
+        "transactions": {
+          "m5": {
+            "buys": 3,
+            "sells": 0,
+            "buyers": 3,
+            "sellers": 0
+          },
+          "m15": {
+            "buys": 3,
+            "sells": 0,
+            "buyers": 3,
+            "sellers": 0
+          },
+          "m30": {
+            "buys": 3,
+            "sells": 0,
+            "buyers": 3,
+            "sellers": 0
+          },
+          "h1": {
+            "buys": 3,
+            "sells": 0,
+            "buyers": 3,
+            "sellers": 0
+          },
+          "h6": {
+            "buys": 3,
+            "sells": 0,
+            "buyers": 3,
+            "sellers": 0
+          },
+          "h24": {
+            "buys": 3,
+            "sells": 0,
+            "buyers": 3,
+            "sellers": 0
+          }
+        },
+        "volume_usd": {
+          "m5": "199.5479239753",
+          "m15": "199.5479239753",
+          "m30": "199.5479239753",
+          "h1": "199.5479239753",
+          "h6": "199.5479239753",
+          "h24": "199.5479239753"
+        },
+        "reserve_in_usd": "3553.776"
+      },
+      "relationships": {
+        "base_token": {
+          "data": {
+            "id": "solana_B4gHqrNtguobX45QUexqQp8UhePSjTdwnXxTcBkWpump",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "solana_PreweJYECqtQwBtpxHL171nL2K6umo692gTm7Q3rpgF",
+            "type": "token"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "pump-fun",
+            "type": "dex"
+          }
+        }
+      }
+    },
+    {
+      "id": "solana_5HCSYxNLJbZji4s1npk1w63z7TU4n2jyKYr2MGRqh3Vx",
+      "type": "pool",
+      "attributes": {
+        "base_token_price_usd": "0.00000278671888640335665233677074248209824053444569528317102345169248",
+        "base_token_price_native_currency": "0.0000000289987953335739",
+        "quote_token_price_usd": "96.477915419218136564242046217999454854552386228",
+        "quote_token_price_native_currency": "1.0",
+        "base_token_price_quote_token": "0.00000002899879533",
+        "quote_token_price_base_token": "34484191.1016294",
+        "address": "5HCSYxNLJbZji4s1npk1w63z7TU4n2jyKYr2MGRqh3Vx",
+        "name": "NABU / SOL",
+        "pool_created_at": "2026-11-05T09:25:20Z",
+        "fdv_usd": "6074.558396",
+        "market_cap_usd": null,
+        "price_change_percentage": {
+          "m5": "11.168",
+          "m15": "11.168",
+          "m30": "11.168",
+          "h1": "11.168",
+          "h6": "11.168",
+          "h24": "11.168"
+        },
+        "transactions": {
+          "m5": {
+            "buys": 2,
+            "sells": 3,
+            "buyers": 1,
+            "sellers": 1
+          },
+          "m15": {
+            "buys": 2,
+            "sells": 3,
+            "buyers": 1,
+            "sellers": 1
+          },
+          "m30": {
+            "buys": 2,
+            "sells": 3,
+            "buyers": 1,
+            "sellers": 1
+          },
+          "h1": {
+            "buys": 2,
+            "sells": 3,
+            "buyers": 1,
+            "sellers": 1
+          },
+          "h6": {
+            "buys": 2,
+            "sells": 3,
+            "buyers": 1,
+            "sellers": 1
+          },
+          "h24": {
+            "buys": 2,
+            "sells": 3,
+            "buyers": 1,
+            "sellers": 1
+          }
+        },
+        "volume_usd": {
+          "m5": "9.899496531",
+          "m15": "9.899496531",
+          "m30": "9.899496531",
+          "h1": "9.899496531",
+          "h6": "9.899496531",
+          "h24": "9.899496531"
+        },
+        "reserve_in_usd": "2653.3712"
+      },
+      "relationships": {
+        "base_token": {
+          "data": {
+            "id": "solana_6gAXMXMwj36ENuyJ1PnZBKExuZwRLqPmSddx8Vcepump",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "solana_So11111111111111111111111111111111111111112",
+            "type": "token"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "pump-fun",
+            "type": "dex"
+          }
+        }
+      }
+    },
+    {
+      "id": "solana_HhbYwQ9vj5UJftUqpCiD8nDodPKEDLMRygcRpZRm34Fe",
+      "type": "pool",
+      "attributes": {
+        "base_token_price_usd": "0.00000272739046500826518832396728525614582728904016106295707610531596",
+        "base_token_price_native_currency": "0.0000000282886172333343",
+        "quote_token_price_usd": "96.413000413268749386870924246498655379380303294",
+        "quote_token_price_native_currency": "1.0",
+        "base_token_price_quote_token": "0.00000002828861723",
+        "quote_token_price_base_token": "35349907.4115802",
+        "address": "HhbYwQ9vj5UJftUqpCiD8nDodPKEDLMRygcRpZRm34Fe",
+        "name": "XI / SOL",
+        "pool_created_at": "2026-11-05T09:25:17Z",
+        "fdv_usd": "2700.038843",
+        "market_cap_usd": null,
+        "price_change_percentage": {
+          "m5": "0",
+          "m15": "0",
+          "m30": "0",
+          "h1": "0",
+          "h6": "0",
+          "h24": "0"
+        },
+        "transactions": {
+          "m5": {
+            "buys": 2,
+            "sells": 0,
+            "buyers": 2,
+            "sellers": 0
+          },
+          "m15": {
+            "buys": 2,
+            "sells": 0,
+            "buyers": 2,
+            "sellers": 0
+          },
+          "m30": {
+            "buys": 2,
+            "sells": 0,
+            "buyers": 2,
+            "sellers": 0
+          },
+          "h1": {
+            "buys": 2,
+            "sells": 0,
+            "buyers": 2,
+            "sellers": 0
+          },
+          "h6": {
+            "buys": 2,
+            "sells": 0,
+            "buyers": 2,
+            "sellers": 0
+          },
+          "h24": {
+            "buys": 2,
+            "sells": 0,
+            "buyers": 2,
+            "sellers": 0
+          }
+        },
+        "volume_usd": {
+          "m5": "29.3001837708",
+          "m15": "29.3001837708",
+          "m30": "29.3001837708",
+          "h1": "29.3001837708",
+          "h6": "29.3001837708",
+          "h24": "29.3001837708"
+        },
+        "reserve_in_usd": "2164.497"
+      },
+      "relationships": {
+        "base_token": {
+          "data": {
+            "id": "solana_FLCpMHzsKtdtDibo4Vv9VM9vb9MiL2naCfVymetrpump",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "solana_So11111111111111111111111111111111111111112",
+            "type": "token"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "pump-fun",
+            "type": "dex"
+          }
+        }
+      }
+    },
+    {
+      "id": "solana_98fq3WXG5BduFohXWQHVDWbacprZiWg4iPMSGULZvHhX",
+      "type": "pool",
+      "attributes": {
+        "base_token_price_usd": "0.00028456624994294643939151311249515685023777275",
+        "base_token_price_native_currency": "0.00000295711368289342",
+        "quote_token_price_usd": "96.58429232638903121792584373",
+        "quote_token_price_native_currency": "1.0",
+        "base_token_price_quote_token": "0.000002957113683",
+        "quote_token_price_base_token": "338167.587463712",
+        "address": "98fq3WXG5BduFohXWQHVDWbacprZiWg4iPMSGULZvHhX",
+        "name": "ZELDA / SOL",
+        "pool_created_at": "2026-11-05T09:25:14Z",
+        "fdv_usd": "281225.9413",
+        "market_cap_usd": null,
+        "price_change_percentage": {
+          "m5": "-0.944",
+          "m15": "-0.944",
+          "m30": "-0.944",
+          "h1": "-0.944",
+          "h6": "-0.944",
+          "h24": "-0.944"
+        },
+        "transactions": {
+          "m5": {
+            "buys": 3,
+            "sells": 6,
+            "buyers": 3,
+            "sellers": 5
+          },
+          "m15": {
+            "buys": 3,
+            "sells": 6,
+            "buyers": 3,
+            "sellers": 5
+          },
+          "m30": {
+            "buys": 3,
+            "sells": 6,
+            "buyers": 3,
+            "sellers": 5
+          },
+          "h1": {
+            "buys": 3,
+            "sells": 6,
+            "buyers": 3,
+            "sellers": 5
+          },
+          "h6": {
+            "buys": 3,
+            "sells": 6,
+            "buyers": 3,
+            "sellers": 5
+          },
+          "h24": {
+            "buys": 3,
+            "sells": 6,
+            "buyers": 3,
+            "sellers": 5
+          }
+        },
+        "volume_usd": {
+          "m5": "82.0184119166",
+          "m15": "82.0184119166",
+          "m30": "82.0184119166",
+          "h1": "82.0184119166",
+          "h6": "82.0184119166",
+          "h24": "82.0184119166"
+        },
+        "reserve_in_usd": "44.5148"
+      },
+      "relationships": {
+        "base_token": {
+          "data": {
+            "id": "solana_E1PpVMPtWPhPUKL7DbF6f2eAmuwo3CHBkKusKk54pump",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "solana_So11111111111111111111111111111111111111112",
+            "type": "token"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "orca",
+            "type": "dex"
+          }
+        }
+      }
+    },
+    {
+      "id": "solana_8cN55ZcNqyhv7HyU7fUxdkrmfwYxwFB7mH6v3XzBnBcx",
+      "type": "pool",
+      "attributes": {
+        "base_token_price_usd": "0.00000723242237222309935538659866826331238935100414220154141021982258",
+        "base_token_price_native_currency": "0.0000000750150921727223",
+        "quote_token_price_usd": "96.412897228339676674128902827160230127072293833",
+        "quote_token_price_native_currency": "1.0",
+        "base_token_price_quote_token": "0.00000007501509217",
+        "quote_token_price_base_token": "13330650.8202043",
+        "address": "8cN55ZcNqyhv7HyU7fUxdkrmfwYxwFB7mH6v3XzBnBcx",
+        "name": "lptp / SOL",
+        "pool_created_at": "2026-11-05T09:25:09Z",
+        "fdv_usd": "12147.456544",
+        "market_cap_usd": null,
+        "price_change_percentage": {
+          "m5": "123.883",
+          "m15": "123.883",
+          "m30": "123.883",
+          "h1": "123.883",
+          "h6": "123.883",
+          "h24": "123.883"
+        },
+        "transactions": {
+          "m5": {
+            "buys": 5,
+            "sells": 1,
+            "buyers": 2,
+            "sellers": 1
+          },
+          "m15": {
+            "buys": 5,
+            "sells": 1,
+            "buyers": 2,
+            "sellers": 1
+          },
+          "m30": {
+            "buys": 5,
+            "sells": 1,
+            "buyers": 2,
+            "sellers": 1
+          },
+          "h1": {
+            "buys": 5,
+            "sells": 1,
+            "buyers": 2,
+            "sellers": 1
+          },
+          "h6": {
+            "buys": 5,
+            "sells": 1,
+            "buyers": 2,
+            "sellers": 1
+          },
+          "h24": {
+            "buys": 5,
+            "sells": 1,
+            "buyers": 2,
+            "sellers": 1
+          }
+        },
+        "volume_usd": {
+          "m5": "99.0173440143",
+          "m15": "99.0173440143",
+          "m30": "99.0173440143",
+          "h1": "99.0173440143",
+          "h6": "99.0173440143",
+          "h24": "99.0173440143"
+        },
+        "reserve_in_usd": "5681.1675"
+      },
+      "relationships": {
+        "base_token": {
+          "data": {
+            "id": "solana_9QkuufydDNFKkd6VyLSwsLovAB2ytwZq4f7UNsUdpump",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "solana_So11111111111111111111111111111111111111112",
+            "type": "token"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "pump-fun",
+            "type": "dex"
+          }
+        }
+      }
+    },
+    {
+      "id": "solana_BEFxg9WNuhJQVMAwGcBe6GvLojqZm94RzMi1wUGyJzkH",
+      "type": "pool",
+      "attributes": {
+        "base_token_price_usd": "0.00000069894376934332581156805885030168241953004531928660849977399727",
+        "base_token_price_native_currency": "0.00000000724463309860797",
+        "quote_token_price_usd": "96.477455770344715500368376780828308760075337691",
+        "quote_token_price_native_currency": "1.0",
+        "base_token_price_quote_token": "0.000000007244633099",
+        "quote_token_price_base_token": "138033215.262778",
+        "address": "BEFxg9WNuhJQVMAwGcBe6GvLojqZm94RzMi1wUGyJzkH",
+        "name": "MIKU / SOL",
+        "pool_created_at": "2026-11-05T09:25:09Z",
+        "fdv_usd": "1261.3029748",
+        "market_cap_usd": null,
+        "price_change_percentage": {
+          "m5": "-76.65",
+          "m15": "-76.65",
+          "m30": "-76.65",
+          "h1": "-76.65",
+          "h6": "-76.65",
+          "h24": "-76.65"
+        },
+        "transactions": {
+          "m5": {
+            "buys": 10,
+            "sells": 11,
+            "buyers": 3,
+            "sellers": 3
+          },
+          "m15": {
+            "buys": 10,
+            "sells": 11,
+            "buyers": 3,
+            "sellers": 3
+          },
+          "m30": {
+            "buys": 10,
+            "sells": 11,
+            "buyers": 3,
+            "sellers": 3
+          },
+          "h1": {
+            "buys": 10,
+            "sells": 11,
+            "buyers": 3,
+            "sellers": 3
+          },
+          "h6": {
+            "buys": 10,
+            "sells": 11,
+            "buyers": 3,
+            "sellers": 3
+          },
+          "h24": {
+            "buys": 10,
+            "sells": 11,
+            "buyers": 3,
+            "sellers": 3
+          }
+        },
+        "volume_usd": {
+          "m5": "80.0062892248",
+          "m15": "80.0062892248",
+          "m30": "80.0062892248",
+          "h1": "80.0062892248",
+          "h6": "80.0062892248",
+          "h24": "80.0062892248"
+        },
+        "reserve_in_usd": "2640.1199"
+      },
+      "relationships": {
+        "base_token": {
+          "data": {
+            "id": "solana_AE625bPTeN92tBQraEDR38LUxB3uwqgCcTto2dn9pump",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "solana_So11111111111111111111111111111111111111112",
+            "type": "token"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "pump-fun",
+            "type": "dex"
+          }
+        }
+      }
+    },
+    {
+      "id": "solana_5gZxTuEU4hDqVi7YLkmB1JAnzCnWxgAYymH1LgdbQ4ub",
+      "type": "pool",
+      "attributes": {
+        "base_token_price_usd": "0.000002724458750710393582207359843212855299810550062528067404247157",
+        "base_token_price_native_currency": "0.0000000282582147697098",
+        "quote_token_price_usd": "96.412981956339368198916464242874775834037314965",
+        "quote_token_price_native_currency": "1.0",
+        "base_token_price_quote_token": "0.00000002825821477",
+        "quote_token_price_base_token": "35387939.6893787",
+        "address": "5gZxTuEU4hDqVi7YLkmB1JAnzCnWxgAYymH1LgdbQ4ub",
+        "name": "BM / SOL",
+        "pool_created_at": "2026-11-05T09:25:03Z",
+        "fdv_usd": "2724.458751",
+        "market_cap_usd": null,
+        "price_change_percentage": {
+          "m5": "0",
+          "m15": "0",
+          "m30": "0",
+          "h1": "0",
+          "h6": "0",
+          "h24": "0"
+        },
+        "transactions": {
+          "m5": {
+            "buys": 1,
+            "sells": 0,
+            "buyers": 1,
+            "sellers": 0
+          },
+          "m15": {
+            "buys": 1,
+            "sells": 0,
+            "buyers": 1,
+            "sellers": 0
+          },
+          "m30": {
+            "buys": 1,
+            "sells": 0,
+            "buyers": 1,
+            "sellers": 0
+          },
+          "h1": {
+            "buys": 1,
+            "sells": 0,
+            "buyers": 1,
+            "sellers": 0
+          },
+          "h6": {
+            "buys": 1,
+            "sells": 0,
+            "buyers": 1,
+            "sellers": 0
+          },
+          "h24": {
+            "buys": 1,
+            "sells": 0,
+            "buyers": 1,
+            "sellers": 0
+          }
+        },
+        "volume_usd": {
+          "m5": "0.2479375527",
+          "m15": "0.2479375527",
+          "m30": "0.2479375527",
+          "h1": "0.2479375527",
+          "h6": "0.2479375527",
+          "h24": "0.2479375527"
+        },
+        "reserve_in_usd": "2724.4463"
+      },
+      "relationships": {
+        "base_token": {
+          "data": {
+            "id": "solana_6qY8jDD1szZLAnickyofTbtkavnHnnERttYpSQjTK9KL",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "solana_So11111111111111111111111111111111111111112",
+            "type": "token"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "raydium-launchlab",
+            "type": "dex"
+          }
+        }
+      }
+    },
+    {
+      "id": "solana_B9vg2CcwbnXDi3if9584YdwqnZA8WtoWnxfrfCnoBGtZ",
+      "type": "pool",
+      "attributes": {
+        "base_token_price_usd": "0.0000012789094889494775310538276184190251036044238668196388546549742",
+        "base_token_price_native_currency": "0.0000000109495116360194",
+        "quote_token_price_usd": "96.477962614076944398321640729401036852705350828",
+        "quote_token_price_native_currency": "1.0",
+        "base_token_price_quote_token": "0.00000001094951164",
+        "quote_token_price_base_token": "91328274.1040623",
+        "address": "B9vg2CcwbnXDi3if9584YdwqnZA8WtoWnxfrfCnoBGtZ",
+        "name": "LaMisery / SOL",
+        "pool_created_at": "2026-11-05T09:24:57Z",
+        "fdv_usd": "1885.9460362",
+        "market_cap_usd": null,
+        "price_change_percentage": {
+          "m5": "-65.576",
+          "m15": "-65.576",
+          "m30": "-65.576",
+          "h1": "-65.576",
+          "h6": "-65.576",
+          "h24": "-65.576"
+        },
+        "transactions": {
+          "m5": {
+            "buys": 5,
+            "sells": 6,
+            "buyers": 2,
+            "sellers": 1
+          },
+          "m15": {
+            "buys": 5,
+            "sells": 6,
+            "buyers": 2,
+            "sellers": 1
+          },
+          "m30": {
+            "buys": 5,
+            "sells": 6,
+            "buyers": 2,
+            "sellers": 1
+          },
+          "h1": {
+            "buys": 5,
+            "sells": 6,
+            "buyers": 2,
+            "sellers": 1
+          },
+          "h6": {
+            "buys": 5,
+            "sells": 6,
+            "buyers": 2,
+            "sellers": 1
+          },
+          "h24": {
+            "buys": 5,
+            "sells": 6,
+            "buyers": 2,
+            "sellers": 1
+          }
+        },
+        "volume_usd": {
+          "m5": "101.0519512489",
+          "m15": "101.0519512489",
+          "m30": "101.0519512489",
+          "h1": "101.0519512489",
+          "h6": "101.0519512489",
+          "h24": "101.0519512489"
+        },
+        "reserve_in_usd": "836.0663"
+      },
+      "relationships": {
+        "base_token": {
+          "data": {
+            "id": "solana_2mY9kCnRL9dETPvuUv3Z5ct177RmDphTUeg8pjtjpump",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "solana_So11111111111111111111111111111111111111112",
+            "type": "token"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "pump-fun",
+            "type": "dex"
+          }
+        }
+      }
+    },
+    {
+      "id": "solana_8Kfn7KD7MdZV9uBWsmtHxDWjUm3te3q1PBBwvknLMESf",
+      "type": "pool",
+      "attributes": {
+        "base_token_price_usd": "0.00000772316749249666455428915817555116440223934040949478732826697544",
+        "base_token_price_native_currency": "0.0000000847106105062165",
+        "quote_token_price_usd": "96.477915419218136564242046217999454854552386228",
+        "quote_token_price_native_currency": "1.0",
+        "base_token_price_quote_token": "0.00000008471061051",
+        "quote_token_price_base_token": "11804896.6242147",
+        "address": "8Kfn7KD7MdZV9uBWsmtHxDWjUm3te3q1PBBwvknLMESf",
+        "name": "Mei / SOL",
+        "pool_created_at": "2026-11-05T09:24:51Z",
+        "fdv_usd": "7663.495152",
+        "market_cap_usd": null,
+        "price_change_percentage": {
+          "m5": "0.768",
+          "m15": "0.768",
+          "m30": "0.768",
+          "h1": "0.768",
+          "h6": "0.768",
+          "h24": "0.768"
+        },
+        "transactions": {
+          "m5": {
+            "buys": 106,
+            "sells": 47,
+            "buyers": 104,
+            "sellers": 42
+          },
+          "m15": {
+            "buys": 106,
+            "sells": 47,
+            "buyers": 104,
+            "sellers": 42
+          },
+          "m30": {
+            "buys": 106,
+            "sells": 47,
+            "buyers": 104,
+            "sellers": 42
+          },
+          "h1": {
+            "buys": 106,
+            "sells": 47,
+            "buyers": 104,
+            "sellers": 42
+          },
+          "h6": {
+            "buys": 106,
+            "sells": 47,
+            "buyers": 104,
+            "sellers": 42
+          },
+          "h24": {
+            "buys": 106,
+            "sells": 47,
+            "buyers": 104,
+            "sellers": 42
+          }
+        },
+        "volume_usd": {
+          "m5": "6413.8073259094",
+          "m15": "6413.8073259094",
+          "m30": "6413.8073259094",
+          "h1": "6413.8073259094",
+          "h6": "6413.8073259094",
+          "h24": "6413.8073259094"
+        },
+        "reserve_in_usd": "15265.9188"
+      },
+      "relationships": {
+        "base_token": {
+          "data": {
+            "id": "solana_DUh1YmzvMjN1Eumn4yCSdRfCouAZQk2bRCQdbX9EACU2",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "solana_So11111111111111111111111111111111111111112",
+            "type": "token"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "meteora-damm-v2",
+            "type": "dex"
+          }
+        }
+      }
+    },
+    {
+      "id": "solana_CxGEXKJABbNXUkcyb6UtKiXrFEjqU8AU4tJ3AGqDN96s",
+      "type": "pool",
+      "attributes": {
+        "base_token_price_usd": "0.0000228434596740129109383360830337953660260529456938279520128162932",
+        "base_token_price_native_currency": "0.000000234373191919803",
+        "quote_token_price_usd": "96.477915419218136564242046217999454854552386228",
+        "quote_token_price_native_currency": "1.0",
+        "base_token_price_quote_token": "0.0000002343731919",
+        "quote_token_price_base_token": "4266699.58201609",
+        "address": "CxGEXKJABbNXUkcyb6UtKiXrFEjqU8AU4tJ3AGqDN96s",
+        "name": "scarecrow / SOL",
+        "pool_created_at": "2026-11-05T09:24:47Z",
+        "fdv_usd": "22938.28073",
+        "market_cap_usd": null,
+        "price_change_percentage": {
+          "m5": "10.894",
+          "m15": "10.894",
+          "m30": "10.894",
+          "h1": "10.894",
+          "h6": "10.894",
+          "h24": "10.894"
+        },
+        "transactions": {
+          "m5": {
+            "buys": 93,
+            "sells": 17,
+            "buyers": 88,
+            "sellers": 11
+          },
+          "m15": {
+            "buys": 93,
+            "sells": 17,
+            "buyers": 88,
+            "sellers": 11
+          },
+          "m30": {
+            "buys": 93,
+            "sells": 17,
+            "buyers": 88,
+            "sellers": 11
+          },
+          "h1": {
+            "buys": 93,
+            "sells": 17,
+            "buyers": 88,
+            "sellers": 11
+          },
+          "h6": {
+            "buys": 93,
+            "sells": 17,
+            "buyers": 88,
+            "sellers": 11
+          },
+          "h24": {
+            "buys": 93,
+            "sells": 17,
+            "buyers": 88,
+            "sellers": 11
+          }
+        },
+        "volume_usd": {
+          "m5": "3966.2570758375",
+          "m15": "3966.2570758375",
+          "m30": "3966.2570758375",
+          "h1": "3966.2570758375",
+          "h6": "3966.2570758375",
+          "h24": "3966.2570758375"
+        },
+        "reserve_in_usd": "42436.5448"
+      },
+      "relationships": {
+        "base_token": {
+          "data": {
+            "id": "solana_EZZmZCHbiCNiAzVp2jPjKZtMmbc1x6u7apG2iTMXmn2h",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "solana_So11111111111111111111111111111111111111112",
+            "type": "token"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "pumpswap",
+            "type": "dex"
+          }
+        }
+      }
+    },
+    {
+      "id": "solana_5nx2USjLnUNn8skteRF4kGfYLoTghinwFLRzHQfGMQEW",
+      "type": "pool",
+      "attributes": {
+        "base_token_price_usd": "0.00000087430327196951439101875448152625445684756176235168862064983744",
+        "base_token_price_native_currency": "0.00000000906223870863877",
+        "quote_token_price_usd": "96.477625460921303531290932804412256903450279872",
+        "quote_token_price_native_currency": "1.0",
+        "base_token_price_quote_token": "0.000000009062238709",
+        "quote_token_price_base_token": "110348009.156582",
+        "address": "5nx2USjLnUNn8skteRF4kGfYLoTghinwFLRzHQfGMQEW",
+        "name": "GETPAID / SOL",
+        "pool_created_at": "2026-11-05T09:24:46Z",
+        "fdv_usd": "1696.2914988",
+        "market_cap_usd": null,
+        "price_change_percentage": {
+          "m5": "-67.795",
+          "m15": "-67.795",
+          "m30": "-67.795",
+          "h1": "-67.795",
+          "h6": "-67.795",
+          "h24": "-67.795"
+        },
+        "transactions": {
+          "m5": {
+            "buys": 24,
+            "sells": 23,
+            "buyers": 5,
+            "sellers": 5
+          },
+          "m15": {
+            "buys": 24,
+            "sells": 23,
+            "buyers": 5,
+            "sellers": 5
+          },
+          "m30": {
+            "buys": 24,
+            "sells": 23,
+            "buyers": 5,
+            "sellers": 5
+          },
+          "h1": {
+            "buys": 24,
+            "sells": 23,
+            "buyers": 5,
+            "sellers": 5
+          },
+          "h6": {
+            "buys": 24,
+            "sells": 23,
+            "buyers": 5,
+            "sellers": 5
+          },
+          "h24": {
+            "buys": 24,
+            "sells": 23,
+            "buyers": 5,
+            "sellers": 5
+          }
+        },
+        "volume_usd": {
+          "m5": "368.7528656754",
+          "m15": "368.7528656754",
+          "m30": "368.7528656754",
+          "h1": "368.7528656754",
+          "h6": "368.7528656754",
+          "h24": "368.7528656754"
+        },
+        "reserve_in_usd": "958.4087"
+      },
+      "relationships": {
+        "base_token": {
+          "data": {
+            "id": "solana_29PboDDX1FnWsNpVkAHfT4m3ZkVMLs1eQ2Ci7Pxvpump",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "solana_So11111111111111111111111111111111111111112",
+            "type": "token"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "pump-fun",
+            "type": "dex"
+          }
+        }
+      }
+    },
+    {
+      "id": "solana_Ass8u9f6P1f1ZgNmWtQi62TZcmKHMTJiCC1xQwjqKJFH",
+      "type": "pool",
+      "attributes": {
+        "base_token_price_usd": "0.00000270662545271556398135261293626583563929376621242181202296786173",
+        "base_token_price_native_currency": "0.0000000280544862123894",
+        "quote_token_price_usd": "96.477455770345462808941144065413977120748942407",
+        "quote_token_price_native_currency": "1.0",
+        "base_token_price_quote_token": "0.00000002805448621",
+        "quote_token_price_base_token": "35644922.9698736",
+        "address": "Ass8u9f6P1f1ZgNmWtQi62TZcmKHMTJiCC1xQwjqKJFH",
+        "name": "GIF / SOL",
+        "pool_created_at": "2026-11-05T09:24:46Z",
+        "fdv_usd": "2706.625453",
+        "market_cap_usd": null,
+        "price_change_percentage": {
+          "m5": "0.244",
+          "m15": "0.244",
+          "m30": "0.244",
+          "h1": "0.244",
+          "h6": "0.244",
+          "h24": "0.244"
+        },
+        "transactions": {
+          "m5": {
+            "buys": 2,
+            "sells": 4,
+            "buyers": 2,
+            "sellers": 2
+          },
+          "m15": {
+            "buys": 2,
+            "sells": 4,
+            "buyers": 2,
+            "sellers": 2
+          },
+          "m30": {
+            "buys": 2,
+            "sells": 4,
+            "buyers": 2,
+            "sellers": 2
+          },
+          "h1": {
+            "buys": 2,
+            "sells": 4,
+            "buyers": 2,
+            "sellers": 2
+          },
+          "h6": {
+            "buys": 2,
+            "sells": 4,
+            "buyers": 2,
+            "sellers": 2
+          },
+          "h24": {
+            "buys": 2,
+            "sells": 4,
+            "buyers": 2,
+            "sellers": 2
+          }
+        },
+        "volume_usd": {
+          "m5": "54.1780162313",
+          "m15": "54.1780162313",
+          "m30": "54.1780162313",
+          "h1": "54.1780162313",
+          "h6": "54.1780162313",
+          "h24": "54.1780162313"
+        },
+        "reserve_in_usd": "2166.7835"
+      },
+      "relationships": {
+        "base_token": {
+          "data": {
+            "id": "solana_5yqbmeLzwVXhEiML6ym88QdwDVZnJsW2ipduNigYpump",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "solana_So11111111111111111111111111111111111111112",
+            "type": "token"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "pump-fun",
+            "type": "dex"
+          }
+        }
+      }
+    },
+    {
+      "id": "solana_AxV3o1cegUxLFgEWHQb8XyRyb4NEGJZi2xo9p1iZkmWG",
+      "type": "pool",
+      "attributes": {
+        "base_token_price_usd": "0.0000199098832483399659967328994331874793668099064644248139655194552",
+        "base_token_price_native_currency": "0.00000020407132379642",
+        "quote_token_price_usd": "96.477915419218136564242046217999454854552386228",
+        "quote_token_price_native_currency": "1.0",
+        "base_token_price_quote_token": "0.0000002040713238",
+        "quote_token_price_base_token": "4900247.52815144",
+        "address": "AxV3o1cegUxLFgEWHQb8XyRyb4NEGJZi2xo9p1iZkmWG",
+        "name": "CALL / SOL",
+        "pool_created_at": "2026-11-05T09:24:32Z",
+        "fdv_usd": "19669.86117",
+        "market_cap_usd": null,
+        "price_change_percentage": {
+          "m5": "16.794",
+          "m15": "16.794",
+          "m30": "16.794",
+          "h1": "16.794",
+          "h6": "16.794",
+          "h24": "16.794"
+        },
+        "transactions": {
+          "m5": {
+            "buys": 121,
+            "sells": 20,
+            "buyers": 116,
+            "sellers": 12
+          },
+          "m15": {
+            "buys": 121,
+            "sells": 20,
+            "buyers": 116,
+            "sellers": 12
+          },
+          "m30": {
+            "buys": 121,
+            "sells": 20,
+            "buyers": 116,
+            "sellers": 12
+          },
+          "h1": {
+            "buys": 121,
+            "sells": 20,
+            "buyers": 116,
+            "sellers": 12
+          },
+          "h6": {
+            "buys": 121,
+            "sells": 20,
+            "buyers": 116,
+            "sellers": 12
+          },
+          "h24": {
+            "buys": 121,
+            "sells": 20,
+            "buyers": 116,
+            "sellers": 12
+          }
+        },
+        "volume_usd": {
+          "m5": "5713.351581187",
+          "m15": "5713.351581187",
+          "m30": "5713.351581187",
+          "h1": "5713.351581187",
+          "h6": "5713.351581187",
+          "h24": "5713.351581187"
+        },
+        "reserve_in_usd": "34314.0788"
+      },
+      "relationships": {
+        "base_token": {
+          "data": {
+            "id": "solana_3eTQWME7udMXF6oCBzXpXVdxkBXEj8GQgXuCZnT1vVrF",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "solana_So11111111111111111111111111111111111111112",
+            "type": "token"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "pumpswap",
+            "type": "dex"
+          }
+        }
+      }
+    },
+    {
+      "id": "solana_EDQN12RLZZExNXWXQ7xFqppcR5yrxNtNCURz5JzNWf8f",
+      "type": "pool",
+      "attributes": {
+        "base_token_price_usd": "0.00000280528761849912310512042270346213033458782217175907623961551816",
+        "base_token_price_native_currency": "0.0000000290770508515893",
+        "quote_token_price_usd": "96.477721651258591339475335299770113341781720904",
+        "quote_token_price_native_currency": "1.0",
+        "base_token_price_quote_token": "0.00000002907705085",
+        "quote_token_price_base_token": "34391383.2631806",
+        "address": "EDQN12RLZZExNXWXQ7xFqppcR5yrxNtNCURz5JzNWf8f",
+        "name": "PRUMP / SOL",
+        "pool_created_at": "2026-11-05T09:24:30Z",
+        "fdv_usd": "2894.994279",
+        "market_cap_usd": null,
+        "price_change_percentage": {
+          "m5": "4.007",
+          "m15": "4.007",
+          "m30": "4.007",
+          "h1": "4.007",
+          "h6": "4.007",
+          "h24": "4.007"
+        },
+        "transactions": {
+          "m5": {
+            "buys": 15,
+            "sells": 10,
+            "buyers": 14,
+            "sellers": 10
+          },
+          "m15": {
+            "buys": 15,
+            "sells": 10,
+            "buyers": 14,
+            "sellers": 10
+          },
+          "m30": {
+            "buys": 15,
+            "sells": 10,
+            "buyers": 14,
+            "sellers": 10
+          },
+          "h1": {
+            "buys": 15,
+            "sells": 10,
+            "buyers": 14,
+            "sellers": 10
+          },
+          "h6": {
+            "buys": 15,
+            "sells": 10,
+            "buyers": 14,
+            "sellers": 10
+          },
+          "h24": {
+            "buys": 15,
+            "sells": 10,
+            "buyers": 14,
+            "sellers": 10
+          }
+        },
+        "volume_usd": {
+          "m5": "506.3327629233",
+          "m15": "506.3327629233",
+          "m30": "506.3327629233",
+          "h1": "506.3327629233",
+          "h6": "506.3327629233",
+          "h24": "506.3327629233"
+        },
+        "reserve_in_usd": "2293.7482"
+      },
+      "relationships": {
+        "base_token": {
+          "data": {
+            "id": "solana_2q8sFZVtjnCwrH1J49GcUFLV5X99DkeD4hsaCU6MLGkR",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "solana_So11111111111111111111111111111111111111112",
+            "type": "token"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "pump-fun",
+            "type": "dex"
+          }
+        }
+      }
+    },
+    {
+      "id": "solana_HpujzuqEKXP8WMEuXezTQqvunKj5xivXdZYiMei4CHMG",
+      "type": "pool",
+      "attributes": {
+        "base_token_price_usd": "0.00000273936383987340507039315780999084105481249905323879251802954112",
+        "base_token_price_native_currency": "0.0000000283872980933923",
+        "quote_token_price_usd": "96.499632718164317424500424961203476523189927716",
+        "quote_token_price_native_currency": "1.0",
+        "base_token_price_quote_token": "0.00000002838729809",
+        "quote_token_price_base_token": "35227022.8998219",
+        "address": "HpujzuqEKXP8WMEuXezTQqvunKj5xivXdZYiMei4CHMG",
+        "name": "Blizek / SOL",
+        "pool_created_at": "2026-11-05T09:24:26Z",
+        "fdv_usd": "2739.36384",
+        "market_cap_usd": null,
+        "price_change_percentage": {
+          "m5": "0",
+          "m15": "0",
+          "m30": "0",
+          "h1": "0",
+          "h6": "0",
+          "h24": "0"
+        },
+        "transactions": {
+          "m5": {
+            "buys": 1,
+            "sells": 0,
+            "buyers": 1,
+            "sellers": 0
+          },
+          "m15": {
+            "buys": 1,
+            "sells": 0,
+            "buyers": 1,
+            "sellers": 0
+          },
+          "m30": {
+            "buys": 1,
+            "sells": 0,
+            "buyers": 1,
+            "sellers": 0
+          },
+          "h1": {
+            "buys": 1,
+            "sells": 0,
+            "buyers": 1,
+            "sellers": 0
+          },
+          "h6": {
+            "buys": 1,
+            "sells": 0,
+            "buyers": 1,
+            "sellers": 0
+          },
+          "h24": {
+            "buys": 1,
+            "sells": 0,
+            "buyers": 1,
+            "sellers": 0
+          }
+        },
+        "volume_usd": {
+          "m5": "0.2480186275",
+          "m15": "0.2480186275",
+          "m30": "0.2480186275",
+          "h1": "0.2480186275",
+          "h6": "0.2480186275",
+          "h24": "0.2480186275"
+        },
+        "reserve_in_usd": "2736.9089"
+      },
+      "relationships": {
+        "base_token": {
+          "data": {
+            "id": "solana_AYh4cLETSQ3e3t9cxaKkTU8i3zoAc9aiPJv5BBrqbonk",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "solana_So11111111111111111111111111111111111111112",
+            "type": "token"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "letsbonk-fun",
+            "type": "dex"
+          }
+        }
+      }
+    },
+    {
+      "id": "solana_4Cec7U7htjgf5DgKtbmkejj34Ggx6UJEDJParqL5NEGf",
+      "type": "pool",
+      "attributes": {
+        "base_token_price_usd": "0.00000153878378273692871438541175887582451667923232515599768911126394",
+        "base_token_price_native_currency": "0.0000000159603349770365",
+        "quote_token_price_usd": "96.413000413268749386870924246498655379380303294",
+        "quote_token_price_native_currency": "1.0",
+        "base_token_price_quote_token": "0.00000001596033498",
+        "quote_token_price_base_token": "62655326.5604253",
+        "address": "4Cec7U7htjgf5DgKtbmkejj34Ggx6UJEDJParqL5NEGf",
+        "name": "#1 / SOL",
+        "pool_created_at": "2026-11-05T09:24:25Z",
+        "fdv_usd": "3077.567566",
+        "market_cap_usd": null,
+        "price_change_percentage": {
+          "m5": "-43.339",
+          "m15": "-43.339",
+          "m30": "-43.339",
+          "h1": "-43.339",
+          "h6": "-43.339",
+          "h24": "-43.339"
+        },
+        "transactions": {
+          "m5": {
+            "buys": 43,
+            "sells": 37,
+            "buyers": 5,
+            "sellers": 5
+          },
+          "m15": {
+            "buys": 43,
+            "sells": 37,
+            "buyers": 5,
+            "sellers": 5
+          },
+          "m30": {
+            "buys": 43,
+            "sells": 37,
+            "buyers": 5,
+            "sellers": 5
+          },
+          "h1": {
+            "buys": 43,
+            "sells": 37,
+            "buyers": 5,
+            "sellers": 5
+          },
+          "h6": {
+            "buys": 43,
+            "sells": 37,
+            "buyers": 5,
+            "sellers": 5
+          },
+          "h24": {
+            "buys": 43,
+            "sells": 37,
+            "buyers": 5,
+            "sellers": 5
+          }
+        },
+        "volume_usd": {
+          "m5": "497.5417737778",
+          "m15": "497.5417737778",
+          "m30": "497.5417737778",
+          "h1": "497.5417737778",
+          "h6": "497.5417737778",
+          "h24": "497.5417737778"
+        },
+        "reserve_in_usd": "1204.5039"
+      },
+      "relationships": {
+        "base_token": {
+          "data": {
+            "id": "solana_9s5fnFARDXYtz2poNbKj6wsTDzuCUWsDBFMKYEGGpump",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "solana_So11111111111111111111111111111111111111112",
+            "type": "token"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "pump-fun",
+            "type": "dex"
+          }
+        }
+      }
+    },
+    {
+      "id": "solana_2njXUjDWaJ7UbPkk9fExEWufGfPce7PJKPeKshQmrwUw",
+      "type": "pool",
+      "attributes": {
+        "base_token_price_usd": "0.00000269822695425551220144693041044213211438922155854012021388101368",
+        "base_token_price_native_currency": "0.0000000279617227292523",
+        "quote_token_price_usd": "96.499630400213767200668355701612503295207239914",
+        "quote_token_price_native_currency": "1.0",
+        "base_token_price_quote_token": "0.00000002796172273",
+        "quote_token_price_base_token": "35763175.5983992",
+        "address": "2njXUjDWaJ7UbPkk9fExEWufGfPce7PJKPeKshQmrwUw",
+        "name": "IB / SOL",
+        "pool_created_at": "2026-11-05T09:24:24Z",
+        "fdv_usd": "2698.359753",
+        "market_cap_usd": null,
+        "price_change_percentage": {
+          "m5": "0.002",
+          "m15": "0.002",
+          "m30": "0.002",
+          "h1": "0.002",
+          "h6": "0.002",
+          "h24": "0.002"
+        },
+        "transactions": {
+          "m5": {
+            "buys": 5,
+            "sells": 5,
+            "buyers": 5,
+            "sellers": 5
+          },
+          "m15": {
+            "buys": 5,
+            "sells": 5,
+            "buyers": 5,
+            "sellers": 5
+          },
+          "m30": {
+            "buys": 5,
+            "sells": 5,
+            "buyers": 5,
+            "sellers": 5
+          },
+          "h1": {
+            "buys": 5,
+            "sells": 5,
+            "buyers": 5,
+            "sellers": 5
+          },
+          "h6": {
+            "buys": 5,
+            "sells": 5,
+            "buyers": 5,
+            "sellers": 5
+          },
+          "h24": {
+            "buys": 5,
+            "sells": 5,
+            "buyers": 5,
+            "sellers": 5
+          }
+        },
+        "volume_usd": {
+          "m5": "0.1892705224",
+          "m15": "0.1892705224",
+          "m30": "0.1892705224",
+          "h1": "0.1892705224",
+          "h6": "0.1892705224",
+          "h24": "0.1892705224"
+        },
+        "reserve_in_usd": "2138.097"
+      },
+      "relationships": {
+        "base_token": {
+          "data": {
+            "id": "solana_52M7Q6AmTZrbQ3Ktj9HznbFJvupDzQynwhQuzw5pump",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "solana_So11111111111111111111111111111111111111112",
+            "type": "token"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "pump-fun",
+            "type": "dex"
+          }
+        }
+      }
+    },
+    {
+      "id": "solana_85zJxKy8AdjbFBFMVxVEgxTpCC3kDzQqu91xhRgdR5L9",
+      "type": "pool",
+      "attributes": {
+        "base_token_price_usd": "0.000002857627177855487149055980754901272184978707767005574663992774",
+        "base_token_price_native_currency": "0.0000000337295408392975",
+        "quote_token_price_usd": "96.477915419218136564242046217999454854552386228",
+        "quote_token_price_native_currency": "1.0",
+        "base_token_price_quote_token": "0.00000003372954084",
+        "quote_token_price_base_token": "29647601.9274749",
+        "address": "85zJxKy8AdjbFBFMVxVEgxTpCC3kDzQqu91xhRgdR5L9",
+        "name": "GODCANDLE / SOL",
+        "pool_created_at": "2026-11-05T09:24:24Z",
+        "fdv_usd": "3219.95635",
+        "market_cap_usd": null,
+        "price_change_percentage": {
+          "m5": "2.583",
+          "m15": "2.583",
+          "m30": "2.583",
+          "h1": "2.583",
+          "h6": "2.583",
+          "h24": "2.583"
+        },
+        "transactions": {
+          "m5": {
+            "buys": 7,
+            "sells": 0,
+            "buyers": 7,
+            "sellers": 0
+          },
+          "m15": {
+            "buys": 7,
+            "sells": 0,
+            "buyers": 7,
+            "sellers": 0
+          },
+          "m30": {
+            "buys": 7,
+            "sells": 0,
+            "buyers": 7,
+            "sellers": 0
+          },
+          "h1": {
+            "buys": 7,
+            "sells": 0,
+            "buyers": 7,
+            "sellers": 0
+          },
+          "h6": {
+            "buys": 7,
+            "sells": 0,
+            "buyers": 7,
+            "sellers": 0
+          },
+          "h24": {
+            "buys": 7,
+            "sells": 0,
+            "buyers": 7,
+            "sellers": 0
+          }
+        },
+        "volume_usd": {
+          "m5": "270.4258923473",
+          "m15": "270.4258923473",
+          "m30": "270.4258923473",
+          "h1": "270.4258923473",
+          "h6": "270.4258923473",
+          "h24": "270.4258923473"
+        },
+        "reserve_in_usd": "2524.7351"
+      },
+      "relationships": {
+        "base_token": {
+          "data": {
+            "id": "solana_DwoioULctjFvYLfB3UVogjpfvMYDKkbPNRBDMbwXpump",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "solana_So11111111111111111111111111111111111111112",
+            "type": "token"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "pump-fun",
+            "type": "dex"
+          }
+        }
+      }
+    },
+    {
+      "id": "solana_CdGT2YMFv4a9v8nnKWV6hw6eQwx6M7DfBmKctKWS1eD",
+      "type": "pool",
+      "attributes": {
+        "base_token_price_usd": "0.000002778871487425383785025950889270542662902871620027190543074667",
+        "base_token_price_native_currency": "0.0000000287967891309931",
+        "quote_token_price_usd": "96.499351882067006289840057132238628125342948025",
+        "quote_token_price_native_currency": "1.0",
+        "base_token_price_quote_token": "0.00000002879678913",
+        "quote_token_price_base_token": "34726093.7825784",
+        "address": "CdGT2YMFv4a9v8nnKWV6hw6eQwx6M7DfBmKctKWS1eD",
+        "name": "GIFIFY / SOL",
+        "pool_created_at": "2026-11-05T09:24:19Z",
+        "fdv_usd": "2778.871487",
+        "market_cap_usd": null,
+        "price_change_percentage": {
+          "m5": "2.96",
+          "m15": "2.96",
+          "m30": "2.96",
+          "h1": "2.96",
+          "h6": "2.96",
+          "h24": "2.96"
+        },
+        "transactions": {
+          "m5": {
+            "buys": 3,
+            "sells": 2,
+            "buyers": 2,
+            "sellers": 2
+          },
+          "m15": {
+            "buys": 3,
+            "sells": 2,
+            "buyers": 2,
+            "sellers": 2
+          },
+          "m30": {
+            "buys": 3,
+            "sells": 2,
+            "buyers": 2,
+            "sellers": 2
+          },
+          "h1": {
+            "buys": 3,
+            "sells": 2,
+            "buyers": 2,
+            "sellers": 2
+          },
+          "h6": {
+            "buys": 3,
+            "sells": 2,
+            "buyers": 2,
+            "sellers": 2
+          },
+          "h24": {
+            "buys": 3,
+            "sells": 2,
+            "buyers": 2,
+            "sellers": 2
+          }
+        },
+        "volume_usd": {
+          "m5": "175.5203229781",
+          "m15": "175.5203229781",
+          "m30": "175.5203229781",
+          "h1": "175.5203229781",
+          "h6": "175.5203229781",
+          "h24": "175.5203229781"
+        },
+        "reserve_in_usd": "2201.9472"
+      },
+      "relationships": {
+        "base_token": {
+          "data": {
+            "id": "solana_27ZFLQte5gS6MV5QSsYmdwi1SCMk4jmR6PHxmNaupump",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "solana_So11111111111111111111111111111111111111112",
+            "type": "token"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "pump-fun",
+            "type": "dex"
+          }
+        }
+      }
+    },
+    {
+      "id": "solana_3WwDFeSQqBtKfB9aUdHRSQp9aHpi8HgGMjgkkGibERdJ",
+      "type": "pool",
+      "attributes": {
+        "base_token_price_usd": "0.0000070590897893127387780765165850806075399201826164453182363630918",
+        "base_token_price_native_currency": "0.0000000740517828535054",
+        "quote_token_price_usd": "96.477915419218136564242046217999454854552386228",
+        "quote_token_price_native_currency": "1.0",
+        "base_token_price_quote_token": "0.00000007405178285",
+        "quote_token_price_base_token": "13504063.7978733",
+        "address": "3WwDFeSQqBtKfB9aUdHRSQp9aHpi8HgGMjgkkGibERdJ",
+        "name": "Mei / SOL",
+        "pool_created_at": "2026-11-05T09:24:10Z",
+        "fdv_usd": "7069.918721",
+        "market_cap_usd": null,
+        "price_change_percentage": {
+          "m5": "95.547",
+          "m15": "95.547",
+          "m30": "95.547",
+          "h1": "95.547",
+          "h6": "95.547",
+          "h24": "95.547"
+        },
+        "transactions": {
+          "m5": {
+            "buys": 189,
+            "sells": 134,
+            "buyers": 127,
+            "sellers": 93
+          },
+          "m15": {
+            "buys": 189,
+            "sells": 134,
+            "buyers": 127,
+            "sellers": 93
+          },
+          "m30": {
+            "buys": 189,
+            "sells": 134,
+            "buyers": 127,
+            "sellers": 93
+          },
+          "h1": {
+            "buys": 189,
+            "sells": 134,
+            "buyers": 127,
+            "sellers": 93
+          },
+          "h6": {
+            "buys": 189,
+            "sells": 134,
+            "buyers": 127,
+            "sellers": 93
+          },
+          "h24": {
+            "buys": 189,
+            "sells": 134,
+            "buyers": 127,
+            "sellers": 93
+          }
+        },
+        "volume_usd": {
+          "m5": "15540.4293484634",
+          "m15": "15540.4293484634",
+          "m30": "15540.4293484634",
+          "h1": "15540.4293484634",
+          "h6": "15540.4293484634",
+          "h24": "15540.4293484634"
+        },
+        "reserve_in_usd": "4012.7965"
+      },
+      "relationships": {
+        "base_token": {
+          "data": {
+            "id": "solana_A3T3VotUyS4uH1wAQTeirbW7MPr5zjsGR11R7rbbpump",
+            "type": "token"
+          }
+        },
+        "quote_token": {
+          "data": {
+            "id": "solana_So11111111111111111111111111111111111111112",
+            "type": "token"
+          }
+        },
+        "dex": {
+          "data": {
+            "id": "pump-fun",
+            "type": "dex"
+          }
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "id": "solana_B4gHqrNtguobX45QUexqQp8UhePSjTdwnXxTcBkWpump",
+      "type": "token",
+      "attributes": {
+        "address": "B4gHqrNtguobX45QUexqQp8UhePSjTdwnXxTcBkWpump",
+        "name": "Gigantic Incoming Funbags",
+        "symbol": "GIF",
+        "decimals": 6,
+        "image_url": "https://assets.geckoterminal.com/qo5aospr4tb78ichvtkxumfelpj1",
+        "coingecko_coin_id": null
+      }
+    },
+    {
+      "id": "solana_6gAXMXMwj36ENuyJ1PnZBKExuZwRLqPmSddx8Vcepump",
+      "type": "token",
+      "attributes": {
+        "address": "6gAXMXMwj36ENuyJ1PnZBKExuZwRLqPmSddx8Vcepump",
+        "name": "NABUCHODONOSOR",
+        "symbol": "NABU",
+        "decimals": 6,
+        "image_url": "https://assets.geckoterminal.com/zxwygae1k6szc8ga7esvempfmer5",
+        "coingecko_coin_id": null
+      }
+    },
+    {
+      "id": "solana_FLCpMHzsKtdtDibo4Vv9VM9vb9MiL2naCfVymetrpump",
+      "type": "token",
+      "attributes": {
+        "address": "FLCpMHzsKtdtDibo4Vv9VM9vb9MiL2naCfVymetrpump",
+        "name": "Xi Jinping Coin",
+        "symbol": "XI",
+        "decimals": 6,
+        "image_url": "https://assets.geckoterminal.com/712mi46ilq54fzpl6d7bhzx3z0q7",
+        "coingecko_coin_id": null
+      }
+    },
+    {
+      "id": "solana_E1PpVMPtWPhPUKL7DbF6f2eAmuwo3CHBkKusKk54pump",
+      "type": "token",
+      "attributes": {
+        "address": "E1PpVMPtWPhPUKL7DbF6f2eAmuwo3CHBkKusKk54pump",
+        "name": "Ocarina of Time",
+        "symbol": "ZELDA",
+        "decimals": 6,
+        "image_url": "https://assets.geckoterminal.com/020wysa9yxatnyhakukpm6iq2eei",
+        "coingecko_coin_id": null
+      }
+    },
+    {
+      "id": "solana_9QkuufydDNFKkd6VyLSwsLovAB2ytwZq4f7UNsUdpump",
+      "type": "token",
+      "attributes": {
+        "address": "9QkuufydDNFKkd6VyLSwsLovAB2ytwZq4f7UNsUdpump",
+        "name": "laptop",
+        "symbol": "lptp",
+        "decimals": 6,
+        "image_url": "https://assets.geckoterminal.com/sirsqwi81xnmalibrtpqgcixkue3",
+        "coingecko_coin_id": null
+      }
+    },
+    {
+      "id": "solana_AE625bPTeN92tBQraEDR38LUxB3uwqgCcTto2dn9pump",
+      "type": "token",
+      "attributes": {
+        "address": "AE625bPTeN92tBQraEDR38LUxB3uwqgCcTto2dn9pump",
+        "name": "MIMIKYU",
+        "symbol": "MIKU",
+        "decimals": 6,
+        "image_url": "https://assets.geckoterminal.com/e3ykl21btdb1ngkheyn6385zv0xf",
+        "coingecko_coin_id": null
+      }
+    },
+    {
+      "id": "solana_6qY8jDD1szZLAnickyofTbtkavnHnnERttYpSQjTK9KL",
+      "type": "token",
+      "attributes": {
+        "address": "6qY8jDD1szZLAnickyofTbtkavnHnnERttYpSQjTK9KL",
+        "name": "BLACK MONDAY",
+        "symbol": "BM",
+        "decimals": 6,
+        "image_url": null,
+        "coingecko_coin_id": null
+      }
+    },
+    {
+      "id": "solana_2mY9kCnRL9dETPvuUv3Z5ct177RmDphTUeg8pjtjpump",
+      "type": "token",
+      "attributes": {
+        "address": "2mY9kCnRL9dETPvuUv3Z5ct177RmDphTUeg8pjtjpump",
+        "name": "La Misery",
+        "symbol": "LaMisery",
+        "decimals": 6,
+        "image_url": "https://assets.geckoterminal.com/8u0cvbvwd1r5qxmjx9eu78yd1cwu",
+        "coingecko_coin_id": null
+      }
+    },
+    {
+      "id": "solana_DUh1YmzvMjN1Eumn4yCSdRfCouAZQk2bRCQdbX9EACU2",
+      "type": "token",
+      "attributes": {
+        "address": "DUh1YmzvMjN1Eumn4yCSdRfCouAZQk2bRCQdbX9EACU2",
+        "name": "\u30e1\u30a4\u3061\u3083\u3093",
+        "symbol": "Mei",
+        "decimals": 6,
+        "image_url": null,
+        "coingecko_coin_id": null
+      }
+    },
+    {
+      "id": "solana_EZZmZCHbiCNiAzVp2jPjKZtMmbc1x6u7apG2iTMXmn2h",
+      "type": "token",
+      "attributes": {
+        "address": "EZZmZCHbiCNiAzVp2jPjKZtMmbc1x6u7apG2iTMXmn2h",
+        "name": "scarecrow",
+        "symbol": "scarecrow",
+        "decimals": 6,
+        "image_url": "https://assets.geckoterminal.com/4njwpjfa1zae71o28d3kdla53dsc",
+        "coingecko_coin_id": null
+      }
+    },
+    {
+      "id": "solana_29PboDDX1FnWsNpVkAHfT4m3ZkVMLs1eQ2Ci7Pxvpump",
+      "type": "token",
+      "attributes": {
+        "address": "29PboDDX1FnWsNpVkAHfT4m3ZkVMLs1eQ2Ci7Pxvpump",
+        "name": "You guys are getting paid?",
+        "symbol": "GETPAID",
+        "decimals": 6,
+        "image_url": "https://assets.geckoterminal.com/4sxep1y68ykh9it0ux5wrq9yqv43",
+        "coingecko_coin_id": null
+      }
+    },
+    {
+      "id": "solana_5yqbmeLzwVXhEiML6ym88QdwDVZnJsW2ipduNigYpump",
+      "type": "token",
+      "attributes": {
+        "address": "5yqbmeLzwVXhEiML6ym88QdwDVZnJsW2ipduNigYpump",
+        "name": "Graphic Inu Format",
+        "symbol": "GIF",
+        "decimals": 6,
+        "image_url": "https://assets.geckoterminal.com/n1oqnofnyisjpycohceodbi50slu",
+        "coingecko_coin_id": null
+      }
+    },
+    {
+      "id": "solana_3eTQWME7udMXF6oCBzXpXVdxkBXEj8GQgXuCZnT1vVrF",
+      "type": "token",
+      "attributes": {
+        "address": "3eTQWME7udMXF6oCBzXpXVdxkBXEj8GQgXuCZnT1vVrF",
+        "name": "Call",
+        "symbol": "CALL",
+        "decimals": 6,
+        "image_url": null,
+        "coingecko_coin_id": null
+      }
+    },
+    {
+      "id": "solana_2q8sFZVtjnCwrH1J49GcUFLV5X99DkeD4hsaCU6MLGkR",
+      "type": "token",
+      "attributes": {
+        "address": "2q8sFZVtjnCwrH1J49GcUFLV5X99DkeD4hsaCU6MLGkR",
+        "name": "Trump Pump",
+        "symbol": "PRUMP",
+        "decimals": 6,
+        "image_url": "https://assets.geckoterminal.com/22q8cm5h87svo7sq26aixo0uj4dj",
+        "coingecko_coin_id": null
+      }
+    },
+    {
+      "id": "solana_AYh4cLETSQ3e3t9cxaKkTU8i3zoAc9aiPJv5BBrqbonk",
+      "type": "token",
+      "attributes": {
+        "address": "AYh4cLETSQ3e3t9cxaKkTU8i3zoAc9aiPJv5BBrqbonk",
+        "name": "Comrade Bonk",
+        "symbol": "Blizek",
+        "decimals": 6,
+        "image_url": "https://assets.geckoterminal.com/yv8ep9734o713ce76gpcpf8uj4hl",
+        "coingecko_coin_id": null
+      }
+    },
+    {
+      "id": "solana_9s5fnFARDXYtz2poNbKj6wsTDzuCUWsDBFMKYEGGpump",
+      "type": "token",
+      "attributes": {
+        "address": "9s5fnFARDXYtz2poNbKj6wsTDzuCUWsDBFMKYEGGpump",
+        "name": "#1",
+        "symbol": "#1",
+        "decimals": 6,
+        "image_url": "https://assets.geckoterminal.com/bcuhy3hlh72dvxafbx4d36fg1nly",
+        "coingecko_coin_id": null
+      }
+    },
+    {
+      "id": "solana_52M7Q6AmTZrbQ3Ktj9HznbFJvupDzQynwhQuzw5pump",
+      "type": "token",
+      "attributes": {
+        "address": "52M7Q6AmTZrbQ3Ktj9HznbFJvupDzQynwhQuzw5pump",
+        "name": "Im Back",
+        "symbol": "IB",
+        "decimals": 6,
+        "image_url": "https://assets.geckoterminal.com/gc0guji711fagvq2i4fjchq4h59b",
+        "coingecko_coin_id": null
+      }
+    },
+    {
+      "id": "solana_DwoioULctjFvYLfB3UVogjpfvMYDKkbPNRBDMbwXpump",
+      "type": "token",
+      "attributes": {
+        "address": "DwoioULctjFvYLfB3UVogjpfvMYDKkbPNRBDMbwXpump",
+        "name": "GOD CANDLE",
+        "symbol": "GODCANDLE",
+        "decimals": 6,
+        "image_url": "https://assets.geckoterminal.com/q89a7jtik8apxoe4gep2lflgrck9",
+        "coingecko_coin_id": null
+      }
+    },
+    {
+      "id": "solana_27ZFLQte5gS6MV5QSsYmdwi1SCMk4jmR6PHxmNaupump",
+      "type": "token",
+      "attributes": {
+        "address": "27ZFLQte5gS6MV5QSsYmdwi1SCMk4jmR6PHxmNaupump",
+        "name": "GIFIFICATION",
+        "symbol": "GIFIFY",
+        "decimals": 6,
+        "image_url": "https://assets.geckoterminal.com/pnc313dnxchayo0hv86wsny674b5",
+        "coingecko_coin_id": null
+      }
+    },
+    {
+      "id": "solana_A3T3VotUyS4uH1wAQTeirbW7MPr5zjsGR11R7rbbpump",
+      "type": "token",
+      "attributes": {
+        "address": "A3T3VotUyS4uH1wAQTeirbW7MPr5zjsGR11R7rbbpump",
+        "name": "\u30e1\u30a4\u3061\u3083\u3093",
+        "symbol": "Mei",
+        "decimals": 6,
+        "image_url": "https://assets.geckoterminal.com/meeg98svebexmkctdns7szemmo71",
+        "coingecko_coin_id": null
+      }
+    }
+  ]
+}
