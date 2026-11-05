@@ -213,7 +213,7 @@ def build_report(db, cfg, now):
         def bucket_fresh(v):
             return "<20%" if v < 20 else "20-40%" if v < 40 else "40%+"
 
-        by_c, by_f = defaultdict(list), defaultdict(list)
+        by_c, by_f, by_b = defaultdict(list), defaultdict(list), defaultdict(list)
         for rows_ in groups.values():
             for p, rets, rug in rows_:
                 m = cmap.get(p["token_mint"])
@@ -221,10 +221,14 @@ def build_report(db, cfg, now):
                     continue
                 by_c[bucket_cluster(m["largest_cluster_pct"])].append((rets, rug))
                 by_f[bucket_fresh(m["fresh_pct"])].append((rets, rug))
+                if "same_slot_pct" in m:
+                    v = m["same_slot_pct"]
+                    by_b["none" if v == 0 else "<20%" if v < 20 else "20%+"].append((rets, rug))
         w("")
         w("CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)")
         w("(bigger clusters should rug more / do worse; if not, the cluster rule is noise)")
         for title, data, order in (("cluster", by_c, ["none", "<15%", "15-30%", "30%+"]),
+                                   ("bundled", by_b, ["none", "<20%", "20%+"]),
                                    ("fresh", by_f, ["<20%", "20-40%", "40%+"])):
             w(f"{title:<8}{'n':>5}{'+1h med':>10}{'+4h med':>10}{'+24h med':>10}{'rug%':>7}")
             for b in order:

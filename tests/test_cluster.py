@@ -22,23 +22,39 @@ def sys_transfer(src, dst):
 
 
 class FakeChain:
-    """Token MINT with supply 1000.
-    AMMVAULT (owned by AMM, known) 400; POOLPDA (program-owned) 100;
-    cabal: C1,C2,C3 hold 60 each, all funded by FUNDERX (quiet wallet) -> one cluster of 18%
-    C4 holds 30, funded by C1 (a top holder) -> joins the cabal -> 21%
-    retail: R1..R5 hold 20 each, funded by BINANCE (busy) -> no links
-    OLD holds 50, has 1000+ txs (busy, not fresh, not traced)"""
+    """Token MINT, supply 1000.
+    AMM (known) 400; POOLPDA (program-owned) 100.
+    Cabal: C1, C2 bought in ONE transaction (bundle) at slot 100; C3 bought alone, also slot 100;
+           C1..C3 funded by FUNDERX (quiet); C4 was handed 30 tokens by C1 (not bought).
+    Retail R1..R5 (20 each) bought at different slots, funded by BINANCE (busy).
+    OLD (50) is a very active wallet, bought at slot 500."""
 
-    def __init__(self):
+    def __init__(self, busy_cabal=False, cabal_funder="FUNDERX"):
         self.holdings = {"AMMVAULT_ACC": ("AMM", 400), "POOL_ACC": ("POOLPDA", 100),
                          "C1_ACC": ("C1", 60), "C2_ACC": ("C2", 60), "C3_ACC": ("C3", 60),
                          "C4_ACC": ("C4", 30), "OLD_ACC": ("OLD", 50)}
         for i in range(1, 6):
             self.holdings[f"R{i}_ACC"] = (f"R{i}", 20)
-        self.funder = {"C1": "FUNDERX", "C2": "FUNDERX", "C3": "FUNDERX", "C4": "C1"}
+        self.funder = {"C1": cabal_funder, "C2": cabal_funder, "C3": cabal_funder, "C4": "C1"}
         for i in range(1, 6):
             self.funder[f"R{i}"] = "BINANCE"
+        self.busy = {"OLD", "BINANCE"} | ({"C1", "C2", "C3"} if busy_cabal else set())
+        self.acq = {"C1": ("BUNDLE1", 100), "C2": ("BUNDLE1", 100), "C3": ("C3BUY", 100),
+                    "C4": ("C4XFER", 150), "OLD": ("OLDBUY", 500)}
+        for i in range(1, 6):
+            self.acq[f"R{i}"] = (f"R{i}BUY", 200 + i)
         self.calls = []
+
+    def _buy_tx(self, buyers):
+        keys = [{"pubkey": b} for b in buyers] + [{"pubkey": "AMM"}]
+        pre = [10_000_000_000] * len(buyers) + [0]
+        post = [10_000_000_000 - 500_000_000] * len(buyers) + [0]
+        ptb = [{"mint": "MINT", "owner": "AMM", "uiTokenAmount": {"uiAmount": 1000}}]
+        qtb = [{"mint": "MINT", "owner": "AMM", "uiTokenAmount": {"uiAmount": 1000 - 60 * len(buyers)}}]
+        qtb += [{"mint": "MINT", "owner": b, "uiTokenAmount": {"uiAmount": 60}} for b in buyers]
+        return {"transaction": {"message": {"accountKeys": keys, "instructions": []}},
+                "meta": {"preBalances": pre, "postBalances": post,
+                         "preTokenBalances": ptb, "postTokenBalances": qtb, "innerInstructions": []}}
 
     def __call__(self, payload):
         m, params = payload["method"], payload["params"]
@@ -57,7 +73,11 @@ class FakeChain:
                 {"owner": "SomeAmmProgram"} if a == "POOLPDA" else {"owner": SYSTEM_PROGRAM} for a in addrs]}}
         if m == "getSignaturesForAddress":
             w, opts = params
-            if w in ("OLD", "BINANCE"):
+            if w.endswith("_ACC"):
+                owner = w[:-4]
+                sig, slot = self.acq[owner]
+                return {"result": [{"signature": "later", "slot": slot + 50}, {"signature": sig, "slot": slot}]}
+            if w in self.busy:
                 return {"result": [{"signature": f"s{i}", "blockTime": NOW - 10**7} for i in range(opts["limit"])]}
             if w == "FUNDERX":
                 return {"result": [{"signature": "f1", "blockTime": NOW - 3600}]}
@@ -66,12 +86,23 @@ class FakeChain:
             return {"result": [{"signature": f"{w}_sig{i}", "blockTime": NOW - age + i} for i in range(n, 0, -1)]}
         if m == "getTransaction":
             sig = params[0]
+            if sig == "BUNDLE1":
+                return {"result": self._buy_tx(["C1", "C2"])}
+            if sig.endswith("BUY"):
+                return {"result": self._buy_tx([sig[:-3]])}
+            if sig == "C4XFER":
+                return {"result": {"transaction": {"message": {
+                    "accountKeys": [{"pubkey": "C1"}, {"pubkey": "C4"}], "instructions": []}},
+                    "meta": {"preBalances": [5_000_000_000, 0], "postBalances": [4_997_000_000, 2_039_280],
+                             "preTokenBalances": [{"mint": "MINT", "owner": "C1", "uiTokenAmount": {"uiAmount": 90}}],
+                             "postTokenBalances": [{"mint": "MINT", "owner": "C1", "uiTokenAmount": {"uiAmount": 60}},
+                                                   {"mint": "MINT", "owner": "C4", "uiTokenAmount": {"uiAmount": 30}}]}}}
             w = sig.split("_sig")[0]
             src = self.funder[w]
             return {"result": {"transaction": {"message": {
                 "accountKeys": [{"pubkey": src}, {"pubkey": w}],
                 "instructions": [sys_transfer(src, w)]}}, "meta": {"innerInstructions": []}}}
-        raise AssertionError(m)
+        raise AssertionError((m, params))
 
 
 class TestFirstFunder(unittest.TestCase):
@@ -87,30 +118,42 @@ class TestFirstFunder(unittest.TestCase):
 
 
 class TestAnalyse(unittest.TestCase):
+    def run_chain(self, chain):
+        return analyse(Rpc("x", min_interval=0, post=chain), "MINT", CFG, known_accounts={"AMM"}, now=NOW)
+
     def test_cabal_detected(self):
-        chain = FakeChain()
-        rpc = Rpc("x", min_interval=0, post=chain)
-        m = analyse(rpc, "MINT", CFG, known_accounts={"AMM"}, now=NOW)
-        # AMM excluded (known), POOLPDA excluded (program-owned)
-        self.assertEqual(m["holders_analysed"], 10)
-        self.assertEqual(m["n_clusters"], 1)
-        self.assertEqual(m["largest_cluster_size"], 4)       # C1,C2,C3 + C4 (funded by C1)
-        self.assertAlmostEqual(m["largest_cluster_pct"], 21.0)  # 60+60+60+30 of 1000
-        self.assertAlmostEqual(m["fresh_pct"], 21.0)          # only the C wallets are fresh
-        self.assertEqual(m["busy_holders"], 1)                # OLD
+        m = self.run_chain(FakeChain())
+        self.assertEqual(m["holders_analysed"], 10)            # AMM + program-owned PDA dropped
+        self.assertEqual(m["largest_cluster_size"], 4)         # C1..C4
+        self.assertAlmostEqual(m["largest_cluster_pct"], 21.0)
+        self.assertAlmostEqual(m["same_slot_pct"], 18.0)       # C1, C2, C3 at slot 100
+        self.assertAlmostEqual(m["received_pct"], 3.0)         # C4 was handed tokens
+        self.assertAlmostEqual(m["fresh_pct"], 21.0)
+        self.assertEqual(m["acq_traced"], 10)
         kills = verdict(m, CFG)
         self.assertTrue(any(k.startswith("operator_cluster") for k in kills))
-        self.assertFalse(any(k.startswith("fresh_wallets") for k in kills))
         self.assertLess(m["rpc_calls"], CFG["cluster"]["est_credits_per_token"])
 
-    def test_exchange_funding_not_linked(self):
-        chain = FakeChain()
-        for w in ("C1", "C2", "C3"):
-            chain.funder[w] = "BINANCE"
-        chain.funder["C4"] = "BINANCE"
-        m = analyse(Rpc("x", 0, post=chain), "MINT", CFG, {"AMM"}, NOW)
+    def test_busy_cabal_still_caught_via_acquisition(self):
+        """The live-run failure: active wallets can't be funding-traced, but the
+        shared bundle transaction and token hand-over still link them."""
+        m = self.run_chain(FakeChain(busy_cabal=True, cabal_funder="BINANCE"))
+        self.assertGreaterEqual(m["busy_holders"], 4)
+        self.assertEqual(m["largest_cluster_size"], 3)         # C1+C2 (same tx) + C4 (handed by C1)
+        self.assertAlmostEqual(m["largest_cluster_pct"], 15.0)
+        self.assertAlmostEqual(m["same_slot_pct"], 18.0)
+
+    def test_retail_only_is_clean(self):
+        ch = FakeChain(cabal_funder="BINANCE")
+        ch.acq.update({"C1": ("C1BUY", 101), "C2": ("C2BUY", 102), "C3": ("C3BUY", 103)})
+        ch.funder["C4"] = "BINANCE"
+        ch.acq["C4"] = ("C4BUY", 104)
+        m = self.run_chain(ch)
         self.assertEqual(m["n_clusters"], 0)
-        self.assertEqual(verdict(m, CFG), [])
+        self.assertEqual(m["same_slot_pct"], 0)
+        self.assertEqual(m["received_pct"], 0)
+        self.assertTrue(all(not k.startswith(("operator", "clustered", "bundled", "received"))
+                            for k in verdict(m, CFG)))
 
 
 class TestCabalFinder(unittest.TestCase):

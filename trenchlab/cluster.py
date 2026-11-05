@@ -4,7 +4,12 @@ Uses only 1-credit standard Solana RPC calls on the Helius free plan:
   getTokenSupply, getTokenLargestAccounts, getMultipleAccounts,
   getSignaturesForAddress, getTransaction
 
-Method (inspired by CrawlScan's operator model):
+Method (inspired by CrawlScan's operator model). Strong links (merge into one operator):
+  - same acquisition transaction (bundle), tokens handed over by another top holder,
+  - purchase signed/paid by another (non-busy) wallet, shared non-busy funder of the wallet.
+Weak/separate signals: same-slot acquisition, tokens received rather than bought, fresh wallets.
+
+Original v0.2 notes:
   1. Top 20 token accounts -> owner wallets. Drop AMM/pool/program accounts.
   2. For each holder wallet: how old / how active is it? (signature count, first activity)
      - "fresh" = few transactions or created very recently.
@@ -128,6 +133,45 @@ class _UF:
             self.p[ra] = rb
 
 
+def _key(k):
+    return k.get("pubkey") if isinstance(k, dict) else k
+
+
+def _acquisition(tx, wallet, mint):
+    """How did `wallet` first get `mint`? Returns dict(payer, bought, senders) or None."""
+    if not tx:
+        return None
+    msg = (tx.get("transaction") or {}).get("message") or {}
+    meta = tx.get("meta") or {}
+    keys = [_key(k) for k in msg.get("accountKeys") or []]
+    payer = keys[0] if keys else None
+
+    def tok(rows):
+        out = {}
+        for b in rows or []:
+            if b.get("mint") != mint:
+                continue
+            amt = float(((b.get("uiTokenAmount") or {}).get("uiAmount")) or 0)
+            out[b.get("owner")] = out.get(b.get("owner"), 0.0) + amt
+        return out
+
+    pre, post = tok(meta.get("preTokenBalances")), tok(meta.get("postTokenBalances"))
+    gained = post.get(wallet, 0.0) - pre.get(wallet, 0.0)
+    if gained <= 0:
+        return {"payer": payer, "bought": None, "senders": []}
+    senders = [o for o in set(pre) | set(post)
+               if o and o != wallet and post.get(o, 0.0) < pre.get(o, 0.0)]
+    lam_delta = 0
+    if wallet in keys:
+        i = keys.index(wallet)
+        pb, qb = meta.get("preBalances") or [], meta.get("postBalances") or []
+        if i < len(pb) and i < len(qb):
+            lam_delta = qb[i] - pb[i]
+    # spent more than ~0.003 SOL beyond fees/rent -> paid for it (a buy); else it was handed over
+    bought = lam_delta < -3_000_000
+    return {"payer": payer, "bought": bought, "senders": senders}
+
+
 def analyse(rpc, mint, cfg, known_accounts=None, now=None):
     """Return dict of cluster metrics. Raises RpcError on data failure."""
     c = cfg["cluster"]
@@ -147,12 +191,14 @@ def analyse(rpc, mint, cfg, known_accounts=None, now=None):
     amounts = {a["address"]: float(a.get("uiAmount") or 0) for a in accs}
 
     infos = rpc.call("getMultipleAccounts", [acc_addrs, {"encoding": "jsonParsed"}])
-    holders = {}  # owner wallet -> pct of total supply
+    holders, main_acc = {}, {}  # owner -> pct of supply; owner -> its largest token account
     for addr, info in zip(acc_addrs, (infos or {}).get("value") or []):
         owner = (((((info or {}).get("data") or {}).get("parsed") or {}).get("info")) or {}).get("owner")
         if not owner or owner in known or addr in known:
             continue
         holders[owner] = holders.get(owner, 0.0) + amounts[addr] / total * 100
+        if owner not in main_acc or amounts[addr] > amounts[main_acc[owner]]:
+            main_acc[owner] = addr
 
     # drop program-owned owners (pool authorities, vaults, lockers)
     if holders:
@@ -161,10 +207,52 @@ def analyse(rpc, mint, cfg, known_accounts=None, now=None):
         for w, info in zip(owners, (oinfo or {}).get("value") or []):
             if info is not None and info.get("owner") != SYSTEM_PROGRAM:
                 holders.pop(w, None)
+                known.add(w)
 
     wallets = sorted(holders, key=lambda w: -holders[w])[: c["max_holders"]]
+    wset = set(wallets)
     analysed_pct = sum(holders[w] for w in wallets)
 
+    uf = _UF()
+    for w in wallets:
+        uf.find(w)
+
+    # --- 1. how each holder acquired THIS token (cheap even for very active wallets) ---
+    acq_sig, acq_slot, received, payer_of = {}, {}, set(), {}
+    for w in wallets:
+        sigs = rpc.call("getSignaturesForAddress", [main_acc[w], {"limit": 1000}]) or []
+        if not sigs or len(sigs) >= 1000:
+            continue
+        first = sigs[-1]
+        acq_sig[w], acq_slot[w] = first.get("signature"), first.get("slot")
+        tx = rpc.call("getTransaction", [first["signature"],
+                                         {"encoding": "jsonParsed", "maxSupportedTransactionVersion": 0}])
+        a = _acquisition(tx, w, mint)
+        if not a:
+            continue
+        if a["payer"] and a["payer"] != w:
+            payer_of[w] = a["payer"]
+        if a["bought"] is False:
+            from_known = any(s in known for s in a["senders"])
+            if not from_known:
+                received.add(w)
+            for snd in a["senders"]:
+                if snd in wset:
+                    uf.union(w, snd)           # handed tokens by another top holder
+
+    by_sig = {}
+    for w, sg in acq_sig.items():
+        by_sig.setdefault(sg, []).append(w)
+    for ws in by_sig.values():                # same transaction = bundled together
+        for x in ws[1:]:
+            uf.union(ws[0], x)
+    by_slot = {}
+    for w, sl in acq_slot.items():
+        if sl is not None:
+            by_slot.setdefault(sl, []).append(w)
+    same_slot = {w for ws in by_slot.values() if len(ws) >= 2 for w in ws}
+
+    # --- 2. wallet age / activity, and who funded fresh-ish wallets ---
     fresh, funder_of, busy = {}, {}, set()
     for w in wallets:
         sigs = rpc.call("getSignaturesForAddress", [w, {"limit": 1000}]) or []
@@ -184,32 +272,30 @@ def analyse(rpc, mint, cfg, known_accounts=None, now=None):
             if f:
                 funder_of[w] = f
 
-    # funders that are busy services (exchanges, routers) do not link wallets together
-    funder_busy = {}
-    for f in set(funder_of.values()):
-        if f in holders:
-            funder_busy[f] = False  # a top holder funding another top holder is always a link
+    # --- 3. funders / payers that are busy services (exchanges, bots, routers) don't link wallets ---
+    links = list(funder_of.items()) + list(payer_of.items())
+    busy_cache = {}
+    for _, f in links:
+        if f in busy_cache:
+            continue
+        if f in wset:
+            busy_cache[f] = False
             continue
         s = rpc.call("getSignaturesForAddress", [f, {"limit": c["busy_funder_txs"]}]) or []
-        funder_busy[f] = len(s) >= c["busy_funder_txs"]
-
-    uf = _UF()
-    for w in wallets:
-        uf.find(w)
-    for w, f in funder_of.items():
-        if funder_busy.get(f):
+        busy_cache[f] = len(s) >= c["busy_funder_txs"]
+    for w, f in links:
+        if busy_cache.get(f):
             continue
-        if f in holders and f in wallets:
-            uf.union(w, f)
-        else:
-            uf.union(w, "funder:" + f)
+        uf.union(w, f if f in wset else "ext:" + f)
 
     groups = {}
     for w in wallets:
         groups.setdefault(uf.find(w), []).append(w)
     clusters = [g for g in groups.values() if len(g) >= 2]
     cluster_pcts = sorted((sum(holders[w] for w in g) for g in clusters), reverse=True)
-    fresh_pct = sum(holders[w] for w in wallets if fresh.get(w))
+
+    def pct(ws):
+        return round(sum(holders[w] for w in ws), 2)
 
     return {
         "holders_analysed": len(wallets),
@@ -218,9 +304,12 @@ def analyse(rpc, mint, cfg, known_accounts=None, now=None):
         "largest_cluster_size": max((len(g) for g in clusters), default=0),
         "largest_cluster_pct": round(cluster_pcts[0], 2) if cluster_pcts else 0.0,
         "clustered_pct": round(sum(cluster_pcts), 2),
-        "fresh_pct": round(fresh_pct, 2),
+        "same_slot_pct": pct(same_slot),
+        "received_pct": pct(received),
+        "fresh_pct": pct([w for w in wallets if fresh.get(w)]),
         "fresh_count": sum(1 for w in wallets if fresh.get(w)),
         "busy_holders": len(busy),
+        "acq_traced": len(acq_sig),
         "rpc_calls": rpc.calls,
     }
 
@@ -232,6 +321,10 @@ def verdict(metrics, cfg):
         kills.append(f"operator_cluster({metrics['largest_cluster_pct']:.0f}%)")
     if metrics["clustered_pct"] > c["max_clustered_pct"]:
         kills.append(f"clustered_supply({metrics['clustered_pct']:.0f}%)")
+    if metrics.get("same_slot_pct", 0) > c["max_same_slot_pct"]:
+        kills.append(f"bundled_buys({metrics['same_slot_pct']:.0f}%)")
+    if metrics.get("received_pct", 0) > c["max_received_pct"]:
+        kills.append(f"received_not_bought({metrics['received_pct']:.0f}%)")
     if metrics["fresh_pct"] > c["max_fresh_pct"]:
         kills.append(f"fresh_wallets({metrics['fresh_pct']:.0f}%)")
     return kills
@@ -263,7 +356,10 @@ class CabalFinder:
         c = self.cfg["cluster"]
         if research and self.runs_this_cycle >= c["max_research_per_run"]:
             return None
-        if self.budget_left(now) < c["est_credits_per_token"]:
+        left = self.budget_left(now)
+        if research and left < c["daily_credit_budget"] * c["research_reserve_frac"]:
+            return None  # keep a reserve so real pass candidates are never blocked by research
+        if left < c["est_credits_per_token"]:
             return (["unknown:cluster_budget"], {}) if not research else None
         rpc = Rpc(self.rpc_url, post=self._post)
         try:
