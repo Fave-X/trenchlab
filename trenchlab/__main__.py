@@ -41,7 +41,7 @@ def print_table(rows, show_all=False, now=None):
     scouted = [r for r in rows if r[2] and not r[6]]
     print(f"\n{datetime.now():%Y-%m-%d %H:%M}  scanned {len(rows)} | passed scout {len(scouted) + len(passed)}"
           f" | FINAL PASS {len(passed)}")
-    hdr = f"{'':2}{'symbol':<12}{'score':>6}{'liq':>8}{'1h vol':>8}{'buyers':>7}{'b/buyer':>8}{'b/s':>9}{'1h%':>7}{'age':>6}  flags / kill reasons"
+    hdr = f"{'':2}{'symbol':<12}{'score':>6}{'liq':>8}{'1h vol':>8}{'buyers':>7}{'b/buyer':>8}{'b/s':>11}{'1h%':>7}{'age':>6}  flags / kill reasons"
     show = passed + scouted + ([r for r in rows if not r[2]] if show_all else [])
     if not show:
         print("  nothing passed scout this cycle (normal - most pools should die)")
@@ -54,7 +54,7 @@ def print_table(rows, show_all=False, now=None):
         age = p.age_hours(now)
         why = " ".join(flags) if final else ", ".join(kills[:3])
         print(f"{mark:2}{(p.symbol or '?')[:11]:<12}{(sc if sc is not None else 0):>6.0f}{fmt_usd(p.liquidity_usd):>8}"
-              f"{fmt_usd(p.vol_h1):>8}{(p.buyers_h1 or 0):>7}{(bpb or 0):>8.2f}{bs:>9}"
+              f"{fmt_usd(p.vol_h1):>8}{(p.buyers_h1 or 0):>7}{(bpb or 0):>8.2f}{bs:>11}"
               f"{(p.chg_h1 or 0):>6.0f}%{(age or 0):>5.1f}h  {why}")
         if final:
             print(f"   {p.gecko_url()}")

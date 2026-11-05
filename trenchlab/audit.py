@@ -69,6 +69,9 @@ def check_rugcheck(report, cfg):
         for r in report.get("risks") or []:
             if isinstance(r, dict) and str(r.get("level", "")).lower() == "danger":
                 kills.append("rc_danger:" + str(r.get("name", "?"))[:40])
+    gi = report.get("graphInsidersDetected")
+    if gi:
+        notes.append(f"graph_insiders={gi}")
     if report.get("score_normalised") is not None:
         notes.append(f"rc_score={report.get('score_normalised')}")
     return kills, notes
