@@ -231,6 +231,6 @@ def build_report(db, cfg, now):
             if best[3] < 100:
                 w("  WARNING: n < 100. This is noise, not evidence. Do not trade on it.")
     w("")
-    w("Sampling is every scan cycle (~5 min), so intra-candle wicks are missed.")
+    w("Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.")
     w("Not financial advice. Paper results overstate live results.")
     return "\n".join(lines)
