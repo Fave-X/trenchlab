@@ -199,6 +199,12 @@ class FakeFetch:
                                                     buys=3000, buyers=200, sells=100))
         if "trending" in url:
             return {"data": []}
+        if "dexscreener" in url:
+            addrs = url.rsplit("/", 1)[1].split(",")
+            if getattr(self, "dex_down", False):
+                raise __import__("trenchlab.http", fromlist=["HttpError"]).HttpError("HTTP 429")
+            return {"pairs": [{"pairAddress": a, "priceUsd": str(self.price), "liquidity": {"usd": 50000}}
+                              for a in addrs]}
         if "/multi/" in url:
             addrs = url.rsplit("/", 1)[1].split(",")
             return payload(*[gecko_item(addr=a, mint="M" + a, price=self.price) for a in addrs])
@@ -212,7 +218,8 @@ class TestEndToEnd(unittest.TestCase):
             fetch = FakeFetch()
             gecko = Gecko("solana", 0, fetch=fetch)
             auditor = Auditor(CFG, fetch=fetch)
-            rows, _ = run_cycle(gecko, auditor, db, CFG, now=NOW, log=lambda *a: None, alert=False)
+            rows, _ = run_cycle(gecko, auditor, db, CFG, now=NOW, log=lambda *a: None, alert=False,
+                                dex_fetch=fetch)
             finals = [r for r in rows if r[6]]
             self.assertEqual([r[1].symbol for r in finals], ["GOOD"])
             killed = [r for r in rows if not r[2]]
@@ -221,7 +228,9 @@ class TestEndToEnd(unittest.TestCase):
             # later cycles: pools come from tracking via /multi as well as new_pools
             for i, px in enumerate([0.0011, 0.0013, 0.0015, 0.0012], start=1):
                 fetch.price = px
-                run_cycle(gecko, auditor, db, CFG, now=NOW + i * 3600, log=lambda *a: None, alert=False)
+                fetch.dex_down = (i == 2)  # one cycle with DexScreener down -> Gecko fallback
+                run_cycle(gecko, auditor, db, CFG, now=NOW + i * 3600, log=lambda *a: None, alert=False,
+                          dex_fetch=fetch)
             self.assertGreater(len(db.samples_for("POOL1")), 1)
             rep = build_report(db, CFG, NOW + 5 * 3600)
             self.assertIn("FINAL PASS", rep)
@@ -232,3 +241,18 @@ class TestEndToEnd(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestDexScreener(unittest.TestCase):
+    def test_parse(self):
+        from trenchlab.dexscreener import prices_multi
+        calls = []
+
+        def fetch(url, min_interval=0):
+            calls.append(url)
+            return {"pairs": [{"pairAddress": "A", "priceUsd": "0.5", "liquidity": {"usd": 1234}},
+                              {"pairAddress": "B", "priceUsd": None}]}
+        out = prices_multi([f"P{i}" for i in range(31)], fetch=fetch)
+        self.assertEqual(len(calls), 2)                      # chunks of 30
+        self.assertEqual(out["A"], (0.5, 1234.0))
+        self.assertEqual(out["B"], (None, None))

@@ -352,7 +352,9 @@ class CabalFinder:
             return None
         cached = self.db.get_cluster(mint, now, self.cfg["cluster"]["cache_hours"])
         if cached is not None:
-            return json.loads(cached["kills"]), json.loads(cached["metrics"])
+            m = json.loads(cached["metrics"])
+            if "acq_traced" in m or "error" in m:  # ignore results from the pre-acquisition-tracing version
+                return json.loads(cached["kills"]), m
         c = self.cfg["cluster"]
         if research and self.runs_this_cycle >= c["max_research_per_run"]:
             return None

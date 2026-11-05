@@ -4,6 +4,7 @@ import time
 from .filters import scout, buys_per_buyer
 from .score import score as score_pool
 from .notify import telegram
+from . import dexscreener
 
 
 def fetch_candidates(gecko, cfg, log=print):
@@ -24,8 +25,10 @@ def fetch_candidates(gecko, cfg, log=print):
     return [p for p in seen.values() if (p.symbol or "").upper() not in ignore]
 
 
-def run_cycle(gecko, auditor, db, cfg, now=None, log=print, alert=True, cabal=None):
+def run_cycle(gecko, auditor, db, cfg, now=None, log=print, alert=True, cabal=None, dex_fetch=None):
     now = now if now is not None else time.time()
+    if dex_fetch is None:
+        from .http import get_json as dex_fetch
     lab = cfg["lab"]
     track_s = lab["track_hours"] * 3600
     threshold = cfg["score"]["pass_threshold"]
@@ -104,10 +107,19 @@ def run_cycle(gecko, auditor, db, cfg, now=None, log=print, alert=True, cabal=No
     seen_now = {p.address for p in pools}
     to_track = [a for a in db.tracked_addresses(now) if a not in seen_now and db.sample_due(a, now)]
     if to_track:
-        try:
-            for tp in gecko.pools_multi(to_track):
-                db.add_sample(tp.address, now, tp.price_usd, tp.liquidity_usd)
+        got = {}
+        try:  # DexScreener first: much higher rate limit than GeckoTerminal
+            got = dexscreener.prices_multi(to_track, cfg["network"], fetch=dex_fetch)
         except Exception as e:
-            log(f"[lab] tracking fetch failed: {e}")
+            log(f"[lab] dexscreener tracking failed: {e}")
+        missing = [a for a in to_track if a not in got]
+        if missing:
+            try:
+                for tp in gecko.pools_multi(missing):
+                    got[tp.address] = (tp.price_usd, tp.liquidity_usd)
+            except Exception as e:
+                log(f"[lab] gecko tracking fallback failed for {len(missing)} pools: {e}")
+        for addr, (px, liq) in got.items():
+            db.add_sample(addr, now, px, liq)
         db.commit()
     return [r for r in results if r[0] == "pool"], len(to_track)

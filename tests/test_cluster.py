@@ -206,14 +206,14 @@ class TestCycleWithCabal(unittest.TestCase):
             fetch = FakeFetch()
             cf = CabalFinder(CFG, db, api_key="k", post=FakeChain(), log=lambda *a: None)
             rows, _ = run_cycle(Gecko("solana", 0, fetch=fetch), Auditor(CFG, fetch=fetch), db, CFG,
-                                now=TNOW, log=lambda *a: None, alert=False, cabal=cf)
+                                now=TNOW, log=lambda *a: None, alert=False, cabal=cf, dex_fetch=fetch)
             good = [r for r in rows if r[1].symbol == "GOOD"][0]
             self.assertFalse(good[6])  # would have passed, but the cabal finder killed it
             self.assertTrue(any(k.startswith("operator_cluster") for k in good[3]))
             for i in range(1, 4):
                 fetch.price = 0.001 * (1 - 0.2 * i)
                 run_cycle(Gecko("solana", 0, fetch=fetch), Auditor(CFG, fetch=fetch), db, CFG,
-                          now=TNOW + i * 3600, log=lambda *a: None, alert=False, cabal=cf)
+                          now=TNOW + i * 3600, log=lambda *a: None, alert=False, cabal=cf, dex_fetch=fetch)
             rep = build_report(db, CFG, TNOW + 4 * 3600)
             self.assertIn("CABAL CHECK", rep)
             self.assertIn("helius credits today", rep)
