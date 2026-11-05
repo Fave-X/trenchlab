@@ -197,6 +197,49 @@ def build_report(db, cfg, now):
             rr = f"{sum(rugs) / len(rugs) * 100:>6.0f}%" if rugs else "     -"
             w(f"{b:<8}{len(rs):>5}{_pct(m4):>10}{_pct(m24):>10}{rr}")
 
+    # ---------- does the cabal finder predict anything? ----------
+    crow = db.conn.execute(
+        "SELECT token_mint, metrics FROM clusters c WHERE ts = "
+        "(SELECT MAX(ts) FROM clusters WHERE token_mint=c.token_mint)").fetchall()
+    cmap = {}
+    for r in crow:
+        m = json.loads(r["metrics"] or "{}")
+        if "largest_cluster_pct" in m:
+            cmap[r["token_mint"]] = m
+    if cmap:
+        def bucket_cluster(v):
+            return "none" if v == 0 else "<15%" if v < 15 else "15-30%" if v < 30 else "30%+"
+
+        def bucket_fresh(v):
+            return "<20%" if v < 20 else "20-40%" if v < 40 else "40%+"
+
+        by_c, by_f = defaultdict(list), defaultdict(list)
+        for rows_ in groups.values():
+            for p, rets, rug in rows_:
+                m = cmap.get(p["token_mint"])
+                if not m:
+                    continue
+                by_c[bucket_cluster(m["largest_cluster_pct"])].append((rets, rug))
+                by_f[bucket_fresh(m["fresh_pct"])].append((rets, rug))
+        w("")
+        w("CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)")
+        w("(bigger clusters should rug more / do worse; if not, the cluster rule is noise)")
+        for title, data, order in (("cluster", by_c, ["none", "<15%", "15-30%", "30%+"]),
+                                   ("fresh", by_f, ["<20%", "20-40%", "40%+"])):
+            w(f"{title:<8}{'n':>5}{'+1h med':>10}{'+4h med':>10}{'+24h med':>10}{'rug%':>7}")
+            for b in order:
+                rs = data.get(b)
+                if not rs:
+                    continue
+                m1 = _med([r[0]["1h"] for r in rs if r[0]["1h"] is not None])
+                m4 = _med([r[0]["4h"] for r in rs if r[0]["4h"] is not None])
+                m24 = _med([r[0]["24h"] for r in rs if r[0]["24h"] is not None])
+                rugs = [r[1] for r in rs if r[1] is not None]
+                rr = f"{sum(rugs) / len(rugs) * 100:>6.0f}%" if rugs else "     -"
+                w(f"{b:<8}{len(rs):>5}{_pct(m1):>10}{_pct(m4):>10}{_pct(m24):>10}{rr}")
+        used = db.credits_used(now)
+        w(f"tokens analysed: {len(cmap)} | helius credits today: {used}/{cfg['cluster']['daily_credit_budget']}")
+
     # ---------- exit grid on final passes ----------
     lab = cfg["lab"]
     grid = lab["exit_grid"]

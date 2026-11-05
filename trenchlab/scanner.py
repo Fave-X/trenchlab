@@ -1,4 +1,4 @@
-"""One scan cycle: SCOUT -> ANALYST score -> AUDITOR -> log everything -> sample prices."""
+"""One scan cycle: SCOUT -> ANALYST score -> AUDITOR -> CABAL FINDER -> log everything -> sample prices."""
 import time
 
 from .filters import scout, buys_per_buyer
@@ -24,7 +24,7 @@ def fetch_candidates(gecko, cfg, log=print):
     return [p for p in seen.values() if (p.symbol or "").upper() not in ignore]
 
 
-def run_cycle(gecko, auditor, db, cfg, now=None, log=print, alert=True):
+def run_cycle(gecko, auditor, db, cfg, now=None, log=print, alert=True, cabal=None):
     now = now if now is not None else time.time()
     lab = cfg["lab"]
     track_s = lab["track_hours"] * 3600
@@ -32,6 +32,9 @@ def run_cycle(gecko, auditor, db, cfg, now=None, log=print, alert=True):
 
     pools = fetch_candidates(gecko, cfg, log)
     results = []
+    research = []  # near-miss pools to run the cabal finder on for measurement only
+    if cabal is not None:
+        cabal.runs_this_cycle = 0
     for p in pools:
         passed, kills, flags = scout(p, cfg, now)
         sc, parts, final, audit = None, {}, False, None
@@ -45,6 +48,18 @@ def run_cycle(gecko, auditor, db, cfg, now=None, log=print, alert=True):
                 final = audit[0]
             else:
                 final = True
+            if final and cabal is not None and cabal.enabled:
+                known = auditor.known_accounts.get(p.token_mint) if auditor is not None else None
+                res = cabal.check(p.token_mint, now, known)
+                if res is not None:
+                    kills = kills + res[0]
+                    final = not res[0]
+            elif cabal is not None:
+                research.append(p)
+        elif (cabal is not None and len(kills) == 1
+              and kills[0] in cfg["cluster"]["research_single_kill_rules"]
+              and (p.liquidity_usd or 0) >= cfg["cluster"]["research_min_liquidity_usd"]):
+            research.append(p)
 
         trackable = (p.liquidity_usd or 0) >= lab["min_liquidity_to_track_usd"]
         db.upsert_first_seen(p, now, kills, now + track_s if trackable else now)
@@ -71,6 +86,19 @@ def run_cycle(gecko, auditor, db, cfg, now=None, log=print, alert=True):
             telegram(msg)
             db.mark_alerted(p.address, now)
     db.commit()
+
+    # research: cabal-check a few near misses so the lab can test the signal on non-passers too
+    if cabal is not None and cabal.enabled:
+        research.sort(key=lambda q: -(q.liquidity_usd or 0))
+        for q in research:
+            if cabal.runs_this_cycle >= cfg["cluster"]["max_research_per_run"]:
+                break
+            known = auditor.known_accounts.get(q.token_mint) if auditor is not None else None
+            if known is None and auditor is not None and cfg["audit"].get("use_rugcheck", True):
+                auditor.audit(q.token_mint)  # fetch RugCheck once to learn AMM/pool accounts
+                known = auditor.known_accounts.get(q.token_mint)
+            cabal.check(q.token_mint, now, known, research=True)
+        db.commit()
 
     # sample prices for everything still being tracked that we didn't just see
     seen_now = {p.address for p in pools}

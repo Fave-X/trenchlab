@@ -1,10 +1,9 @@
 {
   "network": "solana",
-  "scan_interval_minutes": 5,
+  "scan_interval_minutes": 10,
   "gecko_min_seconds_between_calls": 2.5,
   "gecko_new_pools_pages": 3,
   "gecko_trending_pages": 2,
-
   "scout": {
     "min_liquidity_usd": 30000,
     "min_vol_h1_to_liquidity": 1.0,
@@ -16,7 +15,6 @@
     "max_price_change_h1_pct": 80,
     "heating_up_multiplier": 12
   },
-
   "audit": {
     "enabled": true,
     "use_rugcheck": true,
@@ -26,11 +24,33 @@
     "max_top10_pct": 30,
     "kill_on_rugcheck_danger": true
   },
-
   "score": {
     "pass_threshold": 60
   },
-
+  "cluster": {
+    "enabled": true,
+    "max_holders": 20,
+    "fresh_max_txs": 10,
+    "fresh_max_age_hours": 72,
+    "busy_funder_txs": 1000,
+    "max_largest_cluster_pct": 15,
+    "max_clustered_pct": 30,
+    "max_fresh_pct": 40,
+    "daily_credit_budget": 25000,
+    "est_credits_per_token": 80,
+    "max_research_per_run": 3,
+    "cache_hours": 6,
+    "research_single_kill_rules": [
+      "few_unique_buyers",
+      "volume_below_liquidity",
+      "sells_dominate",
+      "wash_churn",
+      "overheated",
+      "too_old",
+      "too_young"
+    ],
+    "research_min_liquidity_usd": 20000
+  },
   "lab": {
     "min_liquidity_to_track_usd": 10000,
     "track_hours": 24,
@@ -38,11 +58,35 @@
     "rug_liquidity_drop_pct": 80,
     "rug_price_drop_pct": 90,
     "exit_grid": {
-      "stops_pct": [-6, -10, -15, -25],
-      "trail_activate_pct": [12, 20, 30],
+      "stops_pct": [
+        -6,
+        -10,
+        -15,
+        -25
+      ],
+      "trail_activate_pct": [
+        12,
+        20,
+        30
+      ],
       "trail_distance_pct": 10
     }
   },
-
-  "ignore_base_symbols": ["SOL", "WSOL", "USDC", "USDT", "JUP", "JTO", "BONK", "WIF", "RAY", "PYUSD", "USD1", "mSOL", "jitoSOL", "bSOL", "JupSOL"]
+  "ignore_base_symbols": [
+    "SOL",
+    "WSOL",
+    "USDC",
+    "USDT",
+    "JUP",
+    "JTO",
+    "BONK",
+    "WIF",
+    "RAY",
+    "PYUSD",
+    "USD1",
+    "mSOL",
+    "jitoSOL",
+    "bSOL",
+    "JupSOL"
+  ]
 }

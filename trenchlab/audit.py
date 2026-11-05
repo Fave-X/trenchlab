@@ -106,6 +106,7 @@ class Auditor:
         self.cfg = cfg
         self._fetch = fetch
         self._cache = {}
+        self.known_accounts = {}  # mint -> set of AMM/pool/known addresses from RugCheck
 
     def audit(self, mint):
         """Return (passed, kills, notes). Cached per mint for the session."""
@@ -119,6 +120,8 @@ class Auditor:
             except HttpError as e:
                 rep = None
                 notes.append(f"rugcheck_error:{e}"[:80])
+            if isinstance(rep, dict):
+                self.known_accounts[mint] = set((rep.get("knownAccounts") or {}).keys())
             k, n = check_rugcheck(rep, self.cfg)
             kills += k
             notes += n

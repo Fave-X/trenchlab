@@ -86,6 +86,7 @@ Not financial advice.
 
 ## Roadmap
 
-- **v0.2:** operator clustering (CrawlScan-style: shared funding wallets, same-transaction buys, virgin wallets, snipers still holding), using the Helius free tier
+- **v0.2 (live):** cabal finder. It traces who funded each top-20 holder using 1-credit Helius RPC calls, links wallets that share a funder (ignoring busy exchange-like funders), and kills on: largest linked cluster > 15% of supply, total clustered > 30%, fresh wallets > 40%. A daily credit budget keeps it inside the free plan. Near-miss pools are also analysed for research, so the `CABAL CHECK` report section can test whether the signal predicts rugs. The `HELIUS_API_KEY` repo secret is required.
+- **later:** same-block sniper detection, two-hop funding, supply received vs bought
 - **v0.3:** paper trader with real Jupiter quotes, sizer (0.5% risk per trade, at most 2 open positions, at most 20% exposure), reconciling ledger and dashboard
 - **v0.4:** wallet Copyability Score; chain-heat monitor; Robinhood Chain support

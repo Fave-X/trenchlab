@@ -44,6 +44,18 @@ CREATE TABLE IF NOT EXISTS samples (
     liquidity_usd   REAL,
     PRIMARY KEY (pool_address, ts)
 );
+CREATE TABLE IF NOT EXISTS clusters (
+    token_mint      TEXT,
+    ts              REAL,
+    research        INTEGER,
+    kills           TEXT,
+    metrics         TEXT
+);
+CREATE INDEX IF NOT EXISTS clusters_mint ON clusters(token_mint, ts);
+CREATE TABLE IF NOT EXISTS helius_usage (
+    day             TEXT PRIMARY KEY,
+    credits         INTEGER
+);
 CREATE TABLE IF NOT EXISTS alerts (
     pool_address    TEXT PRIMARY KEY,
     ts              REAL
@@ -135,6 +147,34 @@ class DB:
 
     def all_pools(self):
         return self.conn.execute("SELECT * FROM pools").fetchall()
+
+    # ---- cabal finder ----
+    @staticmethod
+    def _day(ts):
+        import datetime as _dt
+        return _dt.datetime.fromtimestamp(ts, _dt.timezone.utc).strftime("%Y-%m-%d")
+
+    def credits_used(self, now):
+        r = self.conn.execute("SELECT credits FROM helius_usage WHERE day=?", (self._day(now),)).fetchone()
+        return r[0] if r else 0
+
+    def add_credits(self, now, n):
+        self.conn.execute(
+            "INSERT INTO helius_usage VALUES (?,?) ON CONFLICT(day) DO UPDATE SET credits=credits+excluded.credits",
+            (self._day(now), int(n)))
+
+    def get_cluster(self, mint, now=None, max_age_hours=None):
+        r = self.conn.execute(
+            "SELECT * FROM clusters WHERE token_mint=? ORDER BY ts DESC LIMIT 1", (mint,)).fetchone()
+        if r is None:
+            return None
+        if now is not None and max_age_hours is not None and now - r["ts"] > max_age_hours * 3600:
+            return None
+        return r
+
+    def save_cluster(self, mint, ts, metrics, kills, research):
+        self.conn.execute("INSERT INTO clusters VALUES (?,?,?,?,?)",
+                          (mint, ts, int(bool(research)), json.dumps(kills), json.dumps(metrics)))
 
     def was_alerted(self, addr):
         return self.conn.execute("SELECT 1 FROM alerts WHERE pool_address=?", (addr,)).fetchone() is not None

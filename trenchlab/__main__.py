@@ -18,6 +18,7 @@ from .db import DB
 from .scanner import run_cycle
 from .filters import buys_per_buyer
 from .lab import build_report
+from .cluster import CabalFinder
 from .http import get_json
 
 
@@ -105,10 +106,16 @@ def main(argv=None):
         return 0
 
     auditor = Auditor(cfg)
+    cabal = CabalFinder(cfg, db)
+    if not cabal.enabled:
+        print("[cluster] HELIUS_API_KEY not set - cabal finder off")
     if args.cmd == "scan":
-        rows, tracked = run_cycle(gecko, auditor, db, cfg)
+        rows, tracked = run_cycle(gecko, auditor, db, cfg, cabal=cabal)
         print_table(rows, args.all)
         print(f"  tracking {tracked} pools for outcomes")
+        if cabal.enabled:
+            print(f"  cabal finder: {cabal.runs_this_cycle} research checks, "
+                  f"helius credits today {db.credits_used(time.time())}/{cfg['cluster']['daily_credit_budget']}")
         return 0
 
     # run loop
@@ -118,7 +125,7 @@ def main(argv=None):
     while True:
         start = time.time()
         try:
-            rows, tracked = run_cycle(gecko, auditor, db, cfg)
+            rows, tracked = run_cycle(gecko, auditor, db, cfg, cabal=cabal)
             print_table(rows)
             print(f"  tracking {tracked} pools for outcomes")
             cycles += 1
