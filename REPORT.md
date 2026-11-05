@@ -1,32 +1,32 @@
 # TrenchLab report
 
-Updated: 2026-11-05 20:50 UTC
+Updated: 2026-11-05 21:01 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           610
+pools seen           653
 passed SCOUT         3
   killed by SCORE    0
   killed by AUDIT    0
 FINAL PASS           3
 
 top kill reasons at first sighting (a pool can have several):
-  few_unique_buyers              541
-  too_young                      524
-  liquidity_low                  481
-  volume_below_liquidity         415
-  sells_dominate                 210
-  wash_churn                     122
+  few_unique_buyers              581
+  too_young                      567
+  liquidity_low                  523
+  volume_below_liquidity         442
+  sells_dominate                 222
+  wash_churn                     131
   too_old                         71
-  overheated                      41
+  overheated                      44
   missing                         29
 
 OUTCOMES (median price change from first sighting / first pass)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                    3   -17.0%   -21.3%      -        -       0%
-KILLED (tracked)            141    +0.8%    +2.0%      -        -      33%
+KILLED (tracked)            147    +0.8%    +2.0%      -        -      35%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -66,9 +66,9 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     12%    3     0%    -24.6%   -24.4%   -29.2%
   -15%     20%    3     0%    -24.6%   -24.4%   -29.2%
   -15%     30%    3     0%    -24.6%   -24.4%   -29.2%
-  -25%     12%    3     0%    -38.6%   -29.2%   -67.1%
-  -25%     20%    3     0%    -38.6%   -29.2%   -67.1%
-  -25%     30%    3     0%    -38.6%   -29.2%   -67.1%
+  -25%     12%    3     0%    -37.9%   -29.2%   -67.1%
+  -25%     20%    3     0%    -37.9%   -29.2%   -67.1%
+  -25%     30%    3     0%    -37.9%   -29.2%   -67.1%
   best so far: stop -6%, trail from +12% -> avg -24.6% per trade over n=3
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
