@@ -2,7 +2,7 @@ name: trench-scan
 
 on:
   schedule:
-    - cron: "*/10 * * * *"   # every 10 min (GitHub may delay runs a few minutes)
+    - cron: "4,14,24,34,44,54 * * * *"   # every 10 min, off the busy :00 minutes (GitHub may still delay runs)
   workflow_dispatch: {}      # lets you click "Run workflow" manually
 
 permissions:
