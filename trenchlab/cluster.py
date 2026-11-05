@@ -34,6 +34,7 @@ import urllib.request
 from .http import USER_AGENT
 
 SYSTEM_PROGRAM = "11111111111111111111111111111111"
+TX_VERSION = 1  # newest Solana transaction format the RPC must return (v1 introduced 2026)
 RPC_URL = "https://mainnet.helius-rpc.com/?api-key={key}"
 
 
@@ -219,14 +220,19 @@ def analyse(rpc, mint, cfg, known_accounts=None, now=None):
 
     # --- 1. how each holder acquired THIS token (cheap even for very active wallets) ---
     acq_sig, acq_slot, received, payer_of = {}, {}, set(), {}
+    tx_errors = 0
     for w in wallets:
         sigs = rpc.call("getSignaturesForAddress", [main_acc[w], {"limit": 1000}]) or []
         if not sigs or len(sigs) >= 1000:
             continue
         first = sigs[-1]
         acq_sig[w], acq_slot[w] = first.get("signature"), first.get("slot")
-        tx = rpc.call("getTransaction", [first["signature"],
-                                         {"encoding": "jsonParsed", "maxSupportedTransactionVersion": 0}])
+        try:
+            tx = rpc.call("getTransaction", [first["signature"],
+                                             {"encoding": "jsonParsed", "maxSupportedTransactionVersion": TX_VERSION}])
+        except RpcError:
+            tx_errors += 1
+            continue
         a = _acquisition(tx, w, mint)
         if not a:
             continue
@@ -266,8 +272,12 @@ def analyse(rpc, mint, cfg, known_accounts=None, now=None):
         age_h = (now - first_t) / 3600 if first_t else None
         fresh[w] = n <= c["fresh_max_txs"] or (age_h is not None and age_h <= c["fresh_max_age_hours"])
         if first:
-            tx = rpc.call("getTransaction", [first["signature"],
-                                             {"encoding": "jsonParsed", "maxSupportedTransactionVersion": 0}])
+            try:
+                tx = rpc.call("getTransaction", [first["signature"],
+                                                 {"encoding": "jsonParsed", "maxSupportedTransactionVersion": TX_VERSION}])
+            except RpcError:
+                tx_errors += 1
+                continue
             f = _first_funder(tx, w)
             if f:
                 funder_of[w] = f
@@ -287,6 +297,9 @@ def analyse(rpc, mint, cfg, known_accounts=None, now=None):
         if busy_cache.get(f):
             continue
         uf.union(w, f if f in wset else "ext:" + f)
+
+    if wallets and tx_errors > max(2, len(wallets) // 4):
+        raise RpcError(f"too many unreadable transactions ({tx_errors})")  # unknown is never safe
 
     groups = {}
     for w in wallets:
@@ -310,6 +323,7 @@ def analyse(rpc, mint, cfg, known_accounts=None, now=None):
         "fresh_count": sum(1 for w in wallets if fresh.get(w)),
         "busy_holders": len(busy),
         "acq_traced": len(acq_sig),
+        "tx_errors": tx_errors,
         "rpc_calls": rpc.calls,
     }
 
@@ -353,7 +367,10 @@ class CabalFinder:
         cached = self.db.get_cluster(mint, now, self.cfg["cluster"]["cache_hours"])
         if cached is not None:
             m = json.loads(cached["metrics"])
-            if "acq_traced" in m or "error" in m:  # ignore results from the pre-acquisition-tracing version
+            if "error" in m:
+                if now - cached["ts"] < 3600:  # retry failed analyses after an hour
+                    return json.loads(cached["kills"]), m
+            elif "acq_traced" in m:  # ignore results from the pre-acquisition-tracing version
                 return json.loads(cached["kills"]), m
         c = self.cfg["cluster"]
         if research and self.runs_this_cycle >= c["max_research_per_run"]:

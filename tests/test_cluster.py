@@ -217,3 +217,25 @@ class TestCycleWithCabal(unittest.TestCase):
             rep = build_report(db, CFG, TNOW + 4 * 3600)
             self.assertIn("CABAL CHECK", rep)
             self.assertIn("helius credits today", rep)
+
+
+class TestTxErrors(unittest.TestCase):
+    def test_tolerates_few_fails_on_many(self):
+        ch = FakeChain()
+        orig = ch.__call__
+
+        def flaky(payload):
+            if payload["method"] == "getTransaction" and payload["params"][0] == "R1BUY":
+                assert payload["params"][1]["maxSupportedTransactionVersion"] == 1
+                return {"error": {"code": -32015, "message": "nope"}}
+            return orig(payload)
+        m = analyse(Rpc("x", 0, post=flaky), "MINT", CFG, {"AMM"}, NOW)
+        self.assertEqual(m["tx_errors"], 1)
+        self.assertEqual(m["largest_cluster_size"], 4)
+
+        def broken(payload):
+            if payload["method"] == "getTransaction":
+                return {"error": {"code": -32015, "message": "nope"}}
+            return orig(payload)
+        with self.assertRaises(Exception):
+            analyse(Rpc("x", 0, post=broken), "MINT", CFG, {"AMM"}, NOW)
