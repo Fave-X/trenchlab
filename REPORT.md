@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-06 12:51 UTC
+Updated: 2026-11-06 13:01 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           5791
+pools seen           5849
 passed SCOUT         15
   killed by SCORE    1
   killed by AUDIT    2
 FINAL PASS           12
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                     5503
-  few_unique_buyers             5400
-  liquidity_low                 5193
-  volume_below_liquidity        4020
-  sells_dominate                1718
-  wash_churn                    1240
-  overheated                     483
+  too_young                     5561
+  few_unique_buyers             5454
+  liquidity_low                 5250
+  volume_below_liquidity        4059
+  sells_dominate                1737
+  wash_churn                    1255
+  overheated                     488
   too_old                        250
   missing                        191
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 400 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 401 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   12    -5.5%   -13.3%   -44.4%      -      17%
 SCOUT PASS, killed later      3    -4.1%   -25.5%   -32.2%      -       0%
-KILLED (tracked)            911    +0.0%    -1.0%    -2.1%    -7.4%    23%
+KILLED (tracked)            917    +0.0%    -1.0%    -2.1%    -7.4%    23%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -88,7 +88,7 @@ exits: stop 1, trail 1
 last trades:
   RM           $25.00 -> $14.03 (-43.9%)  stop  1.0h
   APPLEPAID    $24.45 -> $22.38 (-8.5%)  trail  0.7h
-signals skipped by the sizer/risk rules: already_traded_token 13
+signals skipped by the sizer/risk rules: already_traded_token 14
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
