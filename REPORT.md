@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-06 20:21 UTC
+Updated: 2026-11-06 20:31 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           8080
+pools seen           8139
 passed SCOUT         19
   killed by SCORE    1
-  killed by AUDIT    4
-FINAL PASS           14
+  killed by AUDIT    3
+FINAL PASS           15
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                     7761
-  few_unique_buyers             7597
-  liquidity_low                 7290
-  volume_below_liquidity        5655
-  sells_dominate                2380
-  wash_churn                    1684
-  overheated                     676
+  too_young                     7820
+  few_unique_buyers             7656
+  liquidity_low                 7348
+  volume_below_liquidity        5704
+  sells_dominate                2397
+  wash_churn                    1699
+  overheated                     682
   missing                        290
   too_old                        274
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 520 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 521 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   14    -5.5%   -17.3%   -44.0%   -93.4%    29%
-SCOUT PASS, killed later      5    -1.2%    +3.0%   -32.2%      -       0%
-KILLED (tracked)           1191    +0.0%    -2.3%    -7.0%    -2.5%    27%
+FINAL PASS                   15    -5.5%   -17.3%   -44.0%   -93.4%    27%
+SCOUT PASS, killed later      4    -1.2%    +3.0%   -32.2%      -       0%
+KILLED (tracked)           1199    -0.0%    -2.3%    -7.0%    -2.5%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -91,7 +91,7 @@ last trades:
   RM           $25.00 -> $14.03 (-43.9%)  stop  1.0h
   APPLEPAID    $24.45 -> $22.38 (-8.5%)  trail  0.7h
   AMD          $24.35 -> $21.18 (-13.0%)  stop  1.5h
-signals skipped by the sizer/risk rules: already_traded_token 38, daily_loss_limit 15
+signals skipped by the sizer/risk rules: already_traded_token 38, daily_loss_limit 16
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
