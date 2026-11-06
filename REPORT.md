@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-06 12:31 UTC
+Updated: 2026-11-06 12:44 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           5667
+pools seen           5728
 passed SCOUT         15
   killed by SCORE    1
   killed by AUDIT    2
 FINAL PASS           12
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                     5381
-  few_unique_buyers             5283
-  liquidity_low                 5080
-  volume_below_liquidity        3935
-  sells_dominate                1684
-  wash_churn                    1215
-  overheated                     467
-  too_old                        249
-  missing                        187
+  too_young                     5441
+  few_unique_buyers             5343
+  liquidity_low                 5134
+  volume_below_liquidity        3980
+  sells_dominate                1699
+  wash_churn                    1228
+  overheated                     474
+  too_old                        250
+  missing                        191
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 391 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 395 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   12    -5.5%   -13.3%   -44.4%      -      17%
 SCOUT PASS, killed later      3    -4.1%   -25.5%   -32.2%      -       0%
-KILLED (tracked)            896    +0.0%    -1.0%    -2.0%    -7.4%    23%
+KILLED (tracked)            903    +0.0%    -1.0%    -2.5%    -7.4%    23%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -43,53 +43,53 @@ SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+         4    -58.2%       -      50%
-70-79       6    -31.2%       -       0%
-60-69       4    -39.9%       -       0%
+70-79       7    -31.2%       -       0%
+60-69       3    -39.9%       -       0%
 <60         1    -32.2%       -       0%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none       32     -6.8%    -32.4%       -      16%
+none       33     -6.8%    -32.4%       -      15%
 <15%       12     -0.6%     +0.9%     -2.6%    17%
 30%+       12     +0.1%     -0.6%    -14.9%     0%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none       47     -1.3%     -0.2%     -8.7%     9%
+none       48     -1.3%     -0.2%     -8.7%     8%
 <20%        9    -14.8%    -46.5%       -      33%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%       56     -1.4%     -1.0%     -8.7%    12%
+<20%       57     -1.4%     -1.0%     -8.7%    12%
 tokens analysed: 39 | helius credits today: 1904/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%   12    25%     -0.5%   -17.9%   -29.2%
-   -6%     20%   12    25%     -0.5%   -17.9%   -29.2%
-   -6%     30%   12    25%     -0.5%   -17.9%   -29.2%
-  -10%     12%   12    25%     -4.2%   -20.0%   -44.6%
-  -10%     20%   12    25%     -4.2%   -20.0%   -44.6%
-  -10%     30%   12    25%     -4.2%   -20.0%   -44.6%
-  -15%     12%   12    25%     -4.8%   -20.6%   -44.6%
-  -15%     20%   12    25%     -4.8%   -20.6%   -44.6%
-  -15%     30%   12    25%     -4.8%   -20.6%   -44.6%
-  -25%     12%   12    25%     -9.0%   -19.9%   -67.1%
-  -25%     20%   12    25%    -14.8%   -30.1%   -76.1%
-  -25%     30%   12    25%    -14.8%   -30.1%   -76.1%
-  best so far: stop -6%, trail from +12% -> avg -0.5% per trade over n=12
+   -6%     12%   12    25%     -0.2%   -17.9%   -29.2%
+   -6%     20%   12    25%     -0.2%   -17.9%   -29.2%
+   -6%     30%   12    25%     -0.2%   -17.9%   -29.2%
+  -10%     12%   12    25%     -3.9%   -20.0%   -44.6%
+  -10%     20%   12    25%     -3.9%   -20.0%   -44.6%
+  -10%     30%   12    25%     -3.9%   -20.0%   -44.6%
+  -15%     12%   12    25%     -4.5%   -20.6%   -44.6%
+  -15%     20%   12    25%     -4.5%   -20.6%   -44.6%
+  -15%     30%   12    25%     -4.5%   -20.6%   -44.6%
+  -25%     12%   12    25%     -8.7%   -19.9%   -67.1%
+  -25%     20%   12    25%    -14.5%   -30.1%   -76.1%
+  -25%     30%   12    25%    -14.5%   -30.1%   -76.1%
+  best so far: stop -6%, trail from +12% -> avg -0.2% per trade over n=12
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 ================================================================
 PAPER TRADER  (pricing: model; start $500.00)
 ================================================================
-equity $500.19 (+0.0%) | cash $464.58 | open 1 | max drawdown -2.7%
+equity $501.11 (+0.2%) | cash $464.58 | open 1 | max drawdown -2.7%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 1 | win 0/1 (0%) | avg net -43.9% | realized $-10.97 | expectancy $-10.97/trade
 exits: stop 1
   (n=1 < 100: noise, not evidence)
 open:
-  APPLEPAID    cost $24.45  now $35.61 (+45.6%)  held 0.4h
+  APPLEPAID    cost $24.45  now $36.53 (+49.4%)  held 0.6h
 last trades:
   RM           $25.00 -> $14.03 (-43.9%)  stop  1.0h
-signals skipped by the sizer/risk rules: already_traded_token 11
+signals skipped by the sizer/risk rules: already_traded_token 12
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
