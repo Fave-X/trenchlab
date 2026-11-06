@@ -60,6 +60,42 @@ CREATE TABLE IF NOT EXISTS meta (
     key             TEXT PRIMARY KEY,
     value           TEXT
 );
+CREATE TABLE IF NOT EXISTS paper_bank (
+    id              INTEGER PRIMARY KEY CHECK (id = 1),
+    start_usd       REAL,
+    cash            REAL,
+    created_ts      REAL
+);
+CREATE TABLE IF NOT EXISTS paper_positions (
+    id              INTEGER PRIMARY KEY AUTOINCREMENT,
+    pool_address    TEXT,
+    token_mint      TEXT,
+    symbol          TEXT,
+    mode            TEXT,
+    entry_ts        REAL,
+    cost_usd        REAL,
+    tokens          REAL,
+    score           REAL,
+    entry_info      TEXT,
+    last_value      REAL,
+    peak_value      REAL,
+    misses          INTEGER DEFAULT 0,
+    exit_ts         REAL,
+    exit_value      REAL,
+    exit_reason     TEXT
+);
+CREATE TABLE IF NOT EXISTS paper_skips (
+    ts              REAL,
+    pool_address    TEXT,
+    symbol          TEXT,
+    reason          TEXT
+);
+CREATE TABLE IF NOT EXISTS paper_equity (
+    ts              REAL,
+    equity          REAL,
+    cash            REAL,
+    n_open          INTEGER
+);
 CREATE TABLE IF NOT EXISTS alerts (
     pool_address    TEXT PRIMARY KEY,
     ts              REAL
@@ -92,6 +128,14 @@ class DB:
                 self.conn.execute(f"DELETE FROM samples WHERE rowid IN ({','.join('?' * len(chunk))})", chunk)
             self.conn.execute("INSERT INTO meta VALUES ('cleanup_dex_v1', ?)", (str(len(bad)),))
             self.conn.commit()
+        if not self.conn.execute("SELECT 1 FROM meta WHERE key='prune_obs_v1'").fetchone():
+            n = self.conn.execute(
+                """UPDATE observations SET metrics = NULL
+                   WHERE scout_pass = 0 AND metrics IS NOT NULL AND pool_address IN
+                     (SELECT pool_address FROM pools WHERE COALESCE(first_liq, 0) < 10000)""").rowcount
+            self.conn.execute("INSERT INTO meta VALUES ('prune_obs_v1', ?)", (str(n),))
+            self.conn.commit()
+            self.conn.execute("VACUUM")
 
     @staticmethod
     def _dex_reading_ok(price, liq, first_price, first_liq):
@@ -142,11 +186,17 @@ class DB:
             "UPDATE pools SET track_until_ts=MAX(COALESCE(track_until_ts,0), ?) WHERE pool_address=?",
             (until, addr))
 
-    def add_observation(self, ts, pool, scout_pass, kills, flags, score, parts, final_pass):
+    def add_observation(self, ts, pool, scout_pass, kills, flags, score, parts, final_pass, keep_metrics=True):
+        """Full market metrics are kept only for pools worth studying (trackable or scout-passing);
+        for the thousands of tiny pools a day, the decision and kill reasons are enough."""
+        metrics = None
+        if keep_metrics:
+            metrics = json.dumps({k: v for k, v in pool.to_dict().items() if v not in (None, "", {})},
+                                 separators=(",", ":"))
         self.conn.execute(
             "INSERT INTO observations VALUES (?,?,?,?,?,?,?,?,?,?)",
             (ts, pool.address, pool.source, int(scout_pass), json.dumps(kills), json.dumps(flags),
-             score, json.dumps(parts), int(final_pass), json.dumps(pool.to_dict())),
+             score, json.dumps(parts) if parts else None, int(final_pass), metrics),
         )
 
     def add_sample(self, addr, ts, price, liq):
@@ -160,12 +210,91 @@ class DB:
             (addr,)).fetchone()
         return None if r is None else (r[0], r[1])
 
+    # ---- paper trader ----
+    def ensure_paper_bank(self, start_usd, now=None):
+        if self.paper_bank() is None:
+            import time as _t
+            self.conn.execute("INSERT INTO paper_bank VALUES (1, ?, ?, ?)", (start_usd, start_usd, now or _t.time()))
+            self.conn.commit()
+
+    def paper_bank(self):
+        return self.conn.execute("SELECT * FROM paper_bank WHERE id=1").fetchone()
+
+    def paper_cash(self):
+        r = self.paper_bank()
+        return r["cash"] if r else 0.0
+
+    def open_positions(self):
+        return self.conn.execute("SELECT * FROM paper_positions WHERE exit_ts IS NULL ORDER BY entry_ts").fetchall()
+
+    def closed_positions(self):
+        return self.conn.execute("SELECT * FROM paper_positions WHERE exit_ts IS NOT NULL ORDER BY exit_ts").fetchall()
+
+    def has_open_position(self, pool_address):
+        return self.conn.execute("SELECT 1 FROM paper_positions WHERE pool_address=? AND exit_ts IS NULL",
+                                 (pool_address,)).fetchone() is not None
+
+    def paper_traded_token(self, mint):
+        return self.conn.execute("SELECT 1 FROM paper_positions WHERE token_mint=?", (mint,)).fetchone() is not None
+
+    def paper_realized_today(self, now):
+        day = self._day(now)
+        rows = self.conn.execute("SELECT exit_ts, exit_value, cost_usd FROM paper_positions WHERE exit_ts IS NOT NULL").fetchall()
+        return sum(r["exit_value"] - r["cost_usd"] for r in rows if self._day(r["exit_ts"]) == day)
+
+    def paper_last_loss_ts(self):
+        r = self.conn.execute("SELECT MAX(exit_ts) FROM paper_positions WHERE exit_ts IS NOT NULL AND exit_value < cost_usd").fetchone()
+        return r[0] if r else None
+
+    def paper_open(self, now, pool, cost, tokens, score, mode, info):
+        self.conn.execute("UPDATE paper_bank SET cash = cash - ? WHERE id=1", (cost,))
+        cur = self.conn.execute(
+            """INSERT INTO paper_positions (pool_address, token_mint, symbol, mode, entry_ts, cost_usd, tokens,
+               score, entry_info, last_value, peak_value) VALUES (?,?,?,?,?,?,?,?,?,?,?)""",
+            (pool.address, pool.token_mint, pool.symbol, mode, now, cost, tokens, score, json.dumps(info), None, cost))
+        self.conn.commit()
+        return cur.lastrowid
+
+    def paper_mark(self, pid, value, peak):
+        self.conn.execute("UPDATE paper_positions SET last_value=?, peak_value=? WHERE id=?", (value, peak, pid))
+
+    def paper_miss(self, pid):
+        self.conn.execute("UPDATE paper_positions SET misses = misses + 1 WHERE id=?", (pid,))
+        return self.conn.execute("SELECT misses FROM paper_positions WHERE id=?", (pid,)).fetchone()[0]
+
+    def paper_reset_miss(self, pid):
+        self.conn.execute("UPDATE paper_positions SET misses = 0 WHERE id=?", (pid,))
+
+    def paper_close(self, pid, now, value, reason):
+        self.conn.execute("UPDATE paper_positions SET exit_ts=?, exit_value=?, exit_reason=?, last_value=? WHERE id=?",
+                          (now, value, reason, value, pid))
+        self.conn.execute("UPDATE paper_bank SET cash = cash + ? WHERE id=1", (value,))
+
+    def paper_skip(self, now, pool, reason):
+        self.conn.execute("INSERT INTO paper_skips VALUES (?,?,?,?)", (now, pool.address, pool.symbol, reason))
+
+    def paper_skip_counts(self):
+        rows = self.conn.execute("SELECT reason, COUNT(*) n FROM paper_skips GROUP BY reason ORDER BY n DESC").fetchall()
+        return [(r[0].split("(")[0], r[1]) for r in rows]
+
+    def paper_snapshot(self, now, equity, cash, n_open):
+        self.conn.execute("INSERT INTO paper_equity VALUES (?,?,?,?)", (now, equity, cash, n_open))
+
+    def paper_snapshots(self):
+        return self.conn.execute("SELECT * FROM paper_equity ORDER BY ts").fetchall()
+
+    def latest_sample(self, addr, since):
+        return self.conn.execute(
+            "SELECT * FROM samples WHERE pool_address=? AND ts>=? ORDER BY ts DESC LIMIT 1", (addr, since)).fetchone()
+
     def sample_due(self, addr, now, dense_hours=3.0, sparse_minutes=30):
         """Dense sampling (every cycle) for `dense_hours` after first sighting or first pass,
         then one sample per `sparse_minutes`. Keeps the database small enough for 24/7 runs."""
         p = self.get_pool(addr)
         if p is None:
             return True
+        if self.has_open_position(addr):
+            return True  # open paper positions are priced every cycle
         ref = max(p["first_seen_ts"] or 0, p["first_pass_ts"] or 0)
         if now - ref <= dense_hours * 3600:
             return True

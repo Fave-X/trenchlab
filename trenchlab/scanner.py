@@ -25,7 +25,8 @@ def fetch_candidates(gecko, cfg, log=print):
     return [p for p in seen.values() if (p.symbol or "").upper() not in ignore]
 
 
-def run_cycle(gecko, auditor, db, cfg, now=None, log=print, alert=True, cabal=None, dex_fetch=None):
+def run_cycle(gecko, auditor, db, cfg, now=None, log=print, alert=True, cabal=None, dex_fetch=None,
+              trader=None):
     now = now if now is not None else time.time()
     if dex_fetch is None:
         from .http import get_json as dex_fetch
@@ -71,11 +72,14 @@ def run_cycle(gecko, auditor, db, cfg, now=None, log=print, alert=True, cabal=No
         if final:
             db.mark_first_pass(p.address, now, p.price_usd, sc)
             db.extend_tracking(p.address, now + track_s)
+            if trader is not None:
+                trader.on_signal(p, sc, now)
         # log an observation when the pool is new, when its decision changes, or while it passes scout
         prev = db.last_obs_state(p.address)
         if prev is None or passed or prev != (int(passed), int(final)):
-            db.add_observation(now, p, passed, kills, flags, sc, parts, final)
-        if (trackable or final) and db.sample_due(p.address, now):
+            db.add_observation(now, p, passed, kills, flags, sc, parts, final,
+                               keep_metrics=trackable or passed or final)
+        if (trackable or final or db.has_open_position(p.address)) and db.sample_due(p.address, now):
             db.add_sample(p.address, now, p.price_usd, p.liquidity_usd)
         results.append(("pool", p, passed, kills, flags, sc, final))
 
@@ -124,4 +128,8 @@ def run_cycle(gecko, auditor, db, cfg, now=None, log=print, alert=True, cabal=No
         for addr, (px, liq) in got.items():
             db.add_sample(addr, now, px, liq)
         db.commit()
+    if trader is not None:
+        for pos in db.open_positions():
+            db.extend_tracking(pos["pool_address"], now + 3600)
+        trader.manage(now)
     return [r for r in results if r[0] == "pool"], len(to_track)

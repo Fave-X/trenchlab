@@ -88,5 +88,10 @@ Not financial advice.
 
 - **v0.2 (live):** cabal finder. It traces who funded each top-20 holder using 1-credit Helius RPC calls, links wallets that share a funder (ignoring busy exchange-like funders), and kills on: largest linked cluster > 15% of supply, total clustered > 30%, fresh wallets > 40%. A daily credit budget keeps it inside the free plan. Near-miss pools are also analysed for research, so the `CABAL CHECK` report section can test whether the signal predicts rugs. The `HELIUS_API_KEY` repo secret is required.
 - **later:** same-block sniper detection, two-hop funding, supply received vs bought
-- **v0.3:** paper trader with real Jupiter quotes, sizer (0.5% risk per trade, at most 2 open positions, at most 20% exposure), reconciling ledger and dashboard
+- **v0.3 (live):** paper trader. Every FINAL PASS becomes a simulated trade on a $500 paper bank:
+  - **sizing:** 0.5% risk per trade with a −10% stop, so $25 positions
+  - **limits:** at most 2 open, at most 20% exposure, one entry per token, a 30-min cooldown after a loss, and a 3% daily loss limit
+  - **exits:** stop, a trailing stop (armed at +20%, trails 10%), a 24h time stop, and "dead" after 6 cycles without a price (valued at $0)
+  - **pricing:** constant-product model from the pool's own liquidity plus fees, or real Jupiter quotes when the `JUPITER_API_KEY` secret is set (free key at portal.jup.ag)
+  - **report:** the `PAPER TRADER` section, with a ledger reconciliation check
 - **v0.4:** wallet Copyability Score; chain-heat monitor; Robinhood Chain support

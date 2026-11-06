@@ -195,7 +195,7 @@ class FakeFetch:
         if "new_pools" in url:
             if "page=1" not in url:
                 return {"data": []}
-            return payload(gecko_item(), gecko_item(addr="POOL2", mint="MINT2", symbol="RUGGY",
+            return payload(gecko_item(price=self.price), gecko_item(addr="POOL2", mint="MINT2", symbol="RUGGY",
                                                     buys=3000, buyers=200, sells=100))
         if "trending" in url:
             return {"data": []}
