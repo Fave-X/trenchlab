@@ -24,17 +24,31 @@ def price_at(samples, ref_ts, horizon_s):
     return None
 
 
+def reliable(samples, first_price):
+    """Drop readings where liquidity shows ~0 but the price has not fallen: both GeckoTerminal and
+    DexScreener return these (frozen price, zero reserve) for pools they stopped tracking properly,
+    including pumpswap pools whose liquidity can't even be pulled. They are data gaps, not rugs."""
+    if not first_price:
+        return list(samples)
+    return [s for s in samples
+            if not (s["liquidity_usd"] is not None and s["liquidity_usd"] < 100
+                    and s["price_usd"] is not None and s["price_usd"] >= first_price * 0.5)]
+
+
 def is_rugged(samples, ref_ts, ref_price, ref_liq, cfg):
+    """Rug = price crashed (default -90%), or liquidity vanished (default -80%) WITH the price
+    at least halving at that point."""
     lab = cfg["lab"]
     after = [s for s in samples if s["ts"] >= ref_ts]
     if not after or not ref_price:
         return None
-    min_p = min(s["price_usd"] for s in after)
-    if min_p <= ref_price * (1 - lab["rug_price_drop_pct"] / 100):
-        return True
-    liqs = [s["liquidity_usd"] for s in after if s["liquidity_usd"] is not None]
-    if ref_liq and liqs and min(liqs) <= ref_liq * (1 - lab["rug_liquidity_drop_pct"] / 100):
-        return True
+    for s in after:
+        p, liq = s["price_usd"], s["liquidity_usd"]
+        if p is not None and p <= ref_price * (1 - lab["rug_price_drop_pct"] / 100):
+            return True
+        if (ref_liq and liq is not None and liq <= ref_liq * (1 - lab["rug_liquidity_drop_pct"] / 100)
+                and p is not None and p <= ref_price * 0.5):
+            return True
     return False
 
 
@@ -121,8 +135,11 @@ def build_report(db, cfg, now):
 
     # ---------- outcomes by group ----------
     groups = defaultdict(list)
+    data_gaps = 0
     for p in pools:
-        samples = db.samples_for(p["pool_address"])
+        raw = db.samples_for(p["pool_address"])
+        samples = reliable(raw, p["first_price"])
+        data_gaps += len(raw) != len(samples)
         if p["first_pass_ts"]:
             g = "FINAL PASS"
             ref_ts, ref_p = p["first_pass_ts"], p["first_pass_price"]
@@ -139,7 +156,8 @@ def build_report(db, cfg, now):
         groups[g].append((p, rets, rug))
 
     w("")
-    w("OUTCOMES (median price change from first sighting / first pass)")
+    w(f"OUTCOMES (median price change from first sighting / first pass; "
+      f"{data_gaps} pools had zero-liquidity/frozen-price data gaps, ignored)")
     w(f"{'group':<26}{'n':>5}{'+15m':>9}{'+1h':>9}{'+4h':>9}{'+24h':>9}{'rug%':>7}")
     for g in ["FINAL PASS", "SCOUT PASS, killed later", "KILLED (tracked)"]:
         rows = groups.get(g, [])
@@ -247,7 +265,8 @@ def build_report(db, cfg, now):
     # ---------- exit grid on final passes ----------
     lab = cfg["lab"]
     grid = lab["exit_grid"]
-    passers = [(p, db.samples_for(p["pool_address"])) for p, _, _ in groups.get("FINAL PASS", [])]
+    passers = [(p, reliable(db.samples_for(p["pool_address"]), p["first_price"]))
+               for p, _, _ in groups.get("FINAL PASS", [])]
     passers = [(p, s) for p, s in passers if s]
     w("")
     w(f"EXIT GRID on FINAL PASS entries (round-trip cost {lab['round_trip_cost_pct']}%, "

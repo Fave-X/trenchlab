@@ -290,3 +290,20 @@ class TestDexScreener(unittest.TestCase):
             db2 = DB(path)                                                  # migration runs on open
             prices = sorted(r["price_usd"] for r in db2.samples_for(p.address))
             self.assertEqual(prices, [0.00001, 0.002])
+
+
+class TestRugDefinition(unittest.TestCase):
+    def S(self, pts):
+        return [{"ts": NOW + t, "price_usd": p, "liquidity_usd": l} for t, p, l in pts]
+
+    def test_frozen_price_zero_liq_is_not_a_rug(self):
+        from trenchlab.lab import reliable, is_rugged
+        s = self.S([(600, 1.5, 0), (1200, 1.5, 0)])
+        self.assertEqual(reliable(s, 1.0), [])
+        self.assertFalse(is_rugged(s, NOW, 1.0, 50000, CFG))
+
+    def test_real_rugs(self):
+        from trenchlab.lab import is_rugged
+        self.assertTrue(is_rugged(self.S([(600, 0.05, 40000)]), NOW, 1.0, 50000, CFG))   # price crash
+        self.assertTrue(is_rugged(self.S([(600, 0.4, 5000)]), NOW, 1.0, 50000, CFG))     # liq pulled + price halved
+        self.assertFalse(is_rugged(self.S([(600, 0.8, 45000)]), NOW, 1.0, 50000, CFG))
