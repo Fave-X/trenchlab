@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-06 09:22 UTC
+Updated: 2026-11-06 09:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           4585
+pools seen           4642
 passed SCOUT         14
   killed by SCORE    1
   killed by AUDIT    2
 FINAL PASS           11
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                     4326
-  few_unique_buyers             4273
-  liquidity_low                 4094
-  volume_below_liquidity        3182
-  sells_dominate                1379
-  wash_churn                     942
-  overheated                     379
+  too_young                     4383
+  few_unique_buyers             4326
+  liquidity_low                 4150
+  volume_below_liquidity        3224
+  sells_dominate                1399
+  wash_churn                     953
+  overheated                     383
   too_old                        226
   missing                        147
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 316 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 323 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   11    -6.5%   -10.6%   -38.3%      -       9%
-SCOUT PASS, killed later      3    -1.2%   -25.5%   -32.2%      -       0%
-KILLED (tracked)            756    +0.0%    -0.8%    -3.9%      -      22%
+SCOUT PASS, killed later      3    -4.1%   -25.5%   -32.2%      -       0%
+KILLED (tracked)            762    +0.0%    -0.8%    -3.9%   -12.3%    22%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -65,26 +65,29 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
    -6%     12%   11    18%     -4.5%   -18.7%   -29.2%
    -6%     20%   11    18%     -4.5%   -18.7%   -29.2%
    -6%     30%   11    18%     -4.5%   -18.7%   -29.2%
-  -10%     12%   11    18%     -5.4%   -19.9%   -29.2%
-  -10%     20%   11    18%     -5.4%   -19.9%   -29.2%
-  -10%     30%   11    18%     -5.4%   -19.9%   -29.2%
-  -15%     12%   11    18%     -6.1%   -20.1%   -29.2%
-  -15%     20%   11    18%     -6.1%   -20.1%   -29.2%
-  -15%     30%   11    18%     -6.1%   -20.1%   -29.2%
-  -25%     12%   11    18%    -11.4%   -15.6%   -67.1%
-  -25%     20%   11    18%    -11.7%   -15.6%   -67.1%
-  -25%     30%   11    18%    -11.7%   -15.6%   -67.1%
+  -10%     12%   11    18%     -8.5%   -20.1%   -44.6%
+  -10%     20%   11    18%     -8.5%   -20.1%   -44.6%
+  -10%     30%   11    18%     -8.5%   -20.1%   -44.6%
+  -15%     12%   11    18%     -9.2%   -21.0%   -44.6%
+  -15%     20%   11    18%     -9.2%   -21.0%   -44.6%
+  -15%     30%   11    18%     -9.2%   -21.0%   -44.6%
+  -25%     12%   11    18%    -13.9%   -29.2%   -67.1%
+  -25%     20%   11    18%    -14.4%   -29.2%   -67.1%
+  -25%     30%   11    18%    -14.4%   -29.2%   -67.1%
   best so far: stop -6%, trail from +12% -> avg -4.5% per trade over n=11
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 ================================================================
 PAPER TRADER  (pricing: model; start $500.00)
 ================================================================
-equity $497.80 (-0.4%) | cash $475.00 | open 1 | max drawdown -0.8%
+equity $489.03 (-2.2%) | cash $489.03 | open 0 | max drawdown -2.5%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-open:
-  RM           cost $25.00  now $22.80 (-8.8%)  held 0.9h
-signals skipped by the sizer/risk rules: already_traded_token 5
+closed 1 | win 0/1 (0%) | avg net -43.9% | realized $-10.97 | expectancy $-10.97/trade
+exits: stop 1
+  (n=1 < 100: noise, not evidence)
+last trades:
+  RM           $25.00 -> $14.03 (-43.9%)  stop  1.0h
+signals skipped by the sizer/risk rules: already_traded_token 6
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
