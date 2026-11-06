@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-06 21:01 UTC
+Updated: 2026-11-06 21:15 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           8303
-passed SCOUT         20
+pools seen           8351
+passed SCOUT         21
   killed by SCORE    1
-  killed by AUDIT    4
+  killed by AUDIT    5
 FINAL PASS           15
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                     7982
-  few_unique_buyers             7816
-  liquidity_low                 7502
-  volume_below_liquidity        5814
-  sells_dominate                2454
-  wash_churn                    1727
-  overheated                     698
+  too_young                     8026
+  few_unique_buyers             7863
+  liquidity_low                 7548
+  volume_below_liquidity        5853
+  sells_dominate                2471
+  wash_churn                    1732
+  overheated                     699
   missing                        295
-  too_old                        276
+  too_old                        279
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 532 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 537 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   15    -5.6%   -17.3%   -44.4%   -73.6%    33%
-SCOUT PASS, killed later      5   +13.5%    +3.0%   -65.8%      -      20%
-KILLED (tracked)           1220    +0.0%    -2.4%    -7.4%    -2.5%    28%
+SCOUT PASS, killed later      6   +28.2%    +3.0%   -65.8%      -      17%
+KILLED (tracked)           1227    -0.0%    -2.2%    -7.6%    -2.5%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -44,7 +44,7 @@ if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+         7    -58.2%    -73.6%    57%
 70-79       8    -32.6%       -      12%
-60-69       4    -39.9%       -      25%
+60-69       5    -39.9%       -      20%
 <60         1    -32.2%       -       0%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
@@ -91,7 +91,7 @@ last trades:
   RM           $25.00 -> $14.03 (-43.9%)  stop  1.0h
   APPLEPAID    $24.45 -> $22.38 (-8.5%)  trail  0.7h
   AMD          $24.35 -> $21.18 (-13.0%)  stop  1.5h
-signals skipped by the sizer/risk rules: already_traded_token 38, daily_loss_limit 19
+signals skipped by the sizer/risk rules: already_traded_token 38, daily_loss_limit 20
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
