@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-06 14:12 UTC
+Updated: 2026-11-06 14:24 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           6202
+pools seen           6244
 passed SCOUT         15
   killed by SCORE    1
   killed by AUDIT    2
 FINAL PASS           12
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                     5910
-  few_unique_buyers             5794
-  liquidity_low                 5586
-  volume_below_liquidity        4324
-  sells_dominate                1858
-  wash_churn                    1324
-  overheated                     521
+  too_young                     5952
+  few_unique_buyers             5835
+  liquidity_low                 5626
+  volume_below_liquidity        4354
+  sells_dominate                1867
+  wash_churn                    1330
+  overheated                     522
   too_old                        254
   missing                        195
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 424 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 426 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   12    -5.5%   -10.6%   -44.4%      -      17%
 SCOUT PASS, killed later      3    -4.1%   -25.5%   -32.2%      -       0%
-KILLED (tracked)            947    +0.0%    -1.2%    -2.9%    -9.8%    25%
+KILLED (tracked)            954    +0.0%    -1.2%    -2.8%    -9.8%    25%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -50,15 +50,15 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none       34     -2.1%    -32.2%       -      15%
+none       34     -2.1%    -11.0%       -      21%
 <15%       12     -0.6%     +0.9%     -2.6%    17%
 30%+       12     +0.1%     -0.6%    -14.9%     0%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none       49     -0.1%     -0.1%     -8.7%     8%
+none       49     -0.1%     +0.2%     -8.7%    12%
 <20%        9    -14.8%    -46.5%       -      33%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%       58     -0.8%     -0.6%     -8.7%    12%
-tokens analysed: 40 | helius credits today: 2066/25000
+<20%       58     -0.8%     -0.3%     -8.7%    16%
+tokens analysed: 40 | helius credits today: 2127/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -71,26 +71,26 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     12%   12    17%     -9.3%   -20.6%   -44.6%
   -15%     20%   12    17%     -9.3%   -20.6%   -44.6%
   -15%     30%   12    17%     -9.3%   -20.6%   -44.6%
-  -25%     12%   12    25%    -11.1%   -19.9%   -67.1%
-  -25%     20%   12    25%    -16.8%   -30.1%   -76.1%
-  -25%     30%   12    25%    -16.8%   -30.1%   -76.1%
+  -25%     12%   12    25%    -12.2%   -19.9%   -67.1%
+  -25%     20%   12    25%    -18.0%   -30.1%   -76.1%
+  -25%     30%   12    25%    -18.0%   -30.1%   -76.1%
   best so far: stop -6%, trail from +12% -> avg -4.9% per trade over n=12
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 ================================================================
 PAPER TRADER  (pricing: model; start $500.00)
 ================================================================
-equity $487.06 (-2.6%) | cash $462.61 | open 1 | max drawdown -3.2%
+equity $487.91 (-2.4%) | cash $462.61 | open 1 | max drawdown -3.2%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 2 | win 0/2 (0%) | avg net -26.2% | realized $-13.04 | expectancy $-6.52/trade
 exits: stop 1, trail 1
   (n=2 < 100: noise, not evidence)
 open:
-  AMD          cost $24.35  now $24.45 (+0.4%)  held 0.7h
+  AMD          cost $24.35  now $25.30 (+3.9%)  held 0.9h
 last trades:
   RM           $25.00 -> $14.03 (-43.9%)  stop  1.0h
   APPLEPAID    $24.45 -> $22.38 (-8.5%)  trail  0.7h
-signals skipped by the sizer/risk rules: already_traded_token 24
+signals skipped by the sizer/risk rules: already_traded_token 25
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
