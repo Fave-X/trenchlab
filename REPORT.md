@@ -1,24 +1,24 @@
 # TrenchLab report
 
-Updated: 2026-11-06 23:27 UTC
+Updated: 2026-11-06 23:31 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           9091
+pools seen           9136
 passed SCOUT         23
   killed by SCORE    2
   killed by AUDIT    5
 FINAL PASS           16
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                     8755
-  few_unique_buyers             8572
-  liquidity_low                 8239
-  volume_below_liquidity        6403
-  sells_dominate                2692
-  wash_churn                    1872
+  too_young                     8800
+  few_unique_buyers             8617
+  liquidity_low                 8284
+  volume_below_liquidity        6437
+  sells_dominate                2707
+  wash_churn                    1879
   overheated                     760
   missing                        309
   too_old                        286
