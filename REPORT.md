@@ -1,40 +1,40 @@
 # TrenchLab report
 
-Updated: 2026-11-06 20:15 UTC
+Updated: 2026-11-06 20:21 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           8034
-passed SCOUT         18
+pools seen           8080
+passed SCOUT         19
   killed by SCORE    1
-  killed by AUDIT    3
+  killed by AUDIT    4
 FINAL PASS           14
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                     7715
-  few_unique_buyers             7555
-  liquidity_low                 7246
-  volume_below_liquidity        5622
-  sells_dominate                2373
-  wash_churn                    1676
-  overheated                     672
+  too_young                     7761
+  few_unique_buyers             7597
+  liquidity_low                 7290
+  volume_below_liquidity        5655
+  sells_dominate                2380
+  wash_churn                    1684
+  overheated                     676
   missing                        290
   too_old                        274
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 519 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 520 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   14    -5.5%   -17.3%   -44.0%      -      29%
-SCOUT PASS, killed later      4    -1.2%    +3.0%   -32.2%      -       0%
-KILLED (tracked)           1186    +0.0%    -2.3%    -7.0%    -2.6%    27%
+FINAL PASS                   14    -5.5%   -17.3%   -44.0%   -93.4%    29%
+SCOUT PASS, killed later      5    -1.2%    +3.0%   -32.2%      -       0%
+KILLED (tracked)           1191    +0.0%    -2.3%    -7.0%    -2.5%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
 wash_churn                      8    -37.1%       -      62%
-too_old                         5     +0.2%       -       0%
+too_old                         5     +0.2%     -0.4%     0%
 too_young                       4    -98.9%       -     100%
 volume_below_liquidity          3     +5.9%    -39.4%    33%
 liquidity_low                   3    -86.9%       -      33%
@@ -42,7 +42,7 @@ liquidity_low                   3    -86.9%       -      33%
 SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
-80+         6    -48.2%       -      33%
+80+         7    -48.2%    -93.4%    29%
 70-79       8    -31.2%       -      12%
 60-69       3    -39.9%       -      33%
 <60         1    -32.2%       -       0%
@@ -50,17 +50,17 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none       51     -2.4%     -7.6%     +4.9%    18%
+none       52     -2.4%     -7.6%     +5.7%    17%
 <15%       13     +0.1%     +1.1%     +7.9%    31%
-30%+        7     -1.4%     -0.6%     +2.6%     0%
+30%+        7     -1.4%     -0.6%     +1.1%     0%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none       61     -1.5%     -0.2%     +3.8%    11%
+none       62     -1.5%     -0.2%     +3.8%    11%
 <20%        9    -22.2%    -48.2%       -      67%
 20%+        1    +31.6%       -         -       0%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%       70     -1.7%     -0.4%     +3.8%    19%
+<20%       71     -1.7%     -0.4%     +3.8%    18%
 20-40%      1    +31.6%       -         -       0%
-tokens analysed: 51 | helius credits today: 3187/25000
+tokens analysed: 52 | helius credits today: 3249/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
