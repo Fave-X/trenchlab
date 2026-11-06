@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-06 20:51 UTC
+Updated: 2026-11-06 21:01 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           8243
+pools seen           8303
 passed SCOUT         20
   killed by SCORE    1
   killed by AUDIT    4
 FINAL PASS           15
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                     7922
-  few_unique_buyers             7757
-  liquidity_low                 7444
-  volume_below_liquidity        5776
-  sells_dominate                2437
-  wash_churn                    1712
-  overheated                     693
+  too_young                     7982
+  few_unique_buyers             7816
+  liquidity_low                 7502
+  volume_below_liquidity        5814
+  sells_dominate                2454
+  wash_churn                    1727
+  overheated                     698
   missing                        295
   too_old                        276
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 528 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 532 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   15    -5.6%   -17.3%   -44.4%   -73.6%    33%
-SCOUT PASS, killed later      5   +13.5%    +3.0%   -32.2%      -       0%
-KILLED (tracked)           1212    -0.0%    -2.3%    -7.0%    -2.5%    28%
+SCOUT PASS, killed later      5   +13.5%    +3.0%   -65.8%      -      20%
+KILLED (tracked)           1220    +0.0%    -2.4%    -7.4%    -2.5%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -42,7 +42,7 @@ liquidity_low                   3    -86.9%       -      67%
 SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
-80+         7    -48.2%    -73.6%    43%
+80+         7    -58.2%    -73.6%    57%
 70-79       8    -32.6%       -      12%
 60-69       4    -39.9%       -      25%
 <60         1    -32.2%       -       0%
@@ -51,32 +51,32 @@ CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
 none       53     -2.4%     -9.1%     -3.1%    19%
-<15%       14     +0.1%     +1.1%     +7.9%    29%
+<15%       14     +0.1%     +0.9%     +7.9%    36%
 30%+        7     -1.4%     -0.6%     +1.1%     0%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none       63     -1.5%     -0.2%     +2.6%    11%
 <20%       10    -22.2%    -48.2%       -      70%
-20%+        1    +31.6%       -         -       0%
+20%+        1    +31.6%    -99.5%       -     100%
 fresh       n   +1h med   +4h med  +24h med   rug%
 <20%       73     -1.7%     -0.4%     +2.6%    19%
-20-40%      1    +31.6%       -         -       0%
+20-40%      1    +31.6%    -99.5%       -     100%
 tokens analysed: 54 | helius credits today: 3413/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%   15    13%    -10.0%   -18.7%   -51.8%
-   -6%     20%   15    13%    -10.0%   -18.7%   -51.8%
-   -6%     30%   15    13%    -10.0%   -18.7%   -51.8%
-  -10%     12%   15    13%    -13.0%   -20.1%   -51.8%
-  -10%     20%   15    13%    -13.0%   -20.1%   -51.8%
-  -10%     30%   15    13%    -13.0%   -20.1%   -51.8%
-  -15%     12%   15    13%    -13.5%   -21.0%   -51.8%
-  -15%     20%   15    13%    -13.5%   -21.0%   -51.8%
-  -15%     30%   15    13%    -13.5%   -21.0%   -51.8%
-  -25%     12%   15    20%    -15.9%   -29.2%   -67.1%
-  -25%     20%   15    20%    -20.5%   -29.9%   -76.1%
-  -25%     30%   15    13%    -23.0%   -31.0%   -76.1%
-  best so far: stop -6%, trail from +12% -> avg -10.0% per trade over n=15
+   -6%     12%   15    13%    -11.4%   -19.9%   -51.8%
+   -6%     20%   15    13%    -11.4%   -19.9%   -51.8%
+   -6%     30%   15    13%    -11.4%   -19.9%   -51.8%
+  -10%     12%   15    13%    -14.3%   -21.0%   -51.8%
+  -10%     20%   15    13%    -14.3%   -21.0%   -51.8%
+  -10%     30%   15    13%    -14.3%   -21.0%   -51.8%
+  -15%     12%   15    13%    -14.9%   -24.4%   -51.8%
+  -15%     20%   15    13%    -14.9%   -24.4%   -51.8%
+  -15%     30%   15    13%    -14.9%   -24.4%   -51.8%
+  -25%     12%   15    20%    -17.2%   -29.9%   -67.1%
+  -25%     20%   15    20%    -21.9%   -29.9%   -76.1%
+  -25%     30%   15    13%    -24.4%   -31.0%   -76.1%
+  best so far: stop -6%, trail from +12% -> avg -11.4% per trade over n=15
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 ================================================================
@@ -91,7 +91,7 @@ last trades:
   RM           $25.00 -> $14.03 (-43.9%)  stop  1.0h
   APPLEPAID    $24.45 -> $22.38 (-8.5%)  trail  0.7h
   AMD          $24.35 -> $21.18 (-13.0%)  stop  1.5h
-signals skipped by the sizer/risk rules: already_traded_token 38, daily_loss_limit 18
+signals skipped by the sizer/risk rules: already_traded_token 38, daily_loss_limit 19
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
