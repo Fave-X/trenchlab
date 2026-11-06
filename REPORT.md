@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-06 19:15 UTC
+Updated: 2026-11-06 19:21 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           7689
+pools seen           7749
 passed SCOUT         18
   killed by SCORE    1
   killed by AUDIT    3
 FINAL PASS           14
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                     7380
-  few_unique_buyers             7225
-  liquidity_low                 6927
-  volume_below_liquidity        5353
-  sells_dominate                2280
-  wash_churn                    1608
-  overheated                     644
-  missing                        281
+  too_young                     7440
+  few_unique_buyers             7284
+  liquidity_low                 6978
+  volume_below_liquidity        5397
+  sells_dominate                2297
+  wash_churn                    1617
+  overheated                     649
+  missing                        286
   too_old                        266
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 498 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 501 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   14    -5.5%   -17.3%   -44.0%      -      21%
 SCOUT PASS, killed later      4    -1.2%    +3.0%   -32.2%      -       0%
-KILLED (tracked)           1134    +0.0%    -2.1%    -5.2%    -6.9%    27%
+KILLED (tracked)           1145    +0.0%    -2.0%    -5.7%    -6.8%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -91,7 +91,7 @@ last trades:
   RM           $25.00 -> $14.03 (-43.9%)  stop  1.0h
   APPLEPAID    $24.45 -> $22.38 (-8.5%)  trail  0.7h
   AMD          $24.35 -> $21.18 (-13.0%)  stop  1.5h
-signals skipped by the sizer/risk rules: already_traded_token 38, daily_loss_limit 12
+signals skipped by the sizer/risk rules: already_traded_token 38, daily_loss_limit 13
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
