@@ -1,25 +1,25 @@
 # TrenchLab report
 
-Updated: 2026-11-06 14:54 UTC
+Updated: 2026-11-06 15:01 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           6385
+pools seen           6444
 passed SCOUT         15
   killed by SCORE    1
   killed by AUDIT    2
 FINAL PASS           12
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                     6093
-  few_unique_buyers             5968
-  liquidity_low                 5757
-  volume_below_liquidity        4444
-  sells_dominate                1910
-  wash_churn                    1359
-  overheated                     536
+  too_young                     6152
+  few_unique_buyers             6025
+  liquidity_low                 5815
+  volume_below_liquidity        4493
+  sells_dominate                1938
+  wash_churn                    1376
+  overheated                     539
   too_old                        254
   missing                        195
   score_below                      1
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 435 pools had ze
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   12    -5.5%   -10.6%   -44.4%      -      17%
 SCOUT PASS, killed later      3    -4.1%   -25.5%   -32.2%      -       0%
-KILLED (tracked)            976    +0.0%    -1.2%    -2.2%    -9.8%    25%
+KILLED (tracked)            981    +0.0%    -1.2%    -2.2%    -9.8%    25%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -80,16 +80,15 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
 ================================================================
 PAPER TRADER  (pricing: model; start $500.00)
 ================================================================
-equity $486.14 (-2.8%) | cash $462.61 | open 1 | max drawdown -3.2%
+equity $483.79 (-3.2%) | cash $483.79 | open 0 | max drawdown -3.6%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 2 | win 0/2 (0%) | avg net -26.2% | realized $-13.04 | expectancy $-6.52/trade
-exits: stop 1, trail 1
-  (n=2 < 100: noise, not evidence)
-open:
-  AMD          cost $24.35  now $23.53 (-3.4%)  held 1.4h
+closed 3 | win 0/3 (0%) | avg net -21.8% | realized $-16.21 | expectancy $-5.40/trade
+exits: stop 2, trail 1
+  (n=3 < 100: noise, not evidence)
 last trades:
   RM           $25.00 -> $14.03 (-43.9%)  stop  1.0h
   APPLEPAID    $24.45 -> $22.38 (-8.5%)  trail  0.7h
+  AMD          $24.35 -> $21.18 (-13.0%)  stop  1.5h
 signals skipped by the sizer/risk rules: already_traded_token 27
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
