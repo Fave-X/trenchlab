@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-06 12:01 UTC
+Updated: 2026-11-06 12:14 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           5505
-passed SCOUT         14
+pools seen           5563
+passed SCOUT         15
   killed by SCORE    1
   killed by AUDIT    2
-FINAL PASS           11
+FINAL PASS           12
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                     5224
-  few_unique_buyers             5129
-  liquidity_low                 4933
-  volume_below_liquidity        3814
-  sells_dominate                1634
-  wash_churn                    1172
-  overheated                     459
-  too_old                        245
+  too_young                     5278
+  few_unique_buyers             5183
+  liquidity_low                 4985
+  volume_below_liquidity        3855
+  sells_dominate                1656
+  wash_churn                    1189
+  overheated                     464
+  too_old                        248
   missing                        183
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 371 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 385 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   11    -6.5%   -13.3%   -44.0%      -      18%
+FINAL PASS                   12    -6.5%   -13.3%   -44.0%      -      17%
 SCOUT PASS, killed later      3    -4.1%   -25.5%   -32.2%      -       0%
-KILLED (tracked)            879    +0.0%    -0.9%    -4.8%    -9.8%    22%
+KILLED (tracked)            887    +0.0%    -0.9%    -6.1%    -9.8%    22%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -44,21 +44,21 @@ if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+         4    -68.2%       -      50%
 70-79       6    -31.2%       -       0%
-60-69       3    -39.9%       -       0%
+60-69       4    -39.9%       -       0%
 <60         1    -32.2%       -       0%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none       30     -6.8%    -32.2%       -      17%
+none       31     -6.8%    -32.2%       -      16%
 <15%       12     -0.6%     +0.9%     -2.6%    17%
 30%+       12     +0.1%     -0.6%    -14.9%     0%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none       45     -1.3%     -0.2%     -8.7%     9%
+none       46     -1.3%     -0.2%     -8.7%     9%
 <20%        9    -14.8%    -44.7%       -      33%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%       54     -1.4%     -0.6%     -8.7%    13%
-tokens analysed: 37 | helius credits today: 1731/25000
+<20%       55     -1.4%     -0.6%     -8.7%    13%
+tokens analysed: 38 | helius credits today: 1834/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -80,11 +80,13 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
 ================================================================
 PAPER TRADER  (pricing: model; start $500.00)
 ================================================================
-equity $489.03 (-2.2%) | cash $489.03 | open 0 | max drawdown -2.5%
+equity $488.37 (-2.3%) | cash $464.58 | open 1 | max drawdown -2.7%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 1 | win 0/1 (0%) | avg net -43.9% | realized $-10.97 | expectancy $-10.97/trade
 exits: stop 1
   (n=1 < 100: noise, not evidence)
+open:
+  APPLEPAID    cost $24.45  now $23.79 (-2.7%)  held 0.1h
 last trades:
   RM           $25.00 -> $14.03 (-43.9%)  stop  1.0h
 signals skipped by the sizer/risk rules: already_traded_token 10
