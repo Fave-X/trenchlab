@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-06 13:14 UTC
+Updated: 2026-11-06 13:21 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           5910
+pools seen           5969
 passed SCOUT         15
   killed by SCORE    1
   killed by AUDIT    2
 FINAL PASS           12
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                     5622
-  few_unique_buyers             5511
-  liquidity_low                 5305
-  volume_below_liquidity        4100
-  sells_dominate                1750
-  wash_churn                    1267
-  overheated                     495
+  too_young                     5681
+  few_unique_buyers             5569
+  liquidity_low                 5362
+  volume_below_liquidity        4146
+  sells_dominate                1763
+  wash_churn                    1279
+  overheated                     504
   too_old                        250
   missing                        194
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 409 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 411 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   12    -5.5%   -13.3%   -44.4%      -      17%
+FINAL PASS                   12    -5.5%   -10.6%   -44.4%      -      17%
 SCOUT PASS, killed later      3    -4.1%   -25.5%   -32.2%      -       0%
-KILLED (tracked)            923    +0.0%    -1.0%    -1.9%    -7.4%    25%
+KILLED (tracked)            930    +0.0%    -1.0%    -2.2%    -7.4%    25%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -50,14 +50,14 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none       33     -6.8%    -32.2%       -      15%
+none       33     -2.2%    -32.2%       -      15%
 <15%       12     -0.6%     +0.9%     -2.6%    17%
 30%+       12     +0.1%     -0.6%    -14.9%     0%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none       48     -1.3%     -0.1%     -8.7%     8%
+none       48     -0.3%     -0.1%     -8.7%     8%
 <20%        9    -14.8%    -46.5%       -      33%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%       57     -1.4%     -0.6%     -8.7%    12%
+<20%       57     -1.3%     -0.6%     -8.7%    12%
 tokens analysed: 39 | helius credits today: 1984/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
@@ -71,9 +71,9 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     12%   12    17%     -9.3%   -20.6%   -44.6%
   -15%     20%   12    17%     -9.3%   -20.6%   -44.6%
   -15%     30%   12    17%     -9.3%   -20.6%   -44.6%
-  -25%     12%   12    17%    -13.8%   -20.6%   -67.1%
-  -25%     20%   12    17%    -19.6%   -30.1%   -76.1%
-  -25%     30%   12    17%    -19.6%   -30.1%   -76.1%
+  -25%     12%   12    17%    -13.4%   -19.9%   -67.1%
+  -25%     20%   12    17%    -19.2%   -30.1%   -76.1%
+  -25%     30%   12    17%    -19.2%   -30.1%   -76.1%
   best so far: stop -6%, trail from +12% -> avg -4.9% per trade over n=12
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
@@ -88,7 +88,7 @@ exits: stop 1, trail 1
 last trades:
   RM           $25.00 -> $14.03 (-43.9%)  stop  1.0h
   APPLEPAID    $24.45 -> $22.38 (-8.5%)  trail  0.7h
-signals skipped by the sizer/risk rules: already_traded_token 15
+signals skipped by the sizer/risk rules: already_traded_token 16
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
