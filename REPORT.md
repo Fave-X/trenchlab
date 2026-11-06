@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-06 07:51 UTC
+Updated: 2026-11-06 08:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           4101
+pools seen           4161
 passed SCOUT         12
   killed by SCORE    1
   killed by AUDIT    1
 FINAL PASS           10
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                     3878
-  few_unique_buyers             3818
-  liquidity_low                 3659
-  volume_below_liquidity        2818
-  sells_dominate                1230
-  wash_churn                     805
-  overheated                     327
+  too_young                     3938
+  few_unique_buyers             3876
+  liquidity_low                 3718
+  volume_below_liquidity        2862
+  sells_dominate                1247
+  wash_churn                     821
+  overheated                     333
   too_old                        191
   missing                        140
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 259 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 287 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   10    -8.7%    -6.8%   -44.0%      -      10%
+FINAL PASS                   10    -7.5%    -6.8%   -44.0%      -      10%
 SCOUT PASS, killed later      2    -1.2%   -25.5%   -32.2%      -       0%
-KILLED (tracked)            667    +0.0%    -1.3%    -3.8%      -      22%
+KILLED (tracked)            673    +0.0%    -1.4%    -3.9%      -      23%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -62,20 +62,26 @@ tokens analysed: 30 | helius credits today: 1169/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%   10    20%     -1.9%   -17.9%   -29.2%
-   -6%     20%   10    20%     -1.9%   -17.9%   -29.2%
-   -6%     30%   10    20%     -1.9%   -17.9%   -29.2%
-  -10%     12%   10    20%     -2.9%   -19.3%   -29.2%
-  -10%     20%   10    20%     -2.9%   -19.3%   -29.2%
-  -10%     30%   10    20%     -2.9%   -19.3%   -29.2%
-  -15%     12%   10    20%     -3.7%   -20.0%   -29.2%
-  -15%     20%   10    20%     -3.7%   -20.0%   -29.2%
-  -15%     30%   10    20%     -3.7%   -20.0%   -29.2%
-  -25%     12%   10    20%     -8.5%   -15.8%   -67.1%
-  -25%     20%   10    20%     -8.5%   -15.8%   -67.1%
-  -25%     30%   10    20%     -8.5%   -15.8%   -67.1%
-  best so far: stop -6%, trail from +12% -> avg -1.9% per trade over n=10
+   -6%     12%   10    20%     -2.3%   -17.9%   -29.2%
+   -6%     20%   10    20%     -2.3%   -17.9%   -29.2%
+   -6%     30%   10    20%     -2.3%   -17.9%   -29.2%
+  -10%     12%   10    20%     -3.3%   -19.3%   -29.2%
+  -10%     20%   10    20%     -3.3%   -19.3%   -29.2%
+  -10%     30%   10    20%     -3.3%   -19.3%   -29.2%
+  -15%     12%   10    20%     -4.0%   -20.0%   -29.2%
+  -15%     20%   10    20%     -4.0%   -20.0%   -29.2%
+  -15%     30%   10    20%     -4.0%   -20.0%   -29.2%
+  -25%     12%   10    20%    -10.9%   -19.9%   -67.1%
+  -25%     20%   10    20%    -11.4%   -20.8%   -67.1%
+  -25%     30%   10    20%    -11.4%   -20.8%   -67.1%
+  best so far: stop -6%, trail from +12% -> avg -2.3% per trade over n=10
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
+
+================================================================
+PAPER TRADER  (pricing: -; start $500.00)
+================================================================
+equity $500.00 (+0.0%) | cash $500.00 | open 0 | max drawdown 0.0%
+ledger reconciles: YES (cash + open cost = start + realized P&L)
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
