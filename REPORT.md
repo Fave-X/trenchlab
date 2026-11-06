@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-06 14:31 UTC
+Updated: 2026-11-06 14:41 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           6281
+pools seen           6325
 passed SCOUT         15
   killed by SCORE    1
   killed by AUDIT    2
 FINAL PASS           12
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                     5989
-  few_unique_buyers             5870
-  liquidity_low                 5662
-  volume_below_liquidity        4379
-  sells_dominate                1875
-  wash_churn                    1341
-  overheated                     524
+  too_young                     6033
+  few_unique_buyers             5913
+  liquidity_low                 5698
+  volume_below_liquidity        4411
+  sells_dominate                1890
+  wash_churn                    1349
+  overheated                     529
   too_old                        254
   missing                        195
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 429 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 430 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   12    -5.5%   -10.6%   -44.4%      -      17%
 SCOUT PASS, killed later      3    -4.1%   -25.5%   -32.2%      -       0%
-KILLED (tracked)            958    +0.0%    -1.2%    -2.8%    -9.8%    26%
+KILLED (tracked)            966    +0.0%    -1.2%    -2.1%    -9.8%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -52,13 +52,13 @@ CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 cluster     n   +1h med   +4h med  +24h med   rug%
 none       34     -2.1%    -11.0%       -      21%
 <15%       12     -0.6%     +0.9%     -2.6%    17%
-30%+       12     +0.1%     -0.6%    -14.9%     0%
+30%+       12     +0.1%     -0.4%    -14.9%     0%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none       49     -0.1%     +0.2%     -8.7%    12%
+none       49     -0.1%     +0.3%     -8.7%    12%
 <20%        9    -14.8%    -46.5%       -      33%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%       58     -0.8%     -0.3%     -8.7%    16%
-tokens analysed: 40 | helius credits today: 2127/25000
+<20%       58     -0.8%     -0.2%     -8.7%    16%
+tokens analysed: 40 | helius credits today: 2193/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -80,17 +80,17 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
 ================================================================
 PAPER TRADER  (pricing: model; start $500.00)
 ================================================================
-equity $487.42 (-2.5%) | cash $462.61 | open 1 | max drawdown -3.2%
+equity $485.88 (-2.8%) | cash $462.61 | open 1 | max drawdown -3.2%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 2 | win 0/2 (0%) | avg net -26.2% | realized $-13.04 | expectancy $-6.52/trade
 exits: stop 1, trail 1
   (n=2 < 100: noise, not evidence)
 open:
-  AMD          cost $24.35  now $24.81 (+1.9%)  held 1.0h
+  AMD          cost $24.35  now $23.27 (-4.5%)  held 1.2h
 last trades:
   RM           $25.00 -> $14.03 (-43.9%)  stop  1.0h
   APPLEPAID    $24.45 -> $22.38 (-8.5%)  trail  0.7h
-signals skipped by the sizer/risk rules: already_traded_token 25
+signals skipped by the sizer/risk rules: already_traded_token 26
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
