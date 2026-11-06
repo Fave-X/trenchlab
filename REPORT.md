@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-06 18:30 UTC
+Updated: 2026-11-06 18:41 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           7455
+pools seen           7543
 passed SCOUT         18
   killed by SCORE    1
   killed by AUDIT    3
 FINAL PASS           14
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                     7149
-  few_unique_buyers             6996
-  liquidity_low                 6717
-  volume_below_liquidity        5176
-  sells_dominate                2225
-  wash_churn                    1579
-  overheated                     628
+  too_young                     7237
+  few_unique_buyers             7082
+  liquidity_low                 6800
+  volume_below_liquidity        5248
+  sells_dominate                2243
+  wash_churn                    1591
+  overheated                     635
   missing                        268
   too_old                        265
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 484 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 485 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   14    -5.5%   -13.3%   -44.0%      -      21%
 SCOUT PASS, killed later      4    -1.2%    +3.0%   -32.2%      -       0%
-KILLED (tracked)           1092    +0.0%    -1.7%    -4.2%   -11.7%    27%
+KILLED (tracked)           1108    +0.0%    -1.9%    -4.3%   -11.7%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -91,7 +91,7 @@ last trades:
   RM           $25.00 -> $14.03 (-43.9%)  stop  1.0h
   APPLEPAID    $24.45 -> $22.38 (-8.5%)  trail  0.7h
   AMD          $24.35 -> $21.18 (-13.0%)  stop  1.5h
-signals skipped by the sizer/risk rules: already_traded_token 38, daily_loss_limit 8
+signals skipped by the sizer/risk rules: already_traded_token 38, daily_loss_limit 10
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
