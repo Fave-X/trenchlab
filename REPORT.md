@@ -1,25 +1,25 @@
 # TrenchLab report
 
-Updated: 2026-11-06 02:11 UTC
+Updated: 2026-11-06 02:20 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           2384
+pools seen           2437
 passed SCOUT         7
   killed by SCORE    1
   killed by AUDIT    1
 FINAL PASS           5
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                     2218
-  few_unique_buyers             2209
-  liquidity_low                 2089
-  volume_below_liquidity        1622
-  sells_dominate                 751
-  wash_churn                     495
-  overheated                     181
+  too_young                     2271
+  few_unique_buyers             2258
+  liquidity_low                 2139
+  volume_below_liquidity        1658
+  sells_dominate                 767
+  wash_churn                     509
+  overheated                     189
   too_old                        139
   missing                         95
   score_below                      1
@@ -27,8 +27,8 @@ top kill reasons at first sighting (a pool can have several):
 OUTCOMES (median price change from first sighting / first pass)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                    5   -12.8%    -2.5%   -56.1%      -      20%
-SCOUT PASS, killed later      2   +29.6%   +17.5%   +60.4%      -      50%
-KILLED (tracked)            397    +0.6%    +0.2%    +1.6%      -      48%
+SCOUT PASS, killed later      2   +29.6%   +17.5%   +14.1%      -      50%
+KILLED (tracked)            409    +0.6%    +0.2%    +1.6%      -      48%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -46,20 +46,20 @@ score       n   +4h med  +24h med   rug%
 80+         3    -56.1%       -      33%
 70-79       2    +60.4%       -      50%
 60-69       1       -         -       0%
-<60         1       -         -       0%
+<60         1    -32.2%       -       0%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none       18     -2.1%     -5.5%       -      28%
-<15%        6     -0.2%     +1.3%       -      17%
+none       19     -2.1%     -5.5%       -      26%
+<15%       11     +0.1%     +1.5%       -       9%
 30%+        6     -1.5%     -0.8%       -       0%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none       24     -1.8%     -0.3%       -      17%
+none       30     -1.5%     +0.2%       -      13%
 <20%        6     +4.8%    -30.8%       -      33%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%       30     -1.4%     -0.3%       -      20%
-tokens analysed: 22 | helius credits today: 435/25000
+<20%       36     -1.4%     +0.2%       -      17%
+tokens analysed: 24 | helius credits today: 591/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -69,13 +69,13 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -10%     12%    5    20%     -4.8%   -20.1%   -29.2%
   -10%     20%    5    20%     -4.8%   -20.1%   -29.2%
   -10%     30%    5    20%     -4.8%   -20.1%   -29.2%
-  -15%     12%    5    40%     -0.9%   -20.1%   -29.2%
-  -15%     20%    5    40%     -0.9%   -20.1%   -29.2%
-  -15%     30%    5    40%     -0.9%   -20.1%   -29.2%
-  -25%     12%    5    40%     -7.6%   -10.5%   -67.1%
-  -25%     20%    5    40%     -7.6%   -10.5%   -67.1%
-  -25%     30%    5    40%     -7.6%   -10.5%   -67.1%
-  best so far: stop -15%, trail from +12% -> avg -0.9% per trade over n=5
+  -15%     12%    5    20%     -4.2%   -20.1%   -29.2%
+  -15%     20%    5    20%     -4.2%   -20.1%   -29.2%
+  -15%     30%    5    20%     -4.2%   -20.1%   -29.2%
+  -25%     12%    5    20%    -10.8%   -14.3%   -67.1%
+  -25%     20%    5    20%    -10.8%   -14.3%   -67.1%
+  -25%     30%    5    20%    -10.8%   -14.3%   -67.1%
+  best so far: stop -15%, trail from +12% -> avg -4.2% per trade over n=5
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
