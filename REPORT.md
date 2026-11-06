@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-06 04:31 UTC
+Updated: 2026-11-06 04:41 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           3159
+pools seen           3199
 passed SCOUT         9
   killed by SCORE    1
   killed by AUDIT    1
 FINAL PASS           7
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                     2986
-  few_unique_buyers             2934
-  liquidity_low                 2823
-  volume_below_liquidity        2162
-  sells_dominate                 963
-  wash_churn                     640
-  overheated                     245
+  too_young                     3026
+  few_unique_buyers             2973
+  liquidity_low                 2858
+  volume_below_liquidity        2194
+  sells_dominate                 974
+  wash_churn                     643
+  overheated                     248
   too_old                        145
-  missing                        103
+  missing                        106
   score_below                      1
 
 OUTCOMES (median price change from first sighting / first pass)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                    7    -9.4%   -14.1%   -68.2%      -      14%
 SCOUT PASS, killed later      2   +29.6%   +17.5%   +14.1%      -      50%
-KILLED (tracked)            504    +1.3%    +0.5%    +0.7%      -      55%
+KILLED (tracked)            508    +1.3%    +0.7%    +0.6%      -      56%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -62,19 +62,19 @@ tokens analysed: 26 | helius credits today: 885/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%    7    29%     -2.1%   -17.1%   -29.2%
-   -6%     20%    7    29%     -2.1%   -17.1%   -29.2%
-   -6%     30%    7    29%     -2.1%   -17.1%   -29.2%
-  -10%     12%    7    29%     -3.5%   -20.1%   -29.2%
-  -10%     20%    7    29%     -3.5%   -20.1%   -29.2%
-  -10%     30%    7    29%     -3.5%   -20.1%   -29.2%
-  -15%     12%    7    29%     -4.6%   -21.0%   -29.2%
-  -15%     20%    7    29%     -4.6%   -21.0%   -29.2%
-  -15%     30%    7    29%     -4.6%   -21.0%   -29.2%
-  -25%     12%    7    29%    -13.1%   -29.2%   -67.1%
-  -25%     20%    7    29%    -13.1%   -29.2%   -67.1%
-  -25%     30%    7    29%    -13.1%   -29.2%   -67.1%
-  best so far: stop -6%, trail from +12% -> avg -2.1% per trade over n=7
+   -6%     12%    7    29%     +4.5%   -17.1%   -29.2%
+   -6%     20%    7    29%     +4.5%   -17.1%   -29.2%
+   -6%     30%    7    29%     +4.5%   -17.1%   -29.2%
+  -10%     12%    7    29%     +3.1%   -20.1%   -29.2%
+  -10%     20%    7    29%     +3.1%   -20.1%   -29.2%
+  -10%     30%    7    29%     +3.1%   -20.1%   -29.2%
+  -15%     12%    7    29%     +2.0%   -21.0%   -29.2%
+  -15%     20%    7    29%     +2.0%   -21.0%   -29.2%
+  -15%     30%    7    29%     +2.0%   -21.0%   -29.2%
+  -25%     12%    7    29%     -6.5%   -29.2%   -67.1%
+  -25%     20%    7    29%     -6.5%   -29.2%   -67.1%
+  -25%     30%    7    29%     -6.5%   -29.2%   -67.1%
+  best so far: stop -6%, trail from +12% -> avg +4.5% per trade over n=7
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
