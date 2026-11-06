@@ -1,48 +1,48 @@
 # TrenchLab report
 
-Updated: 2026-11-06 17:01 UTC
+Updated: 2026-11-06 17:10 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           7003
-passed SCOUT         16
+pools seen           7068
+passed SCOUT         17
   killed by SCORE    1
-  killed by AUDIT    2
+  killed by AUDIT    3
 FINAL PASS           13
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                     6709
-  few_unique_buyers             6559
-  liquidity_low                 6329
-  volume_below_liquidity        4863
-  sells_dominate                2095
-  wash_churn                    1496
-  overheated                     590
-  too_old                        255
-  missing                        220
+  too_young                     6770
+  few_unique_buyers             6620
+  liquidity_low                 6376
+  volume_below_liquidity        4903
+  sells_dominate                2117
+  wash_churn                    1510
+  overheated                     599
+  too_old                        259
+  missing                        233
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 465 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 469 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   13    -6.5%   -10.6%   -44.0%      -      23%
-SCOUT PASS, killed later      3    -4.1%   -25.5%   -32.2%      -       0%
-KILLED (tracked)           1045    +0.0%    -1.4%    -3.8%    -9.8%    26%
+SCOUT PASS, killed later      4    -1.2%   -25.5%   -32.2%      -       0%
+KILLED (tracked)           1052    +0.0%    -1.5%    -3.8%    -7.4%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
 wash_churn                      8    -37.1%       -      62%
 too_old                         5     +0.2%       -       0%
-too_young                       4    -98.9%       -      75%
 volume_below_liquidity          3     +5.9%       -      33%
 liquidity_low                   3    -84.9%       -      33%
+too_young                       3    -98.9%       -     100%
 
 SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
-80+         5    -48.2%       -      40%
+80+         6    -48.2%       -      33%
 70-79       7    -31.2%       -       0%
 60-69       3    -39.9%       -      33%
 <60         1    -32.2%       -       0%
@@ -91,7 +91,7 @@ last trades:
   RM           $25.00 -> $14.03 (-43.9%)  stop  1.0h
   APPLEPAID    $24.45 -> $22.38 (-8.5%)  trail  0.7h
   AMD          $24.35 -> $21.18 (-13.0%)  stop  1.5h
-signals skipped by the sizer/risk rules: already_traded_token 37, daily_loss_limit 5
+signals skipped by the sizer/risk rules: already_traded_token 38, daily_loss_limit 5
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
