@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-06 19:51 UTC
+Updated: 2026-11-06 20:01 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           7905
+pools seen           7965
 passed SCOUT         18
   killed by SCORE    1
   killed by AUDIT    3
 FINAL PASS           14
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                     7595
-  few_unique_buyers             7434
-  liquidity_low                 7126
-  volume_below_liquidity        5521
-  sells_dominate                2337
-  wash_churn                    1649
-  overheated                     656
+  too_young                     7655
+  few_unique_buyers             7491
+  liquidity_low                 7184
+  volume_below_liquidity        5569
+  sells_dominate                2356
+  wash_churn                    1661
+  overheated                     665
   missing                        290
   too_old                        267
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 511 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 515 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   14    -5.5%   -17.3%   -44.0%      -      29%
 SCOUT PASS, killed later      4    -1.2%    +3.0%   -32.2%      -       0%
-KILLED (tracked)           1165    +0.0%    -2.3%    -6.6%    -5.0%    27%
+KILLED (tracked)           1174    +0.0%    -2.3%    -7.0%    -5.0%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -58,7 +58,7 @@ none       61     -1.5%     -0.2%     +2.6%    11%
 <20%        9    -22.2%    -48.2%       -      67%
 20%+        1    +31.6%       -         -       0%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%       70     -1.6%     -0.4%     +2.6%    19%
+<20%       70     -1.7%     -0.4%     +2.6%    19%
 20-40%      1    +31.6%       -         -       0%
 tokens analysed: 51 | helius credits today: 3187/25000
 
@@ -91,7 +91,7 @@ last trades:
   RM           $25.00 -> $14.03 (-43.9%)  stop  1.0h
   APPLEPAID    $24.45 -> $22.38 (-8.5%)  trail  0.7h
   AMD          $24.35 -> $21.18 (-13.0%)  stop  1.5h
-signals skipped by the sizer/risk rules: already_traded_token 38, daily_loss_limit 13
+signals skipped by the sizer/risk rules: already_traded_token 38, daily_loss_limit 14
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
