@@ -109,9 +109,11 @@ def run_cycle(gecko, auditor, db, cfg, now=None, log=print, alert=True, cabal=No
     if to_track:
         got = {}
         try:  # DexScreener first: much higher rate limit than GeckoTerminal
-            got = dexscreener.prices_multi(to_track, cfg["network"], fetch=dex_fetch)
+            got = dexscreener.prices_multi(to_track, cfg["network"], fetch=dex_fetch,
+                                           expected_base=db.mints_for(to_track))
         except Exception as e:
             log(f"[lab] dexscreener tracking failed: {e}")
+        got = {a: v for a, v in got.items() if db.sample_is_sane(a, *v)}  # bad DexScreener rows -> Gecko
         missing = [a for a in to_track if a not in got]
         if missing:
             try:

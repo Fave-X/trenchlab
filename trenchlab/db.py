@@ -56,6 +56,10 @@ CREATE TABLE IF NOT EXISTS helius_usage (
     day             TEXT PRIMARY KEY,
     credits         INTEGER
 );
+CREATE TABLE IF NOT EXISTS meta (
+    key             TEXT PRIMARY KEY,
+    value           TEXT
+);
 CREATE TABLE IF NOT EXISTS alerts (
     pool_address    TEXT PRIMARY KEY,
     ts              REAL
@@ -68,6 +72,39 @@ class DB:
         self.conn = sqlite3.connect(path)
         self.conn.row_factory = sqlite3.Row
         self.conn.executescript(SCHEMA)
+        self._migrate()
+
+    DEX_SWITCH_TS = 1793910600  # 2026-11-05 20:30 UTC: DexScreener became the tracking source
+
+    def _migrate(self):
+        done = self.conn.execute("SELECT 1 FROM meta WHERE key='cleanup_dex_v1'").fetchone()
+        if not done:
+            # Remove impossible readings recorded after the DexScreener switch (data errors, not rugs):
+            #  (a) liquidity ~gone while price has not crashed
+            #  (b) price up >3x while liquidity grew far less than sqrt(price) (wrong pair orientation)
+            rows = self.conn.execute(
+                """SELECT s.rowid, s.price_usd, s.liquidity_usd, p.first_price, p.first_liq
+                   FROM samples s JOIN pools p ON p.pool_address = s.pool_address
+                   WHERE s.ts >= ?""", (self.DEX_SWITCH_TS,)).fetchall()
+            bad = [r[0] for r in rows if not self._dex_reading_ok(r[1], r[2], r[3], r[4])]
+            for i in range(0, len(bad), 500):
+                chunk = bad[i:i + 500]
+                self.conn.execute(f"DELETE FROM samples WHERE rowid IN ({','.join('?' * len(chunk))})", chunk)
+            self.conn.execute("INSERT INTO meta VALUES ('cleanup_dex_v1', ?)", (str(len(bad)),))
+            self.conn.commit()
+
+    @staticmethod
+    def _dex_reading_ok(price, liq, first_price, first_liq):
+        if price is None:
+            return False
+        if not first_price:
+            return True
+        r = price / first_price
+        if liq is not None and liq < 100 and r >= 0.5:
+            return False
+        if r > 3 and first_liq and liq is not None and (liq / first_liq) < (r ** 0.5) / 4:
+            return False
+        return True
 
     def commit(self):
         self.conn.commit()
@@ -134,6 +171,24 @@ class DB:
             return True
         last = self.conn.execute("SELECT MAX(ts) FROM samples WHERE pool_address=?", (addr,)).fetchone()[0]
         return last is None or now - last >= sparse_minutes * 60 - 30
+
+    def mints_for(self, addrs):
+        out = {}
+        for i in range(0, len(addrs), 500):
+            chunk = addrs[i:i + 500]
+            q = ",".join("?" * len(chunk))
+            for r in self.conn.execute(f"SELECT pool_address, token_mint FROM pools WHERE pool_address IN ({q})", chunk):
+                out[r[0]] = r[1]
+        return out
+
+    def sample_is_sane(self, addr, price, liq):
+        """Sanity check for DexScreener readings (GeckoTerminal readings are trusted, so genuine
+        liquidity pulls still show up). An AMM pool can't lose its liquidity while the price holds,
+        and a big price rise must come with liquidity growth (~sqrt of the price move)."""
+        p = self.get_pool(addr)
+        if p is None:
+            return price is not None
+        return self._dex_reading_ok(price, liq, p["first_price"], p["first_liq"])
 
     def tracked_addresses(self, now):
         rows = self.conn.execute(

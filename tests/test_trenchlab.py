@@ -203,7 +203,9 @@ class FakeFetch:
             addrs = url.rsplit("/", 1)[1].split(",")
             if getattr(self, "dex_down", False):
                 raise __import__("trenchlab.http", fromlist=["HttpError"]).HttpError("HTTP 429")
-            return {"pairs": [{"pairAddress": a, "priceUsd": str(self.price), "liquidity": {"usd": 50000}}
+            return {"pairs": [{"pairAddress": a, "priceUsd": str(self.price), "liquidity": {"usd": 50000},
+                               "baseToken": {"address": "M" + a if a not in ("POOL1", "POOL2") else
+                                             {"POOL1": "MINT1", "POOL2": "MINT2"}[a]}}
                               for a in addrs]}
         if "/multi/" in url:
             addrs = url.rsplit("/", 1)[1].split(",")
@@ -255,4 +257,36 @@ class TestDexScreener(unittest.TestCase):
         out = prices_multi([f"P{i}" for i in range(31)], fetch=fetch)
         self.assertEqual(len(calls), 2)                      # chunks of 30
         self.assertEqual(out["A"], (0.5, 1234.0))
-        self.assertEqual(out["B"], (None, None))
+        self.assertNotIn("B", out)                           # no price -> dropped
+
+    def test_rejects_bad_rows(self):
+        from trenchlab.dexscreener import prices_multi
+
+        def fetch(url, min_interval=0):
+            return {"pairs": [
+                {"pairAddress": "ZERO", "priceUsd": "1", "liquidity": {"usd": 0}, "baseToken": {"address": "MZ"}},
+                {"pairAddress": "FLIP", "priceUsd": "150", "liquidity": {"usd": 9e4}, "baseToken": {"address": "SOL"}},
+                {"pairAddress": "OK", "priceUsd": "0.01", "liquidity": {"usd": 9e4}, "baseToken": {"address": "MOK"}}]}
+        out = prices_multi(["ZERO", "FLIP", "OK"], fetch=fetch,
+                           expected_base={"ZERO": "MZ", "FLIP": "MFLIP", "OK": "MOK"})
+        self.assertEqual(list(out), ["OK"])
+
+    def test_insane_sample_rejected_and_cleanup(self):
+        with tempfile.TemporaryDirectory() as d:
+            path = os.path.join(d, "t.db")
+            db = DB(path)
+            p = parse_pool_list(payload(gecko_item(liq=50000, price=0.001)), "solana")[0]
+            T = DB.DEX_SWITCH_TS + 100
+            db.upsert_first_seen(p, T, [], T + 86400)
+            self.assertFalse(db.sample_is_sane(p.address, 0.002, 0))        # liq gone, price up: impossible
+            self.assertTrue(db.sample_is_sane(p.address, 0.00001, 0))       # liq gone, price crashed: real rug
+            self.assertFalse(db.sample_is_sane(p.address, 9.0, 60000))      # 9000x, liq flat: flipped pair
+            self.assertTrue(db.sample_is_sane(p.address, 0.005, 120000))    # 5x with liq 2.4x: plausible
+            db.add_sample(p.address, T + 600, 0.002, 0)                     # bad, after switch -> removed
+            db.add_sample(p.address, T + 1200, 9.0, 60000)                  # bad, after switch -> removed
+            db.add_sample(p.address, T + 1800, 0.00001, 5)                  # real rug -> kept
+            db.add_sample(p.address, DB.DEX_SWITCH_TS - 600, 0.002, 0)      # before switch (Gecko) -> kept
+            db.conn.execute("DELETE FROM meta"); db.commit()
+            db2 = DB(path)                                                  # migration runs on open
+            prices = sorted(r["price_usd"] for r in db2.samples_for(p.address))
+            self.assertEqual(prices, [0.00001, 0.002])
