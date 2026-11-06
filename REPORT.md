@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-06 14:24 UTC
+Updated: 2026-11-06 14:31 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           6244
+pools seen           6281
 passed SCOUT         15
   killed by SCORE    1
   killed by AUDIT    2
 FINAL PASS           12
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                     5952
-  few_unique_buyers             5835
-  liquidity_low                 5626
-  volume_below_liquidity        4354
-  sells_dominate                1867
-  wash_churn                    1330
-  overheated                     522
+  too_young                     5989
+  few_unique_buyers             5870
+  liquidity_low                 5662
+  volume_below_liquidity        4379
+  sells_dominate                1875
+  wash_churn                    1341
+  overheated                     524
   too_old                        254
   missing                        195
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 426 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 429 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   12    -5.5%   -10.6%   -44.4%      -      17%
 SCOUT PASS, killed later      3    -4.1%   -25.5%   -32.2%      -       0%
-KILLED (tracked)            954    +0.0%    -1.2%    -2.8%    -9.8%    25%
+KILLED (tracked)            958    +0.0%    -1.2%    -2.8%    -9.8%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -80,13 +80,13 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
 ================================================================
 PAPER TRADER  (pricing: model; start $500.00)
 ================================================================
-equity $487.91 (-2.4%) | cash $462.61 | open 1 | max drawdown -3.2%
+equity $487.42 (-2.5%) | cash $462.61 | open 1 | max drawdown -3.2%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 2 | win 0/2 (0%) | avg net -26.2% | realized $-13.04 | expectancy $-6.52/trade
 exits: stop 1, trail 1
   (n=2 < 100: noise, not evidence)
 open:
-  AMD          cost $24.35  now $25.30 (+3.9%)  held 0.9h
+  AMD          cost $24.35  now $24.81 (+1.9%)  held 1.0h
 last trades:
   RM           $25.00 -> $14.03 (-43.9%)  stop  1.0h
   APPLEPAID    $24.45 -> $22.38 (-8.5%)  trail  0.7h
