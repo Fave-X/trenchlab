@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-06 11:31 UTC
+Updated: 2026-11-06 11:41 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           5285
+pools seen           5334
 passed SCOUT         14
   killed by SCORE    1
   killed by AUDIT    2
 FINAL PASS           11
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                     5006
-  few_unique_buyers             4919
-  liquidity_low                 4727
-  volume_below_liquidity        3655
-  sells_dominate                1576
-  wash_churn                    1110
-  overheated                     442
-  too_old                        244
-  missing                        176
+  too_young                     5053
+  few_unique_buyers             4965
+  liquidity_low                 4773
+  volume_below_liquidity        3688
+  sells_dominate                1589
+  wash_churn                    1123
+  overheated                     447
+  too_old                        245
+  missing                        177
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 359 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 371 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   11    -6.5%   -13.3%   -44.0%      -      18%
 SCOUT PASS, killed later      3    -4.1%   -25.5%   -32.2%      -       0%
-KILLED (tracked)            855    +0.0%    -0.8%    -3.9%    -9.8%    23%
+KILLED (tracked)            864    +0.0%    -0.9%    -4.2%    -9.8%    22%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -37,7 +37,7 @@ wash_churn                      8    -37.1%       -      62%
 too_old                         4     -3.0%       -       0%
 volume_below_liquidity          3     +5.9%       -      33%
 too_young                       3    -98.9%       -     100%
-liquidity_low                   1    -82.9%       -     100%
+liquidity_low                   2    -82.9%       -      50%
 
 SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
