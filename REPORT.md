@@ -1,68 +1,68 @@
 # TrenchLab report
 
-Updated: 2026-11-06 23:55 UTC
+Updated: 2026-11-07 00:01 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           9241
-passed SCOUT         23
+pools seen           9285
+passed SCOUT         24
   killed by SCORE    2
   killed by AUDIT    5
-FINAL PASS           16
+FINAL PASS           17
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                     8904
-  few_unique_buyers             8717
-  liquidity_low                 8378
-  volume_below_liquidity        6509
-  sells_dominate                2732
-  wash_churn                    1896
-  overheated                     769
+  too_young                     8945
+  few_unique_buyers             8756
+  liquidity_low                 8417
+  volume_below_liquidity        6538
+  sells_dominate                2748
+  wash_churn                    1903
+  overheated                     776
   missing                        318
-  too_old                        287
+  too_old                        289
   score_below                      1
 
 OUTCOMES (median price change from first sighting / first pass; 575 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   16    -5.7%   -21.6%   -44.7%   -93.4%    31%
+FINAL PASS                   17    -5.7%   -21.6%   -44.7%   -93.4%    29%
 SCOUT PASS, killed later      7   +13.9%    -3.3%   -65.8%   +72.1%    29%
-KILLED (tracked)           1336    -0.0%    -2.5%    -7.9%    -0.4%    28%
+KILLED (tracked)           1342    -0.0%    -2.5%    -7.9%    -0.4%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
 wash_churn                      9    -37.1%       -      56%
-too_old                         6     +0.2%     -6.7%     0%
+too_old                         7     +0.2%     -6.7%     0%
 too_young                       6    -94.0%       -      83%
-volume_below_liquidity          3     +5.9%    -39.4%    33%
+volume_below_liquidity          4     +5.9%    -39.4%    25%
 liquidity_low                   3    -86.9%       -      67%
 
 SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+         8    -58.2%    -93.4%    50%
-70-79       9    -38.7%       -      11%
+70-79      10    -38.7%       -      10%
 60-69       5    -39.9%       -      40%
 <60         1    -32.2%    +72.1%     0%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none       63     -3.8%    -10.5%     +6.4%    17%
+none       68     -3.8%    -10.5%     +5.7%    16%
 <15%       16     +0.1%     +0.7%     +7.8%    38%
 15-30%      1       -         -         -       0%
 30%+        7     -1.4%     -0.6%     +0.8%     0%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none       71     -2.2%     -0.3%     +2.6%    11%
+none       76     -2.2%     -0.3%     +2.6%    11%
 <20%       13    -22.2%    -51.7%    -99.5%    54%
 20%+        3    -33.5%    -99.5%       -      67%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%       84     -2.3%     -0.6%     +2.6%    18%
+<20%       89     -2.3%     -0.6%     +2.6%    17%
 20-40%      2    -33.5%    -99.5%       -     100%
 40%+        1       -         -         -       0%
-tokens analysed: 65 | helius credits today: 4270/25000
+tokens analysed: 68 | helius credits today: 203/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -84,11 +84,13 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
 ================================================================
 PAPER TRADER  (pricing: model; start $500.00)
 ================================================================
-equity $483.79 (-3.2%) | cash $483.79 | open 0 | max drawdown -3.6%
+equity $483.15 (-3.4%) | cash $459.60 | open 1 | max drawdown -3.7%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 3 | win 0/3 (0%) | avg net -21.8% | realized $-16.21 | expectancy $-5.40/trade
 exits: stop 2, trail 1
   (n=3 < 100: noise, not evidence)
+open:
+  DCAT         cost $24.19  now $23.55 (-2.6%)  held 0.0h
 last trades:
   RM           $25.00 -> $14.03 (-43.9%)  stop  1.0h
   APPLEPAID    $24.45 -> $22.38 (-8.5%)  trail  0.7h
