@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-07 07:22 UTC
+Updated: 2026-11-07 07:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           11581
+pools seen           11638
 passed SCOUT         28
   killed by SCORE    2
   killed by AUDIT    6
 FINAL PASS           20
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    11216
-  few_unique_buyers            10890
-  liquidity_low                10526
-  volume_below_liquidity        8154
-  sells_dominate                3339
-  wash_churn                    2396
-  overheated                    1010
-  missing                        376
-  too_old                        309
+  too_young                    11272
+  few_unique_buyers            10946
+  liquidity_low                10579
+  volume_below_liquidity        8200
+  sells_dominate                3352
+  wash_churn                    2412
+  overheated                    1016
+  missing                        377
+  too_old                        310
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 731 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 732 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   20    -5.5%   -17.3%   -44.4%   -66.4%    35%
 SCOUT PASS, killed later      8    +6.2%    +6.7%   -86.2%   +72.1%    38%
-KILLED (tracked)           1716    -0.1%    -3.4%    -9.5%    +0.5%    28%
+KILLED (tracked)           1724    -0.1%    -3.4%    -9.7%    +0.5%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -51,15 +51,15 @@ CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
 none       83     -2.4%     -9.0%     +4.9%    17%
-<15%       22     +0.6%     -2.0%     -0.8%    32%
+<15%       22     +0.8%     -2.0%     -0.8%    32%
 15-30%      1   +442.6%   +963.4%       -       0%
 30%+        8     -0.8%     -1.0%     +0.8%    12%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none       92     -1.9%     -2.0%     +2.6%    10%
-<20%       18     +7.5%    -55.2%    -96.6%    56%
+<20%       18    +10.5%    -55.2%    -96.6%    56%
 20%+        4    +24.1%    -99.0%       -      75%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      109     -1.8%     -2.9%     +1.8%    17%
+<20%      109     -1.7%     -2.9%     +1.8%    17%
 20-40%      3    +16.6%    -99.0%       -     100%
 40%+        2   +442.6%   +963.4%       -       0%
 tokens analysed: 89 | helius credits today: 1808/25000
@@ -86,8 +86,8 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $510.25       $534.31
-return                         +2.1%         +6.9%
+equity                       $510.25       $536.09
+return                         +2.1%         +7.2%
 closed trades                      7             1
 win rate                         43%          100%
 avg net / trade                +6.7%       +123.5%
@@ -119,13 +119,13 @@ signals skipped by the sizer/risk rules: already_traded_token 54, daily_loss_lim
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $534.31 (+6.9%) | cash $504.37 | open 1 | max drawdown -0.9%
+equity $536.09 (+7.2%) | cash $504.37 | open 1 | max drawdown -0.9%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 1 | win 1/1 (100%) | avg net +123.5% | realized $+30.88 | expectancy $+30.88/trade
 exits: trail 1
   (n=1 < 100: noise, not evidence)
 open:
-  MUTTAPE      cost $26.51  now $29.94 (+12.9%)  held 0.2h
+  MUTTAPE      cost $26.51  now $31.72 (+19.7%)  held 0.4h
 last trades:
   Alice        $25.00 -> $55.88 (+123.5%)  trail  1.7h
 signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 14, setup_rejected:top10_concentrated 10, setup_rejected:dumping_now 3
