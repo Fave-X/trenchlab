@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-07 20:02 UTC
+Updated: 2026-11-07 20:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           15578
+pools seen           15645
 passed SCOUT         35
   killed by SCORE    3
   killed by AUDIT    8
 FINAL PASS           24
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    15113
-  few_unique_buyers            14616
-  liquidity_low                14254
-  volume_below_liquidity       11020
-  sells_dominate                4362
-  wash_churn                    3264
-  overheated                    1380
-  missing                        436
-  too_old                        383
+  too_young                    15170
+  few_unique_buyers            14681
+  liquidity_low                14312
+  volume_below_liquidity       11066
+  sells_dominate                4393
+  wash_churn                    3271
+  overheated                    1382
+  missing                        440
+  too_old                        391
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 901 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 902 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   24    -5.7%   -17.3%   -46.5%   -81.8%    46%
 SCOUT PASS, killed later     11   +15.6%   +16.6%   -91.1%   +72.1%    36%
-KILLED (tracked)           2339    -0.0%    -5.2%   -30.1%    +1.2%    27%
+KILLED (tracked)           2349    -0.0%    -4.5%   -30.1%    +1.2%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -63,7 +63,7 @@ fresh       n   +1h med   +4h med  +24h med   rug%
 <20%      144     -1.4%     -2.8%     +0.8%    22%
 20-40%      4    -41.0%    -99.0%       -     100%
 40%+        3   +227.1%   +963.4%       -       0%
-tokens analysed: 121 | helius credits today: 5035/25000
+tokens analysed: 121 | helius credits today: 5101/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -130,7 +130,7 @@ last trades:
   Alice        $25.00 -> $55.88 (+123.5%)  trail  1.7h
   MUTTAPE      $26.51 -> $21.28 (-19.7%)  stop  0.7h
   FUSE         $26.80 -> $24.03 (-10.3%)  stop  0.7h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 32, setup_rejected:top10_concentrated 25, setup_rejected:volume_dried_up 17, setup_rejected:dumping_now 9, setup_rejected:sellers_dominate_now 1, setup_rejected:lp_not_locked 1, setup_rejected:b_received 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 32, setup_rejected:top10_concentrated 26, setup_rejected:volume_dried_up 17, setup_rejected:dumping_now 9, setup_rejected:sellers_dominate_now 1, setup_rejected:lp_not_locked 1, setup_rejected:b_received 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
