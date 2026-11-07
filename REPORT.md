@@ -1,25 +1,25 @@
 # TrenchLab report
 
-Updated: 2026-11-07 00:25 UTC
+Updated: 2026-11-07 00:31 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           9367
+pools seen           9427
 passed SCOUT         24
   killed by SCORE    2
   killed by AUDIT    5
 FINAL PASS           17
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                     9025
-  few_unique_buyers             8834
-  liquidity_low                 8492
-  volume_below_liquidity        6604
-  sells_dominate                2787
-  wash_churn                    1910
-  overheated                     779
+  too_young                     9085
+  few_unique_buyers             8894
+  liquidity_low                 8551
+  volume_below_liquidity        6651
+  sells_dominate                2803
+  wash_churn                    1931
+  overheated                     785
   missing                        320
   too_old                        291
   score_below                      1
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 578 pools had ze
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   17    -5.6%   -21.6%   -44.7%   -93.4%    29%
 SCOUT PASS, killed later      7   +13.9%    -3.3%   -86.4%   +72.1%    29%
-KILLED (tracked)           1349    -0.0%    -2.5%    -7.9%    -0.4%    28%
+KILLED (tracked)           1356    -0.0%    -2.5%    -7.4%    -0.4%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -66,31 +66,31 @@ tokens analysed: 69 | helius credits today: 227/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%   17    12%    -11.6%   -19.9%   -51.8%
-   -6%     20%   17    12%    -11.6%   -19.9%   -51.8%
-   -6%     30%   17    12%    -11.6%   -19.9%   -51.8%
-  -10%     12%   17    12%    -14.2%   -21.0%   -51.8%
-  -10%     20%   17    12%    -14.2%   -21.0%   -51.8%
-  -10%     30%   17    12%    -14.2%   -21.0%   -51.8%
-  -15%     12%   17    12%    -14.6%   -21.3%   -51.8%
-  -15%     20%   17    12%    -14.6%   -21.3%   -51.8%
-  -15%     30%   17    12%    -14.6%   -21.3%   -51.8%
-  -25%     12%   17    18%    -16.7%   -29.2%   -67.1%
-  -25%     20%   17    18%    -20.8%   -29.9%   -76.1%
-  -25%     30%   17    12%    -23.6%   -31.0%   -76.1%
-  best so far: stop -6%, trail from +12% -> avg -11.6% per trade over n=17
+   -6%     12%   17    18%    -11.1%   -19.9%   -51.8%
+   -6%     20%   17    18%    -11.1%   -19.9%   -51.8%
+   -6%     30%   17    18%    -11.1%   -19.9%   -51.8%
+  -10%     12%   17    18%    -13.7%   -21.0%   -51.8%
+  -10%     20%   17    18%    -13.7%   -21.0%   -51.8%
+  -10%     30%   17    18%    -13.7%   -21.0%   -51.8%
+  -15%     12%   17    18%    -14.1%   -21.3%   -51.8%
+  -15%     20%   17    18%    -14.1%   -21.3%   -51.8%
+  -15%     30%   17    18%    -14.1%   -21.3%   -51.8%
+  -25%     12%   17    24%    -16.2%   -29.2%   -67.1%
+  -25%     20%   17    24%    -20.3%   -29.9%   -76.1%
+  -25%     30%   17    18%    -23.1%   -31.0%   -76.1%
+  best so far: stop -6%, trail from +12% -> avg -11.1% per trade over n=17
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 ================================================================
 PAPER TRADER  (pricing: model; start $500.00)
 ================================================================
-equity $483.05 (-3.4%) | cash $459.60 | open 1 | max drawdown -3.7%
+equity $485.11 (-3.0%) | cash $459.60 | open 1 | max drawdown -3.7%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 3 | win 0/3 (0%) | avg net -21.8% | realized $-16.21 | expectancy $-5.40/trade
 exits: stop 2, trail 1
   (n=3 < 100: noise, not evidence)
 open:
-  DCAT         cost $24.19  now $23.45 (-3.0%)  held 0.4h
+  DCAT         cost $24.19  now $25.52 (+5.5%)  held 0.5h
 last trades:
   RM           $25.00 -> $14.03 (-43.9%)  stop  1.0h
   APPLEPAID    $24.45 -> $22.38 (-8.5%)  trail  0.7h
