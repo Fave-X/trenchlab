@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-07 15:32 UTC
+Updated: 2026-11-07 15:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           14097
+pools seen           14146
 passed SCOUT         32
   killed by SCORE    3
   killed by AUDIT    6
 FINAL PASS           23
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    13685
-  few_unique_buyers            13208
-  liquidity_low                12858
-  volume_below_liquidity        9948
-  sells_dominate                3950
-  wash_churn                    2962
-  overheated                    1272
-  missing                        407
+  too_young                    13733
+  few_unique_buyers            13253
+  liquidity_low                12904
+  volume_below_liquidity        9984
+  sells_dominate                3963
+  wash_churn                    2967
+  overheated                    1274
+  missing                        409
   too_old                        339
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 855 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 856 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   23    -5.6%   -10.8%   -44.4%   -85.9%    39%
 SCOUT PASS, killed later      9   +17.2%   +16.6%   -86.2%   +72.1%    33%
-KILLED (tracked)           2116    +0.0%    -4.0%   -22.3%    +1.6%    28%
+KILLED (tracked)           2123    +0.0%    -4.0%   -22.3%    +1.3%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -115,7 +115,7 @@ last trades:
   SLINGFOLIO   $25.51 -> $21.41 (-16.1%)  stop  0.3h
   duge         $25.31 -> $17.64 (-30.3%)  stop  0.5h
   debtdog      $24.92 -> $19.88 (-20.2%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 74, daily_loss_limit 31, max_open_positions 1
+signals skipped by the sizer/risk rules: already_traded_token 75, daily_loss_limit 31, max_open_positions 1
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
