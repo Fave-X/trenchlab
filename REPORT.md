@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-07 14:22 UTC
+Updated: 2026-11-07 14:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           13769
+pools seen           13809
 passed SCOUT         31
   killed by SCORE    3
   killed by AUDIT    6
 FINAL PASS           22
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    13361
-  few_unique_buyers            12898
-  liquidity_low                12550
-  volume_below_liquidity        9695
-  sells_dominate                3863
-  wash_churn                    2904
-  overheated                    1247
+  too_young                    13398
+  few_unique_buyers            12935
+  liquidity_low                12587
+  volume_below_liquidity        9723
+  sells_dominate                3872
+  wash_churn                    2914
+  overheated                    1253
   missing                        401
-  too_old                        337
+  too_old                        338
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 846 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 849 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   22    -5.5%   -13.3%   -44.4%   -85.9%    41%
 SCOUT PASS, killed later      9   +17.2%   +16.6%   -86.2%   +72.1%    33%
-KILLED (tracked)           2071    +0.0%    -4.0%   -22.2%    +1.1%    28%
+KILLED (tracked)           2079    +0.0%    -4.0%   -22.3%    +1.2%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -115,7 +115,7 @@ last trades:
   Alice        $23.99 -> $54.38 (+126.7%)  trail  2.2h
   SLINGFOLIO   $25.51 -> $21.41 (-16.1%)  stop  0.3h
   duge         $25.31 -> $17.64 (-30.3%)  stop  0.5h
-signals skipped by the sizer/risk rules: already_traded_token 67, daily_loss_limit 31, max_open_positions 1
+signals skipped by the sizer/risk rules: already_traded_token 68, daily_loss_limit 31, max_open_positions 1
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
