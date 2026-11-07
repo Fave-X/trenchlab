@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-07 16:32 UTC
+Updated: 2026-11-07 16:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           14429
+pools seen           14491
 passed SCOUT         33
   killed by SCORE    3
   killed by AUDIT    7
 FINAL PASS           23
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    14009
-  few_unique_buyers            13520
-  liquidity_low                13168
-  volume_below_liquidity       10185
-  sells_dominate                4028
-  wash_churn                    3037
-  overheated                    1300
-  missing                        417
+  too_young                    14071
+  few_unique_buyers            13579
+  liquidity_low                13228
+  volume_below_liquidity       10229
+  sells_dominate                4040
+  wash_churn                    3059
+  overheated                    1303
+  missing                        418
   too_old                        345
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 874 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 875 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   23    -5.6%   -13.3%   -44.4%   -81.8%    39%
 SCOUT PASS, killed later     10   +25.0%   +17.2%   -84.2%   +72.1%    30%
-KILLED (tracked)           2167    +0.0%    -4.1%   -23.9%    +0.8%    28%
+KILLED (tracked)           2174    +0.0%    -4.0%   -23.9%    +0.8%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -115,7 +115,7 @@ last trades:
   SLINGFOLIO   $25.51 -> $21.41 (-16.1%)  stop  0.3h
   duge         $25.31 -> $17.64 (-30.3%)  stop  0.5h
   debtdog      $24.92 -> $19.88 (-20.2%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 76, daily_loss_limit 31, max_open_positions 1
+signals skipped by the sizer/risk rules: already_traded_token 77, daily_loss_limit 31, max_open_positions 1
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -130,7 +130,7 @@ last trades:
   Alice        $25.00 -> $55.88 (+123.5%)  trail  1.7h
   MUTTAPE      $26.51 -> $21.28 (-19.7%)  stop  0.7h
   FUSE         $26.80 -> $24.03 (-10.3%)  stop  0.7h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 32, setup_rejected:top10_concentrated 18, setup_rejected:volume_dried_up 16, setup_rejected:dumping_now 7, setup_rejected:sellers_dominate_now 1, setup_rejected:lp_not_locked 1, setup_rejected:b_received 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 32, setup_rejected:top10_concentrated 19, setup_rejected:volume_dried_up 16, setup_rejected:dumping_now 7, setup_rejected:sellers_dominate_now 1, setup_rejected:lp_not_locked 1, setup_rejected:b_received 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
