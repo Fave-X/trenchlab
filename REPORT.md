@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-07 15:12 UTC
+Updated: 2026-11-07 15:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           13986
+pools seen           14036
 passed SCOUT         32
   killed by SCORE    3
   killed by AUDIT    6
 FINAL PASS           23
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    13574
-  few_unique_buyers            13102
-  liquidity_low                12752
-  volume_below_liquidity        9861
-  sells_dominate                3921
-  wash_churn                    2939
-  overheated                    1264
+  too_young                    13624
+  few_unique_buyers            13151
+  liquidity_low                12798
+  volume_below_liquidity        9904
+  sells_dominate                3936
+  wash_churn                    2952
+  overheated                    1268
   missing                        407
   too_old                        339
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 853 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 854 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   23    -5.5%   -10.8%   -44.4%   -85.9%    39%
+FINAL PASS                   23    -5.6%   -10.8%   -44.4%   -85.9%    39%
 SCOUT PASS, killed later      9   +17.2%   +16.6%   -86.2%   +72.1%    33%
-KILLED (tracked)           2101    +0.0%    -4.0%   -23.0%    +1.3%    28%
+KILLED (tracked)           2109    +0.0%    -4.0%   -23.0%    +1.3%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -76,9 +76,9 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     12%   23    17%    -14.7%   -21.2%   -65.0%
   -15%     20%   23    17%    -14.7%   -21.2%   -65.0%
   -15%     30%   23    22%     -9.2%   -21.2%   -65.0%
-  -25%     12%   23    22%    -16.6%   -29.1%   -67.1%
-  -25%     20%   23    22%    -19.6%   -29.2%   -76.1%
-  -25%     30%   23    22%    -16.2%   -29.9%   -76.1%
+  -25%     12%   23    22%    -17.7%   -29.2%   -67.1%
+  -25%     20%   23    22%    -20.7%   -29.9%   -76.1%
+  -25%     30%   23    22%    -17.3%   -31.0%   -76.1%
   best so far: stop -6%, trail from +30% -> avg -6.8% per trade over n=23
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
@@ -115,7 +115,7 @@ last trades:
   SLINGFOLIO   $25.51 -> $21.41 (-16.1%)  stop  0.3h
   duge         $25.31 -> $17.64 (-30.3%)  stop  0.5h
   debtdog      $24.92 -> $19.88 (-20.2%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 72, daily_loss_limit 31, max_open_positions 1
+signals skipped by the sizer/risk rules: already_traded_token 73, daily_loss_limit 31, max_open_positions 1
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
