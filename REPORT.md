@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-07 10:02 UTC
+Updated: 2026-11-07 10:06 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           12405
+pools seen           12461
 passed SCOUT         29
   killed by SCORE    2
   killed by AUDIT    6
 FINAL PASS           21
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    12035
-  few_unique_buyers            11641
-  liquidity_low                11288
-  volume_below_liquidity        8709
-  sells_dominate                3568
-  wash_churn                    2598
-  overheated                    1091
+  too_young                    12091
+  few_unique_buyers            11691
+  liquidity_low                11341
+  volume_below_liquidity        8749
+  sells_dominate                3581
+  wash_churn                    2617
+  overheated                    1102
   missing                        389
   too_old                        313
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 784 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 786 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   21    -5.6%   -13.3%   -44.0%   -79.8%    33%
 SCOUT PASS, killed later      8    +6.2%    +6.7%   -86.2%   +72.1%    38%
-KILLED (tracked)           1846    -0.0%    -3.4%   -10.8%    +1.2%    28%
+KILLED (tracked)           1856    -0.0%    -3.4%   -11.0%    +1.2%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -50,19 +50,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none       89     -2.5%     -7.5%     +3.7%    19%
+none       90     -2.5%     -7.5%     +3.7%    19%
 <15%       23     +0.8%     +0.4%     -0.8%    35%
 15-30%      1   +442.6%   +963.4%       -       0%
 30%+        8     -0.8%     -1.0%     +0.8%    12%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none       96     -1.9%     -1.7%     +2.6%    11%
+none       97     -1.9%     -1.7%     +2.6%    11%
 <20%       21     +5.4%    -46.5%    -94.9%    57%
 20%+        4    +24.1%    -99.0%       -      75%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      116     -1.9%     -2.2%     +1.1%    20%
+<20%      117     -1.8%     -2.2%     +1.1%    20%
 20-40%      3    +16.6%    -99.0%       -     100%
 40%+        2   +442.6%   +963.4%       -       0%
-tokens analysed: 96 | helius credits today: 2362/25000
+tokens analysed: 97 | helius credits today: 2508/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -129,7 +129,7 @@ last trades:
   Alice        $25.00 -> $55.88 (+123.5%)  trail  1.7h
   MUTTAPE      $26.51 -> $21.28 (-19.7%)  stop  0.7h
   FUSE         $26.80 -> $24.03 (-10.3%)  stop  0.7h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 20, setup_rejected:top10_concentrated 14, setup_rejected:volume_dried_up 5, setup_rejected:dumping_now 4, setup_rejected:sellers_dominate_now 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 21, setup_rejected:top10_concentrated 14, setup_rejected:volume_dried_up 5, setup_rejected:dumping_now 4, setup_rejected:sellers_dominate_now 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
