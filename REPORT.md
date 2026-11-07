@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-07 12:02 UTC
+Updated: 2026-11-07 12:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           13065
+pools seen           13112
 passed SCOUT         29
   killed by SCORE    2
   killed by AUDIT    6
 FINAL PASS           21
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    12684
-  few_unique_buyers            12255
-  liquidity_low                11902
-  volume_below_liquidity        9208
-  sells_dominate                3721
-  wash_churn                    2747
-  overheated                    1164
+  too_young                    12730
+  few_unique_buyers            12297
+  liquidity_low                11947
+  volume_below_liquidity        9242
+  sells_dominate                3727
+  wash_churn                    2756
+  overheated                    1171
   missing                        395
   too_old                        320
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 818 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 820 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   21    -5.6%   -13.3%   -44.0%   -79.8%    38%
 SCOUT PASS, killed later      8    +6.2%    +6.7%   -86.2%   +72.1%    38%
-KILLED (tracked)           1943    +0.0%    -3.7%   -15.7%    +1.2%    28%
+KILLED (tracked)           1952    +0.0%    -3.8%   -16.7%    +1.2%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -130,7 +130,7 @@ last trades:
   Alice        $25.00 -> $55.88 (+123.5%)  trail  1.7h
   MUTTAPE      $26.51 -> $21.28 (-19.7%)  stop  0.7h
   FUSE         $26.80 -> $24.03 (-10.3%)  stop  0.7h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 26, setup_rejected:volume_dried_up 14, setup_rejected:top10_concentrated 14, setup_rejected:dumping_now 4, setup_rejected:sellers_dominate_now 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 27, setup_rejected:volume_dried_up 14, setup_rejected:top10_concentrated 14, setup_rejected:dumping_now 4, setup_rejected:sellers_dominate_now 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
