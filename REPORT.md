@@ -1,26 +1,26 @@
 # TrenchLab report
 
-Updated: 2026-11-07 15:42 UTC
+Updated: 2026-11-07 15:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           14146
+pools seen           14198
 passed SCOUT         32
   killed by SCORE    3
   killed by AUDIT    6
 FINAL PASS           23
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    13733
-  few_unique_buyers            13253
-  liquidity_low                12904
-  volume_below_liquidity        9984
-  sells_dominate                3963
-  wash_churn                    2967
-  overheated                    1274
-  missing                        409
+  too_young                    13785
+  few_unique_buyers            13304
+  liquidity_low                12951
+  volume_below_liquidity       10022
+  sells_dominate                3976
+  wash_churn                    2977
+  overheated                    1277
+  missing                        412
   too_old                        339
   score_below                      1
 
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 856 pools had ze
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   23    -5.6%   -10.8%   -44.4%   -85.9%    39%
 SCOUT PASS, killed later      9   +17.2%   +16.6%   -86.2%   +72.1%    33%
-KILLED (tracked)           2123    +0.0%    -4.0%   -22.3%    +1.3%    28%
+KILLED (tracked)           2131    +0.0%    -4.0%   -22.2%    +1.3%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -51,16 +51,16 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      103     -2.3%     -7.3%     +4.9%    20%
+none      103     -2.3%     -5.1%     +4.9%    20%
 <15%       25     +0.8%     -1.1%     +3.5%    40%
 15-30%      1   +442.6%   +963.4%       -       0%
 30%+        8     -0.8%     -1.0%     +0.8%    12%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      111     -1.7%     -2.3%     +2.6%    14%
+none      111     -1.7%     -2.2%     +2.6%    14%
 <20%       22     +7.5%    -44.7%    -94.9%    59%
 20%+        4    +24.1%    -99.0%       -      75%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      132     -1.4%     -2.5%     +2.6%    22%
+<20%      132     -1.4%     -2.3%     +2.6%    22%
 20-40%      3    +16.6%    -99.0%       -     100%
 40%+        2   +442.6%   +963.4%       -       0%
 tokens analysed: 111 | helius credits today: 3763/25000
@@ -115,7 +115,7 @@ last trades:
   SLINGFOLIO   $25.51 -> $21.41 (-16.1%)  stop  0.3h
   duge         $25.31 -> $17.64 (-30.3%)  stop  0.5h
   debtdog      $24.92 -> $19.88 (-20.2%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 75, daily_loss_limit 31, max_open_positions 1
+signals skipped by the sizer/risk rules: already_traded_token 76, daily_loss_limit 31, max_open_positions 1
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
