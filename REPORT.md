@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-07 10:06 UTC
+Updated: 2026-11-07 10:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           12461
+pools seen           12506
 passed SCOUT         29
   killed by SCORE    2
   killed by AUDIT    6
 FINAL PASS           21
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    12091
-  few_unique_buyers            11691
-  liquidity_low                11341
-  volume_below_liquidity        8749
-  sells_dominate                3581
-  wash_churn                    2617
-  overheated                    1102
-  missing                        389
+  too_young                    12136
+  few_unique_buyers            11732
+  liquidity_low                11383
+  volume_below_liquidity        8779
+  sells_dominate                3592
+  wash_churn                    2627
+  overheated                    1110
+  missing                        390
   too_old                        313
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 786 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 788 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   21    -5.6%   -13.3%   -44.0%   -79.8%    33%
 SCOUT PASS, killed later      8    +6.2%    +6.7%   -86.2%   +72.1%    38%
-KILLED (tracked)           1856    -0.0%    -3.4%   -11.0%    +1.2%    28%
+KILLED (tracked)           1863    -0.0%    -3.4%   -12.1%    +1.2%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -114,7 +114,7 @@ last trades:
   MUTTAPE      $24.79 -> $8.77 (-64.6%)  stop  0.2h
   Alice        $23.99 -> $54.38 (+126.7%)  trail  2.2h
   SLINGFOLIO   $25.51 -> $21.41 (-16.1%)  stop  0.3h
-signals skipped by the sizer/risk rules: already_traded_token 63, daily_loss_limit 31, max_open_positions 1
+signals skipped by the sizer/risk rules: already_traded_token 64, daily_loss_limit 31, max_open_positions 1
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -129,7 +129,7 @@ last trades:
   Alice        $25.00 -> $55.88 (+123.5%)  trail  1.7h
   MUTTAPE      $26.51 -> $21.28 (-19.7%)  stop  0.7h
   FUSE         $26.80 -> $24.03 (-10.3%)  stop  0.7h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 21, setup_rejected:top10_concentrated 14, setup_rejected:volume_dried_up 5, setup_rejected:dumping_now 4, setup_rejected:sellers_dominate_now 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 21, setup_rejected:top10_concentrated 14, setup_rejected:volume_dried_up 6, setup_rejected:dumping_now 4, setup_rejected:sellers_dominate_now 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
