@@ -114,7 +114,8 @@
         30
       ],
       "trail_distance_pct": 10
-    }
+    },
+    "max_gecko_fallback_pools": 240
   },
   "ignore_base_symbols": [
     "SOL",

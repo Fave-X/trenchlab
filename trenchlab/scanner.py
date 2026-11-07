@@ -120,6 +120,15 @@ def run_cycle(gecko, auditor, db, cfg, now=None, log=print, alert=True, cabal=No
             log(f"[lab] dexscreener tracking failed: {e}")
         got = {a: v for a, v in got.items() if db.sample_is_sane(a, *v)}  # bad DexScreener rows -> Gecko
         missing = [a for a in to_track if a not in got]
+        cap = cfg["lab"].get("max_gecko_fallback_pools", 240)
+        if len(missing) > cap:
+            # GeckoTerminal rate-limits shared GitHub IPs; retries can push a run past its time limit.
+            # Price what matters most: open paper positions first, then the biggest pools (book B's universe).
+            held = {pos["pool_address"] for pos in db.open_positions()}
+            liq = {a: (db.get_pool(a)["first_liq"] or 0) if db.get_pool(a) else 0 for a in missing}
+            missing.sort(key=lambda a: (a not in held, -liq[a]))
+            log(f"[lab] gecko fallback capped: {cap} of {len(missing)} pools")
+            missing = missing[:cap]
         if missing:
             try:
                 for tp in gecko.pools_multi(missing):
