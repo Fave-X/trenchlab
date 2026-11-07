@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-07 02:11 UTC
+Updated: 2026-11-07 02:25 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           9939
+pools seen           9987
 passed SCOUT         26
   killed by SCORE    2
   killed by AUDIT    5
 FINAL PASS           19
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                     9590
-  few_unique_buyers             9379
-  liquidity_low                 9031
-  volume_below_liquidity        7028
-  sells_dominate                2954
-  wash_churn                    2028
-  overheated                     833
+  too_young                     9637
+  few_unique_buyers             9424
+  liquidity_low                 9076
+  volume_below_liquidity        7063
+  sells_dominate                2964
+  wash_churn                    2033
+  overheated                     838
   missing                        330
-  too_old                        298
+  too_old                        299
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 615 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 616 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   19    -5.5%   -21.3%   -44.7%   -79.9%    26%
 SCOUT PASS, killed later      7   +13.9%    -3.3%   -73.5%   +72.1%    29%
-KILLED (tracked)           1426    -0.1%    -2.6%    -7.9%    +0.5%    28%
+KILLED (tracked)           1435    -0.1%    -2.6%    -7.9%    +0.5%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -66,37 +66,36 @@ tokens analysed: 75 | helius credits today: 754/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%   18    22%     -8.1%   -19.3%   -51.8%
-   -6%     20%   18    22%     -8.1%   -19.3%   -51.8%
-   -6%     30%   18    22%     -8.1%   -19.3%   -51.8%
-  -10%     12%   18    22%    -10.5%   -20.6%   -51.8%
-  -10%     20%   18    22%    -10.5%   -20.6%   -51.8%
-  -10%     30%   18    22%    -10.5%   -20.6%   -51.8%
-  -15%     12%   18    22%    -11.0%   -21.2%   -51.8%
-  -15%     20%   18    22%    -11.0%   -21.2%   -51.8%
-  -15%     30%   18    22%    -11.0%   -21.2%   -51.8%
-  -25%     12%   18    28%    -13.0%   -25.3%   -67.1%
-  -25%     20%   18    28%    -16.8%   -29.5%   -76.1%
-  -25%     30%   18    22%    -19.5%   -30.4%   -76.1%
-  best so far: stop -6%, trail from +12% -> avg -8.1% per trade over n=18
+   -6%     12%   19    21%    -11.1%   -19.9%   -65.0%
+   -6%     20%   19    21%    -11.1%   -19.9%   -65.0%
+   -6%     30%   19    21%    -11.1%   -19.9%   -65.0%
+  -10%     12%   19    21%    -13.4%   -21.0%   -65.0%
+  -10%     20%   19    21%    -13.4%   -21.0%   -65.0%
+  -10%     30%   19    21%    -13.4%   -21.0%   -65.0%
+  -15%     12%   19    21%    -13.8%   -21.3%   -65.0%
+  -15%     20%   19    21%    -13.8%   -21.3%   -65.0%
+  -15%     30%   19    21%    -13.8%   -21.3%   -65.0%
+  -25%     12%   19    26%    -15.7%   -29.2%   -67.1%
+  -25%     20%   19    26%    -19.3%   -29.9%   -76.1%
+  -25%     30%   19    21%    -21.8%   -31.0%   -76.1%
+  best so far: stop -6%, trail from +12% -> avg -11.1% per trade over n=19
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 ================================================================
 PAPER TRADER  (pricing: model; start $500.00)
 ================================================================
-equity $495.23 (-1.0%) | cash $471.09 | open 1 | max drawdown -3.7%
+equity $479.86 (-4.0%) | cash $479.86 | open 0 | max drawdown -5.1%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 5 | win 2/5 (40%) | avg net -3.1% | realized $-4.12 | expectancy $-0.82/trade
-exits: trail 3, stop 2
-  (n=5 < 100: noise, not evidence)
-open:
-  MUTTAPE      cost $24.79  now $24.13 (-2.6%)  held 0.0h
+closed 6 | win 2/6 (33%) | avg net -13.3% | realized $-20.14 | expectancy $-3.36/trade
+exits: stop 3, trail 3
+  (n=6 < 100: noise, not evidence)
 last trades:
   RM           $25.00 -> $14.03 (-43.9%)  stop  1.0h
   APPLEPAID    $24.45 -> $22.38 (-8.5%)  trail  0.7h
   AMD          $24.35 -> $21.18 (-13.0%)  stop  1.5h
   DCAT         $24.19 -> $34.87 (+44.2%)  trail  1.7h
   José         $24.61 -> $26.02 (+5.7%)  trail  0.3h
+  MUTTAPE      $24.79 -> $8.77 (-64.6%)  stop  0.2h
 signals skipped by the sizer/risk rules: already_traded_token 42, daily_loss_limit 31, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
