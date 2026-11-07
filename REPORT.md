@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-07 18:12 UTC
+Updated: 2026-11-07 18:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           14991
+pools seen           15050
 passed SCOUT         35
   killed by SCORE    3
   killed by AUDIT    8
 FINAL PASS           24
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    14556
-  few_unique_buyers            14055
-  liquidity_low                13698
-  volume_below_liquidity       10602
-  sells_dominate                4188
-  wash_churn                    3152
-  overheated                    1341
-  missing                        430
+  too_young                    14615
+  few_unique_buyers            14112
+  liquidity_low                13755
+  volume_below_liquidity       10639
+  sells_dominate                4210
+  wash_churn                    3169
+  overheated                    1345
+  missing                        431
   too_old                        358
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 888 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 889 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   24    -5.7%   -13.3%   -44.7%   -81.8%    42%
 SCOUT PASS, killed later     11   +15.6%   +16.6%   -84.2%   +72.1%    36%
-KILLED (tracked)           2240    -0.0%    -4.8%   -30.1%    +0.8%    27%
+KILLED (tracked)           2246    -0.0%    -4.8%   -25.8%    +0.8%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -76,8 +76,8 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     12%   24    17%    -15.1%   -21.3%   -65.0%
   -15%     20%   24    17%    -15.1%   -21.3%   -65.0%
   -15%     30%   24    21%     -9.8%   -21.3%   -65.0%
-  -25%     12%   24    21%    -18.1%   -29.2%   -67.1%
-  -25%     20%   24    21%    -21.0%   -29.5%   -76.1%
+  -25%     12%   24    21%    -18.0%   -29.2%   -67.1%
+  -25%     20%   24    21%    -20.9%   -29.5%   -76.1%
   -25%     30%   24    21%    -17.7%   -30.4%   -76.1%
   best so far: stop -6%, trail from +30% -> avg -7.5% per trade over n=24
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
@@ -130,7 +130,7 @@ last trades:
   Alice        $25.00 -> $55.88 (+123.5%)  trail  1.7h
   MUTTAPE      $26.51 -> $21.28 (-19.7%)  stop  0.7h
   FUSE         $26.80 -> $24.03 (-10.3%)  stop  0.7h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 32, setup_rejected:top10_concentrated 22, setup_rejected:volume_dried_up 17, setup_rejected:dumping_now 7, setup_rejected:sellers_dominate_now 1, setup_rejected:lp_not_locked 1, setup_rejected:b_received 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 32, setup_rejected:top10_concentrated 23, setup_rejected:volume_dried_up 17, setup_rejected:dumping_now 7, setup_rejected:sellers_dominate_now 1, setup_rejected:lp_not_locked 1, setup_rejected:b_received 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
