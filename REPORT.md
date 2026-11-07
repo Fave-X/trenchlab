@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-07 15:22 UTC
+Updated: 2026-11-07 15:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           14036
+pools seen           14097
 passed SCOUT         32
   killed by SCORE    3
   killed by AUDIT    6
 FINAL PASS           23
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    13624
-  few_unique_buyers            13151
-  liquidity_low                12798
-  volume_below_liquidity        9904
-  sells_dominate                3936
-  wash_churn                    2952
-  overheated                    1268
+  too_young                    13685
+  few_unique_buyers            13208
+  liquidity_low                12858
+  volume_below_liquidity        9948
+  sells_dominate                3950
+  wash_churn                    2962
+  overheated                    1272
   missing                        407
   too_old                        339
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 854 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 855 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   23    -5.6%   -10.8%   -44.4%   -85.9%    39%
 SCOUT PASS, killed later      9   +17.2%   +16.6%   -86.2%   +72.1%    33%
-KILLED (tracked)           2109    +0.0%    -4.0%   -23.0%    +1.3%    28%
+KILLED (tracked)           2116    +0.0%    -4.0%   -22.3%    +1.6%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -38,7 +38,7 @@ too_old                        10     -0.1%     -0.4%     0%
 wash_churn                      9    -37.1%       -      56%
 volume_below_liquidity          4     +1.5%     -4.6%    50%
 liquidity_low                   3    -86.9%       -     100%
-overheated                      2       -         -      50%
+overheated                      2     +0.0%       -      50%
 
 SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
@@ -51,16 +51,16 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      103     -2.3%     -7.5%     +4.9%    20%
+none      103     -2.3%     -7.3%     +4.9%    20%
 <15%       25     +0.8%     -1.1%     +3.5%    40%
 15-30%      1   +442.6%   +963.4%       -       0%
 30%+        8     -0.8%     -1.0%     +0.8%    12%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      111     -1.7%     -2.5%     +2.6%    14%
+none      111     -1.7%     -2.3%     +2.6%    14%
 <20%       22     +7.5%    -44.7%    -94.9%    59%
 20%+        4    +24.1%    -99.0%       -      75%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      132     -1.4%     -2.6%     +2.6%    22%
+<20%      132     -1.4%     -2.5%     +2.6%    22%
 20-40%      3    +16.6%    -99.0%       -     100%
 40%+        2   +442.6%   +963.4%       -       0%
 tokens analysed: 111 | helius credits today: 3763/25000
@@ -115,7 +115,7 @@ last trades:
   SLINGFOLIO   $25.51 -> $21.41 (-16.1%)  stop  0.3h
   duge         $25.31 -> $17.64 (-30.3%)  stop  0.5h
   debtdog      $24.92 -> $19.88 (-20.2%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 73, daily_loss_limit 31, max_open_positions 1
+signals skipped by the sizer/risk rules: already_traded_token 74, daily_loss_limit 31, max_open_positions 1
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
