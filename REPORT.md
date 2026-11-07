@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-07 05:02 UTC
+Updated: 2026-11-07 05:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           10831
-passed SCOUT         27
+pools seen           10892
+passed SCOUT         28
   killed by SCORE    2
   killed by AUDIT    6
-FINAL PASS           19
+FINAL PASS           20
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    10476
-  few_unique_buyers            10215
-  liquidity_low                 9840
-  volume_below_liquidity        7659
-  sells_dominate                3175
-  wash_churn                    2216
-  overheated                     916
+  too_young                    10537
+  few_unique_buyers            10269
+  liquidity_low                 9897
+  volume_below_liquidity        7698
+  sells_dominate                3181
+  wash_churn                    2227
+  overheated                     923
   missing                        362
   too_old                        303
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 683 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 684 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   19    -5.6%   -21.3%   -44.4%   -60.1%    32%
+FINAL PASS                   20    -5.6%   -21.3%   -44.4%   -60.1%    30%
 SCOUT PASS, killed later      8    +6.2%    +6.7%   -73.5%   +72.1%    25%
-KILLED (tracked)           1571    -0.1%    -3.3%    -7.7%    +1.1%    29%
+KILLED (tracked)           1583    -0.1%    -3.2%    -8.1%    +0.5%    29%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -44,18 +44,18 @@ if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        11    -68.2%    -93.4%    45%
 70-79      10    -32.6%     +2.6%    10%
-60-69       5    -41.2%       -      40%
+60-69       6    -41.2%       -      33%
 <60         1    -32.2%    +72.1%     0%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none       77     -3.4%     -7.6%     +5.7%    18%
+none       77     -3.3%     -7.6%     +5.7%    18%
 <15%       18     +0.6%     +0.4%     -0.8%    33%
 15-30%      1   +442.6%   +963.4%       -       0%
 30%+        8     -0.8%     -0.6%     +0.8%     0%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none       86     -2.1%     -1.1%     +2.6%    10%
+none       86     -1.9%     -1.1%     +2.6%    10%
 <20%       14     +3.2%    -51.7%    -34.6%    64%
 20%+        4    +24.1%    -99.0%       -      50%
 fresh       n   +1h med   +4h med  +24h med   rug%
@@ -86,25 +86,27 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $479.86       $500.00
-return                         -4.0%         +0.0%
+equity                       $479.22       $500.00
+return                         -4.2%         +0.0%
 closed trades                      6             0
 win rate                         33%             -
 avg net / trade               -13.3%             -
 expectancy $/trade            $-3.36             -
-max drawdown                   -5.1%          0.0%
-open now                           0             0
+max drawdown                   -5.2%          0.0%
+open now                           1             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $479.86 (-4.0%) | cash $479.86 | open 0 | max drawdown -5.1%
+equity $479.22 (-4.2%) | cash $455.87 | open 1 | max drawdown -5.2%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 6 | win 2/6 (33%) | avg net -13.3% | realized $-20.14 | expectancy $-3.36/trade
 exits: stop 3, trail 3
   (n=6 < 100: noise, not evidence)
+open:
+  Alice        cost $23.99  now $23.34 (-2.7%)  held 0.0h
 last trades:
   RM           $25.00 -> $14.03 (-43.9%)  stop  1.0h
   APPLEPAID    $24.45 -> $22.38 (-8.5%)  trail  0.7h
@@ -120,7 +122,7 @@ PAPER BOOK B: pullback (safety-first, buy the dip)
 ================================================================
 equity $500.00 (+0.0%) | cash $500.00 | open 0 | max drawdown 0.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 7, setup_rejected:top10_concentrated 2, setup_rejected:dumping_now 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 8, setup_rejected:top10_concentrated 3, setup_rejected:dumping_now 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
