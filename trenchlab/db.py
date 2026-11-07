@@ -66,6 +66,12 @@ CREATE TABLE IF NOT EXISTS paper_bank (
     cash            REAL,
     created_ts      REAL
 );
+CREATE TABLE IF NOT EXISTS paper_banks (
+    book            TEXT PRIMARY KEY,
+    start_usd       REAL,
+    cash            REAL,
+    created_ts      REAL
+);
 CREATE TABLE IF NOT EXISTS paper_positions (
     id              INTEGER PRIMARY KEY AUTOINCREMENT,
     pool_address    TEXT,
@@ -82,19 +88,22 @@ CREATE TABLE IF NOT EXISTS paper_positions (
     misses          INTEGER DEFAULT 0,
     exit_ts         REAL,
     exit_value      REAL,
-    exit_reason     TEXT
+    exit_reason     TEXT,
+    book            TEXT DEFAULT 'A'
 );
 CREATE TABLE IF NOT EXISTS paper_skips (
     ts              REAL,
     pool_address    TEXT,
     symbol          TEXT,
-    reason          TEXT
+    reason          TEXT,
+    book            TEXT DEFAULT 'A'
 );
 CREATE TABLE IF NOT EXISTS paper_equity (
     ts              REAL,
     equity          REAL,
     cash            REAL,
-    n_open          INTEGER
+    n_open          INTEGER,
+    book            TEXT DEFAULT 'A'
 );
 CREATE TABLE IF NOT EXISTS alerts (
     pool_address    TEXT PRIMARY KEY,
@@ -128,6 +137,15 @@ class DB:
                 self.conn.execute(f"DELETE FROM samples WHERE rowid IN ({','.join('?' * len(chunk))})", chunk)
             self.conn.execute("INSERT INTO meta VALUES ('cleanup_dex_v1', ?)", (str(len(bad)),))
             self.conn.commit()
+        for t in ("paper_positions", "paper_skips", "paper_equity"):
+            cols = [r[1] for r in self.conn.execute(f"PRAGMA table_info({t})")]
+            if "book" not in cols:
+                self.conn.execute(f"ALTER TABLE {t} ADD COLUMN book TEXT DEFAULT 'A'")
+        old_bank = self.conn.execute("SELECT * FROM paper_bank WHERE id=1").fetchone()
+        if old_bank and not self.conn.execute("SELECT 1 FROM paper_banks WHERE book='A'").fetchone():
+            self.conn.execute("INSERT INTO paper_banks VALUES ('A', ?, ?, ?)",
+                              (old_bank["start_usd"], old_bank["cash"], old_bank["created_ts"]))
+        self.conn.commit()
         if not self.conn.execute("SELECT 1 FROM meta WHERE key='prune_obs_v1'").fetchone():
             n = self.conn.execute(
                 """UPDATE observations SET metrics = NULL
@@ -210,48 +228,59 @@ class DB:
             (addr,)).fetchone()
         return None if r is None else (r[0], r[1])
 
-    # ---- paper trader ----
-    def ensure_paper_bank(self, start_usd, now=None):
-        if self.paper_bank() is None:
+    # ---- paper trader (multiple independent "books", e.g. A = momentum, B = pullback) ----
+    def ensure_paper_bank(self, start_usd, now=None, book="A"):
+        if self.paper_bank(book) is None:
             import time as _t
-            self.conn.execute("INSERT INTO paper_bank VALUES (1, ?, ?, ?)", (start_usd, start_usd, now or _t.time()))
+            self.conn.execute("INSERT INTO paper_banks VALUES (?, ?, ?, ?)", (book, start_usd, start_usd, now or _t.time()))
             self.conn.commit()
 
-    def paper_bank(self):
-        return self.conn.execute("SELECT * FROM paper_bank WHERE id=1").fetchone()
+    def paper_bank(self, book="A"):
+        return self.conn.execute("SELECT * FROM paper_banks WHERE book=?", (book,)).fetchone()
 
-    def paper_cash(self):
-        r = self.paper_bank()
+    def paper_books(self):
+        return [r[0] for r in self.conn.execute("SELECT book FROM paper_banks ORDER BY book")]
+
+    def paper_cash(self, book="A"):
+        r = self.paper_bank(book)
         return r["cash"] if r else 0.0
 
-    def open_positions(self):
-        return self.conn.execute("SELECT * FROM paper_positions WHERE exit_ts IS NULL ORDER BY entry_ts").fetchall()
+    def open_positions(self, book=None):
+        if book is None:
+            return self.conn.execute("SELECT * FROM paper_positions WHERE exit_ts IS NULL ORDER BY entry_ts").fetchall()
+        return self.conn.execute("SELECT * FROM paper_positions WHERE exit_ts IS NULL AND book=? ORDER BY entry_ts",
+                                 (book,)).fetchall()
 
-    def closed_positions(self):
-        return self.conn.execute("SELECT * FROM paper_positions WHERE exit_ts IS NOT NULL ORDER BY exit_ts").fetchall()
+    def closed_positions(self, book="A"):
+        return self.conn.execute("SELECT * FROM paper_positions WHERE exit_ts IS NOT NULL AND book=? ORDER BY exit_ts",
+                                 (book,)).fetchall()
 
     def has_open_position(self, pool_address):
         return self.conn.execute("SELECT 1 FROM paper_positions WHERE pool_address=? AND exit_ts IS NULL",
                                  (pool_address,)).fetchone() is not None
 
-    def paper_traded_token(self, mint):
-        return self.conn.execute("SELECT 1 FROM paper_positions WHERE token_mint=?", (mint,)).fetchone() is not None
+    def paper_traded_token(self, mint, book="A"):
+        return self.conn.execute("SELECT 1 FROM paper_positions WHERE token_mint=? AND book=?",
+                                 (mint, book)).fetchone() is not None
 
-    def paper_realized_today(self, now):
+    def paper_realized_today(self, now, book="A"):
         day = self._day(now)
-        rows = self.conn.execute("SELECT exit_ts, exit_value, cost_usd FROM paper_positions WHERE exit_ts IS NOT NULL").fetchall()
+        rows = self.conn.execute("SELECT exit_ts, exit_value, cost_usd FROM paper_positions "
+                                 "WHERE exit_ts IS NOT NULL AND book=?", (book,)).fetchall()
         return sum(r["exit_value"] - r["cost_usd"] for r in rows if self._day(r["exit_ts"]) == day)
 
-    def paper_last_loss_ts(self):
-        r = self.conn.execute("SELECT MAX(exit_ts) FROM paper_positions WHERE exit_ts IS NOT NULL AND exit_value < cost_usd").fetchone()
+    def paper_last_loss_ts(self, book="A"):
+        r = self.conn.execute("SELECT MAX(exit_ts) FROM paper_positions WHERE exit_ts IS NOT NULL "
+                              "AND exit_value < cost_usd AND book=?", (book,)).fetchone()
         return r[0] if r else None
 
-    def paper_open(self, now, pool, cost, tokens, score, mode, info):
-        self.conn.execute("UPDATE paper_bank SET cash = cash - ? WHERE id=1", (cost,))
+    def paper_open(self, now, pool, cost, tokens, score, mode, info, book="A"):
+        self.conn.execute("UPDATE paper_banks SET cash = cash - ? WHERE book=?", (cost, book))
         cur = self.conn.execute(
             """INSERT INTO paper_positions (pool_address, token_mint, symbol, mode, entry_ts, cost_usd, tokens,
-               score, entry_info, last_value, peak_value) VALUES (?,?,?,?,?,?,?,?,?,?,?)""",
-            (pool.address, pool.token_mint, pool.symbol, mode, now, cost, tokens, score, json.dumps(info), None, cost))
+               score, entry_info, last_value, peak_value, book) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)""",
+            (pool.address, pool.token_mint, pool.symbol, mode, now, cost, tokens, score, json.dumps(info),
+             None, cost, book))
         self.conn.commit()
         return cur.lastrowid
 
@@ -266,28 +295,38 @@ class DB:
         self.conn.execute("UPDATE paper_positions SET misses = 0 WHERE id=?", (pid,))
 
     def paper_close(self, pid, now, value, reason):
+        book = self.conn.execute("SELECT book FROM paper_positions WHERE id=?", (pid,)).fetchone()[0]
         self.conn.execute("UPDATE paper_positions SET exit_ts=?, exit_value=?, exit_reason=?, last_value=? WHERE id=?",
                           (now, value, reason, value, pid))
-        self.conn.execute("UPDATE paper_bank SET cash = cash + ? WHERE id=1", (value,))
+        self.conn.execute("UPDATE paper_banks SET cash = cash + ? WHERE book=?", (value, book))
 
-    def paper_skip(self, now, pool, reason):
-        self.conn.execute("INSERT INTO paper_skips VALUES (?,?,?,?)", (now, pool.address, pool.symbol, reason))
+    def paper_skip(self, now, pool, reason, book="A"):
+        self.conn.execute("INSERT INTO paper_skips (ts, pool_address, symbol, reason, book) VALUES (?,?,?,?,?)",
+                          (now, pool.address, pool.symbol, reason, book))
 
-    def paper_skip_counts(self):
-        rows = self.conn.execute("SELECT reason, COUNT(*) n FROM paper_skips GROUP BY reason ORDER BY n DESC").fetchall()
-        return [(r[0].split("(")[0], r[1]) for r in rows]
+    def paper_skip_counts(self, book="A"):
+        rows = self.conn.execute("SELECT reason, COUNT(*) n FROM paper_skips WHERE book=? GROUP BY reason "
+                                 "ORDER BY n DESC", (book,)).fetchall()
+        out = {}
+        for r in rows:
+            k = r[0].split("(")[0]
+            out[k] = out.get(k, 0) + r[1]
+        return sorted(out.items(), key=lambda kv: -kv[1])
 
-    def paper_snapshot(self, now, equity, cash, n_open):
-        self.conn.execute("INSERT INTO paper_equity VALUES (?,?,?,?)", (now, equity, cash, n_open))
+    def paper_snapshot(self, now, equity, cash, n_open, book="A"):
+        self.conn.execute("INSERT INTO paper_equity (ts, equity, cash, n_open, book) VALUES (?,?,?,?,?)",
+                          (now, equity, cash, n_open, book))
 
-    def paper_snapshots(self):
-        return self.conn.execute("SELECT * FROM paper_equity ORDER BY ts").fetchall()
+    def paper_snapshots(self, book="A"):
+        return self.conn.execute("SELECT * FROM paper_equity WHERE book=? ORDER BY ts", (book,)).fetchall()
 
     def latest_sample(self, addr, since):
         return self.conn.execute(
             "SELECT * FROM samples WHERE pool_address=? AND ts>=? ORDER BY ts DESC LIMIT 1", (addr, since)).fetchone()
 
-    def sample_due(self, addr, now, dense_hours=3.0, sparse_minutes=30):
+    def sample_due(self, addr, now, dense_hours=3.0, sparse_minutes=30, big_liq=30000, big_dense_hours=12.0):
+        """Bigger pools (>= big_liq at first sight) are sampled densely for longer, because
+        book B needs a fine price history to spot a bounce off a low."""
         """Dense sampling (every cycle) for `dense_hours` after first sighting or first pass,
         then one sample per `sparse_minutes`. Keeps the database small enough for 24/7 runs."""
         p = self.get_pool(addr)
@@ -296,6 +335,8 @@ class DB:
         if self.has_open_position(addr):
             return True  # open paper positions are priced every cycle
         ref = max(p["first_seen_ts"] or 0, p["first_pass_ts"] or 0)
+        if (p["first_liq"] or 0) >= big_liq:
+            dense_hours = max(dense_hours, big_dense_hours)
         if now - ref <= dense_hours * 3600:
             return True
         last = self.conn.execute("SELECT MAX(ts) FROM samples WHERE pool_address=?", (addr,)).fetchone()[0]

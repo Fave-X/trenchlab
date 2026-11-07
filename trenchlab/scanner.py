@@ -5,6 +5,7 @@ from .filters import scout, buys_per_buyer
 from .score import score as score_pool
 from .notify import telegram
 from . import dexscreener
+from . import pullback
 
 
 def fetch_candidates(gecko, cfg, log=print):
@@ -26,7 +27,7 @@ def fetch_candidates(gecko, cfg, log=print):
 
 
 def run_cycle(gecko, auditor, db, cfg, now=None, log=print, alert=True, cabal=None, dex_fetch=None,
-              trader=None):
+              trader=None, trader_b=None):
     now = now if now is not None else time.time()
     if dex_fetch is None:
         from .http import get_json as dex_fetch
@@ -128,8 +129,18 @@ def run_cycle(gecko, auditor, db, cfg, now=None, log=print, alert=True, cabal=No
         for addr, (px, liq) in got.items():
             db.add_sample(addr, now, px, liq)
         db.commit()
+    for pos in db.open_positions():
+        db.extend_tracking(pos["pool_address"], now + 3600)
     if trader is not None:
-        for pos in db.open_positions():
-            db.extend_tracking(pos["pool_address"], now + 3600)
         trader.manage(now)
+    if trader_b is not None:
+        if cabal is not None:
+            cabal.runs_this_cycle = 0
+        try:
+            n = pullback.run(db, gecko, auditor, cabal, trader_b, cfg, now, log)
+            if n:
+                log(f"[B] {n} pullback entr{'y' if n == 1 else 'ies'}")
+        except Exception as e:  # book B must never break the main scan
+            log(f"[B] pullback scan failed: {e}")
+        trader_b.manage(now)
     return [r for r in results if r[0] == "pool"], len(to_track)

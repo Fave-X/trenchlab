@@ -201,7 +201,7 @@ class TestCycleWithTrader(unittest.TestCase):
                       dex_fetch=fetch, trader=e.trader)
         self.assertEqual(e.db.closed_positions()[0]["exit_reason"], "stop")
         rep = build_report(e.db, CFG, NOW + 1800)
-        self.assertIn("PAPER TRADER", rep)
+        self.assertIn("PAPER BOOK A", rep)
         self.assertIn("ledger reconciles: YES", rep)
 
 

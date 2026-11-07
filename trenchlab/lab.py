@@ -297,10 +297,14 @@ def build_report(db, cfg, now):
             if best[3] < 100:
                 w("  WARNING: n < 100. This is noise, not evidence. Do not trade on it.")
     if cfg.get("paper", {}).get("enabled"):
-        from .paper import paper_report
-        pr = paper_report(db, cfg)
-        if pr:
-            lines.extend(pr.split("\n"))
+        from .paper import paper_report, comparison_report
+        cmp_ = comparison_report(db)
+        if cmp_:
+            lines.extend(cmp_.split("\n"))
+        for book in (db.paper_books() or ["A"]):
+            pr = paper_report(db, cfg, book)
+            if pr:
+                lines.extend(pr.split("\n"))
     w("")
     w("Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.")
     w("Not financial advice. Paper results overstate live results.")

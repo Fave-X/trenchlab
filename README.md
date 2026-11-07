@@ -94,4 +94,5 @@ Not financial advice.
   - **exits:** stop, a trailing stop (armed at +20%, trails 10%), a 24h time stop, and "dead" after 6 cycles without a price (valued at $0)
   - **pricing:** constant-product model from the pool's own liquidity plus fees, or real Jupiter quotes when the `JUPITER_API_KEY` secret is set (free key at portal.jup.ag)
   - **report:** the `PAPER TRADER` section, with a ledger reconciliation check
-- **v0.4:** wallet Copyability Score; chain-heat monitor; Robinhood Chain support
+- **v0.4 (live, 2026-11-07):** paper **book B, "pullback"**. It runs next to book A with the same $500 start, sizing, exits and costs, so only the entry rule differs. B buys tokens 2–24h old that are 30–60% below their high, have bounced at least 5% off a low that is at least 20 min old, still have $30k+ liquidity (at least 50% of their peak), have buyers back (75+ buyers/h, buys ≥ sells), pass the audit, and pass stricter cabal checks (bundled ≤ 5%, fresh ≤ 20%, received ≤ 10%). The report shows an `A vs B` table.
+- **later:** wallet Copyability Score; chain-heat monitor; Robinhood Chain support

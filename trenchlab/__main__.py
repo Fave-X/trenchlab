@@ -112,11 +112,13 @@ def main(argv=None):
     if not cabal.enabled:
         print("[cluster] HELIUS_API_KEY not set - cabal finder off")
     trader = PaperTrader(cfg, db, notify=telegram) if cfg.get("paper", {}).get("enabled") else None
+    trader_b = (PaperTrader(cfg, db, notify=telegram, book="B")
+                if cfg.get("paper", {}).get("enabled") and cfg.get("pullback", {}).get("enabled") else None)
     if trader is not None:
         print(f"[paper] pricing mode: {trader.q.mode}"
               + ("" if trader.q.mode == "jupiter" else " (add JUPITER_API_KEY for real Jupiter quotes)"))
     if args.cmd == "scan":
-        rows, tracked = run_cycle(gecko, auditor, db, cfg, cabal=cabal, trader=trader)
+        rows, tracked = run_cycle(gecko, auditor, db, cfg, cabal=cabal, trader=trader, trader_b=trader_b)
         print_table(rows, args.all)
         print(f"  tracking {tracked} pools for outcomes")
         if cabal.enabled:
@@ -131,7 +133,7 @@ def main(argv=None):
     while True:
         start = time.time()
         try:
-            rows, tracked = run_cycle(gecko, auditor, db, cfg, cabal=cabal, trader=trader)
+            rows, tracked = run_cycle(gecko, auditor, db, cfg, cabal=cabal, trader=trader, trader_b=trader_b)
             print_table(rows)
             print(f"  tracking {tracked} pools for outcomes")
             cycles += 1
