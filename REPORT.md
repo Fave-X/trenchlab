@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-07 17:02 UTC
+Updated: 2026-11-07 17:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           14590
-passed SCOUT         33
+pools seen           14649
+passed SCOUT         34
   killed by SCORE    3
-  killed by AUDIT    7
+  killed by AUDIT    8
 FINAL PASS           23
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    14170
-  few_unique_buyers            13673
-  liquidity_low                13325
-  volume_below_liquidity       10308
-  sells_dominate                4069
-  wash_churn                    3074
-  overheated                    1312
-  missing                        418
-  too_old                        345
+  too_young                    14226
+  few_unique_buyers            13730
+  liquidity_low                13377
+  volume_below_liquidity       10352
+  sells_dominate                4085
+  wash_churn                    3084
+  overheated                    1317
+  missing                        423
+  too_old                        347
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 878 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 879 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   23    -5.6%   -13.3%   -44.4%   -81.8%    39%
-SCOUT PASS, killed later     10   +25.0%   +17.2%   -84.2%   +72.1%    40%
-KILLED (tracked)           2184    +0.0%    -4.2%   -24.3%    +0.8%    28%
+FINAL PASS                   23    -5.6%   -13.3%   -44.4%   -81.8%    43%
+SCOUT PASS, killed later     11   +15.6%   +17.2%   -84.2%   +72.1%    36%
+KILLED (tracked)           2190    +0.0%    -4.2%   -25.2%    +0.8%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                      14    -89.1%       -      50%
+too_young                      13    -89.1%       -      54%
 too_old                        10     -0.1%     -0.4%     0%
 wash_churn                      9    -37.1%       -      56%
 volume_below_liquidity          4     +1.5%     -4.6%    50%
@@ -44,23 +44,23 @@ SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        12    -72.7%    -93.2%    67%
-70-79      13    -29.7%    -66.4%    23%
-60-69       6    -56.9%       -      33%
+70-79      13    -29.7%    -66.4%    31%
+60-69       7    -56.9%       -      29%
 <60         2    -58.2%    +72.1%     0%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      105     -2.2%     -7.5%     +3.7%    21%
-<15%       25     +0.8%     -1.1%     +3.5%    40%
+none      105     -2.2%     -7.5%     +3.7%    22%
+<15%       25     +0.8%     -2.6%     +3.5%    40%
 15-30%      1   +442.6%   +963.4%       -       0%
 30%+        9     -0.8%     -1.0%     +0.8%    11%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      113     -1.6%     -2.5%     +2.6%    15%
+none      113     -1.6%     -2.6%     +2.6%    16%
 <20%       23     +7.5%    -44.7%    -94.9%    57%
 20%+        4    +24.1%    -99.0%       -      75%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      134     -1.4%     -2.6%     +1.8%    22%
+<20%      134     -1.4%     -2.7%     +1.8%    23%
 20-40%      3    +16.6%    -99.0%       -     100%
 40%+        3   +442.6%   +963.4%       -       0%
 tokens analysed: 114 | helius credits today: 4196/25000
@@ -130,7 +130,7 @@ last trades:
   Alice        $25.00 -> $55.88 (+123.5%)  trail  1.7h
   MUTTAPE      $26.51 -> $21.28 (-19.7%)  stop  0.7h
   FUSE         $26.80 -> $24.03 (-10.3%)  stop  0.7h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 32, setup_rejected:top10_concentrated 20, setup_rejected:volume_dried_up 16, setup_rejected:dumping_now 7, setup_rejected:sellers_dominate_now 1, setup_rejected:lp_not_locked 1, setup_rejected:b_received 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 32, setup_rejected:top10_concentrated 21, setup_rejected:volume_dried_up 16, setup_rejected:dumping_now 7, setup_rejected:sellers_dominate_now 1, setup_rejected:lp_not_locked 1, setup_rejected:b_received 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
