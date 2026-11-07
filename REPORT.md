@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-07 08:42 UTC
+Updated: 2026-11-07 08:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           12012
+pools seen           12052
 passed SCOUT         29
   killed by SCORE    2
   killed by AUDIT    6
 FINAL PASS           21
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    11644
-  few_unique_buyers            11278
-  liquidity_low                10922
-  volume_below_liquidity        8443
-  sells_dominate                3456
-  wash_churn                    2506
-  overheated                    1056
+  too_young                    11684
+  few_unique_buyers            11316
+  liquidity_low                10960
+  volume_below_liquidity        8470
+  sells_dominate                3465
+  wash_churn                    2515
+  overheated                    1059
   missing                        381
   too_old                        311
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 761 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 764 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   21    -5.6%   -17.3%   -44.4%   -79.8%    33%
 SCOUT PASS, killed later      8    +6.2%    +6.7%   -86.2%   +72.1%    38%
-KILLED (tracked)           1788    -0.0%    -3.4%   -10.2%    +0.8%    28%
+KILLED (tracked)           1795    -0.0%    -3.4%   -10.2%    +0.8%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -72,12 +72,12 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -10%     12%   21    19%    -13.1%   -20.1%   -65.0%
   -10%     20%   21    19%    -13.1%   -20.1%   -65.0%
   -10%     30%   21    24%     -7.1%   -20.1%   -65.0%
-  -15%     12%   21    19%    -13.4%   -21.0%   -65.0%
-  -15%     20%   21    19%    -13.4%   -21.0%   -65.0%
-  -15%     30%   21    24%     -7.4%   -21.0%   -65.0%
-  -25%     12%   21    24%    -15.1%   -21.3%   -67.1%
-  -25%     20%   21    24%    -18.4%   -29.2%   -76.1%
-  -25%     30%   21    24%    -14.7%   -29.9%   -76.1%
+  -15%     12%   21    19%    -13.6%   -21.0%   -65.0%
+  -15%     20%   21    19%    -13.6%   -21.0%   -65.0%
+  -15%     30%   21    24%     -7.6%   -21.0%   -65.0%
+  -25%     12%   21    24%    -15.3%   -21.3%   -67.1%
+  -25%     20%   21    24%    -18.6%   -29.2%   -76.1%
+  -25%     30%   21    24%    -14.9%   -29.9%   -76.1%
   best so far: stop -6%, trail from +30% -> avg -5.0% per trade over n=21
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
@@ -114,7 +114,7 @@ last trades:
   MUTTAPE      $24.79 -> $8.77 (-64.6%)  stop  0.2h
   Alice        $23.99 -> $54.38 (+126.7%)  trail  2.2h
   SLINGFOLIO   $25.51 -> $21.41 (-16.1%)  stop  0.3h
-signals skipped by the sizer/risk rules: already_traded_token 61, daily_loss_limit 31, max_open_positions 1
+signals skipped by the sizer/risk rules: already_traded_token 62, daily_loss_limit 31, max_open_positions 1
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -129,7 +129,7 @@ last trades:
   Alice        $25.00 -> $55.88 (+123.5%)  trail  1.7h
   MUTTAPE      $26.51 -> $21.28 (-19.7%)  stop  0.7h
   FUSE         $26.80 -> $24.03 (-10.3%)  stop  0.7h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 15, setup_rejected:top10_concentrated 14, setup_rejected:dumping_now 4, setup_rejected:sellers_dominate_now 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 16, setup_rejected:top10_concentrated 14, setup_rejected:dumping_now 4, setup_rejected:volume_dried_up 1, setup_rejected:sellers_dominate_now 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
