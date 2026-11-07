@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-07 20:22 UTC
+Updated: 2026-11-07 20:29 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           15704
+pools seen           15751
 passed SCOUT         36
   killed by SCORE    3
   killed by AUDIT    8
 FINAL PASS           25
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    15226
-  few_unique_buyers            14737
-  liquidity_low                14369
-  volume_below_liquidity       11106
-  sells_dominate                4410
-  wash_churn                    3280
-  overheated                    1385
-  missing                        440
-  too_old                        391
+  too_young                    15272
+  few_unique_buyers            14783
+  liquidity_low                14413
+  volume_below_liquidity       11142
+  sells_dominate                4425
+  wash_churn                    3294
+  overheated                    1388
+  missing                        441
+  too_old                        392
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 904 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 918 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   25    -5.7%   -17.3%   -46.5%   -81.8%    44%
 SCOUT PASS, killed later     11   +15.6%   +16.6%   -91.1%   +72.1%    36%
-KILLED (tracked)           2358    -0.0%    -4.7%   -26.2%    +1.2%    27%
+KILLED (tracked)           2363    -0.0%    -4.6%   -26.0%    +1.2%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -67,19 +67,19 @@ tokens analysed: 122 | helius credits today: 5238/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%   24    17%    -12.8%   -20.0%   -65.0%
-   -6%     20%   24    17%    -12.8%   -20.0%   -65.0%
-   -6%     30%   24    21%     -7.5%   -20.0%   -65.0%
-  -10%     12%   24    17%    -14.6%   -21.1%   -65.0%
-  -10%     20%   24    17%    -14.6%   -21.1%   -65.0%
-  -10%     30%   24    21%     -9.3%   -21.1%   -65.0%
-  -15%     12%   24    17%    -15.1%   -21.3%   -65.0%
-  -15%     20%   24    17%    -15.1%   -21.3%   -65.0%
-  -15%     30%   24    21%     -9.8%   -21.3%   -65.0%
-  -25%     12%   24    21%    -18.5%   -29.5%   -67.1%
-  -25%     20%   24    21%    -21.3%   -29.9%   -76.1%
-  -25%     30%   24    21%    -18.1%   -31.0%   -76.1%
-  best so far: stop -6%, trail from +30% -> avg -7.5% per trade over n=24
+   -6%     12%   25    16%    -13.4%   -20.1%   -65.0%
+   -6%     20%   25    16%    -13.4%   -20.1%   -65.0%
+   -6%     30%   25    20%     -8.4%   -20.1%   -65.0%
+  -10%     12%   25    16%    -15.2%   -21.2%   -65.0%
+  -10%     20%   25    16%    -15.2%   -21.2%   -65.0%
+  -10%     30%   25    20%    -10.2%   -21.2%   -65.0%
+  -15%     12%   25    16%    -15.7%   -21.3%   -65.0%
+  -15%     20%   25    16%    -15.7%   -21.3%   -65.0%
+  -15%     30%   25    20%    -10.6%   -21.3%   -65.0%
+  -25%     12%   25    20%    -18.9%   -29.9%   -67.1%
+  -25%     20%   25    20%    -21.7%   -29.9%   -76.1%
+  -25%     30%   25    20%    -18.6%   -31.0%   -76.1%
+  best so far: stop -6%, trail from +30% -> avg -8.4% per trade over n=25
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 ================================================================
@@ -87,29 +87,26 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $487.26       $522.88
-return                         -2.5%         +4.6%
-closed trades                     11             3
-win rate                         27%           33%
-avg net / trade                -3.9%        +31.2%
-expectancy $/trade            $-1.10        $+7.63
-max drawdown                   -6.2%         -3.8%
-open now                           1             0
+equity                       $480.77       $522.88
+return                         -3.8%         +4.6%
+closed trades                     12             3
+win rate                         25%           33%
+avg net / trade                -6.0%        +31.2%
+expectancy $/trade            $-1.60        $+7.63
+max drawdown                   -7.5%         -3.8%
+open now                           0             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $487.26 (-2.5%) | cash $463.49 | open 1 | max drawdown -6.2%
+equity $480.77 (-3.8%) | cash $480.77 | open 0 | max drawdown -7.5%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 11 | win 3/11 (27%) | avg net -3.9% | realized $-12.12 | expectancy $-1.10/trade
-exits: stop 7, trail 4
-  (n=11 < 100: noise, not evidence)
-open:
-  Chonky       cost $24.39  now $23.77 (-2.5%)  held 0.0h
+closed 12 | win 3/12 (25%) | avg net -6.0% | realized $-19.23 | expectancy $-1.60/trade
+exits: stop 8, trail 4
+  (n=12 < 100: noise, not evidence)
 last trades:
-  DCAT         $24.19 -> $34.87 (+44.2%)  trail  1.7h
   José         $24.61 -> $26.02 (+5.7%)  trail  0.3h
   MUTTAPE      $24.79 -> $8.77 (-64.6%)  stop  0.2h
   Alice        $23.99 -> $54.38 (+126.7%)  trail  2.2h
@@ -117,6 +114,7 @@ last trades:
   duge         $25.31 -> $17.64 (-30.3%)  stop  0.5h
   debtdog      $24.92 -> $19.88 (-20.2%)  stop  0.2h
   Elysion Pad  $24.67 -> $19.11 (-22.6%)  stop  0.2h
+  Chonky       $24.39 -> $17.28 (-29.2%)  stop  0.1h
 signals skipped by the sizer/risk rules: already_traded_token 79, daily_loss_limit 31, max_open_positions 1
 
 ================================================================
@@ -132,7 +130,7 @@ last trades:
   Alice        $25.00 -> $55.88 (+123.5%)  trail  1.7h
   MUTTAPE      $26.51 -> $21.28 (-19.7%)  stop  0.7h
   FUSE         $26.80 -> $24.03 (-10.3%)  stop  0.7h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 32, setup_rejected:top10_concentrated 27, setup_rejected:volume_dried_up 17, setup_rejected:dumping_now 10, setup_rejected:sellers_dominate_now 1, setup_rejected:lp_not_locked 1, setup_rejected:b_received 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 32, setup_rejected:top10_concentrated 27, setup_rejected:volume_dried_up 17, setup_rejected:dumping_now 10, setup_rejected:sellers_dominate_now 1, setup_rejected:lp_not_locked 1, setup_rejected:b_received 1, setup_rejected:b_bundled 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
