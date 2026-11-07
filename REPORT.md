@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-07 07:42 UTC
+Updated: 2026-11-07 07:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           11689
+pools seen           11722
 passed SCOUT         28
   killed by SCORE    2
   killed by AUDIT    6
 FINAL PASS           20
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    11323
-  few_unique_buyers            10994
-  liquidity_low                10623
-  volume_below_liquidity        8228
-  sells_dominate                3366
-  wash_churn                    2426
-  overheated                    1021
+  too_young                    11356
+  few_unique_buyers            11024
+  liquidity_low                10652
+  volume_below_liquidity        8251
+  sells_dominate                3373
+  wash_churn                    2435
+  overheated                    1028
   missing                        380
   too_old                        310
   score_below                      1
 
-OUTCOMES (median price change from first sighting / first pass; 738 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 741 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   20    -5.5%   -17.3%   -44.4%   -66.4%    35%
 SCOUT PASS, killed later      8    +6.2%    +6.7%   -86.2%   +72.1%    38%
-KILLED (tracked)           1731    -0.0%    -3.4%    -9.7%    +0.5%    28%
+KILLED (tracked)           1741    -0.0%    -3.4%    -9.7%    +0.5%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -62,7 +62,7 @@ fresh       n   +1h med   +4h med  +24h med   rug%
 <20%      110     -1.7%     -2.9%     +1.8%    17%
 20-40%      3    +16.6%    -99.0%       -     100%
 40%+        2   +442.6%   +963.4%       -       0%
-tokens analysed: 90 | helius credits today: 1869/25000
+tokens analysed: 90 | helius credits today: 1936/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -86,14 +86,14 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $510.25       $543.59
-return                         +2.1%         +8.7%
-closed trades                      7             1
-win rate                         43%          100%
-avg net / trade                +6.7%       +123.5%
-expectancy $/trade            $+1.46       $+30.88
-max drawdown                   -5.4%         -0.9%
-open now                           0             2
+equity                       $510.25       $525.43
+return                         +2.1%         +5.1%
+closed trades                      7             2
+win rate                         43%           50%
+avg net / trade                +6.7%        +51.9%
+expectancy $/trade            $+1.46       $+12.83
+max drawdown                   -5.4%         -3.3%
+open now                           0             1
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -113,23 +113,23 @@ last trades:
   José         $24.61 -> $26.02 (+5.7%)  trail  0.3h
   MUTTAPE      $24.79 -> $8.77 (-64.6%)  stop  0.2h
   Alice        $23.99 -> $54.38 (+126.7%)  trail  2.2h
-signals skipped by the sizer/risk rules: already_traded_token 55, daily_loss_limit 31, max_open_positions 1
+signals skipped by the sizer/risk rules: already_traded_token 56, daily_loss_limit 31, max_open_positions 1
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $543.59 (+8.7%) | cash $477.57 | open 2 | max drawdown -0.9%
+equity $525.43 (+5.1%) | cash $498.85 | open 1 | max drawdown -3.3%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 1 | win 1/1 (100%) | avg net +123.5% | realized $+30.88 | expectancy $+30.88/trade
-exits: trail 1
-  (n=1 < 100: noise, not evidence)
+closed 2 | win 1/2 (50%) | avg net +51.9% | realized $+25.65 | expectancy $+12.83/trade
+exits: trail 1, stop 1
+  (n=2 < 100: noise, not evidence)
 open:
-  MUTTAPE      cost $26.51  now $39.71 (+49.8%)  held 0.5h
-  FUSE         cost $26.80  now $26.31 (-1.8%)  held 0.0h
+  FUSE         cost $26.80  now $26.58 (-0.8%)  held 0.2h
 last trades:
   Alice        $25.00 -> $55.88 (+123.5%)  trail  1.7h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 14, setup_rejected:top10_concentrated 10, setup_rejected:dumping_now 3
+  MUTTAPE      $26.51 -> $21.28 (-19.7%)  stop  0.7h
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 14, setup_rejected:top10_concentrated 10, setup_rejected:dumping_now 3, setup_rejected:sellers_dominate_now 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
