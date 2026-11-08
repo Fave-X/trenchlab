@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-08 16:50 UTC
+Updated: 2026-11-08 17:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           22079
+pools seen           22153
 passed SCOUT         60
   killed by SCORE    7
   killed by AUDIT    12
 FINAL PASS           41
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    21469
-  few_unique_buyers            20683
-  liquidity_low                20222
-  volume_below_liquidity       15628
-  sells_dominate                6047
-  wash_churn                    4694
-  overheated                    1988
-  missing                        603
+  too_young                    21543
+  few_unique_buyers            20755
+  liquidity_low                20277
+  volume_below_liquidity       15672
+  sells_dominate                6066
+  wash_churn                    4706
+  overheated                    1990
+  missing                        619
   too_old                        501
   score_below                      2
 
-OUTCOMES (median price change from first sighting / first pass; 1210 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 1213 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   41    -5.4%   -13.3%   -46.5%   -81.8%    44%
 SCOUT PASS, killed later     19   +19.1%   +16.6%   -84.2%   +72.1%    37%
-KILLED (tracked)           3474    +0.0%    -9.7%   -36.6%    +0.8%    26%
+KILLED (tracked)           3481    +0.0%    -9.7%   -37.2%    +1.1%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -63,7 +63,7 @@ fresh       n   +1h med   +4h med  +24h med   rug%
 <20%      210     -0.3%     -7.3%     -2.0%    26%
 20-40%      7     +1.3%    -99.2%       -      86%
 40%+        3   +227.1%   +484.6%       -      33%
-tokens analysed: 180 | helius credits today: 4740/25000
+tokens analysed: 180 | helius credits today: 4833/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -135,7 +135,7 @@ last trades:
   TAOLF        $25.76 -> $23.15 (-10.1%)  stop  0.0h
   Pepetide     $25.63 -> $17.23 (-32.8%)  stop  0.2h
   MAGGIE       $25.21 -> $18.19 (-27.8%)  stop  0.5h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 78, daily_loss_limit 55, setup_rejected:top10_concentrated 29, setup_rejected:dumping_now 26, setup_rejected:volume_dried_up 23, setup_rejected:sellers_dominate_now 5, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_received 1, setup_rejected:b_bundled 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 79, daily_loss_limit 58, setup_rejected:top10_concentrated 29, setup_rejected:dumping_now 26, setup_rejected:volume_dried_up 23, setup_rejected:sellers_dominate_now 5, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_received 1, setup_rejected:b_bundled 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
