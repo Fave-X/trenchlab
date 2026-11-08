@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-08 20:22 UTC
+Updated: 2026-11-08 20:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           23106
+pools seen           23147
 passed SCOUT         63
   killed by SCORE    6
   killed by AUDIT    12
 FINAL PASS           45
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    22485
-  few_unique_buyers            21665
-  liquidity_low                21142
-  volume_below_liquidity       16360
-  sells_dominate                6311
-  wash_churn                    4886
-  overheated                    2068
+  too_young                    22525
+  few_unique_buyers            21704
+  liquidity_low                21179
+  volume_below_liquidity       16393
+  sells_dominate                6321
+  wash_churn                    4888
+  overheated                    2069
   missing                        656
-  too_old                        508
+  too_old                        509
   score_below                      2
 
-OUTCOMES (median price change from first sighting / first pass; 1248 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 1252 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   45    -5.4%   -13.0%   -46.5%   -77.7%    42%
 SCOUT PASS, killed later     18   +13.1%   +14.1%   -85.0%   +72.1%    44%
-KILLED (tracked)           3635    +0.0%    -9.7%   -38.5%    +1.3%    26%
+KILLED (tracked)           3641    +0.0%    -9.7%   -37.9%    +1.3%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                      21    -89.1%       -      52%
+too_young                      22    -89.1%       -      50%
 too_old                        11     -0.1%     -2.6%     0%
 wash_churn                     10    -37.1%       -      50%
 volume_below_liquidity          5     +5.9%    +15.3%    40%
@@ -52,19 +52,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      184     -0.6%    -10.8%     -9.3%    27%
+none      185     -0.6%    -10.8%     -9.3%    26%
 <15%       35     +0.5%    -36.6%     +7.9%    40%
 15-30%      2   +260.4%   +432.0%       -     100%
 30%+       12     +0.1%     +0.1%     +1.9%     8%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      185     -0.6%     -4.6%     -0.4%    22%
+none      186     -0.6%     -4.6%     -0.4%    22%
 <20%       40     +3.2%    -48.2%    -96.6%    45%
 20%+        8    +24.1%    -99.0%       -     100%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      223     -0.3%     -7.6%     -0.8%    26%
+<20%      224     -0.3%     -7.6%     -0.8%    26%
 20-40%      7     +1.3%    -99.0%       -      86%
 40%+        3   +227.1%   +484.6%       -      33%
-tokens analysed: 190 | helius credits today: 5916/25000
+tokens analysed: 191 | helius credits today: 5982/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -79,7 +79,7 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     30%   45    27%    -11.1%   -20.4%   -99.5%
   -25%     12%   45    22%    -19.7%   -29.7%   -99.5%
   -25%     20%   45    24%    -22.3%   -30.1%   -99.5%
-  -25%     30%   45    29%    -18.7%   -31.0%   -99.5%
+  -25%     30%   45    29%    -18.8%   -31.0%   -99.5%
   best so far: stop -6%, trail from +30% -> avg -9.4% per trade over n=45
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
@@ -116,7 +116,7 @@ last trades:
   CLAUDIA      $24.09 -> $19.43 (-19.3%)  stop  0.5h
   BLEND        $23.55 -> $20.73 (-12.0%)  stop  2.7h
   invest       $23.69 -> $15.38 (-35.1%)  stop  0.3h
-signals skipped by the sizer/risk rules: daily_loss_limit 165, already_traded_token 96, cooldown_after_loss 6, max_open_positions 4
+signals skipped by the sizer/risk rules: daily_loss_limit 166, already_traded_token 96, cooldown_after_loss 6, max_open_positions 4
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -136,7 +136,7 @@ last trades:
   TAOLF        $25.76 -> $23.15 (-10.1%)  stop  0.0h
   Pepetide     $25.63 -> $17.23 (-32.8%)  stop  0.2h
   MAGGIE       $25.21 -> $18.19 (-27.8%)  stop  0.5h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 90, daily_loss_limit 79, setup_rejected:top10_concentrated 29, setup_rejected:dumping_now 29, setup_rejected:volume_dried_up 23, setup_rejected:sellers_dominate_now 10, setup_rejected:b_received 6, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_bundled 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 90, daily_loss_limit 79, setup_rejected:dumping_now 30, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:sellers_dominate_now 10, setup_rejected:b_received 6, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_bundled 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
