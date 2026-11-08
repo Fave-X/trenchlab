@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-08 09:52 UTC
+Updated: 2026-11-08 10:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           19840
+pools seen           19884
 passed SCOUT         55
   killed by SCORE    5
   killed by AUDIT    10
 FINAL PASS           40
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    19295
-  few_unique_buyers            18594
-  liquidity_low                18184
-  volume_below_liquidity       14063
-  sells_dominate                5441
-  wash_churn                    4174
-  overheated                    1786
+  too_young                    19339
+  few_unique_buyers            18632
+  liquidity_low                18227
+  volume_below_liquidity       14088
+  sells_dominate                5452
+  wash_churn                    4190
+  overheated                    1793
   missing                        539
   too_old                        442
   score_below                      2
 
-OUTCOMES (median price change from first sighting / first pass; 1104 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 1107 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   40    -5.3%   -13.2%   -46.5%   -77.7%    40%
 SCOUT PASS, killed later     15   +10.8%   +11.6%   -78.9%   +72.1%    40%
-KILLED (tracked)           3101    -0.0%    -8.6%   -32.4%    +0.8%    26%
+KILLED (tracked)           3109    -0.0%    -8.9%   -32.9%    +0.8%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -68,18 +68,18 @@ tokens analysed: 162 | helius credits today: 2642/25000
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
    -6%     12%   40    20%    -13.2%   -19.7%   -99.5%
-   -6%     20%   40    22%    -12.9%   -19.7%   -99.5%
-   -6%     30%   40    25%     -8.9%   -19.7%   -99.5%
+   -6%     20%   40    22%    -13.2%   -19.7%   -99.5%
+   -6%     30%   40    25%     -9.2%   -19.7%   -99.5%
   -10%     12%   40    20%    -14.1%   -20.1%   -99.5%
-  -10%     20%   40    22%    -13.8%   -20.1%   -99.5%
-  -10%     30%   40    28%     -9.5%   -20.1%   -99.5%
+  -10%     20%   40    22%    -14.2%   -20.1%   -99.5%
+  -10%     30%   40    28%     -9.9%   -20.1%   -99.5%
   -15%     12%   40    20%    -14.5%   -20.4%   -99.5%
-  -15%     20%   40    22%    -14.6%   -20.6%   -99.5%
-  -15%     30%   40    28%    -10.3%   -20.6%   -99.5%
-  -25%     12%   40    22%    -18.9%   -29.4%   -99.5%
-  -25%     20%   40    25%    -20.8%   -29.9%   -99.5%
-  -25%     30%   40    28%    -17.7%   -30.5%   -99.5%
-  best so far: stop -6%, trail from +30% -> avg -8.9% per trade over n=40
+  -15%     20%   40    22%    -15.0%   -20.6%   -99.5%
+  -15%     30%   40    28%    -10.7%   -20.6%   -99.5%
+  -25%     12%   40    22%    -19.0%   -29.4%   -99.5%
+  -25%     20%   40    25%    -21.2%   -29.9%   -99.5%
+  -25%     30%   40    28%    -18.1%   -30.5%   -99.5%
+  best so far: stop -6%, trail from +30% -> avg -9.2% per trade over n=40
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 ================================================================
@@ -115,7 +115,7 @@ last trades:
   CLAUDIA      $24.09 -> $19.43 (-19.3%)  stop  0.5h
   BLEND        $23.55 -> $20.73 (-12.0%)  stop  2.7h
   invest       $23.69 -> $15.38 (-35.1%)  stop  0.3h
-signals skipped by the sizer/risk rules: daily_loss_limit 115, already_traded_token 96, cooldown_after_loss 6, max_open_positions 4
+signals skipped by the sizer/risk rules: daily_loss_limit 117, already_traded_token 96, cooldown_after_loss 6, max_open_positions 4
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
