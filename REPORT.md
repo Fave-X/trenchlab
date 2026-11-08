@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-08 01:02 UTC
+Updated: 2026-11-08 01:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           17198
+pools seen           17260
 passed SCOUT         44
   killed by SCORE    5
   killed by AUDIT    8
 FINAL PASS           31
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    16698
-  few_unique_buyers            16152
-  liquidity_low                15749
-  volume_below_liquidity       12195
-  sells_dominate                4775
-  wash_churn                    3604
-  overheated                    1521
+  too_young                    16760
+  few_unique_buyers            16208
+  liquidity_low                15807
+  volume_below_liquidity       12236
+  sells_dominate                4794
+  wash_churn                    3612
+  overheated                    1527
   missing                        480
   too_old                        405
   score_below                      2
 
-OUTCOMES (median price change from first sighting / first pass; 975 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 977 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   31    -5.7%   -21.3%   -46.5%   -85.9%    45%
-SCOUT PASS, killed later     13    +7.3%   +14.1%   -84.2%   +72.1%    31%
-KILLED (tracked)           2649    -0.0%    -5.4%   -22.3%    +1.2%    27%
+SCOUT PASS, killed later     13    +7.3%   +11.6%   -84.2%   +72.1%    31%
+KILLED (tracked)           2665    -0.1%    -5.4%   -22.7%    +1.2%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -51,35 +51,35 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      132     -2.3%     -7.3%     -7.9%    23%
+none      133     -2.3%     -7.5%     -7.9%    24%
 <15%       27     +1.4%     -4.9%     +7.8%    41%
 15-30%      2   +260.4%   +963.4%       -     100%
 30%+        9     -0.3%     -0.6%     +0.8%    11%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      132     -1.9%     -2.7%     +0.0%    19%
+none      133     -1.9%     -2.8%     +0.0%    20%
 <20%       31     +3.4%    -44.7%    -96.6%    45%
 20%+        7    +31.6%    -99.0%       -      86%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      162     -1.5%     -2.8%     -0.4%    24%
+<20%      163     -1.6%     -2.9%     -0.4%    25%
 20-40%      5    +16.6%    -99.0%       -     100%
 40%+        3   +227.1%   +484.6%       -      33%
-tokens analysed: 138 | helius credits today: 228/25000
+tokens analysed: 139 | helius credits today: 288/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%   30    17%    -12.4%   -19.7%   -65.0%
-   -6%     20%   30    17%    -12.6%   -19.7%   -65.0%
-   -6%     30%   30    20%     -8.4%   -19.7%   -65.0%
-  -10%     12%   30    17%    -13.9%   -20.2%   -65.0%
-  -10%     20%   30    17%    -14.0%   -20.2%   -65.0%
-  -10%     30%   30    20%     -9.8%   -20.2%   -65.0%
-  -15%     12%   30    17%    -14.4%   -20.9%   -65.0%
-  -15%     20%   30    17%    -14.5%   -20.9%   -65.0%
-  -15%     30%   30    20%    -10.3%   -20.9%   -65.0%
-  -25%     12%   30    20%    -19.1%   -29.9%   -67.1%
-  -25%     20%   30    20%    -21.5%   -30.0%   -76.1%
-  -25%     30%   30    20%    -18.9%   -31.0%   -76.1%
-  best so far: stop -6%, trail from +30% -> avg -8.4% per trade over n=30
+   -6%     12%   31    19%    -11.9%   -19.5%   -65.0%
+   -6%     20%   31    19%    -12.0%   -19.5%   -65.0%
+   -6%     30%   31    23%     -7.9%   -19.5%   -65.0%
+  -10%     12%   31    19%    -13.3%   -20.1%   -65.0%
+  -10%     20%   31    19%    -13.4%   -20.1%   -65.0%
+  -10%     30%   31    23%     -9.4%   -20.1%   -65.0%
+  -15%     12%   31    19%    -13.8%   -20.7%   -65.0%
+  -15%     20%   31    19%    -13.9%   -20.7%   -65.0%
+  -15%     30%   31    23%     -9.9%   -20.7%   -65.0%
+  -25%     12%   31    23%    -18.3%   -29.9%   -67.1%
+  -25%     20%   31    23%    -20.7%   -29.9%   -76.1%
+  -25%     30%   31    23%    -18.1%   -31.0%   -76.1%
+  best so far: stop -6%, trail from +30% -> avg -7.9% per trade over n=31
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 ================================================================
@@ -107,7 +107,7 @@ closed 16 | win 4/16 (25%) | avg net -6.1% | realized $-25.59 | expectancy $-1.6
 exits: stop 11, trail 5
   (n=16 < 100: noise, not evidence)
 open:
-  BLEND        cost $23.55  now $22.49 (-4.5%)  held 1.9h
+  BLEND        cost $23.55  now $22.49 (-4.5%)  held 2.0h
 last trades:
   duge         $25.31 -> $17.64 (-30.3%)  stop  0.5h
   debtdog      $24.92 -> $19.88 (-20.2%)  stop  0.2h
@@ -117,7 +117,7 @@ last trades:
   FRODO        $24.01 -> $20.82 (-13.3%)  stop  0.3h
   TAOLF        $23.66 -> $29.60 (+25.1%)  trail  0.8h
   CLAUDIA      $24.09 -> $19.43 (-19.3%)  stop  0.5h
-signals skipped by the sizer/risk rules: already_traded_token 96, daily_loss_limit 31, cooldown_after_loss 4, max_open_positions 1
+signals skipped by the sizer/risk rules: already_traded_token 96, daily_loss_limit 31, cooldown_after_loss 5, max_open_positions 1
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
