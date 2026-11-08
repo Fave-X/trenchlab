@@ -200,6 +200,10 @@ class PaperTrader:
         c = self.c
         marks = {}
         for pos in self.db.open_positions(self.book):
+            if pos["entry_ts"] >= now:
+                # entered this cycle: the stored sample may come from a different price source than the
+                # entry quote (book B enters on fresh GeckoTerminal data), so start checking next cycle
+                continue
             state = self._state(pos["pool_address"], now)
             value, info = (None, {"error": "no fresh price"})
             if state:

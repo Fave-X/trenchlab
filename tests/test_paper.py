@@ -207,3 +207,17 @@ class TestCycleWithTrader(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestNoSameCycleExit(unittest.TestCase):
+    def test_entry_not_stopped_in_same_cycle(self):
+        e = Env()
+        p = pool()
+        e.seen(p, NOW)
+        e.price(p, NOW, 0.00080)            # stale/other-source sample 20% below the entry quote
+        e.trader.on_signal(p, 75, NOW)
+        e.trader.manage(NOW)
+        self.assertEqual(len(e.db.open_positions()), 1)
+        e.price(p, NOW + 600, 0.00080)
+        e.trader.manage(NOW + 600)
+        self.assertEqual(e.db.closed_positions()[0]["exit_reason"], "stop")
