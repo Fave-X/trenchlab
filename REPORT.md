@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-08 12:02 UTC
+Updated: 2026-11-08 12:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           20563
+pools seen           20612
 passed SCOUT         56
   killed by SCORE    5
   killed by AUDIT    10
 FINAL PASS           41
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    20001
-  few_unique_buyers            19260
-  liquidity_low                18844
-  volume_below_liquidity       14537
-  sells_dominate                5653
-  wash_churn                    4365
-  overheated                    1853
+  too_young                    20050
+  few_unique_buyers            19307
+  liquidity_low                18891
+  volume_below_liquidity       14576
+  sells_dominate                5667
+  wash_churn                    4376
+  overheated                    1859
   missing                        561
   too_old                        459
   score_below                      2
 
-OUTCOMES (median price change from first sighting / first pass; 1145 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 1148 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   41    -5.4%   -13.3%   -44.7%   -77.7%    39%
 SCOUT PASS, killed later     15   +10.8%   +11.6%   -84.2%   +72.1%    40%
-KILLED (tracked)           3227    +0.0%    -9.7%   -34.7%    +0.8%    26%
+KILLED (tracked)           3232    +0.0%    -8.9%   -34.7%    +0.8%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -115,7 +115,7 @@ last trades:
   CLAUDIA      $24.09 -> $19.43 (-19.3%)  stop  0.5h
   BLEND        $23.55 -> $20.73 (-12.0%)  stop  2.7h
   invest       $23.69 -> $15.38 (-35.1%)  stop  0.3h
-signals skipped by the sizer/risk rules: daily_loss_limit 139, already_traded_token 96, cooldown_after_loss 6, max_open_positions 4
+signals skipped by the sizer/risk rules: daily_loss_limit 140, already_traded_token 96, cooldown_after_loss 6, max_open_positions 4
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -135,7 +135,7 @@ last trades:
   TAOLF        $25.76 -> $23.15 (-10.1%)  stop  0.0h
   Pepetide     $25.63 -> $17.23 (-32.8%)  stop  0.2h
   MAGGIE       $25.21 -> $18.19 (-27.8%)  stop  0.5h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 69, setup_rejected:top10_concentrated 29, daily_loss_limit 24, setup_rejected:dumping_now 21, setup_rejected:volume_dried_up 17, setup_rejected:sellers_dominate_now 2, setup_rejected:lp_not_locked 1, setup_rejected:b_received 1, setup_rejected:b_bundled 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 69, setup_rejected:top10_concentrated 29, daily_loss_limit 25, setup_rejected:dumping_now 21, setup_rejected:volume_dried_up 17, setup_rejected:sellers_dominate_now 2, setup_rejected:lp_not_locked 1, setup_rejected:b_received 1, setup_rejected:b_bundled 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
