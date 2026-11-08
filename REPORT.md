@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-08 06:52 UTC
+Updated: 2026-11-08 07:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           18972
+pools seen           19018
 passed SCOUT         53
   killed by SCORE    5
   killed by AUDIT    9
 FINAL PASS           39
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    18443
-  few_unique_buyers            17803
-  liquidity_low                17405
-  volume_below_liquidity       13485
-  sells_dominate                5228
-  wash_churn                    3950
-  overheated                    1690
+  too_young                    18488
+  few_unique_buyers            17843
+  liquidity_low                17447
+  volume_below_liquidity       13512
+  sells_dominate                5235
+  wash_churn                    3963
+  overheated                    1698
   missing                        510
   too_old                        428
   score_below                      2
 
-OUTCOMES (median price change from first sighting / first pass; 1058 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 1061 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   39    -5.4%   -13.3%   -49.0%   -77.7%    41%
 SCOUT PASS, killed later     14    +8.4%    +4.2%   -78.9%   +72.1%    36%
-KILLED (tracked)           2954    -0.0%    -7.5%   -30.0%    +1.2%    26%
+KILLED (tracked)           2966    -0.0%    -7.6%   -30.0%    +1.2%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -76,9 +76,9 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     12%   39    21%    -14.5%   -20.4%   -99.5%
   -15%     20%   39    21%    -15.2%   -20.7%   -99.5%
   -15%     30%   39    26%    -10.8%   -20.7%   -99.5%
-  -25%     12%   39    23%    -18.6%   -29.2%   -99.5%
-  -25%     20%   39    23%    -21.1%   -29.9%   -99.5%
-  -25%     30%   39    26%    -17.9%   -30.1%   -99.5%
+  -25%     12%   39    23%    -18.7%   -29.2%   -99.5%
+  -25%     20%   39    23%    -21.2%   -29.9%   -99.5%
+  -25%     30%   39    26%    -18.0%   -30.1%   -99.5%
   best so far: stop -6%, trail from +30% -> avg -9.3% per trade over n=39
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
@@ -115,7 +115,7 @@ last trades:
   CLAUDIA      $24.09 -> $19.43 (-19.3%)  stop  0.5h
   BLEND        $23.55 -> $20.73 (-12.0%)  stop  2.7h
   invest       $23.69 -> $15.38 (-35.1%)  stop  0.3h
-signals skipped by the sizer/risk rules: already_traded_token 96, daily_loss_limit 93, cooldown_after_loss 6, max_open_positions 4
+signals skipped by the sizer/risk rules: already_traded_token 96, daily_loss_limit 95, cooldown_after_loss 6, max_open_positions 4
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -135,7 +135,7 @@ last trades:
   TAOLF        $25.76 -> $23.15 (-10.1%)  stop  0.0h
   Pepetide     $25.63 -> $17.23 (-32.8%)  stop  0.2h
   MAGGIE       $25.21 -> $18.19 (-27.8%)  stop  0.5h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 63, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 17, setup_rejected:dumping_now 17, daily_loss_limit 4, setup_rejected:sellers_dominate_now 2, setup_rejected:lp_not_locked 1, setup_rejected:b_received 1, setup_rejected:b_bundled 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 63, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 17, setup_rejected:dumping_now 17, daily_loss_limit 5, setup_rejected:sellers_dominate_now 2, setup_rejected:lp_not_locked 1, setup_rejected:b_received 1, setup_rejected:b_bundled 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
