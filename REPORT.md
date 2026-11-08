@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-08 18:22 UTC
+Updated: 2026-11-08 18:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           22577
+pools seen           22618
 passed SCOUT         61
   killed by SCORE    6
   killed by AUDIT    12
 FINAL PASS           43
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    21962
-  few_unique_buyers            21163
-  liquidity_low                20669
-  volume_below_liquidity       15988
-  sells_dominate                6170
-  wash_churn                    4765
-  overheated                    2023
+  too_young                    22003
+  few_unique_buyers            21202
+  liquidity_low                20707
+  volume_below_liquidity       16017
+  sells_dominate                6181
+  wash_churn                    4774
+  overheated                    2025
   missing                        627
   too_old                        505
   score_below                      2
 
-OUTCOMES (median price change from first sighting / first pass; 1232 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 1235 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   43    -5.3%   -13.3%   -46.5%   -77.7%    42%
+FINAL PASS                   43    -3.2%   -13.3%   -46.5%   -77.7%    42%
 SCOUT PASS, killed later     18   +13.1%   +14.1%   -85.8%   +72.1%    44%
-KILLED (tracked)           3552    +0.0%    -9.1%   -41.4%    +1.1%    26%
+KILLED (tracked)           3562    +0.0%    -9.1%   -41.4%    +1.1%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -67,19 +67,19 @@ tokens analysed: 182 | helius credits today: 5033/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%   43    23%    -12.0%   -18.7%   -99.5%
-   -6%     20%   43    26%    -12.0%   -18.7%   -99.5%
-   -6%     30%   43    28%     -8.3%   -18.7%   -99.5%
-  -10%     12%   43    23%    -12.8%   -19.9%   -99.5%
-  -10%     20%   43    26%    -13.2%   -20.1%   -99.5%
-  -10%     30%   43    30%     -9.1%   -20.1%   -99.5%
-  -15%     12%   43    23%    -13.2%   -20.2%   -99.5%
-  -15%     20%   43    26%    -13.9%   -20.4%   -99.5%
-  -15%     30%   43    30%     -9.9%   -20.4%   -99.5%
-  -25%     12%   43    26%    -18.0%   -29.2%   -99.5%
-  -25%     20%   43    28%    -20.8%   -29.9%   -99.5%
-  -25%     30%   43    30%    -17.9%   -31.0%   -99.5%
-  best so far: stop -6%, trail from +30% -> avg -8.3% per trade over n=43
+   -6%     12%   43    23%    -12.3%   -18.7%   -99.5%
+   -6%     20%   43    26%    -12.3%   -18.7%   -99.5%
+   -6%     30%   43    28%     -8.6%   -18.7%   -99.5%
+  -10%     12%   43    23%    -13.1%   -19.9%   -99.5%
+  -10%     20%   43    26%    -13.5%   -20.1%   -99.5%
+  -10%     30%   43    30%     -9.5%   -20.1%   -99.5%
+  -15%     12%   43    23%    -13.5%   -20.2%   -99.5%
+  -15%     20%   43    26%    -14.2%   -20.4%   -99.5%
+  -15%     30%   43    30%    -10.2%   -20.4%   -99.5%
+  -25%     12%   43    26%    -18.3%   -29.2%   -99.5%
+  -25%     20%   43    28%    -21.1%   -29.9%   -99.5%
+  -25%     30%   43    30%    -18.2%   -31.0%   -99.5%
+  best so far: stop -6%, trail from +30% -> avg -8.6% per trade over n=43
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 ================================================================
@@ -115,7 +115,7 @@ last trades:
   CLAUDIA      $24.09 -> $19.43 (-19.3%)  stop  0.5h
   BLEND        $23.55 -> $20.73 (-12.0%)  stop  2.7h
   invest       $23.69 -> $15.38 (-35.1%)  stop  0.3h
-signals skipped by the sizer/risk rules: daily_loss_limit 153, already_traded_token 96, cooldown_after_loss 6, max_open_positions 4
+signals skipped by the sizer/risk rules: daily_loss_limit 154, already_traded_token 96, cooldown_after_loss 6, max_open_positions 4
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -135,7 +135,7 @@ last trades:
   TAOLF        $25.76 -> $23.15 (-10.1%)  stop  0.0h
   Pepetide     $25.63 -> $17.23 (-32.8%)  stop  0.2h
   MAGGIE       $25.21 -> $18.19 (-27.8%)  stop  0.5h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 82, daily_loss_limit 67, setup_rejected:top10_concentrated 29, setup_rejected:dumping_now 28, setup_rejected:volume_dried_up 23, setup_rejected:sellers_dominate_now 9, setup_rejected:b_received 5, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_bundled 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 82, daily_loss_limit 68, setup_rejected:top10_concentrated 29, setup_rejected:dumping_now 28, setup_rejected:volume_dried_up 23, setup_rejected:sellers_dominate_now 10, setup_rejected:b_received 5, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_bundled 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
