@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-08 14:32 UTC
+Updated: 2026-11-08 14:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           21322
-passed SCOUT         56
+pools seen           21381
+passed SCOUT         57
   killed by SCORE    5
-  killed by AUDIT    10
+  killed by AUDIT    11
 FINAL PASS           41
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    20754
-  few_unique_buyers            19972
-  liquidity_low                19531
-  volume_below_liquidity       15088
-  sells_dominate                5858
-  wash_churn                    4533
-  overheated                    1921
+  too_young                    20813
+  few_unique_buyers            20028
+  liquidity_low                19585
+  volume_below_liquidity       15136
+  sells_dominate                5869
+  wash_churn                    4544
+  overheated                    1924
   missing                        583
   too_old                        464
   score_below                      2
 
-OUTCOMES (median price change from first sighting / first pass; 1180 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 1183 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   41    -5.4%   -13.3%   -44.7%   -81.8%    44%
-SCOUT PASS, killed later     15   +10.8%   +11.6%   -84.2%   +72.1%    40%
-KILLED (tracked)           3341    +0.0%    -9.4%   -38.5%    +0.8%    26%
+SCOUT PASS, killed later     16   +13.1%   +14.1%   -84.2%   +72.1%    38%
+KILLED (tracked)           3353    +0.0%    -9.7%   -38.0%    +0.8%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -44,7 +44,7 @@ SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        20    -72.7%    -93.2%    70%
-70-79      22    -33.6%    -65.3%    32%
+70-79      23    -33.6%    -65.3%    30%
 60-69      10    -49.8%    -41.6%    30%
 <60         4    -41.4%    +72.1%     0%
 
@@ -135,7 +135,7 @@ last trades:
   TAOLF        $25.76 -> $23.15 (-10.1%)  stop  0.0h
   Pepetide     $25.63 -> $17.23 (-32.8%)  stop  0.2h
   MAGGIE       $25.21 -> $18.19 (-27.8%)  stop  0.5h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 70, daily_loss_limit 43, setup_rejected:top10_concentrated 29, setup_rejected:dumping_now 23, setup_rejected:volume_dried_up 17, setup_rejected:sellers_dominate_now 3, setup_rejected:lp_not_locked 1, setup_rejected:b_received 1, setup_rejected:b_bundled 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 70, daily_loss_limit 44, setup_rejected:top10_concentrated 29, setup_rejected:dumping_now 24, setup_rejected:volume_dried_up 17, setup_rejected:sellers_dominate_now 4, setup_rejected:lp_not_locked 2, setup_rejected:b_received 1, setup_rejected:b_bundled 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
