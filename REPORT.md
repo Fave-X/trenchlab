@@ -1,26 +1,26 @@
 # TrenchLab report
 
-Updated: 2026-11-09 11:12 UTC
+Updated: 2026-11-09 11:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           27555
+pools seen           27595
 passed SCOUT         68
   killed by SCORE    7
   killed by AUDIT    12
 FINAL PASS           49
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    26865
-  few_unique_buyers            25826
-  liquidity_low                25231
-  volume_below_liquidity       19500
-  sells_dominate                7357
-  wash_churn                    5860
-  overheated                    2486
-  missing                        785
+  too_young                    26905
+  few_unique_buyers            25865
+  liquidity_low                25260
+  volume_below_liquidity       19524
+  sells_dominate                7369
+  wash_churn                    5866
+  overheated                    2488
+  missing                        794
   too_old                        564
   score_below                      2
 
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 1446 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   49    -5.2%   -13.3%   -41.9%   -89.9%    49%
 SCOUT PASS, killed later     19   +10.8%   +11.6%   -84.2%    +9.6%    47%
-KILLED (tracked)           4492    +0.0%   -22.8%   -52.6%    +1.0%    26%
+KILLED (tracked)           4496    +0.0%   -22.8%   -52.7%    +1.0%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -88,14 +88,14 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $475.02       $486.78
-return                         -5.0%         -2.6%
-closed trades                     21            12
-win rate                         24%           17%
-avg net / trade                -4.4%         -3.7%
-expectancy $/trade            $-1.19        $-1.00
-max drawdown                  -10.8%        -10.5%
-open now                           0             1
+equity                       $475.02       $485.01
+return                         -5.0%         -3.0%
+closed trades                     21            13
+win rate                         24%           15%
+avg net / trade                -4.4%         -4.3%
+expectancy $/trade            $-1.19        $-1.15
+max drawdown                  -10.8%        -10.8%
+open now                           0             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -122,15 +122,12 @@ signals skipped by the sizer/risk rules: daily_loss_limit 168, already_traded_to
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $486.78 (-2.6%) | cash $463.55 | open 1 | max drawdown -10.5%
+equity $485.01 (-3.0%) | cash $485.01 | open 0 | max drawdown -10.8%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 12 | win 2/12 (17%) | avg net -3.7% | realized $-12.05 | expectancy $-1.00/trade
-exits: stop 10, trail 2
-  (n=12 < 100: noise, not evidence)
-open:
-  NVIDIH       cost $24.40  now $23.22 (-4.8%)  held 0.4h
+closed 13 | win 2/13 (15%) | avg net -4.3% | realized $-14.99 | expectancy $-1.15/trade
+exits: stop 11, trail 2
+  (n=13 < 100: noise, not evidence)
 last trades:
-  SIZE         $25.99 -> $21.47 (-17.4%)  stop  0.2h
   TAOLF        $25.76 -> $23.15 (-10.1%)  stop  0.0h
   Pepetide     $25.63 -> $17.23 (-32.8%)  stop  0.2h
   MAGGIE       $25.21 -> $18.19 (-27.8%)  stop  0.5h
@@ -138,6 +135,7 @@ last trades:
   PUSSY        $24.66 -> $21.70 (-12.0%)  stop  0.2h
   TITTYVERSE   $24.51 -> $20.97 (-14.4%)  stop  0.3h
   BUIDL        $24.34 -> $25.54 (+4.9%)  trail  0.5h
+  NVIDIH       $24.40 -> $21.45 (-12.1%)  stop  0.5h
 signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 133, daily_loss_limit 94, setup_rejected:dumping_now 36, setup_rejected:sellers_dominate_now 32, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_received 6, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_bundled 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
