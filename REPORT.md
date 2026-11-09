@@ -1,25 +1,25 @@
 # TrenchLab report
 
-Updated: 2026-11-09 13:12 UTC
+Updated: 2026-11-09 13:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           28124
+pools seen           28155
 passed SCOUT         69
   killed by SCORE    7
   killed by AUDIT    13
 FINAL PASS           49
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    27424
-  few_unique_buyers            26359
-  liquidity_low                25740
-  volume_below_liquidity       19849
-  sells_dominate                7525
-  wash_churn                    5970
-  overheated                    2531
+  too_young                    27455
+  few_unique_buyers            26389
+  liquidity_low                25768
+  volume_below_liquidity       19874
+  sells_dominate                7531
+  wash_churn                    5973
+  overheated                    2534
   missing                        815
   too_old                        574
   score_below                      2
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 1466 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   49    -5.2%   -13.3%   -41.9%   -89.9%    51%
 SCOUT PASS, killed later     20   +10.8%   +14.1%   -84.2%    +9.6%    45%
-KILLED (tracked)           4562    +0.0%   -22.1%   -53.8%    +1.0%    26%
+KILLED (tracked)           4569    +0.0%   -22.1%   -53.8%    +1.0%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -52,12 +52,12 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      223     -0.3%     -7.5%    -12.9%    26%
+none      223     -0.3%     -7.5%    -12.9%    27%
 <15%       48     +0.6%    -12.6%     -9.3%    35%
 15-30%      4    +39.0%     -0.1%     +1.0%    50%
 30%+       14     +0.1%     +0.3%     +1.9%     7%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      222     -0.3%     -2.8%     -2.9%    22%
+none      222     -0.3%     -2.8%     -2.9%    23%
 <20%       59     +1.4%    -33.1%    -94.9%    37%
 20%+        8    +24.1%    -99.0%       -     100%
 fresh       n   +1h med   +4h med  +24h med   rug%
