@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-09 03:22 UTC
+Updated: 2026-11-09 03:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           25206
+pools seen           25267
 passed SCOUT         67
   killed by SCORE    7
   killed by AUDIT    12
 FINAL PASS           48
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    24562
-  few_unique_buyers            23637
-  liquidity_low                23041
-  volume_below_liquidity       17820
-  sells_dominate                6824
-  wash_churn                    5263
-  overheated                    2241
+  too_young                    24623
+  few_unique_buyers            23694
+  liquidity_low                23096
+  volume_below_liquidity       17865
+  sells_dominate                6838
+  wash_churn                    5276
+  overheated                    2249
   missing                        748
   too_old                        525
   score_below                      2
 
-OUTCOMES (median price change from first sighting / first pass; 1341 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 1342 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   48    -5.3%   -13.3%   -44.0%   -87.0%    46%
 SCOUT PASS, killed later     19   +10.8%   +11.6%   -84.2%    +9.6%    47%
-KILLED (tracked)           4094    +0.0%   -12.3%   -37.6%    +1.3%    25%
+KILLED (tracked)           4110    +0.0%   -12.3%   -37.6%    +1.3%    25%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -64,23 +64,23 @@ fresh       n   +1h med   +4h med  +24h med   rug%
 <20%      256     -0.3%     -5.1%     -3.3%    26%
 20-40%      7     +1.3%    -99.0%       -      86%
 40%+        3   +227.1%   +484.6%       -      33%
-tokens analysed: 212 | helius credits today: 1030/25000
+tokens analysed: 212 | helius credits today: 1091/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%   48    21%    -11.0%   -17.1%   -99.5%
-   -6%     20%   48    23%    -11.0%   -17.1%   -99.5%
-   -6%     30%   48    25%     -7.6%   -17.8%   -99.5%
-  -10%     12%   48    21%    -12.2%   -19.7%   -99.5%
-  -10%     20%   48    23%    -12.5%   -20.0%   -99.5%
-  -10%     30%   48    27%     -8.8%   -20.0%   -99.5%
-  -15%     12%   48    21%    -12.5%   -20.1%   -99.5%
-  -15%     20%   48    23%    -13.2%   -20.4%   -99.5%
-  -15%     30%   48    27%     -9.5%   -20.4%   -99.5%
-  -25%     12%   48    23%    -17.6%   -29.2%   -99.5%
-  -25%     20%   48    25%    -20.1%   -29.9%   -99.5%
-  -25%     30%   48    29%    -16.6%   -30.5%   -99.5%
-  best so far: stop -6%, trail from +30% -> avg -7.6% per trade over n=48
+   -6%     12%   48    21%    -10.6%   -17.1%   -99.5%
+   -6%     20%   48    23%    -10.6%   -17.1%   -99.5%
+   -6%     30%   48    25%     -7.2%   -17.8%   -99.5%
+  -10%     12%   48    21%    -11.8%   -19.7%   -99.5%
+  -10%     20%   48    23%    -12.1%   -20.0%   -99.5%
+  -10%     30%   48    27%     -8.4%   -20.0%   -99.5%
+  -15%     12%   48    21%    -12.1%   -20.1%   -99.5%
+  -15%     20%   48    23%    -12.8%   -20.4%   -99.5%
+  -15%     30%   48    27%     -9.1%   -20.4%   -99.5%
+  -25%     12%   48    23%    -17.2%   -29.2%   -99.5%
+  -25%     20%   48    25%    -19.7%   -29.9%   -99.5%
+  -25%     30%   48    29%    -16.2%   -30.5%   -99.5%
+  best so far: stop -6%, trail from +30% -> avg -7.2% per trade over n=48
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 ================================================================
@@ -88,30 +88,28 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $479.78       $490.30
-return                         -4.0%         -1.9%
-closed trades                     18            10
-win rate                         22%           10%
-avg net / trade                -8.0%         -3.5%
-expectancy $/trade            $-2.04        $-0.97
+equity                       $484.25       $490.30
+return                         -3.2%         -1.9%
+closed trades                     19            10
+win rate                         21%           10%
+avg net / trade                -8.2%         -3.5%
+expectancy $/trade            $-2.08        $-0.97
 max drawdown                  -10.8%         -9.8%
-open now                           2             0
+open now                           1             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $479.78 (-4.0%) | cash $416.25 | open 2 | max drawdown -10.8%
+equity $484.25 (-3.2%) | cash $437.31 | open 1 | max drawdown -10.8%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 18 | win 4/18 (22%) | avg net -8.0% | realized $-36.72 | expectancy $-2.04/trade
-exits: stop 13, trail 5
-  (n=18 < 100: noise, not evidence)
+closed 19 | win 4/19 (21%) | avg net -8.2% | realized $-39.53 | expectancy $-2.08/trade
+exits: stop 14, trail 5
+  (n=19 < 100: noise, not evidence)
 open:
-  NVIDIH       cost $23.16  now $41.84 (+80.6%)  held 1.5h
-  BAWSAQ       cost $23.87  now $21.70 (-9.1%)  held 0.5h
+  NVIDIH       cost $23.16  now $46.94 (+102.7%)  held 1.7h
 last trades:
-  Elysion Pad  $24.67 -> $19.11 (-22.6%)  stop  0.2h
   Chonky       $24.39 -> $17.28 (-29.2%)  stop  0.1h
   José         $24.04 -> $19.59 (-18.5%)  stop  0.2h
   FRODO        $24.01 -> $20.82 (-13.3%)  stop  0.3h
@@ -119,6 +117,7 @@ last trades:
   CLAUDIA      $24.09 -> $19.43 (-19.3%)  stop  0.5h
   BLEND        $23.55 -> $20.73 (-12.0%)  stop  2.7h
   invest       $23.69 -> $15.38 (-35.1%)  stop  0.3h
+  BAWSAQ       $23.87 -> $21.06 (-11.8%)  stop  0.7h
 signals skipped by the sizer/risk rules: daily_loss_limit 168, already_traded_token 98, cooldown_after_loss 6, max_open_positions 4
 
 ================================================================
