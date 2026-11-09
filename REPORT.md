@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-09 16:22 UTC
+Updated: 2026-11-09 16:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           29002
+pools seen           29051
 passed SCOUT         70
   killed by SCORE    7
   killed by AUDIT    14
 FINAL PASS           49
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    28294
-  few_unique_buyers            27201
-  liquidity_low                26527
-  volume_below_liquidity       20438
-  sells_dominate                7747
-  wash_churn                    6136
-  overheated                    2602
+  too_young                    28343
+  few_unique_buyers            27248
+  liquidity_low                26576
+  volume_below_liquidity       20476
+  sells_dominate                7758
+  wash_churn                    6143
+  overheated                    2606
   missing                        871
   too_old                        582
   score_below                      2
 
-OUTCOMES (median price change from first sighting / first pass; 1512 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 1513 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   49    -5.2%   -13.3%   -41.9%   -89.9%    53%
 SCOUT PASS, killed later     21   +13.1%   +11.6%   -84.2%    +9.6%    48%
-KILLED (tracked)           4705    +0.0%   -22.6%   -53.9%    +0.8%    26%
+KILLED (tracked)           4709    +0.0%   -22.0%   -53.9%    +0.8%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -61,7 +61,7 @@ none      225     -0.6%     -2.9%     -3.3%    24%
 <20%       57     +2.5%    -33.1%    -96.6%    40%
 20%+        8    +24.1%    -99.0%       -     100%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      280     -0.3%     -3.8%     -6.1%    28%
+<20%      280     -0.3%     -4.4%     -6.1%    28%
 20-40%      7     +1.3%    -99.0%       -      86%
 40%+        3   +227.1%   +484.6%       -      33%
 tokens analysed: 229 | helius credits today: 3529/25000
@@ -136,7 +136,7 @@ last trades:
   BUIDL        $24.34 -> $25.54 (+4.9%)  trail  0.5h
   NVIDIH       $24.40 -> $21.45 (-12.1%)  stop  0.5h
   STOKE        $24.25 -> $28.63 (+18.1%)  trail  0.8h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 142, daily_loss_limit 94, setup_rejected:sellers_dominate_now 42, setup_rejected:dumping_now 37, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_received 6, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_bundled 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 142, daily_loss_limit 94, setup_rejected:sellers_dominate_now 43, setup_rejected:dumping_now 37, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_received 6, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_bundled 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
