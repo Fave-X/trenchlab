@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-09 10:22 UTC
+Updated: 2026-11-09 10:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           27338
+pools seen           27367
 passed SCOUT         68
   killed by SCORE    7
   killed by AUDIT    12
 FINAL PASS           49
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    26649
-  few_unique_buyers            25620
-  liquidity_low                25021
-  volume_below_liquidity       19347
-  sells_dominate                7302
-  wash_churn                    5809
-  overheated                    2470
+  too_young                    26677
+  few_unique_buyers            25647
+  liquidity_low                25050
+  volume_below_liquidity       19367
+  sells_dominate                7310
+  wash_churn                    5816
+  overheated                    2472
   missing                        783
   too_old                        564
   score_below                      2
 
-OUTCOMES (median price change from first sighting / first pass; 1438 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 1439 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   49    -5.2%   -13.3%   -41.9%   -89.0%    47%
+FINAL PASS                   49    -5.2%   -13.3%   -41.9%   -89.0%    49%
 SCOUT PASS, killed later     19   +10.8%   +11.6%   -84.2%    +9.6%    47%
-KILLED (tracked)           4471    +0.0%   -22.1%   -52.4%    +1.1%    26%
+KILLED (tracked)           4474    +0.0%   -22.0%   -51.5%    +1.1%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -36,15 +36,15 @@ rule                            n   +4h med  +24h med   rug%
 too_young                      27    -65.3%    -68.9%    41%
 too_old                        17     +0.2%     -2.6%     0%
 wash_churn                     11    -37.1%       -      45%
+liquidity_low                   6    -82.9%       -      50%
 volume_below_liquidity          5     +5.9%    +15.3%    40%
-liquidity_low                   5    -82.9%       -      60%
 overheated                      2    -11.0%       -      50%
 sells_dominate                  1    -54.2%       -       0%
 
 SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
-80+        22    -70.6%    -93.4%    82%
+80+        22    -70.6%    -93.4%    86%
 70-79      27    -34.7%    -66.7%    33%
 60-69      14    -35.2%    -41.6%    29%
 <60         5    -32.2%     +9.6%    20%
@@ -52,19 +52,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      218     -0.5%     -7.6%    -13.9%    26%
+none      219     -0.4%     -7.6%    -13.9%    26%
 <15%       46     +0.3%    -13.1%     -9.3%    37%
 15-30%      4    +39.0%     -0.1%     +1.0%    50%
 30%+       14     +0.1%     +0.3%     +1.9%     7%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      217     -0.4%     -2.7%     -3.3%    21%
+none      218     -0.4%     -2.7%     -3.3%    22%
 <20%       57     +1.4%    -36.6%    -94.9%    39%
 20%+        8    +24.1%    -99.0%       -     100%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      272     -0.3%     -3.1%     -7.4%    25%
+<20%      273     -0.3%     -3.1%     -7.4%    26%
 20-40%      7     +1.3%    -99.0%       -      86%
 40%+        3   +227.1%   +484.6%       -      33%
-tokens analysed: 222 | helius credits today: 2328/25000
+tokens analysed: 223 | helius credits today: 2386/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -136,7 +136,7 @@ last trades:
   PUSSY        $24.66 -> $21.70 (-12.0%)  stop  0.2h
   TITTYVERSE   $24.51 -> $20.97 (-14.4%)  stop  0.3h
   BUIDL        $24.34 -> $25.54 (+4.9%)  trail  0.5h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 129, daily_loss_limit 94, setup_rejected:dumping_now 36, setup_rejected:sellers_dominate_now 32, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_received 6, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_bundled 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 130, daily_loss_limit 94, setup_rejected:dumping_now 36, setup_rejected:sellers_dominate_now 32, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_received 6, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_bundled 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
