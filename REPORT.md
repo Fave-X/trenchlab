@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-09 03:52 UTC
+Updated: 2026-11-09 04:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           25375
+pools seen           25436
 passed SCOUT         67
   killed by SCORE    7
   killed by AUDIT    12
 FINAL PASS           48
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    24731
-  few_unique_buyers            23791
-  liquidity_low                23196
-  volume_below_liquidity       17946
-  sells_dominate                6861
-  wash_churn                    5298
-  overheated                    2259
+  too_young                    24792
+  few_unique_buyers            23849
+  liquidity_low                23254
+  volume_below_liquidity       17996
+  sells_dominate                6882
+  wash_churn                    5305
+  overheated                    2266
   missing                        748
   too_old                        525
   score_below                      2
 
-OUTCOMES (median price change from first sighting / first pass; 1346 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 1350 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   48    -5.3%   -13.2%   -44.0%   -88.1%    46%
+FINAL PASS                   48    -5.3%   -13.2%   -44.0%   -89.0%    46%
 SCOUT PASS, killed later     19   +10.8%   +11.6%   -84.2%    +9.6%    47%
-KILLED (tracked)           4133    +0.0%   -13.8%   -37.6%    +1.3%    25%
+KILLED (tracked)           4144    +0.0%   -13.8%   -37.9%    +1.3%    25%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -44,7 +44,7 @@ sells_dominate                  1    -54.2%       -       0%
 SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
-80+        21    -72.7%    -93.2%    81%
+80+        21    -72.7%    -93.3%    81%
 70-79      27    -39.9%    -64.2%    33%
 60-69      14    -35.2%    -41.6%    29%
 <60         5    -32.2%     +9.6%    20%
@@ -52,34 +52,34 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      210     -0.4%     -8.5%    -12.1%    26%
-<15%       40     +2.4%    -22.6%     +2.6%    40%
+none      211     -0.4%     -8.5%    -12.1%    26%
+<15%       40     +2.4%    -22.6%     -2.6%    40%
 15-30%      4    +39.0%     -0.1%     +1.0%    50%
 30%+       12     +0.1%     +0.1%     +1.9%     8%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      204     -0.5%     -3.0%     -1.1%    22%
-<20%       54     +2.5%    -36.6%    -94.9%    39%
+none      204     -0.5%     -3.0%     -1.3%    22%
+<20%       55     +2.5%    -36.6%    -94.9%    38%
 20%+        8    +24.1%    -99.0%       -     100%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      256     -0.2%     -5.1%     -3.8%    26%
+<20%      257     -0.2%     -5.1%     -4.2%    26%
 20-40%      7     +1.3%    -99.0%       -      86%
 40%+        3   +227.1%   +484.6%       -      33%
-tokens analysed: 212 | helius credits today: 1091/25000
+tokens analysed: 213 | helius credits today: 1148/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
    -6%     12%   48    21%    -11.0%   -17.1%   -99.5%
    -6%     20%   48    23%    -11.0%   -17.1%   -99.5%
    -6%     30%   48    25%     -7.7%   -17.8%   -99.5%
-  -10%     12%   48    23%    -11.7%   -19.7%   -99.5%
-  -10%     20%   48    25%    -12.0%   -20.0%   -99.5%
-  -10%     30%   48    29%     -8.4%   -20.0%   -99.5%
-  -15%     12%   48    23%    -12.0%   -20.1%   -99.5%
-  -15%     20%   48    25%    -12.7%   -20.4%   -99.5%
-  -15%     30%   48    29%     -9.0%   -20.4%   -99.5%
-  -25%     12%   48    25%    -17.2%   -29.2%   -99.5%
-  -25%     20%   48    27%    -19.7%   -29.9%   -99.5%
-  -25%     30%   48    31%    -16.1%   -30.5%   -99.5%
+  -10%     12%   48    23%    -11.9%   -19.7%   -99.5%
+  -10%     20%   48    25%    -12.2%   -20.0%   -99.5%
+  -10%     30%   48    29%     -8.6%   -20.0%   -99.5%
+  -15%     12%   48    23%    -12.2%   -20.1%   -99.5%
+  -15%     20%   48    25%    -12.9%   -20.4%   -99.5%
+  -15%     30%   48    29%     -9.2%   -20.4%   -99.5%
+  -25%     12%   48    25%    -17.3%   -29.2%   -99.5%
+  -25%     20%   48    27%    -19.8%   -29.9%   -99.5%
+  -25%     30%   48    31%    -16.3%   -30.5%   -99.5%
   best so far: stop -6%, trail from +30% -> avg -7.7% per trade over n=48
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
