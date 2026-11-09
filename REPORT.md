@@ -1,25 +1,25 @@
 # TrenchLab report
 
-Updated: 2026-11-09 22:52 UTC
+Updated: 2026-11-09 23:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           30842
+pools seen           30878
 passed SCOUT         75
   killed by SCORE    9
   killed by AUDIT    14
 FINAL PASS           52
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    30096
-  few_unique_buyers            28966
-  liquidity_low                28225
-  volume_below_liquidity       21780
-  sells_dominate                8256
-  wash_churn                    6438
-  overheated                    2727
+  too_young                    30132
+  few_unique_buyers            29000
+  liquidity_low                28258
+  volume_below_liquidity       21806
+  sells_dominate                8262
+  wash_churn                    6441
+  overheated                    2734
   missing                        938
   too_old                        611
   score_below                      2
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 1581 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   52    -5.0%   -13.2%   -43.9%   -89.9%    56%
 SCOUT PASS, killed later     23   +13.1%    +3.1%   -84.2%    +9.6%    43%
-KILLED (tracked)           5022    +0.0%   -18.1%   -54.1%    +0.8%    26%
+KILLED (tracked)           5030    +0.0%   -18.2%   -54.0%    +0.8%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -64,7 +64,7 @@ fresh       n   +1h med   +4h med  +24h med   rug%
 <20%      298     -0.3%     -5.1%     -4.2%    28%
 20-40%      8    -48.6%    -99.0%       -      88%
 40%+        3   +227.1%   +484.6%       -      33%
-tokens analysed: 245 | helius credits today: 5124/25000
+tokens analysed: 245 | helius credits today: 5206/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -116,7 +116,7 @@ last trades:
   NVIDIOT      $23.75 -> $11.17 (-53.0%)  stop  0.3h
   FAIR         $23.20 -> $18.42 (-20.6%)  stop  0.2h
   ORBIT        $23.12 -> $0.03 (-99.9%)  stop  1.8h
-signals skipped by the sizer/risk rules: daily_loss_limit 168, already_traded_token 101, cooldown_after_loss 6, max_open_positions 4
+signals skipped by the sizer/risk rules: daily_loss_limit 168, already_traded_token 102, cooldown_after_loss 6, max_open_positions 4
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -136,7 +136,7 @@ last trades:
   BUIDL        $24.34 -> $25.54 (+4.9%)  trail  0.5h
   NVIDIH       $24.40 -> $21.45 (-12.1%)  stop  0.5h
   STOKE        $24.25 -> $28.63 (+18.1%)  trail  0.8h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 154, daily_loss_limit 94, setup_rejected:sellers_dominate_now 54, setup_rejected:dumping_now 37, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_received 6, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_bundled 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 155, daily_loss_limit 94, setup_rejected:sellers_dominate_now 54, setup_rejected:dumping_now 37, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_received 6, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_bundled 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
