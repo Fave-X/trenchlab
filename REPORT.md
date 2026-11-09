@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-09 08:32 UTC
+Updated: 2026-11-09 08:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           26771
+pools seen           26819
 passed SCOUT         68
   killed by SCORE    7
   killed by AUDIT    12
 FINAL PASS           49
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    26097
-  few_unique_buyers            25092
-  liquidity_low                24489
-  volume_below_liquidity       18936
-  sells_dominate                7178
-  wash_churn                    5632
-  overheated                    2403
+  too_young                    26145
+  few_unique_buyers            25134
+  liquidity_low                24536
+  volume_below_liquidity       18974
+  sells_dominate                7186
+  wash_churn                    5646
+  overheated                    2411
   missing                        780
   too_old                        551
   score_below                      2
 
-OUTCOMES (median price change from first sighting / first pass; 1410 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 1412 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   49    -5.2%   -13.3%   -43.9%   -89.0%    47%
 SCOUT PASS, killed later     19   +10.8%   +11.6%   -84.2%    +9.6%    47%
-KILLED (tracked)           4385    -0.0%   -21.3%   -52.0%    +1.3%    26%
+KILLED (tracked)           4393    -0.0%   -21.6%   -52.6%    +1.3%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -75,11 +75,11 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -10%     20%   49    22%    -12.7%   -19.9%   -99.5%
   -10%     30%   49    27%     -9.1%   -19.9%   -99.5%
   -15%     12%   49    22%    -12.7%   -20.2%   -99.5%
-  -15%     20%   49    24%    -12.9%   -20.4%   -99.5%
-  -15%     30%   49    29%     -9.3%   -20.4%   -99.5%
+  -15%     20%   49    24%    -12.7%   -20.4%   -99.5%
+  -15%     30%   49    29%     -9.1%   -20.4%   -99.5%
   -25%     12%   49    24%    -17.7%   -29.2%   -99.5%
-  -25%     20%   49    27%    -19.7%   -29.9%   -99.5%
-  -25%     30%   49    31%    -16.3%   -30.9%   -99.5%
+  -25%     20%   49    27%    -19.5%   -29.9%   -99.5%
+  -25%     30%   49    31%    -16.0%   -30.9%   -99.5%
   best so far: stop -6%, trail from +30% -> avg -7.9% per trade over n=49
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
@@ -136,7 +136,7 @@ last trades:
   ELYSION      $24.86 -> $20.95 (-15.7%)  stop  0.5h
   PUSSY        $24.66 -> $21.70 (-12.0%)  stop  0.2h
   TITTYVERSE   $24.51 -> $20.97 (-14.4%)  stop  0.3h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 124, daily_loss_limit 94, setup_rejected:dumping_now 35, setup_rejected:sellers_dominate_now 32, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_received 6, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_bundled 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 125, daily_loss_limit 94, setup_rejected:dumping_now 35, setup_rejected:sellers_dominate_now 32, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_received 6, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_bundled 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
