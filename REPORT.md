@@ -1,26 +1,26 @@
 # TrenchLab report
 
-Updated: 2026-11-09 16:32 UTC
+Updated: 2026-11-09 16:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           29051
+pools seen           29104
 passed SCOUT         70
   killed by SCORE    7
   killed by AUDIT    14
 FINAL PASS           49
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    28343
-  few_unique_buyers            27248
-  liquidity_low                26576
-  volume_below_liquidity       20476
-  sells_dominate                7758
-  wash_churn                    6143
-  overheated                    2606
-  missing                        871
+  too_young                    28395
+  few_unique_buyers            27296
+  liquidity_low                26616
+  volume_below_liquidity       20500
+  sells_dominate                7766
+  wash_churn                    6147
+  overheated                    2610
+  missing                        881
   too_old                        582
   score_below                      2
 
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 1513 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   49    -5.2%   -13.3%   -41.9%   -89.9%    53%
 SCOUT PASS, killed later     21   +13.1%   +11.6%   -84.2%    +9.6%    48%
-KILLED (tracked)           4709    +0.0%   -22.0%   -53.9%    +0.8%    26%
+KILLED (tracked)           4724    +0.0%   -21.8%   -53.9%    +0.8%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -36,7 +36,7 @@ rule                            n   +4h med  +24h med   rug%
 too_young                      27    -65.3%    -68.9%    41%
 too_old                        17     +0.2%     -2.6%     0%
 wash_churn                     11    -37.1%       -      45%
-liquidity_low                   6    -56.2%       -      50%
+liquidity_low                   7    -56.2%       -      43%
 volume_below_liquidity          5     +5.9%    +15.3%    40%
 overheated                      2    -11.0%       -      50%
 sells_dominate                  1    -54.2%       -       0%
@@ -136,7 +136,7 @@ last trades:
   BUIDL        $24.34 -> $25.54 (+4.9%)  trail  0.5h
   NVIDIH       $24.40 -> $21.45 (-12.1%)  stop  0.5h
   STOKE        $24.25 -> $28.63 (+18.1%)  trail  0.8h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 142, daily_loss_limit 94, setup_rejected:sellers_dominate_now 43, setup_rejected:dumping_now 37, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_received 6, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_bundled 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 142, daily_loss_limit 94, setup_rejected:sellers_dominate_now 44, setup_rejected:dumping_now 37, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_received 6, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_bundled 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
