@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-09 11:52 UTC
+Updated: 2026-11-09 12:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           27734
+pools seen           27791
 passed SCOUT         68
   killed by SCORE    7
   killed by AUDIT    12
 FINAL PASS           49
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    27044
-  few_unique_buyers            25998
-  liquidity_low                25394
-  volume_below_liquidity       19616
-  sells_dominate                7417
-  wash_churn                    5908
-  overheated                    2500
-  missing                        794
-  too_old                        564
+  too_young                    27100
+  few_unique_buyers            26050
+  liquidity_low                25437
+  volume_below_liquidity       19640
+  sells_dominate                7424
+  wash_churn                    5919
+  overheated                    2504
+  missing                        804
+  too_old                        565
   score_below                      2
 
-OUTCOMES (median price change from first sighting / first pass; 1451 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 1452 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   49    -5.2%   -13.3%   -41.9%   -89.9%    49%
 SCOUT PASS, killed later     19   +10.8%   +11.6%   -84.2%    +9.6%    47%
-KILLED (tracked)           4511    +0.0%   -23.0%   -53.3%    +1.0%    26%
+KILLED (tracked)           4519    +0.0%   -23.0%   -53.6%    +1.0%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -53,15 +53,15 @@ CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
 none      219     -0.4%     -7.5%    -13.9%    26%
-<15%       47     +0.5%    -12.6%     -9.3%    36%
+<15%       48     +0.5%    -12.6%     -9.3%    35%
 15-30%      4    +39.0%     -0.1%     +1.0%    50%
 30%+       14     +0.1%     +0.3%     +1.9%     7%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      218     -0.4%     -2.7%     -3.3%    22%
+none      219     -0.4%     -2.7%     -3.3%    22%
 <20%       58     +1.2%    -35.2%    -94.9%    38%
 20%+        8    +24.1%    -99.0%       -     100%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      274     -0.3%     -3.1%     -7.4%    26%
+<20%      275     -0.3%     -3.1%     -7.4%    26%
 20-40%      7     +1.3%    -99.0%       -      86%
 40%+        3   +227.1%   +484.6%       -      33%
 tokens analysed: 224 | helius credits today: 2487/25000
@@ -136,7 +136,7 @@ last trades:
   TITTYVERSE   $24.51 -> $20.97 (-14.4%)  stop  0.3h
   BUIDL        $24.34 -> $25.54 (+4.9%)  trail  0.5h
   NVIDIH       $24.40 -> $21.45 (-12.1%)  stop  0.5h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 135, daily_loss_limit 94, setup_rejected:dumping_now 36, setup_rejected:sellers_dominate_now 32, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_received 6, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_bundled 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 137, daily_loss_limit 94, setup_rejected:dumping_now 36, setup_rejected:sellers_dominate_now 32, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_received 6, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_bundled 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
