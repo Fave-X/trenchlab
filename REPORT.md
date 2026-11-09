@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-09 12:32 UTC
+Updated: 2026-11-09 12:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           27937
+pools seen           27997
 passed SCOUT         68
   killed by SCORE    7
   killed by AUDIT    12
 FINAL PASS           49
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    27241
-  few_unique_buyers            26185
-  liquidity_low                25566
-  volume_below_liquidity       19728
-  sells_dominate                7463
-  wash_churn                    5941
-  overheated                    2519
-  missing                        811
+  too_young                    27301
+  few_unique_buyers            26242
+  liquidity_low                25623
+  volume_below_liquidity       19769
+  sells_dominate                7479
+  wash_churn                    5950
+  overheated                    2522
+  missing                        814
   too_old                        570
   score_below                      2
 
 OUTCOMES (median price change from first sighting / first pass; 1459 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   49    -5.2%   -13.3%   -41.9%   -89.9%    49%
+FINAL PASS                   49    -5.2%   -13.3%   -41.9%   -89.9%    51%
 SCOUT PASS, killed later     19   +10.8%   +11.6%   -84.2%    +9.6%    47%
-KILLED (tracked)           4539    +0.0%   -23.0%   -53.8%    +1.1%    26%
+KILLED (tracked)           4544    +0.0%   -22.9%   -53.8%    +1.1%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -45,14 +45,14 @@ SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        22    -70.6%    -93.6%    86%
-70-79      27    -34.7%    -66.7%    33%
+70-79      27    -34.7%    -66.7%    37%
 60-69      14    -35.2%    -41.6%    29%
 <60         5    -32.2%     +9.6%    20%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      221     -0.4%     -7.4%    -12.9%    26%
+none      221     -0.4%     -7.4%    -12.9%    27%
 <15%       48     +0.5%    -12.6%     -9.3%    35%
 15-30%      4    +39.0%     -0.1%     +1.0%    50%
 30%+       14     +0.1%     +0.3%     +1.9%     7%
@@ -136,7 +136,7 @@ last trades:
   TITTYVERSE   $24.51 -> $20.97 (-14.4%)  stop  0.3h
   BUIDL        $24.34 -> $25.54 (+4.9%)  trail  0.5h
   NVIDIH       $24.40 -> $21.45 (-12.1%)  stop  0.5h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 139, daily_loss_limit 94, setup_rejected:dumping_now 37, setup_rejected:sellers_dominate_now 34, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_received 6, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_bundled 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 140, daily_loss_limit 94, setup_rejected:dumping_now 37, setup_rejected:sellers_dominate_now 34, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_received 6, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_bundled 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
