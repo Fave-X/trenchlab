@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-09 12:02 UTC
+Updated: 2026-11-09 12:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           27791
+pools seen           27843
 passed SCOUT         68
   killed by SCORE    7
   killed by AUDIT    12
 FINAL PASS           49
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    27100
-  few_unique_buyers            26050
-  liquidity_low                25437
-  volume_below_liquidity       19640
-  sells_dominate                7424
-  wash_churn                    5919
-  overheated                    2504
-  missing                        804
-  too_old                        565
+  too_young                    27147
+  few_unique_buyers            26098
+  liquidity_low                25480
+  volume_below_liquidity       19667
+  sells_dominate                7439
+  wash_churn                    5929
+  overheated                    2509
+  missing                        810
+  too_old                        570
   score_below                      2
 
-OUTCOMES (median price change from first sighting / first pass; 1452 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 1455 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   49    -5.2%   -13.3%   -41.9%   -89.9%    49%
 SCOUT PASS, killed later     19   +10.8%   +11.6%   -84.2%    +9.6%    47%
-KILLED (tracked)           4519    +0.0%   -23.0%   -53.6%    +1.0%    26%
+KILLED (tracked)           4525    +0.0%   -23.1%   -53.6%    +1.1%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -136,7 +136,7 @@ last trades:
   TITTYVERSE   $24.51 -> $20.97 (-14.4%)  stop  0.3h
   BUIDL        $24.34 -> $25.54 (+4.9%)  trail  0.5h
   NVIDIH       $24.40 -> $21.45 (-12.1%)  stop  0.5h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 137, daily_loss_limit 94, setup_rejected:dumping_now 36, setup_rejected:sellers_dominate_now 32, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_received 6, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_bundled 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 138, daily_loss_limit 94, setup_rejected:dumping_now 37, setup_rejected:sellers_dominate_now 32, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_received 6, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_bundled 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
