@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-09 04:22 UTC
+Updated: 2026-11-09 04:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           25528
+pools seen           25579
 passed SCOUT         67
   killed by SCORE    7
   killed by AUDIT    12
 FINAL PASS           48
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    24879
-  few_unique_buyers            23936
-  liquidity_low                23342
-  volume_below_liquidity       18064
-  sells_dominate                6895
-  wash_churn                    5321
-  overheated                    2275
+  too_young                    24929
+  few_unique_buyers            23983
+  liquidity_low                23388
+  volume_below_liquidity       18104
+  sells_dominate                6906
+  wash_churn                    5332
+  overheated                    2284
   missing                        748
   too_old                        530
   score_below                      2
 
-OUTCOMES (median price change from first sighting / first pass; 1357 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 1360 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   48    -5.3%   -13.2%   -44.0%   -89.0%    46%
 SCOUT PASS, killed later     19   +10.8%   +11.6%   -84.2%    +9.6%    47%
-KILLED (tracked)           4166    +0.0%   -15.7%   -38.5%    +1.3%    26%
+KILLED (tracked)           4175    -0.0%   -17.6%   -40.9%    +1.3%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -72,14 +72,14 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
    -6%     20%   48    23%    -11.0%   -17.1%   -99.5%
    -6%     30%   48    25%     -7.7%   -17.8%   -99.5%
   -10%     12%   48    23%    -12.0%   -19.7%   -99.5%
-  -10%     20%   48    25%    -12.2%   -20.0%   -99.5%
-  -10%     30%   48    29%     -8.6%   -20.0%   -99.5%
+  -10%     20%   48    23%    -12.5%   -20.0%   -99.5%
+  -10%     30%   48    27%     -8.9%   -20.0%   -99.5%
   -15%     12%   48    23%    -12.3%   -20.1%   -99.5%
-  -15%     20%   48    25%    -12.9%   -20.4%   -99.5%
-  -15%     30%   48    29%     -9.2%   -20.4%   -99.5%
+  -15%     20%   48    23%    -13.2%   -20.4%   -99.5%
+  -15%     30%   48    27%     -9.5%   -20.4%   -99.5%
   -25%     12%   48    25%    -17.4%   -29.2%   -99.5%
-  -25%     20%   48    27%    -19.8%   -29.9%   -99.5%
-  -25%     30%   48    31%    -16.3%   -30.5%   -99.5%
+  -25%     20%   48    25%    -20.1%   -29.9%   -99.5%
+  -25%     30%   48    29%    -16.6%   -30.5%   -99.5%
   best so far: stop -6%, trail from +30% -> avg -7.7% per trade over n=48
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
@@ -136,7 +136,7 @@ last trades:
   MAGGIE       $25.21 -> $18.19 (-27.8%)  stop  0.5h
   ELYSION      $24.86 -> $20.95 (-15.7%)  stop  0.5h
   PUSSY        $24.66 -> $21.70 (-12.0%)  stop  0.2h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 110, daily_loss_limit 94, setup_rejected:dumping_now 34, setup_rejected:sellers_dominate_now 32, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_received 6, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_bundled 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 112, daily_loss_limit 94, setup_rejected:dumping_now 34, setup_rejected:sellers_dominate_now 32, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_received 6, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_bundled 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
