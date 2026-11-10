@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-10 00:11 UTC
+Updated: 2026-11-10 00:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           31227
+pools seen           31269
 passed SCOUT         76
   killed by SCORE    9
   killed by AUDIT    14
 FINAL PASS           53
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    30477
-  few_unique_buyers            29323
-  liquidity_low                28581
-  volume_below_liquidity       22056
-  sells_dominate                8362
-  wash_churn                    6505
-  overheated                    2763
+  too_young                    30519
+  few_unique_buyers            29363
+  liquidity_low                28620
+  volume_below_liquidity       22089
+  sells_dominate                8370
+  wash_churn                    6517
+  overheated                    2768
   missing                        941
   too_old                        614
   score_below                      2
 
-OUTCOMES (median price change from first sighting / first pass; 1599 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 1604 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   53    -5.2%   -13.2%   -43.9%   -89.9%    55%
 SCOUT PASS, killed later     23   +13.1%    +3.1%   -78.9%    +9.6%    48%
-KILLED (tracked)           5081    +0.0%   -18.5%   -53.6%    +0.8%    26%
+KILLED (tracked)           5087    +0.0%   -18.5%   -53.3%    +0.8%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -64,7 +64,7 @@ fresh       n   +1h med   +4h med  +24h med   rug%
 <20%      300     -0.3%     -5.3%     -4.2%    28%
 20-40%      8    -48.6%    -99.0%       -      88%
 40%+        3   +227.1%   +484.6%       -      33%
-tokens analysed: 247 | helius credits today: 80/25000
+tokens analysed: 247 | helius credits today: 173/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -77,9 +77,9 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     12%   53    21%    -15.6%   -20.4%   -99.7%
   -15%     20%   53    23%    -15.7%   -21.0%   -99.7%
   -15%     30%   53    26%    -12.4%   -21.0%   -99.7%
-  -25%     12%   53    25%    -18.7%   -29.2%   -99.7%
-  -25%     20%   53    26%    -20.5%   -29.9%   -99.7%
-  -25%     30%   53    30%    -17.3%   -30.9%   -99.7%
+  -25%     12%   53    25%    -19.0%   -29.7%   -99.7%
+  -25%     20%   53    26%    -20.8%   -30.1%   -99.7%
+  -25%     30%   53    30%    -17.6%   -31.0%   -99.7%
   best so far: stop -6%, trail from +30% -> avg -10.8% per trade over n=53
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
@@ -136,7 +136,7 @@ last trades:
   NVIDIH       $24.40 -> $21.45 (-12.1%)  stop  0.5h
   STOKE        $24.25 -> $28.63 (+18.1%)  trail  0.8h
   FAIR         $24.47 -> $19.42 (-20.6%)  stop  0.7h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 162, daily_loss_limit 94, setup_rejected:sellers_dominate_now 54, setup_rejected:dumping_now 37, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_received 6, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_bundled 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 163, daily_loss_limit 94, setup_rejected:sellers_dominate_now 54, setup_rejected:dumping_now 37, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_received 6, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_bundled 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
