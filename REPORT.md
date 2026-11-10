@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-10 09:52 UTC
+Updated: 2026-11-10 10:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           34172
+pools seen           34206
 passed SCOUT         83
   killed by SCORE    9
   killed by AUDIT    19
 FINAL PASS           55
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    33385
-  few_unique_buyers            32091
-  liquidity_low                31356
-  volume_below_liquidity       24128
-  sells_dominate                9052
-  wash_churn                    7175
-  overheated                    3012
+  too_young                    33419
+  few_unique_buyers            32125
+  liquidity_low                31389
+  volume_below_liquidity       24154
+  sells_dominate                9059
+  wash_churn                    7179
+  overheated                    3014
   missing                        977
   too_old                        642
   rc_danger                        4
 
-OUTCOMES (median price change from first sighting / first pass; 1730 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 1732 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   55    -4.6%    -8.2%   -44.4%   -90.4%    56%
 SCOUT PASS, killed later     28    +8.4%    +1.3%   -78.9%    +9.6%    43%
-KILLED (tracked)           5491    +0.0%   -22.9%   -53.1%    +0.4%    27%
+KILLED (tracked)           5499    +0.0%   -23.0%   -53.1%    +0.4%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -52,7 +52,7 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      259     -0.9%    -10.9%    -12.9%    32%
+none      259     -1.0%    -10.9%    -12.9%    32%
 <15%       59     +0.2%    -13.1%     -9.3%    34%
 15-30%      5     -0.2%     -0.2%     +1.0%    60%
 30%+       15     -0.2%     +0.3%     +2.6%     7%
