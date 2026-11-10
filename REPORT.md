@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-10 06:12 UTC
+Updated: 2026-11-10 06:21 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           33050
+pools seen           33094
 passed SCOUT         81
   killed by SCORE    9
   killed by AUDIT    17
 FINAL PASS           55
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    32273
-  few_unique_buyers            31034
-  liquidity_low                30296
-  volume_below_liquidity       23335
-  sells_dominate                8802
-  wash_churn                    6867
-  overheated                    2908
+  too_young                    32316
+  few_unique_buyers            31075
+  liquidity_low                30338
+  volume_below_liquidity       23363
+  sells_dominate                8814
+  wash_churn                    6882
+  overheated                    2914
   missing                        957
-  too_old                        635
+  too_old                        636
   score_below                      2
 
 OUTCOMES (median price change from first sighting / first pass; 1680 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   55    -4.6%    -8.2%   -44.0%   -90.4%    55%
 SCOUT PASS, killed later     26   +13.1%    +3.1%   -73.5%    +9.6%    46%
-KILLED (tracked)           5358    +0.0%   -22.0%   -51.9%    +0.5%    27%
+KILLED (tracked)           5367    +0.0%   -22.0%   -52.1%    +0.5%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -36,7 +36,7 @@ rule                            n   +4h med  +24h med   rug%
 too_young                      35    -73.7%    -68.9%    43%
 too_old                        20     -0.2%     -2.6%     0%
 wash_churn                     12     -1.0%       -      42%
-liquidity_low                   8    -29.5%       -      50%
+liquidity_low                   8    -56.2%       -      50%
 volume_below_liquidity          5     +5.9%    +15.3%    40%
 overheated                      2    -11.0%       -      50%
 sells_dominate                  1    -54.2%       -       0%
@@ -88,8 +88,8 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $472.41       $457.44
-return                         -5.5%         -8.5%
+equity                       $472.41       $458.92
+return                         -5.5%         -8.2%
 closed trades                     26            17
 win rate                         27%           18%
 avg net / trade                -3.7%        -10.6%
@@ -122,13 +122,13 @@ signals skipped by the sizer/risk rules: daily_loss_limit 169, already_traded_to
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $457.44 (-8.5%) | cash $430.98 | open 1 | max drawdown -16.2%
+equity $458.92 (-8.2%) | cash $430.98 | open 1 | max drawdown -16.2%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 17 | win 3/17 (18%) | avg net -10.6% | realized $-45.07 | expectancy $-2.65/trade
 exits: stop 14, trail 3
   (n=17 < 100: noise, not evidence)
 open:
-  MEOW         cost $23.95  now $26.47 (+10.5%)  held 1.9h
+  MEOW         cost $23.95  now $27.94 (+16.7%)  held 2.0h
 last trades:
   PUSSY        $24.66 -> $21.70 (-12.0%)  stop  0.2h
   TITTYVERSE   $24.51 -> $20.97 (-14.4%)  stop  0.3h
