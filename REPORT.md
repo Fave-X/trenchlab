@@ -1,40 +1,40 @@
 # TrenchLab report
 
-Updated: 2026-11-10 14:12 UTC
+Updated: 2026-11-10 14:23 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           35446
+pools seen           35490
 passed SCOUT         84
   killed by SCORE    9
   killed by AUDIT    19
 FINAL PASS           56
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    34649
-  few_unique_buyers            33280
-  liquidity_low                32550
-  volume_below_liquidity       24987
-  sells_dominate                9380
-  wash_churn                    7459
-  overheated                    3143
+  too_young                    34691
+  few_unique_buyers            33319
+  liquidity_low                32592
+  volume_below_liquidity       25022
+  sells_dominate                9389
+  wash_churn                    7464
+  overheated                    3145
   missing                       1001
-  too_old                        651
+  too_old                        653
   rc_danger                        4
 
 OUTCOMES (median price change from first sighting / first pass; 1785 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   56    -5.0%   -10.6%   -44.4%   -90.4%    57%
+FINAL PASS                   56    -5.0%   -10.6%   -44.0%   -90.4%    57%
 SCOUT PASS, killed later     28    +8.4%    +1.3%   -73.5%    +9.6%    43%
-KILLED (tracked)           5682    +0.0%   -24.3%   -53.9%    +0.4%    27%
+KILLED (tracked)           5688    +0.0%   -24.0%   -54.0%    +0.4%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
 too_young                      38    -92.1%    -71.7%    45%
-too_old                        20     -0.3%     -2.6%     0%
+too_old                        21     -0.3%     -2.6%     0%
 wash_churn                     12     -1.0%       -      42%
 liquidity_low                   8    -56.2%       -      50%
 volume_below_liquidity          5     +5.9%    +15.3%    40%
@@ -45,26 +45,26 @@ SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        26    -70.6%    -93.8%    81%
-70-79      32    -42.3%    -66.9%    47%
+70-79      32    -39.9%    -66.9%    47%
 60-69      20    -35.2%    -70.7%    35%
 <60         6    -39.8%     +9.6%    17%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      264     -0.9%    -11.4%    -12.9%    32%
-<15%       59     +0.2%    -12.6%     -9.3%    34%
+none      267     -0.8%    -11.0%    -12.9%    31%
+<15%       61     +0.2%    -12.1%    -10.8%    34%
 15-30%      5     -0.2%     -0.2%     +1.0%    60%
 30%+       15     -0.2%     +0.2%     +2.6%     7%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      262     -0.4%     -3.1%     -3.7%    26%
-<20%       70     -0.0%    -45.0%    -94.9%    41%
+none      267     -0.4%     -3.0%     -4.0%    26%
+<20%       70     +0.2%    -45.0%    -94.9%    41%
 20%+       11    +16.6%    -99.0%       -      91%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      330     -0.3%     -7.3%     -7.4%    30%
+<20%      335     -0.3%     -6.9%     -8.3%    30%
 20-40%      9    -98.6%    -99.2%       -      89%
 40%+        4    +11.6%     +5.8%       -      50%
-tokens analysed: 278 | helius credits today: 2911/25000
+tokens analysed: 279 | helius credits today: 3008/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -116,7 +116,7 @@ last trades:
   BORLY        $21.73 -> $36.28 (+67.0%)  trail  1.8h
   AICoin       $22.46 -> $45.74 (+103.7%)  trail  0.8h
   X            $23.62 -> $12.50 (-47.1%)  stop  0.2h
-signals skipped by the sizer/risk rules: daily_loss_limit 169, already_traded_token 113, cooldown_after_loss 6, max_open_positions 4
+signals skipped by the sizer/risk rules: daily_loss_limit 169, already_traded_token 114, cooldown_after_loss 6, max_open_positions 4
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
