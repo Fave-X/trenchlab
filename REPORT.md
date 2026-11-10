@@ -1,26 +1,26 @@
 # TrenchLab report
 
-Updated: 2026-11-10 02:11 UTC
+Updated: 2026-11-10 02:21 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           31853
+pools seen           31893
 passed SCOUT         77
   killed by SCORE    9
   killed by AUDIT    14
 FINAL PASS           54
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    31097
-  few_unique_buyers            29913
-  liquidity_low                29178
-  volume_below_liquidity       22508
-  sells_dominate                8511
-  wash_churn                    6627
-  overheated                    2807
-  missing                        941
+  too_young                    31137
+  few_unique_buyers            29950
+  liquidity_low                29215
+  volume_below_liquidity       22532
+  sells_dominate                8520
+  wash_churn                    6633
+  overheated                    2811
+  missing                        943
   too_old                        617
   score_below                      2
 
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 1640 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   54    -5.0%   -10.6%   -44.0%   -89.9%    54%
 SCOUT PASS, killed later     23   +13.1%    +3.1%   -78.9%    +9.6%    48%
-KILLED (tracked)           5175    +0.0%   -19.8%   -50.9%    +0.8%    27%
+KILLED (tracked)           5181    +0.0%   -19.8%   -50.5%    +0.8%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -68,19 +68,19 @@ tokens analysed: 252 | helius credits today: 591/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%   54    20%    -12.5%   -17.3%   -99.7%
-   -6%     20%   54    22%    -12.5%   -17.3%   -99.7%
-   -6%     30%   54    24%     -9.5%   -18.0%   -99.7%
-  -10%     12%   54    22%    -13.6%   -20.0%   -99.7%
-  -10%     20%   54    22%    -14.2%   -20.1%   -99.7%
-  -10%     30%   54    26%    -10.9%   -20.1%   -99.7%
-  -15%     12%   54    22%    -14.2%   -20.4%   -99.7%
-  -15%     20%   54    24%    -14.3%   -20.9%   -99.7%
-  -15%     30%   54    28%    -11.1%   -20.9%   -99.7%
-  -25%     12%   54    26%    -17.5%   -29.4%   -99.7%
-  -25%     20%   54    28%    -19.3%   -30.0%   -99.7%
-  -25%     30%   54    31%    -16.2%   -30.9%   -99.7%
-  best so far: stop -6%, trail from +30% -> avg -9.5% per trade over n=54
+   -6%     12%   54    20%    -12.3%   -17.3%   -99.7%
+   -6%     20%   54    22%    -12.3%   -17.3%   -99.7%
+   -6%     30%   54    24%     -9.3%   -18.0%   -99.7%
+  -10%     12%   54    22%    -13.4%   -20.0%   -99.7%
+  -10%     20%   54    22%    -14.0%   -20.1%   -99.7%
+  -10%     30%   54    26%    -10.8%   -20.1%   -99.7%
+  -15%     12%   54    22%    -14.0%   -20.4%   -99.7%
+  -15%     20%   54    24%    -14.2%   -20.9%   -99.7%
+  -15%     30%   54    28%    -10.9%   -20.9%   -99.7%
+  -25%     12%   54    26%    -17.4%   -29.4%   -99.7%
+  -25%     20%   54    28%    -19.1%   -30.0%   -99.7%
+  -25%     30%   54    31%    -16.0%   -30.9%   -99.7%
+  best so far: stop -6%, trail from +30% -> avg -9.3% per trade over n=54
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 ================================================================
@@ -88,8 +88,8 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $447.89       $484.34
-return                        -10.4%         -3.1%
+equity                       $449.91       $484.34
+return                        -10.0%         -3.1%
 closed trades                     24            15
 win rate                         21%           20%
 avg net / trade               -11.1%         -3.9%
@@ -102,13 +102,13 @@ Judge on expectancy after >=100 trades each, not on win rate or a few days.
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $447.89 (-10.4%) | cash $412.84 | open 1 | max drawdown -16.6%
+equity $449.91 (-10.0%) | cash $412.84 | open 1 | max drawdown -16.6%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 24 | win 5/24 (21%) | avg net -11.1% | realized $-65.43 | expectancy $-2.73/trade
 exits: stop 18, trail 6
   (n=24 < 100: noise, not evidence)
 open:
-  BORLY        cost $21.73  now $35.05 (+61.3%)  held 1.0h
+  BORLY        cost $21.73  now $37.07 (+70.6%)  held 1.2h
 last trades:
   BLEND        $23.55 -> $20.73 (-12.0%)  stop  2.7h
   invest       $23.69 -> $15.38 (-35.1%)  stop  0.3h
