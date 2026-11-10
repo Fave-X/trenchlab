@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-10 22:22 UTC
+Updated: 2026-11-10 22:31 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           37919
+pools seen           37963
 passed SCOUT         88
   killed by SCORE    10
   killed by AUDIT    19
 FINAL PASS           59
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    37074
-  few_unique_buyers            35612
-  liquidity_low                34903
-  volume_below_liquidity       26760
-  sells_dominate               10028
-  wash_churn                    7866
-  overheated                    3314
-  missing                       1040
+  too_young                    37118
+  few_unique_buyers            35656
+  liquidity_low                34944
+  volume_below_liquidity       26793
+  sells_dominate               10033
+  wash_churn                    7874
+  overheated                    3318
+  missing                       1041
   too_old                        686
   rc_danger                        4
 
-OUTCOMES (median price change from first sighting / first pass; 1968 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 1972 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   59    -5.0%    -8.0%   -44.4%   -89.9%    54%
 SCOUT PASS, killed later     29    +7.3%    +0.7%   -73.5%    +9.6%    45%
-KILLED (tracked)           5990    +0.0%   -23.4%   -55.1%    +0.5%    28%
+KILLED (tracked)           5996    +0.0%   -23.9%   -55.1%    +0.5%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -52,13 +52,13 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      279     -0.5%    -10.7%    -14.9%    33%
+none      279     -0.6%    -10.7%    -14.9%    33%
 <15%       64     +0.2%    -11.7%    -10.8%    33%
 15-30%      7     -1.0%     -0.2%     +1.0%    43%
 30%+       15     -0.2%     +0.2%     +2.6%     7%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      281     -0.4%     -2.8%     -4.5%    27%
-<20%       73     +0.2%    -44.7%    -94.9%    42%
+<20%       73     -0.0%    -44.7%    -94.9%    42%
 20%+       11    +16.6%    -99.0%       -      91%
 fresh       n   +1h med   +4h med  +24h med   rug%
 <20%      351     -0.3%     -4.7%    -10.2%    30%
@@ -68,19 +68,19 @@ tokens analysed: 293 | helius credits today: 4783/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%   58    21%    -11.8%   -18.0%   -99.7%
-   -6%     20%   58    22%    -11.8%   -18.0%   -99.7%
-   -6%     30%   58    24%     -9.0%   -18.5%   -99.7%
-  -10%     12%   58    22%    -12.9%   -20.0%   -99.7%
-  -10%     20%   58    22%    -13.4%   -20.1%   -99.7%
-  -10%     30%   58    26%    -10.4%   -20.1%   -99.7%
-  -15%     12%   58    22%    -13.4%   -20.4%   -99.7%
-  -15%     20%   58    24%    -13.5%   -20.9%   -99.7%
-  -15%     30%   58    28%    -10.5%   -20.9%   -99.7%
-  -25%     12%   58    28%    -15.9%   -29.4%   -99.7%
-  -25%     20%   58    29%    -17.5%   -30.0%   -99.7%
-  -25%     30%   58    33%    -14.6%   -30.9%   -99.7%
-  best so far: stop -6%, trail from +30% -> avg -9.0% per trade over n=58
+   -6%     12%   59    22%    -11.3%   -17.5%   -99.7%
+   -6%     20%   59    24%    -11.3%   -17.5%   -99.7%
+   -6%     30%   59    25%     -8.6%   -18.5%   -99.7%
+  -10%     12%   59    24%    -12.4%   -19.9%   -99.7%
+  -10%     20%   59    24%    -12.9%   -20.1%   -99.7%
+  -10%     30%   59    27%     -9.9%   -20.1%   -99.7%
+  -15%     12%   59    24%    -12.9%   -20.4%   -99.7%
+  -15%     20%   59    25%    -13.0%   -20.7%   -99.7%
+  -15%     30%   59    29%    -10.1%   -20.7%   -99.7%
+  -25%     12%   59    29%    -15.3%   -29.2%   -99.7%
+  -25%     20%   59    31%    -17.0%   -29.9%   -99.7%
+  -25%     30%   59    34%    -14.1%   -30.9%   -99.7%
+  best so far: stop -6%, trail from +30% -> avg -8.6% per trade over n=59
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 ================================================================
@@ -88,8 +88,8 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $445.53       $457.29
-return                        -10.9%         -8.5%
+equity                       $449.59       $457.29
+return                        -10.1%         -8.5%
 closed trades                     29            18
 win rate                         24%           22%
 avg net / trade                -7.3%         -9.5%
@@ -102,13 +102,13 @@ Judge on expectancy after >=100 trades each, not on win rate or a few days.
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $445.53 (-10.9%) | cash $423.25 | open 1 | max drawdown -16.6%
+equity $449.59 (-10.1%) | cash $423.25 | open 1 | max drawdown -16.6%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 29 | win 7/29 (24%) | avg net -7.3% | realized $-54.47 | expectancy $-1.88/trade
 exits: stop 21, trail 8
   (n=29 < 100: noise, not evidence)
 open:
-  LEONIDA      cost $22.28  now $22.28 (+0.0%)  held 0.0h
+  LEONIDA      cost $22.28  now $26.34 (+18.2%)  held 0.2h
 last trades:
   NVIDIOT      $23.75 -> $11.17 (-53.0%)  stop  0.3h
   FAIR         $23.20 -> $18.42 (-20.6%)  stop  0.2h
