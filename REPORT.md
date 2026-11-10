@@ -1,25 +1,25 @@
 # TrenchLab report
 
-Updated: 2026-11-10 06:42 UTC
+Updated: 2026-11-10 06:51 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           33169
+pools seen           33206
 passed SCOUT         81
   killed by SCORE    9
   killed by AUDIT    17
 FINAL PASS           55
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    32391
-  few_unique_buyers            31145
-  liquidity_low                30410
-  volume_below_liquidity       23413
-  sells_dominate                8827
-  wash_churn                    6900
-  overheated                    2924
+  too_young                    32428
+  few_unique_buyers            31180
+  liquidity_low                30446
+  volume_below_liquidity       23442
+  sells_dominate                8831
+  wash_churn                    6908
+  overheated                    2926
   missing                        959
   too_old                        636
   score_below                      2
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 1685 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   55    -4.6%    -8.2%   -44.0%   -90.4%    55%
 SCOUT PASS, killed later     26   +13.1%    +3.1%   -73.5%    +9.6%    46%
-KILLED (tracked)           5377    +0.0%   -21.6%   -52.1%    +0.5%    27%
+KILLED (tracked)           5382    +0.0%   -21.6%   -52.4%    +0.5%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -52,7 +52,7 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      251     -0.8%     -9.7%    -12.9%    30%
+none      251     -0.8%     -9.7%    -12.9%    31%
 <15%       59     +0.2%    -12.1%     -8.3%    34%
 15-30%      5     -0.2%     -0.1%     +1.0%    60%
 30%+       15     +0.1%     +0.3%     +2.6%     7%
@@ -61,7 +61,7 @@ none      251     -0.4%     -2.9%     -3.5%    25%
 <20%       68     +0.2%    -39.6%    -94.9%    41%
 20%+       11    +16.6%    -99.0%       -      91%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      316     -0.3%     -5.3%     -6.1%    28%
+<20%      316     -0.3%     -5.3%     -6.1%    29%
 20-40%     10    -48.6%    -99.0%       -      80%
 40%+        4    +11.6%     +5.8%       -      50%
 tokens analysed: 265 | helius credits today: 1584/25000
@@ -88,8 +88,8 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $472.41       $463.94
-return                         -5.5%         -7.2%
+equity                       $472.41       $466.75
+return                         -5.5%         -6.7%
 closed trades                     26            17
 win rate                         27%           18%
 avg net / trade                -3.7%        -10.6%
@@ -122,13 +122,13 @@ signals skipped by the sizer/risk rules: daily_loss_limit 169, already_traded_to
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $463.94 (-7.2%) | cash $430.98 | open 1 | max drawdown -16.2%
+equity $466.75 (-6.7%) | cash $430.98 | open 1 | max drawdown -16.2%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 17 | win 3/17 (18%) | avg net -10.6% | realized $-45.07 | expectancy $-2.65/trade
 exits: stop 14, trail 3
   (n=17 < 100: noise, not evidence)
 open:
-  MEOW         cost $23.95  now $32.96 (+37.6%)  held 2.4h
+  MEOW         cost $23.95  now $35.77 (+49.4%)  held 2.5h
 last trades:
   PUSSY        $24.66 -> $21.70 (-12.0%)  stop  0.2h
   TITTYVERSE   $24.51 -> $20.97 (-14.4%)  stop  0.3h
