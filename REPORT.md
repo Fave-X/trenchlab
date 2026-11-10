@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-10 22:42 UTC
+Updated: 2026-11-10 22:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           38022
+pools seen           38079
 passed SCOUT         88
   killed by SCORE    10
   killed by AUDIT    19
 FINAL PASS           59
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    37177
-  few_unique_buyers            35714
-  liquidity_low                35002
-  volume_below_liquidity       26828
-  sells_dominate               10045
-  wash_churn                    7888
-  overheated                    3326
+  too_young                    37234
+  few_unique_buyers            35767
+  liquidity_low                35057
+  volume_below_liquidity       26867
+  sells_dominate               10058
+  wash_churn                    7897
+  overheated                    3331
   missing                       1042
   too_old                        686
   rc_danger                        4
 
-OUTCOMES (median price change from first sighting / first pass; 1973 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 1975 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   59    -5.2%    -8.0%   -44.4%   -89.9%    54%
+FINAL PASS                   59    -5.2%    -8.0%   -44.4%   -89.9%    56%
 SCOUT PASS, killed later     29    +7.3%    +0.7%   -62.0%    +9.6%    45%
-KILLED (tracked)           6000    +0.0%   -23.9%   -55.1%    +0.5%    28%
+KILLED (tracked)           6007    +0.0%   -23.9%   -55.0%    +0.5%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -45,7 +45,7 @@ SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        28    -68.5%    -93.8%    75%
-70-79      33    -39.9%    -66.7%    45%
+70-79      33    -39.9%    -66.7%    48%
 60-69      20    -35.2%    -70.7%    40%
 <60         7    -32.2%     +9.6%    14%
 
@@ -136,7 +136,7 @@ last trades:
   BORLY        $24.22 -> $18.90 (-22.0%)  stop  0.5h
   YouTube      $24.14 -> $0.05 (-99.8%)  stop  0.2h
   MEOW         $23.95 -> $26.31 (+9.9%)  trail  2.8h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 175, daily_loss_limit 117, setup_rejected:sellers_dominate_now 54, setup_rejected:dumping_now 46, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_bundled 13, setup_rejected:b_received 7, setup_rejected:lp_not_locked 3, cooldown_after_loss 2, setup_rejected:rc_danger:Low Liquidity 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 175, daily_loss_limit 118, setup_rejected:sellers_dominate_now 54, setup_rejected:dumping_now 46, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_bundled 13, setup_rejected:b_received 7, setup_rejected:lp_not_locked 3, cooldown_after_loss 2, setup_rejected:rc_danger:Low Liquidity 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
