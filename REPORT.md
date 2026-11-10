@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-10 00:22 UTC
+Updated: 2026-11-10 00:28 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           31269
+pools seen           31313
 passed SCOUT         76
   killed by SCORE    9
   killed by AUDIT    14
 FINAL PASS           53
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    30519
-  few_unique_buyers            29363
-  liquidity_low                28620
-  volume_below_liquidity       22089
-  sells_dominate                8370
-  wash_churn                    6517
-  overheated                    2768
+  too_young                    30563
+  few_unique_buyers            29406
+  liquidity_low                28662
+  volume_below_liquidity       22123
+  sells_dominate                8380
+  wash_churn                    6530
+  overheated                    2771
   missing                        941
   too_old                        614
   score_below                      2
 
-OUTCOMES (median price change from first sighting / first pass; 1604 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 1619 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   53    -5.2%   -13.2%   -43.9%   -89.9%    55%
 SCOUT PASS, killed later     23   +13.1%    +3.1%   -78.9%    +9.6%    48%
-KILLED (tracked)           5087    +0.0%   -18.5%   -53.3%    +0.8%    26%
+KILLED (tracked)           5094    +0.0%   -18.3%   -52.2%    +0.8%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -136,7 +136,7 @@ last trades:
   NVIDIH       $24.40 -> $21.45 (-12.1%)  stop  0.5h
   STOKE        $24.25 -> $28.63 (+18.1%)  trail  0.8h
   FAIR         $24.47 -> $19.42 (-20.6%)  stop  0.7h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 163, daily_loss_limit 94, setup_rejected:sellers_dominate_now 54, setup_rejected:dumping_now 37, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_received 6, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_bundled 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 164, daily_loss_limit 94, setup_rejected:sellers_dominate_now 54, setup_rejected:dumping_now 37, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_received 6, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 1, setup_rejected:b_bundled 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
