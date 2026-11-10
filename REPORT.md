@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-10 12:12 UTC
+Updated: 2026-11-10 12:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           34857
+pools seen           34916
 passed SCOUT         84
   killed by SCORE    9
   killed by AUDIT    19
 FINAL PASS           56
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    34064
-  few_unique_buyers            32729
-  liquidity_low                32002
-  volume_below_liquidity       24577
-  sells_dominate                9219
-  wash_churn                    7355
-  overheated                    3084
+  too_young                    34123
+  few_unique_buyers            32784
+  liquidity_low                32059
+  volume_below_liquidity       24615
+  sells_dominate                9233
+  wash_churn                    7375
+  overheated                    3089
   missing                        987
   too_old                        648
   rc_danger                        4
 
-OUTCOMES (median price change from first sighting / first pass; 1762 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 1764 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   56    -5.0%   -10.6%   -44.4%   -90.4%    55%
-SCOUT PASS, killed later     28    +8.4%    +1.3%   -78.9%    +9.6%    43%
-KILLED (tracked)           5590    +0.0%   -23.1%   -53.4%    +0.4%    27%
+SCOUT PASS, killed later     28    +8.4%    +1.3%   -73.5%    +9.6%    43%
+KILLED (tracked)           5596    +0.0%   -23.8%   -53.4%    +0.4%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -46,13 +46,13 @@ if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        26    -70.6%    -93.8%    81%
 70-79      31    -42.3%    -66.9%    48%
-60-69      21    -37.4%    -70.7%    29%
+60-69      21    -35.2%    -70.7%    29%
 <60         6    -39.8%     +9.6%    17%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      262     -0.9%    -10.9%    -12.9%    32%
+none      262     -0.9%    -11.0%    -12.9%    32%
 <15%       59     +0.2%    -12.6%     -9.3%    34%
 15-30%      5     -0.2%     -0.2%     +1.0%    60%
 30%+       15     -0.2%     +0.2%     +2.6%     7%
@@ -61,7 +61,7 @@ none      261     -0.4%     -3.0%     -3.7%    26%
 <20%       69     -0.0%    -45.0%    -94.9%    42%
 20%+       11    +16.6%    -99.0%       -      91%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      328     -0.3%     -6.9%     -7.4%    30%
+<20%      328     -0.3%     -7.2%     -7.4%    30%
 20-40%      9    -98.6%    -99.2%       -      89%
 40%+        4    +11.6%     +5.8%       -      50%
 tokens analysed: 276 | helius credits today: 2581/25000
