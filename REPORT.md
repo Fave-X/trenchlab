@@ -1,25 +1,25 @@
 # TrenchLab report
 
-Updated: 2026-11-10 22:02 UTC
+Updated: 2026-11-10 22:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           37800
+pools seen           37860
 passed SCOUT         87
   killed by SCORE    10
   killed by AUDIT    19
 FINAL PASS           58
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    36955
-  few_unique_buyers            35498
-  liquidity_low                34786
-  volume_below_liquidity       26675
-  sells_dominate                9993
-  wash_churn                    7847
-  overheated                    3305
+  too_young                    37015
+  few_unique_buyers            35555
+  liquidity_low                34846
+  volume_below_liquidity       26718
+  sells_dominate               10009
+  wash_churn                    7856
+  overheated                    3311
   missing                       1040
   too_old                        686
   rc_danger                        4
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 1967 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   58    -5.0%    -8.0%   -44.4%   -89.9%    55%
 SCOUT PASS, killed later     29    +7.3%    +0.7%   -73.5%    +9.6%    45%
-KILLED (tracked)           5974    +0.0%   -24.0%   -55.1%    +0.4%    28%
+KILLED (tracked)           5981    +0.0%   -23.6%   -55.1%    +0.5%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -64,7 +64,7 @@ fresh       n   +1h med   +4h med  +24h med   rug%
 <20%      351     -0.3%     -4.7%    -10.2%    30%
 20-40%     10    -51.5%    -99.2%       -      80%
 40%+        4    +11.6%     +5.8%       -      50%
-tokens analysed: 293 | helius credits today: 4580/25000
+tokens analysed: 293 | helius credits today: 4614/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -136,7 +136,7 @@ last trades:
   BORLY        $24.22 -> $18.90 (-22.0%)  stop  0.5h
   YouTube      $24.14 -> $0.05 (-99.8%)  stop  0.2h
   MEOW         $23.95 -> $26.31 (+9.9%)  trail  2.8h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 175, daily_loss_limit 114, setup_rejected:sellers_dominate_now 54, setup_rejected:dumping_now 45, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_bundled 13, setup_rejected:b_received 7, setup_rejected:lp_not_locked 3, cooldown_after_loss 2, setup_rejected:rc_danger:Low Liquidity 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 175, daily_loss_limit 115, setup_rejected:sellers_dominate_now 54, setup_rejected:dumping_now 46, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_bundled 13, setup_rejected:b_received 7, setup_rejected:lp_not_locked 3, cooldown_after_loss 2, setup_rejected:rc_danger:Low Liquidity 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
