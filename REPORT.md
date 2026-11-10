@@ -1,41 +1,41 @@
 # TrenchLab report
 
-Updated: 2026-11-10 21:30 UTC
+Updated: 2026-11-10 21:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           37647
+pools seen           37724
 passed SCOUT         87
   killed by SCORE    10
   killed by AUDIT    19
 FINAL PASS           58
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    36805
-  few_unique_buyers            35350
-  liquidity_low                34643
-  volume_below_liquidity       26553
-  sells_dominate                9952
-  wash_churn                    7831
-  overheated                    3302
+  too_young                    36880
+  few_unique_buyers            35425
+  liquidity_low                34715
+  volume_below_liquidity       26617
+  sells_dominate                9972
+  wash_churn                    7840
+  overheated                    3305
   missing                       1037
-  too_old                        685
+  too_old                        686
   rc_danger                        4
 
-OUTCOMES (median price change from first sighting / first pass; 1962 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 1963 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   58    -5.0%    -8.2%   -44.0%   -90.4%    55%
+FINAL PASS                   58    -5.0%    -8.2%   -44.4%   -89.9%    55%
 SCOUT PASS, killed later     29    +7.3%    +0.7%   -73.5%    +9.6%    45%
-KILLED (tracked)           5949    +0.0%   -24.0%   -55.1%    +0.4%    28%
+KILLED (tracked)           5963    +0.0%   -23.9%   -55.0%    +0.4%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
 too_young                      42    -89.1%    -71.7%    48%
 too_old                        22     -0.2%     -2.6%     0%
-wash_churn                     12     -1.0%       -      42%
+wash_churn                     13     -1.0%       -      38%
 liquidity_low                  10    -56.2%       -      40%
 volume_below_liquidity          5     +5.9%    +15.3%    40%
 overheated                      2    -11.0%       -      50%
@@ -44,27 +44,27 @@ sells_dominate                  1    -54.2%       -       0%
 SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
-80+        28    -70.6%    -93.8%    75%
-70-79      32    -39.9%    -66.9%    47%
+80+        28    -68.5%    -93.8%    75%
+70-79      32    -39.9%    -66.7%    47%
 60-69      20    -35.2%    -70.7%    40%
 <60         7    -39.8%     +9.6%    14%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      278     -0.6%    -10.7%    -13.9%    33%
-<15%       63     +0.2%    -11.7%    -10.8%    33%
+none      279     -0.6%    -10.9%    -14.9%    33%
+<15%       64     +0.2%    -11.7%    -10.8%    33%
 15-30%      7     -1.0%     -0.2%     +1.0%    43%
 30%+       15     -0.2%     +0.2%     +2.6%     7%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      279     -0.4%     -2.8%     -4.2%    27%
+none      281     -0.4%     -2.9%     -4.5%    27%
 <20%       73     +0.2%    -44.7%    -94.9%    42%
 20%+       11    +16.6%    -99.0%       -      91%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      349     -0.3%     -4.7%     -9.3%    30%
+<20%      351     -0.3%     -4.9%    -10.2%    30%
 20-40%     10    -51.5%    -99.2%       -      80%
 40%+        4    +11.6%     +5.8%       -      50%
-tokens analysed: 292 | helius credits today: 4519/25000
+tokens analysed: 293 | helius credits today: 4580/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -77,9 +77,9 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     12%   58    22%    -13.4%   -20.4%   -99.7%
   -15%     20%   58    24%    -13.5%   -20.9%   -99.7%
   -15%     30%   58    28%    -10.5%   -20.9%   -99.7%
-  -25%     12%   58    28%    -15.3%   -29.4%   -99.7%
-  -25%     20%   58    29%    -17.0%   -30.0%   -99.7%
-  -25%     30%   58    33%    -14.1%   -30.9%   -99.7%
+  -25%     12%   58    28%    -15.9%   -29.4%   -99.7%
+  -25%     20%   58    29%    -17.5%   -30.0%   -99.7%
+  -25%     30%   58    33%    -14.6%   -30.9%   -99.7%
   best so far: stop -6%, trail from +30% -> avg -9.0% per trade over n=58
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
@@ -136,7 +136,7 @@ last trades:
   BORLY        $24.22 -> $18.90 (-22.0%)  stop  0.5h
   YouTube      $24.14 -> $0.05 (-99.8%)  stop  0.2h
   MEOW         $23.95 -> $26.31 (+9.9%)  trail  2.8h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 175, daily_loss_limit 109, setup_rejected:sellers_dominate_now 54, setup_rejected:dumping_now 42, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_bundled 13, setup_rejected:b_received 7, setup_rejected:lp_not_locked 3, cooldown_after_loss 2, setup_rejected:rc_danger:Low Liquidity 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 175, daily_loss_limit 111, setup_rejected:sellers_dominate_now 54, setup_rejected:dumping_now 44, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_bundled 13, setup_rejected:b_received 7, setup_rejected:lp_not_locked 3, cooldown_after_loss 2, setup_rejected:rc_danger:Low Liquidity 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
