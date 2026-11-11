@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-11 11:42 UTC
+Updated: 2026-11-11 11:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           41939
+pools seen           41984
 passed SCOUT         97
   killed by SCORE    11
   killed by AUDIT    21
 FINAL PASS           65
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    41023
-  few_unique_buyers            39462
-  liquidity_low                38640
-  volume_below_liquidity       29654
-  sells_dominate               11041
-  wash_churn                    8718
-  overheated                    3624
-  missing                       1154
-  too_old                        742
+  too_young                    41067
+  few_unique_buyers            39506
+  liquidity_low                38683
+  volume_below_liquidity       29682
+  sells_dominate               11054
+  wash_churn                    8724
+  overheated                    3627
+  missing                       1155
+  too_old                        743
   rc_danger                        4
 
-OUTCOMES (median price change from first sighting / first pass; 2219 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 2221 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   65    -4.6%    -7.3%   -44.0%   -89.9%    55%
 SCOUT PASS, killed later     32    +6.2%    +0.2%   -55.0%    +9.6%    47%
-KILLED (tracked)           6494    +0.0%   -26.1%   -56.4%    +0.4%    29%
+KILLED (tracked)           6500    +0.0%   -26.6%   -56.8%    +0.4%    29%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -52,16 +52,16 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      304     -0.6%    -10.9%    -19.8%    34%
+none      304     -0.6%    -10.7%    -19.8%    34%
 <15%       65     +0.1%    -12.1%    -10.8%    32%
 15-30%      7     -1.0%     -0.2%     +1.0%    43%
 30%+       15     -0.2%     +0.2%     +2.6%     7%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      300     -0.4%     -3.0%     -7.4%    27%
+none      300     -0.4%     -2.9%     -7.4%    27%
 <20%       80     -0.3%    -44.8%    -94.9%    44%
 20%+       11    +16.6%    -99.0%       -      91%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      376     -0.3%     -6.8%    -11.5%    31%
+<20%      376     -0.3%     -6.6%    -11.5%    31%
 20-40%     11     -4.5%    -99.0%       -      73%
 40%+        4    +11.6%     +5.8%       -      50%
 tokens analysed: 314 | helius credits today: 1987/25000
@@ -116,7 +116,7 @@ last trades:
   NIHAO        $21.58 -> $19.27 (-10.7%)  stop  1.5h
   VEYL         $21.57 -> $30.37 (+40.8%)  trail  0.7h
   DACITY       $21.58 -> $14.66 (-32.0%)  stop  8.3h
-signals skipped by the sizer/risk rules: daily_loss_limit 169, already_traded_token 159, cooldown_after_loss 11, max_open_positions 5
+signals skipped by the sizer/risk rules: daily_loss_limit 169, already_traded_token 160, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
