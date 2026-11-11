@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-11 11:32 UTC
+Updated: 2026-11-11 11:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           41895
+pools seen           41939
 passed SCOUT         97
   killed by SCORE    11
   killed by AUDIT    21
 FINAL PASS           65
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    40979
-  few_unique_buyers            39423
-  liquidity_low                38599
-  volume_below_liquidity       29623
-  sells_dominate               11030
-  wash_churn                    8709
-  overheated                    3621
-  missing                       1153
+  too_young                    41023
+  few_unique_buyers            39462
+  liquidity_low                38640
+  volume_below_liquidity       29654
+  sells_dominate               11041
+  wash_churn                    8718
+  overheated                    3624
+  missing                       1154
   too_old                        742
   rc_danger                        4
 
-OUTCOMES (median price change from first sighting / first pass; 2215 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 2219 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   65    -4.6%    -7.3%   -44.0%   -89.9%    55%
 SCOUT PASS, killed later     32    +6.2%    +0.2%   -55.0%    +9.6%    47%
-KILLED (tracked)           6488    +0.0%   -26.1%   -56.4%    +0.4%    29%
+KILLED (tracked)           6494    +0.0%   -26.1%   -56.4%    +0.4%    29%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -64,23 +64,23 @@ fresh       n   +1h med   +4h med  +24h med   rug%
 <20%      376     -0.3%     -6.8%    -11.5%    31%
 20-40%     11     -4.5%    -99.0%       -      73%
 40%+        4    +11.6%     +5.8%       -      50%
-tokens analysed: 314 | helius credits today: 1921/25000
+tokens analysed: 314 | helius credits today: 1987/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
    -6%     12%   65    25%    -10.3%   -17.1%   -99.7%
    -6%     20%   65    26%    -10.3%   -17.1%   -99.7%
-   -6%     30%   65    26%     -8.0%   -17.1%   -99.7%
+   -6%     30%   65    26%     -8.4%   -17.5%   -99.7%
   -10%     12%   65    26%    -11.3%   -19.3%   -99.7%
   -10%     20%   65    26%    -11.8%   -19.5%   -99.7%
-  -10%     30%   65    28%     -9.3%   -19.5%   -99.7%
+  -10%     30%   65    28%     -9.7%   -19.9%   -99.7%
   -15%     12%   65    28%    -11.0%   -20.1%   -99.7%
   -15%     20%   65    29%    -11.2%   -20.4%   -99.7%
-  -15%     30%   65    31%     -8.6%   -20.4%   -99.7%
+  -15%     30%   65    31%     -9.0%   -20.4%   -99.7%
   -25%     12%   65    32%    -13.2%   -27.9%   -99.7%
   -25%     20%   65    34%    -14.7%   -29.7%   -99.7%
-  -25%     30%   65    35%    -12.3%   -29.9%   -99.7%
-  best so far: stop -6%, trail from +30% -> avg -8.0% per trade over n=65
+  -25%     30%   65    35%    -12.7%   -30.1%   -99.7%
+  best so far: stop -6%, trail from +30% -> avg -8.4% per trade over n=65
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 ================================================================
@@ -88,29 +88,26 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $436.45       $462.65
-return                        -12.7%         -7.5%
-closed trades                     34            21
+equity                       $431.16       $462.65
+return                        -13.8%         -7.5%
+closed trades                     35            21
 win rate                         26%           24%
-avg net / trade                -7.2%         -7.0%
-expectancy $/trade            $-1.82        $-1.78
+avg net / trade                -7.9%         -7.0%
+expectancy $/trade            $-1.97        $-1.78
 max drawdown                  -18.1%        -16.2%
-open now                           1             0
+open now                           0             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $436.45 (-12.7%) | cash $416.50 | open 1 | max drawdown -18.1%
+equity $431.16 (-13.8%) | cash $431.16 | open 0 | max drawdown -18.1%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 34 | win 9/34 (26%) | avg net -7.2% | realized $-61.92 | expectancy $-1.82/trade
-exits: stop 24, trail 10
-  (n=34 < 100: noise, not evidence)
-open:
-  DACITY       cost $21.58  now $19.95 (-7.6%)  held 8.2h
+closed 35 | win 9/35 (26%) | avg net -7.9% | realized $-68.84 | expectancy $-1.97/trade
+exits: stop 25, trail 10
+  (n=35 < 100: noise, not evidence)
 last trades:
-  X            $23.62 -> $12.50 (-47.1%)  stop  0.2h
   HCAT         $23.06 -> $11.26 (-51.2%)  stop  0.2h
   Catcity      $22.47 -> $18.52 (-17.6%)  stop  0.2h
   LEONIDA      $22.28 -> $5.07 (-77.2%)  stop  0.3h
@@ -118,7 +115,8 @@ last trades:
   mihao        $21.42 -> $26.82 (+25.2%)  trail  2.2h
   NIHAO        $21.58 -> $19.27 (-10.7%)  stop  1.5h
   VEYL         $21.57 -> $30.37 (+40.8%)  trail  0.7h
-signals skipped by the sizer/risk rules: daily_loss_limit 169, already_traded_token 158, cooldown_after_loss 11, max_open_positions 5
+  DACITY       $21.58 -> $14.66 (-32.0%)  stop  8.3h
+signals skipped by the sizer/risk rules: daily_loss_limit 169, already_traded_token 159, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
