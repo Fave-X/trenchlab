@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-11 22:42 UTC
+Updated: 2026-11-11 22:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           45029
+pools seen           45084
 passed SCOUT         99
   killed by SCORE    11
   killed by AUDIT    22
 FINAL PASS           66
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    44044
-  few_unique_buyers            42428
-  liquidity_low                41564
-  volume_below_liquidity       31962
-  sells_dominate               11856
-  wash_churn                    9182
-  overheated                    3857
-  missing                       1215
-  too_old                        792
+  too_young                    44098
+  few_unique_buyers            42480
+  liquidity_low                41616
+  volume_below_liquidity       31995
+  sells_dominate               11876
+  wash_churn                    9193
+  overheated                    3864
+  missing                       1216
+  too_old                        793
   rc_danger                        9
 
-OUTCOMES (median price change from first sighting / first pass; 2431 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 2434 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   66    -4.6%    -7.3%   -44.0%   -90.4%    59%
 SCOUT PASS, killed later     33    +6.2%    +0.1%   -55.0%    +9.6%    45%
-KILLED (tracked)           6913    +0.0%   -27.2%   -58.3%    +0.4%    29%
+KILLED (tracked)           6922    +0.0%   -27.2%   -58.4%    +0.4%    29%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -68,19 +68,19 @@ tokens analysed: 330 | helius credits today: 4674/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%   65    25%    -10.3%   -17.1%   -99.7%
-   -6%     20%   65    26%    -10.3%   -17.1%   -99.7%
-   -6%     30%   65    26%     -8.4%   -17.5%   -99.7%
-  -10%     12%   65    26%    -11.3%   -19.3%   -99.7%
-  -10%     20%   65    26%    -11.8%   -19.5%   -99.7%
-  -10%     30%   65    28%     -9.7%   -19.9%   -99.7%
-  -15%     12%   65    28%    -11.0%   -20.1%   -99.7%
-  -15%     20%   65    29%    -11.2%   -20.4%   -99.7%
-  -15%     30%   65    31%     -9.0%   -20.4%   -99.7%
-  -25%     12%   65    32%    -13.2%   -27.9%   -99.7%
-  -25%     20%   65    34%    -14.7%   -29.7%   -99.7%
-  -25%     30%   65    35%    -12.7%   -30.1%   -99.7%
-  best so far: stop -6%, trail from +30% -> avg -8.4% per trade over n=65
+   -6%     12%   66    26%     -9.9%   -17.1%   -99.7%
+   -6%     20%   66    27%     -9.9%   -17.1%   -99.7%
+   -6%     30%   66    27%     -8.0%   -17.3%   -99.7%
+  -10%     12%   66    27%    -10.9%   -19.0%   -99.7%
+  -10%     20%   66    27%    -11.4%   -19.4%   -99.7%
+  -10%     30%   66    29%     -9.3%   -19.7%   -99.7%
+  -15%     12%   66    29%    -10.6%   -20.0%   -99.7%
+  -15%     20%   66    30%    -10.7%   -20.3%   -99.7%
+  -15%     30%   66    32%     -8.6%   -20.4%   -99.7%
+  -25%     12%   66    33%    -12.8%   -24.6%   -99.7%
+  -25%     20%   66    35%    -14.3%   -29.4%   -99.7%
+  -25%     30%   66    36%    -12.3%   -30.0%   -99.7%
+  best so far: stop -6%, trail from +30% -> avg -8.0% per trade over n=66
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 ================================================================
@@ -88,8 +88,8 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $431.16       $443.24
-return                        -13.8%        -11.4%
+equity                       $434.84       $443.24
+return                        -13.0%        -11.4%
 closed trades                     35            27
 win rate                         26%           19%
 avg net / trade                -7.9%         -8.6%
@@ -102,13 +102,13 @@ Judge on expectancy after >=100 trades each, not on win rate or a few days.
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $431.16 (-13.8%) | cash $409.60 | open 1 | max drawdown -18.1%
+equity $434.84 (-13.0%) | cash $409.60 | open 1 | max drawdown -18.1%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 35 | win 9/35 (26%) | avg net -7.9% | realized $-68.84 | expectancy $-1.97/trade
 exits: stop 25, trail 10
   (n=35 < 100: noise, not evidence)
 open:
-  NIHAONOON    cost $21.56  now $21.56 (+0.0%)  held 0.0h
+  NIHAONOON    cost $21.56  now $25.24 (+17.1%)  held 0.2h
 last trades:
   HCAT         $23.06 -> $11.26 (-51.2%)  stop  0.2h
   Catcity      $22.47 -> $18.52 (-17.6%)  stop  0.2h
