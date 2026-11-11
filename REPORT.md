@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-11 23:12 UTC
+Updated: 2026-11-11 23:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           45232
+pools seen           45285
 passed SCOUT         99
   killed by SCORE    11
   killed by AUDIT    22
 FINAL PASS           66
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    44246
-  few_unique_buyers            42622
-  liquidity_low                41743
-  volume_below_liquidity       32086
-  sells_dominate               11920
-  wash_churn                    9208
-  overheated                    3873
+  too_young                    44299
+  few_unique_buyers            42675
+  liquidity_low                41795
+  volume_below_liquidity       32126
+  sells_dominate               11930
+  wash_churn                    9214
+  overheated                    3876
   missing                       1234
   too_old                        793
   rc_danger                        9
 
-OUTCOMES (median price change from first sighting / first pass; 2447 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 2448 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   66    -4.2%    -7.3%   -44.0%   -90.4%    59%
 SCOUT PASS, killed later     33    +6.2%    +0.1%   -55.0%    +9.6%    45%
-KILLED (tracked)           6937    +0.0%   -27.0%   -58.5%    +0.4%    29%
+KILLED (tracked)           6941    +0.0%   -27.1%   -58.8%    +0.4%    29%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -73,7 +73,7 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
    -6%     30%   66    27%     -7.9%   -17.3%   -99.7%
   -10%     12%   66    26%    -11.2%   -19.0%   -99.7%
   -10%     20%   66    26%    -11.7%   -19.4%   -99.7%
-  -10%     30%   66    29%     -9.2%   -19.7%   -99.7%
+  -10%     30%   66    29%     -9.1%   -19.7%   -99.7%
   -15%     12%   66    27%    -10.9%   -20.0%   -99.7%
   -15%     20%   66    29%    -11.0%   -20.3%   -99.7%
   -15%     30%   66    32%     -8.5%   -20.4%   -99.7%
@@ -136,7 +136,7 @@ last trades:
   AIRDROP      $22.69 -> $18.56 (-18.2%)  stop  0.3h
   NOBUSHIBA    $22.79 -> $20.46 (-10.2%)  stop  7.0h
   pants        $22.47 -> $19.96 (-11.2%)  stop  0.5h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 184, daily_loss_limit 118, setup_rejected:sellers_dominate_now 57, setup_rejected:dumping_now 50, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_bundled 13, setup_rejected:b_received 7, cooldown_after_loss 5, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 184, daily_loss_limit 118, setup_rejected:sellers_dominate_now 57, setup_rejected:dumping_now 51, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_bundled 13, setup_rejected:b_received 7, cooldown_after_loss 5, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
