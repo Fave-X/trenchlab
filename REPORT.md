@@ -1,32 +1,32 @@
 # TrenchLab report
 
-Updated: 2026-11-11 05:49 UTC
+Updated: 2026-11-11 05:59 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           40125
+pools seen           40153
 passed SCOUT         94
   killed by SCORE    10
   killed by AUDIT    19
 FINAL PASS           65
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    39247
-  few_unique_buyers            37742
-  liquidity_low                36973
-  volume_below_liquidity       28365
-  sells_dominate               10608
-  wash_churn                    8345
-  overheated                    3481
-  missing                       1102
+  too_young                    39275
+  few_unique_buyers            37770
+  liquidity_low                36993
+  volume_below_liquidity       28379
+  sells_dominate               10616
+  wash_churn                    8352
+  overheated                    3482
+  missing                       1110
   too_old                        709
   rc_danger                        4
 
 OUTCOMES (median price change from first sighting / first pass; 2086 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   65    -4.6%    -7.8%   -44.4%   -89.9%    55%
+FINAL PASS                   65    -4.6%    -7.8%   -44.0%   -89.9%    55%
 SCOUT PASS, killed later     29    +7.3%    +0.7%   -62.0%    +9.6%    45%
 KILLED (tracked)           6225    +0.0%   -26.0%   -55.0%    +0.4%    29%
 
@@ -46,41 +46,41 @@ if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        29    -70.6%    -93.8%    79%
 70-79      35    -39.9%    -66.7%    49%
-60-69      23    -32.0%    -70.7%    35%
+60-69      23    -28.8%    -70.7%    35%
 <60         7    -32.2%     +9.6%    14%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      292     -0.6%    -10.9%    -23.6%    33%
+none      292     -0.6%    -10.7%    -23.6%    33%
 <15%       63     +0.1%    -12.1%    -12.3%    33%
 15-30%      7     -1.0%     -0.2%     +1.0%    43%
 30%+       15     -0.2%     +0.2%     +2.6%     7%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      290     -0.4%     -2.9%     -9.3%    27%
+none      290     -0.4%     -2.8%     -9.3%    27%
 <20%       76     -0.2%    -44.8%    -94.9%    43%
 20%+       11    +16.6%    -99.0%       -      91%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      362     -0.3%     -5.3%    -11.6%    31%
+<20%      362     -0.3%     -5.1%    -11.6%    31%
 20-40%     11    -51.5%    -99.1%       -      73%
 40%+        4    +11.6%     +5.8%       -      50%
 tokens analysed: 301 | helius credits today: 856/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%   65    25%    -10.3%   -17.1%   -99.7%
-   -6%     20%   65    26%    -10.3%   -17.1%   -99.7%
-   -6%     30%   65    28%     -7.8%   -17.1%   -99.7%
-  -10%     12%   65    26%    -11.3%   -19.3%   -99.7%
-  -10%     20%   65    26%    -11.8%   -19.5%   -99.7%
-  -10%     30%   65    29%     -9.1%   -19.5%   -99.7%
-  -15%     12%   65    28%    -11.0%   -20.1%   -99.7%
-  -15%     20%   65    29%    -11.1%   -20.4%   -99.7%
-  -15%     30%   65    32%     -8.4%   -20.4%   -99.7%
-  -25%     12%   65    32%    -13.2%   -27.9%   -99.7%
-  -25%     20%   65    34%    -14.7%   -29.7%   -99.7%
-  -25%     30%   65    37%    -12.1%   -29.9%   -99.7%
-  best so far: stop -6%, trail from +30% -> avg -7.8% per trade over n=65
+   -6%     12%   65    25%    -10.0%   -17.1%   -99.7%
+   -6%     20%   65    26%    -10.0%   -17.1%   -99.7%
+   -6%     30%   65    28%     -7.5%   -17.1%   -99.7%
+  -10%     12%   65    26%    -11.0%   -19.3%   -99.7%
+  -10%     20%   65    26%    -11.5%   -19.5%   -99.7%
+  -10%     30%   65    29%     -8.8%   -19.5%   -99.7%
+  -15%     12%   65    28%    -10.7%   -20.1%   -99.7%
+  -15%     20%   65    29%    -10.9%   -20.4%   -99.7%
+  -15%     30%   65    32%     -8.2%   -20.4%   -99.7%
+  -25%     12%   65    32%    -13.0%   -27.9%   -99.7%
+  -25%     20%   65    34%    -14.4%   -29.7%   -99.7%
+  -25%     30%   65    37%    -11.8%   -29.9%   -99.7%
+  best so far: stop -6%, trail from +30% -> avg -7.5% per trade over n=65
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 ================================================================
@@ -108,8 +108,8 @@ closed 33 | win 8/33 (24%) | avg net -8.6% | realized $-70.72 | expectancy $-2.1
 exits: stop 24, trail 9
   (n=33 < 100: noise, not evidence)
 open:
-  DACITY       cost $21.58  now $23.65 (+9.6%)  held 2.5h
-  VEYL         cost $21.57  now $21.57 (+0.0%)  held 0.2h
+  DACITY       cost $21.58  now $23.65 (+9.6%)  held 2.7h
+  VEYL         cost $21.57  now $21.57 (+0.0%)  held 0.3h
 last trades:
   AICoin       $22.46 -> $45.74 (+103.7%)  trail  0.8h
   X            $23.62 -> $12.50 (-47.1%)  stop  0.2h
@@ -119,7 +119,7 @@ last trades:
   HOLD         $21.42 -> $19.28 (-10.0%)  stop  0.1h
   mihao        $21.42 -> $26.82 (+25.2%)  trail  2.2h
   NIHAO        $21.58 -> $19.27 (-10.7%)  stop  1.5h
-signals skipped by the sizer/risk rules: daily_loss_limit 169, already_traded_token 145, cooldown_after_loss 11, max_open_positions 5
+signals skipped by the sizer/risk rules: daily_loss_limit 169, already_traded_token 147, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -131,7 +131,7 @@ closed 20 | win 5/20 (25%) | avg net -6.2% | realized $-32.18 | expectancy $-1.6
 exits: stop 15, trail 5
   (n=20 < 100: noise, not evidence)
 open:
-  If           cost $23.39  now $22.93 (-1.9%)  held 0.8h
+  If           cost $23.39  now $22.93 (-1.9%)  held 1.0h
 last trades:
   NVIDIH       $24.40 -> $21.45 (-12.1%)  stop  0.5h
   STOKE        $24.25 -> $28.63 (+18.1%)  trail  0.8h
