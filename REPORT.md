@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-11 10:31 UTC
+Updated: 2026-11-11 10:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           41603
+pools seen           41651
 passed SCOUT         97
   killed by SCORE    11
   killed by AUDIT    21
 FINAL PASS           65
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    40687
-  few_unique_buyers            39145
-  liquidity_low                38335
-  volume_below_liquidity       29429
-  sells_dominate               10960
-  wash_churn                    8658
-  overheated                    3600
+  too_young                    40735
+  few_unique_buyers            39191
+  liquidity_low                38379
+  volume_below_liquidity       29463
+  sells_dominate               10968
+  wash_churn                    8666
+  overheated                    3604
   missing                       1137
   too_old                        742
   rc_danger                        4
 
-OUTCOMES (median price change from first sighting / first pass; 2196 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 2201 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   65    -4.6%    -7.3%   -44.0%   -89.9%    55%
 SCOUT PASS, killed later     32    +6.2%    +0.2%   -62.0%    +9.6%    47%
-KILLED (tracked)           6444    +0.0%   -27.1%   -56.1%    +0.4%    29%
+KILLED (tracked)           6452    +0.0%   -27.1%   -56.1%    +0.4%    29%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -58,7 +58,7 @@ none      303     -0.6%    -10.7%    -19.8%    33%
 30%+       15     -0.2%     +0.2%     +2.6%     7%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      300     -0.4%     -3.0%     -7.4%    27%
-<20%       79     -0.2%    -44.8%    -94.9%    43%
+<20%       79     -0.3%    -44.8%    -94.9%    43%
 20%+       11    +16.6%    -99.0%       -      91%
 fresh       n   +1h med   +4h med  +24h med   rug%
 <20%      375     -0.3%     -6.8%    -11.5%    31%
@@ -88,7 +88,7 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $441.11       $462.65
+equity                       $440.94       $462.65
 return                        -11.8%         -7.5%
 closed trades                     34            21
 win rate                         26%           24%
@@ -102,13 +102,13 @@ Judge on expectancy after >=100 trades each, not on win rate or a few days.
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $441.11 (-11.8%) | cash $416.50 | open 1 | max drawdown -18.1%
+equity $440.94 (-11.8%) | cash $416.50 | open 1 | max drawdown -18.1%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 34 | win 9/34 (26%) | avg net -7.2% | realized $-61.92 | expectancy $-1.82/trade
 exits: stop 24, trail 10
   (n=34 < 100: noise, not evidence)
 open:
-  DACITY       cost $21.58  now $24.61 (+14.0%)  held 7.2h
+  DACITY       cost $21.58  now $24.45 (+13.3%)  held 7.4h
 last trades:
   X            $23.62 -> $12.50 (-47.1%)  stop  0.2h
   HCAT         $23.06 -> $11.26 (-51.2%)  stop  0.2h
