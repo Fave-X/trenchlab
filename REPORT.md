@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-11 22:52 UTC
+Updated: 2026-11-11 23:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           45084
+pools seen           45186
 passed SCOUT         99
   killed by SCORE    11
   killed by AUDIT    22
 FINAL PASS           66
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    44098
-  few_unique_buyers            42480
-  liquidity_low                41616
-  volume_below_liquidity       31995
-  sells_dominate               11876
-  wash_churn                    9193
-  overheated                    3864
+  too_young                    44200
+  few_unique_buyers            42578
+  liquidity_low                41716
+  volume_below_liquidity       32068
+  sells_dominate               11905
+  wash_churn                    9203
+  overheated                    3871
   missing                       1216
   too_old                        793
   rc_danger                        9
 
-OUTCOMES (median price change from first sighting / first pass; 2434 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 2444 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   66    -4.6%    -7.3%   -44.0%   -90.4%    59%
+FINAL PASS                   66    -4.2%    -7.3%   -44.0%   -90.4%    59%
 SCOUT PASS, killed later     33    +6.2%    +0.1%   -55.0%    +9.6%    45%
-KILLED (tracked)           6922    +0.0%   -27.2%   -58.4%    +0.4%    29%
+KILLED (tracked)           6932    +0.0%   -27.2%   -58.5%    +0.4%    29%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -61,26 +61,26 @@ none      320     -0.3%     -3.0%     -6.1%    28%
 <20%       81     -0.3%    -46.6%    -94.9%    46%
 20%+       11    +16.6%    -99.0%       -      91%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      397     -0.3%     -6.8%    -11.3%    31%
+<20%      397     -0.3%     -6.9%    -11.3%    31%
 20-40%     11     -4.5%    -99.0%       -      82%
 40%+        4    +11.6%     +5.8%       -      50%
-tokens analysed: 330 | helius credits today: 4674/25000
+tokens analysed: 330 | helius credits today: 4739/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%   66    26%     -9.9%   -17.1%   -99.7%
-   -6%     20%   66    27%     -9.9%   -17.1%   -99.7%
-   -6%     30%   66    27%     -8.0%   -17.3%   -99.7%
-  -10%     12%   66    27%    -10.9%   -19.0%   -99.7%
-  -10%     20%   66    27%    -11.4%   -19.4%   -99.7%
-  -10%     30%   66    29%     -9.3%   -19.7%   -99.7%
-  -15%     12%   66    29%    -10.6%   -20.0%   -99.7%
-  -15%     20%   66    30%    -10.7%   -20.3%   -99.7%
-  -15%     30%   66    32%     -8.6%   -20.4%   -99.7%
-  -25%     12%   66    33%    -12.8%   -24.6%   -99.7%
-  -25%     20%   66    35%    -14.3%   -29.4%   -99.7%
-  -25%     30%   66    36%    -12.3%   -30.0%   -99.7%
-  best so far: stop -6%, trail from +30% -> avg -8.0% per trade over n=66
+   -6%     12%   66    24%    -10.2%   -17.1%   -99.7%
+   -6%     20%   66    26%    -10.2%   -17.1%   -99.7%
+   -6%     30%   66    26%     -8.3%   -17.3%   -99.7%
+  -10%     12%   66    26%    -11.2%   -19.0%   -99.7%
+  -10%     20%   66    26%    -11.7%   -19.4%   -99.7%
+  -10%     30%   66    27%     -9.5%   -19.7%   -99.7%
+  -15%     12%   66    27%    -10.9%   -20.0%   -99.7%
+  -15%     20%   66    29%    -11.0%   -20.3%   -99.7%
+  -15%     30%   66    30%     -8.9%   -20.4%   -99.7%
+  -25%     12%   66    32%    -13.1%   -24.6%   -99.7%
+  -25%     20%   66    33%    -14.5%   -29.4%   -99.7%
+  -25%     30%   66    35%    -12.5%   -30.0%   -99.7%
+  best so far: stop -6%, trail from +30% -> avg -8.3% per trade over n=66
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 ================================================================
@@ -88,29 +88,26 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $434.84       $443.24
-return                        -13.0%        -11.4%
-closed trades                     35            27
-win rate                         26%           19%
-avg net / trade                -7.9%         -8.6%
-expectancy $/trade            $-1.97        $-2.10
+equity                       $431.16       $443.24
+return                        -13.8%        -11.4%
+closed trades                     36            27
+win rate                         25%           19%
+avg net / trade                -7.7%         -8.6%
+expectancy $/trade            $-1.91        $-2.10
 max drawdown                  -18.1%        -18.5%
-open now                           1             0
+open now                           0             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $434.84 (-13.0%) | cash $409.60 | open 1 | max drawdown -18.1%
+equity $431.16 (-13.8%) | cash $431.16 | open 0 | max drawdown -18.1%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 35 | win 9/35 (26%) | avg net -7.9% | realized $-68.84 | expectancy $-1.97/trade
-exits: stop 25, trail 10
-  (n=35 < 100: noise, not evidence)
-open:
-  NIHAONOON    cost $21.56  now $25.24 (+17.1%)  held 0.2h
+closed 36 | win 9/36 (25%) | avg net -7.7% | realized $-68.84 | expectancy $-1.91/trade
+exits: stop 25, trail 11
+  (n=36 < 100: noise, not evidence)
 last trades:
-  HCAT         $23.06 -> $11.26 (-51.2%)  stop  0.2h
   Catcity      $22.47 -> $18.52 (-17.6%)  stop  0.2h
   LEONIDA      $22.28 -> $5.07 (-77.2%)  stop  0.3h
   HOLD         $21.42 -> $19.28 (-10.0%)  stop  0.1h
@@ -118,6 +115,7 @@ last trades:
   NIHAO        $21.58 -> $19.27 (-10.7%)  stop  1.5h
   VEYL         $21.57 -> $30.37 (+40.8%)  trail  0.7h
   DACITY       $21.58 -> $14.66 (-32.0%)  stop  8.3h
+  NIHAONOON    $21.56 -> $21.56 (-0.0%)  trail  0.3h
 signals skipped by the sizer/risk rules: daily_loss_limit 169, already_traded_token 160, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
