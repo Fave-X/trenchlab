@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-11 19:52 UTC
+Updated: 2026-11-11 20:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           44300
+pools seen           44343
 passed SCOUT         97
   killed by SCORE    11
   killed by AUDIT    21
 FINAL PASS           65
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    43323
-  few_unique_buyers            41721
-  liquidity_low                40858
-  volume_below_liquidity       31407
-  sells_dominate               11633
-  wash_churn                    9084
-  overheated                    3799
+  too_young                    43366
+  few_unique_buyers            41763
+  liquidity_low                40900
+  volume_below_liquidity       31437
+  sells_dominate               11644
+  wash_churn                    9088
+  overheated                    3803
   missing                       1212
   too_old                        787
   rc_danger                        4
 
-OUTCOMES (median price change from first sighting / first pass; 2342 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 2346 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   65    -4.6%    -7.3%   -44.0%   -89.9%    60%
 SCOUT PASS, killed later     32    +6.2%    +0.2%   -55.0%    +9.6%    47%
-KILLED (tracked)           6836    +0.0%   -26.7%   -60.3%    +0.4%    29%
+KILLED (tracked)           6840    +0.0%   -26.7%   -60.3%    +0.4%    29%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -88,8 +88,8 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $431.16       $448.65
-return                        -13.8%        -10.3%
+equity                       $431.16       $448.82
+return                        -13.8%        -10.2%
 closed trades                     35            25
 win rate                         26%           20%
 avg net / trade                -7.9%         -8.4%
@@ -122,13 +122,13 @@ signals skipped by the sizer/risk rules: daily_loss_limit 169, already_traded_to
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $448.65 (-10.3%) | cash $425.29 | open 1 | max drawdown -17.7%
+equity $448.82 (-10.2%) | cash $425.29 | open 1 | max drawdown -17.7%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 25 | win 5/25 (20%) | avg net -8.4% | realized $-51.92 | expectancy $-2.08/trade
 exits: stop 20, trail 5
   (n=25 < 100: noise, not evidence)
 open:
-  NOBUSHIBA    cost $22.79  now $23.36 (+2.5%)  held 5.5h
+  NOBUSHIBA    cost $22.79  now $23.53 (+3.3%)  held 5.7h
 last trades:
   MEOW         $23.95 -> $26.31 (+9.9%)  trail  2.8h
   HOLD         $22.86 -> $36.92 (+61.5%)  trail  0.7h
