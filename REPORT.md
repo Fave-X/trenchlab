@@ -1,26 +1,26 @@
 # TrenchLab report
 
-Updated: 2026-11-11 00:02 UTC
+Updated: 2026-11-11 00:11 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           38437
+pools seen           38497
 passed SCOUT         88
   killed by SCORE    10
   killed by AUDIT    19
 FINAL PASS           59
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    37589
-  few_unique_buyers            36117
-  liquidity_low                35398
-  volume_below_liquidity       27141
-  sells_dominate               10169
-  wash_churn                    7976
-  overheated                    3351
-  missing                       1045
+  too_young                    37649
+  few_unique_buyers            36176
+  liquidity_low                35451
+  volume_below_liquidity       27189
+  sells_dominate               10185
+  wash_churn                    7984
+  overheated                    3352
+  missing                       1050
   too_old                        688
   rc_danger                        4
 
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 1986 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   59    -5.2%    -8.2%   -44.4%   -89.9%    58%
 SCOUT PASS, killed later     29    +7.3%    +0.7%   -62.0%    +9.6%    45%
-KILLED (tracked)           6036    +0.0%   -24.7%   -55.2%    +0.5%    28%
+KILLED (tracked)           6042    +0.0%   -24.7%   -55.2%    +0.5%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -52,16 +52,16 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      281     -0.6%    -10.5%    -14.9%    33%
+none      282     -0.6%    -10.5%    -14.9%    33%
 <15%       64     +0.1%    -11.2%    -10.8%    33%
 15-30%      7     -1.0%     -0.2%     +1.0%    43%
 30%+       15     -0.2%     +0.2%     +2.6%     7%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      283     -0.5%     -2.8%     -4.5%    27%
+none      284     -0.5%     -2.8%     -4.5%    27%
 <20%       73     -0.0%    -42.1%    -94.9%    42%
 20%+       11    +16.6%    -99.0%       -      91%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      353     -0.3%     -4.5%    -10.2%    31%
+<20%      354     -0.3%     -4.5%    -10.2%    31%
 20-40%     10    -51.5%    -99.1%       -      80%
 40%+        4    +11.6%     +5.8%       -      50%
 tokens analysed: 294 | helius credits today: 0/25000
