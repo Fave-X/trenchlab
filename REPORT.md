@@ -1,26 +1,26 @@
 # TrenchLab report
 
-Updated: 2026-11-11 04:39 UTC
+Updated: 2026-11-11 04:49 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           39747
+pools seen           39789
 passed SCOUT         93
   killed by SCORE    10
   killed by AUDIT    19
 FINAL PASS           64
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    38877
-  few_unique_buyers            37379
-  liquidity_low                36618
-  volume_below_liquidity       28089
-  sells_dominate               10509
-  wash_churn                    8251
-  overheated                    3448
-  missing                       1092
+  too_young                    38919
+  few_unique_buyers            37419
+  liquidity_low                36652
+  volume_below_liquidity       28117
+  sells_dominate               10520
+  wash_churn                    8266
+  overheated                    3453
+  missing                       1098
   too_old                        706
   rc_danger                        4
 
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 2076 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   64    -4.6%    -7.8%   -45.0%   -89.9%    55%
 SCOUT PASS, killed later     29    +7.3%    +0.7%   -62.0%    +9.6%    45%
-KILLED (tracked)           6188    +0.0%   -25.8%   -54.9%    +0.4%    28%
+KILLED (tracked)           6194    +0.0%   -25.8%   -54.9%    +0.4%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -68,19 +68,19 @@ tokens analysed: 301 | helius credits today: 792/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%   63    22%    -11.4%   -17.1%   -99.7%
-   -6%     20%   63    24%    -11.4%   -17.1%   -99.7%
-   -6%     30%   63    25%     -8.8%   -17.5%   -99.7%
-  -10%     12%   63    24%    -12.4%   -19.5%   -99.7%
-  -10%     20%   63    24%    -12.9%   -19.9%   -99.7%
-  -10%     30%   63    27%    -10.2%   -19.9%   -99.7%
-  -15%     12%   63    25%    -12.1%   -20.2%   -99.7%
-  -15%     20%   63    27%    -12.3%   -20.4%   -99.7%
-  -15%     30%   63    30%     -9.5%   -20.4%   -99.7%
-  -25%     12%   63    30%    -14.4%   -29.1%   -99.7%
-  -25%     20%   63    32%    -15.9%   -29.9%   -99.7%
-  -25%     30%   63    35%    -13.3%   -30.1%   -99.7%
-  best so far: stop -6%, trail from +30% -> avg -8.8% per trade over n=63
+   -6%     12%   64    23%    -10.7%   -17.1%   -99.7%
+   -6%     20%   64    25%    -10.7%   -17.1%   -99.7%
+   -6%     30%   64    27%     -8.2%   -17.3%   -99.7%
+  -10%     12%   64    25%    -11.7%   -19.4%   -99.7%
+  -10%     20%   64    25%    -12.2%   -19.7%   -99.7%
+  -10%     30%   64    28%     -9.5%   -19.7%   -99.7%
+  -15%     12%   64    27%    -11.4%   -20.1%   -99.7%
+  -15%     20%   64    28%    -11.5%   -20.4%   -99.7%
+  -15%     30%   64    31%     -8.8%   -20.4%   -99.7%
+  -25%     12%   64    31%    -13.6%   -28.5%   -99.7%
+  -25%     20%   64    33%    -15.2%   -29.8%   -99.7%
+  -25%     30%   64    36%    -12.5%   -30.0%   -99.7%
+  best so far: stop -6%, trail from +30% -> avg -8.2% per trade over n=64
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 ================================================================
@@ -108,8 +108,8 @@ closed 32 | win 8/32 (25%) | avg net -8.6% | realized $-68.42 | expectancy $-2.1
 exits: stop 23, trail 9
   (n=32 < 100: noise, not evidence)
 open:
-  DACITY       cost $21.58  now $20.77 (-3.8%)  held 1.3h
-  NIHAO        cost $21.58  now $19.50 (-9.6%)  held 1.2h
+  DACITY       cost $21.58  now $20.77 (-3.8%)  held 1.5h
+  NIHAO        cost $21.58  now $19.50 (-9.6%)  held 1.3h
 last trades:
   BORLY        $21.73 -> $36.28 (+67.0%)  trail  1.8h
   AICoin       $22.46 -> $45.74 (+103.7%)  trail  0.8h
@@ -119,7 +119,7 @@ last trades:
   LEONIDA      $22.28 -> $5.07 (-77.2%)  stop  0.3h
   HOLD         $21.42 -> $19.28 (-10.0%)  stop  0.1h
   mihao        $21.42 -> $26.82 (+25.2%)  trail  2.2h
-signals skipped by the sizer/risk rules: daily_loss_limit 169, already_traded_token 143, cooldown_after_loss 8, max_open_positions 5
+signals skipped by the sizer/risk rules: daily_loss_limit 169, already_traded_token 144, cooldown_after_loss 8, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
