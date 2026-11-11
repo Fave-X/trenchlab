@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-11 12:52 UTC
+Updated: 2026-11-11 13:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           42299
+pools seen           42339
 passed SCOUT         97
   killed by SCORE    11
   killed by AUDIT    21
 FINAL PASS           65
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    41381
-  few_unique_buyers            39814
-  liquidity_low                38979
-  volume_below_liquidity       29901
-  sells_dominate               11126
-  wash_churn                    8793
-  overheated                    3653
+  too_young                    41421
+  few_unique_buyers            39854
+  liquidity_low                39018
+  volume_below_liquidity       29934
+  sells_dominate               11132
+  wash_churn                    8798
+  overheated                    3656
   missing                       1167
   too_old                        744
   rc_danger                        4
 
-OUTCOMES (median price change from first sighting / first pass; 2241 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 2243 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   65    -4.6%    -7.3%   -44.0%   -89.9%    57%
 SCOUT PASS, killed later     32    +6.2%    +0.2%   -55.0%    +9.6%    47%
-KILLED (tracked)           6532    +0.0%   -27.1%   -57.9%    +0.4%    29%
+KILLED (tracked)           6534    +0.0%   -27.1%   -57.9%    +0.4%    29%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                      49    -92.0%    -71.7%    51%
+too_young                      49    -92.0%    -71.7%    53%
 too_old                        23     -0.2%     -2.6%     0%
 wash_churn                     13    +11.9%       -      38%
 liquidity_low                  11    -29.5%       -      36%
@@ -57,14 +57,14 @@ none      305     -0.6%    -10.7%    -19.8%    34%
 15-30%      7     -1.0%     -0.2%     +1.0%    43%
 30%+       15     -0.2%     +0.2%     +2.6%     7%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      302     -0.3%     -2.9%     -7.4%    28%
-<20%       80     -0.8%    -44.8%    -94.9%    44%
+none      303     -0.3%     -2.9%     -7.4%    28%
+<20%       79     -1.3%    -45.0%    -94.9%    46%
 20%+       11    +16.6%    -99.0%       -      91%
 fresh       n   +1h med   +4h med  +24h med   rug%
 <20%      378     -0.3%     -6.6%    -11.5%    31%
 20-40%     11     -4.5%    -99.0%       -      82%
 40%+        4    +11.6%     +5.8%       -      50%
-tokens analysed: 316 | helius credits today: 2255/25000
+tokens analysed: 316 | helius credits today: 2335/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -95,7 +95,7 @@ win rate                         26%           24%
 avg net / trade                -7.9%         -7.0%
 expectancy $/trade            $-1.97        $-1.78
 max drawdown                  -18.1%        -16.2%
-open now                           0             0
+open now                           0             1
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -122,11 +122,13 @@ signals skipped by the sizer/risk rules: daily_loss_limit 169, already_traded_to
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $462.65 (-7.5%) | cash $462.65 | open 0 | max drawdown -16.2%
+equity $462.65 (-7.5%) | cash $439.52 | open 1 | max drawdown -16.2%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 21 | win 5/21 (24%) | avg net -7.0% | realized $-37.35 | expectancy $-1.78/trade
 exits: stop 16, trail 5
   (n=21 < 100: noise, not evidence)
+open:
+  BABYMINHAO   cost $23.13  now $23.13 (+0.0%)  held 0.0h
 last trades:
   STOKE        $24.25 -> $28.63 (+18.1%)  trail  0.8h
   FAIR         $24.47 -> $19.42 (-20.6%)  stop  0.7h
