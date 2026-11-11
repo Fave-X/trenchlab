@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-11 03:17 UTC
+Updated: 2026-11-11 03:25 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           39357
+pools seen           39406
 passed SCOUT         92
-  killed by SCORE    11
+  killed by SCORE    10
   killed by AUDIT    19
-FINAL PASS           62
+FINAL PASS           63
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    38499
-  few_unique_buyers            37005
-  liquidity_low                36256
-  volume_below_liquidity       27821
-  sells_dominate               10399
-  wash_churn                    8173
-  overheated                    3426
-  missing                       1082
-  too_old                        695
+  too_young                    38546
+  few_unique_buyers            37053
+  liquidity_low                36299
+  volume_below_liquidity       27855
+  sells_dominate               10411
+  wash_churn                    8184
+  overheated                    3429
+  missing                       1085
+  too_old                        697
   rc_danger                        4
 
 OUTCOMES (median price change from first sighting / first pass; 2065 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   62    -5.0%    -7.8%   -45.0%   -90.4%    55%
-SCOUT PASS, killed later     30    +8.4%    +1.3%   -50.5%    +9.6%    43%
-KILLED (tracked)           6139    +0.0%   -25.8%   -54.5%    +0.4%    28%
+FINAL PASS                   63    -5.0%    -7.8%   -45.0%   -90.4%    54%
+SCOUT PASS, killed later     29    +7.3%    +0.7%   -62.0%    +9.6%    45%
+KILLED (tracked)           6147    +0.0%   -25.6%   -54.5%    +0.4%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -46,41 +46,41 @@ if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        28    -70.6%    -93.8%    79%
 70-79      34    -42.3%    -66.7%    47%
-60-69      22    -35.2%    -99.8%    36%
-<60         8    -15.2%     +9.6%    12%
+60-69      23    -35.2%    -99.8%    35%
+<60         7    -32.2%     +9.6%    14%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      290     -0.4%    -10.9%    -16.0%    33%
+none      290     -0.5%    -11.0%    -16.0%    33%
 <15%       63     +0.1%    -12.1%    -12.3%    33%
 15-30%      7     -1.0%     -0.2%     +1.0%    43%
 30%+       15     -0.2%     +0.2%     +2.6%     7%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      289     -0.3%     -3.0%     -7.4%    27%
-<20%       75     -0.2%    -44.7%    -94.9%    43%
+none      289     -0.4%     -3.0%     -7.4%    27%
+<20%       75     -0.2%    -44.8%    -94.9%    43%
 20%+       11    +16.6%    -99.0%       -      91%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      361     -0.3%     -6.0%    -11.5%    30%
+<20%      361     -0.3%     -6.6%    -11.5%    30%
 20-40%     10    -51.5%    -99.1%       -      80%
 40%+        4    +11.6%     +5.8%       -      50%
 tokens analysed: 299 | helius credits today: 633/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%   62    23%    -11.8%   -17.3%   -99.7%
-   -6%     20%   62    24%    -11.8%   -17.3%   -99.7%
-   -6%     30%   62    26%     -9.2%   -18.0%   -99.7%
-  -10%     12%   62    24%    -12.9%   -19.7%   -99.7%
-  -10%     20%   62    24%    -13.4%   -20.0%   -99.7%
-  -10%     30%   62    27%    -10.6%   -20.0%   -99.7%
-  -15%     12%   62    26%    -12.6%   -20.3%   -99.7%
-  -15%     20%   62    27%    -12.7%   -20.6%   -99.7%
-  -15%     30%   62    31%     -9.9%   -20.6%   -99.7%
-  -25%     12%   62    31%    -14.9%   -29.2%   -99.7%
-  -25%     20%   62    32%    -16.4%   -29.9%   -99.7%
-  -25%     30%   62    35%    -13.7%   -30.5%   -99.7%
-  best so far: stop -6%, trail from +30% -> avg -9.2% per trade over n=62
+   -6%     12%   62    23%    -11.5%   -17.3%   -99.7%
+   -6%     20%   62    24%    -11.5%   -17.3%   -99.7%
+   -6%     30%   62    26%     -8.9%   -18.0%   -99.7%
+  -10%     12%   62    24%    -12.5%   -19.7%   -99.7%
+  -10%     20%   62    24%    -13.1%   -20.0%   -99.7%
+  -10%     30%   62    27%    -10.2%   -20.0%   -99.7%
+  -15%     12%   62    26%    -12.2%   -20.3%   -99.7%
+  -15%     20%   62    27%    -12.4%   -20.6%   -99.7%
+  -15%     30%   62    31%     -9.5%   -20.6%   -99.7%
+  -25%     12%   62    31%    -14.6%   -29.2%   -99.7%
+  -25%     20%   62    32%    -16.1%   -29.9%   -99.7%
+  -25%     30%   62    35%    -13.4%   -30.5%   -99.7%
+  best so far: stop -6%, trail from +30% -> avg -8.9% per trade over n=62
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 ================================================================
@@ -95,18 +95,20 @@ win rate                         25%           25%
 avg net / trade                -8.6%         -6.2%
 expectancy $/trade            $-2.14        $-1.61
 max drawdown                  -18.1%        -16.2%
-open now                           0             0
+open now                           1             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $431.58 (-13.7%) | cash $431.58 | open 0 | max drawdown -18.1%
+equity $431.58 (-13.7%) | cash $410.00 | open 1 | max drawdown -18.1%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 32 | win 8/32 (25%) | avg net -8.6% | realized $-68.42 | expectancy $-2.14/trade
 exits: stop 23, trail 9
   (n=32 < 100: noise, not evidence)
+open:
+  DACITY       cost $21.58  now $21.58 (+0.0%)  held 0.1h
 last trades:
   BORLY        $21.73 -> $36.28 (+67.0%)  trail  1.8h
   AICoin       $22.46 -> $45.74 (+103.7%)  trail  0.8h
@@ -116,7 +118,7 @@ last trades:
   LEONIDA      $22.28 -> $5.07 (-77.2%)  stop  0.3h
   HOLD         $21.42 -> $19.28 (-10.0%)  stop  0.1h
   mihao        $21.42 -> $26.82 (+25.2%)  trail  2.2h
-signals skipped by the sizer/risk rules: daily_loss_limit 169, already_traded_token 134, cooldown_after_loss 8, max_open_positions 4
+signals skipped by the sizer/risk rules: daily_loss_limit 169, already_traded_token 135, cooldown_after_loss 8, max_open_positions 4
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
