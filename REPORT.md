@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-11 13:12 UTC
+Updated: 2026-11-11 13:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           42368
+pools seen           42395
 passed SCOUT         97
   killed by SCORE    11
   killed by AUDIT    21
 FINAL PASS           65
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    41446
-  few_unique_buyers            39880
-  liquidity_low                39045
-  volume_below_liquidity       29951
-  sells_dominate               11134
-  wash_churn                    8802
+  too_young                    41473
+  few_unique_buyers            39905
+  liquidity_low                39072
+  volume_below_liquidity       29974
+  sells_dominate               11140
+  wash_churn                    8808
   overheated                    3661
   missing                       1167
   too_old                        746
   rc_danger                        4
 
-OUTCOMES (median price change from first sighting / first pass; 2245 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 2246 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   65    -4.6%    -7.3%   -44.0%   -89.9%    57%
 SCOUT PASS, killed later     32    +6.2%    +0.2%   -55.0%    +9.6%    47%
-KILLED (tracked)           6541    +0.0%   -27.1%   -57.8%    +0.4%    29%
+KILLED (tracked)           6545    +0.0%   -27.1%   -58.0%    +0.4%    29%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -61,10 +61,10 @@ none      303     -0.3%     -2.9%     -7.4%    28%
 <20%       79     -1.3%    -45.0%    -94.9%    46%
 20%+       11    +16.6%    -99.0%       -      91%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      378     -0.3%     -6.6%    -11.5%    31%
+<20%      378     -0.3%     -6.8%    -11.5%    31%
 20-40%     11     -4.5%    -99.0%       -      82%
 40%+        4    +11.6%     +5.8%       -      50%
-tokens analysed: 316 | helius credits today: 2419/25000
+tokens analysed: 316 | helius credits today: 2482/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -88,8 +88,8 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $431.16       $462.07
-return                        -13.8%         -7.6%
+equity                       $431.16       $460.51
+return                        -13.8%         -7.9%
 closed trades                     35            21
 win rate                         26%           24%
 avg net / trade                -7.9%         -7.0%
@@ -122,14 +122,14 @@ signals skipped by the sizer/risk rules: daily_loss_limit 169, already_traded_to
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $462.07 (-7.6%) | cash $416.39 | open 2 | max drawdown -16.2%
+equity $460.51 (-7.9%) | cash $416.39 | open 2 | max drawdown -16.2%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 21 | win 5/21 (24%) | avg net -7.0% | realized $-37.35 | expectancy $-1.78/trade
 exits: stop 16, trail 5
   (n=21 < 100: noise, not evidence)
 open:
-  BABYMINHAO   cost $23.13  now $22.55 (-2.5%)  held 0.2h
-  DACITY       cost $23.13  now $23.13 (+0.0%)  held 0.0h
+  BABYMINHAO   cost $23.13  now $21.59 (-6.7%)  held 0.4h
+  DACITY       cost $23.13  now $22.53 (-2.6%)  held 0.2h
 last trades:
   STOKE        $24.25 -> $28.63 (+18.1%)  trail  0.8h
   FAIR         $24.47 -> $19.42 (-20.6%)  stop  0.7h
