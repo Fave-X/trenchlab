@@ -1,42 +1,42 @@
 # TrenchLab report
 
-Updated: 2026-11-11 00:42 UTC
+Updated: 2026-11-11 00:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           38647
-passed SCOUT         88
+pools seen           38705
+passed SCOUT         89
   killed by SCORE    10
   killed by AUDIT    19
-FINAL PASS           59
+FINAL PASS           60
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    37799
-  few_unique_buyers            36319
-  liquidity_low                35598
-  volume_below_liquidity       27301
-  sells_dominate               10225
-  wash_churn                    8013
-  overheated                    3364
+  too_young                    37857
+  few_unique_buyers            36376
+  liquidity_low                35654
+  volume_below_liquidity       27343
+  sells_dominate               10242
+  wash_churn                    8026
+  overheated                    3369
   missing                       1050
   too_old                        688
   rc_danger                        4
 
-OUTCOMES (median price change from first sighting / first pass; 1991 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 1995 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   59    -5.2%    -8.2%   -44.4%   -89.9%    58%
+FINAL PASS                   60    -5.2%    -8.2%   -44.4%   -89.9%    57%
 SCOUT PASS, killed later     29    +7.3%    +0.7%   -62.0%    +9.6%    45%
-KILLED (tracked)           6056    +0.0%   -24.9%   -55.0%    +0.5%    28%
+KILLED (tracked)           6062    +0.0%   -24.9%   -55.0%    +0.5%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                      43    -89.1%    -71.7%    47%
+too_young                      42    -89.1%    -71.7%    48%
 too_old                        22     +0.0%     -2.6%     0%
 wash_churn                     12     -1.0%       -      42%
-liquidity_low                  11    -56.2%       -      36%
+liquidity_low                  11    -68.7%       -      36%
 volume_below_liquidity          5     +5.9%    +15.3%    40%
 overheated                      2    -11.0%       -      50%
 sells_dominate                  1    -54.2%       -       0%
@@ -46,7 +46,7 @@ if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        28    -68.5%    -93.8%    79%
 70-79      33    -39.9%    -66.7%    48%
-60-69      20    -35.2%    -70.7%    40%
+60-69      21    -35.2%    -70.7%    38%
 <60         7    -32.2%     +9.6%    14%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
@@ -95,18 +95,20 @@ win rate                         23%           22%
 avg net / trade                -9.6%         -9.5%
 expectancy $/trade            $-2.39        $-2.37
 max drawdown                  -17.6%        -16.2%
-open now                           0             0
+open now                           1             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $428.32 (-14.3%) | cash $428.32 | open 0 | max drawdown -17.6%
+equity $428.32 (-14.3%) | cash $406.90 | open 1 | max drawdown -17.6%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 30 | win 7/30 (23%) | avg net -9.6% | realized $-71.68 | expectancy $-2.39/trade
 exits: stop 22, trail 8
   (n=30 < 100: noise, not evidence)
+open:
+  mihao        cost $21.42  now $21.42 (+0.0%)  held 0.0h
 last trades:
   FAIR         $23.20 -> $18.42 (-20.6%)  stop  0.2h
   ORBIT        $23.12 -> $0.03 (-99.9%)  stop  1.8h
