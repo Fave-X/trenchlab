@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-12 13:22 UTC
+Updated: 2026-11-12 13:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           49515
+pools seen           49556
 passed SCOUT         110
   killed by SCORE    14
   killed by AUDIT    25
 FINAL PASS           71
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    48470
-  few_unique_buyers            46621
-  liquidity_low                45747
-  volume_below_liquidity       35127
-  sells_dominate               12935
-  wash_churn                   10000
-  overheated                    4232
+  too_young                    48511
+  few_unique_buyers            46660
+  liquidity_low                45788
+  volume_below_liquidity       35155
+  sells_dominate               12943
+  wash_churn                   10006
+  overheated                    4236
   missing                       1296
   too_old                        837
   rc_danger                       12
 
-OUTCOMES (median price change from first sighting / first pass; 2715 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 2717 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   71    -4.3%    -6.0%   -44.0%   -90.9%    59%
 SCOUT PASS, killed later     39    +3.0%    +0.7%   -60.3%   +22.4%    46%
-KILLED (tracked)           7532    +0.0%   -32.7%   -63.4%    +0.4%    30%
+KILLED (tracked)           7534    +0.0%   -32.9%   -63.4%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -116,7 +116,7 @@ last trades:
   AIB          $21.42 -> $17.45 (-18.6%)  stop  0.2h
   MAX          $21.22 -> $16.96 (-20.1%)  stop  0.2h
   BITCOINU     $21.01 -> $11.81 (-43.8%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 200, daily_loss_limit 187, cooldown_after_loss 11, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 200, daily_loss_limit 188, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
