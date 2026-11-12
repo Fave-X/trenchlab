@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-12 18:42 UTC
+Updated: 2026-11-12 18:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           51123
+pools seen           51182
 passed SCOUT         111
   killed by SCORE    14
   killed by AUDIT    25
 FINAL PASS           72
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    50066
-  few_unique_buyers            48151
-  liquidity_low                47283
-  volume_below_liquidity       36310
-  sells_dominate               13392
-  wash_churn                   10242
-  overheated                    4357
+  too_young                    50125
+  few_unique_buyers            48210
+  liquidity_low                47342
+  volume_below_liquidity       36355
+  sells_dominate               13409
+  wash_churn                   10258
+  overheated                    4364
   missing                       1325
   too_old                        846
   rc_danger                       12
 
-OUTCOMES (median price change from first sighting / first pass; 2813 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 2817 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   72    -4.4%    -6.8%   -44.0%   -90.9%    60%
 SCOUT PASS, killed later     39    +3.0%    +0.7%   -55.0%   +22.4%    46%
-KILLED (tracked)           7712    +0.0%   -37.0%   -65.3%    +0.4%    30%
+KILLED (tracked)           7716    +0.0%   -37.0%   -65.3%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -44,8 +44,8 @@ sells_dominate                  1    -54.2%       -       0%
 SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
-80+        36    -67.0%    -94.5%    75%
-70-79      40    -42.3%    -65.3%    48%
+80+        37    -67.0%    -94.5%    73%
+70-79      39    -42.3%    -65.3%    49%
 60-69      25    -32.0%    -99.8%    48%
 <60        10    -39.8%    +22.4%    30%
 
@@ -116,7 +116,7 @@ last trades:
   AIB          $21.42 -> $17.45 (-18.6%)  stop  0.2h
   MAX          $21.22 -> $16.96 (-20.1%)  stop  0.2h
   BITCOINU     $21.01 -> $11.81 (-43.8%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 200, daily_loss_limit 195, cooldown_after_loss 11, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 200, daily_loss_limit 196, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
