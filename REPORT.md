@@ -1,26 +1,26 @@
 # TrenchLab report
 
-Updated: 2026-11-12 22:52 UTC
+Updated: 2026-11-12 23:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           52336
+pools seen           52379
 passed SCOUT         115
   killed by SCORE    15
   killed by AUDIT    25
 FINAL PASS           75
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    51265
-  few_unique_buyers            49311
-  liquidity_low                48416
-  volume_below_liquidity       37196
-  sells_dominate               13724
-  wash_churn                   10444
-  overheated                    4452
-  missing                       1368
+  too_young                    51308
+  few_unique_buyers            49352
+  liquidity_low                48456
+  volume_below_liquidity       37224
+  sells_dominate               13738
+  wash_churn                   10448
+  overheated                    4455
+  missing                       1370
   too_old                        854
   rc_danger                       12
 
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 2875 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   75    -4.7%    -7.8%   -44.0%   -90.9%    60%
 SCOUT PASS, killed later     40    +4.6%    +1.3%   -55.0%   +22.4%    45%
-KILLED (tracked)           7841    +0.0%   -37.5%   -66.5%    +0.4%    30%
+KILLED (tracked)           7846    +0.0%   -37.5%   -66.5%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -136,7 +136,7 @@ last trades:
   AIB          $21.89 -> $22.83 (+4.3%)  trail  0.8h
   FLC          $21.93 -> $19.19 (-12.5%)  stop  0.2h
   Huang        $21.80 -> $15.36 (-29.5%)  stop  0.5h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 192, daily_loss_limit 118, setup_rejected:sellers_dominate_now 86, setup_rejected:dumping_now 52, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_bundled 13, setup_rejected:b_received 7, cooldown_after_loss 5, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:operator_cluster 1, setup_rejected:bundled_buys 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 192, daily_loss_limit 118, setup_rejected:sellers_dominate_now 86, setup_rejected:dumping_now 52, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_bundled 13, setup_rejected:b_received 7, cooldown_after_loss 5, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:operator_cluster 2, setup_rejected:bundled_buys 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
