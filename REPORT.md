@@ -1,25 +1,25 @@
 # TrenchLab report
 
-Updated: 2026-11-12 23:12 UTC
+Updated: 2026-11-12 23:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           52441
+pools seen           52482
 passed SCOUT         116
   killed by SCORE    15
   killed by AUDIT    25
 FINAL PASS           76
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    51369
-  few_unique_buyers            49411
-  liquidity_low                48497
-  volume_below_liquidity       37258
-  sells_dominate               13748
-  wash_churn                   10466
-  overheated                    4459
+  too_young                    51410
+  few_unique_buyers            49452
+  liquidity_low                48538
+  volume_below_liquidity       37294
+  sells_dominate               13769
+  wash_churn                   10471
+  overheated                    4460
   missing                       1388
   too_old                        854
   rc_danger                       12
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 2880 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   76    -4.7%    -7.8%   -44.0%   -91.5%    59%
 SCOUT PASS, killed later     40    +4.6%    +1.3%   -55.0%   +22.4%    45%
-KILLED (tracked)           7850    +0.0%   -37.3%   -66.5%    +0.4%    30%
+KILLED (tracked)           7852    +0.0%   -37.2%   -66.5%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -37,7 +37,7 @@ too_young                      52    -94.8%    -71.7%    54%
 too_old                        25     -0.4%     -0.4%     4%
 liquidity_low                  15    -40.0%    -49.8%    40%
 wash_churn                     14    +11.9%    -71.8%    36%
-volume_below_liquidity          6     +5.9%    +15.3%    50%
+volume_below_liquidity          6     +1.5%    +15.3%    50%
 overheated                      4    -12.8%    -79.6%    75%
 sells_dominate                  1    -54.2%       -       0%
 
@@ -52,7 +52,7 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      348     -0.3%    -11.7%    -23.6%    35%
+none      348     -0.4%    -11.7%    -23.6%    35%
 <15%       76     +0.3%    -11.7%    -12.4%    33%
 15-30%      8     -0.6%     -0.7%     +1.0%    38%
 30%+       18     -0.3%     -0.3%     +2.6%     6%
@@ -68,19 +68,19 @@ tokens analysed: 365 | helius credits today: 4690/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%   75    21%    -12.3%   -17.5%   -99.7%
-   -6%     20%   75    23%    -12.3%   -17.5%   -99.7%
-   -6%     30%   75    24%    -10.2%   -18.6%   -99.7%
-  -10%     12%   75    23%    -13.2%   -19.6%   -99.7%
-  -10%     20%   75    23%    -13.6%   -19.9%   -99.7%
-  -10%     30%   75    25%    -11.3%   -20.1%   -99.7%
-  -15%     12%   75    24%    -12.7%   -20.2%   -99.7%
-  -15%     20%   75    25%    -13.3%   -20.7%   -99.7%
-  -15%     30%   75    28%    -11.0%   -21.0%   -99.7%
-  -25%     12%   75    29%    -14.4%   -27.9%   -99.7%
-  -25%     20%   75    31%    -16.7%   -29.9%   -99.7%
-  -25%     30%   75    33%    -14.5%   -30.9%   -99.7%
-  best so far: stop -6%, trail from +30% -> avg -10.2% per trade over n=75
+   -6%     12%   76    22%    -11.1%   -17.3%   -99.7%
+   -6%     20%   76    24%    -11.1%   -17.3%   -99.7%
+   -6%     30%   76    25%     -9.0%   -18.5%   -99.7%
+  -10%     12%   76    24%    -11.9%   -19.6%   -99.7%
+  -10%     20%   76    24%    -12.4%   -19.8%   -99.7%
+  -10%     30%   76    26%    -10.1%   -20.0%   -99.7%
+  -15%     12%   76    25%    -11.5%   -20.1%   -99.7%
+  -15%     20%   76    26%    -12.1%   -20.6%   -99.7%
+  -15%     30%   76    29%     -9.8%   -20.9%   -99.7%
+  -25%     12%   76    30%    -13.2%   -24.6%   -99.7%
+  -25%     20%   76    32%    -15.4%   -29.9%   -99.7%
+  -25%     30%   76    34%    -13.3%   -30.8%   -99.7%
+  best so far: stop -6%, trail from +30% -> avg -9.0% per trade over n=76
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 ================================================================
@@ -95,7 +95,7 @@ win rate                         22%           19%
 avg net / trade                -9.3%         -9.2%
 expectancy $/trade            $-2.23        $-2.20
 max drawdown                  -20.9%        -21.0%
-open now                           0             0
+open now                           0             1
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -122,11 +122,13 @@ signals skipped by the sizer/risk rules: daily_loss_limit 221, already_traded_to
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $429.48 (-14.1%) | cash $429.48 | open 0 | max drawdown -21.0%
+equity $429.48 (-14.1%) | cash $408.01 | open 1 | max drawdown -21.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 32 | win 6/32 (19%) | avg net -9.2% | realized $-70.52 | expectancy $-2.20/trade
 exits: stop 26, trail 6
   (n=32 < 100: noise, not evidence)
+open:
+  AI           cost $21.47  now $21.47 (+0.0%)  held 0.0h
 last trades:
   AIRDROP      $22.69 -> $18.56 (-18.2%)  stop  0.3h
   NOBUSHIBA    $22.79 -> $20.46 (-10.2%)  stop  7.0h
