@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-12 14:32 UTC
+Updated: 2026-11-12 14:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           49886
+pools seen           49932
 passed SCOUT         110
   killed by SCORE    14
   killed by AUDIT    25
 FINAL PASS           71
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    48840
-  few_unique_buyers            46974
-  liquidity_low                46107
-  volume_below_liquidity       35399
-  sells_dominate               13042
-  wash_churn                   10057
-  overheated                    4263
+  too_young                    48886
+  few_unique_buyers            47016
+  liquidity_low                46152
+  volume_below_liquidity       35430
+  sells_dominate               13049
+  wash_churn                   10070
+  overheated                    4268
   missing                       1296
   too_old                        838
   rc_danger                       12
 
-OUTCOMES (median price change from first sighting / first pass; 2728 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 2730 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   71    -4.3%    -6.0%   -44.0%   -90.9%    59%
 SCOUT PASS, killed later     39    +3.0%    +0.7%   -55.0%   +22.4%    46%
-KILLED (tracked)           7572    +0.0%   -33.5%   -63.9%    +0.4%    30%
+KILLED (tracked)           7576    +0.0%   -33.5%   -64.0%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -116,7 +116,7 @@ last trades:
   AIB          $21.42 -> $17.45 (-18.6%)  stop  0.2h
   MAX          $21.22 -> $16.96 (-20.1%)  stop  0.2h
   BITCOINU     $21.01 -> $11.81 (-43.8%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 200, daily_loss_limit 191, cooldown_after_loss 11, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 200, daily_loss_limit 192, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -136,7 +136,7 @@ last trades:
   NIHAONOON    $22.04 -> $19.02 (-13.7%)  stop  0.3h
   AIB          $21.89 -> $22.83 (+4.3%)  trail  0.8h
   FLC          $21.93 -> $19.19 (-12.5%)  stop  0.2h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 186, daily_loss_limit 118, setup_rejected:sellers_dominate_now 85, setup_rejected:dumping_now 52, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_bundled 13, setup_rejected:b_received 7, cooldown_after_loss 5, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:bundled_buys 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 187, daily_loss_limit 118, setup_rejected:sellers_dominate_now 86, setup_rejected:dumping_now 52, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_bundled 13, setup_rejected:b_received 7, cooldown_after_loss 5, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:bundled_buys 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
