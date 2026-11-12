@@ -1,26 +1,26 @@
 # TrenchLab report
 
-Updated: 2026-11-12 23:42 UTC
+Updated: 2026-11-12 23:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           52566
+pools seen           52626
 passed SCOUT         116
   killed by SCORE    15
   killed by AUDIT    25
 FINAL PASS           76
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    51493
-  few_unique_buyers            49535
-  liquidity_low                48618
-  volume_below_liquidity       37361
-  sells_dominate               13791
-  wash_churn                   10492
-  overheated                    4466
-  missing                       1389
+  too_young                    51553
+  few_unique_buyers            49593
+  liquidity_low                48667
+  volume_below_liquidity       37398
+  sells_dominate               13806
+  wash_churn                   10503
+  overheated                    4470
+  missing                       1400
   too_old                        855
   rc_danger                       12
 
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 2883 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   76    -4.4%    -7.8%   -44.4%   -91.5%    61%
 SCOUT PASS, killed later     40    +4.6%    +1.3%   -52.8%   +22.4%    45%
-KILLED (tracked)           7858    +0.0%   -37.2%   -66.6%    +0.4%    30%
+KILLED (tracked)           7860    +0.0%   -37.2%   -66.6%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -53,7 +53,7 @@ CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
 none      348     -0.4%    -11.7%    -23.6%    35%
-<15%       76     +0.3%    -11.7%    -12.4%    33%
+<15%       76     +0.2%    -11.7%    -12.4%    33%
 15-30%      8     -0.6%     -0.7%     +1.0%    38%
 30%+       18     -0.3%     -0.3%     +2.6%     6%
 bundled     n   +1h med   +4h med  +24h med   rug%
@@ -116,7 +116,7 @@ last trades:
   AIB          $21.42 -> $17.45 (-18.6%)  stop  0.2h
   MAX          $21.22 -> $16.96 (-20.1%)  stop  0.2h
   BITCOINU     $21.01 -> $11.81 (-43.8%)  stop  0.2h
-signals skipped by the sizer/risk rules: daily_loss_limit 224, already_traded_token 200, cooldown_after_loss 11, max_open_positions 5
+signals skipped by the sizer/risk rules: daily_loss_limit 226, already_traded_token 200, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
