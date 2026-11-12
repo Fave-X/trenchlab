@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-12 00:32 UTC
+Updated: 2026-11-12 00:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           45615
+pools seen           45663
 passed SCOUT         100
   killed by SCORE    11
   killed by AUDIT    22
 FINAL PASS           67
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    44629
-  few_unique_buyers            42992
-  liquidity_low                42110
-  volume_below_liquidity       32372
-  sells_dominate               12009
-  wash_churn                    9260
-  overheated                    3892
+  too_young                    44677
+  few_unique_buyers            43038
+  liquidity_low                42157
+  volume_below_liquidity       32409
+  sells_dominate               12019
+  wash_churn                    9266
+  overheated                    3895
   missing                       1238
   too_old                        793
   rc_danger                        9
 
-OUTCOMES (median price change from first sighting / first pass; 2467 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 2470 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   67    -4.2%    -6.8%   -44.0%   -90.4%    58%
+FINAL PASS                   67    -3.7%    -6.8%   -44.0%   -90.4%    58%
 SCOUT PASS, killed later     33    +6.2%    +0.1%   -52.8%    +9.6%    45%
-KILLED (tracked)           6977    +0.0%   -27.1%   -59.5%    +0.4%    29%
+KILLED (tracked)           6983    +0.0%   -27.1%   -59.5%    +0.4%    29%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -64,7 +64,7 @@ fresh       n   +1h med   +4h med  +24h med   rug%
 <20%      398     -0.3%     -6.9%    -11.1%    31%
 20-40%     11     -4.5%    -99.0%       -      82%
 40%+        4    +11.6%     +5.8%       -      50%
-tokens analysed: 331 | helius credits today: 134/25000
+tokens analysed: 331 | helius credits today: 197/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -88,7 +88,7 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $434.16       $440.74
+equity                       $433.99       $440.74
 return                        -13.2%        -11.9%
 closed trades                     36            28
 win rate                         25%           18%
@@ -102,13 +102,13 @@ Judge on expectancy after >=100 trades each, not on win rate or a few days.
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $434.16 (-13.2%) | cash $409.60 | open 1 | max drawdown -18.1%
+equity $433.99 (-13.2%) | cash $409.60 | open 1 | max drawdown -18.1%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 36 | win 9/36 (25%) | avg net -7.7% | realized $-68.84 | expectancy $-1.91/trade
 exits: stop 25, trail 11
   (n=36 < 100: noise, not evidence)
 open:
-  Max          cost $21.56  now $24.56 (+13.9%)  held 0.2h
+  Max          cost $21.56  now $24.39 (+13.1%)  held 0.4h
 last trades:
   Catcity      $22.47 -> $18.52 (-17.6%)  stop  0.2h
   LEONIDA      $22.28 -> $5.07 (-77.2%)  stop  0.3h
