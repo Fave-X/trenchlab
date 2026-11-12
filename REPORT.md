@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-12 07:52 UTC
+Updated: 2026-11-12 08:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           47778
+pools seen           47841
 passed SCOUT         108
   killed by SCORE    14
   killed by AUDIT    24
 FINAL PASS           70
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    46754
-  few_unique_buyers            44999
-  liquidity_low                44110
-  volume_below_liquidity       33886
-  sells_dominate               12484
-  wash_churn                    9656
-  overheated                    4086
+  too_young                    46816
+  few_unique_buyers            45057
+  liquidity_low                44169
+  volume_below_liquidity       33926
+  sells_dominate               12494
+  wash_churn                    9673
+  overheated                    4091
   missing                       1282
   too_old                        823
   rc_danger                       11
 
-OUTCOMES (median price change from first sighting / first pass; 2617 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 2620 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   70    -4.2%    -5.2%   -44.0%   -90.9%    59%
 SCOUT PASS, killed later     38    +4.6%    +0.2%   -55.0%   +22.4%    42%
-KILLED (tracked)           7305    +0.0%   -31.7%   -62.8%    +0.4%    29%
+KILLED (tracked)           7313    +0.0%   -31.8%   -62.8%    +0.4%    29%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -52,7 +52,7 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      331     -0.3%    -10.9%    -24.6%    34%
+none      331     -0.4%    -10.9%    -24.6%    34%
 <15%       76     +0.4%    -11.2%     -8.3%    32%
 15-30%      8     -0.6%     -0.7%     +1.0%    38%
 30%+       17     -0.3%     -0.3%     +2.6%     6%
@@ -61,7 +61,7 @@ none      334     -0.2%     -2.9%     -9.3%    28%
 <20%       86     -0.8%    -45.0%    -94.9%    44%
 20%+       12    +17.1%    -99.0%       -      92%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      416     -0.2%     -6.6%    -11.6%    31%
+<20%      416     -0.3%     -6.6%    -11.6%    31%
 20-40%     12     -1.6%    -99.0%    -99.1%    83%
 40%+        4    +11.6%     +5.8%       -      50%
 tokens analysed: 349 | helius credits today: 1978/25000
@@ -136,7 +136,7 @@ last trades:
   Max          $22.16 -> $19.66 (-11.3%)  stop  0.2h
   NIHAONOON    $22.04 -> $19.02 (-13.7%)  stop  0.3h
   AIB          $21.89 -> $22.83 (+4.3%)  trail  0.8h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 184, daily_loss_limit 118, setup_rejected:sellers_dominate_now 68, setup_rejected:dumping_now 52, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_bundled 13, setup_rejected:b_received 7, cooldown_after_loss 5, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:bundled_buys 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 184, daily_loss_limit 118, setup_rejected:sellers_dominate_now 69, setup_rejected:dumping_now 52, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_bundled 13, setup_rejected:b_received 7, cooldown_after_loss 5, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:bundled_buys 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
