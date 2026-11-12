@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-12 02:02 UTC
+Updated: 2026-11-12 02:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           46023
+pools seen           46065
 passed SCOUT         100
   killed by SCORE    11
   killed by AUDIT    22
 FINAL PASS           67
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    45032
-  few_unique_buyers            43375
-  liquidity_low                42489
-  volume_below_liquidity       32657
-  sells_dominate               12099
-  wash_churn                    9328
-  overheated                    3930
-  missing                       1251
-  too_old                        796
+  too_young                    45072
+  few_unique_buyers            43415
+  liquidity_low                42524
+  volume_below_liquidity       32684
+  sells_dominate               12111
+  wash_churn                    9337
+  overheated                    3934
+  missing                       1256
+  too_old                        798
   rc_danger                        9
 
-OUTCOMES (median price change from first sighting / first pass; 2490 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 2495 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   67    -3.7%    -6.0%   -44.0%   -89.9%    58%
 SCOUT PASS, killed later     33    +6.2%    +0.1%   -52.8%    +9.6%    45%
-KILLED (tracked)           7042    +0.0%   -28.2%   -59.7%    +0.4%    29%
+KILLED (tracked)           7048    +0.0%   -28.2%   -59.9%    +0.4%    29%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -116,7 +116,7 @@ last trades:
   DACITY       $21.58 -> $14.66 (-32.0%)  stop  8.3h
   NIHAONOON    $21.56 -> $21.56 (-0.0%)  trail  0.3h
   Max          $21.56 -> $18.83 (-12.7%)  stop  0.7h
-signals skipped by the sizer/risk rules: daily_loss_limit 169, already_traded_token 165, cooldown_after_loss 11, max_open_positions 5
+signals skipped by the sizer/risk rules: daily_loss_limit 169, already_traded_token 166, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
