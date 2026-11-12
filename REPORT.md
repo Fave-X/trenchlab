@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-12 16:41 UTC
+Updated: 2026-11-12 16:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           50455
+pools seen           50497
 passed SCOUT         111
-  killed by SCORE    15
+  killed by SCORE    14
   killed by AUDIT    25
-FINAL PASS           71
+FINAL PASS           72
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    49407
-  few_unique_buyers            47512
-  liquidity_low                46642
-  volume_below_liquidity       35813
-  sells_dominate               13201
-  wash_churn                   10151
-  overheated                    4305
+  too_young                    49449
+  few_unique_buyers            47552
+  liquidity_low                46683
+  volume_below_liquidity       35847
+  sells_dominate               13211
+  wash_churn                   10155
+  overheated                    4307
   missing                       1316
   too_old                        838
   rc_danger                       12
 
 OUTCOMES (median price change from first sighting / first pass; 2742 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   71    -4.3%    -6.0%   -44.0%   -90.9%    61%
-SCOUT PASS, killed later     40    +4.6%    +1.3%   -55.0%   +22.4%    45%
-KILLED (tracked)           7626    +0.0%   -36.9%   -64.5%    +0.4%    30%
+FINAL PASS                   72    -4.3%    -6.0%   -44.0%   -90.9%    60%
+SCOUT PASS, killed later     39    +3.0%    +0.7%   -55.0%   +22.4%    46%
+KILLED (tracked)           7629    +0.0%   -36.9%   -64.5%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -46,8 +46,8 @@ if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        36    -67.0%    -94.5%    75%
 70-79      39    -42.3%    -65.3%    49%
-60-69      25    -32.0%    -99.8%    48%
-<60        11    -39.8%    +22.4%    27%
+60-69      26    -32.0%    -99.8%    46%
+<60        10    -39.8%    +22.4%    30%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
@@ -88,8 +88,8 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $411.00       $435.92
-return                        -17.8%        -12.8%
+equity                       $411.00       $438.98
+return                        -17.8%        -12.2%
 closed trades                     40            31
 win rate                         22%           19%
 avg net / trade                -9.3%         -8.5%
@@ -116,19 +116,19 @@ last trades:
   AIB          $21.42 -> $17.45 (-18.6%)  stop  0.2h
   MAX          $21.22 -> $16.96 (-20.1%)  stop  0.2h
   BITCOINU     $21.01 -> $11.81 (-43.8%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 200, daily_loss_limit 193, cooldown_after_loss 11, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 200, daily_loss_limit 194, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $435.92 (-12.8%) | cash $414.12 | open 1 | max drawdown -19.8%
+equity $438.98 (-12.2%) | cash $414.12 | open 1 | max drawdown -19.8%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 31 | win 6/31 (19%) | avg net -8.5% | realized $-64.08 | expectancy $-2.07/trade
 exits: stop 25, trail 6
   (n=31 < 100: noise, not evidence)
 open:
-  Huang        cost $21.80  now $21.80 (+0.0%)  held 0.0h
+  Huang        cost $21.80  now $24.86 (+14.0%)  held 0.2h
 last trades:
   BOXCAT       $22.87 -> $19.34 (-15.4%)  stop  0.5h
   AIRDROP      $22.69 -> $18.56 (-18.2%)  stop  0.3h
