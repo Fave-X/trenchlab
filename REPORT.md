@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-12 20:02 UTC
+Updated: 2026-11-12 20:11 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           51563
+pools seen           51624
 passed SCOUT         113
   killed by SCORE    15
   killed by AUDIT    25
 FINAL PASS           73
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    50499
-  few_unique_buyers            48570
-  liquidity_low                47676
-  volume_below_liquidity       36625
-  sells_dominate               13508
-  wash_churn                   10321
-  overheated                    4395
+  too_young                    50559
+  few_unique_buyers            48621
+  liquidity_low                47735
+  volume_below_liquidity       36658
+  sells_dominate               13525
+  wash_churn                   10332
+  overheated                    4401
   missing                       1355
   too_old                        849
   rc_danger                       12
 
-OUTCOMES (median price change from first sighting / first pass; 2837 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 2839 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   73    -4.3%    -6.8%   -44.0%   -90.9%    59%
 SCOUT PASS, killed later     40    +4.6%    +0.7%   -55.0%   +22.4%    45%
-KILLED (tracked)           7762    +0.0%   -36.9%   -66.2%    +0.4%    30%
+KILLED (tracked)           7770    +0.0%   -36.9%   -66.1%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -38,7 +38,7 @@ too_old                        25     -0.4%     -0.4%     4%
 liquidity_low                  15    -51.1%    -49.8%    40%
 wash_churn                     14    +11.9%    -71.8%    36%
 volume_below_liquidity          6     +5.9%    +15.3%    50%
-overheated                      4    -12.8%    -79.6%    50%
+overheated                      5    -12.8%    -79.6%    40%
 sells_dominate                  1    -54.2%       -       0%
 
 SCORE CHECK: scout passers by score (higher buckets should do better;
@@ -52,19 +52,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      342     -0.3%    -11.7%    -19.8%    35%
+none      343     -0.3%    -11.7%    -19.8%    35%
 <15%       75     +0.3%    -11.7%    -12.4%    32%
 15-30%      8     -0.6%     -0.7%     +1.0%    38%
 30%+       18     -0.3%     -0.3%     +2.6%     6%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      342     -0.2%     -3.0%     -8.3%    28%
+none      343     -0.2%     -3.0%     -8.3%    28%
 <20%       89     -0.8%    -50.7%    -96.6%    45%
 20%+       12    +17.1%    -99.0%       -      92%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      426     -0.3%     -7.2%    -11.6%    32%
+<20%      427     -0.3%     -7.2%    -11.6%    32%
 20-40%     13     -1.6%    -99.0%    -99.1%    77%
 40%+        4    +11.6%     +5.8%       -      50%
-tokens analysed: 360 | helius credits today: 3965/25000
+tokens analysed: 361 | helius credits today: 4030/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -74,12 +74,12 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -10%     12%   73    23%    -12.2%   -19.5%   -99.7%
   -10%     20%   73    23%    -12.7%   -19.6%   -99.7%
   -10%     30%   73    26%    -10.3%   -19.9%   -99.7%
-  -15%     12%   73    26%    -11.6%   -20.1%   -99.7%
-  -15%     20%   73    27%    -11.7%   -20.4%   -99.7%
-  -15%     30%   73    30%     -9.4%   -20.4%   -99.7%
-  -25%     12%   73    32%    -13.3%   -21.3%   -99.7%
-  -25%     20%   73    33%    -15.2%   -29.7%   -99.7%
-  -25%     30%   73    36%    -12.9%   -30.1%   -99.7%
+  -15%     12%   73    25%    -11.8%   -20.1%   -99.7%
+  -15%     20%   73    26%    -11.9%   -20.4%   -99.7%
+  -15%     30%   73    29%     -9.6%   -20.4%   -99.7%
+  -25%     12%   73    30%    -13.5%   -21.3%   -99.7%
+  -25%     20%   73    32%    -15.4%   -29.7%   -99.7%
+  -25%     30%   73    34%    -13.1%   -30.1%   -99.7%
   best so far: stop -6%, trail from +30% -> avg -9.2% per trade over n=73
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
@@ -116,7 +116,7 @@ last trades:
   AIB          $21.42 -> $17.45 (-18.6%)  stop  0.2h
   MAX          $21.22 -> $16.96 (-20.1%)  stop  0.2h
   BITCOINU     $21.01 -> $11.81 (-43.8%)  stop  0.2h
-signals skipped by the sizer/risk rules: daily_loss_limit 206, already_traded_token 200, cooldown_after_loss 11, max_open_positions 5
+signals skipped by the sizer/risk rules: daily_loss_limit 208, already_traded_token 200, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
