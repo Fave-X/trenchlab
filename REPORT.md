@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-12 17:02 UTC
+Updated: 2026-11-12 17:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           50557
+pools seen           50616
 passed SCOUT         111
   killed by SCORE    14
   killed by AUDIT    25
 FINAL PASS           72
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    49509
-  few_unique_buyers            47612
-  liquidity_low                46741
-  volume_below_liquidity       35893
-  sells_dominate               13233
-  wash_churn                   10167
-  overheated                    4313
-  missing                       1316
+  too_young                    49568
+  few_unique_buyers            47668
+  liquidity_low                46797
+  volume_below_liquidity       35932
+  sells_dominate               13243
+  wash_churn                   10172
+  overheated                    4319
+  missing                       1317
   too_old                        838
   rc_danger                       12
 
-OUTCOMES (median price change from first sighting / first pass; 2742 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 2745 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   72    -4.3%    -6.0%   -44.0%   -90.9%    60%
+FINAL PASS                   72    -4.4%    -6.0%   -44.0%   -90.9%    60%
 SCOUT PASS, killed later     39    +3.0%    +0.7%   -55.0%   +22.4%    46%
-KILLED (tracked)           7637    +0.0%   -36.9%   -64.5%    +0.4%    30%
+KILLED (tracked)           7646    +0.0%   -36.9%   -64.5%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -77,9 +77,9 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     12%   72    25%    -11.9%   -20.1%   -99.7%
   -15%     20%   72    26%    -12.1%   -20.4%   -99.7%
   -15%     30%   72    29%     -9.7%   -20.6%   -99.7%
-  -25%     12%   72    31%    -13.4%   -21.2%   -99.7%
-  -25%     20%   72    32%    -15.3%   -29.4%   -99.7%
-  -25%     30%   72    35%    -13.0%   -30.0%   -99.7%
+  -25%     12%   72    31%    -13.7%   -24.6%   -99.7%
+  -25%     20%   72    32%    -15.6%   -29.8%   -99.7%
+  -25%     30%   72    35%    -13.3%   -30.5%   -99.7%
   best so far: stop -6%, trail from +30% -> avg -9.1% per trade over n=72
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
@@ -88,14 +88,14 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $411.00       $434.54
-return                        -17.8%        -13.1%
-closed trades                     40            31
+equity                       $411.00       $429.48
+return                        -17.8%        -14.1%
+closed trades                     40            32
 win rate                         22%           19%
-avg net / trade                -9.3%         -8.5%
-expectancy $/trade            $-2.23        $-2.07
-max drawdown                  -20.9%        -20.1%
-open now                           0             1
+avg net / trade                -9.3%         -9.2%
+expectancy $/trade            $-2.23        $-2.20
+max drawdown                  -20.9%        -21.0%
+open now                           0             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -122,15 +122,12 @@ signals skipped by the sizer/risk rules: already_traded_token 200, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $434.54 (-13.1%) | cash $414.12 | open 1 | max drawdown -20.1%
+equity $429.48 (-14.1%) | cash $429.48 | open 0 | max drawdown -21.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 31 | win 6/31 (19%) | avg net -8.5% | realized $-64.08 | expectancy $-2.07/trade
-exits: stop 25, trail 6
-  (n=31 < 100: noise, not evidence)
-open:
-  Huang        cost $21.80  now $20.42 (-6.4%)  held 0.4h
+closed 32 | win 6/32 (19%) | avg net -9.2% | realized $-70.52 | expectancy $-2.20/trade
+exits: stop 26, trail 6
+  (n=32 < 100: noise, not evidence)
 last trades:
-  BOXCAT       $22.87 -> $19.34 (-15.4%)  stop  0.5h
   AIRDROP      $22.69 -> $18.56 (-18.2%)  stop  0.3h
   NOBUSHIBA    $22.79 -> $20.46 (-10.2%)  stop  7.0h
   pants        $22.47 -> $19.96 (-11.2%)  stop  0.5h
@@ -138,6 +135,7 @@ last trades:
   NIHAONOON    $22.04 -> $19.02 (-13.7%)  stop  0.3h
   AIB          $21.89 -> $22.83 (+4.3%)  trail  0.8h
   FLC          $21.93 -> $19.19 (-12.5%)  stop  0.2h
+  Huang        $21.80 -> $15.36 (-29.5%)  stop  0.5h
 signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 192, daily_loss_limit 118, setup_rejected:sellers_dominate_now 86, setup_rejected:dumping_now 52, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 23, setup_rejected:b_bundled 13, setup_rejected:b_received 7, cooldown_after_loss 5, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:bundled_buys 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
