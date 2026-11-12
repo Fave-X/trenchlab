@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-12 05:02 UTC
+Updated: 2026-11-12 05:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           46908
+pools seen           46963
 passed SCOUT         104
   killed by SCORE    13
   killed by AUDIT    22
 FINAL PASS           69
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    45908
-  few_unique_buyers            44191
-  liquidity_low                43302
-  volume_below_liquidity       33282
-  sells_dominate               12287
-  wash_churn                    9479
-  overheated                    4013
+  too_young                    45963
+  few_unique_buyers            44244
+  liquidity_low                43355
+  volume_below_liquidity       33320
+  sells_dominate               12298
+  wash_churn                    9488
+  overheated                    4017
   missing                       1268
   too_old                        802
   rc_danger                        9
 
-OUTCOMES (median price change from first sighting / first pass; 2559 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 2562 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   69    -3.7%    -3.4%   -44.0%   -90.4%    57%
-SCOUT PASS, killed later     35    +7.3%    +0.2%   -52.8%   +22.4%    46%
-KILLED (tracked)           7173    +0.0%   -30.5%   -61.0%    +0.4%    30%
+SCOUT PASS, killed later     35    +6.2%    +0.2%   -52.8%   +22.4%    46%
+KILLED (tracked)           7183    +0.0%   -30.9%   -60.9%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -116,7 +116,7 @@ last trades:
   Max          $21.56 -> $18.83 (-12.7%)  stop  0.7h
   AIB          $21.42 -> $17.45 (-18.6%)  stop  0.2h
   MAX          $21.22 -> $16.96 (-20.1%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 187, daily_loss_limit 169, cooldown_after_loss 11, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 188, daily_loss_limit 169, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
