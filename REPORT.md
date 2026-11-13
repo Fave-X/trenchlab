@@ -1,25 +1,25 @@
 # TrenchLab report
 
-Updated: 2026-11-13 08:12 UTC
+Updated: 2026-11-13 08:21 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           55104
+pools seen           55151
 passed SCOUT         117
   killed by SCORE    15
   killed by AUDIT    25
 FINAL PASS           77
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    54009
-  few_unique_buyers            51952
-  liquidity_low                50958
-  volume_below_liquidity       39164
-  sells_dominate               14461
-  wash_churn                   11048
-  overheated                    4715
+  too_young                    54056
+  few_unique_buyers            51994
+  liquidity_low                51003
+  volume_below_liquidity       39197
+  sells_dominate               14469
+  wash_churn                   11059
+  overheated                    4720
   missing                       1481
   too_old                        871
   rc_danger                       12
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 3110 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   77    -4.3%    -7.8%   -44.0%   -91.5%    60%
 SCOUT PASS, killed later     40    +4.6%    +1.3%   -52.8%   +22.4%    45%
-KILLED (tracked)           8141    +0.0%   -40.2%   -67.8%    -0.1%    30%
+KILLED (tracked)           8149    +0.0%   -40.2%   -67.8%    -0.1%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -116,7 +116,7 @@ last trades:
   plumber      $20.55 -> $13.36 (-35.0%)  stop  0.2h
   AI           $20.55 -> $18.01 (-12.4%)  stop  0.3h
   FOOD         $20.06 -> $36.70 (+83.0%)  trail  1.0h
-signals skipped by the sizer/risk rules: already_traded_token 231, daily_loss_limit 226, cooldown_after_loss 11, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 232, daily_loss_limit 226, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
