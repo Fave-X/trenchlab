@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-13 20:22 UTC
+Updated: 2026-11-13 20:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           58771
+pools seen           58813
 passed SCOUT         122
   killed by SCORE    16
   killed by AUDIT    25
 FINAL PASS           81
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    57640
-  few_unique_buyers            55398
-  liquidity_low                54376
-  volume_below_liquidity       41694
-  sells_dominate               15479
-  wash_churn                   11881
-  overheated                    5055
+  too_young                    57681
+  few_unique_buyers            55436
+  liquidity_low                54414
+  volume_below_liquidity       41733
+  sells_dominate               15488
+  wash_churn                   11891
+  overheated                    5057
   missing                       1575
   too_old                        895
   rc_danger                       12
 
-OUTCOMES (median price change from first sighting / first pass; 3323 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 3325 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   81    -3.7%    -6.8%   -43.9%   -92.1%    58%
 SCOUT PASS, killed later     41    +3.0%    +0.7%   -55.0%   -15.3%    46%
-KILLED (tracked)           8591    +0.0%   -45.9%   -70.7%    -0.1%    30%
+KILLED (tracked)           8599    +0.0%   -45.9%   -70.7%    -0.1%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -68,19 +68,19 @@ tokens analysed: 398 | helius credits today: 4219/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%   81    25%     -8.8%   -17.1%   -99.7%
-   -6%     20%   81    25%     -9.0%   -17.1%   -99.7%
-   -6%     30%   81    26%     -7.1%   -17.1%   -99.7%
-  -10%     12%   81    27%     -8.6%   -19.3%   -99.7%
-  -10%     20%   81    26%     -9.2%   -19.5%   -99.7%
-  -10%     30%   81    28%     -7.1%   -19.6%   -99.7%
-  -15%     12%   81    28%     -8.2%   -19.9%   -99.7%
-  -15%     20%   81    28%     -9.0%   -20.4%   -99.7%
-  -15%     30%   81    31%     -6.9%   -20.7%   -99.7%
-  -25%     12%   81    33%    -10.0%   -17.1%   -99.7%
-  -25%     20%   81    33%    -12.7%   -29.9%   -99.7%
-  -25%     30%   81    36%    -10.6%   -30.8%   -99.7%
-  best so far: stop -15%, trail from +30% -> avg -6.9% per trade over n=81
+   -6%     12%   81    25%     -9.4%   -17.1%   -99.7%
+   -6%     20%   81    25%     -9.7%   -17.1%   -99.7%
+   -6%     30%   81    26%     -7.7%   -17.1%   -99.7%
+  -10%     12%   81    27%     -9.2%   -19.3%   -99.7%
+  -10%     20%   81    26%     -9.8%   -19.5%   -99.7%
+  -10%     30%   81    28%     -7.7%   -19.6%   -99.7%
+  -15%     12%   81    28%     -8.9%   -19.9%   -99.7%
+  -15%     20%   81    28%     -9.6%   -20.4%   -99.7%
+  -15%     30%   81    31%     -7.5%   -20.7%   -99.7%
+  -25%     12%   81    33%    -10.6%   -17.1%   -99.7%
+  -25%     20%   81    33%    -13.3%   -29.9%   -99.7%
+  -25%     30%   81    36%    -11.2%   -30.8%   -99.7%
+  best so far: stop -15%, trail from +30% -> avg -7.5% per trade over n=81
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 ================================================================
@@ -88,29 +88,26 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $454.60       $450.43
-return                         -9.1%         -9.9%
-closed trades                     46            36
-win rate                         24%           22%
-avg net / trade                -5.1%         -5.4%
-expectancy $/trade            $-1.34        $-1.38
+equity                       $443.47       $450.43
+return                        -11.3%         -9.9%
+closed trades                     47            36
+win rate                         26%           22%
+avg net / trade                -4.5%         -5.4%
+expectancy $/trade            $-1.20        $-1.38
 max drawdown                  -23.2%        -21.7%
-open now                           1             0
+open now                           0             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $454.60 (-9.1%) | cash $416.38 | open 1 | max drawdown -23.2%
+equity $443.47 (-11.3%) | cash $443.47 | open 0 | max drawdown -23.2%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 46 | win 11/46 (24%) | avg net -5.1% | realized $-61.71 | expectancy $-1.34/trade
-exits: stop 33, trail 13
-  (n=46 < 100: noise, not evidence)
-open:
-  BAWSAQ       cost $21.91  now $38.23 (+74.5%)  held 0.7h
+closed 47 | win 12/47 (26%) | avg net -4.5% | realized $-56.53 | expectancy $-1.20/trade
+exits: stop 33, trail 14
+  (n=47 < 100: noise, not evidence)
 last trades:
-  MAX          $21.22 -> $16.96 (-20.1%)  stop  0.2h
   BITCOINU     $21.01 -> $11.81 (-43.8%)  stop  0.2h
   plumber      $20.55 -> $13.36 (-35.0%)  stop  0.2h
   AI           $20.55 -> $18.01 (-12.4%)  stop  0.3h
@@ -118,7 +115,8 @@ last trades:
   Sakura       $20.90 -> $48.56 (+132.3%)  trail  1.2h
   FASTMOON     $22.28 -> $19.42 (-12.8%)  stop  1.3h
   Speed        $22.14 -> $17.72 (-20.0%)  stop  1.3h
-signals skipped by the sizer/risk rules: already_traded_token 273, daily_loss_limit 226, cooldown_after_loss 11, max_open_positions 5
+  BAWSAQ       $21.91 -> $27.10 (+23.7%)  trail  0.8h
+signals skipped by the sizer/risk rules: already_traded_token 274, daily_loss_limit 226, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
