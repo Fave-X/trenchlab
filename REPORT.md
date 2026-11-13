@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-13 05:22 UTC
+Updated: 2026-11-13 05:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           54314
+pools seen           54349
 passed SCOUT         117
   killed by SCORE    15
   killed by AUDIT    25
 FINAL PASS           77
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    53223
-  few_unique_buyers            51212
-  liquidity_low                50237
-  volume_below_liquidity       38607
-  sells_dominate               14253
-  wash_churn                   10877
+  too_young                    53258
+  few_unique_buyers            51247
+  liquidity_low                50272
+  volume_below_liquidity       38637
+  sells_dominate               14260
+  wash_churn                   10880
   overheated                    4633
   missing                       1455
   too_old                        868
   rc_danger                       12
 
-OUTCOMES (median price change from first sighting / first pass; 2988 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 2995 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   77    -4.3%    -7.8%   -44.0%   -91.5%    60%
 SCOUT PASS, killed later     40    +4.6%    +1.3%   -52.8%   +22.4%    45%
-KILLED (tracked)           8035    +0.0%   -38.6%   -67.1%    -0.1%    30%
+KILLED (tracked)           8036    +0.0%   -38.6%   -67.3%    -0.1%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -95,7 +95,7 @@ win rate                         23%           21%
 avg net / trade                -7.8%         -8.8%
 expectancy $/trade            $-1.91        $-2.11
 max drawdown                  -23.2%        -21.2%
-open now                           0             0
+open now                           0             1
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -122,11 +122,13 @@ signals skipped by the sizer/risk rules: already_traded_token 228, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $428.17 (-14.4%) | cash $428.17 | open 0 | max drawdown -21.2%
+equity $428.17 (-14.4%) | cash $406.76 | open 1 | max drawdown -21.2%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 34 | win 7/34 (21%) | avg net -8.8% | realized $-71.83 | expectancy $-2.11/trade
 exits: stop 27, trail 7
   (n=34 < 100: noise, not evidence)
+open:
+  FOOD         cost $21.41  now $21.41 (+0.0%)  held 0.0h
 last trades:
   pants        $22.47 -> $19.96 (-11.2%)  stop  0.5h
   Max          $22.16 -> $19.66 (-11.3%)  stop  0.2h
