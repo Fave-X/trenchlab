@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-13 16:52 UTC
+Updated: 2026-11-13 17:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           57750
+pools seen           57794
 passed SCOUT         121
   killed by SCORE    16
   killed by AUDIT    25
 FINAL PASS           80
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    56626
-  few_unique_buyers            54424
-  liquidity_low                53422
-  volume_below_liquidity       41001
-  sells_dominate               15164
-  wash_churn                   11654
-  overheated                    4964
+  too_young                    56670
+  few_unique_buyers            54465
+  liquidity_low                53465
+  volume_below_liquidity       41031
+  sells_dominate               15174
+  wash_churn                   11662
+  overheated                    4970
   missing                       1538
   too_old                        890
   rc_danger                       12
 
-OUTCOMES (median price change from first sighting / first pass; 3267 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 3268 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   80    -4.2%    -6.8%   -44.0%   -92.1%    57%
 SCOUT PASS, killed later     41    +3.0%    +1.3%   -52.8%   +22.4%    44%
-KILLED (tracked)           8487    +0.0%   -47.0%   -69.2%    -0.1%    30%
+KILLED (tracked)           8493    +0.0%   -47.0%   -69.2%    -0.1%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -71,16 +71,16 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
    -6%     12%   80    24%     -9.8%   -17.1%   -99.7%
    -6%     20%   80    24%    -10.0%   -17.1%   -99.7%
    -6%     30%   80    25%     -8.1%   -17.3%   -99.7%
-  -10%     12%   80    26%     -9.5%   -19.0%   -99.7%
-  -10%     20%   80    25%    -10.1%   -19.4%   -99.7%
-  -10%     30%   80    28%     -8.0%   -19.6%   -99.7%
-  -15%     12%   80    28%     -9.1%   -19.8%   -99.7%
-  -15%     20%   80    28%     -9.9%   -20.4%   -99.7%
-  -15%     30%   80    30%     -7.8%   -20.6%   -99.7%
-  -25%     12%   80    32%    -10.7%   -15.5%   -99.7%
-  -25%     20%   80    32%    -13.4%   -29.8%   -99.7%
-  -25%     30%   80    35%    -11.3%   -30.4%   -99.7%
-  best so far: stop -15%, trail from +30% -> avg -7.8% per trade over n=80
+  -10%     12%   80    26%     -9.6%   -19.4%   -99.7%
+  -10%     20%   80    25%    -10.2%   -19.6%   -99.7%
+  -10%     30%   80    28%     -8.1%   -19.8%   -99.7%
+  -15%     12%   80    28%     -9.2%   -20.0%   -99.7%
+  -15%     20%   80    28%    -10.0%   -20.6%   -99.7%
+  -15%     30%   80    30%     -7.9%   -20.8%   -99.7%
+  -25%     12%   80    32%    -10.8%   -19.0%   -99.7%
+  -25%     20%   80    32%    -13.5%   -29.8%   -99.7%
+  -25%     30%   80    35%    -11.4%   -30.4%   -99.7%
+  best so far: stop -15%, trail from +30% -> avg -7.9% per trade over n=80
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 ================================================================
@@ -88,29 +88,26 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $440.80       $450.43
-return                        -11.8%         -9.9%
-closed trades                     45            36
+equity                       $438.29       $450.43
+return                        -12.3%         -9.9%
+closed trades                     46            36
 win rate                         24%           22%
-avg net / trade                -4.8%         -5.4%
-expectancy $/trade            $-1.27        $-1.38
+avg net / trade                -5.1%         -5.4%
+expectancy $/trade            $-1.34        $-1.38
 max drawdown                  -23.2%        -21.7%
-open now                           1             0
+open now                           0             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $440.80 (-11.8%) | cash $420.56 | open 1 | max drawdown -23.2%
+equity $438.29 (-12.3%) | cash $438.29 | open 0 | max drawdown -23.2%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 45 | win 11/45 (24%) | avg net -4.8% | realized $-57.30 | expectancy $-1.27/trade
-exits: stop 32, trail 13
-  (n=45 < 100: noise, not evidence)
-open:
-  Speed        cost $22.14  now $20.24 (-8.6%)  held 1.2h
+closed 46 | win 11/46 (24%) | avg net -5.1% | realized $-61.71 | expectancy $-1.34/trade
+exits: stop 33, trail 13
+  (n=46 < 100: noise, not evidence)
 last trades:
-  AIB          $21.42 -> $17.45 (-18.6%)  stop  0.2h
   MAX          $21.22 -> $16.96 (-20.1%)  stop  0.2h
   BITCOINU     $21.01 -> $11.81 (-43.8%)  stop  0.2h
   plumber      $20.55 -> $13.36 (-35.0%)  stop  0.2h
@@ -118,7 +115,8 @@ last trades:
   FOOD         $20.06 -> $36.70 (+83.0%)  trail  1.0h
   Sakura       $20.90 -> $48.56 (+132.3%)  trail  1.2h
   FASTMOON     $22.28 -> $19.42 (-12.8%)  stop  1.3h
-signals skipped by the sizer/risk rules: already_traded_token 258, daily_loss_limit 226, cooldown_after_loss 11, max_open_positions 5
+  Speed        $22.14 -> $17.72 (-20.0%)  stop  1.3h
+signals skipped by the sizer/risk rules: already_traded_token 259, daily_loss_limit 226, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
