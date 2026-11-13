@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-13 05:32 UTC
+Updated: 2026-11-13 05:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           54349
+pools seen           54398
 passed SCOUT         117
   killed by SCORE    15
   killed by AUDIT    25
 FINAL PASS           77
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    53258
-  few_unique_buyers            51247
-  liquidity_low                50272
-  volume_below_liquidity       38637
-  sells_dominate               14260
-  wash_churn                   10880
-  overheated                    4633
-  missing                       1455
+  too_young                    53306
+  few_unique_buyers            51289
+  liquidity_low                50312
+  volume_below_liquidity       38668
+  sells_dominate               14274
+  wash_churn                   10893
+  overheated                    4636
+  missing                       1459
   too_old                        868
   rc_danger                       12
 
-OUTCOMES (median price change from first sighting / first pass; 2995 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 2996 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   77    -4.3%    -7.8%   -44.0%   -91.5%    60%
 SCOUT PASS, killed later     40    +4.6%    +1.3%   -52.8%   +22.4%    45%
-KILLED (tracked)           8036    +0.0%   -38.6%   -67.3%    -0.1%    30%
+KILLED (tracked)           8045    +0.0%   -38.6%   -67.6%    -0.1%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -52,19 +52,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      358     -0.3%    -12.0%    -25.7%    35%
+none      359     -0.3%    -12.0%    -25.7%    35%
 <15%       77     +0.2%    -11.7%    -12.4%    34%
 15-30%      9     -1.0%     -1.3%     +1.0%    33%
 30%+       17     -0.3%     -0.3%     +2.6%     6%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      358     -0.3%     -3.1%    -11.5%    28%
+none      359     -0.3%     -3.1%    -11.5%    28%
 <20%       90     -0.3%    -49.5%    -96.6%    46%
 20%+       13    +16.6%    -99.0%       -      92%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      443     -0.2%     -7.3%    -12.6%    32%
+<20%      444     -0.2%     -7.3%    -12.6%    32%
 20-40%     14     -4.6%    -99.0%    -99.1%    79%
 40%+        4    +11.6%     +5.8%       -      50%
-tokens analysed: 373 | helius credits today: 1069/25000
+tokens analysed: 374 | helius credits today: 1130/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -88,8 +88,8 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $417.91       $428.17
-return                        -16.4%        -14.4%
+equity                       $417.91       $428.46
+return                        -16.4%        -14.3%
 closed trades                     43            34
 win rate                         23%           21%
 avg net / trade                -7.8%         -8.8%
@@ -122,13 +122,13 @@ signals skipped by the sizer/risk rules: already_traded_token 228, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $428.17 (-14.4%) | cash $406.76 | open 1 | max drawdown -21.2%
+equity $428.46 (-14.3%) | cash $406.76 | open 1 | max drawdown -21.2%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 34 | win 7/34 (21%) | avg net -8.8% | realized $-71.83 | expectancy $-2.11/trade
 exits: stop 27, trail 7
   (n=34 < 100: noise, not evidence)
 open:
-  FOOD         cost $21.41  now $21.41 (+0.0%)  held 0.0h
+  FOOD         cost $21.41  now $21.70 (+1.4%)  held 0.2h
 last trades:
   pants        $22.47 -> $19.96 (-11.2%)  stop  0.5h
   Max          $22.16 -> $19.66 (-11.3%)  stop  0.2h
@@ -138,7 +138,7 @@ last trades:
   Huang        $21.80 -> $15.36 (-29.5%)  stop  0.5h
   AI           $21.47 -> $23.90 (+11.3%)  trail  0.3h
   plumber      $21.60 -> $17.86 (-17.3%)  stop  0.7h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 196, daily_loss_limit 118, setup_rejected:sellers_dominate_now 86, setup_rejected:dumping_now 54, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 26, setup_rejected:b_bundled 13, setup_rejected:b_received 7, cooldown_after_loss 6, setup_rejected:operator_cluster 5, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 196, daily_loss_limit 118, setup_rejected:sellers_dominate_now 86, setup_rejected:dumping_now 54, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 26, setup_rejected:b_bundled 13, setup_rejected:b_received 7, setup_rejected:operator_cluster 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
