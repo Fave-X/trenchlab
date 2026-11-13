@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-13 15:32 UTC
+Updated: 2026-11-13 15:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           57342
-passed SCOUT         119
+pools seen           57402
+passed SCOUT         120
   killed by SCORE    15
   killed by AUDIT    25
-FINAL PASS           79
+FINAL PASS           80
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    56234
-  few_unique_buyers            54053
-  liquidity_low                53046
-  volume_below_liquidity       40732
-  sells_dominate               15033
-  wash_churn                   11564
-  overheated                    4924
-  missing                       1527
+  too_young                    56294
+  few_unique_buyers            54111
+  liquidity_low                53094
+  volume_below_liquidity       40770
+  sells_dominate               15052
+  wash_churn                   11573
+  overheated                    4927
+  missing                       1538
   too_old                        880
   rc_danger                       12
 
-OUTCOMES (median price change from first sighting / first pass; 3250 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 3254 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   79    -3.7%    -7.3%   -43.9%   -92.1%    58%
+FINAL PASS                   80    -3.7%    -7.3%   -43.9%   -92.1%    57%
 SCOUT PASS, killed later     40    +4.6%    +1.3%   -52.8%   +22.4%    45%
-KILLED (tracked)           8431    +0.0%   -43.9%   -69.1%    -0.1%    30%
+KILLED (tracked)           8434    +0.0%   -44.0%   -69.1%    -0.1%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -46,13 +46,13 @@ if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        39    -63.7%    -94.5%    74%
 70-79      44    -37.3%    -65.9%    45%
-60-69      25    -32.0%    -99.8%    48%
+60-69      26    -32.0%    -99.8%    46%
 <60        11    -32.2%    +22.4%    27%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      380     -0.1%    -10.5%    -20.4%    34%
+none      380     -0.2%    -10.5%    -20.4%    34%
 <15%       76     +0.1%    -12.1%    -24.2%    34%
 15-30%      9     -1.0%     -1.3%     +1.0%    33%
 30%+       17     -0.3%     -0.3%     +2.6%     6%
@@ -95,18 +95,20 @@ win rate                         24%           22%
 avg net / trade                -4.8%         -5.4%
 expectancy $/trade            $-1.27        $-1.38
 max drawdown                  -23.2%        -21.7%
-open now                           0             0
+open now                           1             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $442.70 (-11.5%) | cash $442.70 | open 0 | max drawdown -23.2%
+equity $442.70 (-11.5%) | cash $420.56 | open 1 | max drawdown -23.2%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 45 | win 11/45 (24%) | avg net -4.8% | realized $-57.30 | expectancy $-1.27/trade
 exits: stop 32, trail 13
   (n=45 < 100: noise, not evidence)
+open:
+  Speed        cost $22.14  now $22.14 (+0.0%)  held 0.0h
 last trades:
   AIB          $21.42 -> $17.45 (-18.6%)  stop  0.2h
   MAX          $21.22 -> $16.96 (-20.1%)  stop  0.2h
@@ -136,7 +138,7 @@ last trades:
   plumber      $21.60 -> $17.86 (-17.3%)  stop  0.7h
   FOOD         $21.41 -> $18.94 (-11.6%)  stop  0.3h
   Sakura       $21.28 -> $46.02 (+116.2%)  trail  1.2h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 205, daily_loss_limit 118, setup_rejected:sellers_dominate_now 87, setup_rejected:dumping_now 55, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 27, setup_rejected:b_bundled 13, setup_rejected:operator_cluster 8, setup_rejected:b_received 7, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 206, daily_loss_limit 118, setup_rejected:sellers_dominate_now 87, setup_rejected:dumping_now 55, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 27, setup_rejected:b_bundled 13, setup_rejected:operator_cluster 8, setup_rejected:b_received 7, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
