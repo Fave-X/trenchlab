@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-13 14:12 UTC
+Updated: 2026-11-13 14:21 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           56861
+pools seen           56909
 passed SCOUT         119
   killed by SCORE    15
   killed by AUDIT    25
 FINAL PASS           79
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    55755
-  few_unique_buyers            53597
-  liquidity_low                52606
-  volume_below_liquidity       40414
-  sells_dominate               14898
-  wash_churn                   11474
-  overheated                    4885
+  too_young                    55803
+  few_unique_buyers            53645
+  liquidity_low                52654
+  volume_below_liquidity       40450
+  sells_dominate               14916
+  wash_churn                   11476
+  overheated                    4887
   missing                       1506
   too_old                        878
   rc_danger                       12
 
-OUTCOMES (median price change from first sighting / first pass; 3226 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 3228 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   79    -3.7%    -7.3%   -44.0%   -92.1%    58%
 SCOUT PASS, killed later     40    +4.6%    +1.3%   -52.8%   +22.4%    45%
-KILLED (tracked)           8384    +0.0%   -43.4%   -68.7%    -0.1%    30%
+KILLED (tracked)           8387    +0.0%   -43.5%   -68.7%    -0.1%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -78,8 +78,8 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     20%   79    28%     -9.9%   -20.4%   -99.7%
   -15%     30%   79    30%     -7.7%   -20.7%   -99.7%
   -25%     12%   79    33%    -10.7%   -17.1%   -99.7%
-  -25%     20%   79    33%    -13.1%   -29.7%   -99.7%
-  -25%     30%   79    35%    -11.0%   -30.1%   -99.7%
+  -25%     20%   79    33%    -13.2%   -29.7%   -99.7%
+  -25%     30%   79    35%    -11.1%   -30.1%   -99.7%
   best so far: stop -15%, trail from +30% -> avg -7.7% per trade over n=79
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
@@ -116,7 +116,7 @@ last trades:
   FOOD         $20.06 -> $36.70 (+83.0%)  trail  1.0h
   Sakura       $20.90 -> $48.56 (+132.3%)  trail  1.2h
   FASTMOON     $22.28 -> $19.42 (-12.8%)  stop  1.3h
-signals skipped by the sizer/risk rules: already_traded_token 247, daily_loss_limit 226, cooldown_after_loss 11, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 248, daily_loss_limit 226, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
