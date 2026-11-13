@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-13 09:42 UTC
+Updated: 2026-11-13 09:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           55568
+pools seen           55613
 passed SCOUT         117
   killed by SCORE    15
   killed by AUDIT    25
 FINAL PASS           77
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    54471
-  few_unique_buyers            52380
-  liquidity_low                51394
-  volume_below_liquidity       39487
-  sells_dominate               14567
-  wash_churn                   11171
-  overheated                    4753
-  missing                       1483
+  too_young                    54515
+  few_unique_buyers            52423
+  liquidity_low                51434
+  volume_below_liquidity       39521
+  sells_dominate               14580
+  wash_churn                   11178
+  overheated                    4759
+  missing                       1485
   too_old                        873
   rc_danger                       12
 
-OUTCOMES (median price change from first sighting / first pass; 3140 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 3147 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   77    -4.3%    -7.8%   -44.0%   -91.5%    60%
 SCOUT PASS, killed later     40    +4.6%    +1.3%   -52.8%   +22.4%    45%
-KILLED (tracked)           8211    +0.0%   -40.3%   -67.9%    -0.1%    30%
+KILLED (tracked)           8220    +0.0%   -40.3%   -67.9%    -0.1%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -116,7 +116,7 @@ last trades:
   plumber      $20.55 -> $13.36 (-35.0%)  stop  0.2h
   AI           $20.55 -> $18.01 (-12.4%)  stop  0.3h
   FOOD         $20.06 -> $36.70 (+83.0%)  trail  1.0h
-signals skipped by the sizer/risk rules: already_traded_token 237, daily_loss_limit 226, cooldown_after_loss 11, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 238, daily_loss_limit 226, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
