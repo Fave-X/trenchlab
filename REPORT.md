@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-13 01:32 UTC
+Updated: 2026-11-13 01:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           53184
+pools seen           53233
 passed SCOUT         116
   killed by SCORE    15
   killed by AUDIT    25
 FINAL PASS           76
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    52107
-  few_unique_buyers            50124
-  liquidity_low                49187
-  volume_below_liquidity       37804
-  sells_dominate               13965
-  wash_churn                   10621
-  overheated                    4523
+  too_young                    52156
+  few_unique_buyers            50171
+  liquidity_low                49236
+  volume_below_liquidity       37843
+  sells_dominate               13981
+  wash_churn                   10632
+  overheated                    4530
   missing                       1421
   too_old                        857
   rc_danger                       12
 
-OUTCOMES (median price change from first sighting / first pass; 2916 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 2917 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   76    -4.4%    -7.8%   -44.7%   -90.9%    61%
 SCOUT PASS, killed later     40    +4.6%    +1.3%   -52.8%   +22.4%    45%
-KILLED (tracked)           7915    +0.0%   -37.6%   -66.6%    +0.1%    30%
+KILLED (tracked)           7917    +0.0%   -37.3%   -66.7%    +0.1%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -44,27 +44,27 @@ sells_dominate                  1    -54.2%       -       0%
 SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
-80+        38    -67.0%    -94.5%    76%
-70-79      42    -44.7%    -65.9%    48%
+80+        39    -67.0%    -94.5%    74%
+70-79      41    -44.7%    -65.9%    49%
 60-69      25    -32.0%    -99.8%    48%
 <60        11    -32.2%    +22.4%    27%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      350     -0.4%    -12.0%    -25.7%    35%
-<15%       76     +0.2%    -11.7%    -12.4%    33%
+none      350     -0.3%    -12.0%    -25.7%    35%
+<15%       77     +0.2%    -11.7%    -12.4%    32%
 15-30%      8     -0.6%     -0.7%     +1.0%    38%
 30%+       18     -0.3%     -0.3%     +2.6%     6%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      351     -0.3%     -3.1%    -11.1%    29%
 <20%       89     -0.3%    -49.5%    -96.6%    45%
-20%+       12    +17.1%    -99.0%       -      92%
+20%+       13    +17.1%    -99.0%       -      85%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      435     -0.3%     -7.3%    -12.3%    32%
-20-40%     13     -4.5%    -99.0%    -99.1%    77%
+<20%      435     -0.2%     -7.3%    -12.3%    32%
+20-40%     14     -4.5%    -99.0%    -99.1%    71%
 40%+        4    +11.6%     +5.8%       -      50%
-tokens analysed: 367 | helius credits today: 237/25000
+tokens analysed: 368 | helius credits today: 320/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -88,8 +88,8 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $401.26       $430.17
-return                        -19.7%        -14.0%
+equity                       $401.26       $432.26
+return                        -19.7%        -13.5%
 closed trades                     42            33
 win rate                         21%           21%
 avg net / trade               -10.0%         -8.6%
@@ -116,19 +116,19 @@ last trades:
   BITCOINU     $21.01 -> $11.81 (-43.8%)  stop  0.2h
   plumber      $20.55 -> $13.36 (-35.0%)  stop  0.2h
   AI           $20.55 -> $18.01 (-12.4%)  stop  0.3h
-signals skipped by the sizer/risk rules: daily_loss_limit 226, already_traded_token 212, cooldown_after_loss 11, max_open_positions 5
+signals skipped by the sizer/risk rules: daily_loss_limit 226, already_traded_token 213, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $430.17 (-14.0%) | cash $410.31 | open 1 | max drawdown -21.0%
+equity $432.26 (-13.5%) | cash $410.31 | open 1 | max drawdown -21.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 33 | win 7/33 (21%) | avg net -8.6% | realized $-68.09 | expectancy $-2.06/trade
 exits: stop 26, trail 7
   (n=33 < 100: noise, not evidence)
 open:
-  plumber      cost $21.60  now $19.86 (-8.1%)  held 0.2h
+  plumber      cost $21.60  now $21.95 (+1.6%)  held 0.4h
 last trades:
   NOBUSHIBA    $22.79 -> $20.46 (-10.2%)  stop  7.0h
   pants        $22.47 -> $19.96 (-11.2%)  stop  0.5h
