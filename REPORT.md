@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-13 17:22 UTC
+Updated: 2026-11-13 17:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           57904
+pools seen           57960
 passed SCOUT         121
   killed by SCORE    16
   killed by AUDIT    25
 FINAL PASS           80
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    56779
-  few_unique_buyers            54572
-  liquidity_low                53573
-  volume_below_liquidity       41106
-  sells_dominate               15222
-  wash_churn                   11704
-  overheated                    4978
+  too_young                    56835
+  few_unique_buyers            54628
+  liquidity_low                53627
+  volume_below_liquidity       41150
+  sells_dominate               15237
+  wash_churn                   11715
+  overheated                    4985
   missing                       1538
   too_old                        891
   rc_danger                       12
 
-OUTCOMES (median price change from first sighting / first pass; 3273 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 3275 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   80    -4.2%    -6.8%   -44.0%   -91.5%    59%
 SCOUT PASS, killed later     41    +3.0%    +0.7%   -52.8%   +22.4%    44%
-KILLED (tracked)           8498    +0.0%   -46.5%   -69.3%    -0.1%    30%
+KILLED (tracked)           8502    +0.0%   -47.0%   -69.3%    -0.1%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -116,7 +116,7 @@ last trades:
   Sakura       $20.90 -> $48.56 (+132.3%)  trail  1.2h
   FASTMOON     $22.28 -> $19.42 (-12.8%)  stop  1.3h
   Speed        $22.14 -> $17.72 (-20.0%)  stop  1.3h
-signals skipped by the sizer/risk rules: already_traded_token 260, daily_loss_limit 226, cooldown_after_loss 11, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 262, daily_loss_limit 226, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
