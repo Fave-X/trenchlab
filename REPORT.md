@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-13 11:32 UTC
+Updated: 2026-11-13 11:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           56071
+pools seen           56118
 passed SCOUT         118
   killed by SCORE    15
   killed by AUDIT    25
 FINAL PASS           78
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    54971
-  few_unique_buyers            52847
-  liquidity_low                51861
-  volume_below_liquidity       39832
-  sells_dominate               14680
-  wash_churn                   11287
-  overheated                    4804
+  too_young                    55018
+  few_unique_buyers            52894
+  liquidity_low                51908
+  volume_below_liquidity       39864
+  sells_dominate               14686
+  wash_churn                   11305
+  overheated                    4813
   missing                       1497
   too_old                        874
   rc_danger                       12
 
-OUTCOMES (median price change from first sighting / first pass; 3181 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 3184 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   78    -4.2%    -7.8%   -44.0%   -92.1%    59%
 SCOUT PASS, killed later     40    +4.6%    +1.3%   -52.8%   +22.4%    45%
-KILLED (tracked)           8280    +0.0%   -41.2%   -68.4%    -0.1%    30%
+KILLED (tracked)           8286    +0.0%   -41.6%   -68.5%    -0.1%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -68,19 +68,19 @@ tokens analysed: 382 | helius credits today: 2011/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%   78    23%     -8.9%   -17.1%   -99.7%
-   -6%     20%   78    24%     -9.0%   -17.1%   -99.7%
-   -6%     30%   78    26%     -6.9%   -18.0%   -99.7%
-  -10%     12%   78    26%     -8.6%   -19.4%   -99.7%
-  -10%     20%   78    26%     -9.0%   -19.6%   -99.7%
-  -10%     30%   78    28%     -6.8%   -19.8%   -99.7%
-  -15%     12%   78    27%     -8.2%   -20.0%   -99.7%
-  -15%     20%   78    28%     -8.7%   -20.4%   -99.7%
-  -15%     30%   78    31%     -6.5%   -20.6%   -99.7%
-  -25%     12%   78    32%     -9.8%   -19.2%   -99.7%
-  -25%     20%   78    33%    -12.0%   -29.8%   -99.7%
-  -25%     30%   78    36%     -9.9%   -30.4%   -99.7%
-  best so far: stop -15%, trail from +30% -> avg -6.5% per trade over n=78
+   -6%     12%   78    23%    -10.0%   -17.1%   -99.7%
+   -6%     20%   78    24%    -10.0%   -17.1%   -99.7%
+   -6%     30%   78    26%     -8.0%   -18.0%   -99.7%
+  -10%     12%   78    26%     -9.6%   -19.4%   -99.7%
+  -10%     20%   78    26%    -10.1%   -19.6%   -99.7%
+  -10%     30%   78    28%     -7.9%   -19.8%   -99.7%
+  -15%     12%   78    27%     -9.2%   -20.0%   -99.7%
+  -15%     20%   78    28%     -9.7%   -20.4%   -99.7%
+  -15%     30%   78    31%     -7.5%   -20.6%   -99.7%
+  -25%     12%   78    32%    -10.9%   -19.2%   -99.7%
+  -25%     20%   78    33%    -13.0%   -29.8%   -99.7%
+  -25%     30%   78    36%    -10.9%   -30.4%   -99.7%
+  best so far: stop -15%, trail from +30% -> avg -7.5% per trade over n=78
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 ================================================================
@@ -88,29 +88,26 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $462.68       $466.64
-return                         -7.5%         -6.7%
-closed trades                     43            35
-win rate                         23%           20%
-avg net / trade                -7.8%         -8.9%
-expectancy $/trade            $-1.91        $-2.12
+equity                       $445.57       $450.43
+return                        -10.9%         -9.9%
+closed trades                     44            36
+win rate                         25%           22%
+avg net / trade                -4.6%         -5.4%
+expectancy $/trade            $-1.24        $-1.38
 max drawdown                  -23.2%        -21.7%
-open now                           1             1
+open now                           0             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $462.68 (-7.5%) | cash $397.01 | open 1 | max drawdown -23.2%
+equity $445.57 (-10.9%) | cash $445.57 | open 0 | max drawdown -23.2%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 43 | win 10/43 (23%) | avg net -7.8% | realized $-82.09 | expectancy $-1.91/trade
-exits: stop 31, trail 12
-  (n=43 < 100: noise, not evidence)
-open:
-  Sakura       cost $20.90  now $65.67 (+214.2%)  held 1.0h
+closed 44 | win 11/44 (25%) | avg net -4.6% | realized $-54.43 | expectancy $-1.24/trade
+exits: stop 31, trail 13
+  (n=44 < 100: noise, not evidence)
 last trades:
-  NIHAONOON    $21.56 -> $21.56 (-0.0%)  trail  0.3h
   Max          $21.56 -> $18.83 (-12.7%)  stop  0.7h
   AIB          $21.42 -> $17.45 (-18.6%)  stop  0.2h
   MAX          $21.22 -> $16.96 (-20.1%)  stop  0.2h
@@ -118,21 +115,19 @@ last trades:
   plumber      $20.55 -> $13.36 (-35.0%)  stop  0.2h
   AI           $20.55 -> $18.01 (-12.4%)  stop  0.3h
   FOOD         $20.06 -> $36.70 (+83.0%)  trail  1.0h
+  Sakura       $20.90 -> $48.56 (+132.3%)  trail  1.2h
 signals skipped by the sizer/risk rules: already_traded_token 239, daily_loss_limit 226, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $466.64 (-6.7%) | cash $404.41 | open 1 | max drawdown -21.7%
+equity $450.43 (-9.9%) | cash $450.43 | open 0 | max drawdown -21.7%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 35 | win 7/35 (20%) | avg net -8.9% | realized $-74.31 | expectancy $-2.12/trade
-exits: stop 28, trail 7
-  (n=35 < 100: noise, not evidence)
-open:
-  Sakura       cost $21.28  now $62.23 (+192.4%)  held 1.0h
+closed 36 | win 8/36 (22%) | avg net -5.4% | realized $-49.57 | expectancy $-1.38/trade
+exits: stop 28, trail 8
+  (n=36 < 100: noise, not evidence)
 last trades:
-  Max          $22.16 -> $19.66 (-11.3%)  stop  0.2h
   NIHAONOON    $22.04 -> $19.02 (-13.7%)  stop  0.3h
   AIB          $21.89 -> $22.83 (+4.3%)  trail  0.8h
   FLC          $21.93 -> $19.19 (-12.5%)  stop  0.2h
@@ -140,6 +135,7 @@ last trades:
   AI           $21.47 -> $23.90 (+11.3%)  trail  0.3h
   plumber      $21.60 -> $17.86 (-17.3%)  stop  0.7h
   FOOD         $21.41 -> $18.94 (-11.6%)  stop  0.3h
+  Sakura       $21.28 -> $46.02 (+116.2%)  trail  1.2h
 signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 200, daily_loss_limit 118, setup_rejected:sellers_dominate_now 86, setup_rejected:dumping_now 55, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 27, setup_rejected:b_bundled 13, setup_rejected:operator_cluster 7, setup_rejected:b_received 7, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
