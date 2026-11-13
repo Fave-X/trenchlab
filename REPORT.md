@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-13 01:12 UTC
+Updated: 2026-11-13 01:21 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           53082
+pools seen           53141
 passed SCOUT         116
   killed by SCORE    15
   killed by AUDIT    25
 FINAL PASS           76
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    52005
-  few_unique_buyers            50028
-  liquidity_low                49103
-  volume_below_liquidity       37739
-  sells_dominate               13939
-  wash_churn                   10602
-  overheated                    4511
-  missing                       1404
+  too_young                    52064
+  few_unique_buyers            50084
+  liquidity_low                49145
+  volume_below_liquidity       37772
+  sells_dominate               13955
+  wash_churn                   10612
+  overheated                    4516
+  missing                       1421
   too_old                        857
   rc_danger                       12
 
-OUTCOMES (median price change from first sighting / first pass; 2912 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 2916 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   76    -4.4%    -7.8%   -44.7%   -90.9%    61%
 SCOUT PASS, killed later     40    +4.6%    +1.3%   -52.8%   +22.4%    45%
-KILLED (tracked)           7906    +0.0%   -37.4%   -66.6%    +0.1%    30%
+KILLED (tracked)           7910    +0.0%   -37.6%   -66.6%    +0.1%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -95,7 +95,7 @@ win rate                         21%           21%
 avg net / trade               -10.0%         -8.6%
 expectancy $/trade            $-2.35        $-2.06
 max drawdown                  -22.8%        -21.0%
-open now                           0             0
+open now                           0             1
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -116,17 +116,19 @@ last trades:
   BITCOINU     $21.01 -> $11.81 (-43.8%)  stop  0.2h
   plumber      $20.55 -> $13.36 (-35.0%)  stop  0.2h
   AI           $20.55 -> $18.01 (-12.4%)  stop  0.3h
-signals skipped by the sizer/risk rules: daily_loss_limit 226, already_traded_token 208, cooldown_after_loss 11, max_open_positions 5
+signals skipped by the sizer/risk rules: daily_loss_limit 226, already_traded_token 210, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $431.91 (-13.6%) | cash $431.91 | open 0 | max drawdown -21.0%
+equity $431.91 (-13.6%) | cash $410.31 | open 1 | max drawdown -21.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 33 | win 7/33 (21%) | avg net -8.6% | realized $-68.09 | expectancy $-2.06/trade
 exits: stop 26, trail 7
   (n=33 < 100: noise, not evidence)
+open:
+  plumber      cost $21.60  now $21.60 (+0.0%)  held 0.0h
 last trades:
   NOBUSHIBA    $22.79 -> $20.46 (-10.2%)  stop  7.0h
   pants        $22.47 -> $19.96 (-11.2%)  stop  0.5h
