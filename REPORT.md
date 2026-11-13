@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-13 23:02 UTC
+Updated: 2026-11-13 23:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           59586
+pools seen           59634
 passed SCOUT         122
   killed by SCORE    16
   killed by AUDIT    25
 FINAL PASS           81
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    58432
-  few_unique_buyers            56178
-  liquidity_low                55114
-  volume_below_liquidity       42287
-  sells_dominate               15725
-  wash_churn                   12005
-  overheated                    5115
+  too_young                    58476
+  few_unique_buyers            56225
+  liquidity_low                55161
+  volume_below_liquidity       42321
+  sells_dominate               15743
+  wash_churn                   12018
+  overheated                    5116
   missing                       1616
-  too_old                        915
+  too_old                        919
   rc_danger                       12
 
-OUTCOMES (median price change from first sighting / first pass; 3402 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 3405 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   81    -3.7%    -6.5%   -43.9%   -91.5%    59%
+FINAL PASS                   81    -3.7%    -6.5%   -43.9%   -91.5%    60%
 SCOUT PASS, killed later     41    +3.0%    +0.7%   -55.0%   -15.3%    46%
-KILLED (tracked)           8692    +0.0%   -46.5%   -70.9%    -0.1%    30%
+KILLED (tracked)           8698    +0.0%   -45.9%   -70.9%    -0.1%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -45,7 +45,7 @@ SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        39    -63.7%    -94.3%    77%
-70-79      46    -37.3%    -66.7%    46%
+70-79      46    -37.3%    -66.7%    48%
 60-69      25    -32.0%    -99.8%    48%
 <60        12    -39.8%    -15.3%    33%
 
@@ -55,9 +55,9 @@ cluster     n   +1h med   +4h med  +24h med   rug%
 none      388     -0.2%    -10.7%    -31.6%    34%
 <15%       82     -0.6%    -12.1%    -12.4%    34%
 15-30%      9     -1.0%     -1.3%     +1.0%    33%
-30%+       21     -0.3%     -0.3%     +2.6%     5%
+30%+       21     -0.4%     -0.3%     +2.6%     5%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      394     -0.2%     -2.7%    -12.0%    27%
+none      394     -0.2%     -2.7%    -12.0%    28%
 <20%       91     -1.3%    -53.7%    -96.6%    47%
 20%+       15    +16.6%    -99.1%       -      87%
 fresh       n   +1h med   +4h med  +24h med   rug%
