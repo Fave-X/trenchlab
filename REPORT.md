@@ -1,25 +1,25 @@
 # TrenchLab report
 
-Updated: 2026-11-13 00:12 UTC
+Updated: 2026-11-13 00:21 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           52747
+pools seen           52806
 passed SCOUT         116
   killed by SCORE    15
   killed by AUDIT    25
 FINAL PASS           76
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    51672
-  few_unique_buyers            49708
-  liquidity_low                48779
-  volume_below_liquidity       37491
-  sells_dominate               13839
-  wash_churn                   10525
-  overheated                    4479
+  too_young                    51731
+  few_unique_buyers            49767
+  liquidity_low                48837
+  volume_below_liquidity       37536
+  sells_dominate               13860
+  wash_churn                   10540
+  overheated                    4480
   missing                       1403
   too_old                        856
   rc_danger                       12
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 2888 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   76    -4.4%    -7.8%   -44.4%   -91.5%    61%
 SCOUT PASS, killed later     40    +4.6%    +1.3%   -52.8%   +22.4%    45%
-KILLED (tracked)           7875    +0.0%   -37.4%   -66.6%    +0.4%    30%
+KILLED (tracked)           7879    +0.0%   -37.4%   -66.6%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -88,29 +88,26 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $402.81       $431.91
-return                        -19.4%        -13.6%
-closed trades                     41            33
-win rate                         22%           21%
-avg net / trade                -9.9%         -8.6%
+equity                       $401.26       $431.91
+return                        -19.7%        -13.6%
+closed trades                     42            33
+win rate                         21%           21%
+avg net / trade               -10.0%         -8.6%
 expectancy $/trade            $-2.35        $-2.06
-max drawdown                  -22.5%        -21.0%
-open now                           1             0
+max drawdown                  -22.8%        -21.0%
+open now                           0             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $402.81 (-19.4%) | cash $383.25 | open 1 | max drawdown -22.5%
+equity $401.26 (-19.7%) | cash $401.26 | open 0 | max drawdown -22.8%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 41 | win 9/41 (22%) | avg net -9.9% | realized $-96.20 | expectancy $-2.35/trade
-exits: stop 30, trail 11
-  (n=41 < 100: noise, not evidence)
-open:
-  AI           cost $20.55  now $19.56 (-4.8%)  held 0.2h
+closed 42 | win 9/42 (21%) | avg net -10.0% | realized $-98.74 | expectancy $-2.35/trade
+exits: stop 31, trail 11
+  (n=42 < 100: noise, not evidence)
 last trades:
-  VEYL         $21.57 -> $30.37 (+40.8%)  trail  0.7h
   DACITY       $21.58 -> $14.66 (-32.0%)  stop  8.3h
   NIHAONOON    $21.56 -> $21.56 (-0.0%)  trail  0.3h
   Max          $21.56 -> $18.83 (-12.7%)  stop  0.7h
@@ -118,7 +115,8 @@ last trades:
   MAX          $21.22 -> $16.96 (-20.1%)  stop  0.2h
   BITCOINU     $21.01 -> $11.81 (-43.8%)  stop  0.2h
   plumber      $20.55 -> $13.36 (-35.0%)  stop  0.2h
-signals skipped by the sizer/risk rules: daily_loss_limit 226, already_traded_token 202, cooldown_after_loss 11, max_open_positions 5
+  AI           $20.55 -> $18.01 (-12.4%)  stop  0.3h
+signals skipped by the sizer/risk rules: daily_loss_limit 226, already_traded_token 204, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -138,7 +136,7 @@ last trades:
   FLC          $21.93 -> $19.19 (-12.5%)  stop  0.2h
   Huang        $21.80 -> $15.36 (-29.5%)  stop  0.5h
   AI           $21.47 -> $23.90 (+11.3%)  trail  0.3h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 193, daily_loss_limit 118, setup_rejected:sellers_dominate_now 86, setup_rejected:dumping_now 53, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 24, setup_rejected:b_bundled 13, setup_rejected:b_received 7, cooldown_after_loss 5, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:operator_cluster 2, setup_rejected:bundled_buys 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 193, daily_loss_limit 118, setup_rejected:sellers_dominate_now 86, setup_rejected:dumping_now 53, setup_rejected:top10_concentrated 29, setup_rejected:volume_dried_up 25, setup_rejected:b_bundled 13, setup_rejected:b_received 7, cooldown_after_loss 5, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:operator_cluster 2, setup_rejected:bundled_buys 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
