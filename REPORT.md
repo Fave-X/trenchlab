@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-14 22:52 UTC
+Updated: 2026-11-14 23:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           66650
+pools seen           66689
 passed SCOUT         137
   killed by SCORE    18
   killed by AUDIT    31
 FINAL PASS           88
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    65440
-  few_unique_buyers            62858
-  liquidity_low                61430
-  volume_below_liquidity       47163
-  sells_dominate               17542
-  wash_churn                   13617
-  overheated                    5765
+  too_young                    65479
+  few_unique_buyers            62896
+  liquidity_low                61467
+  volume_below_liquidity       47196
+  sells_dominate               17555
+  wash_churn                   13625
+  overheated                    5766
   missing                       2064
   too_old                        943
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 3829 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 3832 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   88    -3.4%    -6.5%   -44.0%   -90.4%    58%
+FINAL PASS                   88    -3.4%    -6.8%   -44.0%   -90.4%    58%
 SCOUT PASS, killed later     49    +4.3%    +3.4%   -55.0%   -15.3%    45%
-KILLED (tracked)           9530    +0.0%   -51.6%   -73.8%    -0.1%    30%
+KILLED (tracked)           9535    +0.0%   -51.6%   -73.8%    -0.1%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -57,7 +57,7 @@ none      432     -0.2%    -10.5%    -33.1%    34%
 15-30%     10     -0.6%     -0.7%     +1.0%    30%
 30%+       22     -0.4%     -0.5%     +2.6%     5%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      437     -0.1%     -2.3%    -12.8%    27%
+none      437     -0.2%     -2.3%    -12.8%    27%
 <20%      102     -1.5%    -53.7%    -94.9%    45%
 20%+       15    +16.6%    -99.0%       -      87%
 fresh       n   +1h med   +4h med  +24h med   rug%
@@ -68,19 +68,19 @@ tokens analysed: 451 | helius credits today: 5444/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%   88    25%     -8.3%   -15.8%   -99.7%
-   -6%     20%   88    25%     -8.4%   -15.8%   -99.7%
-   -6%     30%   88    26%     -6.6%   -17.1%   -99.7%
-  -10%     12%   88    27%     -8.1%   -19.0%   -99.7%
-  -10%     20%   88    26%     -8.6%   -19.4%   -99.7%
-  -10%     30%   88    28%     -6.7%   -19.6%   -99.7%
-  -15%     12%   88    30%     -7.5%   -19.8%   -99.7%
-  -15%     20%   88    30%     -7.8%   -20.4%   -99.7%
-  -15%     30%   88    32%     -5.9%   -20.6%   -99.7%
-  -25%     12%   88    34%     -9.7%   -15.5%   -99.7%
-  -25%     20%   88    34%    -11.7%   -29.8%   -99.7%
-  -25%     30%   88    36%     -9.9%   -30.4%   -99.7%
-  best so far: stop -15%, trail from +30% -> avg -5.9% per trade over n=88
+   -6%     12%   88    25%     -8.8%   -15.8%   -99.7%
+   -6%     20%   88    25%     -9.1%   -16.0%   -99.7%
+   -6%     30%   88    26%     -7.3%   -17.1%   -99.7%
+  -10%     12%   88    27%     -8.6%   -19.0%   -99.7%
+  -10%     20%   88    26%     -9.2%   -19.4%   -99.7%
+  -10%     30%   88    28%     -7.3%   -19.6%   -99.7%
+  -15%     12%   88    30%     -8.0%   -19.8%   -99.7%
+  -15%     20%   88    30%     -8.5%   -20.4%   -99.7%
+  -15%     30%   88    32%     -6.5%   -20.6%   -99.7%
+  -25%     12%   88    34%    -10.2%   -15.5%   -99.7%
+  -25%     20%   88    34%    -12.4%   -29.8%   -99.7%
+  -25%     30%   88    36%    -10.5%   -30.4%   -99.7%
+  best so far: stop -15%, trail from +30% -> avg -6.5% per trade over n=88
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 ================================================================
@@ -116,7 +116,7 @@ last trades:
   tinfoil      $21.88 -> $28.30 (+29.3%)  trail  0.3h
   GTA$         $22.06 -> $16.78 (-24.0%)  stop  0.2h
   billie       $21.80 -> $3.70 (-83.0%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 306, daily_loss_limit 236, cooldown_after_loss 11, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 306, daily_loss_limit 237, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
