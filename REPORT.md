@@ -1,26 +1,26 @@
 # TrenchLab report
 
-Updated: 2026-11-14 22:22 UTC
+Updated: 2026-11-14 22:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           66497
+pools seen           66548
 passed SCOUT         137
   killed by SCORE    18
   killed by AUDIT    31
 FINAL PASS           88
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    65287
-  few_unique_buyers            62710
-  liquidity_low                61294
-  volume_below_liquidity       47053
-  sells_dominate               17490
-  wash_churn                   13582
-  overheated                    5753
-  missing                       2049
+  too_young                    65338
+  few_unique_buyers            62761
+  liquidity_low                61340
+  volume_below_liquidity       47091
+  sells_dominate               17510
+  wash_churn                   13592
+  overheated                    5756
+  missing                       2054
   too_old                        943
   rc_danger                       13
 
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 3824 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   88    -3.4%    -6.8%   -44.0%   -90.4%    58%
 SCOUT PASS, killed later     49    +4.3%    +3.4%   -55.0%   -15.3%    45%
-KILLED (tracked)           9515    +0.0%   -51.6%   -73.7%    -0.1%    30%
+KILLED (tracked)           9517    +0.0%   -51.6%   -73.7%    -0.2%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -52,16 +52,16 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      432     -0.2%    -10.5%    -32.6%    34%
+none      432     -0.2%    -10.5%    -33.1%    34%
 <15%       90     +0.1%    -11.2%    -32.5%    31%
 15-30%     10     -0.6%     -0.7%     +1.0%    30%
 30%+       22     -0.4%     -0.5%     +2.6%     5%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      437     -0.2%     -2.3%    -12.8%    27%
+none      437     -0.2%     -2.3%    -12.9%    27%
 <20%      102     -1.5%    -53.7%    -94.9%    45%
 20%+       15    +16.6%    -99.0%       -      87%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      532     -0.2%     -4.5%    -16.0%    31%
+<20%      532     -0.2%     -4.5%    -16.6%    31%
 20-40%     15     -4.8%    -99.0%    -99.1%    80%
 40%+        7    -43.5%    -46.3%       -      57%
 tokens analysed: 451 | helius credits today: 5444/25000
@@ -69,16 +69,16 @@ tokens analysed: 451 | helius credits today: 5444/25000
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
    -6%     12%   88    26%     -9.0%   -15.8%   -99.7%
-   -6%     20%   88    26%     -9.2%   -15.8%   -99.7%
-   -6%     30%   88    27%     -7.4%   -17.1%   -99.7%
+   -6%     20%   88    26%     -9.1%   -15.8%   -99.7%
+   -6%     30%   88    27%     -7.3%   -17.1%   -99.7%
   -10%     12%   88    28%     -8.8%   -19.0%   -99.7%
   -10%     20%   88    27%     -9.3%   -19.4%   -99.7%
   -10%     30%   88    30%     -7.4%   -19.6%   -99.7%
   -15%     12%   88    31%     -8.2%   -19.8%   -99.7%
-  -15%     20%   88    31%     -8.6%   -20.4%   -99.7%
+  -15%     20%   88    31%     -8.5%   -20.4%   -99.7%
   -15%     30%   88    33%     -6.6%   -20.6%   -99.7%
   -25%     12%   88    35%    -10.4%   -15.5%   -99.7%
-  -25%     20%   88    35%    -12.5%   -29.8%   -99.7%
+  -25%     20%   88    35%    -12.4%   -29.8%   -99.7%
   -25%     30%   88    38%    -10.6%   -30.4%   -99.7%
   best so far: stop -15%, trail from +30% -> avg -6.6% per trade over n=88
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
@@ -116,7 +116,7 @@ last trades:
   tinfoil      $21.88 -> $28.30 (+29.3%)  trail  0.3h
   GTA$         $22.06 -> $16.78 (-24.0%)  stop  0.2h
   billie       $21.80 -> $3.70 (-83.0%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 306, daily_loss_limit 233, cooldown_after_loss 11, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 306, daily_loss_limit 234, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -136,7 +136,7 @@ last trades:
   Sakura       $21.28 -> $46.02 (+116.2%)  trail  1.2h
   CSI          $22.52 -> $19.70 (-12.5%)  stop  0.3h
   SPEED        $22.70 -> $0.05 (-99.8%)  stop  0.3h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 257, daily_loss_limit 207, setup_rejected:sellers_dominate_now 112, setup_rejected:dumping_now 84, setup_rejected:volume_dried_up 30, setup_rejected:top10_concentrated 29, setup_rejected:b_bundled 24, setup_rejected:operator_cluster 15, setup_rejected:b_received 7, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 258, daily_loss_limit 207, setup_rejected:sellers_dominate_now 112, setup_rejected:dumping_now 84, setup_rejected:volume_dried_up 30, setup_rejected:top10_concentrated 29, setup_rejected:b_bundled 24, setup_rejected:operator_cluster 15, setup_rejected:b_received 7, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
