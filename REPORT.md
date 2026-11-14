@@ -1,41 +1,41 @@
 # TrenchLab report
 
-Updated: 2026-11-14 10:52 UTC
+Updated: 2026-11-14 11:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           63128
+pools seen           63173
 passed SCOUT         131
   killed by SCORE    18
   killed by AUDIT    29
 FINAL PASS           84
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    61938
-  few_unique_buyers            59516
-  liquidity_low                58358
-  volume_below_liquidity       44782
-  sells_dominate               16657
-  wash_churn                   12867
-  overheated                    5466
+  too_young                    61983
+  few_unique_buyers            59560
+  liquidity_low                58400
+  volume_below_liquidity       44813
+  sells_dominate               16667
+  wash_churn                   12884
+  overheated                    5473
   missing                       1745
   too_old                        931
   rc_danger                       12
 
-OUTCOMES (median price change from first sighting / first pass; 3644 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 3647 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   84    -3.4%    -6.1%   -43.9%   -89.9%    61%
 SCOUT PASS, killed later     47    +4.3%    +2.2%   -55.0%   -15.3%    45%
-KILLED (tracked)           9143    +0.0%   -49.9%   -72.6%    -0.1%    30%
+KILLED (tracked)           9151    +0.0%   -49.9%   -72.6%    -0.1%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
 too_young                      65    -94.8%    -71.7%    55%
 too_old                        32     -0.6%     -0.4%     3%
-wash_churn                     22     -1.0%    -71.8%    27%
+wash_churn                     22    -23.2%    -71.8%    27%
 liquidity_low                  16    -51.1%    -49.8%    50%
 volume_below_liquidity          6     +1.5%    +15.3%    50%
 overheated                      5     -3.6%    -79.6%    60%
@@ -44,24 +44,24 @@ sells_dominate                  2    -64.6%       -      50%
 SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
-80+        41    -60.4%    -94.0%    73%
-70-79      50    -42.3%    -65.9%    50%
+80+        42    -60.4%    -94.0%    71%
+70-79      49    -42.3%    -65.9%    51%
 60-69      27    -32.0%    -99.8%    48%
 <60        13    -32.2%    -15.3%    31%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      416     -0.2%    -11.0%    -32.1%    34%
+none      416     -0.2%    -11.4%    -32.1%    34%
 <15%       85     +0.1%    -11.2%    -12.4%    33%
 15-30%      9     -1.0%     -1.3%     +1.0%    33%
 30%+       22     -0.4%     -0.6%     +2.6%     5%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      421     -0.2%     -2.3%    -12.3%    28%
+none      421     -0.2%     -2.4%    -12.3%    28%
 <20%       96     -1.5%    -55.2%    -96.6%    48%
 20%+       15    +16.6%    -99.0%       -      87%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      510     -0.2%     -4.7%    -14.9%    31%
+<20%      510     -0.2%     -4.9%    -14.9%    31%
 20-40%     16     -4.6%    -99.0%    -99.1%    75%
 40%+        6    -98.5%    -98.5%       -      67%
 tokens analysed: 432 | helius credits today: 2784/25000
@@ -136,7 +136,7 @@ last trades:
   Sakura       $21.28 -> $46.02 (+116.2%)  trail  1.2h
   CSI          $22.52 -> $19.70 (-12.5%)  stop  0.3h
   SPEED        $22.70 -> $0.05 (-99.8%)  stop  0.3h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 235, daily_loss_limit 155, setup_rejected:sellers_dominate_now 91, setup_rejected:dumping_now 66, setup_rejected:volume_dried_up 30, setup_rejected:top10_concentrated 29, setup_rejected:b_bundled 13, setup_rejected:operator_cluster 8, setup_rejected:b_received 7, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 236, daily_loss_limit 156, setup_rejected:sellers_dominate_now 91, setup_rejected:dumping_now 66, setup_rejected:volume_dried_up 30, setup_rejected:top10_concentrated 29, setup_rejected:b_bundled 13, setup_rejected:operator_cluster 8, setup_rejected:b_received 7, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
