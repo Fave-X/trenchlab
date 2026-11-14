@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-14 06:22 UTC
+Updated: 2026-11-14 06:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           61815
+pools seen           61857
 passed SCOUT         130
   killed by SCORE    18
   killed by AUDIT    28
 FINAL PASS           84
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    60637
-  few_unique_buyers            58279
-  liquidity_low                57139
-  volume_below_liquidity       43836
-  sells_dominate               16315
-  wash_churn                   12547
-  overheated                    5343
+  too_young                    60679
+  few_unique_buyers            58319
+  liquidity_low                57180
+  volume_below_liquidity       43868
+  sells_dominate               16328
+  wash_churn                   12557
+  overheated                    5348
   missing                       1723
   too_old                        926
   rc_danger                       12
 
-OUTCOMES (median price change from first sighting / first pass; 3552 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 3556 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   84    -3.4%    -6.8%   -44.0%   -90.4%    60%
+FINAL PASS                   84    -3.4%    -6.5%   -44.0%   -90.4%    60%
 SCOUT PASS, killed later     46    +3.7%    +1.3%   -52.8%   -15.3%    43%
-KILLED (tracked)           8962    +0.0%   -49.2%   -71.7%    -0.1%    30%
+KILLED (tracked)           8968    +0.0%   -49.1%   -71.7%    -0.1%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -53,18 +53,18 @@ CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
 none      410     -0.2%    -10.5%    -31.6%    34%
-<15%       84     -0.6%    -11.2%    -12.4%    33%
+<15%       85     -0.6%    -11.2%    -12.4%    33%
 15-30%      9     -1.0%     -1.3%     +1.0%    33%
 30%+       21     -0.4%     -0.6%     +2.6%     5%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      413     -0.2%     -2.3%    -12.0%    28%
+none      414     -0.2%     -2.3%    -12.0%    28%
 <20%       96     -1.4%    -55.2%    -96.6%    47%
 20%+       15    +16.6%    -99.0%       -      87%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      502     -0.2%     -4.5%    -13.9%    31%
+<20%      503     -0.2%     -4.5%    -13.9%    31%
 20-40%     16     -4.6%    -99.0%    -99.1%    75%
 40%+        6    -43.5%     +5.8%       -      67%
-tokens analysed: 425 | helius credits today: 1844/25000
+tokens analysed: 426 | helius credits today: 1961/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -74,13 +74,13 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -10%     12%   84    27%     -9.1%   -19.0%   -99.7%
   -10%     20%   84    26%     -9.7%   -19.4%   -99.7%
   -10%     30%   84    29%     -7.6%   -19.6%   -99.7%
-  -15%     12%   84    29%     -8.6%   -19.8%   -99.7%
-  -15%     20%   84    29%     -9.4%   -20.4%   -99.7%
-  -15%     30%   84    31%     -7.3%   -20.6%   -99.7%
-  -25%     12%   84    33%    -10.6%   -15.5%   -99.7%
-  -25%     20%   84    33%    -13.2%   -29.8%   -99.7%
-  -25%     30%   84    36%    -11.2%   -30.4%   -99.7%
-  best so far: stop -15%, trail from +30% -> avg -7.3% per trade over n=84
+  -15%     12%   84    30%     -8.4%   -19.8%   -99.7%
+  -15%     20%   84    30%     -9.1%   -20.4%   -99.7%
+  -15%     30%   84    32%     -7.1%   -20.6%   -99.7%
+  -25%     12%   84    35%    -10.4%   -15.5%   -99.7%
+  -25%     20%   84    35%    -12.9%   -29.8%   -99.7%
+  -25%     30%   84    37%    -10.9%   -30.4%   -99.7%
+  best so far: stop -15%, trail from +30% -> avg -7.1% per trade over n=84
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 ================================================================
@@ -136,7 +136,7 @@ last trades:
   Sakura       $21.28 -> $46.02 (+116.2%)  trail  1.2h
   CSI          $22.52 -> $19.70 (-12.5%)  stop  0.3h
   SPEED        $22.70 -> $0.05 (-99.8%)  stop  0.3h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 217, daily_loss_limit 134, setup_rejected:sellers_dominate_now 89, setup_rejected:dumping_now 61, setup_rejected:volume_dried_up 30, setup_rejected:top10_concentrated 29, setup_rejected:b_bundled 13, setup_rejected:operator_cluster 8, setup_rejected:b_received 7, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 218, daily_loss_limit 134, setup_rejected:sellers_dominate_now 89, setup_rejected:dumping_now 61, setup_rejected:volume_dried_up 30, setup_rejected:top10_concentrated 29, setup_rejected:b_bundled 13, setup_rejected:operator_cluster 8, setup_rejected:b_received 7, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
