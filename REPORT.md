@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-14 18:12 UTC
+Updated: 2026-11-14 18:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           65215
+pools seen           65256
 passed SCOUT         134
   killed by SCORE    18
   killed by AUDIT    31
 FINAL PASS           85
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    64013
-  few_unique_buyers            61494
-  liquidity_low                60215
-  volume_below_liquidity       46204
-  sells_dominate               17155
-  wash_churn                   13336
-  overheated                    5660
-  missing                       1890
+  too_young                    64054
+  few_unique_buyers            61530
+  liquidity_low                60240
+  volume_below_liquidity       46224
+  sells_dominate               17162
+  wash_churn                   13346
+  overheated                    5661
+  missing                       1904
   too_old                        939
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 3758 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 3760 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   85    -3.8%    -6.5%   -44.0%   -90.9%    60%
 SCOUT PASS, killed later     49    +4.3%    +3.4%   -55.0%   -15.3%    45%
-KILLED (tracked)           9378    +0.0%   -50.7%   -73.3%    -0.1%    30%
+KILLED (tracked)           9382    +0.0%   -50.7%   -73.4%    -0.1%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -52,19 +52,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      428     -0.2%    -10.9%    -32.6%    34%
-<15%       87     +0.1%    -11.2%    -15.5%    32%
+none      428     -0.2%    -10.7%    -32.1%    34%
+<15%       88     +0.2%    -11.2%    -24.2%    32%
 15-30%     10     -0.6%     -0.7%     +1.0%    30%
 30%+       22     -0.4%     -0.5%     +2.6%     5%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      432     -0.2%     -2.2%    -12.6%    28%
+none      433     -0.2%     -2.2%    -12.6%    27%
 <20%      100     -1.4%    -53.7%    -96.6%    46%
 20%+       15    +16.6%    -99.0%       -      87%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      525     -0.2%     -4.0%    -15.5%    31%
+<20%      526     -0.2%     -4.0%    -15.5%    31%
 20-40%     15     -4.8%    -99.0%    -99.1%    80%
 40%+        7    -43.5%    -46.3%       -      57%
-tokens analysed: 446 | helius credits today: 4666/25000
+tokens analysed: 446 | helius credits today: 4738/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -136,7 +136,7 @@ last trades:
   Sakura       $21.28 -> $46.02 (+116.2%)  trail  1.2h
   CSI          $22.52 -> $19.70 (-12.5%)  stop  0.3h
   SPEED        $22.70 -> $0.05 (-99.8%)  stop  0.3h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 251, daily_loss_limit 200, setup_rejected:sellers_dominate_now 109, setup_rejected:dumping_now 83, setup_rejected:volume_dried_up 30, setup_rejected:top10_concentrated 29, setup_rejected:b_bundled 24, setup_rejected:operator_cluster 15, setup_rejected:b_received 7, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 251, daily_loss_limit 202, setup_rejected:sellers_dominate_now 109, setup_rejected:dumping_now 83, setup_rejected:volume_dried_up 30, setup_rejected:top10_concentrated 29, setup_rejected:b_bundled 24, setup_rejected:operator_cluster 15, setup_rejected:b_received 7, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
