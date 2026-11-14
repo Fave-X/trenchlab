@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-14 05:52 UTC
+Updated: 2026-11-14 06:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           61667
-passed SCOUT         129
+pools seen           61709
+passed SCOUT         130
   killed by SCORE    18
-  killed by AUDIT    27
+  killed by AUDIT    28
 FINAL PASS           84
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    60492
-  few_unique_buyers            58143
-  liquidity_low                56998
-  volume_below_liquidity       43736
-  sells_dominate               16276
-  wash_churn                   12515
-  overheated                    5324
+  too_young                    60533
+  few_unique_buyers            58183
+  liquidity_low                57039
+  volume_below_liquidity       43762
+  sells_dominate               16289
+  wash_churn                   12525
+  overheated                    5330
   missing                       1722
   too_old                        926
   rc_danger                       12
 
-OUTCOMES (median price change from first sighting / first pass; 3544 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 3545 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   84    -3.4%    -6.8%   -44.0%   -90.4%    60%
-SCOUT PASS, killed later     45    +3.0%    +1.3%   -52.8%   -15.3%    44%
-KILLED (tracked)           8950    +0.0%   -49.9%   -71.7%    -0.1%    30%
+SCOUT PASS, killed later     46    +3.7%    +1.3%   -52.8%   -15.3%    43%
+KILLED (tracked)           8951    +0.0%   -50.0%   -71.7%    -0.1%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                      66    -93.5%    -71.7%    53%
+too_young                      65    -93.5%    -71.7%    54%
 too_old                        32     -0.6%     -0.4%     3%
 wash_churn                     19     -1.0%    -71.8%    32%
 liquidity_low                  16    -51.1%    -49.8%    50%
@@ -44,7 +44,7 @@ sells_dominate                  2    -64.6%       -      50%
 SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
-80+        39    -63.7%    -94.0%    77%
+80+        40    -63.7%    -94.0%    75%
 70-79      50    -39.9%    -66.4%    48%
 60-69      27    -35.2%    -99.8%    44%
 <60        13    -32.2%    -15.3%    31%
@@ -74,13 +74,13 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -10%     12%   84    27%     -9.1%   -19.0%   -99.7%
   -10%     20%   84    26%     -9.7%   -19.4%   -99.7%
   -10%     30%   84    29%     -7.6%   -19.6%   -99.7%
-  -15%     12%   84    29%     -8.7%   -19.8%   -99.7%
-  -15%     20%   84    29%     -9.4%   -20.4%   -99.7%
-  -15%     30%   84    31%     -7.4%   -20.6%   -99.7%
-  -25%     12%   84    33%    -10.7%   -15.5%   -99.7%
-  -25%     20%   84    33%    -13.2%   -29.8%   -99.7%
-  -25%     30%   84    36%    -11.3%   -30.4%   -99.7%
-  best so far: stop -15%, trail from +30% -> avg -7.4% per trade over n=84
+  -15%     12%   84    29%     -8.5%   -19.8%   -99.7%
+  -15%     20%   84    29%     -9.3%   -20.4%   -99.7%
+  -15%     30%   84    31%     -7.3%   -20.6%   -99.7%
+  -25%     12%   84    33%    -10.5%   -15.5%   -99.7%
+  -25%     20%   84    33%    -13.1%   -29.8%   -99.7%
+  -25%     30%   84    36%    -11.1%   -30.4%   -99.7%
+  best so far: stop -15%, trail from +30% -> avg -7.3% per trade over n=84
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 ================================================================
