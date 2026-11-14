@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-14 23:02 UTC
+Updated: 2026-11-14 23:11 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           66689
+pools seen           66727
 passed SCOUT         137
   killed by SCORE    18
   killed by AUDIT    31
 FINAL PASS           88
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    65479
-  few_unique_buyers            62896
-  liquidity_low                61467
-  volume_below_liquidity       47196
-  sells_dominate               17555
-  wash_churn                   13625
-  overheated                    5766
-  missing                       2064
-  too_old                        943
+  too_young                    65516
+  few_unique_buyers            62933
+  liquidity_low                61494
+  volume_below_liquidity       47219
+  sells_dominate               17566
+  wash_churn                   13635
+  overheated                    5768
+  missing                       2073
+  too_old                        944
   rc_danger                       13
 
 OUTCOMES (median price change from first sighting / first pass; 3832 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   88    -3.4%    -6.8%   -44.0%   -90.4%    58%
 SCOUT PASS, killed later     49    +4.3%    +3.4%   -55.0%   -15.3%    45%
-KILLED (tracked)           9535    +0.0%   -51.6%   -73.8%    -0.1%    30%
+KILLED (tracked)           9539    +0.0%   -51.6%   -73.8%    -0.1%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -75,12 +75,12 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -10%     20%   88    26%     -9.2%   -19.4%   -99.7%
   -10%     30%   88    28%     -7.3%   -19.6%   -99.7%
   -15%     12%   88    30%     -8.0%   -19.8%   -99.7%
-  -15%     20%   88    30%     -8.5%   -20.4%   -99.7%
-  -15%     30%   88    32%     -6.5%   -20.6%   -99.7%
+  -15%     20%   88    30%     -8.3%   -20.4%   -99.7%
+  -15%     30%   88    32%     -6.3%   -20.6%   -99.7%
   -25%     12%   88    34%    -10.2%   -15.5%   -99.7%
-  -25%     20%   88    34%    -12.4%   -29.8%   -99.7%
-  -25%     30%   88    36%    -10.5%   -30.4%   -99.7%
-  best so far: stop -15%, trail from +30% -> avg -6.5% per trade over n=88
+  -25%     20%   88    34%    -12.2%   -29.8%   -99.7%
+  -25%     30%   88    36%    -10.3%   -30.4%   -99.7%
+  best so far: stop -15%, trail from +30% -> avg -6.3% per trade over n=88
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 ================================================================
@@ -116,7 +116,7 @@ last trades:
   tinfoil      $21.88 -> $28.30 (+29.3%)  trail  0.3h
   GTA$         $22.06 -> $16.78 (-24.0%)  stop  0.2h
   billie       $21.80 -> $3.70 (-83.0%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 306, daily_loss_limit 237, cooldown_after_loss 11, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 306, daily_loss_limit 238, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
