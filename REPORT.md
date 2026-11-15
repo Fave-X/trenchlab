@@ -1,25 +1,25 @@
 # TrenchLab report
 
-Updated: 2026-11-15 00:12 UTC
+Updated: 2026-11-15 00:21 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           67050
+pools seen           67078
 passed SCOUT         137
   killed by SCORE    18
   killed by AUDIT    31
 FINAL PASS           88
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    65834
-  few_unique_buyers            63238
-  liquidity_low                61801
-  volume_below_liquidity       47448
-  sells_dominate               17646
-  wash_churn                   13709
-  overheated                    5794
+  too_young                    65862
+  few_unique_buyers            63265
+  liquidity_low                61829
+  volume_below_liquidity       47471
+  sells_dominate               17654
+  wash_churn                   13718
+  overheated                    5797
   missing                       2080
   too_old                        947
   rc_danger                       13
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 3908 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   88    -3.4%    -6.8%   -44.0%   -90.4%    58%
 SCOUT PASS, killed later     49    +4.3%    +3.4%   -55.0%   -15.3%    45%
-KILLED (tracked)           9575    +0.0%   -51.9%   -73.9%    -0.1%    31%
+KILLED (tracked)           9575    +0.0%   -52.0%   -73.9%    -0.1%    31%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -78,8 +78,8 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     20%   88    30%     -8.5%   -20.4%   -99.7%
   -15%     30%   88    32%     -6.6%   -20.6%   -99.7%
   -25%     12%   88    34%    -10.2%   -15.5%   -99.7%
-  -25%     20%   88    34%    -12.4%   -29.8%   -99.7%
-  -25%     30%   88    36%    -10.5%   -30.4%   -99.7%
+  -25%     20%   88    34%    -12.5%   -29.8%   -99.7%
+  -25%     30%   88    36%    -10.6%   -30.4%   -99.7%
   best so far: stop -15%, trail from +30% -> avg -6.6% per trade over n=88
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
@@ -88,29 +88,26 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $422.61       $424.96
-return                        -15.5%        -15.0%
-closed trades                     52            38
+equity                       $416.84       $418.71
+return                        -16.6%        -16.3%
+closed trades                     53            39
 win rate                         25%           21%
-avg net / trade                -6.3%         -8.1%
-expectancy $/trade            $-1.58        $-1.97
-max drawdown                  -23.2%        -21.8%
-open now                           1             1
+avg net / trade                -6.3%         -8.6%
+expectancy $/trade            $-1.57        $-2.08
+max drawdown                  -23.2%        -23.0%
+open now                           0             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $422.61 (-15.5%) | cash $397.00 | open 1 | max drawdown -23.2%
+equity $416.84 (-16.6%) | cash $416.84 | open 0 | max drawdown -23.2%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 52 | win 13/52 (25%) | avg net -6.3% | realized $-82.11 | expectancy $-1.58/trade
-exits: stop 37, trail 15
-  (n=52 < 100: noise, not evidence)
-open:
-  bill         cost $20.89  now $25.61 (+22.6%)  held 0.2h
+closed 53 | win 13/53 (25%) | avg net -6.3% | realized $-83.16 | expectancy $-1.57/trade
+exits: stop 37, trail 16
+  (n=53 < 100: noise, not evidence)
 last trades:
-  FASTMOON     $22.28 -> $19.42 (-12.8%)  stop  1.3h
   Speed        $22.14 -> $17.72 (-20.0%)  stop  1.3h
   BAWSAQ       $21.91 -> $27.10 (+23.7%)  trail  0.8h
   CSI          $22.17 -> $16.28 (-26.6%)  stop  0.2h
@@ -118,21 +115,19 @@ last trades:
   tinfoil      $21.88 -> $28.30 (+29.3%)  trail  0.3h
   GTA$         $22.06 -> $16.78 (-24.0%)  stop  0.2h
   billie       $21.80 -> $3.70 (-83.0%)  stop  0.2h
+  bill         $20.89 -> $19.84 (-5.0%)  trail  0.3h
 signals skipped by the sizer/risk rules: already_traded_token 306, daily_loss_limit 242, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $424.96 (-15.0%) | cash $403.71 | open 1 | max drawdown -21.8%
+equity $418.71 (-16.3%) | cash $418.71 | open 0 | max drawdown -23.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 38 | win 8/38 (21%) | avg net -8.1% | realized $-75.04 | expectancy $-1.97/trade
-exits: stop 30, trail 8
-  (n=38 < 100: noise, not evidence)
-open:
-  bill         cost $21.25  now $21.25 (+0.0%)  held 0.0h
+closed 39 | win 8/39 (21%) | avg net -8.6% | realized $-81.29 | expectancy $-2.08/trade
+exits: stop 31, trail 8
+  (n=39 < 100: noise, not evidence)
 last trades:
-  FLC          $21.93 -> $19.19 (-12.5%)  stop  0.2h
   Huang        $21.80 -> $15.36 (-29.5%)  stop  0.5h
   AI           $21.47 -> $23.90 (+11.3%)  trail  0.3h
   plumber      $21.60 -> $17.86 (-17.3%)  stop  0.7h
@@ -140,6 +135,7 @@ last trades:
   Sakura       $21.28 -> $46.02 (+116.2%)  trail  1.2h
   CSI          $22.52 -> $19.70 (-12.5%)  stop  0.3h
   SPEED        $22.70 -> $0.05 (-99.8%)  stop  0.3h
+  bill         $21.25 -> $15.00 (-29.4%)  stop  0.2h
 signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 262, daily_loss_limit 208, setup_rejected:sellers_dominate_now 112, setup_rejected:dumping_now 85, setup_rejected:volume_dried_up 30, setup_rejected:top10_concentrated 29, setup_rejected:b_bundled 24, setup_rejected:operator_cluster 15, setup_rejected:b_received 7, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
