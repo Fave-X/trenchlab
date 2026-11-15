@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-15 11:42 UTC
+Updated: 2026-11-15 11:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           70453
+pools seen           70500
 passed SCOUT         144
   killed by SCORE    20
   killed by AUDIT    35
 FINAL PASS           89
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    69206
-  few_unique_buyers            66391
-  liquidity_low                64840
-  volume_below_liquidity       49731
-  sells_dominate               18510
-  wash_churn                   14538
-  overheated                    6120
+  too_young                    69253
+  few_unique_buyers            66434
+  liquidity_low                64886
+  volume_below_liquidity       49764
+  sells_dominate               18519
+  wash_churn                   14553
+  overheated                    6126
   missing                       2299
   too_old                        964
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 4120 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 4125 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   89    -3.8%    -7.3%   -44.0%   -89.9%    60%
 SCOUT PASS, killed later     55    +4.3%    +4.6%   -49.0%   -15.3%    44%
-KILLED (tracked)          10019    +0.0%   -55.2%   -76.8%    -0.2%    31%
+KILLED (tracked)          10026    +0.0%   -54.9%   -76.8%    -0.2%    31%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -52,7 +52,7 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      468     -0.2%    -10.9%    -37.0%    34%
+none      468     -0.1%    -10.9%    -37.0%    34%
 <15%       95     +0.1%    -11.2%    -24.0%    29%
 15-30%     10     -0.6%     -0.7%     +1.0%    40%
 30%+       22     -0.4%     -0.5%     +2.6%     5%
@@ -95,7 +95,7 @@ win rate                         24%           22%
 avg net / trade                -6.8%         -8.7%
 expectancy $/trade            $-1.67        $-2.08
 max drawdown                  -23.2%        -23.7%
-open now                           0             0
+open now                           0             1
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -122,11 +122,13 @@ signals skipped by the sizer/risk rules: already_traded_token 332, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $414.90 (-17.0%) | cash $414.90 | open 0 | max drawdown -23.7%
+equity $414.90 (-17.0%) | cash $394.15 | open 1 | max drawdown -23.7%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 41 | win 9/41 (22%) | avg net -8.7% | realized $-85.10 | expectancy $-2.08/trade
 exits: stop 32, trail 9
   (n=41 < 100: noise, not evidence)
+open:
+  Socks        cost $20.75  now $20.75 (+0.0%)  held 0.0h
 last trades:
   plumber      $21.60 -> $17.86 (-17.3%)  stop  0.7h
   FOOD         $21.41 -> $18.94 (-11.6%)  stop  0.3h
