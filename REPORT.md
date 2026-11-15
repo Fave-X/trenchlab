@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-15 21:22 UTC
+Updated: 2026-11-15 21:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           73411
+pools seen           73456
 passed SCOUT         148
   killed by SCORE    20
   killed by AUDIT    35
 FINAL PASS           93
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    72141
-  few_unique_buyers            69178
-  liquidity_low                67610
-  volume_below_liquidity       51888
-  sells_dominate               19199
-  wash_churn                   15126
-  overheated                    6387
+  too_young                    72185
+  few_unique_buyers            69219
+  liquidity_low                67653
+  volume_below_liquidity       51920
+  sells_dominate               19205
+  wash_churn                   15136
+  overheated                    6392
   missing                       2364
   too_old                        978
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 4271 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 4274 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   93    -4.3%    -7.8%   -43.9%   -89.9%    59%
 SCOUT PASS, killed later     55    +4.3%    +4.2%   -50.5%   -15.3%    49%
-KILLED (tracked)          10429    +0.0%   -55.6%   -77.7%    +0.1%    31%
+KILLED (tracked)          10435    +0.0%   -55.7%   -77.9%    +0.1%    31%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -36,7 +36,7 @@ rule                            n   +4h med  +24h med   rug%
 too_young                      89    -94.8%    -68.9%    53%
 too_old                        34     -0.6%     -0.4%     3%
 wash_churn                     25     -1.1%    -71.8%    28%
-liquidity_low                  18    -65.5%    -49.8%    50%
+liquidity_low                  19    -65.5%    -49.8%    47%
 volume_below_liquidity          7     -2.8%    +15.3%    43%
 overheated                      5     -3.6%    -56.0%    60%
 sells_dominate                  2    -64.6%       -      50%
@@ -116,7 +116,7 @@ last trades:
   WANTED       $20.50 -> $21.41 (+4.4%)  trail  1.7h
   BUTTHOLE     $20.43 -> $17.04 (-16.6%)  stop  0.3h
   rockstar     $20.26 -> $17.49 (-13.7%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 354, daily_loss_limit 242, cooldown_after_loss 11, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 355, daily_loss_limit 242, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
