@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-15 05:22 UTC
+Updated: 2026-11-15 05:33 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           68539
+pools seen           68584
 passed SCOUT         140
   killed by SCORE    19
   killed by AUDIT    32
 FINAL PASS           89
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    67310
-  few_unique_buyers            64627
-  liquidity_low                63101
-  volume_below_liquidity       48415
-  sells_dominate               18007
-  wash_churn                   14081
-  overheated                    5926
+  too_young                    67355
+  few_unique_buyers            64672
+  liquidity_low                63146
+  volume_below_liquidity       48446
+  sells_dominate               18019
+  wash_churn                   14090
+  overheated                    5928
   missing                       2219
   too_old                        951
   rc_danger                       13
 
 OUTCOMES (median price change from first sighting / first pass; 3991 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   89    -3.8%    -7.3%   -43.9%   -90.4%    58%
+FINAL PASS                   89    -3.8%    -7.3%   -43.9%   -90.4%    60%
 SCOUT PASS, killed later     51    +4.2%    +3.9%   -55.0%   -15.3%    43%
-KILLED (tracked)           9752    +0.0%   -53.4%   -75.2%    -0.2%    31%
+KILLED (tracked)           9758    +0.0%   -53.4%   -75.2%    -0.2%    31%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -46,7 +46,7 @@ if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        45    -55.6%    -94.0%    67%
 70-79      53    -44.7%    -66.4%    51%
-60-69      29    -35.2%    -99.8%    45%
+60-69      29    -35.2%    -99.8%    48%
 <60        13    -32.2%    -15.3%    31%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
@@ -116,7 +116,7 @@ last trades:
   billie       $21.80 -> $3.70 (-83.0%)  stop  0.2h
   bill         $20.89 -> $19.84 (-5.0%)  trail  0.3h
   worth        $20.84 -> $13.96 (-33.0%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 327, daily_loss_limit 242, cooldown_after_loss 11, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 328, daily_loss_limit 242, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
