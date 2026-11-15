@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-15 20:12 UTC
+Updated: 2026-11-15 20:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           73043
-passed SCOUT         147
+pools seen           73091
+passed SCOUT         148
   killed by SCORE    20
   killed by AUDIT    35
-FINAL PASS           92
+FINAL PASS           93
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    71773
-  few_unique_buyers            68825
-  liquidity_low                67261
-  volume_below_liquidity       51633
-  sells_dominate               19095
-  wash_churn                   15068
-  overheated                    6361
-  missing                       2355
+  too_young                    71821
+  few_unique_buyers            68871
+  liquidity_low                67304
+  volume_below_liquidity       51672
+  sells_dominate               19102
+  wash_churn                   15073
+  overheated                    6365
+  missing                       2358
   too_old                        978
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 4256 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 4258 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   92    -4.2%    -7.8%   -44.0%   -89.9%    60%
+FINAL PASS                   93    -4.2%    -7.8%   -44.0%   -89.9%    59%
 SCOUT PASS, killed later     55    +4.3%    +4.2%   -50.6%   -15.3%    49%
-KILLED (tracked)          10384    +0.0%   -55.6%   -77.7%    +0.1%    31%
+KILLED (tracked)          10388    +0.0%   -55.6%   -77.6%    +0.1%    31%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -38,14 +38,14 @@ too_old                        34     -0.6%     -0.4%     3%
 wash_churn                     25     -1.1%    -71.8%    28%
 liquidity_low                  18    -65.5%    -49.8%    50%
 volume_below_liquidity          7     -2.8%    +15.3%    43%
-overheated                      6     -3.6%    -56.0%    50%
+overheated                      5     -3.6%    -56.0%    60%
 sells_dominate                  2    -64.6%       -      50%
 
 SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        48    -55.0%    -93.8%    73%
-70-79      54    -44.7%    -66.7%    52%
+70-79      55    -44.7%    -66.7%    51%
 60-69      30    -37.4%    -79.9%    47%
 <60        15    -30.1%    -15.3%    33%
 
@@ -95,18 +95,20 @@ win rate                         25%           21%
 avg net / trade                -6.8%         -9.4%
 expectancy $/trade            $-1.66        $-2.21
 max drawdown                  -23.2%        -25.5%
-open now                           0             0
+open now                           1             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $405.22 (-19.0%) | cash $405.22 | open 0 | max drawdown -23.2%
+equity $405.22 (-19.0%) | cash $384.96 | open 1 | max drawdown -23.2%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 57 | win 14/57 (25%) | avg net -6.8% | realized $-94.78 | expectancy $-1.66/trade
 exits: stop 40, trail 17
   (n=57 < 100: noise, not evidence)
+open:
+  rockstar     cost $20.26  now $20.26 (+0.0%)  held 0.0h
 last trades:
   tinfoil      $21.88 -> $28.30 (+29.3%)  trail  0.3h
   GTA$         $22.06 -> $16.78 (-24.0%)  stop  0.2h
