@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-15 15:12 UTC
+Updated: 2026-11-15 15:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           71473
+pools seen           71527
 passed SCOUT         145
   killed by SCORE    19
   killed by AUDIT    35
 FINAL PASS           91
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    70219
-  few_unique_buyers            67332
-  liquidity_low                65784
-  volume_below_liquidity       50451
-  sells_dominate               18708
-  wash_churn                   14768
-  overheated                    6222
-  missing                       2329
+  too_young                    70273
+  few_unique_buyers            67380
+  liquidity_low                65834
+  volume_below_liquidity       50492
+  sells_dominate               18720
+  wash_churn                   14776
+  overheated                    6227
+  missing                       2330
   too_old                        970
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 4185 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 4187 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   91    -3.8%    -7.3%   -44.0%   -89.9%    58%
 SCOUT PASS, killed later     54    +4.3%    +4.4%   -50.6%   -15.3%    48%
-KILLED (tracked)          10165    +0.0%   -55.7%   -77.3%    -0.1%    31%
+KILLED (tracked)          10179    +0.0%   -55.6%   -77.3%    -0.1%    31%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -36,7 +36,7 @@ rule                            n   +4h med  +24h med   rug%
 too_young                      83    -95.0%    -68.9%    54%
 too_old                        34     -0.7%     -0.4%     3%
 wash_churn                     24     -1.1%    -71.8%    29%
-liquidity_low                  18    -62.2%    -49.8%    44%
+liquidity_low                  18    -62.2%    -49.8%    50%
 volume_below_liquidity          7     -2.8%    +15.3%    43%
 overheated                      5     -3.6%    -56.0%    60%
 sells_dominate                  2    -64.6%       -      50%
