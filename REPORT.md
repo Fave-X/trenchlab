@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-15 03:12 UTC
+Updated: 2026-11-15 03:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           67941
+pools seen           67976
 passed SCOUT         139
   killed by SCORE    18
   killed by AUDIT    33
 FINAL PASS           88
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    66717
-  few_unique_buyers            64074
-  liquidity_low                62558
-  volume_below_liquidity       48021
-  sells_dominate               17861
-  wash_churn                   13937
-  overheated                    5877
-  missing                       2189
+  too_young                    66752
+  few_unique_buyers            64109
+  liquidity_low                62591
+  volume_below_liquidity       48043
+  sells_dominate               17867
+  wash_churn                   13941
+  overheated                    5878
+  missing                       2191
   too_old                        951
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 3955 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 3957 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   88    -3.4%    -6.8%   -43.9%   -90.4%    59%
 SCOUT PASS, killed later     51    +4.2%    +3.9%   -55.0%   -15.3%    43%
-KILLED (tracked)           9672    +0.0%   -53.0%   -74.8%    -0.2%    31%
+KILLED (tracked)           9675    +0.0%   -53.0%   -74.9%    -0.2%    31%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -116,7 +116,7 @@ last trades:
   GTA$         $22.06 -> $16.78 (-24.0%)  stop  0.2h
   billie       $21.80 -> $3.70 (-83.0%)  stop  0.2h
   bill         $20.89 -> $19.84 (-5.0%)  trail  0.3h
-signals skipped by the sizer/risk rules: already_traded_token 320, daily_loss_limit 242, cooldown_after_loss 11, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 321, daily_loss_limit 242, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
