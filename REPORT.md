@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-14 23:51 UTC
+Updated: 2026-11-15 00:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           66965
+pools seen           67004
 passed SCOUT         137
   killed by SCORE    18
   killed by AUDIT    31
 FINAL PASS           88
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    65751
-  few_unique_buyers            63158
-  liquidity_low                61719
-  volume_below_liquidity       47382
-  sells_dominate               17630
-  wash_churn                   13688
-  overheated                    5785
+  too_young                    65790
+  few_unique_buyers            63195
+  liquidity_low                61757
+  volume_below_liquidity       47409
+  sells_dominate               17637
+  wash_churn                   13699
+  overheated                    5789
   missing                       2079
   too_old                        946
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 3904 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 3905 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   88    -3.4%    -6.8%   -44.0%   -90.4%    58%
 SCOUT PASS, killed later     49    +4.3%    +3.4%   -55.0%   -15.3%    45%
-KILLED (tracked)           9562    +0.0%   -51.9%   -73.9%    -0.1%    31%
+KILLED (tracked)           9567    +0.0%   -51.9%   -73.9%    -0.1%    31%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -64,7 +64,7 @@ fresh       n   +1h med   +4h med  +24h med   rug%
 <20%      532     -0.2%     -4.5%    -16.0%    31%
 20-40%     15     -4.8%    -99.0%    -99.1%    80%
 40%+        7    -43.5%    -46.3%       -      57%
-tokens analysed: 451 | helius credits today: 5444/25000
+tokens analysed: 451 | helius credits today: 0/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -79,7 +79,7 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     30%   88    32%     -6.5%   -20.6%   -99.7%
   -25%     12%   88    34%    -10.2%   -15.5%   -99.7%
   -25%     20%   88    34%    -12.3%   -29.8%   -99.7%
-  -25%     30%   88    36%    -10.4%   -30.4%   -99.7%
+  -25%     30%   88    36%    -10.5%   -30.4%   -99.7%
   best so far: stop -15%, trail from +30% -> avg -6.5% per trade over n=88
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
@@ -95,18 +95,20 @@ win rate                         25%           21%
 avg net / trade                -6.3%         -8.1%
 expectancy $/trade            $-1.58        $-1.97
 max drawdown                  -23.2%        -21.8%
-open now                           0             0
+open now                           1             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $417.89 (-16.4%) | cash $417.89 | open 0 | max drawdown -23.2%
+equity $417.89 (-16.4%) | cash $397.00 | open 1 | max drawdown -23.2%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 52 | win 13/52 (25%) | avg net -6.3% | realized $-82.11 | expectancy $-1.58/trade
 exits: stop 37, trail 15
   (n=52 < 100: noise, not evidence)
+open:
+  bill         cost $20.89  now $20.89 (+0.0%)  held 0.0h
 last trades:
   FASTMOON     $22.28 -> $19.42 (-12.8%)  stop  1.3h
   Speed        $22.14 -> $17.72 (-20.0%)  stop  1.3h
@@ -136,7 +138,7 @@ last trades:
   Sakura       $21.28 -> $46.02 (+116.2%)  trail  1.2h
   CSI          $22.52 -> $19.70 (-12.5%)  stop  0.3h
   SPEED        $22.70 -> $0.05 (-99.8%)  stop  0.3h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 262, daily_loss_limit 208, setup_rejected:sellers_dominate_now 112, setup_rejected:dumping_now 84, setup_rejected:volume_dried_up 30, setup_rejected:top10_concentrated 29, setup_rejected:b_bundled 24, setup_rejected:operator_cluster 15, setup_rejected:b_received 7, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 262, daily_loss_limit 208, setup_rejected:sellers_dominate_now 112, setup_rejected:dumping_now 85, setup_rejected:volume_dried_up 30, setup_rejected:top10_concentrated 29, setup_rejected:b_bundled 24, setup_rejected:operator_cluster 15, setup_rejected:b_received 7, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
