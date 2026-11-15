@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-15 14:12 UTC
+Updated: 2026-11-15 14:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           71190
+pools seen           71241
 passed SCOUT         145
   killed by SCORE    19
   killed by AUDIT    35
 FINAL PASS           91
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    69939
-  few_unique_buyers            67077
-  liquidity_low                65520
-  volume_below_liquidity       50235
-  sells_dominate               18651
-  wash_churn                   14709
-  overheated                    6195
+  too_young                    69990
+  few_unique_buyers            67120
+  liquidity_low                65569
+  volume_below_liquidity       50272
+  sells_dominate               18660
+  wash_churn                   14715
+  overheated                    6200
   missing                       2328
   too_old                        968
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 4164 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 4170 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   91    -3.8%    -7.3%   -44.0%   -89.9%    58%
 SCOUT PASS, killed later     54    +4.3%    +4.4%   -50.5%   -15.3%    48%
-KILLED (tracked)          10110    +0.0%   -55.6%   -77.3%    -0.1%    31%
+KILLED (tracked)          10122    +0.0%   -55.6%   -77.3%    -0.1%    31%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -116,7 +116,7 @@ last trades:
   worth        $20.84 -> $13.96 (-33.0%)  stop  0.2h
   Socks        $20.51 -> $18.26 (-11.0%)  stop  0.2h
   WANTED       $20.50 -> $21.41 (+4.4%)  trail  1.7h
-signals skipped by the sizer/risk rules: already_traded_token 343, daily_loss_limit 242, cooldown_after_loss 11, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 344, daily_loss_limit 242, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -136,7 +136,7 @@ last trades:
   HYGG         $20.94 -> $24.47 (+16.9%)  trail  1.3h
   ニャジラ         $21.11 -> $13.78 (-34.7%)  stop  0.7h
   Socks        $20.75 -> $17.11 (-17.5%)  stop  0.5h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 293, daily_loss_limit 208, setup_rejected:sellers_dominate_now 114, setup_rejected:dumping_now 88, setup_rejected:volume_dried_up 30, setup_rejected:top10_concentrated 29, setup_rejected:b_bundled 29, setup_rejected:operator_cluster 15, setup_rejected:b_received 7, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 293, daily_loss_limit 208, setup_rejected:sellers_dominate_now 114, setup_rejected:dumping_now 89, setup_rejected:volume_dried_up 30, setup_rejected:top10_concentrated 29, setup_rejected:b_bundled 29, setup_rejected:operator_cluster 15, setup_rejected:b_received 7, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
