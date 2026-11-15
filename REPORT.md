@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-15 09:42 UTC
+Updated: 2026-11-15 09:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           69834
+pools seen           69891
 passed SCOUT         143
   killed by SCORE    20
   killed by AUDIT    34
 FINAL PASS           89
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    68597
-  few_unique_buyers            65812
-  liquidity_low                64281
-  volume_below_liquidity       49307
-  sells_dominate               18339
-  wash_churn                   14398
-  overheated                    6061
-  missing                       2268
+  too_young                    68654
+  few_unique_buyers            65865
+  liquidity_low                64337
+  volume_below_liquidity       49346
+  sells_dominate               18350
+  wash_churn                   14412
+  overheated                    6067
+  missing                       2269
   too_old                        956
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 4079 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 4086 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   89    -3.8%    -7.3%   -44.0%   -89.9%    60%
 SCOUT PASS, killed later     54    +4.3%    +4.4%   -49.0%   -15.3%    43%
-KILLED (tracked)           9948    +0.0%   -55.0%   -75.7%    -0.2%    31%
+KILLED (tracked)           9951    +0.0%   -55.0%   -75.7%    -0.2%    31%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
