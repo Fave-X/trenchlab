@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-15 12:32 UTC
+Updated: 2026-11-15 12:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           70692
+pools seen           70744
 passed SCOUT         145
   killed by SCORE    19
   killed by AUDIT    35
 FINAL PASS           91
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    69444
-  few_unique_buyers            66612
-  liquidity_low                65062
-  volume_below_liquidity       49899
-  sells_dominate               18553
-  wash_churn                   14597
-  overheated                    6150
-  missing                       2304
+  too_young                    69496
+  few_unique_buyers            66661
+  liquidity_low                65109
+  volume_below_liquidity       49936
+  sells_dominate               18563
+  wash_churn                   14608
+  overheated                    6152
+  missing                       2308
   too_old                        965
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 4135 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 4137 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   91    -3.4%    -7.3%   -44.0%   -89.9%    58%
 SCOUT PASS, killed later     54    +4.3%    +4.4%   -50.5%   -15.3%    44%
-KILLED (tracked)          10053    +0.0%   -55.0%   -77.2%    -0.1%    31%
+KILLED (tracked)          10059    +0.0%   -55.0%   -77.2%    -0.1%    31%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -68,19 +68,19 @@ tokens analysed: 492 | helius credits today: 3237/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%   90    26%     -8.9%   -15.8%   -99.7%
-   -6%     20%   90    26%     -9.2%   -16.0%   -99.7%
-   -6%     30%   90    27%     -7.4%   -17.1%   -99.7%
-  -10%     12%   90    28%     -8.7%   -19.0%   -99.7%
-  -10%     20%   90    27%     -9.4%   -19.4%   -99.7%
-  -10%     30%   90    29%     -7.4%   -19.6%   -99.7%
-  -15%     12%   90    30%     -8.2%   -19.8%   -99.7%
-  -15%     20%   90    30%     -8.6%   -20.4%   -99.7%
-  -15%     30%   90    32%     -6.7%   -20.6%   -99.7%
-  -25%     12%   90    34%    -10.3%   -15.5%   -99.7%
-  -25%     20%   90    34%    -12.7%   -29.9%   -99.7%
-  -25%     30%   90    37%    -10.9%   -30.8%   -99.7%
-  best so far: stop -15%, trail from +30% -> avg -6.7% per trade over n=90
+   -6%     12%   91    24%     -9.0%   -14.5%   -99.7%
+   -6%     20%   91    24%     -9.3%   -15.0%   -99.7%
+   -6%     30%   91    25%     -7.6%   -17.1%   -99.7%
+  -10%     12%   91    26%     -8.9%   -18.7%   -99.7%
+  -10%     20%   91    25%     -9.5%   -19.3%   -99.7%
+  -10%     30%   91    27%     -7.6%   -19.5%   -99.7%
+  -15%     12%   91    29%     -8.3%   -19.6%   -99.7%
+  -15%     20%   91    29%     -8.8%   -20.4%   -99.7%
+  -15%     30%   91    31%     -6.9%   -20.4%   -99.7%
+  -25%     12%   91    33%    -10.5%   -13.9%   -99.7%
+  -25%     20%   91    33%    -12.8%   -29.9%   -99.7%
+  -25%     30%   91    35%    -11.0%   -30.8%   -99.7%
+  best so far: stop -15%, trail from +30% -> avg -6.9% per trade over n=91
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
 ================================================================
@@ -88,30 +88,28 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $411.28       $411.27
-return                        -17.7%        -17.7%
-closed trades                     54            42
+equity                       $406.67       $411.27
+return                        -18.7%        -17.7%
+closed trades                     55            42
 win rate                         24%           21%
-avg net / trade                -6.8%         -8.9%
-expectancy $/trade            $-1.67        $-2.11
+avg net / trade                -6.9%         -8.9%
+expectancy $/trade            $-1.68        $-2.11
 max drawdown                  -23.2%        -24.3%
-open now                           2             0
+open now                           1             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $411.28 (-17.7%) | cash $368.95 | open 2 | max drawdown -23.2%
+equity $406.67 (-18.7%) | cash $387.21 | open 1 | max drawdown -23.2%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 54 | win 13/54 (24%) | avg net -6.8% | realized $-90.04 | expectancy $-1.67/trade
-exits: stop 38, trail 16
-  (n=54 < 100: noise, not evidence)
+closed 55 | win 13/55 (24%) | avg net -6.9% | realized $-92.29 | expectancy $-1.68/trade
+exits: stop 39, trail 16
+  (n=55 < 100: noise, not evidence)
 open:
-  WANTED       cost $20.50  now $21.81 (+6.4%)  held 0.4h
-  Socks        cost $20.51  now $20.51 (+0.0%)  held 0.0h
+  WANTED       cost $20.50  now $19.46 (-5.1%)  held 0.5h
 last trades:
-  BAWSAQ       $21.91 -> $27.10 (+23.7%)  trail  0.8h
   CSI          $22.17 -> $16.28 (-26.6%)  stop  0.2h
   SWJ          $21.88 -> $19.15 (-12.5%)  stop  0.2h
   tinfoil      $21.88 -> $28.30 (+29.3%)  trail  0.3h
@@ -119,7 +117,8 @@ last trades:
   billie       $21.80 -> $3.70 (-83.0%)  stop  0.2h
   bill         $20.89 -> $19.84 (-5.0%)  trail  0.3h
   worth        $20.84 -> $13.96 (-33.0%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 333, daily_loss_limit 242, cooldown_after_loss 11, max_open_positions 5
+  Socks        $20.51 -> $18.26 (-11.0%)  stop  0.2h
+signals skipped by the sizer/risk rules: already_traded_token 334, daily_loss_limit 242, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
