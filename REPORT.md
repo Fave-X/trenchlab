@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-15 10:51 UTC
+Updated: 2026-11-15 11:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           70184
+pools seen           70273
 passed SCOUT         144
   killed by SCORE    20
   killed by AUDIT    35
 FINAL PASS           89
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    68942
-  few_unique_buyers            66137
-  liquidity_low                64586
-  volume_below_liquidity       49536
-  sells_dominate               18432
-  wash_churn                   14468
-  overheated                    6102
+  too_young                    69031
+  few_unique_buyers            66222
+  liquidity_low                64672
+  volume_below_liquidity       49609
+  sells_dominate               18465
+  wash_churn                   14485
+  overheated                    6106
   missing                       2294
   too_old                        959
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 4095 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 4106 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   89    -3.8%    -7.3%   -44.0%   -89.9%    60%
 SCOUT PASS, killed later     55    +4.3%    +4.4%   -49.0%   -15.3%    42%
-KILLED (tracked)           9992    +0.0%   -55.1%   -76.2%    -0.2%    31%
+KILLED (tracked)          10003    +0.0%   -55.4%   -76.4%    -0.2%    31%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                      80    -94.8%    -68.9%    54%
+too_young                      80    -94.8%    -68.9%    55%
 too_old                        33     -0.7%     -0.4%     3%
 wash_churn                     24     -1.1%    -71.8%    29%
 liquidity_low                  17    -62.2%    -49.8%    47%
@@ -44,8 +44,8 @@ sells_dominate                  2    -64.6%       -      50%
 SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
-80+        47    -55.3%    -93.8%    66%
-70-79      54    -42.3%    -66.4%    50%
+80+        48    -55.3%    -93.8%    65%
+70-79      53    -42.3%    -66.4%    51%
 60-69      29    -37.4%    -79.9%    48%
 <60        14    -30.1%    -15.3%    29%
 
@@ -61,7 +61,7 @@ none      459     -0.0%     -2.2%    -14.9%    27%
 <20%      118     -5.9%    -55.4%    -94.9%    43%
 20%+       15    +16.6%    -99.0%       -      93%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      569     -0.2%     -4.7%    -20.4%    30%
+<20%      569     -0.2%     -4.7%    -20.4%    31%
 20-40%     16     -4.8%    -99.0%    -99.1%    75%
 40%+        7    -43.5%    -46.3%       -      71%
 tokens analysed: 487 | helius credits today: 2894/25000
