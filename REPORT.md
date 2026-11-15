@@ -1,30 +1,30 @@
 # TrenchLab report
 
-Updated: 2026-11-15 00:32 UTC
+Updated: 2026-11-15 00:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           67128
+pools seen           67174
 passed SCOUT         137
   killed by SCORE    18
   killed by AUDIT    31
 FINAL PASS           88
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    65911
-  few_unique_buyers            63311
-  liquidity_low                61878
-  volume_below_liquidity       47508
-  sells_dominate               17671
-  wash_churn                   13733
-  overheated                    5803
-  missing                       2080
+  too_young                    65957
+  few_unique_buyers            63355
+  liquidity_low                61905
+  volume_below_liquidity       47525
+  sells_dominate               17686
+  wash_churn                   13744
+  overheated                    5809
+  missing                       2099
   too_old                        948
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 3909 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 3912 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   88    -3.4%    -6.8%   -44.0%   -90.4%    58%
 SCOUT PASS, killed later     49    +4.3%    +3.4%   -55.0%   -15.3%    45%
@@ -116,7 +116,7 @@ last trades:
   GTA$         $22.06 -> $16.78 (-24.0%)  stop  0.2h
   billie       $21.80 -> $3.70 (-83.0%)  stop  0.2h
   bill         $20.89 -> $19.84 (-5.0%)  trail  0.3h
-signals skipped by the sizer/risk rules: already_traded_token 306, daily_loss_limit 242, cooldown_after_loss 11, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 307, daily_loss_limit 242, cooldown_after_loss 11, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
