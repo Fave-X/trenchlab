@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-15 16:02 UTC
+Updated: 2026-11-15 16:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           71719
+pools seen           71782
 passed SCOUT         145
   killed by SCORE    19
   killed by AUDIT    35
 FINAL PASS           91
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    70464
-  few_unique_buyers            67558
-  liquidity_low                66010
-  volume_below_liquidity       50634
-  sells_dominate               18765
-  wash_churn                   14814
-  overheated                    6249
-  missing                       2334
-  too_old                        970
+  too_young                    70524
+  few_unique_buyers            67620
+  liquidity_low                66066
+  volume_below_liquidity       50688
+  sells_dominate               18789
+  wash_churn                   14824
+  overheated                    6254
+  missing                       2336
+  too_old                        972
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 4201 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 4202 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                   91    -3.8%    -7.3%   -44.0%   -89.9%    58%
+FINAL PASS                   91    -3.8%    -7.3%   -43.9%   -89.9%    58%
 SCOUT PASS, killed later     54    +4.3%    +4.4%   -50.6%   -15.3%    48%
-KILLED (tracked)          10218    +0.0%   -55.7%   -77.4%    +0.1%    31%
+KILLED (tracked)          10228    +0.0%   -55.7%   -77.4%    +0.1%    31%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -45,7 +45,7 @@ SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        48    -55.0%    -93.8%    71%
-70-79      54    -44.7%    -66.7%    50%
+70-79      54    -42.3%    -66.7%    50%
 60-69      29    -37.4%    -79.9%    48%
 <60        14    -30.1%    -15.3%    29%
 
@@ -58,7 +58,7 @@ none      478     -0.0%    -11.7%    -35.1%    34%
 30%+       22     -0.4%     -0.5%     +2.6%     5%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      469     +0.0%     -2.3%    -13.9%    27%
-<20%      121     -5.9%    -55.2%    -94.9%    44%
+<20%      121     -5.9%    -55.4%    -94.9%    44%
 20%+       16    +16.6%    -99.0%       -      88%
 fresh       n   +1h med   +4h med  +24h med   rug%
 <20%      583     -0.1%     -5.5%    -17.1%    31%
@@ -88,13 +88,13 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $408.62       $411.33
-return                        -18.3%        -17.7%
+equity                       $408.62       $409.89
+return                        -18.3%        -18.0%
 closed trades                     56            42
 win rate                         25%           21%
 avg net / trade                -6.7%         -8.9%
 expectancy $/trade            $-1.63        $-2.11
-max drawdown                  -23.2%        -24.3%
+max drawdown                  -23.2%        -24.6%
 open now                           0             1
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
@@ -122,13 +122,13 @@ signals skipped by the sizer/risk rules: already_traded_token 349, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $411.33 (-17.7%) | cash $390.71 | open 1 | max drawdown -24.3%
+equity $409.89 (-18.0%) | cash $390.71 | open 1 | max drawdown -24.6%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 42 | win 9/42 (21%) | avg net -8.9% | realized $-88.73 | expectancy $-2.11/trade
 exits: stop 33, trail 9
   (n=42 < 100: noise, not evidence)
 open:
-  WANTED       cost $20.56  now $20.62 (+0.3%)  held 0.5h
+  WANTED       cost $20.56  now $19.18 (-6.7%)  held 0.7h
 last trades:
   FOOD         $21.41 -> $18.94 (-11.6%)  stop  0.3h
   Sakura       $21.28 -> $46.02 (+116.2%)  trail  1.2h
