@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-16 02:12 UTC
+Updated: 2026-11-16 02:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           74888
+pools seen           74946
 passed SCOUT         151
   killed by SCORE    20
   killed by AUDIT    35
 FINAL PASS           96
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    73607
-  few_unique_buyers            70560
-  liquidity_low                69002
-  volume_below_liquidity       52968
-  sells_dominate               19616
-  wash_churn                   15410
-  overheated                    6498
-  missing                       2390
+  too_young                    73665
+  few_unique_buyers            70617
+  liquidity_low                69053
+  volume_below_liquidity       53006
+  sells_dominate               19635
+  wash_churn                   15417
+  overheated                    6500
+  missing                       2394
   too_old                        984
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 4362 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 4367 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   96    -5.0%    -8.0%   -43.9%   -88.8%    59%
 SCOUT PASS, killed later     55    +4.3%    +4.2%   -50.5%   -15.3%    49%
-KILLED (tracked)          10599    +0.0%   -55.6%   -78.9%    +0.1%    31%
+KILLED (tracked)          10606    +0.0%   -55.6%   -78.9%    +0.1%    31%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                      97    -94.8%    -68.9%    52%
+too_young                      97    -94.5%    -68.9%    52%
 too_old                        34     -0.6%     -0.4%     3%
 wash_churn                     26     -1.1%    -71.8%    27%
 liquidity_low                  19    -68.7%    -49.8%    47%
@@ -52,19 +52,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      498     -0.2%    -13.0%    -33.1%    35%
+none      498     -0.2%    -13.1%    -33.1%    35%
 <15%       99     +0.2%    -11.2%    -15.5%    29%
 15-30%     11     -0.2%     -0.2%     +1.0%    36%
 30%+       22     -0.4%     -0.5%     +2.6%     5%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      478     -0.0%     -2.4%    -12.8%    28%
-<20%      135     -5.9%    -56.5%    -93.2%    44%
+<20%      135     -5.9%    -57.4%    -93.2%    44%
 20%+       17    +16.6%    -99.0%       -      82%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      605     -0.2%     -6.0%    -16.6%    31%
+<20%      605     -0.2%     -6.2%    -16.6%    31%
 20-40%     16     -6.5%    -99.0%    -99.1%    75%
 40%+        9    +11.6%     +5.8%       -      56%
-tokens analysed: 525 | helius credits today: 668/25000
+tokens analysed: 525 | helius credits today: 731/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -95,7 +95,7 @@ win rate                         23%           21%
 avg net / trade                -7.6%         -9.4%
 expectancy $/trade            $-1.79        $-2.21
 max drawdown                  -24.5%        -25.5%
-open now                           0             0
+open now                           0             1
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -122,11 +122,13 @@ signals skipped by the sizer/risk rules: already_traded_token 359, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $404.84 (-19.0%) | cash $404.84 | open 0 | max drawdown -25.5%
+equity $404.84 (-19.0%) | cash $384.60 | open 1 | max drawdown -25.5%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 43 | win 9/43 (21%) | avg net -9.4% | realized $-95.16 | expectancy $-2.21/trade
 exits: stop 34, trail 9
   (n=43 < 100: noise, not evidence)
+open:
+  rockstar     cost $20.24  now $20.24 (+0.0%)  held 0.0h
 last trades:
   Sakura       $21.28 -> $46.02 (+116.2%)  trail  1.2h
   CSI          $22.52 -> $19.70 (-12.5%)  stop  0.3h
