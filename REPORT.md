@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-16 21:52 UTC
+Updated: 2026-11-16 22:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           80879
+pools seen           80926
 passed SCOUT         160
   killed by SCORE    20
   killed by AUDIT    35
 FINAL PASS           105
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    79544
-  few_unique_buyers            76197
-  liquidity_low                74712
-  volume_below_liquidity       57018
-  sells_dominate               21218
-  wash_churn                   16655
-  overheated                    7030
+  too_young                    79591
+  few_unique_buyers            76243
+  liquidity_low                74759
+  volume_below_liquidity       57045
+  sells_dominate               21237
+  wash_churn                   16663
+  overheated                    7032
   missing                       2477
   too_old                       1014
   rc_danger                       13
 
 OUTCOMES (median price change from first sighting / first pass; 4788 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  105    -4.2%   -12.0%   -44.7%   -88.1%    60%
+FINAL PASS                  105    -3.8%   -12.0%   -44.7%   -88.1%    60%
 SCOUT PASS, killed later     55    +4.3%    +4.2%   -50.5%   -52.9%    49%
-KILLED (tracked)          11341    +0.0%   -55.6%   -79.0%    +0.4%    30%
+KILLED (tracked)          11343    +0.0%   -55.6%   -79.1%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -68,19 +68,19 @@ tokens analysed: 561 | helius credits today: 5309/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%  105    26%     -9.4%   -14.9%   -99.7%
-   -6%     20%  105    26%     -9.9%   -17.1%   -99.7%
-   -6%     30%  105    25%     -9.5%   -17.5%   -99.7%
-  -10%     12%  105    28%    -10.1%   -18.6%   -99.7%
-  -10%     20%  105    27%    -10.9%   -19.0%   -99.7%
-  -10%     30%  105    27%    -10.4%   -19.3%   -99.7%
-  -15%     12%  105    30%    -10.7%   -19.6%   -99.7%
-  -15%     20%  105    30%    -11.4%   -20.7%   -99.7%
-  -15%     30%  105    30%    -11.0%   -21.0%   -99.7%
-  -25%     12%  105    33%    -13.6%   -21.3%   -99.7%
-  -25%     20%  105    33%    -16.1%   -30.1%   -99.7%
-  -25%     30%  105    33%    -15.9%   -31.0%   -99.7%
-  best so far: stop -6%, trail from +12% -> avg -9.4% per trade over n=105
+   -6%     12%  105    25%     -9.5%   -14.9%   -99.7%
+   -6%     20%  105    25%    -10.0%   -17.1%   -99.7%
+   -6%     30%  105    24%     -9.6%   -17.5%   -99.7%
+  -10%     12%  105    27%    -10.2%   -18.6%   -99.7%
+  -10%     20%  105    26%    -11.0%   -19.0%   -99.7%
+  -10%     30%  105    26%    -10.5%   -19.3%   -99.7%
+  -15%     12%  105    29%    -10.7%   -19.6%   -99.7%
+  -15%     20%  105    29%    -11.5%   -20.7%   -99.7%
+  -15%     30%  105    29%    -11.1%   -21.0%   -99.7%
+  -25%     12%  105    32%    -13.7%   -21.3%   -99.7%
+  -25%     20%  105    32%    -16.2%   -30.1%   -99.7%
+  -25%     30%  105    32%    -16.0%   -31.0%   -99.7%
+  best so far: stop -6%, trail from +12% -> avg -9.5% per trade over n=105
 
 ================================================================
 A vs B (same sizing, exits and costs; only the entry rule differs)
@@ -135,7 +135,7 @@ last trades:
   Marvin       $20.08 -> $17.44 (-13.1%)  stop  0.8h
   WIGGLES      $20.12 -> $16.41 (-18.4%)  stop  1.3h
   Anthropig    $19.77 -> $17.19 (-13.1%)  stop  1.5h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 363, daily_loss_limit 219, setup_rejected:sellers_dominate_now 120, setup_rejected:dumping_now 94, setup_rejected:volume_dried_up 38, setup_rejected:b_bundled 33, setup_rejected:top10_concentrated 29, setup_rejected:operator_cluster 16, setup_rejected:b_received 7, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 363, daily_loss_limit 219, setup_rejected:sellers_dominate_now 120, setup_rejected:dumping_now 95, setup_rejected:volume_dried_up 38, setup_rejected:b_bundled 33, setup_rejected:top10_concentrated 30, setup_rejected:operator_cluster 16, setup_rejected:b_received 7, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
