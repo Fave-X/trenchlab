@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-16 13:42 UTC
+Updated: 2026-11-16 13:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           78304
+pools seen           78344
 passed SCOUT         156
   killed by SCORE    20
   killed by AUDIT    35
 FINAL PASS           101
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    76992
-  few_unique_buyers            73726
-  liquidity_low                72252
-  volume_below_liquidity       55246
-  sells_dominate               20468
-  wash_churn                   16147
-  overheated                    6780
-  missing                       2428
+  too_young                    77032
+  few_unique_buyers            73763
+  liquidity_low                72290
+  volume_below_liquidity       55278
+  sells_dominate               20480
+  wash_churn                   16153
+  overheated                    6783
+  missing                       2430
   too_old                        998
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 4615 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 4618 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  101    -4.3%    -9.9%   -44.0%   -88.8%    59%
 SCOUT PASS, killed later     55    +4.3%    +4.2%   -50.5%   -52.9%    49%
-KILLED (tracked)          11101    +0.0%   -55.0%   -78.0%    +0.4%    30%
+KILLED (tracked)          11103    +0.0%   -55.0%   -77.9%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -135,7 +135,7 @@ last trades:
   Marvin       $20.08 -> $17.44 (-13.1%)  stop  0.8h
   WIGGLES      $20.12 -> $16.41 (-18.4%)  stop  1.3h
   Anthropig    $19.77 -> $17.19 (-13.1%)  stop  1.5h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 358, daily_loss_limit 219, setup_rejected:sellers_dominate_now 120, setup_rejected:dumping_now 94, setup_rejected:volume_dried_up 38, setup_rejected:b_bundled 33, setup_rejected:top10_concentrated 29, setup_rejected:operator_cluster 16, setup_rejected:b_received 7, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 359, daily_loss_limit 219, setup_rejected:sellers_dominate_now 120, setup_rejected:dumping_now 94, setup_rejected:volume_dried_up 38, setup_rejected:b_bundled 33, setup_rejected:top10_concentrated 29, setup_rejected:operator_cluster 16, setup_rejected:b_received 7, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
