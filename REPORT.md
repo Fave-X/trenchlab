@@ -1,26 +1,26 @@
 # TrenchLab report
 
-Updated: 2026-11-16 02:22 UTC
+Updated: 2026-11-16 02:31 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           74946
+pools seen           74993
 passed SCOUT         151
   killed by SCORE    20
   killed by AUDIT    35
 FINAL PASS           96
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    73665
-  few_unique_buyers            70617
-  liquidity_low                69053
-  volume_below_liquidity       53006
-  sells_dominate               19635
-  wash_churn                   15417
-  overheated                    6500
-  missing                       2394
+  too_young                    73712
+  few_unique_buyers            70663
+  liquidity_low                69097
+  volume_below_liquidity       53037
+  sells_dominate               19643
+  wash_churn                   15428
+  overheated                    6503
+  missing                       2395
   too_old                        984
   rc_danger                       13
 
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 4367 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   96    -5.0%    -8.0%   -43.9%   -88.8%    59%
 SCOUT PASS, killed later     55    +4.3%    +4.2%   -50.5%   -15.3%    49%
-KILLED (tracked)          10606    +0.0%   -55.6%   -78.9%    +0.1%    31%
+KILLED (tracked)          10613    +0.0%   -55.6%   -78.9%    +0.1%    31%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -88,14 +88,14 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $392.44       $404.84
-return                        -21.5%        -19.0%
-closed trades                     60            43
-win rate                         23%           21%
-avg net / trade                -7.6%         -9.4%
-expectancy $/trade            $-1.79        $-2.21
-max drawdown                  -24.5%        -25.5%
-open now                           0             1
+equity                       $392.44       $401.69
+return                        -21.5%        -19.7%
+closed trades                     60            44
+win rate                         23%           20%
+avg net / trade                -7.6%         -9.5%
+expectancy $/trade            $-1.79        $-2.23
+max drawdown                  -24.5%        -26.1%
+open now                           0             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -122,15 +122,12 @@ signals skipped by the sizer/risk rules: already_traded_token 359, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $404.84 (-19.0%) | cash $384.60 | open 1 | max drawdown -25.5%
+equity $401.69 (-19.7%) | cash $401.69 | open 0 | max drawdown -26.1%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 43 | win 9/43 (21%) | avg net -9.4% | realized $-95.16 | expectancy $-2.21/trade
-exits: stop 34, trail 9
-  (n=43 < 100: noise, not evidence)
-open:
-  rockstar     cost $20.24  now $20.24 (+0.0%)  held 0.0h
+closed 44 | win 9/44 (20%) | avg net -9.5% | realized $-98.31 | expectancy $-2.23/trade
+exits: stop 35, trail 9
+  (n=44 < 100: noise, not evidence)
 last trades:
-  Sakura       $21.28 -> $46.02 (+116.2%)  trail  1.2h
   CSI          $22.52 -> $19.70 (-12.5%)  stop  0.3h
   SPEED        $22.70 -> $0.05 (-99.8%)  stop  0.3h
   bill         $21.25 -> $15.00 (-29.4%)  stop  0.2h
@@ -138,6 +135,7 @@ last trades:
   ニャジラ         $21.11 -> $13.78 (-34.7%)  stop  0.7h
   Socks        $20.75 -> $17.11 (-17.5%)  stop  0.5h
   WANTED       $20.56 -> $14.13 (-31.3%)  stop  0.8h
+  rockstar     $20.24 -> $17.10 (-15.5%)  stop  0.2h
 signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 320, daily_loss_limit 219, setup_rejected:sellers_dominate_now 120, setup_rejected:dumping_now 94, setup_rejected:volume_dried_up 34, setup_rejected:b_bundled 33, setup_rejected:top10_concentrated 29, setup_rejected:operator_cluster 16, setup_rejected:b_received 7, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
