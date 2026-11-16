@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-16 17:12 UTC
+Updated: 2026-11-16 17:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           79404
+pools seen           79434
 passed SCOUT         157
   killed by SCORE    20
   killed by AUDIT    35
 FINAL PASS           102
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    78080
-  few_unique_buyers            74773
-  liquidity_low                73305
-  volume_below_liquidity       55973
-  sells_dominate               20762
-  wash_churn                   16363
-  overheated                    6887
-  missing                       2446
+  too_young                    78110
+  few_unique_buyers            74802
+  liquidity_low                73324
+  volume_below_liquidity       55990
+  sells_dominate               20769
+  wash_churn                   16371
+  overheated                    6890
+  missing                       2456
   too_old                       1006
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 4704 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 4706 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  102    -4.3%    -9.9%   -44.4%   -88.5%    59%
 SCOUT PASS, killed later     55    +4.3%    +4.2%   -50.5%   -52.9%    49%
-KILLED (tracked)          11208    +0.0%   -55.6%   -78.6%    +0.4%    30%
+KILLED (tracked)          11209    +0.0%   -55.6%   -78.8%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -68,19 +68,19 @@ tokens analysed: 551 | helius credits today: 3891/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%  101    26%     -9.2%   -17.1%   -99.7%
-   -6%     20%  101    26%     -9.5%   -17.1%   -99.7%
-   -6%     30%  101    25%     -9.1%   -17.5%   -99.7%
-  -10%     12%  101    28%     -9.1%   -18.6%   -99.7%
-  -10%     20%  101    27%     -9.7%   -18.7%   -99.7%
-  -10%     30%  101    27%     -9.2%   -19.1%   -99.7%
-  -15%     12%  101    30%     -9.6%   -19.6%   -99.7%
-  -15%     20%  101    30%    -10.2%   -20.4%   -99.7%
-  -15%     30%  101    30%     -9.8%   -21.0%   -99.7%
-  -25%     12%  101    34%    -12.7%   -21.3%   -99.7%
-  -25%     20%  101    34%    -15.0%   -29.9%   -99.7%
-  -25%     30%  101    34%    -14.7%   -31.0%   -99.7%
-  best so far: stop -6%, trail from +30% -> avg -9.1% per trade over n=101
+   -6%     12%  102    25%     -9.2%   -16.0%   -99.7%
+   -6%     20%  102    25%     -9.5%   -16.0%   -99.7%
+   -6%     30%  102    25%     -9.1%   -17.3%   -99.7%
+  -10%     12%  102    27%     -9.1%   -18.4%   -99.7%
+  -10%     20%  102    26%     -9.7%   -18.6%   -99.7%
+  -10%     30%  102    26%     -9.2%   -19.1%   -99.7%
+  -15%     12%  102    29%     -9.6%   -19.6%   -99.7%
+  -15%     20%  102    29%    -10.2%   -20.4%   -99.7%
+  -15%     30%  102    29%     -9.8%   -21.0%   -99.7%
+  -25%     12%  102    33%    -12.7%   -19.6%   -99.7%
+  -25%     20%  102    33%    -14.9%   -29.9%   -99.7%
+  -25%     30%  102    33%    -14.7%   -31.0%   -99.7%
+  best so far: stop -6%, trail from +30% -> avg -9.1% per trade over n=102
 
 ================================================================
 A vs B (same sizing, exits and costs; only the entry rule differs)
@@ -115,7 +115,7 @@ last trades:
   6STAR        $19.75 -> $16.35 (-17.2%)  stop  0.2h
   Marvin       $19.65 -> $16.98 (-13.6%)  stop  0.8h
   FiveM        $19.66 -> $0.01 (-100.0%)  stop  4.0h
-signals skipped by the sizer/risk rules: already_traded_token 377, daily_loss_limit 246, cooldown_after_loss 12, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 377, daily_loss_limit 247, cooldown_after_loss 12, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
