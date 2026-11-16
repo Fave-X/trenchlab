@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-16 04:32 UTC
+Updated: 2026-11-16 04:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           75556
+pools seen           75618
 passed SCOUT         152
   killed by SCORE    20
   killed by AUDIT    35
 FINAL PASS           97
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    74263
-  few_unique_buyers            71184
-  liquidity_low                69618
-  volume_below_liquidity       53411
-  sells_dominate               19795
-  wash_churn                   15545
-  overheated                    6544
+  too_young                    74323
+  few_unique_buyers            71242
+  liquidity_low                69676
+  volume_below_liquidity       53450
+  sells_dominate               19815
+  wash_churn                   15557
+  overheated                    6548
   missing                       2416
-  too_old                        991
+  too_old                        993
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 4406 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 4408 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   97    -4.7%    -9.9%   -43.9%   -88.8%    60%
 SCOUT PASS, killed later     55    +4.3%    +4.2%   -50.5%   -52.9%    49%
-KILLED (tracked)          10692    +0.0%   -55.0%   -78.9%    +0.1%    31%
+KILLED (tracked)          10701    +0.0%   -55.0%   -79.0%    +0.1%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                      99    -94.5%    -68.9%    51%
+too_young                     100    -94.5%    -68.9%    50%
 too_old                        34     -0.6%     -0.4%     3%
 wash_churn                     26     -1.1%    -71.8%    27%
 liquidity_low                  20    -68.7%    -49.8%    45%
@@ -52,19 +52,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      503     -0.2%    -13.1%    -34.1%    35%
+none      504     -0.2%    -13.1%    -34.1%    35%
 <15%       99     +0.2%    -11.2%    -15.5%    29%
 15-30%     11     -0.2%     -0.2%     +1.0%    36%
 30%+       22     -0.4%     -0.5%     +2.6%     5%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      483     -0.0%     -2.4%    -12.8%    28%
+none      484     -0.0%     -2.4%    -12.8%    28%
 <20%      135     -5.9%    -57.8%    -92.3%    44%
 20%+       17    +16.6%    -99.0%       -      82%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      610     -0.2%     -6.4%    -17.1%    31%
+<20%      611     -0.2%     -6.4%    -17.1%    31%
 20-40%     16     -6.5%    -99.0%    -99.1%    75%
 40%+        9    +11.6%     +5.8%       -      56%
-tokens analysed: 530 | helius credits today: 1318/25000
+tokens analysed: 531 | helius credits today: 1379/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -79,7 +79,7 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     30%   97    30%     -8.1%   -21.0%   -99.7%
   -25%     12%   97    33%    -12.1%   -21.3%   -99.7%
   -25%     20%   97    33%    -14.5%   -30.1%   -99.7%
-  -25%     30%   97    34%    -13.0%   -31.0%   -99.7%
+  -25%     30%   97    34%    -12.9%   -31.0%   -99.7%
   best so far: stop -15%, trail from +30% -> avg -8.1% per trade over n=97
   WARNING: n < 100. This is noise, not evidence. Do not trade on it.
 
