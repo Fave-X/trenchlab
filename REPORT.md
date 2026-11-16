@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-16 13:02 UTC
+Updated: 2026-11-16 13:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           78147
+pools seen           78185
 passed SCOUT         156
   killed by SCORE    20
   killed by AUDIT    35
 FINAL PASS           101
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    76836
-  few_unique_buyers            73577
-  liquidity_low                72103
-  volume_below_liquidity       55135
-  sells_dominate               20437
-  wash_churn                   16117
-  overheated                    6771
-  missing                       2425
+  too_young                    76874
+  few_unique_buyers            73613
+  liquidity_low                72138
+  volume_below_liquidity       55163
+  sells_dominate               20441
+  wash_churn                   16122
+  overheated                    6774
+  missing                       2428
   too_old                        998
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 4606 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 4609 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  101    -4.3%    -8.2%   -44.0%   -88.8%    59%
+FINAL PASS                  101    -4.3%    -9.9%   -44.0%   -88.8%    59%
 SCOUT PASS, killed later     55    +4.3%    +4.2%   -50.5%   -52.9%    49%
-KILLED (tracked)          11083    +0.0%   -54.9%   -77.9%    +0.4%    30%
+KILLED (tracked)          11087    +0.0%   -54.9%   -77.9%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -58,13 +58,13 @@ none      517     -0.2%    -14.8%    -34.1%    34%
 30%+       22     -0.4%     -0.5%     +2.6%     5%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      489     -0.1%     -2.7%    -12.9%    28%
-<20%      147     -4.7%    -58.2%    -91.4%    42%
+<20%      147     -5.9%    -58.2%    -91.4%    42%
 20%+       18    +13.0%    -99.0%       -      83%
 fresh       n   +1h med   +4h med  +24h med   rug%
 <20%      630     -0.2%     -7.5%    -17.1%    31%
 20-40%     15     -4.8%    -99.0%    -99.1%    80%
 40%+        9    +11.6%     +5.8%       -      67%
-tokens analysed: 548 | helius credits today: 3095/25000
+tokens analysed: 548 | helius credits today: 3147/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -87,8 +87,8 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $367.53       $394.59
-return                        -26.5%        -21.1%
+equity                       $367.53       $394.14
+return                        -26.5%        -21.2%
 closed trades                     64            46
 win rate                         23%           20%
 avg net / trade                -9.1%         -9.8%
@@ -121,13 +121,13 @@ signals skipped by the sizer/risk rules: already_traded_token 370, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $394.59 (-21.1%) | cash $375.58 | open 1 | max drawdown -27.5%
+equity $394.14 (-21.2%) | cash $375.58 | open 1 | max drawdown -27.5%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 46 | win 9/46 (20%) | avg net -9.8% | realized $-104.65 | expectancy $-2.28/trade
 exits: stop 37, trail 9
   (n=46 < 100: noise, not evidence)
 open:
-  Anthropig    cost $19.77  now $19.02 (-3.8%)  held 1.0h
+  Anthropig    cost $19.77  now $18.57 (-6.1%)  held 1.2h
 last trades:
   bill         $21.25 -> $15.00 (-29.4%)  stop  0.2h
   HYGG         $20.94 -> $24.47 (+16.9%)  trail  1.3h
