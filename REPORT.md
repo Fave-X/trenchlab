@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-16 11:32 UTC
+Updated: 2026-11-16 11:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           77718
+pools seen           77765
 passed SCOUT         155
   killed by SCORE    20
   killed by AUDIT    35
 FINAL PASS           100
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    76409
-  few_unique_buyers            73182
-  liquidity_low                71684
-  volume_below_liquidity       54856
-  sells_dominate               20340
-  wash_churn                   16021
-  overheated                    6727
+  too_young                    76456
+  few_unique_buyers            73226
+  liquidity_low                71731
+  volume_below_liquidity       54885
+  sells_dominate               20352
+  wash_churn                   16028
+  overheated                    6730
   missing                       2424
   too_old                        997
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 4572 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 4575 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  100    -4.3%    -8.2%   -44.0%   -88.8%    60%
 SCOUT PASS, killed later     55    +4.3%    +4.2%   -50.5%   -52.9%    49%
-KILLED (tracked)          11031    +0.0%   -54.9%   -78.5%    +0.4%    30%
+KILLED (tracked)          11036    +0.0%   -54.9%   -78.8%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -36,7 +36,7 @@ rule                            n   +4h med  +24h med   rug%
 too_young                     105    -94.5%    -68.9%    48%
 too_old                        34     -0.6%     -0.4%     6%
 wash_churn                     28     -1.1%    -71.8%    29%
-liquidity_low                  22    -65.5%    -49.8%    41%
+liquidity_low                  22    -68.7%    -49.8%    41%
 volume_below_liquidity          7     -2.8%    +30.3%    43%
 overheated                      6    -12.8%    -56.0%    67%
 sells_dominate                  2    -64.6%       -      50%
@@ -135,7 +135,7 @@ last trades:
   rockstar     $20.24 -> $17.10 (-15.5%)  stop  0.2h
   Marvin       $20.08 -> $17.44 (-13.1%)  stop  0.8h
   WIGGLES      $20.12 -> $16.41 (-18.4%)  stop  1.3h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 354, daily_loss_limit 219, setup_rejected:sellers_dominate_now 120, setup_rejected:dumping_now 94, setup_rejected:volume_dried_up 38, setup_rejected:b_bundled 33, setup_rejected:top10_concentrated 29, setup_rejected:operator_cluster 16, setup_rejected:b_received 7, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 355, daily_loss_limit 219, setup_rejected:sellers_dominate_now 120, setup_rejected:dumping_now 94, setup_rejected:volume_dried_up 38, setup_rejected:b_bundled 33, setup_rejected:top10_concentrated 29, setup_rejected:operator_cluster 16, setup_rejected:b_received 7, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
