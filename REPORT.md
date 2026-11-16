@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-16 00:02 UTC
+Updated: 2026-11-16 00:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           74232
+pools seen           74282
 passed SCOUT         149
   killed by SCORE    20
   killed by AUDIT    35
 FINAL PASS           94
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    72956
-  few_unique_buyers            69948
-  liquidity_low                68388
-  volume_below_liquidity       52501
-  sells_dominate               19431
-  wash_churn                   15298
+  too_young                    73005
+  few_unique_buyers            69994
+  liquidity_low                68428
+  volume_below_liquidity       52535
+  sells_dominate               19450
+  wash_churn                   15307
   overheated                    6452
-  missing                       2371
-  too_old                        980
+  missing                       2380
+  too_old                        981
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 4339 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 4341 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                   94    -4.4%    -7.8%   -43.9%   -88.8%    60%
 SCOUT PASS, killed later     55    +4.3%    +4.2%   -50.5%   -15.3%    49%
-KILLED (tracked)          10523    +0.0%   -55.6%   -78.5%    +0.1%    31%
+KILLED (tracked)          10529    +0.0%   -55.7%   -78.7%    +0.1%    31%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -136,7 +136,7 @@ last trades:
   ニャジラ         $21.11 -> $13.78 (-34.7%)  stop  0.7h
   Socks        $20.75 -> $17.11 (-17.5%)  stop  0.5h
   WANTED       $20.56 -> $14.13 (-31.3%)  stop  0.8h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 309, daily_loss_limit 219, setup_rejected:sellers_dominate_now 120, setup_rejected:dumping_now 94, setup_rejected:b_bundled 33, setup_rejected:volume_dried_up 31, setup_rejected:top10_concentrated 29, setup_rejected:operator_cluster 16, setup_rejected:b_received 7, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 311, daily_loss_limit 219, setup_rejected:sellers_dominate_now 120, setup_rejected:dumping_now 94, setup_rejected:b_bundled 33, setup_rejected:volume_dried_up 31, setup_rejected:top10_concentrated 29, setup_rejected:operator_cluster 16, setup_rejected:b_received 7, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
