@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-16 19:32 UTC
+Updated: 2026-11-16 19:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           80103
+pools seen           80210
 passed SCOUT         158
   killed by SCORE    20
   killed by AUDIT    35
 FINAL PASS           103
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    78774
-  few_unique_buyers            75447
-  liquidity_low                73971
-  volume_below_liquidity       56466
-  sells_dominate               20987
-  wash_churn                   16508
-  overheated                    6955
+  too_young                    78880
+  few_unique_buyers            75548
+  liquidity_low                74073
+  volume_below_liquidity       56540
+  sells_dominate               21018
+  wash_churn                   16524
+  overheated                    6964
   missing                       2466
-  too_old                       1009
+  too_old                       1010
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 4734 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 4764 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  103    -3.8%   -11.5%   -44.4%   -88.5%    60%
 SCOUT PASS, killed later     55    +4.3%    +4.2%   -50.5%   -52.9%    49%
-KILLED (tracked)          11266    +0.0%   -55.6%   -79.0%    +0.4%    30%
+KILLED (tracked)          11284    +0.0%   -55.6%   -79.1%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -36,7 +36,7 @@ rule                            n   +4h med  +24h med   rug%
 too_young                     106    -94.1%    -68.9%    48%
 too_old                        36     -0.6%     -0.4%     6%
 wash_churn                     28     -1.1%    -71.8%    29%
-liquidity_low                  23    -65.5%    -49.8%    43%
+liquidity_low                  23    -68.7%    -49.8%    48%
 volume_below_liquidity          7     -2.8%    +30.3%    43%
 overheated                      6    -12.8%    -56.0%    67%
 sells_dominate                  2    -64.6%       -      50%
@@ -69,18 +69,18 @@ tokens analysed: 554 | helius credits today: 4390/25000
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
    -6%     12%  103    25%     -9.1%   -14.9%   -99.7%
-   -6%     20%  103    25%     -9.4%   -15.0%   -99.7%
-   -6%     30%  103    24%     -9.0%   -17.1%   -99.7%
+   -6%     20%  103    25%     -9.6%   -17.1%   -99.7%
+   -6%     30%  103    24%     -9.2%   -17.5%   -99.7%
   -10%     12%  103    27%     -9.9%   -18.6%   -99.7%
-  -10%     20%  103    26%    -10.5%   -18.7%   -99.7%
-  -10%     30%  103    26%    -10.0%   -19.1%   -99.7%
+  -10%     20%  103    26%    -10.7%   -19.0%   -99.7%
+  -10%     30%  103    26%    -10.2%   -19.3%   -99.7%
   -15%     12%  103    29%    -10.4%   -19.6%   -99.7%
-  -15%     20%  103    29%    -11.0%   -20.4%   -99.7%
-  -15%     30%  103    29%    -10.6%   -21.0%   -99.7%
+  -15%     20%  103    29%    -11.2%   -20.7%   -99.7%
+  -15%     30%  103    29%    -10.8%   -21.0%   -99.7%
   -25%     12%  103    33%    -13.4%   -21.3%   -99.7%
-  -25%     20%  103    33%    -15.7%   -29.9%   -99.7%
-  -25%     30%  103    33%    -15.4%   -31.0%   -99.7%
-  best so far: stop -6%, trail from +30% -> avg -9.0% per trade over n=103
+  -25%     20%  103    33%    -15.9%   -29.9%   -99.7%
+  -25%     30%  103    33%    -15.6%   -31.0%   -99.7%
+  best so far: stop -6%, trail from +12% -> avg -9.1% per trade over n=103
 
 ================================================================
 A vs B (same sizing, exits and costs; only the entry rule differs)
