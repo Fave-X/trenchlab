@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-16 14:02 UTC
+Updated: 2026-11-16 14:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           78404
+pools seen           78452
 passed SCOUT         156
   killed by SCORE    20
   killed by AUDIT    35
 FINAL PASS           101
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    77092
-  few_unique_buyers            73821
-  liquidity_low                72344
-  volume_below_liquidity       55317
-  sells_dominate               20497
-  wash_churn                   16161
-  overheated                    6784
-  missing                       2434
-  too_old                        998
+  too_young                    77138
+  few_unique_buyers            73866
+  liquidity_low                72390
+  volume_below_liquidity       55355
+  sells_dominate               20509
+  wash_churn                   16168
+  overheated                    6788
+  missing                       2435
+  too_old                       1000
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 4618 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 4619 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  101    -4.3%    -9.9%   -44.0%   -88.8%    59%
 SCOUT PASS, killed later     55    +4.3%    +4.2%   -50.5%   -52.9%    49%
-KILLED (tracked)          11109    +0.0%   -55.2%   -78.0%    +0.4%    30%
+KILLED (tracked)          11115    +0.0%   -55.1%   -78.0%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -115,7 +115,7 @@ last trades:
   6STAR        $19.75 -> $16.35 (-17.2%)  stop  0.2h
   Marvin       $19.65 -> $16.98 (-13.6%)  stop  0.8h
   FiveM        $19.66 -> $0.01 (-100.0%)  stop  4.0h
-signals skipped by the sizer/risk rules: already_traded_token 371, daily_loss_limit 245, cooldown_after_loss 12, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 372, daily_loss_limit 245, cooldown_after_loss 12, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
