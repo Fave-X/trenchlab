@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-17 02:52 UTC
+Updated: 2026-11-17 03:01 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           82404
+pools seen           82449
 passed SCOUT         162
   killed by SCORE    21
   killed by AUDIT    35
 FINAL PASS           106
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    81054
-  few_unique_buyers            77635
-  liquidity_low                76151
-  volume_below_liquidity       58101
-  sells_dominate               21628
-  wash_churn                   17013
-  overheated                    7168
+  too_young                    81099
+  few_unique_buyers            77675
+  liquidity_low                76195
+  volume_below_liquidity       58132
+  sells_dominate               21639
+  wash_churn                   17021
+  overheated                    7174
   missing                       2509
   too_old                       1023
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 4892 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 4893 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  106    -3.4%   -11.5%   -45.0%   -88.5%    59%
 SCOUT PASS, killed later     56    +4.3%    +4.4%   -50.5%   -52.9%    48%
-KILLED (tracked)          11515    +0.0%   -55.9%   -79.2%    +0.4%    30%
+KILLED (tracked)          11520    +0.0%   -55.9%   -79.2%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -54,7 +54,7 @@ CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 cluster     n   +1h med   +4h med  +24h med   rug%
 none      537     -0.2%    -16.7%    -32.6%    34%
 <15%      111     +0.4%    -11.7%    -13.9%    31%
-15-30%     20     -1.4%     -2.0%     +1.0%    30%
+15-30%     20     -1.4%     -2.7%     +1.0%    30%
 30%+       22     -0.4%     -0.5%     +2.6%     5%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      516     -0.2%     -2.9%    -12.8%    28%
@@ -87,7 +87,7 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $384.79       $403.72
+equity                       $384.79       $403.28
 return                        -23.0%        -19.3%
 closed trades                     65            50
 win rate                         25%           20%
@@ -115,19 +115,19 @@ last trades:
   Marvin       $19.65 -> $16.98 (-13.6%)  stop  0.8h
   FiveM        $19.66 -> $0.01 (-100.0%)  stop  4.0h
   BAWSAQ       $18.38 -> $35.64 (+93.9%)  trail  1.0h
-signals skipped by the sizer/risk rules: already_traded_token 384, daily_loss_limit 251, cooldown_after_loss 12, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 385, daily_loss_limit 251, cooldown_after_loss 12, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $403.72 (-19.3%) | cash $383.53 | open 1 | max drawdown -29.0%
+equity $403.28 (-19.3%) | cash $383.53 | open 1 | max drawdown -29.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 50 | win 10/50 (20%) | avg net -8.1% | realized $-96.28 | expectancy $-1.93/trade
 exits: stop 40, trail 10
   (n=50 < 100: noise, not evidence)
 open:
-  LEOSTAR      cost $20.19  now $20.19 (+0.0%)  held 0.0h
+  LEOSTAR      cost $20.19  now $19.75 (-2.2%)  held 0.2h
 last trades:
   WANTED       $20.56 -> $14.13 (-31.3%)  stop  0.8h
   rockstar     $20.24 -> $17.10 (-15.5%)  stop  0.2h
