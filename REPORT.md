@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-17 04:02 UTC
+Updated: 2026-11-17 04:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           82752
+pools seen           82811
 passed SCOUT         162
   killed by SCORE    21
   killed by AUDIT    35
 FINAL PASS           106
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    81402
-  few_unique_buyers            77959
-  liquidity_low                76473
-  volume_below_liquidity       58326
-  sells_dominate               21725
-  wash_churn                   17121
-  overheated                    7206
-  missing                       2521
+  too_young                    81461
+  few_unique_buyers            78017
+  liquidity_low                76519
+  volume_below_liquidity       58361
+  sells_dominate               21739
+  wash_churn                   17140
+  overheated                    7212
+  missing                       2531
   too_old                       1023
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 4909 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 4911 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  106    -3.4%   -11.5%   -44.7%   -88.1%    59%
 SCOUT PASS, killed later     56    +4.3%    +4.4%   -49.0%   -52.9%    48%
-KILLED (tracked)          11561    +0.0%   -56.1%   -79.4%    +0.4%    30%
+KILLED (tracked)          11571    +0.0%   -56.1%   -79.3%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     112    -94.8%    -68.9%    47%
+too_young                     112    -94.8%    -68.9%    49%
 too_old                        37     -0.7%     -0.4%     5%
 wash_churn                     30     -1.2%    -71.8%    30%
 liquidity_low                  24    -68.7%    -49.8%    54%
@@ -57,11 +57,11 @@ none      540     -0.2%    -16.7%    -33.1%    34%
 15-30%     20     -1.4%     -2.9%     +1.0%    30%
 30%+       22     -0.4%     -0.5%     +2.6%     5%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      519     -0.2%     -3.0%    -12.9%    27%
+none      519     -0.2%     -3.0%    -12.9%    28%
 <20%      155     -3.5%    -58.2%    -91.4%    42%
 20%+       20     +8.6%    -99.0%       -      80%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      669     -0.2%     -8.4%    -17.1%    30%
+<20%      669     -0.2%     -8.4%    -17.1%    31%
 20-40%     15     -4.8%    -99.0%    -99.1%    80%
 40%+       10    -43.5%    -46.3%       -      70%
 tokens analysed: 581 | helius credits today: 985/25000
@@ -87,8 +87,8 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $384.79       $404.38
-return                        -23.0%        -19.1%
+equity                       $384.79       $406.82
+return                        -23.0%        -18.6%
 closed trades                     65            50
 win rate                         25%           20%
 avg net / trade                -7.5%         -8.1%
@@ -121,13 +121,13 @@ signals skipped by the sizer/risk rules: already_traded_token 385, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $404.38 (-19.1%) | cash $383.53 | open 1 | max drawdown -29.0%
+equity $406.82 (-18.6%) | cash $383.53 | open 1 | max drawdown -29.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 50 | win 10/50 (20%) | avg net -8.1% | realized $-96.28 | expectancy $-1.93/trade
 exits: stop 40, trail 10
   (n=50 < 100: noise, not evidence)
 open:
-  LEOSTAR      cost $20.19  now $20.86 (+3.3%)  held 1.2h
+  LEOSTAR      cost $20.19  now $23.29 (+15.4%)  held 1.4h
 last trades:
   WANTED       $20.56 -> $14.13 (-31.3%)  stop  0.8h
   rockstar     $20.24 -> $17.10 (-15.5%)  stop  0.2h
