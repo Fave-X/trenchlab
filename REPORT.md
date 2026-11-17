@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-17 06:52 UTC
+Updated: 2026-11-17 07:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           83576
+pools seen           83623
 passed SCOUT         164
   killed by SCORE    21
   killed by AUDIT    35
 FINAL PASS           108
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    82220
-  few_unique_buyers            78726
-  liquidity_low                77251
-  volume_below_liquidity       58881
-  sells_dominate               21925
-  wash_churn                   17341
-  overheated                    7303
+  too_young                    82267
+  few_unique_buyers            78768
+  liquidity_low                77295
+  volume_below_liquidity       58912
+  sells_dominate               21936
+  wash_churn                   17353
+  overheated                    7312
   missing                       2531
   too_old                       1024
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 4960 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 4970 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  108    -3.4%   -11.5%   -44.7%   -88.5%    58%
 SCOUT PASS, killed later     56    +4.3%    +4.4%   -49.0%   -52.9%    48%
-KILLED (tracked)          11685    +0.0%   -56.6%   -79.8%    +0.4%    30%
+KILLED (tracked)          11697    +0.0%   -56.6%   -79.8%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -115,7 +115,7 @@ last trades:
   BAWSAQ       $18.38 -> $35.64 (+93.9%)  trail  1.0h
   bul          $19.24 -> $12.80 (-33.5%)  stop  0.2h
   CHAR         $18.92 -> $15.13 (-20.0%)  stop  1.2h
-signals skipped by the sizer/risk rules: already_traded_token 392, daily_loss_limit 251, cooldown_after_loss 13, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 393, daily_loss_limit 251, cooldown_after_loss 13, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
