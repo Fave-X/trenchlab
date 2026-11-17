@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-17 11:02 UTC
+Updated: 2026-11-17 11:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           84845
+pools seen           84891
 passed SCOUT         167
   killed by SCORE    22
   killed by AUDIT    36
 FINAL PASS           109
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    83482
-  few_unique_buyers            79920
-  liquidity_low                78443
-  volume_below_liquidity       59768
-  sells_dominate               22236
-  wash_churn                   17639
-  overheated                    7427
-  missing                       2535
-  too_old                       1026
+  too_young                    83527
+  few_unique_buyers            79966
+  liquidity_low                78478
+  volume_below_liquidity       59796
+  sells_dominate               22240
+  wash_churn                   17646
+  overheated                    7433
+  missing                       2543
+  too_old                       1027
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 5053 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 5056 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  109    -3.8%   -11.5%   -44.7%   -88.1%    58%
 SCOUT PASS, killed later     58    +4.3%    +3.9%   -50.5%   -52.9%    48%
-KILLED (tracked)          11865    +0.0%   -56.1%   -79.8%    +0.4%    30%
+KILLED (tracked)          11876    +0.0%   -56.1%   -79.8%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -77,9 +77,9 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     12%  109    30%     -9.9%   -19.6%   -99.7%
   -15%     20%  109    30%    -10.7%   -20.7%   -99.7%
   -15%     30%  109    29%    -10.6%   -21.1%   -99.7%
-  -25%     12%  109    34%    -12.5%   -17.8%   -99.7%
-  -25%     20%  109    34%    -15.0%   -29.9%   -99.7%
-  -25%     30%  109    33%    -15.0%   -31.0%   -99.7%
+  -25%     12%  109    34%    -12.7%   -17.8%   -99.7%
+  -25%     20%  109    34%    -15.1%   -29.9%   -99.7%
+  -25%     30%  109    33%    -15.2%   -31.0%   -99.7%
   best so far: stop -6%, trail from +12% -> avg -8.7% per trade over n=109
 
 ================================================================
@@ -135,7 +135,7 @@ last trades:
   BAWSAQ       $19.64 -> $17.51 (-10.9%)  stop  1.2h
   BAWSAQ       $19.30 -> $37.05 (+92.0%)  trail  1.0h
   LEOSTAR      $20.19 -> $17.80 (-11.9%)  stop  2.2h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 366, daily_loss_limit 219, setup_rejected:sellers_dominate_now 120, setup_rejected:dumping_now 97, setup_rejected:volume_dried_up 46, setup_rejected:b_bundled 35, setup_rejected:top10_concentrated 33, setup_rejected:operator_cluster 16, setup_rejected:b_received 7, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 367, daily_loss_limit 219, setup_rejected:sellers_dominate_now 120, setup_rejected:dumping_now 97, setup_rejected:volume_dried_up 46, setup_rejected:b_bundled 35, setup_rejected:top10_concentrated 33, setup_rejected:operator_cluster 16, setup_rejected:b_received 7, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
