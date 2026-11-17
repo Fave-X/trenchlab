@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-17 16:22 UTC
+Updated: 2026-11-17 16:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           86377
+pools seen           86405
 passed SCOUT         169
   killed by SCORE    22
   killed by AUDIT    36
 FINAL PASS           111
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    84990
-  few_unique_buyers            81369
-  liquidity_low                79890
-  volume_below_liquidity       60847
-  sells_dominate               22655
-  wash_churn                   17948
-  overheated                    7571
+  too_young                    85015
+  few_unique_buyers            81397
+  liquidity_low                79914
+  volume_below_liquidity       60868
+  sells_dominate               22664
+  wash_churn                   17954
+  overheated                    7574
   missing                       2556
-  too_old                       1043
+  too_old                       1046
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 5126 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 5127 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  111    -4.3%   -11.5%   -45.2%   -88.1%    58%
 SCOUT PASS, killed later     58    +4.3%    +3.9%   -49.0%   -52.9%    50%
-KILLED (tracked)          12047    +0.0%   -57.3%   -80.5%    +0.4%    30%
+KILLED (tracked)          12053    +0.0%   -57.3%   -80.5%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -115,7 +115,7 @@ last trades:
   KATIA        $18.73 -> $13.75 (-26.6%)  stop  0.3h
   GROKIA       $18.48 -> $14.90 (-19.4%)  stop  0.2h
   GEKKO        $18.30 -> $16.05 (-12.3%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 407, daily_loss_limit 251, cooldown_after_loss 13, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 408, daily_loss_limit 251, cooldown_after_loss 13, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
