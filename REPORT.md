@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-17 12:22 UTC
+Updated: 2026-11-17 12:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           85229
+pools seen           85274
 passed SCOUT         168
   killed by SCORE    22
   killed by AUDIT    36
 FINAL PASS           110
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    83864
-  few_unique_buyers            80286
-  liquidity_low                78799
-  volume_below_liquidity       60030
-  sells_dominate               22319
-  wash_churn                   17716
-  overheated                    7463
+  too_young                    83909
+  few_unique_buyers            80328
+  liquidity_low                78841
+  volume_below_liquidity       60060
+  sells_dominate               22331
+  wash_churn                   17720
+  overheated                    7467
   missing                       2547
   too_old                       1028
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 5076 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 5079 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  110    -3.8%   -11.7%   -44.7%   -88.1%    57%
+FINAL PASS                  110    -4.2%   -11.7%   -44.7%   -88.1%    57%
 SCOUT PASS, killed later     58    +4.3%    +3.9%   -50.5%   -52.9%    48%
-KILLED (tracked)          11916    +0.0%   -56.2%   -79.9%    +0.4%    30%
+KILLED (tracked)          11922    +0.0%   -56.2%   -79.8%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -77,8 +77,8 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     12%  110    30%    -10.0%   -19.8%   -99.7%
   -15%     20%  110    30%    -10.8%   -20.6%   -99.7%
   -15%     30%  110    29%    -10.7%   -21.1%   -99.7%
-  -25%     12%  110    34%    -12.9%   -20.9%   -99.7%
-  -25%     20%  110    34%    -15.3%   -30.0%   -99.7%
+  -25%     12%  110    34%    -12.9%   -22.2%   -99.7%
+  -25%     20%  110    34%    -15.4%   -30.0%   -99.7%
   -25%     30%  110    33%    -15.4%   -31.0%   -99.7%
   best so far: stop -6%, trail from +12% -> avg -8.8% per trade over n=110
 
@@ -87,8 +87,8 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $366.00       $409.16
-return                        -26.8%        -18.2%
+equity                       $366.00       $413.75
+return                        -26.8%        -17.3%
 closed trades                     69            51
 win rate                         23%           20%
 avg net / trade                -8.5%         -8.2%
@@ -121,13 +121,13 @@ signals skipped by the sizer/risk rules: already_traded_token 398, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $409.16 (-18.2%) | cash $381.26 | open 1 | max drawdown -29.0%
+equity $413.75 (-17.3%) | cash $381.26 | open 1 | max drawdown -29.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 51 | win 10/51 (20%) | avg net -8.2% | realized $-98.67 | expectancy $-1.93/trade
 exits: stop 41, trail 10
   (n=51 < 100: noise, not evidence)
 open:
-  bul          cost $20.07  now $27.90 (+39.0%)  held 0.7h
+  bul          cost $20.07  now $32.49 (+61.9%)  held 0.9h
 last trades:
   rockstar     $20.24 -> $17.10 (-15.5%)  stop  0.2h
   Marvin       $20.08 -> $17.44 (-13.1%)  stop  0.8h
