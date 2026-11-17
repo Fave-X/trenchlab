@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-17 20:12 UTC
+Updated: 2026-11-17 20:21 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           87574
+pools seen           87597
 passed SCOUT         171
   killed by SCORE    22
   killed by AUDIT    38
 FINAL PASS           111
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    86178
-  few_unique_buyers            82519
-  liquidity_low                81050
-  volume_below_liquidity       61720
-  sells_dominate               22988
-  wash_churn                   18218
-  overheated                    7675
+  too_young                    86201
+  few_unique_buyers            82542
+  liquidity_low                81073
+  volume_below_liquidity       61743
+  sells_dominate               22991
+  wash_churn                   18225
+  overheated                    7679
   missing                       2559
   too_old                       1050
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 5203 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 5204 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  111    -4.3%   -11.7%   -45.2%   -88.1%    58%
+FINAL PASS                  111    -4.3%   -11.7%   -46.7%   -88.1%    58%
 SCOUT PASS, killed later     60    +4.7%    +3.7%   -49.0%   -52.9%    48%
-KILLED (tracked)          12168    +0.0%   -57.3%   -80.7%    +0.4%    30%
+KILLED (tracked)          12168    +0.0%   -57.4%   -80.6%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -45,7 +45,7 @@ SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        51    -58.0%    -93.6%    75%
-70-79      65    -41.9%    -67.4%    46%
+70-79      65    -43.9%    -67.4%    46%
 60-69      38    -47.1%    -79.8%    47%
 <60        17    -31.3%    -52.9%    41%
 
