@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-17 10:12 UTC
+Updated: 2026-11-17 10:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           84580
-passed SCOUT         166
+pools seen           84638
+passed SCOUT         167
   killed by SCORE    22
   killed by AUDIT    36
-FINAL PASS           108
+FINAL PASS           109
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    83219
-  few_unique_buyers            79668
-  liquidity_low                78199
-  volume_below_liquidity       59584
-  sells_dominate               22171
-  wash_churn                   17578
-  overheated                    7400
+  too_young                    83277
+  few_unique_buyers            79724
+  liquidity_low                78255
+  volume_below_liquidity       59628
+  sells_dominate               22185
+  wash_churn                   17591
+  overheated                    7404
   missing                       2535
   too_old                       1026
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 5035 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 5037 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  108    -3.4%   -11.5%   -44.7%   -88.1%    58%
+FINAL PASS                  109    -3.4%   -11.5%   -44.7%   -88.1%    58%
 SCOUT PASS, killed later     58    +4.3%    +4.2%   -50.5%   -52.9%    48%
-KILLED (tracked)          11826    +0.0%   -55.9%   -79.9%    +0.4%    30%
+KILLED (tracked)          11830    +0.0%   -56.1%   -79.9%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -38,7 +38,7 @@ too_old                        37     -0.7%     -0.4%     5%
 wash_churn                     30     -1.1%    -71.8%    30%
 liquidity_low                  24    -69.3%    -49.8%    54%
 volume_below_liquidity          7     -2.8%    +30.3%    43%
-overheated                      7    -12.8%    -56.0%    57%
+overheated                      6    -12.8%    -56.0%    67%
 sells_dominate                  2    -64.6%       -      50%
 
 SCORE CHECK: scout passers by score (higher buckets should do better;
@@ -46,7 +46,7 @@ if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        51    -58.0%    -93.6%    75%
 70-79      62    -41.9%    -67.4%    48%
-60-69      36    -45.2%    -79.8%    47%
+60-69      37    -45.2%    -79.8%    46%
 <60        17    -31.3%    -52.9%    35%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
@@ -94,18 +94,20 @@ win rate                         24%           20%
 avg net / trade                -8.1%         -8.2%
 expectancy $/trade            $-1.87        $-1.93
 max drawdown                  -29.3%        -29.0%
-open now                           0             0
+open now                           1             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $374.56 (-25.1%) | cash $374.56 | open 0 | max drawdown -29.3%
+equity $374.56 (-25.1%) | cash $355.83 | open 1 | max drawdown -29.3%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 67 | win 16/67 (24%) | avg net -8.1% | realized $-125.44 | expectancy $-1.87/trade
 exits: stop 48, trail 19
   (n=67 < 100: noise, not evidence)
+open:
+  KATIA        cost $18.73  now $18.73 (+0.0%)  held 0.0h
 last trades:
   BAWSAQ       $19.90 -> $14.39 (-27.7%)  stop  0.2h
   WIGGLES      $19.62 -> $20.44 (+4.2%)  trail  0.3h
