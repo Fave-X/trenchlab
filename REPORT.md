@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-17 15:42 UTC
+Updated: 2026-11-17 15:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           86165
-passed SCOUT         168
+pools seen           86210
+passed SCOUT         169
   killed by SCORE    22
   killed by AUDIT    36
-FINAL PASS           110
+FINAL PASS           111
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    84795
-  few_unique_buyers            81168
-  liquidity_low                79689
-  volume_below_liquidity       60702
-  sells_dominate               22581
-  wash_churn                   17907
-  overheated                    7556
+  too_young                    84839
+  few_unique_buyers            81209
+  liquidity_low                79733
+  volume_below_liquidity       60732
+  sells_dominate               22598
+  wash_churn                   17915
+  overheated                    7563
   missing                       2556
   too_old                       1029
   rc_danger                       13
 
 OUTCOMES (median price change from first sighting / first pass; 5120 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  110    -4.2%   -11.5%   -45.0%   -88.1%    58%
+FINAL PASS                  111    -4.2%   -11.5%   -45.0%   -88.1%    58%
 SCOUT PASS, killed later     58    +4.3%    +3.9%   -49.0%   -52.9%    50%
-KILLED (tracked)          12020    +0.0%   -56.6%   -80.1%    +0.4%    30%
+KILLED (tracked)          12022    +0.0%   -56.7%   -80.1%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -46,19 +46,19 @@ if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        51    -58.0%    -93.6%    75%
 70-79      63    -41.9%    -67.4%    48%
-60-69      37    -45.2%    -79.8%    49%
+60-69      38    -45.2%    -79.8%    47%
 <60        17    -31.3%    -52.9%    41%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      565     -0.3%    -18.8%    -33.1%    34%
+none      565     -0.3%    -18.4%    -33.1%    34%
 <15%      114     +0.2%     -9.8%    -32.5%    31%
 15-30%     20     -1.4%     -2.9%     +1.0%    30%
 30%+       23     -0.4%     -0.5%     +2.6%     9%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      541     -0.2%     -3.5%    -13.9%    28%
-<20%      160     -4.7%    -58.2%    -91.4%    42%
+<20%      160     -3.5%    -58.2%    -91.4%    42%
 20%+       21     +8.6%    -99.0%       -      81%
 fresh       n   +1h med   +4h med  +24h med   rug%
 <20%      696     -0.2%     -9.0%    -20.4%    31%
@@ -94,18 +94,20 @@ win rate                         23%           23%
 avg net / trade                -8.5%         -7.1%
 expectancy $/trade            $-1.94        $-1.70
 max drawdown                  -29.6%        -29.0%
-open now                           0             0
+open now                           1             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $366.00 (-26.8%) | cash $366.00 | open 0 | max drawdown -29.6%
+equity $366.00 (-26.8%) | cash $347.70 | open 1 | max drawdown -29.6%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 69 | win 16/69 (23%) | avg net -8.5% | realized $-134.00 | expectancy $-1.94/trade
 exits: stop 50, trail 19
   (n=69 < 100: noise, not evidence)
+open:
+  GEKKO        cost $18.30  now $18.30 (+0.0%)  held 0.0h
 last trades:
   6STAR        $19.75 -> $16.35 (-17.2%)  stop  0.2h
   Marvin       $19.65 -> $16.98 (-13.6%)  stop  0.8h
