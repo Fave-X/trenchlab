@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-16 23:52 UTC
+Updated: 2026-11-17 00:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           81523
-passed SCOUT         160
+pools seen           81566
+passed SCOUT         161
   killed by SCORE    20
   killed by AUDIT    35
-FINAL PASS           105
+FINAL PASS           106
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    80179
-  few_unique_buyers            76799
-  liquidity_low                75337
-  volume_below_liquidity       57482
-  sells_dominate               21397
-  wash_churn                   16826
-  overheated                    7101
+  too_young                    80222
+  few_unique_buyers            76840
+  liquidity_low                75377
+  volume_below_liquidity       57515
+  sells_dominate               21404
+  wash_churn                   16842
+  overheated                    7108
   missing                       2478
   too_old                       1021
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 4808 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 4811 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  105    -3.8%   -11.7%   -45.0%   -88.5%    60%
+FINAL PASS                  106    -3.8%   -11.7%   -45.0%   -88.5%    59%
 SCOUT PASS, killed later     55    +4.3%    +4.2%   -50.5%   -52.9%    49%
-KILLED (tracked)          11403    +0.0%   -55.6%   -79.2%    +0.4%    30%
+KILLED (tracked)          11406    +0.0%   -55.7%   -79.0%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -46,7 +46,7 @@ if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        51    -58.0%    -93.6%    75%
 70-79      59    -44.3%    -66.9%    51%
-60-69      35    -42.4%    -60.0%    49%
+60-69      36    -42.4%    -60.0%    47%
 <60        15    -31.3%    -52.9%    33%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
@@ -64,7 +64,7 @@ fresh       n   +1h med   +4h med  +24h med   rug%
 <20%      656     -0.3%     -7.5%    -16.6%    31%
 20-40%     15     -4.8%    -99.0%    -99.1%    80%
 40%+       10    +11.6%     +5.8%       -      70%
-tokens analysed: 568 | helius credits today: 5979/25000
+tokens analysed: 568 | helius credits today: 0/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -94,18 +94,20 @@ win rate                         23%           18%
 avg net / trade                -9.1%        -10.2%
 expectancy $/trade            $-2.07        $-2.33
 max drawdown                  -29.3%        -29.0%
-open now                           0             0
+open now                           1             1
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $367.53 (-26.5%) | cash $367.53 | open 0 | max drawdown -29.3%
+equity $367.53 (-26.5%) | cash $349.15 | open 1 | max drawdown -29.3%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 64 | win 15/64 (23%) | avg net -9.1% | realized $-132.47 | expectancy $-2.07/trade
 exits: stop 46, trail 18
   (n=64 < 100: noise, not evidence)
+open:
+  BAWSAQ       cost $18.38  now $18.38 (+0.0%)  held 0.0h
 last trades:
   BUTTHOLE     $20.43 -> $17.04 (-16.6%)  stop  0.3h
   rockstar     $20.26 -> $17.49 (-13.7%)  stop  0.2h
@@ -121,11 +123,13 @@ signals skipped by the sizer/risk rules: already_traded_token 377, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $385.97 (-22.8%) | cash $385.97 | open 0 | max drawdown -29.0%
+equity $385.97 (-22.8%) | cash $366.67 | open 1 | max drawdown -29.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 49 | win 9/49 (18%) | avg net -10.2% | realized $-114.03 | expectancy $-2.33/trade
 exits: stop 40, trail 9
   (n=49 < 100: noise, not evidence)
+open:
+  BAWSAQ       cost $19.30  now $19.30 (+0.0%)  held 0.0h
 last trades:
   Socks        $20.75 -> $17.11 (-17.5%)  stop  0.5h
   WANTED       $20.56 -> $14.13 (-31.3%)  stop  0.8h
