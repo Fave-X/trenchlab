@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-17 06:42 UTC
+Updated: 2026-11-17 06:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           83516
+pools seen           83576
 passed SCOUT         164
   killed by SCORE    21
   killed by AUDIT    35
 FINAL PASS           108
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    82160
-  few_unique_buyers            78671
-  liquidity_low                77194
-  volume_below_liquidity       58840
-  sells_dominate               21913
-  wash_churn                   17331
-  overheated                    7290
+  too_young                    82220
+  few_unique_buyers            78726
+  liquidity_low                77251
+  volume_below_liquidity       58881
+  sells_dominate               21925
+  wash_churn                   17341
+  overheated                    7303
   missing                       2531
   too_old                       1024
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 4956 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 4960 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  108    -3.4%   -11.5%   -44.7%   -88.5%    58%
 SCOUT PASS, killed later     56    +4.3%    +4.4%   -49.0%   -52.9%    48%
-KILLED (tracked)          11672    +0.0%   -56.5%   -79.8%    +0.4%    30%
+KILLED (tracked)          11685    +0.0%   -56.6%   -79.8%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -87,29 +87,26 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $378.39       $401.33
-return                        -24.3%        -19.7%
-closed trades                     66            51
+equity                       $374.56       $401.33
+return                        -25.1%        -19.7%
+closed trades                     67            51
 win rate                         24%           20%
-avg net / trade                -7.9%         -8.2%
-expectancy $/trade            $-1.84        $-1.93
+avg net / trade                -8.1%         -8.2%
+expectancy $/trade            $-1.87        $-1.93
 max drawdown                  -29.3%        -29.0%
-open now                           1             0
+open now                           0             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $378.39 (-24.3%) | cash $359.43 | open 1 | max drawdown -29.3%
+equity $374.56 (-25.1%) | cash $374.56 | open 0 | max drawdown -29.3%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 66 | win 16/66 (24%) | avg net -7.9% | realized $-121.65 | expectancy $-1.84/trade
-exits: stop 47, trail 19
-  (n=66 < 100: noise, not evidence)
-open:
-  CHAR         cost $18.92  now $18.97 (+0.2%)  held 1.0h
+closed 67 | win 16/67 (24%) | avg net -8.1% | realized $-125.44 | expectancy $-1.87/trade
+exits: stop 48, trail 19
+  (n=67 < 100: noise, not evidence)
 last trades:
-  AI           $20.12 -> $15.62 (-22.4%)  stop  0.3h
   BAWSAQ       $19.90 -> $14.39 (-27.7%)  stop  0.2h
   WIGGLES      $19.62 -> $20.44 (+4.2%)  trail  0.3h
   6STAR        $19.75 -> $16.35 (-17.2%)  stop  0.2h
@@ -117,7 +114,8 @@ last trades:
   FiveM        $19.66 -> $0.01 (-100.0%)  stop  4.0h
   BAWSAQ       $18.38 -> $35.64 (+93.9%)  trail  1.0h
   bul          $19.24 -> $12.80 (-33.5%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 390, daily_loss_limit 251, cooldown_after_loss 13, max_open_positions 5
+  CHAR         $18.92 -> $15.13 (-20.0%)  stop  1.2h
+signals skipped by the sizer/risk rules: already_traded_token 392, daily_loss_limit 251, cooldown_after_loss 13, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
