@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-17 18:12 UTC
+Updated: 2026-11-17 18:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           86935
+pools seen           86980
 passed SCOUT         169
   killed by SCORE    22
   killed by AUDIT    36
 FINAL PASS           111
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    85541
-  few_unique_buyers            81908
-  liquidity_low                80434
-  volume_below_liquidity       61238
-  sells_dominate               22807
-  wash_churn                   18069
-  overheated                    7615
-  missing                       2556
+  too_young                    85586
+  few_unique_buyers            81952
+  liquidity_low                80475
+  volume_below_liquidity       61273
+  sells_dominate               22817
+  wash_churn                   18075
+  overheated                    7619
+  missing                       2558
   too_old                       1048
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 5143 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 5144 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  111    -4.3%   -11.7%   -45.2%   -88.1%    58%
 SCOUT PASS, killed later     58    +4.3%    +3.9%   -49.0%   -52.9%    50%
-KILLED (tracked)          12093    +0.0%   -56.9%   -80.5%    +0.4%    30%
+KILLED (tracked)          12100    +0.0%   -56.9%   -80.5%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -64,7 +64,7 @@ fresh       n   +1h med   +4h med  +24h med   rug%
 <20%      702     -0.3%     -9.0%    -20.4%    31%
 20-40%     15     -4.8%    -99.0%    -99.1%    80%
 40%+       11    -96.5%    -46.3%       -      73%
-tokens analysed: 614 | helius credits today: 5020/25000
+tokens analysed: 614 | helius credits today: 5081/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -94,7 +94,7 @@ win rate                         23%           23%
 avg net / trade                -8.5%         -7.1%
 expectancy $/trade            $-1.95        $-1.70
 max drawdown                  -30.0%        -29.0%
-open now                           0             0
+open now                           0             1
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -121,11 +121,13 @@ signals skipped by the sizer/risk rules: already_traded_token 408, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $410.05 (-18.0%) | cash $410.05 | open 0 | max drawdown -29.0%
+equity $410.05 (-18.0%) | cash $389.55 | open 1 | max drawdown -29.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 53 | win 12/53 (23%) | avg net -7.1% | realized $-89.95 | expectancy $-1.70/trade
 exits: stop 41, trail 12
   (n=53 < 100: noise, not evidence)
+open:
+  JVOLT        cost $20.50  now $20.50 (+0.0%)  held 0.0h
 last trades:
   WIGGLES      $20.12 -> $16.41 (-18.4%)  stop  1.3h
   Anthropig    $19.77 -> $17.19 (-13.1%)  stop  1.5h
