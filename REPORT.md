@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-17 13:02 UTC
+Updated: 2026-11-17 13:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           85414
+pools seen           85466
 passed SCOUT         168
   killed by SCORE    22
   killed by AUDIT    36
 FINAL PASS           110
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    84049
-  few_unique_buyers            80459
-  liquidity_low                78975
-  volume_below_liquidity       60171
-  sells_dominate               22362
-  wash_churn                   17749
-  overheated                    7481
+  too_young                    84099
+  few_unique_buyers            80508
+  liquidity_low                79023
+  volume_below_liquidity       60207
+  sells_dominate               22378
+  wash_churn                   17764
+  overheated                    7484
   missing                       2547
-  too_old                       1028
+  too_old                       1029
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 5085 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 5088 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  110    -4.2%   -11.7%   -44.7%   -88.1%    57%
+FINAL PASS                  110    -4.2%   -11.5%   -44.7%   -88.1%    57%
 SCOUT PASS, killed later     58    +4.3%    +3.9%   -50.5%   -52.9%    48%
-KILLED (tracked)          11938    +0.0%   -56.1%   -80.1%    +0.4%    30%
+KILLED (tracked)          11945    +0.0%   -56.4%   -80.1%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -53,7 +53,7 @@ CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
 none      560     -0.3%    -18.0%    -33.1%    34%
-<15%      114     +0.3%    -11.2%    -32.5%    30%
+<15%      114     +0.2%    -11.2%    -32.5%    30%
 15-30%     20     -1.4%     -2.9%     +1.0%    30%
 30%+       22     -0.4%     -0.5%     +2.6%     5%
 bundled     n   +1h med   +4h med  +24h med   rug%
@@ -78,8 +78,8 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     20%  110    30%    -10.8%   -20.6%   -99.7%
   -15%     30%  110    29%    -10.7%   -21.1%   -99.7%
   -25%     12%  110    34%    -12.8%   -19.6%   -99.7%
-  -25%     20%  110    34%    -15.2%   -30.0%   -99.7%
-  -25%     30%  110    33%    -15.2%   -31.0%   -99.7%
+  -25%     20%  110    34%    -15.3%   -30.0%   -99.7%
+  -25%     30%  110    33%    -15.3%   -31.0%   -99.7%
   best so far: stop -6%, trail from +12% -> avg -8.8% per trade over n=110
 
 ================================================================
@@ -87,14 +87,14 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $366.00       $409.50
+equity                       $366.00       $409.47
 return                        -26.8%        -18.1%
-closed trades                     69            51
-win rate                         23%           20%
-avg net / trade                -8.5%         -8.2%
-expectancy $/trade            $-1.94        $-1.93
+closed trades                     69            52
+win rate                         23%           21%
+avg net / trade                -8.5%         -7.3%
+expectancy $/trade            $-1.94        $-1.75
 max drawdown                  -29.6%        -29.0%
-open now                           0             2
+open now                           0             1
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -115,22 +115,20 @@ last trades:
   CHAR         $18.92 -> $15.13 (-20.0%)  stop  1.2h
   KATIA        $18.73 -> $13.75 (-26.6%)  stop  0.3h
   GROKIA       $18.48 -> $14.90 (-19.4%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 398, daily_loss_limit 251, cooldown_after_loss 13, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 399, daily_loss_limit 251, cooldown_after_loss 13, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $409.50 (-18.1%) | cash $360.59 | open 2 | max drawdown -29.0%
+equity $409.47 (-18.1%) | cash $388.45 | open 1 | max drawdown -29.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 51 | win 10/51 (20%) | avg net -8.2% | realized $-98.67 | expectancy $-1.93/trade
-exits: stop 41, trail 10
-  (n=51 < 100: noise, not evidence)
+closed 52 | win 11/52 (21%) | avg net -7.3% | realized $-90.88 | expectancy $-1.75/trade
+exits: stop 41, trail 11
+  (n=52 < 100: noise, not evidence)
 open:
-  bul          cost $20.07  now $29.60 (+47.5%)  held 1.4h
-  KATIA        cost $20.67  now $19.31 (-6.6%)  held 0.2h
+  KATIA        cost $20.67  now $21.02 (+1.7%)  held 0.4h
 last trades:
-  rockstar     $20.24 -> $17.10 (-15.5%)  stop  0.2h
   Marvin       $20.08 -> $17.44 (-13.1%)  stop  0.8h
   WIGGLES      $20.12 -> $16.41 (-18.4%)  stop  1.3h
   Anthropig    $19.77 -> $17.19 (-13.1%)  stop  1.5h
@@ -138,6 +136,7 @@ last trades:
   BAWSAQ       $19.64 -> $17.51 (-10.9%)  stop  1.2h
   BAWSAQ       $19.30 -> $37.05 (+92.0%)  trail  1.0h
   LEOSTAR      $20.19 -> $17.80 (-11.9%)  stop  2.2h
+  bul          $20.07 -> $27.86 (+38.8%)  trail  1.5h
 signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 369, daily_loss_limit 219, setup_rejected:sellers_dominate_now 121, setup_rejected:dumping_now 98, setup_rejected:volume_dried_up 46, setup_rejected:b_bundled 35, setup_rejected:top10_concentrated 33, setup_rejected:operator_cluster 16, setup_rejected:b_received 7, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:lp_not_locked 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, setup_rejected:bundled_buys 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
