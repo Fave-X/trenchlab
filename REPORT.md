@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-18 15:02 UTC
+Updated: 2026-11-18 15:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           93102
+pools seen           93142
 passed SCOUT         182
   killed by SCORE    26
   killed by AUDIT    39
 FINAL PASS           117
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    91672
-  few_unique_buyers            87814
-  liquidity_low                86252
-  volume_below_liquidity       65729
-  sells_dominate               24513
-  wash_churn                   19298
-  overheated                    8146
-  missing                       2666
+  too_young                    91712
+  few_unique_buyers            87854
+  liquidity_low                86272
+  volume_below_liquidity       65744
+  sells_dominate               24516
+  wash_churn                   19305
+  overheated                    8149
+  missing                       2684
   too_old                       1075
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 5549 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 5551 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  117    -3.4%    -9.9%   -45.0%   -85.9%    57%
 SCOUT PASS, killed later     65    +4.3%    +3.7%   -32.5%   -63.7%    48%
-KILLED (tracked)          12773    +0.0%   -58.8%   -81.5%    +0.4%    30%
+KILLED (tracked)          12775    +0.0%   -58.9%   -81.5%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -135,7 +135,7 @@ last trades:
   NVIDIANS     $19.38 -> $12.07 (-37.7%)  stop  0.3h
   KATIA        $19.01 -> $20.77 (+9.3%)  trail  1.8h
   ANT          $19.10 -> $16.29 (-14.7%)  stop  0.8h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 403, daily_loss_limit 219, setup_rejected:sellers_dominate_now 129, setup_rejected:dumping_now 109, setup_rejected:volume_dried_up 47, setup_rejected:b_bundled 35, setup_rejected:top10_concentrated 33, setup_rejected:lp_not_locked 22, setup_rejected:operator_cluster 19, setup_rejected:bundled_buys 11, setup_rejected:b_received 10, setup_rejected:clustered_supply 7, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 404, daily_loss_limit 219, setup_rejected:sellers_dominate_now 129, setup_rejected:dumping_now 109, setup_rejected:volume_dried_up 47, setup_rejected:b_bundled 35, setup_rejected:top10_concentrated 33, setup_rejected:lp_not_locked 22, setup_rejected:operator_cluster 19, setup_rejected:bundled_buys 11, setup_rejected:b_received 10, setup_rejected:clustered_supply 7, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
