@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-18 20:02 UTC
+Updated: 2026-11-18 20:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           94665
+pools seen           94719
 passed SCOUT         185
   killed by SCORE    26
   killed by AUDIT    39
 FINAL PASS           120
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    93224
-  few_unique_buyers            89325
-  liquidity_low                87694
-  volume_below_liquidity       66886
-  sells_dominate               24909
-  wash_churn                   19534
-  overheated                    8257
+  too_young                    93269
+  few_unique_buyers            89377
+  liquidity_low                87746
+  volume_below_liquidity       66927
+  sells_dominate               24927
+  wash_churn                   19541
+  overheated                    8260
   missing                       2729
-  too_old                       1080
+  too_old                       1088
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 5649 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 5653 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  120    -3.3%    -8.2%   -45.0%   -86.4%    57%
 SCOUT PASS, killed later     65    +4.3%    +3.7%   -32.2%   -63.7%    48%
-KILLED (tracked)          12933    +0.0%   -59.3%   -81.9%    +0.1%    30%
+KILLED (tracked)          12939    +0.0%   -59.3%   -82.0%    +0.1%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     141    -93.8%    -68.9%    46%
+too_young                     141    -94.1%    -68.9%    46%
 too_old                        39     -0.6%     -0.4%     8%
 wash_churn                     35    -23.3%    -85.6%    31%
 liquidity_low                  26    -72.2%    -49.8%    58%
@@ -58,10 +58,10 @@ none      622     -0.3%    -17.9%    -42.1%    33%
 30%+       23     -0.4%     -0.6%     +2.6%     9%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      588     -0.2%     -3.0%    -17.1%    28%
-<20%      173     -6.0%    -59.6%    -93.7%    43%
+<20%      173     -6.0%    -60.8%    -93.7%    43%
 20%+       26     +8.6%    -98.7%       -      73%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      753     -0.3%     -8.9%    -31.6%    31%
+<20%      753     -0.3%     -9.0%    -31.6%    31%
 20-40%     23     -0.7%    -98.8%    -99.1%    61%
 40%+       11    -96.5%    -96.5%       -      73%
 tokens analysed: 661 | helius credits today: 5370/25000
@@ -77,9 +77,9 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     12%  120    30%     -8.6%   -19.4%   -99.7%
   -15%     20%  120    32%     -9.1%   -20.4%   -99.7%
   -15%     30%  120    31%     -9.0%   -21.0%   -99.7%
-  -25%     12%  120    33%    -11.5%   -19.6%   -99.7%
+  -25%     12%  120    33%    -11.4%   -17.8%   -99.7%
   -25%     20%  120    35%    -13.7%   -29.9%   -99.7%
-  -25%     30%  120    34%    -13.8%   -31.0%   -99.7%
+  -25%     30%  120    34%    -13.7%   -31.0%   -99.7%
   best so far: stop -6%, trail from +12% -> avg -8.1% per trade over n=120
 
 ================================================================
@@ -87,7 +87,7 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $378.52       $372.55
+equity                       $378.50       $372.55
 return                        -24.3%        -25.5%
 closed trades                     76            59
 win rate                         24%           22%
@@ -101,13 +101,13 @@ Judge on expectancy after >=100 trades each, not on win rate or a few days.
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $378.52 (-24.3%) | cash $356.22 | open 1 | max drawdown -32.0%
+equity $378.50 (-24.3%) | cash $356.22 | open 1 | max drawdown -32.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 76 | win 18/76 (24%) | avg net -7.0% | realized $-124.86 | expectancy $-1.64/trade
 exits: stop 55, trail 21
   (n=76 < 100: noise, not evidence)
 open:
-  DCTY         cost $18.92  now $22.31 (+17.9%)  held 0.9h
+  DCTY         cost $18.92  now $22.28 (+17.8%)  held 1.0h
 last trades:
   GROKIA       $18.48 -> $14.90 (-19.4%)  stop  0.2h
   GEKKO        $18.30 -> $16.05 (-12.3%)  stop  0.2h
@@ -137,7 +137,7 @@ last trades:
   KATIA        $19.01 -> $20.77 (+9.3%)  trail  1.8h
   ANT          $19.10 -> $16.29 (-14.7%)  stop  0.8h
   Apocrycoin   $18.96 -> $12.29 (-35.2%)  stop  0.3h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 414, daily_loss_limit 220, setup_rejected:sellers_dominate_now 129, setup_rejected:dumping_now 113, setup_rejected:volume_dried_up 47, setup_rejected:b_bundled 35, setup_rejected:top10_concentrated 33, setup_rejected:lp_not_locked 22, setup_rejected:operator_cluster 21, setup_rejected:clustered_supply 13, setup_rejected:bundled_buys 11, setup_rejected:b_received 10, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 416, daily_loss_limit 220, setup_rejected:sellers_dominate_now 129, setup_rejected:dumping_now 113, setup_rejected:volume_dried_up 47, setup_rejected:b_bundled 35, setup_rejected:top10_concentrated 33, setup_rejected:lp_not_locked 22, setup_rejected:operator_cluster 21, setup_rejected:clustered_supply 13, setup_rejected:bundled_buys 11, setup_rejected:b_received 10, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
