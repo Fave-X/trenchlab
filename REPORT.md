@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-18 18:12 UTC
+Updated: 2026-11-18 18:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           94016
+pools seen           94073
 passed SCOUT         183
   killed by SCORE    26
   killed by AUDIT    39
 FINAL PASS           118
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    92580
-  few_unique_buyers            88697
-  liquidity_low                87090
-  volume_below_liquidity       66401
-  sells_dominate               24726
-  wash_churn                   19427
-  overheated                    8203
-  missing                       2710
+  too_young                    92637
+  few_unique_buyers            88753
+  liquidity_low                87141
+  volume_below_liquidity       66449
+  sells_dominate               24742
+  wash_churn                   19439
+  overheated                    8204
+  missing                       2714
   too_old                       1079
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 5587 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 5589 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  118    -3.3%    -8.2%   -45.0%   -86.4%    58%
 SCOUT PASS, killed later     65    +4.3%    +3.7%   -32.2%   -63.7%    48%
-KILLED (tracked)          12865    +0.0%   -59.1%   -81.7%    +0.1%    30%
+KILLED (tracked)          12872    +0.0%   -59.1%   -81.8%    +0.1%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     140    -93.8%    -68.9%    46%
+too_young                     141    -93.8%    -68.9%    46%
 too_old                        38     -0.6%     -0.4%     8%
 wash_churn                     35    -23.3%    -85.6%    31%
 liquidity_low                  26    -72.2%    -49.8%    58%
@@ -52,19 +52,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      617     -0.4%    -17.9%    -42.1%    34%
+none      618     -0.3%    -17.9%    -42.1%    33%
 <15%      117     +0.2%    -11.2%    -24.0%    33%
 15-30%     24     -0.7%     -1.3%     +1.0%    25%
 30%+       23     -0.4%     -0.6%     +2.6%     9%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      584     -0.2%     -3.0%    -17.1%    28%
-<20%      172     -6.0%    -59.6%    -93.7%    43%
+<20%      173     -6.0%    -59.6%    -93.7%    43%
 20%+       25     +7.9%    -98.7%       -      76%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      748     -0.3%     -9.0%    -31.6%    31%
+<20%      749     -0.3%     -9.0%    -31.6%    31%
 20-40%     22     -2.6%    -98.8%    -99.1%    64%
 40%+       11    -96.5%    -96.5%       -      73%
-tokens analysed: 657 | helius credits today: 4897/25000
+tokens analysed: 658 | helius credits today: 4958/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -115,7 +115,7 @@ last trades:
   ANT          $17.85 -> $15.87 (-11.1%)  stop  0.2h
   SHIT         $17.85 -> $19.44 (+8.9%)  trail  3.7h
   Apocrycoin   $17.83 -> $39.70 (+122.7%)  trail  0.7h
-signals skipped by the sizer/risk rules: already_traded_token 424, daily_loss_limit 251, cooldown_after_loss 15, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 425, daily_loss_limit 251, cooldown_after_loss 15, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
