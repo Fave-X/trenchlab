@@ -1,25 +1,25 @@
 # TrenchLab report
 
-Updated: 2026-11-18 11:22 UTC
+Updated: 2026-11-18 11:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           92033
+pools seen           92085
 passed SCOUT         181
   killed by SCORE    25
   killed by AUDIT    39
 FINAL PASS           117
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    90610
-  few_unique_buyers            86771
-  liquidity_low                85256
-  volume_below_liquidity       64929
-  sells_dominate               24205
-  wash_churn                   19176
-  overheated                    8075
+  too_young                    90662
+  few_unique_buyers            86822
+  liquidity_low                85306
+  volume_below_liquidity       64967
+  sells_dominate               24222
+  wash_churn                   19179
+  overheated                    8080
   missing                       2628
   too_old                       1069
   rc_danger                       13
@@ -28,15 +28,15 @@ OUTCOMES (median price change from first sighting / first pass; 5511 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  117    -3.4%    -9.9%   -45.0%   -86.4%    57%
 SCOUT PASS, killed later     64    +4.7%    +3.9%   -32.5%   -63.7%    48%
-KILLED (tracked)          12681    +0.0%   -58.5%   -81.4%    +0.4%    30%
+KILLED (tracked)          12685    +0.0%   -58.5%   -81.3%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     134    -92.0%    -68.9%    47%
+too_young                     134    -93.5%    -68.9%    47%
 too_old                        38     -0.6%     -0.4%     5%
 wash_churn                     34     -1.2%    -71.8%    29%
-liquidity_low                  26    -69.3%    -49.8%    50%
+liquidity_low                  26    -69.3%    -49.8%    54%
 volume_below_liquidity          7     -2.8%    +30.3%    43%
 overheated                      6    -12.8%    -56.0%    67%
 sells_dominate                  2    -64.6%       -      50%
@@ -58,7 +58,7 @@ none      604     -0.3%    -17.9%    -39.2%    33%
 30%+       23     -0.4%     -0.6%     +2.6%     9%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      574     -0.2%     -3.3%    -16.0%    28%
-<20%      168     -6.0%    -58.2%    -93.2%    42%
+<20%      168     -6.0%    -58.3%    -93.2%    42%
 20%+       25     +7.9%    -98.7%       -      76%
 fresh       n   +1h med   +4h med  +24h med   rug%
 <20%      734     -0.3%     -9.0%    -25.7%    31%
