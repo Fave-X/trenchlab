@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-18 17:02 UTC
+Updated: 2026-11-18 17:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           93683
+pools seen           93742
 passed SCOUT         183
   killed by SCORE    26
   killed by AUDIT    39
 FINAL PASS           118
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    92247
-  few_unique_buyers            88376
-  liquidity_low                86784
-  volume_below_liquidity       66149
-  sells_dominate               24633
-  wash_churn                   19378
-  overheated                    8179
-  missing                       2693
+  too_young                    92306
+  few_unique_buyers            88434
+  liquidity_low                86838
+  volume_below_liquidity       66188
+  sells_dominate               24650
+  wash_churn                   19392
+  overheated                    8182
+  missing                       2697
   too_old                       1079
   rc_danger                       13
 
 OUTCOMES (median price change from first sighting / first pass; 5570 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  118    -3.4%    -9.9%   -45.0%   -86.4%    58%
+FINAL PASS                  118    -3.3%    -9.9%   -45.0%   -86.4%    58%
 SCOUT PASS, killed later     65    +4.3%    +3.7%   -32.2%   -63.7%    48%
-KILLED (tracked)          12828    +0.0%   -58.8%   -81.6%    +0.4%    30%
+KILLED (tracked)          12834    +0.0%   -58.8%   -81.6%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -58,37 +58,37 @@ none      615     -0.4%    -17.9%    -41.6%    34%
 30%+       23     -0.4%     -0.6%     +2.6%     9%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      582     -0.2%     -3.0%    -16.6%    28%
-<20%      172     -6.0%    -58.5%    -93.7%    43%
+<20%      172     -6.9%    -58.5%    -93.7%    43%
 20%+       25     +7.9%    -98.7%       -      76%
 fresh       n   +1h med   +4h med  +24h med   rug%
 <20%      746     -0.3%     -8.9%    -31.1%    31%
 20-40%     22     -2.6%    -98.8%    -99.1%    64%
 40%+       11    -96.5%    -96.5%       -      73%
-tokens analysed: 655 | helius credits today: 4672/25000
+tokens analysed: 655 | helius credits today: 4702/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%  118    25%     -8.7%   -14.2%   -99.7%
-   -6%     20%  118    25%     -9.2%   -14.9%   -99.7%
-   -6%     30%  118    24%     -9.0%   -17.1%   -99.7%
-  -10%     12%  118    28%     -9.0%   -18.0%   -99.7%
-  -10%     20%  118    28%     -9.6%   -18.6%   -99.7%
-  -10%     30%  118    27%     -9.4%   -19.1%   -99.7%
-  -15%     12%  118    31%     -9.2%   -19.6%   -99.7%
-  -15%     20%  118    31%     -9.9%   -20.6%   -99.7%
-  -15%     30%  118    31%     -9.9%   -21.1%   -99.7%
-  -25%     12%  118    34%    -12.1%   -19.6%   -99.7%
-  -25%     20%  118    35%    -14.6%   -30.0%   -99.7%
-  -25%     30%  118    34%    -14.6%   -31.0%   -99.7%
-  best so far: stop -6%, trail from +12% -> avg -8.7% per trade over n=118
+   -6%     12%  118    25%     -8.3%   -14.2%   -99.7%
+   -6%     20%  118    25%     -8.8%   -14.9%   -99.7%
+   -6%     30%  118    24%     -8.6%   -17.1%   -99.7%
+  -10%     12%  118    28%     -8.6%   -18.0%   -99.7%
+  -10%     20%  118    28%     -9.2%   -18.6%   -99.7%
+  -10%     30%  118    27%     -9.0%   -19.1%   -99.7%
+  -15%     12%  118    31%     -8.8%   -19.6%   -99.7%
+  -15%     20%  118    31%     -9.5%   -20.6%   -99.7%
+  -15%     30%  118    31%     -9.5%   -21.1%   -99.7%
+  -25%     12%  118    34%    -11.7%   -19.6%   -99.7%
+  -25%     20%  118    35%    -14.2%   -30.0%   -99.7%
+  -25%     30%  118    34%    -14.2%   -31.0%   -99.7%
+  best so far: stop -6%, trail from +12% -> avg -8.3% per trade over n=118
 
 ================================================================
 A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $363.40       $379.23
-return                        -27.3%        -24.2%
+equity                       $371.86       $379.23
+return                        -25.6%        -24.2%
 closed trades                     74            58
 win rate                         23%           22%
 avg net / trade                -8.6%         -9.1%
@@ -101,13 +101,13 @@ Judge on expectancy after >=100 trades each, not on win rate or a few days.
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $363.40 (-27.3%) | cash $338.75 | open 1 | max drawdown -32.0%
+equity $371.86 (-25.6%) | cash $338.75 | open 1 | max drawdown -32.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 74 | win 17/74 (23%) | avg net -8.6% | realized $-143.42 | expectancy $-1.94/trade
 exits: stop 54, trail 20
   (n=74 < 100: noise, not evidence)
 open:
-  Apocrycoin   cost $17.83  now $24.66 (+38.3%)  held 0.2h
+  Apocrycoin   cost $17.83  now $33.12 (+85.7%)  held 0.4h
 last trades:
   CHAR         $18.92 -> $15.13 (-20.0%)  stop  1.2h
   KATIA        $18.73 -> $13.75 (-26.6%)  stop  0.3h
