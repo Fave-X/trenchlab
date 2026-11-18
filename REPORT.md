@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-18 04:42 UTC
+Updated: 2026-11-18 04:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           90015
+pools seen           90064
 passed SCOUT         179
   killed by SCORE    25
   killed by AUDIT    39
 FINAL PASS           115
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    88604
-  few_unique_buyers            84844
-  liquidity_low                83344
-  volume_below_liquidity       63487
-  sells_dominate               23629
-  wash_churn                   18771
-  overheated                    7921
+  too_young                    88653
+  few_unique_buyers            84890
+  liquidity_low                83390
+  volume_below_liquidity       63525
+  sells_dominate               23642
+  wash_churn                   18784
+  overheated                    7923
   missing                       2608
   too_old                       1062
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 5370 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 5376 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  115    -4.2%   -11.7%   -48.2%   -88.1%    57%
 SCOUT PASS, killed later     64    +4.7%    +3.9%   -32.2%   -63.7%    48%
-KILLED (tracked)          12432    +0.0%   -58.0%   -80.9%    +0.4%    30%
+KILLED (tracked)          12439    +0.0%   -57.9%   -81.1%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -61,7 +61,7 @@ none      568     -0.2%     -3.1%    -15.2%    27%
 <20%      162     -6.0%    -58.2%    -93.2%    42%
 20%+       25     +7.9%    -98.8%       -      76%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      722     -0.2%     -9.0%    -23.0%    30%
+<20%      722     -0.3%     -9.0%    -23.0%    30%
 20-40%     20     -2.6%    -99.0%    -99.1%    70%
 40%+       13    -23.0%    -45.3%       -      62%
 tokens analysed: 635 | helius credits today: 1365/25000
@@ -77,7 +77,7 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     12%  115    30%    -10.3%   -19.9%   -99.7%
   -15%     20%  115    30%    -11.1%   -21.0%   -99.7%
   -15%     30%  115    29%    -11.0%   -21.2%   -99.7%
-  -25%     12%  115    33%    -13.3%   -27.6%   -99.7%
+  -25%     12%  115    33%    -13.3%   -26.5%   -99.7%
   -25%     20%  115    33%    -15.9%   -30.8%   -99.7%
   -25%     30%  115    32%    -15.9%   -31.1%   -99.7%
   best so far: stop -6%, trail from +12% -> avg -9.1% per trade over n=115
@@ -87,8 +87,8 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $356.96       $383.85
-return                        -28.6%        -23.2%
+equity                       $356.96       $385.76
+return                        -28.6%        -22.8%
 closed trades                     72            56
 win rate                         22%           21%
 avg net / trade                -8.8%         -9.3%
@@ -121,13 +121,13 @@ signals skipped by the sizer/risk rules: already_traded_token 410, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $383.85 (-23.2%) | cash $361.26 | open 1 | max drawdown -30.0%
+equity $385.76 (-22.8%) | cash $361.26 | open 1 | max drawdown -30.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 56 | win 12/56 (21%) | avg net -9.3% | realized $-119.73 | expectancy $-2.14/trade
 exits: stop 44, trail 12
   (n=56 < 100: noise, not evidence)
 open:
-  KATIA        cost $19.01  now $22.58 (+18.8%)  held 1.0h
+  KATIA        cost $19.01  now $24.50 (+28.9%)  held 1.2h
 last trades:
   BAWSAQ       $19.64 -> $17.51 (-10.9%)  stop  1.2h
   BAWSAQ       $19.30 -> $37.05 (+92.0%)  trail  1.0h
