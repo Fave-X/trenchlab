@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-18 01:12 UTC
+Updated: 2026-11-18 01:21 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           88967
+pools seen           89015
 passed SCOUT         175
   killed by SCORE    25
   killed by AUDIT    38
 FINAL PASS           112
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    87563
-  few_unique_buyers            83843
-  liquidity_low                82345
-  volume_below_liquidity       62713
-  sells_dominate               23329
-  wash_churn                   18563
-  overheated                    7823
+  too_young                    87611
+  few_unique_buyers            83889
+  liquidity_low                82391
+  volume_below_liquidity       62746
+  sells_dominate               23335
+  wash_churn                   18574
+  overheated                    7825
   missing                       2598
   too_old                       1056
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 5262 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 5266 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  112    -4.4%   -12.0%   -46.7%   -88.1%    58%
 SCOUT PASS, killed later     63    +4.3%    +4.2%   -32.2%   -63.7%    48%
-KILLED (tracked)          12311    +0.0%   -57.8%   -80.8%    +0.4%    30%
+KILLED (tracked)          12318    +0.0%   -57.8%   -80.8%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -54,16 +54,16 @@ CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 cluster     n   +1h med   +4h med  +24h med   rug%
 none      585     -0.3%    -17.8%    -34.1%    33%
 <15%      118     +0.2%    -11.2%    -32.7%    32%
-15-30%     24     -0.9%     -2.0%     +1.0%    25%
+15-30%     24     -0.7%     -2.0%     +1.0%    25%
 30%+       23     -0.4%     -0.6%     +2.6%     9%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      562     -0.2%     -3.0%    -14.9%    28%
 <20%      164     -3.5%    -58.2%    -92.3%    41%
-20%+       24     +7.9%    -98.9%       -      75%
+20%+       24     +8.6%    -98.9%       -      75%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      718     -0.2%     -8.8%    -23.0%    31%
+<20%      718     -0.2%     -8.9%    -23.0%    31%
 20-40%     20     -2.6%    -99.0%    -99.1%    65%
-40%+       12    -96.5%    -96.5%       -      67%
+40%+       12    -42.4%    -96.5%       -      67%
 tokens analysed: 631 | helius credits today: 628/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
@@ -87,14 +87,14 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $359.25       $387.28
-return                        -28.2%        -22.5%
-closed trades                     71            55
-win rate                         23%           22%
-avg net / trade                -8.8%         -8.8%
-expectancy $/trade            $-1.98        $-2.04
-max drawdown                  -30.9%        -29.0%
-open now                           0             1
+equity                       $359.25       $380.27
+return                        -28.2%        -23.9%
+closed trades                     71            56
+win rate                         23%           21%
+avg net / trade                -8.8%         -9.3%
+expectancy $/trade            $-1.98        $-2.14
+max drawdown                  -30.9%        -30.0%
+open now                           0             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -121,15 +121,12 @@ signals skipped by the sizer/risk rules: already_traded_token 409, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $387.28 (-22.5%) | cash $368.20 | open 1 | max drawdown -29.0%
+equity $380.27 (-23.9%) | cash $380.27 | open 0 | max drawdown -30.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 55 | win 12/55 (22%) | avg net -8.8% | realized $-112.42 | expectancy $-2.04/trade
-exits: stop 43, trail 12
-  (n=55 < 100: noise, not evidence)
-open:
-  NVIDIANS     cost $19.38  now $19.08 (-1.5%)  held 0.2h
+closed 56 | win 12/56 (21%) | avg net -9.3% | realized $-119.73 | expectancy $-2.14/trade
+exits: stop 44, trail 12
+  (n=56 < 100: noise, not evidence)
 last trades:
-  Trader       $19.64 -> $14.98 (-23.7%)  stop  0.7h
   BAWSAQ       $19.64 -> $17.51 (-10.9%)  stop  1.2h
   BAWSAQ       $19.30 -> $37.05 (+92.0%)  trail  1.0h
   LEOSTAR      $20.19 -> $17.80 (-11.9%)  stop  2.2h
@@ -137,7 +134,8 @@ last trades:
   KATIA        $20.67 -> $21.60 (+4.5%)  trail  1.0h
   JVOLT        $20.50 -> $0.07 (-99.7%)  stop  0.2h
   JALU         $19.48 -> $17.45 (-10.4%)  stop  0.8h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 376, daily_loss_limit 219, setup_rejected:sellers_dominate_now 128, setup_rejected:dumping_now 103, setup_rejected:volume_dried_up 46, setup_rejected:b_bundled 35, setup_rejected:top10_concentrated 33, setup_rejected:operator_cluster 16, setup_rejected:bundled_buys 11, setup_rejected:lp_not_locked 8, setup_rejected:b_received 8, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, max_open_positions 1
+  NVIDIANS     $19.38 -> $12.07 (-37.7%)  stop  0.3h
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 377, daily_loss_limit 219, setup_rejected:sellers_dominate_now 128, setup_rejected:dumping_now 103, setup_rejected:volume_dried_up 46, setup_rejected:b_bundled 35, setup_rejected:top10_concentrated 33, setup_rejected:operator_cluster 16, setup_rejected:bundled_buys 11, setup_rejected:lp_not_locked 8, setup_rejected:b_received 8, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
