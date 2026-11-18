@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-18 13:42 UTC
+Updated: 2026-11-18 13:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           92717
-passed SCOUT         181
-  killed by SCORE    25
+pools seen           92760
+passed SCOUT         182
+  killed by SCORE    26
   killed by AUDIT    39
 FINAL PASS           117
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    91288
-  few_unique_buyers            87437
-  liquidity_low                85899
-  volume_below_liquidity       65438
-  sells_dominate               24408
-  wash_churn                   19253
-  overheated                    8122
-  missing                       2647
+  too_young                    91331
+  few_unique_buyers            87480
+  liquidity_low                85939
+  volume_below_liquidity       65471
+  sells_dominate               24418
+  wash_churn                   19262
+  overheated                    8128
+  missing                       2648
   too_old                       1074
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 5536 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 5540 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  117    -3.4%    -9.9%   -45.0%   -85.9%    57%
-SCOUT PASS, killed later     64    +4.7%    +3.9%   -32.5%   -63.7%    48%
-KILLED (tracked)          12741    +0.0%   -58.6%   -81.1%    +0.4%    30%
+SCOUT PASS, killed later     65    +4.3%    +3.9%   -32.5%   -63.7%    48%
+KILLED (tracked)          12745    +0.0%   -58.7%   -81.1%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -47,7 +47,7 @@ score       n   +4h med  +24h med   rug%
 80+        53    -58.0%    -93.6%    74%
 70-79      69    -41.9%    -67.2%    46%
 60-69      41    -37.4%    -75.3%    49%
-<60        18    -31.7%    -63.7%    39%
+<60        19    -31.7%    -63.7%    37%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
@@ -64,7 +64,7 @@ fresh       n   +1h med   +4h med  +24h med   rug%
 <20%      738     -0.3%     -8.8%    -28.4%    31%
 20-40%     21     -4.5%    -98.9%    -99.1%    67%
 40%+       12    -42.4%    -45.3%       -      67%
-tokens analysed: 648 | helius credits today: 3600/25000
+tokens analysed: 648 | helius credits today: 3680/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -87,8 +87,8 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $356.58       $382.03
-return                        -28.7%        -23.6%
+equity                       $356.58       $385.58
+return                        -28.7%        -22.9%
 closed trades                     74            57
 win rate                         23%           23%
 avg net / trade                -8.6%         -9.0%
@@ -121,13 +121,13 @@ signals skipped by the sizer/risk rules: already_traded_token 422, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $382.03 (-23.6%) | cash $362.93 | open 1 | max drawdown -30.0%
+equity $385.58 (-22.9%) | cash $362.93 | open 1 | max drawdown -30.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 57 | win 13/57 (23%) | avg net -9.0% | realized $-117.97 | expectancy $-2.07/trade
 exits: stop 44, trail 13
   (n=57 < 100: noise, not evidence)
 open:
-  ANT          cost $19.10  now $19.10 (+0.0%)  held 0.0h
+  ANT          cost $19.10  now $22.65 (+18.6%)  held 0.2h
 last trades:
   BAWSAQ       $19.30 -> $37.05 (+92.0%)  trail  1.0h
   LEOSTAR      $20.19 -> $17.80 (-11.9%)  stop  2.2h
@@ -137,7 +137,7 @@ last trades:
   JALU         $19.48 -> $17.45 (-10.4%)  stop  0.8h
   NVIDIANS     $19.38 -> $12.07 (-37.7%)  stop  0.3h
   KATIA        $19.01 -> $20.77 (+9.3%)  trail  1.8h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 402, daily_loss_limit 219, setup_rejected:sellers_dominate_now 129, setup_rejected:dumping_now 107, setup_rejected:volume_dried_up 47, setup_rejected:b_bundled 35, setup_rejected:top10_concentrated 33, setup_rejected:lp_not_locked 22, setup_rejected:operator_cluster 16, setup_rejected:bundled_buys 11, setup_rejected:b_received 10, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:clustered_supply 4, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 402, daily_loss_limit 219, setup_rejected:sellers_dominate_now 129, setup_rejected:dumping_now 107, setup_rejected:volume_dried_up 47, setup_rejected:b_bundled 35, setup_rejected:top10_concentrated 33, setup_rejected:lp_not_locked 22, setup_rejected:operator_cluster 16, setup_rejected:bundled_buys 11, setup_rejected:b_received 10, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:clustered_supply 5, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
