@@ -1,25 +1,25 @@
 # TrenchLab report
 
-Updated: 2026-11-18 23:12 UTC
+Updated: 2026-11-18 23:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           95576
+pools seen           95633
 passed SCOUT         186
   killed by SCORE    26
   killed by AUDIT    40
 FINAL PASS           120
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    94114
-  few_unique_buyers            90184
-  liquidity_low                88564
-  volume_below_liquidity       67552
-  sells_dominate               25165
-  wash_churn                   19707
-  overheated                    8347
+  too_young                    94171
+  few_unique_buyers            90241
+  liquidity_low                88620
+  volume_below_liquidity       67602
+  sells_dominate               25180
+  wash_churn                   19718
+  overheated                    8351
   missing                       2737
   too_old                       1096
   rc_danger                       13
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 5697 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  120    -3.3%    -7.8%   -44.7%   -86.4%    57%
 SCOUT PASS, killed later     66    +4.7%    +3.9%   -32.2%   -63.7%    47%
-KILLED (tracked)          13046    +0.0%   -59.5%   -82.5%    +0.1%    30%
+KILLED (tracked)          13050    +0.0%   -59.4%   -82.5%    +0.1%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -64,7 +64,7 @@ fresh       n   +1h med   +4h med  +24h med   rug%
 <20%      761     -0.3%     -8.9%    -31.1%    31%
 20-40%     24     -0.4%    -98.9%    -99.1%    62%
 40%+       11    -96.5%    -96.5%       -      73%
-tokens analysed: 669 | helius credits today: 6040/25000
+tokens analysed: 669 | helius credits today: 6075/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -115,7 +115,7 @@ last trades:
   Apocrycoin   $17.83 -> $39.70 (+122.7%)  trail  0.7h
   DCTY         $18.92 -> $15.61 (-17.5%)  stop  0.3h
   DCTY         $18.92 -> $19.28 (+1.9%)  trail  1.3h
-signals skipped by the sizer/risk rules: already_traded_token 445, daily_loss_limit 251, cooldown_after_loss 15, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 446, daily_loss_limit 251, cooldown_after_loss 15, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
