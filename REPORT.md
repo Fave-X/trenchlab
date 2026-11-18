@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-18 02:23 UTC
+Updated: 2026-11-18 02:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           89317
+pools seen           89374
 passed SCOUT         178
   killed by SCORE    24
   killed by AUDIT    39
 FINAL PASS           115
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    87910
-  few_unique_buyers            84169
-  liquidity_low                82679
-  volume_below_liquidity       62959
-  sells_dominate               23412
-  wash_churn                   18629
-  overheated                    7858
+  too_young                    87967
+  few_unique_buyers            84224
+  liquidity_low                82734
+  volume_below_liquidity       62997
+  sells_dominate               23435
+  wash_churn                   18639
+  overheated                    7866
   missing                       2598
   too_old                       1058
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 5332 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 5337 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  115    -4.4%   -12.0%   -48.2%   -88.1%    57%
 SCOUT PASS, killed later     63    +4.3%    +4.2%   -39.8%   -63.7%    49%
-KILLED (tracked)          12360    +0.0%   -58.0%   -80.9%    +0.4%    30%
+KILLED (tracked)          12366    +0.0%   -58.0%   -80.9%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -64,23 +64,23 @@ fresh       n   +1h med   +4h med  +24h med   rug%
 <20%      719     -0.2%     -9.0%    -23.0%    31%
 20-40%     20     -2.6%    -99.0%    -99.1%    70%
 40%+       12    -42.4%    -96.5%       -      67%
-tokens analysed: 632 | helius credits today: 689/25000
+tokens analysed: 632 | helius credits today: 724/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%  113    26%     -9.0%   -14.9%   -99.7%
-   -6%     20%  113    26%     -9.5%   -17.1%   -99.7%
-   -6%     30%  113    24%     -9.3%   -17.5%   -99.7%
-  -10%     12%  113    27%    -10.0%   -18.7%   -99.7%
-  -10%     20%  113    27%    -10.7%   -19.1%   -99.7%
-  -10%     30%  113    26%    -10.5%   -19.5%   -99.7%
-  -15%     12%  113    30%    -10.3%   -19.9%   -99.7%
-  -15%     20%  113    30%    -11.0%   -20.7%   -99.7%
-  -15%     30%  113    29%    -10.9%   -21.1%   -99.7%
-  -25%     12%  113    34%    -13.3%   -27.9%   -99.7%
-  -25%     20%  113    34%    -15.6%   -30.8%   -99.7%
-  -25%     30%  113    33%    -15.7%   -31.1%   -99.7%
-  best so far: stop -6%, trail from +12% -> avg -9.0% per trade over n=113
+   -6%     12%  115    26%     -9.0%   -14.9%   -99.7%
+   -6%     20%  115    26%     -9.5%   -15.1%   -99.7%
+   -6%     30%  115    24%     -9.3%   -17.1%   -99.7%
+  -10%     12%  115    28%    -10.0%   -18.6%   -99.7%
+  -10%     20%  115    27%    -10.7%   -19.0%   -99.7%
+  -10%     30%  115    26%    -10.4%   -19.3%   -99.7%
+  -15%     12%  115    30%    -10.4%   -19.6%   -99.7%
+  -15%     20%  115    30%    -11.1%   -20.4%   -99.7%
+  -15%     30%  115    29%    -11.1%   -21.0%   -99.7%
+  -25%     12%  115    33%    -13.4%   -21.3%   -99.7%
+  -25%     20%  115    33%    -15.7%   -30.1%   -99.7%
+  -25%     30%  115    32%    -15.8%   -31.0%   -99.7%
+  best so far: stop -6%, trail from +12% -> avg -9.0% per trade over n=115
 
 ================================================================
 A vs B (same sizing, exits and costs; only the entry rule differs)
@@ -135,7 +135,7 @@ last trades:
   JVOLT        $20.50 -> $0.07 (-99.7%)  stop  0.2h
   JALU         $19.48 -> $17.45 (-10.4%)  stop  0.8h
   NVIDIANS     $19.38 -> $12.07 (-37.7%)  stop  0.3h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 380, daily_loss_limit 219, setup_rejected:sellers_dominate_now 128, setup_rejected:dumping_now 103, setup_rejected:volume_dried_up 46, setup_rejected:b_bundled 35, setup_rejected:top10_concentrated 33, setup_rejected:operator_cluster 16, setup_rejected:bundled_buys 11, setup_rejected:b_received 9, setup_rejected:lp_not_locked 8, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 381, daily_loss_limit 219, setup_rejected:sellers_dominate_now 128, setup_rejected:dumping_now 103, setup_rejected:volume_dried_up 46, setup_rejected:b_bundled 35, setup_rejected:top10_concentrated 33, setup_rejected:operator_cluster 16, setup_rejected:bundled_buys 11, setup_rejected:b_received 9, setup_rejected:lp_not_locked 8, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, setup_rejected:clustered_supply 1, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
