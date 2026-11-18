@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-18 20:42 UTC
+Updated: 2026-11-18 20:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           94840
+pools seen           94889
 passed SCOUT         185
   killed by SCORE    26
   killed by AUDIT    39
 FINAL PASS           120
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    93390
-  few_unique_buyers            89488
-  liquidity_low                87863
-  volume_below_liquidity       67016
-  sells_dominate               24966
-  wash_churn                   19560
-  overheated                    8272
-  missing                       2729
+  too_young                    93439
+  few_unique_buyers            89533
+  liquidity_low                87910
+  volume_below_liquidity       67051
+  sells_dominate               24981
+  wash_churn                   19572
+  overheated                    8279
+  missing                       2730
   too_old                       1088
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 5656 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 5661 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  120    -3.3%    -7.8%   -45.0%   -86.4%    57%
+FINAL PASS                  120    -3.3%    -7.8%   -44.7%   -86.4%    57%
 SCOUT PASS, killed later     65    +4.3%    +3.7%   -32.2%   -63.7%    48%
-KILLED (tracked)          12958    +0.0%   -59.5%   -82.2%    +0.1%    30%
+KILLED (tracked)          12964    +0.0%   -59.6%   -82.2%    +0.1%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -45,23 +45,23 @@ SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        53    -58.0%    -93.6%    74%
-70-79      70    -41.9%    -67.4%    47%
+70-79      70    -39.9%    -67.4%    47%
 60-69      43    -37.4%    -75.3%    47%
 <60        19    -31.3%    -63.7%    37%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      624     -0.3%    -17.9%    -42.1%    33%
+none      624     -0.3%    -17.8%    -42.1%    33%
 <15%      118     +0.2%    -11.2%    -24.0%    34%
 15-30%     24     -0.7%     -1.3%     +1.0%    25%
 30%+       23     -0.4%     -0.6%     +2.6%     9%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      589     -0.2%     -3.0%    -17.1%    28%
-<20%      174     -6.0%    -60.8%    -93.7%    43%
+<20%      174     -6.0%    -59.6%    -93.7%    43%
 20%+       26     +8.6%    -98.7%       -      77%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      755     -0.3%     -8.9%    -31.6%    31%
+<20%      755     -0.3%     -8.8%    -31.6%    31%
 20-40%     23     -0.7%    -98.8%    -99.1%    65%
 40%+       11    -96.5%    -96.5%       -      73%
 tokens analysed: 663 | helius credits today: 5488/25000
@@ -78,7 +78,7 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     20%  120    32%     -9.2%   -20.4%   -99.7%
   -15%     30%  120    31%     -9.2%   -21.0%   -99.7%
   -25%     12%  120    33%    -11.4%   -17.4%   -99.7%
-  -25%     20%  120    35%    -13.7%   -29.9%   -99.7%
+  -25%     20%  120    35%    -13.8%   -29.9%   -99.7%
   -25%     30%  120    34%    -13.8%   -31.0%   -99.7%
   best so far: stop -6%, trail from +12% -> avg -8.1% per trade over n=120
 
@@ -115,7 +115,7 @@ last trades:
   Apocrycoin   $17.83 -> $39.70 (+122.7%)  trail  0.7h
   DCTY         $18.92 -> $15.61 (-17.5%)  stop  0.3h
   DCTY         $18.92 -> $19.28 (+1.9%)  trail  1.3h
-signals skipped by the sizer/risk rules: already_traded_token 439, daily_loss_limit 251, cooldown_after_loss 15, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 440, daily_loss_limit 251, cooldown_after_loss 15, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
