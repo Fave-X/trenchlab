@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-18 04:12 UTC
+Updated: 2026-11-18 04:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           89861
+pools seen           89915
 passed SCOUT         179
   killed by SCORE    25
   killed by AUDIT    39
 FINAL PASS           115
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    88450
-  few_unique_buyers            84695
-  liquidity_low                83197
-  volume_below_liquidity       63371
-  sells_dominate               23592
-  wash_churn                   18735
-  overheated                    7910
+  too_young                    88504
+  few_unique_buyers            84748
+  liquidity_low                83247
+  volume_below_liquidity       63417
+  sells_dominate               23601
+  wash_churn                   18745
+  overheated                    7913
   missing                       2607
   too_old                       1062
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 5364 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 5365 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  115    -4.2%   -11.7%   -48.2%   -88.1%    57%
 SCOUT PASS, killed later     64    +4.7%    +4.2%   -39.8%   -63.7%    48%
-KILLED (tracked)          12413    +0.0%   -58.0%   -80.9%    +0.4%    30%
+KILLED (tracked)          12421    +0.0%   -58.0%   -80.9%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -87,8 +87,8 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $356.96       $380.77
-return                        -28.6%        -23.8%
+equity                       $356.96       $381.75
+return                        -28.6%        -23.6%
 closed trades                     72            56
 win rate                         22%           21%
 avg net / trade                -8.8%         -9.3%
@@ -121,13 +121,13 @@ signals skipped by the sizer/risk rules: already_traded_token 410, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $380.77 (-23.8%) | cash $361.26 | open 1 | max drawdown -30.0%
+equity $381.75 (-23.6%) | cash $361.26 | open 1 | max drawdown -30.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 56 | win 12/56 (21%) | avg net -9.3% | realized $-119.73 | expectancy $-2.14/trade
 exits: stop 44, trail 12
   (n=56 < 100: noise, not evidence)
 open:
-  KATIA        cost $19.01  now $19.50 (+2.6%)  held 0.5h
+  KATIA        cost $19.01  now $20.49 (+7.8%)  held 0.7h
 last trades:
   BAWSAQ       $19.64 -> $17.51 (-10.9%)  stop  1.2h
   BAWSAQ       $19.30 -> $37.05 (+92.0%)  trail  1.0h
