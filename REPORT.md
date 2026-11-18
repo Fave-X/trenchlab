@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-18 22:51 UTC
+Updated: 2026-11-18 23:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           95466
+pools seen           95512
 passed SCOUT         186
   killed by SCORE    26
   killed by AUDIT    40
 FINAL PASS           120
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    94010
-  few_unique_buyers            90076
-  liquidity_low                88458
-  volume_below_liquidity       67463
-  sells_dominate               25130
-  wash_churn                   19689
-  overheated                    8339
+  too_young                    94056
+  few_unique_buyers            90121
+  liquidity_low                88503
+  volume_below_liquidity       67499
+  sells_dominate               25148
+  wash_churn                   19699
+  overheated                    8344
   missing                       2735
   too_old                       1092
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 5694 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 5696 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  120    -3.3%    -7.8%   -44.7%   -86.4%    57%
 SCOUT PASS, killed later     66    +4.7%    +3.9%   -32.2%   -63.7%    47%
-KILLED (tracked)          13038    +0.0%   -59.4%   -82.4%    +0.1%    30%
+KILLED (tracked)          13042    +0.0%   -59.4%   -82.4%    +0.1%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -115,7 +115,7 @@ last trades:
   Apocrycoin   $17.83 -> $39.70 (+122.7%)  trail  0.7h
   DCTY         $18.92 -> $15.61 (-17.5%)  stop  0.3h
   DCTY         $18.92 -> $19.28 (+1.9%)  trail  1.3h
-signals skipped by the sizer/risk rules: already_traded_token 444, daily_loss_limit 251, cooldown_after_loss 15, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 445, daily_loss_limit 251, cooldown_after_loss 15, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -135,7 +135,7 @@ last trades:
   KATIA        $19.01 -> $20.77 (+9.3%)  trail  1.8h
   ANT          $19.10 -> $16.29 (-14.7%)  stop  0.8h
   Apocrycoin   $18.96 -> $12.29 (-35.2%)  stop  0.3h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 421, daily_loss_limit 224, setup_rejected:sellers_dominate_now 129, setup_rejected:dumping_now 113, setup_rejected:volume_dried_up 47, setup_rejected:b_bundled 35, setup_rejected:top10_concentrated 33, setup_rejected:lp_not_locked 22, setup_rejected:operator_cluster 21, setup_rejected:clustered_supply 13, setup_rejected:bundled_buys 11, setup_rejected:b_received 10, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 421, daily_loss_limit 224, setup_rejected:sellers_dominate_now 129, setup_rejected:dumping_now 114, setup_rejected:volume_dried_up 47, setup_rejected:b_bundled 35, setup_rejected:top10_concentrated 33, setup_rejected:lp_not_locked 22, setup_rejected:operator_cluster 21, setup_rejected:clustered_supply 13, setup_rejected:bundled_buys 11, setup_rejected:b_received 10, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
