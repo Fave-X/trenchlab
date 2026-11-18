@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-18 04:32 UTC
+Updated: 2026-11-18 04:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           89957
+pools seen           90015
 passed SCOUT         179
   killed by SCORE    25
   killed by AUDIT    39
 FINAL PASS           115
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    88546
-  few_unique_buyers            84789
-  liquidity_low                83288
-  volume_below_liquidity       63449
-  sells_dominate               23613
-  wash_churn                   18756
-  overheated                    7917
-  missing                       2607
+  too_young                    88604
+  few_unique_buyers            84844
+  liquidity_low                83344
+  volume_below_liquidity       63487
+  sells_dominate               23629
+  wash_churn                   18771
+  overheated                    7921
+  missing                       2608
   too_old                       1062
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 5367 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 5370 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  115    -4.2%   -11.7%   -48.2%   -88.1%    57%
 SCOUT PASS, killed later     64    +4.7%    +3.9%   -32.2%   -63.7%    48%
-KILLED (tracked)          12426    +0.0%   -58.0%   -80.9%    +0.4%    30%
+KILLED (tracked)          12432    +0.0%   -58.0%   -80.9%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -77,9 +77,9 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     12%  115    30%    -10.3%   -19.9%   -99.7%
   -15%     20%  115    30%    -11.1%   -21.0%   -99.7%
   -15%     30%  115    29%    -11.0%   -21.2%   -99.7%
-  -25%     12%  115    33%    -13.1%   -21.3%   -99.7%
-  -25%     20%  115    33%    -15.7%   -30.8%   -99.7%
-  -25%     30%  115    32%    -15.8%   -31.1%   -99.7%
+  -25%     12%  115    33%    -13.3%   -27.6%   -99.7%
+  -25%     20%  115    33%    -15.9%   -30.8%   -99.7%
+  -25%     30%  115    32%    -15.9%   -31.1%   -99.7%
   best so far: stop -6%, trail from +12% -> avg -9.1% per trade over n=115
 
 ================================================================
@@ -87,8 +87,8 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $356.96       $382.78
-return                        -28.6%        -23.4%
+equity                       $356.96       $383.85
+return                        -28.6%        -23.2%
 closed trades                     72            56
 win rate                         22%           21%
 avg net / trade                -8.8%         -9.3%
@@ -121,13 +121,13 @@ signals skipped by the sizer/risk rules: already_traded_token 410, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $382.78 (-23.4%) | cash $361.26 | open 1 | max drawdown -30.0%
+equity $383.85 (-23.2%) | cash $361.26 | open 1 | max drawdown -30.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 56 | win 12/56 (21%) | avg net -9.3% | realized $-119.73 | expectancy $-2.14/trade
 exits: stop 44, trail 12
   (n=56 < 100: noise, not evidence)
 open:
-  KATIA        cost $19.01  now $21.52 (+13.2%)  held 0.9h
+  KATIA        cost $19.01  now $22.58 (+18.8%)  held 1.0h
 last trades:
   BAWSAQ       $19.64 -> $17.51 (-10.9%)  stop  1.2h
   BAWSAQ       $19.30 -> $37.05 (+92.0%)  trail  1.0h
