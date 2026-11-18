@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-18 09:12 UTC
+Updated: 2026-11-18 09:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           91313
+pools seen           91354
 passed SCOUT         181
   killed by SCORE    25
   killed by AUDIT    39
 FINAL PASS           117
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    89892
-  few_unique_buyers            86072
-  liquidity_low                84565
-  volume_below_liquidity       64388
-  sells_dominate               23974
-  wash_churn                   19052
-  overheated                    8021
+  too_young                    89933
+  few_unique_buyers            86113
+  liquidity_low                84606
+  volume_below_liquidity       64425
+  sells_dominate               23985
+  wash_churn                   19065
+  overheated                    8025
   missing                       2622
   too_old                       1068
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 5460 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 5462 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  117    -3.4%    -9.9%   -46.7%   -86.9%    56%
 SCOUT PASS, killed later     64    +4.7%    +3.9%   -32.5%   -63.7%    48%
-KILLED (tracked)          12600    +0.0%   -58.3%   -81.1%    +0.4%    30%
+KILLED (tracked)          12603    +0.0%   -58.5%   -81.1%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -75,10 +75,10 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -10%     20%  117    27%     -9.9%   -18.7%   -99.7%
   -10%     30%  117    26%     -9.6%   -19.1%   -99.7%
   -15%     12%  117    30%     -9.6%   -19.6%   -99.7%
-  -15%     20%  117    31%    -10.1%   -20.7%   -99.7%
+  -15%     20%  117    31%    -10.2%   -20.7%   -99.7%
   -15%     30%  117    30%    -10.1%   -21.1%   -99.7%
   -25%     12%  117    33%    -12.5%   -21.3%   -99.7%
-  -25%     20%  117    34%    -14.8%   -30.1%   -99.7%
+  -25%     20%  117    34%    -14.9%   -30.1%   -99.7%
   -25%     30%  117    33%    -14.9%   -31.0%   -99.7%
   best so far: stop -6%, trail from +12% -> avg -9.1% per trade over n=117
 
@@ -87,8 +87,8 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $360.38       $382.03
-return                        -27.9%        -23.6%
+equity                       $359.84       $382.03
+return                        -28.0%        -23.6%
 closed trades                     73            57
 win rate                         22%           23%
 avg net / trade                -8.9%         -9.0%
@@ -101,13 +101,13 @@ Judge on expectancy after >=100 trades each, not on win rate or a few days.
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $360.38 (-27.9%) | cash $337.13 | open 1 | max drawdown -32.0%
+equity $359.84 (-28.0%) | cash $337.13 | open 1 | max drawdown -32.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 73 | win 16/73 (22%) | avg net -8.9% | realized $-145.02 | expectancy $-1.99/trade
 exits: stop 54, trail 19
   (n=73 < 100: noise, not evidence)
 open:
-  SHIT         cost $17.85  now $23.25 (+30.2%)  held 3.4h
+  SHIT         cost $17.85  now $22.71 (+27.2%)  held 3.5h
 last trades:
   bul          $19.24 -> $12.80 (-33.5%)  stop  0.2h
   CHAR         $18.92 -> $15.13 (-20.0%)  stop  1.2h
