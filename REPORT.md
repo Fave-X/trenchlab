@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-18 08:42 UTC
+Updated: 2026-11-18 08:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           91176
+pools seen           91221
 passed SCOUT         181
   killed by SCORE    25
   killed by AUDIT    39
 FINAL PASS           117
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    89758
-  few_unique_buyers            85945
-  liquidity_low                84437
-  volume_below_liquidity       64290
-  sells_dominate               23944
-  wash_churn                   19027
-  overheated                    8011
+  too_young                    89803
+  few_unique_buyers            85985
+  liquidity_low                84479
+  volume_below_liquidity       64322
+  sells_dominate               23957
+  wash_churn                   19033
+  overheated                    8015
   missing                       2622
   too_old                       1065
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 5447 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 5452 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  117    -3.4%    -9.9%   -46.7%   -86.9%    56%
 SCOUT PASS, killed later     64    +4.7%    +3.9%   -32.5%   -63.7%    48%
-KILLED (tracked)          12572    +0.0%   -58.4%   -81.1%    +0.4%    30%
+KILLED (tracked)          12582    +0.0%   -58.3%   -81.1%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -72,14 +72,14 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
    -6%     20%  117    25%     -9.6%   -15.0%   -99.7%
    -6%     30%  117    23%     -9.4%   -17.1%   -99.7%
   -10%     12%  117    27%     -9.4%   -18.2%   -99.7%
-  -10%     20%  117    26%    -10.2%   -18.7%   -99.7%
-  -10%     30%  117    26%     -9.9%   -19.1%   -99.7%
+  -10%     20%  117    27%    -10.1%   -18.7%   -99.7%
+  -10%     30%  117    26%     -9.8%   -19.1%   -99.7%
   -15%     12%  117    30%     -9.6%   -19.6%   -99.7%
-  -15%     20%  117    30%    -10.5%   -20.7%   -99.7%
-  -15%     30%  117    29%    -10.4%   -21.1%   -99.7%
+  -15%     20%  117    31%    -10.4%   -20.7%   -99.7%
+  -15%     30%  117    30%    -10.3%   -21.1%   -99.7%
   -25%     12%  117    33%    -12.5%   -21.3%   -99.7%
-  -25%     20%  117    33%    -15.2%   -30.1%   -99.7%
-  -25%     30%  117    32%    -15.2%   -31.0%   -99.7%
+  -25%     20%  117    34%    -15.1%   -30.1%   -99.7%
+  -25%     30%  117    33%    -15.1%   -31.0%   -99.7%
   best so far: stop -6%, trail from +12% -> avg -9.1% per trade over n=117
 
 ================================================================
@@ -87,8 +87,8 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $353.70       $382.03
-return                        -29.3%        -23.6%
+equity                       $355.87       $382.03
+return                        -28.8%        -23.6%
 closed trades                     73            57
 win rate                         22%           23%
 avg net / trade                -8.9%         -9.0%
@@ -101,13 +101,13 @@ Judge on expectancy after >=100 trades each, not on win rate or a few days.
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $353.70 (-29.3%) | cash $337.13 | open 1 | max drawdown -32.0%
+equity $355.87 (-28.8%) | cash $337.13 | open 1 | max drawdown -32.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 73 | win 16/73 (22%) | avg net -8.9% | realized $-145.02 | expectancy $-1.99/trade
 exits: stop 54, trail 19
   (n=73 < 100: noise, not evidence)
 open:
-  SHIT         cost $17.85  now $16.57 (-7.2%)  held 2.9h
+  SHIT         cost $17.85  now $18.73 (+5.0%)  held 3.0h
 last trades:
   bul          $19.24 -> $12.80 (-33.5%)  stop  0.2h
   CHAR         $18.92 -> $15.13 (-20.0%)  stop  1.2h
