@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-18 00:52 UTC
+Updated: 2026-11-18 01:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           88876
+pools seen           88912
 passed SCOUT         175
-  killed by SCORE    24
-  killed by AUDIT    39
+  killed by SCORE    25
+  killed by AUDIT    38
 FINAL PASS           112
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    87472
-  few_unique_buyers            83758
-  liquidity_low                82259
-  volume_below_liquidity       62654
-  sells_dominate               23310
-  wash_churn                   18540
-  overheated                    7817
+  too_young                    87508
+  few_unique_buyers            83790
+  liquidity_low                82292
+  volume_below_liquidity       62677
+  sells_dominate               23316
+  wash_churn                   18549
+  overheated                    7819
   missing                       2598
   too_old                       1056
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 5254 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 5258 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  112    -4.4%   -12.0%   -46.7%   -88.1%    58%
 SCOUT PASS, killed later     63    +4.3%    +4.2%   -32.2%   -63.7%    48%
-KILLED (tracked)          12299    +0.0%   -57.7%   -80.8%    +0.4%    30%
+KILLED (tracked)          12305    +0.0%   -57.8%   -80.8%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -94,7 +94,7 @@ win rate                         23%           22%
 avg net / trade                -8.8%         -8.8%
 expectancy $/trade            $-1.98        $-2.04
 max drawdown                  -30.9%        -29.0%
-open now                           0             0
+open now                           0             1
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -121,11 +121,13 @@ signals skipped by the sizer/risk rules: already_traded_token 409, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $387.58 (-22.5%) | cash $387.58 | open 0 | max drawdown -29.0%
+equity $387.58 (-22.5%) | cash $368.20 | open 1 | max drawdown -29.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 55 | win 12/55 (22%) | avg net -8.8% | realized $-112.42 | expectancy $-2.04/trade
 exits: stop 43, trail 12
   (n=55 < 100: noise, not evidence)
+open:
+  NVIDIANS     cost $19.38  now $19.38 (+0.0%)  held 0.0h
 last trades:
   Trader       $19.64 -> $14.98 (-23.7%)  stop  0.7h
   BAWSAQ       $19.64 -> $17.51 (-10.9%)  stop  1.2h
