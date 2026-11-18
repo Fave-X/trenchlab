@@ -1,25 +1,25 @@
 # TrenchLab report
 
-Updated: 2026-11-18 17:52 UTC
+Updated: 2026-11-18 18:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           93921
+pools seen           93966
 passed SCOUT         183
   killed by SCORE    26
   killed by AUDIT    39
 FINAL PASS           118
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    92485
-  few_unique_buyers            88605
-  liquidity_low                86998
-  volume_below_liquidity       66324
-  sells_dominate               24699
-  wash_churn                   19408
-  overheated                    8198
+  too_young                    92530
+  few_unique_buyers            88647
+  liquidity_low                87041
+  volume_below_liquidity       66364
+  sells_dominate               24708
+  wash_churn                   19416
+  overheated                    8200
   missing                       2710
   too_old                       1079
   rc_danger                       13
@@ -28,12 +28,12 @@ OUTCOMES (median price change from first sighting / first pass; 5586 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  118    -3.3%    -8.2%   -45.0%   -86.4%    58%
 SCOUT PASS, killed later     65    +4.3%    +3.7%   -32.2%   -63.7%    48%
-KILLED (tracked)          12851    +0.0%   -58.9%   -81.7%    +0.1%    30%
+KILLED (tracked)          12857    +0.0%   -59.1%   -81.8%    +0.1%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     140    -93.5%    -68.9%    46%
+too_young                     140    -93.8%    -68.9%    46%
 too_old                        38     -0.6%     -0.4%     8%
 wash_churn                     35    -23.3%    -85.6%    31%
 liquidity_low                  26    -72.2%    -49.8%    58%
@@ -52,19 +52,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      615     -0.4%    -17.9%    -42.1%    34%
+none      617     -0.4%    -17.9%    -42.1%    34%
 <15%      117     +0.2%    -11.2%    -24.0%    33%
 15-30%     24     -0.7%     -1.3%     +1.0%    25%
 30%+       23     -0.4%     -0.6%     +2.6%     9%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      582     -0.2%     -3.0%    -17.1%    28%
-<20%      172     -6.0%    -58.5%    -93.7%    43%
+none      584     -0.2%     -3.0%    -17.1%    28%
+<20%      172     -6.0%    -59.6%    -93.7%    43%
 20%+       25     +7.9%    -98.7%       -      76%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      746     -0.3%     -8.9%    -31.6%    31%
+<20%      748     -0.3%     -9.0%    -31.6%    31%
 20-40%     22     -2.6%    -98.8%    -99.1%    64%
 40%+       11    -96.5%    -96.5%       -      73%
-tokens analysed: 655 | helius credits today: 4765/25000
+tokens analysed: 657 | helius credits today: 4897/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -115,7 +115,7 @@ last trades:
   ANT          $17.85 -> $15.87 (-11.1%)  stop  0.2h
   SHIT         $17.85 -> $19.44 (+8.9%)  trail  3.7h
   Apocrycoin   $17.83 -> $39.70 (+122.7%)  trail  0.7h
-signals skipped by the sizer/risk rules: already_traded_token 423, daily_loss_limit 251, cooldown_after_loss 15, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 424, daily_loss_limit 251, cooldown_after_loss 15, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -135,7 +135,7 @@ last trades:
   KATIA        $19.01 -> $20.77 (+9.3%)  trail  1.8h
   ANT          $19.10 -> $16.29 (-14.7%)  stop  0.8h
   Apocrycoin   $18.96 -> $12.29 (-35.2%)  stop  0.3h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 408, daily_loss_limit 219, setup_rejected:sellers_dominate_now 129, setup_rejected:dumping_now 111, setup_rejected:volume_dried_up 47, setup_rejected:b_bundled 35, setup_rejected:top10_concentrated 33, setup_rejected:lp_not_locked 22, setup_rejected:operator_cluster 21, setup_rejected:clustered_supply 11, setup_rejected:bundled_buys 11, setup_rejected:b_received 10, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 409, daily_loss_limit 219, setup_rejected:sellers_dominate_now 129, setup_rejected:dumping_now 111, setup_rejected:volume_dried_up 47, setup_rejected:b_bundled 35, setup_rejected:top10_concentrated 33, setup_rejected:lp_not_locked 22, setup_rejected:operator_cluster 21, setup_rejected:clustered_supply 11, setup_rejected:bundled_buys 11, setup_rejected:b_received 10, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
