@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-18 18:22 UTC
+Updated: 2026-11-18 18:31 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           94073
+pools seen           94133
 passed SCOUT         183
   killed by SCORE    26
   killed by AUDIT    39
 FINAL PASS           118
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    92637
-  few_unique_buyers            88753
-  liquidity_low                87141
-  volume_below_liquidity       66449
-  sells_dominate               24742
-  wash_churn                   19439
-  overheated                    8204
+  too_young                    92697
+  few_unique_buyers            88811
+  liquidity_low                87200
+  volume_below_liquidity       66489
+  sells_dominate               24757
+  wash_churn                   19450
+  overheated                    8210
   missing                       2714
   too_old                       1079
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 5589 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 5591 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  118    -3.3%    -8.2%   -45.0%   -86.4%    58%
 SCOUT PASS, killed later     65    +4.3%    +3.7%   -32.2%   -63.7%    48%
-KILLED (tracked)          12872    +0.0%   -59.1%   -81.8%    +0.1%    30%
+KILLED (tracked)          12879    +0.0%   -59.1%   -81.8%    +0.1%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -115,7 +115,7 @@ last trades:
   ANT          $17.85 -> $15.87 (-11.1%)  stop  0.2h
   SHIT         $17.85 -> $19.44 (+8.9%)  trail  3.7h
   Apocrycoin   $17.83 -> $39.70 (+122.7%)  trail  0.7h
-signals skipped by the sizer/risk rules: already_traded_token 425, daily_loss_limit 251, cooldown_after_loss 15, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 426, daily_loss_limit 251, cooldown_after_loss 15, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
