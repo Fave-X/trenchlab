@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-19 14:52 UTC
+Updated: 2026-11-19 15:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           100352
+pools seen           100397
 passed SCOUT         193
   killed by SCORE    27
   killed by AUDIT    41
 FINAL PASS           125
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    98857
-  few_unique_buyers            94674
-  liquidity_low                93011
-  volume_below_liquidity       71053
-  sells_dominate               26359
-  wash_churn                   20786
-  overheated                    8808
+  too_young                    98901
+  few_unique_buyers            94718
+  liquidity_low                93053
+  volume_below_liquidity       71083
+  sells_dominate               26372
+  wash_churn                   20789
+  overheated                    8810
   missing                       2813
   too_old                       1114
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 6026 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 6031 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  125    -4.4%   -11.5%   -44.7%   -86.4%    56%
+FINAL PASS                  125    -4.4%    -9.9%   -44.7%   -86.4%    56%
 SCOUT PASS, killed later     68    +4.3%    +3.9%   -31.3%   -74.6%    50%
-KILLED (tracked)          13756    +0.0%   -59.6%   -82.8%    +0.4%    30%
+KILLED (tracked)          13760    +0.0%   -59.6%   -82.8%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -74,13 +74,13 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -10%     12%  125    26%     -9.2%   -18.2%   -99.7%
   -10%     20%  125    27%     -9.8%   -18.6%   -99.7%
   -10%     30%  125    26%     -9.5%   -19.0%   -99.7%
-  -15%     12%  125    30%     -9.1%   -19.5%   -99.7%
-  -15%     20%  125    31%     -9.7%   -20.4%   -99.7%
-  -15%     30%  125    30%     -9.6%   -21.0%   -99.7%
-  -25%     12%  125    33%    -11.9%   -21.3%   -99.7%
-  -25%     20%  125    35%    -14.1%   -29.9%   -99.7%
-  -25%     30%  125    34%    -13.8%   -31.0%   -99.7%
-  best so far: stop -6%, trail from +12% -> avg -8.9% per trade over n=125
+  -15%     12%  125    30%     -8.8%   -19.5%   -99.7%
+  -15%     20%  125    31%     -9.4%   -20.4%   -99.7%
+  -15%     30%  125    30%     -9.4%   -21.0%   -99.7%
+  -25%     12%  125    33%    -11.6%   -21.3%   -99.7%
+  -25%     20%  125    35%    -13.8%   -29.9%   -99.7%
+  -25%     30%  125    34%    -13.6%   -31.0%   -99.7%
+  best so far: stop -15%, trail from +12% -> avg -8.8% per trade over n=125
 
 ================================================================
 A vs B (same sizing, exits and costs; only the entry rule differs)
