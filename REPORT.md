@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-19 06:02 UTC
+Updated: 2026-11-19 06:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           97617
+pools seen           97666
 passed SCOUT         188
   killed by SCORE    26
   killed by AUDIT    40
 FINAL PASS           122
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    96138
-  few_unique_buyers            92121
-  liquidity_low                90456
-  volume_below_liquidity       69071
-  sells_dominate               25669
-  wash_churn                   20121
-  overheated                    8524
+  too_young                    96187
+  few_unique_buyers            92170
+  liquidity_low                90502
+  volume_below_liquidity       69112
+  sells_dominate               25683
+  wash_churn                   20133
+  overheated                    8526
   missing                       2795
   too_old                       1104
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 5834 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 5839 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  122    -3.8%    -8.2%   -44.4%   -87.5%    57%
+FINAL PASS                  122    -3.8%    -8.2%   -44.4%   -86.9%    57%
 SCOUT PASS, killed later     66    +4.7%    +3.9%   -31.7%   -74.6%    50%
-KILLED (tracked)          13316    +0.0%   -60.7%   -82.9%    +0.4%    30%
+KILLED (tracked)          13324    +0.0%   -60.4%   -82.9%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -46,22 +46,22 @@ if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        53    -58.0%    -93.6%    74%
 70-79      71    -37.8%    -67.7%    48%
-60-69      45    -35.2%    -87.5%    47%
+60-69      45    -35.2%    -75.3%    47%
 <60        19    -31.3%    -63.7%    42%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      649     -0.4%    -17.8%    -42.1%    33%
+none      649     -0.4%    -17.8%    -41.6%    33%
 <15%      120     +0.4%    -11.2%    -32.5%    35%
 15-30%     24     -0.7%     -1.3%     +1.0%    25%
 30%+       25     -0.5%     -0.6%     +2.6%    16%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      603     -0.2%     -2.9%    -17.1%    28%
+none      603     -0.2%     -2.9%    -16.6%    28%
 <20%      186     -7.8%    -60.8%    -93.2%    40%
 20%+       29     +7.9%    -98.7%       -      83%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      781     -0.3%     -8.8%    -32.1%    31%
+<20%      781     -0.3%     -8.8%    -31.6%    31%
 20-40%     24     -0.4%    -98.8%    -99.1%    71%
 40%+       13    -96.5%    -96.5%       -      77%
 tokens analysed: 690 | helius credits today: 2080/25000
@@ -94,7 +94,7 @@ win rate                         24%           21%
 avg net / trade                -7.5%         -9.6%
 expectancy $/trade            $-1.72        $-2.16
 max drawdown                  -32.0%        -32.2%
-open now                           0             0
+open now                           0             1
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -121,11 +121,13 @@ signals skipped by the sizer/risk rules: already_traded_token 464, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $368.28 (-26.3%) | cash $368.28 | open 0 | max drawdown -32.2%
+equity $368.28 (-26.3%) | cash $349.87 | open 1 | max drawdown -32.2%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 61 | win 13/61 (21%) | avg net -9.6% | realized $-131.72 | expectancy $-2.16/trade
 exits: stop 47, trail 14
   (n=61 < 100: noise, not evidence)
+open:
+  DCTC         cost $18.41  now $18.41 (+0.0%)  held 0.0h
 last trades:
   JVOLT        $20.50 -> $0.07 (-99.7%)  stop  0.2h
   JALU         $19.48 -> $17.45 (-10.4%)  stop  0.8h
