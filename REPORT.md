@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-19 18:12 UTC
+Updated: 2026-11-19 18:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           101347
+pools seen           101398
 passed SCOUT         195
   killed by SCORE    27
   killed by AUDIT    41
 FINAL PASS           127
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    99833
-  few_unique_buyers            95603
-  liquidity_low                93927
-  volume_below_liquidity       71719
-  sells_dominate               26630
-  wash_churn                   20927
-  overheated                    8886
+  too_young                    99884
+  few_unique_buyers            95653
+  liquidity_low                93976
+  volume_below_liquidity       71757
+  sells_dominate               26645
+  wash_churn                   20938
+  overheated                    8893
   missing                       2814
   too_old                       1125
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 6086 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 6090 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  127    -4.7%   -11.5%   -44.4%   -85.9%    56%
+FINAL PASS                  127    -4.4%   -11.5%   -44.4%   -85.9%    56%
 SCOUT PASS, killed later     68    +4.3%    +3.9%   -31.3%   -74.6%    50%
-KILLED (tracked)          13899    +0.0%   -59.3%   -82.8%    +0.4%    30%
+KILLED (tracked)          13901    +0.0%   -59.3%   -82.8%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -68,19 +68,19 @@ tokens analysed: 739 | helius credits today: 6195/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%  127    24%     -9.0%   -14.9%   -99.7%
-   -6%     20%  127    24%     -9.4%   -15.1%   -99.7%
-   -6%     30%  127    23%     -9.3%   -17.1%   -99.7%
-  -10%     12%  127    26%     -9.3%   -18.2%   -99.7%
-  -10%     20%  127    27%     -9.8%   -18.6%   -99.7%
-  -10%     30%  127    26%     -9.6%   -19.0%   -99.7%
-  -15%     12%  127    29%     -9.1%   -19.5%   -99.7%
-  -15%     20%  127    31%     -9.7%   -20.4%   -99.7%
-  -15%     30%  127    30%     -9.6%   -21.0%   -99.7%
-  -25%     12%  127    32%    -12.0%   -21.3%   -99.7%
-  -25%     20%  127    35%    -14.1%   -29.9%   -99.7%
-  -25%     30%  127    34%    -14.1%   -31.0%   -99.7%
-  best so far: stop -6%, trail from +12% -> avg -9.0% per trade over n=127
+   -6%     12%  127    24%     -8.9%   -14.9%   -99.7%
+   -6%     20%  127    25%     -9.3%   -15.1%   -99.7%
+   -6%     30%  127    24%     -9.1%   -17.1%   -99.7%
+  -10%     12%  127    27%     -9.2%   -18.2%   -99.7%
+  -10%     20%  127    28%     -9.7%   -18.6%   -99.7%
+  -10%     30%  127    27%     -9.5%   -19.0%   -99.7%
+  -15%     12%  127    30%     -9.0%   -19.5%   -99.7%
+  -15%     20%  127    31%     -9.5%   -20.4%   -99.7%
+  -15%     30%  127    31%     -9.5%   -21.0%   -99.7%
+  -25%     12%  127    33%    -11.9%   -21.3%   -99.7%
+  -25%     20%  127    35%    -14.0%   -29.9%   -99.7%
+  -25%     30%  127    35%    -13.9%   -31.0%   -99.7%
+  best so far: stop -6%, trail from +12% -> avg -8.9% per trade over n=127
 
 ================================================================
 A vs B (same sizing, exits and costs; only the entry rule differs)
@@ -115,7 +115,7 @@ last trades:
   FNDR         $18.36 -> $15.03 (-18.1%)  stop  0.2h
   DCTC         $18.20 -> $7.75 (-57.4%)  stop  0.2h
   WhatUp       $18.20 -> $15.50 (-14.8%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 473, daily_loss_limit 269, cooldown_after_loss 15, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 473, daily_loss_limit 271, cooldown_after_loss 15, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
