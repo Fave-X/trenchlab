@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-19 01:12 UTC
+Updated: 2026-11-19 01:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           96273
+pools seen           96321
 passed SCOUT         187
   killed by SCORE    26
   killed by AUDIT    40
 FINAL PASS           121
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    94807
-  few_unique_buyers            90863
-  liquidity_low                89234
-  volume_below_liquidity       68092
-  sells_dominate               25351
-  wash_churn                   19853
-  overheated                    8408
-  missing                       2738
+  too_young                    94855
+  few_unique_buyers            90910
+  liquidity_low                89270
+  volume_below_liquidity       68121
+  sells_dominate               25362
+  wash_churn                   19866
+  overheated                    8412
+  missing                       2750
   too_old                       1099
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 5725 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 5727 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  121    -3.3%    -7.8%   -44.7%   -86.4%    57%
 SCOUT PASS, killed later     66    +4.7%    +3.9%   -31.7%   -74.6%    47%
-KILLED (tracked)          13118    +0.0%   -59.6%   -82.7%    +0.1%    30%
+KILLED (tracked)          13122    +0.0%   -59.7%   -82.7%    +0.1%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -68,48 +68,45 @@ tokens analysed: 672 | helius credits today: 254/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%  120    25%     -8.1%   -14.2%   -99.7%
-   -6%     20%  120    26%     -8.5%   -14.9%   -99.7%
-   -6%     30%  120    24%     -8.3%   -17.1%   -99.7%
-  -10%     12%  120    28%     -8.4%   -18.0%   -99.7%
-  -10%     20%  120    28%     -8.9%   -18.6%   -99.7%
-  -10%     30%  120    28%     -8.7%   -18.9%   -99.7%
-  -15%     12%  120    30%     -8.6%   -19.4%   -99.7%
-  -15%     20%  120    32%     -9.2%   -20.4%   -99.7%
-  -15%     30%  120    31%     -9.2%   -21.0%   -99.7%
-  -25%     12%  120    33%    -11.3%   -17.4%   -99.7%
-  -25%     20%  120    36%    -13.5%   -29.9%   -99.7%
-  -25%     30%  120    35%    -13.5%   -31.0%   -99.7%
-  best so far: stop -6%, trail from +12% -> avg -8.1% per trade over n=120
+   -6%     12%  121    25%     -8.4%   -14.5%   -99.7%
+   -6%     20%  121    26%     -8.8%   -15.0%   -99.7%
+   -6%     30%  121    24%     -8.6%   -17.1%   -99.7%
+  -10%     12%  121    27%     -8.7%   -18.2%   -99.7%
+  -10%     20%  121    28%     -9.2%   -18.6%   -99.7%
+  -10%     30%  121    27%     -9.0%   -19.0%   -99.7%
+  -15%     12%  121    30%     -8.9%   -19.5%   -99.7%
+  -15%     20%  121    31%     -9.5%   -20.4%   -99.7%
+  -15%     30%  121    31%     -9.4%   -21.0%   -99.7%
+  -25%     12%  121    33%    -11.6%   -17.8%   -99.7%
+  -25%     20%  121    36%    -13.8%   -29.9%   -99.7%
+  -25%     30%  121    35%    -13.8%   -31.0%   -99.7%
+  best so far: stop -6%, trail from +12% -> avg -8.4% per trade over n=121
 
 ================================================================
 A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $375.50       $372.55
-return                        -24.9%        -25.5%
-closed trades                     77            59
-win rate                         25%           22%
-avg net / trade                -6.9%         -9.5%
-expectancy $/trade            $-1.62        $-2.16
+equity                       $367.27       $372.55
+return                        -26.5%        -25.5%
+closed trades                     78            59
+win rate                         24%           22%
+avg net / trade                -7.4%         -9.5%
+expectancy $/trade            $-1.70        $-2.16
 max drawdown                  -32.0%        -31.5%
-open now                           1             0
+open now                           0             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $375.50 (-24.9%) | cash $356.72 | open 1 | max drawdown -32.0%
+equity $367.27 (-26.5%) | cash $367.27 | open 0 | max drawdown -32.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 77 | win 19/77 (25%) | avg net -6.9% | realized $-124.50 | expectancy $-1.62/trade
-exits: stop 55, trail 22
-  (n=77 < 100: noise, not evidence)
-open:
-  GTASZN       cost $18.78  now $18.78 (+0.0%)  held 0.0h
+closed 78 | win 19/78 (24%) | avg net -7.4% | realized $-132.73 | expectancy $-1.70/trade
+exits: stop 56, trail 22
+  (n=78 < 100: noise, not evidence)
 last trades:
-  GEKKO        $18.30 -> $16.05 (-12.3%)  stop  0.2h
   KATIA        $18.19 -> $13.69 (-24.8%)  stop  0.2h
   NVIDIANS     $17.96 -> $15.67 (-12.7%)  stop  0.1h
   ANT          $17.85 -> $15.87 (-11.1%)  stop  0.2h
@@ -117,6 +114,7 @@ last trades:
   Apocrycoin   $17.83 -> $39.70 (+122.7%)  trail  0.7h
   DCTY         $18.92 -> $15.61 (-17.5%)  stop  0.3h
   DCTY         $18.92 -> $19.28 (+1.9%)  trail  1.3h
+  GTASZN       $18.78 -> $10.54 (-43.9%)  stop  0.2h
 signals skipped by the sizer/risk rules: already_traded_token 446, daily_loss_limit 251, cooldown_after_loss 15, max_open_positions 5
 
 ================================================================
