@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-19 15:52 UTC
+Updated: 2026-11-19 16:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           100626
+pools seen           100668
 passed SCOUT         193
   killed by SCORE    27
   killed by AUDIT    41
 FINAL PASS           125
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    99127
-  few_unique_buyers            94931
-  liquidity_low                93264
-  volume_below_liquidity       71234
-  sells_dominate               26426
-  wash_churn                   20821
-  overheated                    8835
+  too_young                    99169
+  few_unique_buyers            94970
+  liquidity_low                93302
+  volume_below_liquidity       71263
+  sells_dominate               26441
+  wash_churn                   20826
+  overheated                    8839
   missing                       2813
   too_old                       1115
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 6042 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 6047 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  125    -4.4%    -9.9%   -44.7%   -86.4%    56%
 SCOUT PASS, killed later     68    +4.3%    +3.9%   -31.3%   -74.6%    50%
-KILLED (tracked)          13792    +0.0%   -59.5%   -82.8%    +0.4%    30%
+KILLED (tracked)          13798    +0.0%   -59.4%   -82.8%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -135,7 +135,7 @@ last trades:
   FNDR         $18.45 -> $17.76 (-3.7%)  trail  0.3h
   DCTC         $18.41 -> $7.70 (-58.2%)  stop  0.3h
   GTASZN       $17.88 -> $15.38 (-14.0%)  stop  0.7h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 421, daily_loss_limit 230, setup_rejected:sellers_dominate_now 129, setup_rejected:dumping_now 118, setup_rejected:volume_dried_up 47, setup_rejected:b_bundled 46, setup_rejected:top10_concentrated 33, setup_rejected:operator_cluster 28, setup_rejected:lp_not_locked 22, setup_rejected:clustered_supply 13, setup_rejected:bundled_buys 13, setup_rejected:b_received 10, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 421, daily_loss_limit 230, setup_rejected:sellers_dominate_now 129, setup_rejected:dumping_now 120, setup_rejected:volume_dried_up 47, setup_rejected:b_bundled 46, setup_rejected:top10_concentrated 33, setup_rejected:operator_cluster 28, setup_rejected:lp_not_locked 22, setup_rejected:clustered_supply 13, setup_rejected:bundled_buys 13, setup_rejected:b_received 10, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
