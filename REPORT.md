@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-19 04:12 UTC
+Updated: 2026-11-19 04:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           97107
+pools seen           97158
 passed SCOUT         187
   killed by SCORE    26
   killed by AUDIT    40
 FINAL PASS           121
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    95631
-  few_unique_buyers            91637
-  liquidity_low                89987
-  volume_below_liquidity       68690
-  sells_dominate               25546
-  wash_churn                   20023
-  overheated                    8478
+  too_young                    95682
+  few_unique_buyers            91686
+  liquidity_low                90033
+  volume_below_liquidity       68734
+  sells_dominate               25560
+  wash_churn                   20035
+  overheated                    8484
   missing                       2780
   too_old                       1104
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 5799 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 5800 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  121    -3.4%    -8.0%   -44.7%   -87.5%    57%
 SCOUT PASS, killed later     66    +4.7%    +3.9%   -31.7%   -74.6%    50%
-KILLED (tracked)          13237    +0.0%   -59.7%   -82.8%    +0.4%    30%
+KILLED (tracked)          13245    +0.0%   -59.7%   -82.8%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     153    -94.5%    -68.9%    45%
+too_young                     153    -94.8%    -68.9%    45%
 too_old                        41     -0.6%     -0.4%     7%
 wash_churn                     35    -23.3%    -85.6%    31%
 liquidity_low                  26    -72.2%    -49.8%    58%
@@ -79,7 +79,7 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     30%  121    31%     -9.4%   -21.0%   -99.7%
   -25%     12%  121    33%    -11.6%   -17.8%   -99.7%
   -25%     20%  121    36%    -13.9%   -29.9%   -99.7%
-  -25%     30%  121    35%    -13.9%   -31.0%   -99.7%
+  -25%     30%  121    34%    -14.0%   -31.0%   -99.7%
   best so far: stop -6%, trail from +12% -> avg -8.4% per trade over n=121
 
 ================================================================
@@ -87,8 +87,8 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $367.27       $368.98
-return                        -26.5%        -26.2%
+equity                       $367.27       $374.01
+return                        -26.5%        -25.2%
 closed trades                     78            60
 win rate                         24%           22%
 avg net / trade                -7.4%         -9.7%
@@ -115,19 +115,19 @@ last trades:
   DCTY         $18.92 -> $15.61 (-17.5%)  stop  0.3h
   DCTY         $18.92 -> $19.28 (+1.9%)  trail  1.3h
   GTASZN       $18.78 -> $10.54 (-43.9%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 457, daily_loss_limit 251, cooldown_after_loss 15, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 458, daily_loss_limit 251, cooldown_after_loss 15, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $368.98 (-26.2%) | cash $350.53 | open 1 | max drawdown -32.1%
+equity $374.01 (-25.2%) | cash $350.53 | open 1 | max drawdown -32.1%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 60 | win 13/60 (22%) | avg net -9.7% | realized $-131.02 | expectancy $-2.18/trade
 exits: stop 47, trail 13
   (n=60 < 100: noise, not evidence)
 open:
-  FNDR         cost $18.45  now $18.45 (+0.0%)  held 0.0h
+  FNDR         cost $18.45  now $23.48 (+27.3%)  held 0.2h
 last trades:
   KATIA        $20.67 -> $21.60 (+4.5%)  trail  1.0h
   JVOLT        $20.50 -> $0.07 (-99.7%)  stop  0.2h
