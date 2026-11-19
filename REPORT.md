@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-19 04:22 UTC
+Updated: 2026-11-19 04:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           97158
+pools seen           97197
 passed SCOUT         187
   killed by SCORE    26
   killed by AUDIT    40
 FINAL PASS           121
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    95682
-  few_unique_buyers            91686
-  liquidity_low                90033
-  volume_below_liquidity       68734
-  sells_dominate               25560
-  wash_churn                   20035
-  overheated                    8484
+  too_young                    95721
+  few_unique_buyers            91724
+  liquidity_low                90071
+  volume_below_liquidity       68768
+  sells_dominate               25565
+  wash_churn                   20038
+  overheated                    8487
   missing                       2780
   too_old                       1104
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 5800 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 5804 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  121    -3.4%    -8.0%   -44.7%   -87.5%    57%
 SCOUT PASS, killed later     66    +4.7%    +3.9%   -31.7%   -74.6%    50%
-KILLED (tracked)          13245    +0.0%   -59.7%   -82.8%    +0.4%    30%
+KILLED (tracked)          13249    +0.0%   -59.7%   -82.8%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -87,14 +87,14 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $367.27       $374.01
-return                        -26.5%        -25.2%
-closed trades                     78            60
-win rate                         24%           22%
-avg net / trade                -7.4%         -9.7%
-expectancy $/trade            $-1.70        $-2.18
-max drawdown                  -32.0%        -32.1%
-open now                           0             1
+equity                       $367.27       $368.28
+return                        -26.5%        -26.3%
+closed trades                     78            61
+win rate                         24%           21%
+avg net / trade                -7.4%         -9.6%
+expectancy $/trade            $-1.70        $-2.16
+max drawdown                  -32.0%        -32.2%
+open now                           0             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -121,15 +121,12 @@ signals skipped by the sizer/risk rules: already_traded_token 458, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $374.01 (-25.2%) | cash $350.53 | open 1 | max drawdown -32.1%
+equity $368.28 (-26.3%) | cash $368.28 | open 0 | max drawdown -32.2%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 60 | win 13/60 (22%) | avg net -9.7% | realized $-131.02 | expectancy $-2.18/trade
-exits: stop 47, trail 13
-  (n=60 < 100: noise, not evidence)
-open:
-  FNDR         cost $18.45  now $23.48 (+27.3%)  held 0.2h
+closed 61 | win 13/61 (21%) | avg net -9.6% | realized $-131.72 | expectancy $-2.16/trade
+exits: stop 47, trail 14
+  (n=61 < 100: noise, not evidence)
 last trades:
-  KATIA        $20.67 -> $21.60 (+4.5%)  trail  1.0h
   JVOLT        $20.50 -> $0.07 (-99.7%)  stop  0.2h
   JALU         $19.48 -> $17.45 (-10.4%)  stop  0.8h
   NVIDIANS     $19.38 -> $12.07 (-37.7%)  stop  0.3h
@@ -137,6 +134,7 @@ last trades:
   ANT          $19.10 -> $16.29 (-14.7%)  stop  0.8h
   Apocrycoin   $18.96 -> $12.29 (-35.2%)  stop  0.3h
   NASDUCK      $18.63 -> $15.05 (-19.2%)  stop  0.2h
+  FNDR         $18.45 -> $17.76 (-3.7%)  trail  0.3h
 signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 421, daily_loss_limit 224, setup_rejected:sellers_dominate_now 129, setup_rejected:dumping_now 115, setup_rejected:volume_dried_up 47, setup_rejected:b_bundled 44, setup_rejected:top10_concentrated 33, setup_rejected:lp_not_locked 22, setup_rejected:operator_cluster 21, setup_rejected:clustered_supply 13, setup_rejected:bundled_buys 13, setup_rejected:b_received 10, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
