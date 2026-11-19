@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-19 07:02 UTC
+Updated: 2026-11-19 07:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           97941
+pools seen           97984
 passed SCOUT         191
   killed by SCORE    27
   killed by AUDIT    40
 FINAL PASS           124
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    96461
-  few_unique_buyers            92424
-  liquidity_low                90766
-  volume_below_liquidity       69304
-  sells_dominate               25732
-  wash_churn                   20203
-  overheated                    8554
+  too_young                    96501
+  few_unique_buyers            92467
+  liquidity_low                90807
+  volume_below_liquidity       69338
+  sells_dominate               25744
+  wash_churn                   20214
+  overheated                    8559
   missing                       2796
-  too_old                       1104
+  too_old                       1105
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 5854 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 5857 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  124    -4.3%    -8.2%   -44.4%   -86.4%    56%
 SCOUT PASS, killed later     67    +4.3%    +3.7%   -31.7%   -74.6%    49%
-KILLED (tracked)          13364    +0.0%   -59.7%   -82.8%    +0.4%    30%
+KILLED (tracked)          13370    +0.0%   -59.6%   -82.8%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -74,12 +74,12 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -10%     12%  124    27%     -9.2%   -18.4%   -99.7%
   -10%     20%  124    27%     -9.8%   -18.7%   -99.7%
   -10%     30%  124    27%     -9.5%   -19.1%   -99.7%
-  -15%     12%  124    29%     -9.3%   -19.4%   -99.7%
-  -15%     20%  124    31%     -9.9%   -20.4%   -99.7%
-  -15%     30%  124    30%     -9.9%   -21.0%   -99.7%
-  -25%     12%  124    32%    -12.1%   -19.6%   -99.7%
-  -25%     20%  124    35%    -14.3%   -29.9%   -99.7%
-  -25%     30%  124    33%    -14.5%   -31.0%   -99.7%
+  -15%     12%  124    29%     -9.5%   -19.6%   -99.7%
+  -15%     20%  124    31%    -10.1%   -20.4%   -99.7%
+  -15%     30%  124    30%    -10.0%   -21.0%   -99.7%
+  -25%     12%  124    32%    -12.2%   -20.8%   -99.7%
+  -25%     20%  124    35%    -14.4%   -29.9%   -99.7%
+  -25%     30%  124    33%    -14.6%   -31.0%   -99.7%
   best so far: stop -6%, trail from +12% -> avg -8.9% per trade over n=124
 
 ================================================================
@@ -94,7 +94,7 @@ win rate                         23%           21%
 avg net / trade                -8.2%        -10.4%
 expectancy $/trade            $-1.84        $-2.30
 max drawdown                  -32.5%        -34.2%
-open now                           0             0
+open now                           0             1
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -121,11 +121,13 @@ signals skipped by the sizer/risk rules: already_traded_token 469, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $357.58 (-28.5%) | cash $357.58 | open 0 | max drawdown -34.2%
+equity $357.58 (-28.5%) | cash $339.70 | open 1 | max drawdown -34.2%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 62 | win 13/62 (21%) | avg net -10.4% | realized $-142.42 | expectancy $-2.30/trade
 exits: stop 48, trail 14
   (n=62 < 100: noise, not evidence)
+open:
+  GTASZN       cost $17.88  now $17.88 (+0.0%)  held 0.0h
 last trades:
   JALU         $19.48 -> $17.45 (-10.4%)  stop  0.8h
   NVIDIANS     $19.38 -> $12.07 (-37.7%)  stop  0.3h
