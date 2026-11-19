@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-19 05:02 UTC
+Updated: 2026-11-19 05:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           97335
+pools seen           97378
 passed SCOUT         188
   killed by SCORE    26
   killed by AUDIT    40
 FINAL PASS           122
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    95858
-  few_unique_buyers            91856
-  liquidity_low                90200
-  volume_below_liquidity       68873
-  sells_dominate               25602
-  wash_churn                   20062
-  overheated                    8496
-  missing                       2782
+  too_young                    95900
+  few_unique_buyers            91897
+  liquidity_low                90230
+  volume_below_liquidity       68900
+  sells_dominate               25614
+  wash_churn                   20068
+  overheated                    8497
+  missing                       2794
   too_old                       1104
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 5812 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 5820 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  122    -3.8%    -8.0%   -44.7%   -87.5%    57%
 SCOUT PASS, killed later     66    +4.7%    +3.9%   -31.7%   -74.6%    50%
-KILLED (tracked)          13275    +0.0%   -59.7%   -82.8%    +0.4%    30%
+KILLED (tracked)          13279    +0.0%   -59.7%   -82.8%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -77,9 +77,9 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     12%  122    30%     -9.0%   -19.4%   -99.7%
   -15%     20%  122    31%     -9.6%   -20.4%   -99.7%
   -15%     30%  122    30%     -9.5%   -21.0%   -99.7%
-  -25%     12%  122    33%    -11.7%   -19.6%   -99.7%
-  -25%     20%  122    35%    -13.9%   -29.9%   -99.7%
-  -25%     30%  122    34%    -14.0%   -31.0%   -99.7%
+  -25%     12%  122    33%    -11.8%   -19.6%   -99.7%
+  -25%     20%  122    35%    -14.0%   -29.9%   -99.7%
+  -25%     30%  122    34%    -14.2%   -31.0%   -99.7%
   best so far: stop -6%, trail from +12% -> avg -8.4% per trade over n=122
 
 ================================================================
@@ -115,7 +115,7 @@ last trades:
   DCTY         $18.92 -> $19.28 (+1.9%)  trail  1.3h
   GTASZN       $18.78 -> $10.54 (-43.9%)  stop  0.2h
   FNDR         $18.36 -> $15.03 (-18.1%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 460, daily_loss_limit 251, cooldown_after_loss 15, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 461, daily_loss_limit 251, cooldown_after_loss 15, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
