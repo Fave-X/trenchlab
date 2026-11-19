@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-19 14:41 UTC
+Updated: 2026-11-19 14:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           100292
+pools seen           100352
 passed SCOUT         193
   killed by SCORE    27
   killed by AUDIT    41
 FINAL PASS           125
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                    98797
-  few_unique_buyers            94617
-  liquidity_low                92955
-  volume_below_liquidity       71005
-  sells_dominate               26344
-  wash_churn                   20780
-  overheated                    8804
+  too_young                    98857
+  few_unique_buyers            94674
+  liquidity_low                93011
+  volume_below_liquidity       71053
+  sells_dominate               26359
+  wash_churn                   20786
+  overheated                    8808
   missing                       2813
   too_old                       1114
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 6023 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 6026 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  125    -4.4%   -11.5%   -44.7%   -86.4%    56%
 SCOUT PASS, killed later     68    +4.3%    +3.9%   -31.3%   -74.6%    50%
-KILLED (tracked)          13744    +0.0%   -59.6%   -82.8%    +0.4%    30%
+KILLED (tracked)          13756    +0.0%   -59.6%   -82.8%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -45,8 +45,8 @@ SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        54    -58.0%    -93.6%    72%
-70-79      72    -39.9%    -67.6%    49%
-60-69      47    -35.2%    -75.3%    45%
+70-79      73    -39.9%    -67.6%    48%
+60-69      46    -35.2%    -75.3%    46%
 <60        20    -29.7%    -63.7%    45%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
@@ -74,12 +74,12 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -10%     12%  125    26%     -9.2%   -18.2%   -99.7%
   -10%     20%  125    27%     -9.8%   -18.6%   -99.7%
   -10%     30%  125    26%     -9.5%   -19.0%   -99.7%
-  -15%     12%  125    30%     -9.3%   -19.5%   -99.7%
-  -15%     20%  125    31%     -9.9%   -20.4%   -99.7%
-  -15%     30%  125    30%     -9.8%   -21.0%   -99.7%
-  -25%     12%  125    33%    -12.1%   -21.3%   -99.7%
-  -25%     20%  125    35%    -14.3%   -29.9%   -99.7%
-  -25%     30%  125    34%    -14.0%   -31.0%   -99.7%
+  -15%     12%  125    30%     -9.1%   -19.5%   -99.7%
+  -15%     20%  125    31%     -9.7%   -20.4%   -99.7%
+  -15%     30%  125    30%     -9.6%   -21.0%   -99.7%
+  -25%     12%  125    33%    -11.9%   -21.3%   -99.7%
+  -25%     20%  125    35%    -14.1%   -29.9%   -99.7%
+  -25%     30%  125    34%    -13.8%   -31.0%   -99.7%
   best so far: stop -6%, trail from +12% -> avg -8.9% per trade over n=125
 
 ================================================================
@@ -115,7 +115,7 @@ last trades:
   FNDR         $18.36 -> $15.03 (-18.1%)  stop  0.2h
   DCTC         $18.20 -> $7.75 (-57.4%)  stop  0.2h
   WhatUp       $18.20 -> $15.50 (-14.8%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 473, daily_loss_limit 253, cooldown_after_loss 15, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 473, daily_loss_limit 254, cooldown_after_loss 15, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
