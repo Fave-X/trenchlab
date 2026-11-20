@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-20 18:02 UTC
+Updated: 2026-11-20 18:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           108644
+pools seen           108707
 passed SCOUT         211
   killed by SCORE    30
   killed by AUDIT    44
 FINAL PASS           137
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   107071
-  few_unique_buyers           102337
-  liquidity_low               100604
-  volume_below_liquidity       76679
-  sells_dominate               28583
-  wash_churn                   22605
-  overheated                    9641
+  too_young                   107133
+  few_unique_buyers           102397
+  liquidity_low               100666
+  volume_below_liquidity       76721
+  sells_dominate               28599
+  wash_churn                   22621
+  overheated                    9651
   missing                       2991
-  too_old                       1155
+  too_old                       1156
   rc_danger                       18
 
-OUTCOMES (median price change from first sighting / first pass; 6455 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 6456 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  137    -5.0%   -11.7%   -45.5%   -86.5%    58%
 SCOUT PASS, killed later     74    +4.3%    +3.7%   -31.3%   -74.6%    50%
-KILLED (tracked)          14946    +0.0%   -62.3%   -84.2%    +0.4%    29%
+KILLED (tracked)          14953    +0.0%   -62.3%   -84.2%    +0.4%    29%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -64,7 +64,7 @@ fresh       n   +1h med   +4h med  +24h med   rug%
 <20%      946     -0.2%     -7.3%    -32.3%    28%
 20-40%     28     -0.4%    -98.8%    -99.1%    71%
 40%+       16    -97.5%    -98.6%       -      81%
-tokens analysed: 847 | helius credits today: 6726/25000
+tokens analysed: 847 | helius credits today: 6757/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
