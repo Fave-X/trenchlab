@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-20 08:02 UTC
+Updated: 2026-11-20 08:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           105596
+pools seen           105632
 passed SCOUT         206
   killed by SCORE    29
   killed by AUDIT    42
 FINAL PASS           135
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   104046
-  few_unique_buyers            99540
-  liquidity_low                97799
-  volume_below_liquidity       74651
-  sells_dominate               27787
-  wash_churn                   21855
-  overheated                    9295
+  too_young                   104081
+  few_unique_buyers            99570
+  liquidity_low                97832
+  volume_below_liquidity       74669
+  sells_dominate               27794
+  wash_churn                   21860
+  overheated                    9305
   missing                       2936
-  too_old                       1144
+  too_old                       1145
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 6326 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 6331 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  135    -4.4%   -11.7%   -44.7%   -86.5%    56%
 SCOUT PASS, killed later     71    +4.3%    +3.7%   -31.7%   -74.6%    51%
-KILLED (tracked)          14482    +0.0%   -62.0%   -83.8%    +0.4%    29%
+KILLED (tracked)          14491    +0.0%   -62.0%   -83.8%    +0.1%    29%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -52,16 +52,16 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      745     -0.4%    -16.2%    -40.7%    30%
+none      745     -0.4%    -15.9%    -40.7%    30%
 <15%      135     +0.6%    -11.2%    -32.7%    36%
 15-30%     28     -1.0%     -1.0%     +0.4%    32%
 30%+       32     -0.3%     -0.5%     +2.6%    19%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      672     -0.2%     -2.9%    -22.3%    27%
-<20%      231     -6.0%    -58.5%    -93.2%    34%
+<20%      231     -6.0%    -58.4%    -93.2%    34%
 20%+       37     +7.9%    -98.9%       -      78%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      898     -0.2%     -7.5%    -32.1%    29%
+<20%      898     -0.2%     -7.4%    -32.1%    29%
 20-40%     26     -0.4%    -98.8%    -99.1%    73%
 40%+       16    -97.5%    -98.6%       -      75%
 tokens analysed: 803 | helius credits today: 3190/25000
