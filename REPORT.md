@@ -1,25 +1,25 @@
 # TrenchLab report
 
-Updated: 2026-11-20 12:42 UTC
+Updated: 2026-11-20 12:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           107045
-passed SCOUT         209
+pools seen           107097
+passed SCOUT         210
   killed by SCORE    30
-  killed by AUDIT    42
+  killed by AUDIT    43
 FINAL PASS           137
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   105483
-  few_unique_buyers           100854
-  liquidity_low                99127
-  volume_below_liquidity       75653
-  sells_dominate               28143
-  wash_churn                   22211
-  overheated                    9456
+  too_young                   105535
+  few_unique_buyers           100905
+  liquidity_low                99175
+  volume_below_liquidity       75695
+  sells_dominate               28155
+  wash_churn                   22219
+  overheated                    9461
   missing                       2943
   too_old                       1150
   rc_danger                       13
@@ -27,13 +27,13 @@ top kill reasons at first sighting (a pool can have several):
 OUTCOMES (median price change from first sighting / first pass; 6399 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  137    -5.0%   -12.0%   -45.0%   -86.5%    56%
-SCOUT PASS, killed later     72    +4.7%    +3.9%   -31.7%   -74.6%    50%
-KILLED (tracked)          14745    +0.0%   -62.0%   -84.2%    +0.4%    29%
+SCOUT PASS, killed later     73    +4.3%    +3.9%   -31.7%   -74.6%    49%
+KILLED (tracked)          14752    +0.0%   -62.0%   -84.2%    +0.4%    29%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     231    -94.8%    -68.9%    33%
+too_young                     230    -94.8%    -68.9%    33%
 too_old                        45     -0.6%     -0.4%    11%
 wash_churn                     37    -23.3%    -85.6%    32%
 liquidity_low                  30    -69.3%    -49.8%    60%
@@ -44,7 +44,7 @@ sells_dominate                  3    -75.0%       -      67%
 SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
-80+        56    -55.3%    -93.6%    70%
+80+        57    -55.3%    -93.6%    68%
 70-79      81    -47.4%    -67.6%    51%
 60-69      50    -35.2%    -86.0%    48%
 <60        22    -28.1%    -63.7%    41%
@@ -73,14 +73,14 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
    -6%     30%  137    21%    -10.1%   -17.1%   -99.7%
   -10%     12%  137    26%     -9.7%   -18.6%   -99.7%
   -10%     20%  137    27%    -10.1%   -18.6%   -99.7%
-  -10%     30%  137    26%     -9.6%   -19.0%   -99.7%
-  -15%     12%  137    28%     -9.5%   -19.5%   -99.7%
-  -15%     20%  137    31%     -9.8%   -20.4%   -99.7%
-  -15%     30%  137    29%     -9.7%   -21.0%   -99.7%
-  -25%     12%  137    31%    -12.5%   -21.3%   -99.7%
-  -25%     20%  137    35%    -14.3%   -29.9%   -99.7%
-  -25%     30%  137    33%    -14.2%   -31.0%   -99.7%
-  best so far: stop -15%, trail from +12% -> avg -9.5% per trade over n=137
+  -10%     30%  137    26%     -9.5%   -19.0%   -99.7%
+  -15%     12%  137    29%     -9.2%   -19.5%   -99.7%
+  -15%     20%  137    32%     -9.6%   -20.4%   -99.7%
+  -15%     30%  137    30%     -9.4%   -21.0%   -99.7%
+  -25%     12%  137    32%    -12.2%   -21.3%   -99.7%
+  -25%     20%  137    36%    -14.0%   -29.9%   -99.7%
+  -25%     30%  137    34%    -14.0%   -31.0%   -99.7%
+  best so far: stop -15%, trail from +12% -> avg -9.2% per trade over n=137
 
 ================================================================
 A vs B (same sizing, exits and costs; only the entry rule differs)
