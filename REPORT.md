@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-20 05:32 UTC
+Updated: 2026-11-20 05:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           104835
+pools seen           104896
 passed SCOUT         206
   killed by SCORE    29
   killed by AUDIT    42
 FINAL PASS           135
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   103290
-  few_unique_buyers            98842
-  liquidity_low                97108
-  volume_below_liquidity       74123
-  sells_dominate               27595
-  wash_churn                   21656
-  overheated                    9216
+  too_young                   103350
+  few_unique_buyers            98897
+  liquidity_low                97166
+  volume_below_liquidity       74163
+  sells_dominate               27609
+  wash_churn                   21677
+  overheated                    9221
   missing                       2930
   too_old                       1141
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 6276 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 6280 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  135    -4.4%   -11.7%   -45.5%   -86.9%    56%
-SCOUT PASS, killed later     71    +4.3%    +3.7%   -31.3%   -74.6%    51%
-KILLED (tracked)          14340    +0.0%   -61.9%   -83.4%    +0.4%    30%
+SCOUT PASS, killed later     71    +4.3%    +3.7%   -31.7%   -74.6%    51%
+KILLED (tracked)          14348    +0.0%   -61.9%   -83.4%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     214    -94.8%    -68.9%    35%
+too_young                     215    -94.8%    -68.9%    35%
 too_old                        44     -0.6%     -0.4%    11%
 wash_churn                     36    -23.3%    -85.6%    31%
 liquidity_low                  30    -69.3%    -49.8%    53%
@@ -45,26 +45,26 @@ SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        56    -55.6%    -93.6%    70%
-70-79      79    -44.7%    -67.6%    52%
+70-79      79    -47.4%    -67.6%    52%
 60-69      50    -37.4%    -83.7%    46%
 <60        21    -28.1%    -63.7%    43%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      734     -0.4%    -16.4%    -40.5%    31%
-<15%      134     +0.6%    -11.7%    -32.7%    36%
+none      735     -0.4%    -16.4%    -40.5%    31%
+<15%      134     +0.6%    -12.1%    -32.7%    36%
 15-30%     28     -1.0%     -1.0%     +0.4%    32%
 30%+       32     -0.3%     -0.5%     +2.6%    19%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      664     -0.2%     -2.9%    -18.1%    27%
-<20%      227     -6.0%    -59.6%    -93.2%    34%
-20%+       37     +7.9%    -98.9%       -      78%
+<20%      228     -6.0%    -59.6%    -93.2%    34%
+20%+       37     +7.9%    -99.0%       -      78%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      886     -0.3%     -7.6%    -31.1%    29%
+<20%      887     -0.3%     -7.6%    -31.1%    29%
 20-40%     26     -0.4%    -98.8%    -99.1%    73%
 40%+       16    -97.5%    -98.6%       -      75%
-tokens analysed: 792 | helius credits today: 2260/25000
+tokens analysed: 793 | helius credits today: 2321/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -73,7 +73,7 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
    -6%     30%  135    21%    -10.0%   -17.1%   -99.7%
   -10%     12%  135    26%     -9.5%   -18.6%   -99.7%
   -10%     20%  135    27%    -10.0%   -18.6%   -99.7%
-  -10%     30%  135    26%     -9.7%   -19.0%   -99.7%
+  -10%     30%  135    26%     -9.8%   -19.0%   -99.7%
   -15%     12%  135    29%     -9.3%   -19.5%   -99.7%
   -15%     20%  135    32%     -9.7%   -20.4%   -99.7%
   -15%     30%  135    30%     -9.8%   -21.0%   -99.7%
@@ -87,13 +87,13 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $343.35       $343.08
-return                        -31.3%        -31.4%
+equity                       $343.35       $342.47
+return                        -31.3%        -31.5%
 closed trades                     86            68
 win rate                         23%           21%
 avg net / trade                -8.2%        -10.6%
 expectancy $/trade            $-1.82        $-2.29
-max drawdown                  -33.9%        -36.9%
+max drawdown                  -33.9%        -37.0%
 open now                           0             1
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
@@ -121,13 +121,13 @@ signals skipped by the sizer/risk rules: already_traded_token 493, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $343.08 (-31.4%) | cash $326.93 | open 1 | max drawdown -36.9%
+equity $342.47 (-31.5%) | cash $326.93 | open 1 | max drawdown -37.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 68 | win 14/68 (21%) | avg net -10.6% | realized $-155.86 | expectancy $-2.29/trade
 exits: stop 53, trail 15
   (n=68 < 100: noise, not evidence)
 open:
-  CATMARIO     cost $17.21  now $16.14 (-6.2%)  held 0.2h
+  CATMARIO     cost $17.21  now $15.54 (-9.7%)  held 0.4h
 last trades:
   FNDR         $18.45 -> $17.76 (-3.7%)  trail  0.3h
   DCTC         $18.41 -> $7.70 (-58.2%)  stop  0.3h
