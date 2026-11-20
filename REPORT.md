@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-20 00:02 UTC
+Updated: 2026-11-20 00:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           103165
+pools seen           103226
 passed SCOUT         200
   killed by SCORE    30
   killed by AUDIT    41
 FINAL PASS           129
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   101633
-  few_unique_buyers            97311
-  liquidity_low                95599
-  volume_below_liquidity       72986
-  sells_dominate               27153
-  wash_churn                   21299
-  overheated                    9047
+  too_young                   101693
+  few_unique_buyers            97370
+  liquidity_low                95656
+  volume_below_liquidity       73032
+  sells_dominate               27172
+  wash_churn                   21311
+  overheated                    9051
   missing                       2881
-  too_old                       1136
+  too_old                       1137
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 6172 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 6174 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  129    -4.4%   -11.7%   -45.0%   -85.9%    58%
+FINAL PASS                  129    -4.4%   -11.7%   -45.2%   -85.9%    58%
 SCOUT PASS, killed later     71    +4.3%    +3.7%   -30.1%   -74.6%    49%
-KILLED (tracked)          14091    +0.0%   -60.7%   -82.8%    +0.4%    30%
+KILLED (tracked)          14101    +0.0%   -60.7%   -82.8%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -45,7 +45,7 @@ SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        55    -55.6%    -93.6%    71%
-70-79      77    -43.9%    -67.4%    51%
+70-79      77    -44.3%    -67.4%    51%
 60-69      46    -35.2%    -75.3%    50%
 <60        22    -28.1%    -63.7%    41%
 
@@ -61,7 +61,7 @@ none      649     -0.2%     -2.9%    -16.6%    28%
 <20%      215     -7.8%    -58.5%    -93.2%    36%
 20%+       35     +6.1%    -98.8%       -      80%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      857     -0.3%     -7.5%    -25.7%    30%
+<20%      857     -0.3%     -7.6%    -25.7%    30%
 20-40%     26     -0.4%    -98.7%    -99.1%    73%
 40%+       16    -96.5%    -98.6%       -      75%
 tokens analysed: 763 | helius credits today: 69/25000
@@ -94,7 +94,7 @@ win rate                         23%           21%
 avg net / trade                -8.2%        -10.5%
 expectancy $/trade            $-1.84        $-2.30
 max drawdown                  -32.5%        -34.7%
-open now                           0             0
+open now                           0             2
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -121,11 +121,14 @@ signals skipped by the sizer/risk rules: already_traded_token 473, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $355.08 (-29.0%) | cash $355.08 | open 0 | max drawdown -34.7%
+equity $355.08 (-29.0%) | cash $319.58 | open 2 | max drawdown -34.7%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 63 | win 13/63 (21%) | avg net -10.5% | realized $-144.92 | expectancy $-2.30/trade
 exits: stop 49, trail 14
   (n=63 < 100: noise, not evidence)
+open:
+  FIONA        cost $17.75  now $17.75 (+0.0%)  held 0.0h
+  AI           cost $17.75  now $17.75 (+0.0%)  held 0.0h
 last trades:
   NVIDIANS     $19.38 -> $12.07 (-37.7%)  stop  0.3h
   KATIA        $19.01 -> $20.77 (+9.3%)  trail  1.8h
