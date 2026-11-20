@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-20 04:02 UTC
+Updated: 2026-11-20 04:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           104345
+pools seen           104387
 passed SCOUT         205
   killed by SCORE    29
   killed by AUDIT    42
 FINAL PASS           134
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   102803
-  few_unique_buyers            98404
-  liquidity_low                96669
-  volume_below_liquidity       73807
-  sells_dominate               27445
-  wash_churn                   21558
-  overheated                    9166
-  missing                       2916
-  too_old                       1139
+  too_young                   102844
+  few_unique_buyers            98440
+  liquidity_low                96697
+  volume_below_liquidity       73830
+  sells_dominate               27453
+  wash_churn                   21564
+  overheated                    9171
+  missing                       2927
+  too_old                       1140
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 6227 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 6234 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  134    -4.3%   -11.5%   -45.5%   -86.4%    56%
 SCOUT PASS, killed later     71    +4.3%    +3.7%   -31.3%   -74.6%    51%
-KILLED (tracked)          14263    +0.0%   -61.3%   -83.2%    +0.4%    30%
+KILLED (tracked)          14270    +0.0%   -61.3%   -83.3%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -73,7 +73,7 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
    -6%     30%  134    22%     -9.9%   -17.1%   -99.7%
   -10%     12%  134    25%     -9.3%   -18.4%   -99.7%
   -10%     20%  134    27%     -9.8%   -18.6%   -99.7%
-  -10%     30%  134    26%     -9.6%   -18.9%   -99.7%
+  -10%     30%  134    26%     -9.5%   -18.9%   -99.7%
   -15%     12%  134    28%     -9.1%   -19.4%   -99.7%
   -15%     20%  134    31%     -9.5%   -20.3%   -99.7%
   -15%     30%  134    30%     -9.6%   -20.8%   -99.7%
@@ -115,7 +115,7 @@ last trades:
   FIONA        $17.54 -> $31.83 (+81.5%)  trail  0.8h
   AI           $18.04 -> $10.08 (-44.1%)  stop  0.2h
   iAgent       $18.04 -> $16.18 (-10.3%)  stop  0.5h
-signals skipped by the sizer/risk rules: already_traded_token 483, daily_loss_limit 310, cooldown_after_loss 17, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 484, daily_loss_limit 310, cooldown_after_loss 17, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
