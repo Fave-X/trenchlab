@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-20 08:42 UTC
+Updated: 2026-11-20 08:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           105797
+pools seen           105851
 passed SCOUT         206
   killed by SCORE    29
   killed by AUDIT    42
 FINAL PASS           135
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   104245
-  few_unique_buyers            99713
-  liquidity_low                97980
-  volume_below_liquidity       74781
-  sells_dominate               27836
-  wash_churn                   21896
-  overheated                    9334
+  too_young                   104299
+  few_unique_buyers            99761
+  liquidity_low                98030
+  volume_below_liquidity       74814
+  sells_dominate               27842
+  wash_churn                   21911
+  overheated                    9342
   missing                       2936
   too_old                       1146
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 6342 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 6343 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  135    -4.4%   -11.7%   -45.0%   -86.5%    56%
 SCOUT PASS, killed later     71    +4.3%    +3.7%   -31.7%   -74.6%    51%
-KILLED (tracked)          14530    +0.0%   -62.0%   -83.8%    +0.1%    29%
+KILLED (tracked)          14540    +0.0%   -62.1%   -83.8%    +0.1%    29%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -115,7 +115,7 @@ last trades:
   AI           $18.04 -> $10.08 (-44.1%)  stop  0.2h
   iAgent       $18.04 -> $16.18 (-10.3%)  stop  0.5h
   RUGGED       $17.54 -> $10.00 (-43.0%)  stop  0.5h
-signals skipped by the sizer/risk rules: already_traded_token 494, daily_loss_limit 310, cooldown_after_loss 18, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 495, daily_loss_limit 310, cooldown_after_loss 18, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
