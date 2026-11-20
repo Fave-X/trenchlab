@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-20 16:52 UTC
+Updated: 2026-11-20 17:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           108306
+pools seen           108364
 passed SCOUT         211
   killed by SCORE    30
   killed by AUDIT    44
 FINAL PASS           137
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   106739
-  few_unique_buyers           102026
-  liquidity_low               100302
-  volume_below_liquidity       76473
-  sells_dominate               28503
-  wash_churn                   22528
-  overheated                    9599
+  too_young                   106797
+  few_unique_buyers           102080
+  liquidity_low               100360
+  volume_below_liquidity       76511
+  sells_dominate               28525
+  wash_churn                   22542
+  overheated                    9610
   missing                       2968
   too_old                       1152
   rc_danger                       18
 
-OUTCOMES (median price change from first sighting / first pass; 6445 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 6447 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  137    -5.0%   -11.7%   -45.5%   -86.5%    57%
 SCOUT PASS, killed later     74    +4.3%    +3.7%   -31.3%   -74.6%    50%
-KILLED (tracked)          14900    +0.0%   -62.3%   -84.2%    +0.4%    29%
+KILLED (tracked)          14906    +0.0%   -62.3%   -84.2%    +0.4%    29%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -94,7 +94,7 @@ win rate                         23%           22%
 avg net / trade                -8.4%         -8.6%
 expectancy $/trade            $-1.85        $-1.93
 max drawdown                  -35.1%        -37.3%
-open now                           0             0
+open now                           0             1
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -121,11 +121,13 @@ signals skipped by the sizer/risk rules: already_traded_token 499, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $361.18 (-27.8%) | cash $361.18 | open 0 | max drawdown -37.3%
+equity $361.18 (-27.8%) | cash $343.12 | open 1 | max drawdown -37.3%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 72 | win 16/72 (22%) | avg net -8.6% | realized $-138.82 | expectancy $-1.93/trade
 exits: stop 55, trail 17
   (n=72 < 100: noise, not evidence)
+open:
+  RIEMANN      cost $18.06  now $18.06 (+0.0%)  held 0.0h
 last trades:
   FIONA        $17.75 -> $13.13 (-26.0%)  stop  0.3h
   OGTA         $17.37 -> $14.24 (-18.0%)  stop  0.5h
