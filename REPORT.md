@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-20 06:12 UTC
+Updated: 2026-11-20 06:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           105050
+pools seen           105109
 passed SCOUT         206
   killed by SCORE    29
   killed by AUDIT    42
 FINAL PASS           135
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   103501
-  few_unique_buyers            99041
-  liquidity_low                97304
-  volume_below_liquidity       74271
-  sells_dominate               27653
-  wash_churn                   21715
-  overheated                    9235
+  too_young                   103560
+  few_unique_buyers            99094
+  liquidity_low                97357
+  volume_below_liquidity       74312
+  sells_dominate               27670
+  wash_churn                   21729
+  overheated                    9243
   missing                       2931
   too_old                       1143
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 6293 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 6299 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  135    -4.4%   -11.7%   -45.5%   -86.9%    56%
+FINAL PASS                  135    -4.4%   -11.7%   -45.2%   -86.9%    56%
 SCOUT PASS, killed later     71    +4.3%    +3.7%   -31.7%   -74.6%    51%
-KILLED (tracked)          14373    +0.0%   -61.8%   -83.5%    +0.4%    30%
+KILLED (tracked)          14382    +0.0%   -61.8%   -83.5%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -44,7 +44,7 @@ sells_dominate                  3    -75.0%       -      67%
 SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
-80+        56    -55.6%    -93.6%    70%
+80+        56    -55.3%    -93.6%    70%
 70-79      79    -47.4%    -67.6%    52%
 60-69      50    -37.4%    -83.7%    46%
 <60        21    -28.1%    -63.7%    43%
@@ -64,7 +64,7 @@ fresh       n   +1h med   +4h med  +24h med   rug%
 <20%      894     -0.2%     -7.6%    -31.1%    29%
 20-40%     26     -0.4%    -98.8%    -99.1%    73%
 40%+       16    -97.5%    -98.6%       -      75%
-tokens analysed: 799 | helius credits today: 2705/25000
+tokens analysed: 799 | helius credits today: 2773/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -79,7 +79,7 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     30%  135    30%     -9.7%   -21.0%   -99.7%
   -25%     12%  135    32%    -12.0%   -21.3%   -99.7%
   -25%     20%  135    36%    -13.9%   -29.9%   -99.7%
-  -25%     30%  135    33%    -14.1%   -31.0%   -99.7%
+  -25%     30%  135    33%    -14.0%   -31.0%   -99.7%
   best so far: stop -15%, trail from +12% -> avg -9.3% per trade over n=135
 
 ================================================================
@@ -87,8 +87,8 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $343.35       $352.93
-return                        -31.3%        -29.4%
+equity                       $343.35       $366.31
+return                        -31.3%        -26.7%
 closed trades                     86            69
 win rate                         23%           20%
 avg net / trade                -8.2%        -10.7%
@@ -121,13 +121,13 @@ signals skipped by the sizer/risk rules: already_traded_token 493, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $352.93 (-29.4%) | cash $323.66 | open 1 | max drawdown -37.3%
+equity $366.31 (-26.7%) | cash $323.66 | open 1 | max drawdown -37.3%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 69 | win 14/69 (20%) | avg net -10.7% | realized $-159.22 | expectancy $-2.31/trade
 exits: stop 54, trail 15
   (n=69 < 100: noise, not evidence)
 open:
-  HNYDRIP      cost $17.12  now $29.27 (+71.0%)  held 0.4h
+  HNYDRIP      cost $17.12  now $42.65 (+149.1%)  held 0.5h
 last trades:
   DCTC         $18.41 -> $7.70 (-58.2%)  stop  0.3h
   GTASZN       $17.88 -> $15.38 (-14.0%)  stop  0.7h
