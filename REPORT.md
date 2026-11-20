@@ -1,25 +1,25 @@
 # TrenchLab report
 
-Updated: 2026-11-20 17:42 UTC
+Updated: 2026-11-20 17:51 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           108565
+pools seen           108596
 passed SCOUT         211
   killed by SCORE    30
   killed by AUDIT    44
 FINAL PASS           137
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   106992
-  few_unique_buyers           102264
-  liquidity_low               100530
-  volume_below_liquidity       76634
-  sells_dominate               28567
-  wash_churn                   22591
-  overheated                    9628
+  too_young                   107023
+  few_unique_buyers           102295
+  liquidity_low               100560
+  volume_below_liquidity       76650
+  sells_dominate               28575
+  wash_churn                   22596
+  overheated                    9634
   missing                       2991
   too_old                       1155
   rc_danger                       18
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 6451 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  137    -5.0%   -11.7%   -45.5%   -86.5%    58%
 SCOUT PASS, killed later     74    +4.3%    +3.7%   -31.3%   -74.6%    50%
-KILLED (tracked)          14934    +0.0%   -62.3%   -84.2%    +0.4%    29%
+KILLED (tracked)          14936    +0.0%   -62.3%   -84.2%    +0.4%    29%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -55,14 +55,14 @@ cluster     n   +1h med   +4h med  +24h med   rug%
 none      789     -0.3%    -12.5%    -39.7%    29%
 <15%      139     +0.5%    -11.2%    -41.3%    37%
 15-30%     29     -1.0%     -1.0%     +0.4%    31%
-30%+       31     -0.4%     -0.6%     +1.9%    23%
+30%+       31     -0.4%     -0.6%     +1.9%    26%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      704     -0.1%     -2.9%    -23.0%    27%
 <20%      244     -6.0%    -58.3%    -93.2%    33%
-20%+       40     +8.2%    -98.7%       -      78%
+20%+       40     +8.2%    -98.7%       -      80%
 fresh       n   +1h med   +4h med  +24h med   rug%
 <20%      945     -0.2%     -7.3%    -32.3%    28%
-20-40%     27     -0.4%    -98.8%    -99.1%    70%
+20-40%     27     -0.4%    -98.8%    -99.1%    74%
 40%+       16    -97.5%    -98.6%       -      81%
 tokens analysed: 845 | helius credits today: 6498/25000
 
