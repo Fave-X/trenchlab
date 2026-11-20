@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-20 11:02 UTC
+Updated: 2026-11-20 11:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           106593
+pools seen           106645
 passed SCOUT         207
   killed by SCORE    30
   killed by AUDIT    42
 FINAL PASS           135
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   105036
-  few_unique_buyers           100436
-  liquidity_low                98708
-  volume_below_liquidity       75319
-  sells_dominate               28031
-  wash_churn                   22113
-  overheated                    9420
+  too_young                   105084
+  few_unique_buyers           100487
+  liquidity_low                98757
+  volume_below_liquidity       75357
+  sells_dominate               28050
+  wash_churn                   22123
+  overheated                    9423
   missing                       2942
-  too_old                       1149
+  too_old                       1150
   rc_danger                       13
 
 OUTCOMES (median price change from first sighting / first pass; 6381 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  135    -4.4%   -11.7%   -45.0%   -86.5%    57%
 SCOUT PASS, killed later     72    +4.7%    +3.9%   -31.7%   -74.6%    50%
-KILLED (tracked)          14661    +0.0%   -62.2%   -83.9%    +0.4%    29%
+KILLED (tracked)          14666    +0.0%   -62.1%   -83.9%    +0.4%    29%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -59,7 +59,7 @@ none      759     -0.3%    -14.8%    -39.9%    30%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      681     -0.2%     -2.9%    -20.2%    27%
 <20%      236     -4.7%    -58.3%    -93.2%    33%
-20%+       38     +7.9%    -98.9%       -      79%
+20%+       38     +8.1%    -98.9%       -      79%
 fresh       n   +1h med   +4h med  +24h med   rug%
 <20%      913     -0.2%     -7.3%    -31.6%    29%
 20-40%     26     -0.4%    -98.8%    -99.1%    73%
