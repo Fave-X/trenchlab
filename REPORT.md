@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-20 05:12 UTC
+Updated: 2026-11-20 05:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           104731
+pools seen           104780
 passed SCOUT         206
   killed by SCORE    29
   killed by AUDIT    42
 FINAL PASS           135
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   103186
-  few_unique_buyers            98746
-  liquidity_low                97010
-  volume_below_liquidity       74063
-  sells_dominate               27564
-  wash_churn                   21631
-  overheated                    9211
+  too_young                   103235
+  few_unique_buyers            98791
+  liquidity_low                97056
+  volume_below_liquidity       74089
+  sells_dominate               27576
+  wash_churn                   21640
+  overheated                    9213
   missing                       2930
   too_old                       1141
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 6271 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 6274 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  135    -4.4%   -11.5%   -45.5%   -86.9%    56%
+FINAL PASS                  135    -4.4%   -11.7%   -45.5%   -86.9%    56%
 SCOUT PASS, killed later     71    +4.3%    +3.7%   -31.3%   -74.6%    51%
-KILLED (tracked)          14328    +0.0%   -61.8%   -83.3%    +0.4%    30%
+KILLED (tracked)          14334    +0.0%   -61.9%   -83.3%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -52,7 +52,7 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      732     -0.4%    -16.7%    -40.5%    31%
+none      732     -0.4%    -16.4%    -40.5%    31%
 <15%      134     +0.6%    -11.7%    -32.7%    36%
 15-30%     28     -1.0%     -1.0%     +0.4%    32%
 30%+       32     -0.3%     -0.5%     +2.6%    19%
@@ -70,13 +70,13 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
    -6%     12%  135    22%     -9.7%   -14.9%   -99.7%
    -6%     20%  135    24%    -10.1%   -15.1%   -99.7%
-   -6%     30%  135    22%     -9.8%   -17.1%   -99.7%
+   -6%     30%  135    21%    -10.0%   -17.1%   -99.7%
   -10%     12%  135    26%     -9.5%   -18.6%   -99.7%
   -10%     20%  135    27%    -10.0%   -18.6%   -99.7%
-  -10%     30%  135    26%     -9.7%   -19.0%   -99.7%
+  -10%     30%  135    26%     -9.8%   -19.0%   -99.7%
   -15%     12%  135    29%     -9.3%   -19.5%   -99.7%
   -15%     20%  135    32%     -9.7%   -20.4%   -99.7%
-  -15%     30%  135    30%     -9.8%   -21.0%   -99.7%
+  -15%     30%  135    30%     -9.9%   -21.0%   -99.7%
   -25%     12%  135    32%    -12.0%   -21.3%   -99.7%
   -25%     20%  135    36%    -13.9%   -29.9%   -99.7%
   -25%     30%  135    33%    -14.2%   -31.0%   -99.7%
@@ -94,7 +94,7 @@ win rate                         23%           21%
 avg net / trade                -8.2%        -10.6%
 expectancy $/trade            $-1.82        $-2.29
 max drawdown                  -33.9%        -36.7%
-open now                           0             0
+open now                           0             1
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -115,17 +115,19 @@ last trades:
   AI           $18.04 -> $10.08 (-44.1%)  stop  0.2h
   iAgent       $18.04 -> $16.18 (-10.3%)  stop  0.5h
   RUGGED       $17.54 -> $10.00 (-43.0%)  stop  0.5h
-signals skipped by the sizer/risk rules: already_traded_token 492, daily_loss_limit 310, cooldown_after_loss 17, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 492, daily_loss_limit 310, cooldown_after_loss 18, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $344.14 (-31.2%) | cash $344.14 | open 0 | max drawdown -36.7%
+equity $344.14 (-31.2%) | cash $326.93 | open 1 | max drawdown -36.7%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 68 | win 14/68 (21%) | avg net -10.6% | realized $-155.86 | expectancy $-2.29/trade
 exits: stop 53, trail 15
   (n=68 < 100: noise, not evidence)
+open:
+  CATMARIO     cost $17.21  now $17.21 (+0.0%)  held 0.0h
 last trades:
   FNDR         $18.45 -> $17.76 (-3.7%)  trail  0.3h
   DCTC         $18.41 -> $7.70 (-58.2%)  stop  0.3h
