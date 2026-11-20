@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-20 13:22 UTC
+Updated: 2026-11-20 13:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           107312
+pools seen           107360
 passed SCOUT         210
   killed by SCORE    30
   killed by AUDIT    43
 FINAL PASS           137
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   105749
-  few_unique_buyers           101108
-  liquidity_low                99371
-  volume_below_liquidity       75837
-  sells_dominate               28214
-  wash_churn                   22269
-  overheated                    9485
+  too_young                   105797
+  few_unique_buyers           101155
+  liquidity_low                99414
+  volume_below_liquidity       75871
+  sells_dominate               28218
+  wash_churn                   22283
+  overheated                    9491
   missing                       2952
   too_old                       1150
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 6410 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 6412 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  137    -5.0%   -12.0%   -45.0%   -86.5%    57%
-SCOUT PASS, killed later     73    +4.3%    +3.9%   -31.7%   -74.6%    49%
-KILLED (tracked)          14774    +0.0%   -62.1%   -84.2%    +0.4%    29%
+FINAL PASS                  137    -5.0%   -11.7%   -45.0%   -86.5%    57%
+SCOUT PASS, killed later     73    +4.3%    +3.9%   -31.3%   -74.6%    49%
+KILLED (tracked)          14782    +0.0%   -62.1%   -84.2%    +0.4%    29%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -47,21 +47,21 @@ score       n   +4h med  +24h med   rug%
 80+        57    -55.3%    -93.6%    68%
 70-79      81    -47.4%    -67.6%    51%
 60-69      50    -35.2%    -86.0%    50%
-<60        22    -28.1%    -63.7%    41%
+<60        22    -17.7%    -63.7%    41%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      768     -0.3%    -13.2%    -39.9%    30%
+none      768     -0.3%    -13.1%    -39.9%    30%
 <15%      137     +0.6%    -11.2%    -32.7%    36%
 15-30%     28     -1.0%     -1.0%     +0.4%    32%
 30%+       32     -0.3%     -0.5%     +2.6%    22%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      687     -0.2%     -2.8%    -20.2%    27%
-<20%      239     -5.9%    -58.3%    -93.2%    33%
+<20%      239     -5.9%    -58.2%    -93.2%    33%
 20%+       39     +8.2%    -98.9%       -      79%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      923     -0.2%     -7.1%    -31.6%    29%
+<20%      923     -0.2%     -7.2%    -31.6%    29%
 20-40%     26     -0.4%    -98.8%    -99.1%    73%
 40%+       16    -97.5%    -98.6%       -      81%
 tokens analysed: 826 | helius credits today: 4968/25000
@@ -87,14 +87,14 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $337.42       $361.00
-return                        -32.5%        -27.8%
-closed trades                     88            70
+equity                       $337.42       $359.57
+return                        -32.5%        -28.1%
+closed trades                     88            71
 win rate                         23%           21%
-avg net / trade                -8.4%         -8.8%
-expectancy $/trade            $-1.85        $-1.97
+avg net / trade                -8.4%         -8.9%
+expectancy $/trade            $-1.85        $-1.98
 max drawdown                  -35.1%        -37.3%
-open now                           0             1
+open now                           0             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -121,15 +121,12 @@ signals skipped by the sizer/risk rules: already_traded_token 499, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $361.00 (-27.8%) | cash $343.67 | open 1 | max drawdown -37.3%
+equity $359.57 (-28.1%) | cash $359.57 | open 0 | max drawdown -37.3%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 70 | win 15/70 (21%) | avg net -8.8% | realized $-138.24 | expectancy $-1.97/trade
-exits: stop 54, trail 16
-  (n=70 < 100: noise, not evidence)
-open:
-  AMC          cost $18.09  now $17.33 (-4.2%)  held 0.1h
+closed 71 | win 15/71 (21%) | avg net -8.9% | realized $-140.43 | expectancy $-1.98/trade
+exits: stop 55, trail 16
+  (n=71 < 100: noise, not evidence)
 last trades:
-  GTASZN       $17.88 -> $15.38 (-14.0%)  stop  0.7h
   AI           $17.75 -> $14.69 (-17.2%)  stop  0.2h
   FIONA        $17.75 -> $13.13 (-26.0%)  stop  0.3h
   OGTA         $17.37 -> $14.24 (-18.0%)  stop  0.5h
@@ -137,7 +134,8 @@ last trades:
   RUGGED       $17.21 -> $19.12 (+11.1%)  trail  0.3h
   CATMARIO     $17.21 -> $13.84 (-19.6%)  stop  0.5h
   HNYDRIP      $17.12 -> $38.11 (+122.6%)  trail  0.7h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 421, daily_loss_limit 239, setup_rejected:dumping_now 130, setup_rejected:sellers_dominate_now 129, setup_rejected:volume_dried_up 47, setup_rejected:b_bundled 47, setup_rejected:top10_concentrated 33, setup_rejected:operator_cluster 29, setup_rejected:lp_not_locked 22, setup_rejected:clustered_supply 13, setup_rejected:bundled_buys 13, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
+  AMC          $18.09 -> $15.90 (-12.1%)  stop  0.2h
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 421, daily_loss_limit 239, setup_rejected:dumping_now 130, setup_rejected:sellers_dominate_now 129, setup_rejected:b_bundled 48, setup_rejected:volume_dried_up 47, setup_rejected:top10_concentrated 33, setup_rejected:operator_cluster 29, setup_rejected:lp_not_locked 22, setup_rejected:clustered_supply 13, setup_rejected:bundled_buys 13, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
