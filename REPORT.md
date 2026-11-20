@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-20 00:22 UTC
+Updated: 2026-11-20 00:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           103286
+pools seen           103327
 passed SCOUT         200
-  killed by SCORE    30
+  killed by SCORE    29
   killed by AUDIT    41
-FINAL PASS           129
+FINAL PASS           130
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   101751
-  few_unique_buyers            97426
-  liquidity_low                95713
-  volume_below_liquidity       73073
-  sells_dominate               27190
-  wash_churn                   21327
-  overheated                    9059
+  too_young                   101792
+  few_unique_buyers            97465
+  liquidity_low                95754
+  volume_below_liquidity       73104
+  sells_dominate               27197
+  wash_churn                   21338
+  overheated                    9065
   missing                       2881
   too_old                       1137
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 6177 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 6178 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  129    -4.4%   -11.7%   -45.2%   -85.9%    58%
-SCOUT PASS, killed later     71    +4.3%    +3.7%   -30.1%   -74.6%    49%
-KILLED (tracked)          14109    +0.0%   -60.7%   -82.8%    +0.4%    30%
+FINAL PASS                  130    -4.4%   -11.7%   -45.2%   -85.9%    58%
+SCOUT PASS, killed later     70    +4.3%    +3.4%   -30.1%   -74.6%    50%
+KILLED (tracked)          14112    +0.0%   -60.7%   -82.8%    +0.4%    30%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -46,25 +46,25 @@ if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        55    -55.6%    -93.6%    71%
 70-79      77    -44.3%    -67.4%    51%
-60-69      46    -35.2%    -75.3%    50%
-<60        22    -28.1%    -63.7%    41%
+60-69      47    -35.2%    -75.3%    49%
+<60        21    -28.1%    -63.7%    43%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      711     -0.4%    -16.4%    -39.4%    31%
+none      712     -0.4%    -16.2%    -39.4%    31%
 <15%      129     +0.3%    -11.2%    -32.5%    36%
 15-30%     28     -1.0%     -1.0%     +0.4%    32%
 30%+       32     -0.3%     -0.5%     +2.6%    19%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      650     -0.2%     -2.9%    -17.1%    28%
+none      651     -0.2%     -2.9%    -17.1%    27%
 <20%      215     -7.8%    -58.5%    -93.2%    36%
 20%+       35     +6.1%    -98.8%       -      80%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      858     -0.3%     -7.6%    -25.7%    29%
+<20%      859     -0.3%     -7.5%    -25.7%    29%
 20-40%     26     -0.4%    -98.7%    -99.1%    73%
 40%+       16    -96.5%    -98.6%       -      75%
-tokens analysed: 764 | helius credits today: 126/25000
+tokens analysed: 765 | helius credits today: 144/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -87,25 +87,27 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $350.79       $352.80
-return                        -29.8%        -29.4%
-closed trades                     81            64
+equity                       $350.79       $347.41
+return                        -29.8%        -30.5%
+closed trades                     81            65
 win rate                         23%           20%
-avg net / trade                -8.2%        -10.6%
-expectancy $/trade            $-1.84        $-2.31
-max drawdown                  -32.5%        -35.1%
-open now                           0             1
+avg net / trade                -8.2%        -10.8%
+expectancy $/trade            $-1.84        $-2.35
+max drawdown                  -32.5%        -36.1%
+open now                           1             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $350.79 (-29.8%) | cash $350.79 | open 0 | max drawdown -32.5%
+equity $350.79 (-29.8%) | cash $333.25 | open 1 | max drawdown -32.5%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 81 | win 19/81 (23%) | avg net -8.2% | realized $-149.21 | expectancy $-1.84/trade
 exits: stop 59, trail 22
   (n=81 < 100: noise, not evidence)
+open:
+  FIONA        cost $17.54  now $17.54 (+0.0%)  held 0.0h
 last trades:
   SHIT         $17.85 -> $19.44 (+8.9%)  trail  3.7h
   Apocrycoin   $17.83 -> $39.70 (+122.7%)  trail  0.7h
@@ -121,15 +123,12 @@ signals skipped by the sizer/risk rules: already_traded_token 473, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $352.80 (-29.4%) | cash $334.28 | open 1 | max drawdown -35.1%
+equity $347.41 (-30.5%) | cash $347.41 | open 0 | max drawdown -36.1%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 64 | win 13/64 (20%) | avg net -10.6% | realized $-147.97 | expectancy $-2.31/trade
-exits: stop 50, trail 14
-  (n=64 < 100: noise, not evidence)
-open:
-  FIONA        cost $17.75  now $18.53 (+4.4%)  held 0.2h
+closed 65 | win 13/65 (20%) | avg net -10.8% | realized $-152.59 | expectancy $-2.35/trade
+exits: stop 51, trail 14
+  (n=65 < 100: noise, not evidence)
 last trades:
-  KATIA        $19.01 -> $20.77 (+9.3%)  trail  1.8h
   ANT          $19.10 -> $16.29 (-14.7%)  stop  0.8h
   Apocrycoin   $18.96 -> $12.29 (-35.2%)  stop  0.3h
   NASDUCK      $18.63 -> $15.05 (-19.2%)  stop  0.2h
@@ -137,7 +136,8 @@ last trades:
   DCTC         $18.41 -> $7.70 (-58.2%)  stop  0.3h
   GTASZN       $17.88 -> $15.38 (-14.0%)  stop  0.7h
   AI           $17.75 -> $14.69 (-17.2%)  stop  0.2h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 421, daily_loss_limit 239, setup_rejected:sellers_dominate_now 129, setup_rejected:dumping_now 123, setup_rejected:volume_dried_up 47, setup_rejected:b_bundled 46, setup_rejected:top10_concentrated 33, setup_rejected:operator_cluster 29, setup_rejected:lp_not_locked 22, setup_rejected:clustered_supply 13, setup_rejected:bundled_buys 13, setup_rejected:b_received 10, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
+  FIONA        $17.75 -> $13.13 (-26.0%)  stop  0.3h
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 421, daily_loss_limit 239, setup_rejected:sellers_dominate_now 129, setup_rejected:dumping_now 124, setup_rejected:volume_dried_up 47, setup_rejected:b_bundled 46, setup_rejected:top10_concentrated 33, setup_rejected:operator_cluster 29, setup_rejected:lp_not_locked 22, setup_rejected:clustered_supply 13, setup_rejected:bundled_buys 13, setup_rejected:b_received 10, setup_rejected:unknown:lp_lock 6, cooldown_after_loss 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
