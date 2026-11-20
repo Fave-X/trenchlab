@@ -1,41 +1,41 @@
 # TrenchLab report
 
-Updated: 2026-11-20 08:32 UTC
+Updated: 2026-11-20 08:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           105754
+pools seen           105797
 passed SCOUT         206
   killed by SCORE    29
   killed by AUDIT    42
 FINAL PASS           135
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   104202
-  few_unique_buyers            99675
-  liquidity_low                97938
-  volume_below_liquidity       74753
-  sells_dominate               27824
-  wash_churn                   21884
-  overheated                    9325
+  too_young                   104245
+  few_unique_buyers            99713
+  liquidity_low                97980
+  volume_below_liquidity       74781
+  sells_dominate               27836
+  wash_churn                   21896
+  overheated                    9334
   missing                       2936
   too_old                       1146
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 6338 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 6342 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  135    -4.4%   -11.7%   -45.0%   -86.5%    56%
 SCOUT PASS, killed later     71    +4.3%    +3.7%   -31.7%   -74.6%    51%
-KILLED (tracked)          14522    +0.0%   -62.1%   -83.8%    +0.1%    29%
+KILLED (tracked)          14530    +0.0%   -62.0%   -83.8%    +0.1%    29%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
 too_young                     221    -94.8%    -68.9%    34%
 too_old                        45     -0.6%     -0.4%    11%
-wash_churn                     37     -1.2%    -85.6%    30%
+wash_churn                     37     -1.2%    -85.6%    32%
 liquidity_low                  30    -69.3%    -49.8%    57%
 overheated                      8     -3.6%    -56.0%    50%
 volume_below_liquidity          7     -2.8%    +30.3%    43%
@@ -52,19 +52,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      748     -0.4%    -16.2%    -40.7%    30%
-<15%      136     +0.7%    -11.2%    -32.7%    35%
+none      749     -0.4%    -16.2%    -40.7%    30%
+<15%      136     +0.7%    -11.2%    -32.7%    36%
 15-30%     28     -1.0%     -1.0%     +0.4%    32%
 30%+       32     -0.3%     -0.5%     +2.6%    19%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      674     -0.2%     -2.9%    -22.3%    27%
+none      675     -0.2%     -2.9%    -22.3%    27%
 <20%      233     -6.0%    -58.3%    -93.2%    33%
-20%+       37     +7.9%    -98.9%       -      78%
+20%+       37     +7.9%    -98.9%       -      81%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      902     -0.2%     -7.5%    -32.1%    29%
+<20%      903     -0.2%     -7.5%    -32.1%    29%
 20-40%     26     -0.4%    -98.8%    -99.1%    73%
 40%+       16    -97.5%    -98.6%       -      75%
-tokens analysed: 807 | helius credits today: 3420/25000
+tokens analysed: 808 | helius credits today: 3481/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -115,7 +115,7 @@ last trades:
   AI           $18.04 -> $10.08 (-44.1%)  stop  0.2h
   iAgent       $18.04 -> $16.18 (-10.3%)  stop  0.5h
   RUGGED       $17.54 -> $10.00 (-43.0%)  stop  0.5h
-signals skipped by the sizer/risk rules: already_traded_token 493, daily_loss_limit 310, cooldown_after_loss 18, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 494, daily_loss_limit 310, cooldown_after_loss 18, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
