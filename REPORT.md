@@ -1,40 +1,40 @@
 # TrenchLab report
 
-Updated: 2026-11-20 06:52 UTC
+Updated: 2026-11-20 07:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           105268
+pools seen           105330
 passed SCOUT         206
   killed by SCORE    29
   killed by AUDIT    42
 FINAL PASS           135
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   103719
-  few_unique_buyers            99238
-  liquidity_low                97503
-  volume_below_liquidity       74425
-  sells_dominate               27713
-  wash_churn                   21771
-  overheated                    9260
+  too_young                   103780
+  few_unique_buyers            99293
+  liquidity_low                97560
+  volume_below_liquidity       74466
+  sells_dominate               27724
+  wash_churn                   21793
+  overheated                    9267
   missing                       2933
-  too_old                       1143
+  too_old                       1144
   rc_danger                       13
 
-OUTCOMES (median price change from first sighting / first pass; 6303 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 6305 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  135    -4.4%   -11.7%   -45.0%   -86.5%    56%
 SCOUT PASS, killed later     71    +4.3%    +3.7%   -31.7%   -74.6%    51%
-KILLED (tracked)          14408    +0.0%   -61.9%   -83.5%    +0.4%    29%
+KILLED (tracked)          14422    +0.0%   -61.9%   -83.5%    +0.4%    29%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
 too_young                     219    -94.8%    -68.9%    34%
-too_old                        44     -0.6%     -0.4%    11%
+too_old                        45     -0.6%     -0.4%    11%
 wash_churn                     37    -23.3%    -85.6%    30%
 liquidity_low                  30    -69.3%    -49.8%    57%
 overheated                      8     -3.6%    -56.0%    50%
@@ -52,19 +52,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      744     -0.4%    -16.4%    -40.7%    30%
-<15%      135     +0.7%    -12.1%    -32.7%    36%
+none      745     -0.4%    -16.4%    -40.7%    30%
+<15%      135     +0.6%    -11.7%    -32.7%    36%
 15-30%     28     -1.0%     -1.0%     +0.4%    32%
 30%+       32     -0.3%     -0.5%     +2.6%    19%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      671     -0.2%     -2.9%    -22.3%    27%
-<20%      231     -6.0%    -59.6%    -93.2%    34%
+none      672     -0.2%     -2.9%    -22.3%    27%
+<20%      231     -6.0%    -58.5%    -93.2%    34%
 20%+       37     +7.9%    -99.0%       -      78%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%      897     -0.2%     -7.6%    -32.1%    29%
+<20%      898     -0.2%     -7.6%    -32.1%    29%
 20-40%     26     -0.4%    -98.8%    -99.1%    73%
 40%+       16    -97.5%    -98.6%       -      75%
-tokens analysed: 802 | helius credits today: 2987/25000
+tokens analysed: 803 | helius credits today: 3027/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -73,10 +73,10 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
    -6%     30%  135    21%    -10.0%   -17.1%   -99.7%
   -10%     12%  135    26%     -9.5%   -18.6%   -99.7%
   -10%     20%  135    27%    -10.0%   -18.6%   -99.7%
-  -10%     30%  135    26%     -9.6%   -19.0%   -99.7%
+  -10%     30%  135    26%     -9.7%   -19.0%   -99.7%
   -15%     12%  135    29%     -9.3%   -19.5%   -99.7%
   -15%     20%  135    32%     -9.7%   -20.4%   -99.7%
-  -15%     30%  135    30%     -9.7%   -21.0%   -99.7%
+  -15%     30%  135    30%     -9.8%   -21.0%   -99.7%
   -25%     12%  135    32%    -12.0%   -21.3%   -99.7%
   -25%     20%  135    36%    -13.9%   -29.9%   -99.7%
   -25%     30%  135    33%    -14.1%   -31.0%   -99.7%
