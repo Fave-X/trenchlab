@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-21 18:22 UTC
+Updated: 2026-11-21 18:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           115777
+pools seen           115809
 passed SCOUT         221
   killed by SCORE    33
   killed by AUDIT    47
 FINAL PASS           141
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   114137
-  few_unique_buyers           109041
-  liquidity_low               107233
-  volume_below_liquidity       81612
-  sells_dominate               30575
-  wash_churn                   24406
-  overheated                   10362
+  too_young                   114168
+  few_unique_buyers           109073
+  liquidity_low               107263
+  volume_below_liquidity       81637
+  sells_dominate               30579
+  wash_churn                   24415
+  overheated                   10368
   missing                       3183
-  too_old                       1203
+  too_old                       1204
   rc_danger                       18
 
-OUTCOMES (median price change from first sighting / first pass; 7002 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 7003 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  141    -5.3%   -12.0%   -45.2%   -88.1%    59%
 SCOUT PASS, killed later     80    +4.3%    +4.2%   -30.1%   -74.6%    51%
-KILLED (tracked)          15914    +0.0%   -62.0%   -84.8%    +0.1%    28%
+KILLED (tracked)          15919    +0.0%   -62.0%   -84.8%    +0.1%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -77,9 +77,9 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     12%  141    28%     -9.7%   -19.9%   -99.7%
   -15%     20%  141    31%    -10.0%   -20.4%   -99.7%
   -15%     30%  141    29%    -10.0%   -21.0%   -99.7%
-  -25%     12%  141    32%    -12.1%   -22.2%   -99.7%
-  -25%     20%  141    35%    -13.9%   -29.9%   -99.7%
-  -25%     30%  141    33%    -14.0%   -30.9%   -99.7%
+  -25%     12%  141    32%    -12.3%   -27.9%   -99.7%
+  -25%     20%  141    35%    -14.0%   -29.9%   -99.7%
+  -25%     30%  141    33%    -14.1%   -31.0%   -99.7%
   best so far: stop -15%, trail from +12% -> avg -9.7% per trade over n=141
 
 ================================================================
