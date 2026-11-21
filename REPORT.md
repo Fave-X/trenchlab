@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-21 19:32 UTC
+Updated: 2026-11-21 19:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           116089
+pools seen           116148
 passed SCOUT         221
   killed by SCORE    33
   killed by AUDIT    47
 FINAL PASS           141
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   114446
-  few_unique_buyers           109333
-  liquidity_low               107520
-  volume_below_liquidity       81824
-  sells_dominate               30654
-  wash_churn                   24453
-  overheated                   10387
+  too_young                   114505
+  few_unique_buyers           109391
+  liquidity_low               107577
+  volume_below_liquidity       81866
+  sells_dominate               30669
+  wash_churn                   24463
+  overheated                   10392
   missing                       3191
   too_old                       1204
   rc_danger                       18
 
-OUTCOMES (median price change from first sighting / first pass; 7016 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 7018 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  141    -5.3%   -12.5%   -45.2%   -88.1%    59%
 SCOUT PASS, killed later     80    +4.3%    +4.2%   -30.1%   -74.6%    51%
-KILLED (tracked)          15954    +0.0%   -61.9%   -84.8%    +0.1%    28%
+KILLED (tracked)          15960    +0.0%   -61.8%   -84.8%    +0.1%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -58,10 +58,10 @@ none      844     -0.2%    -12.0%    -44.0%    28%
 30%+       32     -0.5%     -0.7%     +1.9%    28%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      744     -0.1%     -2.7%    -28.4%    26%
-<20%      284     -3.9%    -58.3%    -92.9%    30%
+<20%      284     -3.8%    -58.3%    -92.9%    30%
 20%+       48     -0.5%    -99.0%       -      81%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1026     -0.2%     -7.4%    -35.1%    27%
+<20%     1026     -0.1%     -7.4%    -35.1%    27%
 20-40%     33     -4.5%    -99.0%    -99.1%    76%
 40%+       17    -98.5%    -98.6%       -      82%
 tokens analysed: 927 | helius credits today: 6220/25000
@@ -87,8 +87,8 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $325.81       $351.57
-return                        -34.8%        -29.7%
+equity                       $325.81       $350.59
+return                        -34.8%        -29.9%
 closed trades                     92            76
 win rate                         22%           22%
 avg net / trade                -8.8%         -8.8%
@@ -121,13 +121,13 @@ signals skipped by the sizer/risk rules: already_traded_token 519, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $351.57 (-29.7%) | cash $334.44 | open 1 | max drawdown -37.3%
+equity $350.59 (-29.9%) | cash $334.44 | open 1 | max drawdown -37.3%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 76 | win 17/76 (22%) | avg net -8.8% | realized $-147.96 | expectancy $-1.95/trade
 exits: stop 58, trail 18
   (n=76 < 100: noise, not evidence)
 open:
-  Bigfoot      cost $17.60  now $17.12 (-2.7%)  held 0.2h
+  Bigfoot      cost $17.60  now $16.15 (-8.2%)  held 0.4h
 last trades:
   CATMARIO     $17.21 -> $13.84 (-19.6%)  stop  0.5h
   HNYDRIP      $17.12 -> $38.11 (+122.6%)  trail  0.7h
@@ -137,7 +137,7 @@ last trades:
   Trader       $17.85 -> $12.98 (-27.3%)  stop  0.2h
   JENSEN       $17.61 -> $20.21 (+14.8%)  trail  0.5h
   XV           $17.74 -> $15.04 (-15.2%)  stop  0.2h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 421, daily_loss_limit 239, setup_rejected:dumping_now 136, setup_rejected:sellers_dominate_now 133, setup_rejected:b_bundled 69, setup_rejected:volume_dried_up 47, setup_rejected:operator_cluster 36, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 23, setup_rejected:lp_not_locked 22, setup_rejected:clustered_supply 13, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 421, daily_loss_limit 239, setup_rejected:dumping_now 136, setup_rejected:sellers_dominate_now 133, setup_rejected:b_bundled 69, setup_rejected:volume_dried_up 47, setup_rejected:operator_cluster 36, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 23, setup_rejected:lp_not_locked 22, setup_rejected:clustered_supply 14, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
