@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-21 06:22 UTC
+Updated: 2026-11-21 06:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           112277
+pools seen           112308
 passed SCOUT         216
   killed by SCORE    33
   killed by AUDIT    45
 FINAL PASS           138
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   110674
-  few_unique_buyers           105753
-  liquidity_low               103989
-  volume_below_liquidity       79235
-  sells_dominate               29659
-  wash_churn                   23566
-  overheated                   10000
+  too_young                   110705
+  few_unique_buyers           105783
+  liquidity_low               104020
+  volume_below_liquidity       79260
+  sells_dominate               29668
+  wash_churn                   23574
+  overheated                   10003
   missing                       3093
   too_old                       1172
   rc_danger                       18
 
-OUTCOMES (median price change from first sighting / first pass; 6748 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 6752 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  138    -5.2%   -11.5%   -45.2%   -87.5%    60%
 SCOUT PASS, killed later     78    +4.3%    +3.7%   -31.7%   -74.6%    51%
-KILLED (tracked)          15415    +0.0%   -62.3%   -84.7%    +0.1%    29%
+KILLED (tracked)          15417    +0.0%   -62.3%   -84.7%    +0.1%    29%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     260    -95.0%    -68.9%    32%
+too_young                     260    -95.5%    -68.9%    32%
 too_old                        46     -0.6%     -0.4%    11%
 wash_churn                     42    -23.3%    -85.6%    31%
 liquidity_low                  30    -69.3%    -49.8%    60%
@@ -55,7 +55,7 @@ cluster     n   +1h med   +4h med  +24h med   rug%
 none      815     -0.2%    -11.0%    -43.5%    29%
 <15%      153     +0.4%    -13.1%    -32.9%    38%
 15-30%     36     -1.4%     -2.0%     +0.4%    33%
-30%+       32     -0.5%     -0.6%     +1.9%    28%
+30%+       32     -0.5%     -0.7%     +1.9%    28%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      722     -0.0%     -2.6%    -25.7%    27%
 <20%      266     -4.1%    -58.4%    -92.9%    32%
