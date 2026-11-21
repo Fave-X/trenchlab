@@ -1,30 +1,30 @@
 # TrenchLab report
 
-Updated: 2026-11-21 09:52 UTC
+Updated: 2026-11-21 10:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           113294
+pools seen           113335
 passed SCOUT         219
   killed by SCORE    34
   killed by AUDIT    47
 FINAL PASS           138
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   111682
-  few_unique_buyers           106720
-  liquidity_low               104947
-  volume_below_liquidity       79931
-  sells_dominate               29930
-  wash_churn                   23852
-  overheated                   10113
+  too_young                   111723
+  few_unique_buyers           106760
+  liquidity_low               104988
+  volume_below_liquidity       79965
+  sells_dominate               29942
+  wash_churn                   23864
+  overheated                   10119
   missing                       3114
   too_old                       1180
   rc_danger                       18
 
-OUTCOMES (median price change from first sighting / first pass; 6804 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 6807 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  138    -5.2%   -11.5%   -45.2%   -87.5%    60%
 SCOUT PASS, killed later     81    +4.7%    +4.4%   -30.1%   -74.6%    49%
@@ -135,7 +135,7 @@ last trades:
   RIEMANN      $18.06 -> $13.90 (-23.0%)  stop  0.3h
   Trader       $17.85 -> $12.98 (-27.3%)  stop  0.2h
   JENSEN       $17.61 -> $20.21 (+14.8%)  trail  0.5h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 421, daily_loss_limit 239, setup_rejected:sellers_dominate_now 133, setup_rejected:dumping_now 132, setup_rejected:b_bundled 50, setup_rejected:volume_dried_up 47, setup_rejected:operator_cluster 36, setup_rejected:top10_concentrated 33, setup_rejected:lp_not_locked 22, setup_rejected:clustered_supply 13, setup_rejected:bundled_buys 13, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 421, daily_loss_limit 239, setup_rejected:sellers_dominate_now 133, setup_rejected:dumping_now 132, setup_rejected:b_bundled 50, setup_rejected:volume_dried_up 47, setup_rejected:operator_cluster 36, setup_rejected:top10_concentrated 33, setup_rejected:lp_not_locked 22, setup_rejected:bundled_buys 14, setup_rejected:clustered_supply 13, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
