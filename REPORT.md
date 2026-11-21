@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-21 02:36 UTC
+Updated: 2026-11-21 02:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           111136
+pools seen           111195
 passed SCOUT         216
   killed by SCORE    33
   killed by AUDIT    45
 FINAL PASS           138
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   109551
-  few_unique_buyers           104697
-  liquidity_low               102932
-  volume_below_liquidity       78457
-  sells_dominate               29333
-  wash_churn                   23223
-  overheated                    9876
+  too_young                   109610
+  few_unique_buyers           104754
+  liquidity_low               102990
+  volume_below_liquidity       78502
+  sells_dominate               29351
+  wash_churn                   23237
+  overheated                    9883
   missing                       3059
   too_old                       1164
   rc_danger                       18
 
-OUTCOMES (median price change from first sighting / first pass; 6694 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 6695 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  138    -5.2%   -11.5%   -45.2%   -86.0%    60%
 SCOUT PASS, killed later     78    +4.3%    +3.7%   -32.2%   -74.6%    50%
-KILLED (tracked)          15253    +0.0%   -62.4%   -84.5%    +0.1%    29%
+KILLED (tracked)          15258    +0.0%   -62.4%   -84.5%    +0.1%    29%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -87,14 +87,14 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $333.85       $357.80
-return                        -33.2%        -28.4%
-closed trades                     89            74
-win rate                         22%           22%
-avg net / trade                -8.5%         -9.1%
-expectancy $/trade            $-1.87        $-2.00
+equity                       $333.85       $354.75
+return                        -33.2%        -29.1%
+closed trades                     89            75
+win rate                         22%           23%
+avg net / trade                -8.5%         -8.7%
+expectancy $/trade            $-1.87        $-1.94
 max drawdown                  -35.8%        -37.3%
-open now                           0             1
+open now                           0             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -121,15 +121,12 @@ signals skipped by the sizer/risk rules: already_traded_token 503, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $357.80 (-28.4%) | cash $334.54 | open 1 | max drawdown -37.3%
+equity $354.75 (-29.1%) | cash $354.75 | open 0 | max drawdown -37.3%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 74 | win 16/74 (22%) | avg net -9.1% | realized $-147.85 | expectancy $-2.00/trade
-exits: stop 57, trail 17
-  (n=74 < 100: noise, not evidence)
-open:
-  JENSEN       cost $17.61  now $23.26 (+32.1%)  held 0.4h
+closed 75 | win 17/75 (23%) | avg net -8.7% | realized $-145.25 | expectancy $-1.94/trade
+exits: stop 57, trail 18
+  (n=75 < 100: noise, not evidence)
 last trades:
-  iAgent       $17.21 -> $15.17 (-11.8%)  stop  0.5h
   RUGGED       $17.21 -> $19.12 (+11.1%)  trail  0.3h
   CATMARIO     $17.21 -> $13.84 (-19.6%)  stop  0.5h
   HNYDRIP      $17.12 -> $38.11 (+122.6%)  trail  0.7h
@@ -137,6 +134,7 @@ last trades:
   AI           $17.98 -> $19.59 (+8.9%)  trail  0.3h
   RIEMANN      $18.06 -> $13.90 (-23.0%)  stop  0.3h
   Trader       $17.85 -> $12.98 (-27.3%)  stop  0.2h
+  JENSEN       $17.61 -> $20.21 (+14.8%)  trail  0.5h
 signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 421, daily_loss_limit 239, setup_rejected:sellers_dominate_now 133, setup_rejected:dumping_now 132, setup_rejected:b_bundled 50, setup_rejected:volume_dried_up 47, setup_rejected:operator_cluster 36, setup_rejected:top10_concentrated 33, setup_rejected:lp_not_locked 22, setup_rejected:clustered_supply 13, setup_rejected:bundled_buys 13, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
