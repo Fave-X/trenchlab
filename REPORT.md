@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-21 11:12 UTC
+Updated: 2026-11-21 11:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           113672
+pools seen           113712
 passed SCOUT         219
   killed by SCORE    34
   killed by AUDIT    47
 FINAL PASS           138
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   112056
-  few_unique_buyers           107064
-  liquidity_low               105286
-  volume_below_liquidity       80199
-  sells_dominate               30028
-  wash_churn                   23939
-  overheated                   10149
+  too_young                   112095
+  few_unique_buyers           107102
+  liquidity_low               105323
+  volume_below_liquidity       80226
+  sells_dominate               30038
+  wash_churn                   23949
+  overheated                   10155
   missing                       3119
-  too_old                       1184
+  too_old                       1185
   rc_danger                       18
 
-OUTCOMES (median price change from first sighting / first pass; 6868 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 6870 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  138    -5.2%   -11.5%   -45.2%   -87.5%    60%
 SCOUT PASS, killed later     81    +4.7%    +4.4%   -28.8%   -74.6%    49%
-KILLED (tracked)          15613    +0.0%   -62.3%   -84.8%    +0.1%    29%
+KILLED (tracked)          15623    +0.0%   -62.3%   -84.8%    +0.1%    29%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -58,7 +58,7 @@ none      825     -0.2%    -11.0%    -43.5%    29%
 30%+       32     -0.5%     -0.7%     +1.9%    28%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      728     -0.0%     -2.6%    -25.7%    27%
-<20%      272     -4.1%    -58.5%    -92.9%    32%
+<20%      272     -5.0%    -58.5%    -92.9%    32%
 20%+       49     +4.3%    -98.9%       -      78%
 fresh       n   +1h med   +4h med  +24h med   rug%
 <20%      998     -0.1%     -6.9%    -34.1%    28%
@@ -135,7 +135,7 @@ last trades:
   RIEMANN      $18.06 -> $13.90 (-23.0%)  stop  0.3h
   Trader       $17.85 -> $12.98 (-27.3%)  stop  0.2h
   JENSEN       $17.61 -> $20.21 (+14.8%)  trail  0.5h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 421, daily_loss_limit 239, setup_rejected:sellers_dominate_now 133, setup_rejected:dumping_now 132, setup_rejected:b_bundled 50, setup_rejected:volume_dried_up 47, setup_rejected:operator_cluster 36, setup_rejected:top10_concentrated 33, setup_rejected:lp_not_locked 22, setup_rejected:bundled_buys 22, setup_rejected:clustered_supply 13, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 421, daily_loss_limit 239, setup_rejected:sellers_dominate_now 133, setup_rejected:dumping_now 132, setup_rejected:b_bundled 50, setup_rejected:volume_dried_up 47, setup_rejected:operator_cluster 36, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 23, setup_rejected:lp_not_locked 22, setup_rejected:clustered_supply 13, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
