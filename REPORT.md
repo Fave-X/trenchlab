@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-22 08:52 UTC
+Updated: 2026-11-22 09:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           120185
-passed SCOUT         230
+pools seen           120246
+passed SCOUT         232
   killed by SCORE    34
-  killed by AUDIT    52
-FINAL PASS           144
+  killed by AUDIT    53
+FINAL PASS           145
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   118509
-  few_unique_buyers           113160
-  liquidity_low               111324
-  volume_below_liquidity       84717
-  sells_dominate               31747
-  wash_churn                   25356
-  overheated                   10760
+  too_young                   118570
+  few_unique_buyers           113218
+  liquidity_low               111383
+  volume_below_liquidity       84767
+  sells_dominate               31765
+  wash_churn                   25377
+  overheated                   10766
   missing                       3254
   too_old                       1225
   rc_danger                       18
 
-OUTCOMES (median price change from first sighting / first pass; 7241 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 7243 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  144    -5.2%   -13.0%   -44.0%   -87.5%    59%
-SCOUT PASS, killed later     86    +5.1%    +7.3%   -28.4%   -74.6%    50%
-KILLED (tracked)          16572    +0.1%   -59.6%   -84.7%    +0.4%    28%
+FINAL PASS                  145    -5.2%   -13.0%   -44.0%   -87.5%    59%
+SCOUT PASS, killed later     87    +5.2%    +7.3%   -28.4%   -74.6%    49%
+KILLED (tracked)          16576    +0.1%   -59.7%   -84.7%    +0.4%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     309    -95.9%    -68.9%    28%
+too_young                     308    -95.9%    -68.9%    28%
 wash_churn                     50     -1.2%    -85.6%    26%
 too_old                        46     -0.6%     -0.4%    11%
 liquidity_low                  33    -69.9%    -49.8%    61%
@@ -44,21 +44,21 @@ sells_dominate                  3    -75.0%       -      67%
 SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
-80+        62    -55.3%    -93.3%    65%
-70-79      86    -50.8%    -72.2%    51%
+80+        63    -55.3%    -93.3%    63%
+70-79      87    -50.8%    -72.2%    51%
 60-69      57    -34.6%    -92.5%    56%
 <60        25     -7.4%    -63.7%    48%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      890     -0.0%    -13.0%    -45.0%    28%
+none      890     -0.1%    -13.0%    -45.0%    28%
 <15%      184     +0.7%    -12.6%    -32.5%    35%
 15-30%     38     -1.2%     -2.4%     +0.4%    34%
 30%+       33     -0.5%     -0.7%     +1.9%    30%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      778     -0.0%     -2.8%    -31.1%    26%
-<20%      315     -0.3%    -58.3%    -92.8%    29%
+<20%      315     -0.8%    -58.3%    -92.8%    29%
 20%+       52     -0.4%    -99.0%       -      81%
 fresh       n   +1h med   +4h med  +24h med   rug%
 <20%     1094     +0.0%     -7.4%    -35.1%    27%
@@ -94,18 +94,20 @@ win rate                         23%           22%
 avg net / trade                -8.3%         -8.9%
 expectancy $/trade            $-1.80        $-1.95
 max drawdown                  -37.7%        -37.3%
-open now                           0             0
+open now                           1             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $328.95 (-34.2%) | cash $328.95 | open 0 | max drawdown -37.7%
+equity $328.95 (-34.2%) | cash $312.50 | open 1 | max drawdown -37.7%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 95 | win 22/95 (23%) | avg net -8.3% | realized $-171.05 | expectancy $-1.80/trade
 exits: stop 70, trail 25
   (n=95 < 100: noise, not evidence)
+open:
+  snowball     cost $16.45  now $16.45 (+0.0%)  held 0.0h
 last trades:
   RUDY         $16.97 -> $15.02 (-11.5%)  stop  0.2h
   Trader       $16.87 -> $13.30 (-21.2%)  stop  0.2h
