@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-22 17:42 UTC
+Updated: 2026-11-22 17:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           122772
+pools seen           122833
 passed SCOUT         239
   killed by SCORE    34
   killed by AUDIT    57
 FINAL PASS           148
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   121077
-  few_unique_buyers           115561
-  liquidity_low               113711
-  volume_below_liquidity       86567
-  sells_dominate               32420
-  wash_churn                   25861
-  overheated                   11034
+  too_young                   121138
+  few_unique_buyers           115621
+  liquidity_low               113769
+  volume_below_liquidity       86617
+  sells_dominate               32435
+  wash_churn                   25870
+  overheated                   11039
   missing                       3310
   too_old                       1236
   rc_danger                       18
 
-OUTCOMES (median price change from first sighting / first pass; 7365 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 7370 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  148    -5.0%   -12.0%   -43.9%   -86.9%    58%
 SCOUT PASS, killed later     91    +5.4%   +11.1%   -23.8%   -74.6%    48%
-KILLED (tracked)          16962    +0.1%   -59.6%   -84.7%    +0.4%    28%
+KILLED (tracked)          16968    +0.1%   -59.6%   -84.7%    +0.4%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     322    -95.0%    -68.9%    28%
+too_young                     323    -95.0%    -68.9%    28%
 wash_churn                     53    -23.3%    -85.6%    26%
 too_old                        47     -0.6%     -0.4%    11%
 liquidity_low                  33    -69.9%    -49.8%    61%
@@ -52,19 +52,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      924     +0.0%    -11.9%    -45.5%    27%
+none      925     +0.0%    -11.9%    -45.5%    27%
 <15%      194     +0.9%    -13.7%    -32.9%    35%
 15-30%     38     -1.2%     -2.4%     +0.4%    34%
 30%+       33     -0.5%     -0.7%     +1.9%    30%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      804     +0.0%     -2.6%    -32.1%    25%
+none      805     -0.0%     -2.6%    -32.1%    25%
 <20%      332     +0.2%    -58.5%    -92.9%    30%
 20%+       53     +4.3%    -98.9%       -      79%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1137     +0.0%     -7.4%    -39.2%    27%
+<20%     1138     +0.0%     -7.4%    -39.2%    27%
 20-40%     34     -4.6%    -99.0%    -99.1%    79%
 40%+       18    -97.5%    -98.6%       -      78%
-tokens analysed: 1033 | helius credits today: 6868/25000
+tokens analysed: 1034 | helius credits today: 6923/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -107,7 +107,7 @@ closed 98 | win 22/98 (22%) | avg net -8.4% | realized $-176.50 | expectancy $-1
 exits: stop 72, trail 26
   (n=98 < 100: noise, not evidence)
 open:
-  MCAT         cost $16.18  now $22.60 (+39.7%)  held 1.5h
+  MCAT         cost $16.18  now $22.60 (+39.7%)  held 1.7h
 last trades:
   XV           $16.69 -> $14.12 (-15.4%)  stop  0.2h
   Bigfoot      $16.46 -> $12.98 (-21.2%)  stop  0.2h
@@ -117,7 +117,7 @@ last trades:
   snowball     $16.45 -> $15.21 (-7.5%)  trail  0.3h
   UCASH        $16.39 -> $14.30 (-12.8%)  stop  0.7h
   MCAT         $16.28 -> $14.16 (-13.0%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 551, daily_loss_limit 310, cooldown_after_loss 18, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 552, daily_loss_limit 310, cooldown_after_loss 18, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
