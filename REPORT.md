@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-22 21:52 UTC
+Updated: 2026-11-22 22:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           123958
+pools seen           124008
 passed SCOUT         242
   killed by SCORE    34
   killed by AUDIT    57
 FINAL PASS           151
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   122259
-  few_unique_buyers           116690
-  liquidity_low               114820
-  volume_below_liquidity       87451
-  sells_dominate               32746
-  wash_churn                   26053
-  overheated                   11136
+  too_young                   122309
+  few_unique_buyers           116737
+  liquidity_low               114868
+  volume_below_liquidity       87492
+  sells_dominate               32758
+  wash_churn                   26064
+  overheated                   11142
   missing                       3321
   too_old                       1239
   rc_danger                       18
 
-OUTCOMES (median price change from first sighting / first pass; 7418 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 7419 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  151    -5.0%   -13.2%   -44.0%   -86.9%    58%
 SCOUT PASS, killed later     91    +5.4%   +11.1%   -23.8%   -74.6%    49%
-KILLED (tracked)          17118    +0.1%   -59.5%   -84.6%    +0.4%    27%
+KILLED (tracked)          17126    +0.1%   -59.5%   -84.6%    +0.4%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -45,8 +45,8 @@ SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        66    -54.0%    -93.3%    62%
-70-79      92    -44.7%    -71.8%    51%
-60-69      59    -34.6%    -92.5%    56%
+70-79      93    -44.7%    -71.8%    51%
+60-69      58    -34.6%    -92.5%    57%
 <60        25     -7.4%    -63.7%    48%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
@@ -115,7 +115,7 @@ last trades:
   UCASH        $16.39 -> $14.30 (-12.8%)  stop  0.7h
   MCAT         $16.28 -> $14.16 (-13.0%)  stop  0.2h
   MCAT         $16.18 -> $0.00 (-100.0%)  dead_no_route  1.8h
-signals skipped by the sizer/risk rules: already_traded_token 571, daily_loss_limit 313, cooldown_after_loss 18, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 572, daily_loss_limit 315, cooldown_after_loss 18, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
