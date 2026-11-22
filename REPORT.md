@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-22 04:12 UTC
+Updated: 2026-11-22 04:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           118779
+pools seen           118824
 passed SCOUT         226
   killed by SCORE    34
   killed by AUDIT    48
 FINAL PASS           144
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   117106
-  few_unique_buyers           111856
-  liquidity_low               110040
-  volume_below_liquidity       83731
-  sells_dominate               31385
-  wash_churn                   24935
-  overheated                   10624
-  missing                       3217
+  too_young                   117151
+  few_unique_buyers           111901
+  liquidity_low               110078
+  volume_below_liquidity       83755
+  sells_dominate               31393
+  wash_churn                   24951
+  overheated                   10628
+  missing                       3221
   too_old                       1223
   rc_danger                       18
 
-OUTCOMES (median price change from first sighting / first pass; 7157 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 7159 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  144    -5.2%   -13.0%   -44.4%   -87.5%    58%
 SCOUT PASS, killed later     82    +4.3%    +4.6%   -30.1%   -74.6%    52%
-KILLED (tracked)          16344    +0.1%   -60.9%   -84.8%    +0.4%    28%
+KILLED (tracked)          16349    +0.1%   -61.0%   -84.8%    +0.4%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -135,7 +135,7 @@ last trades:
   XV           $17.74 -> $15.04 (-15.2%)  stop  0.2h
   Bigfoot      $17.60 -> $15.48 (-12.1%)  stop  0.5h
   STREETS      $17.50 -> $15.68 (-10.4%)  stop  0.2h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 421, daily_loss_limit 239, setup_rejected:dumping_now 138, setup_rejected:sellers_dominate_now 133, setup_rejected:b_bundled 69, setup_rejected:volume_dried_up 47, setup_rejected:operator_cluster 36, setup_rejected:top10_concentrated 33, setup_rejected:lp_not_locked 30, setup_rejected:bundled_buys 23, setup_rejected:clustered_supply 17, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 421, daily_loss_limit 239, setup_rejected:dumping_now 138, setup_rejected:sellers_dominate_now 133, setup_rejected:b_bundled 69, setup_rejected:volume_dried_up 47, setup_rejected:operator_cluster 36, setup_rejected:top10_concentrated 33, setup_rejected:lp_not_locked 31, setup_rejected:bundled_buys 23, setup_rejected:clustered_supply 17, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
