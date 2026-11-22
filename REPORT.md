@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-22 15:52 UTC
+Updated: 2026-11-22 16:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           122302
+pools seen           122341
 passed SCOUT         238
   killed by SCORE    34
   killed by AUDIT    57
 FINAL PASS           147
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   120612
-  few_unique_buyers           115124
-  liquidity_low               113273
-  volume_below_liquidity       86222
-  sells_dominate               32290
-  wash_churn                   25785
-  overheated                   10984
+  too_young                   120651
+  few_unique_buyers           115160
+  liquidity_low               113310
+  volume_below_liquidity       86251
+  sells_dominate               32298
+  wash_churn                   25790
+  overheated                   10989
   missing                       3303
   too_old                       1233
   rc_danger                       18
 
-OUTCOMES (median price change from first sighting / first pass; 7343 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 7346 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  147    -5.0%   -13.0%   -44.0%   -87.5%    59%
 SCOUT PASS, killed later     91    +5.4%   +11.1%   -23.8%   -74.6%    48%
-KILLED (tracked)          16896    +0.1%   -59.7%   -84.6%    +0.4%    28%
+KILLED (tracked)          16901    +0.1%   -59.7%   -84.6%    +0.4%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -77,7 +77,7 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     12%  147    29%     -9.3%   -19.6%   -99.7%
   -15%     20%  147    32%     -9.6%   -20.4%   -99.7%
   -15%     30%  147    30%     -9.8%   -21.0%   -99.7%
-  -25%     12%  147    33%    -11.8%   -18.7%   -99.7%
+  -25%     12%  147    33%    -11.8%   -19.0%   -99.7%
   -25%     20%  147    36%    -13.5%   -29.7%   -99.7%
   -25%     30%  147    34%    -13.8%   -30.9%   -99.7%
   best so far: stop -15%, trail from +12% -> avg -9.3% per trade over n=147
@@ -115,7 +115,7 @@ last trades:
   snowball     $16.45 -> $15.21 (-7.5%)  trail  0.3h
   UCASH        $16.39 -> $14.30 (-12.8%)  stop  0.7h
   MCAT         $16.28 -> $14.16 (-13.0%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 540, daily_loss_limit 310, cooldown_after_loss 18, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 541, daily_loss_limit 310, cooldown_after_loss 18, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
