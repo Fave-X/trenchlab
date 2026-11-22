@@ -1,24 +1,24 @@
 # TrenchLab report
 
-Updated: 2026-11-22 17:57 UTC
+Updated: 2026-11-22 18:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           122875
+pools seen           122903
 passed SCOUT         239
   killed by SCORE    34
   killed by AUDIT    57
 FINAL PASS           148
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   121180
-  few_unique_buyers           115662
-  liquidity_low               113810
-  volume_below_liquidity       86648
-  sells_dominate               32446
-  wash_churn                   25879
+  too_young                   121208
+  few_unique_buyers           115690
+  liquidity_low               113838
+  volume_below_liquidity       86672
+  sells_dominate               32450
+  wash_churn                   25884
   overheated                   11043
   missing                       3310
   too_old                       1236
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 7372 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  148    -5.0%   -12.0%   -43.9%   -86.9%    58%
 SCOUT PASS, killed later     91    +5.4%   +11.1%   -23.8%   -74.6%    48%
-KILLED (tracked)          16970    +0.1%   -59.6%   -84.7%    +0.4%    28%
+KILLED (tracked)          16973    +0.1%   -59.6%   -84.7%    +0.4%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -64,7 +64,7 @@ fresh       n   +1h med   +4h med  +24h med   rug%
 <20%     1138     +0.0%     -7.4%    -39.2%    27%
 20-40%     34     -4.6%    -99.0%    -99.1%    79%
 40%+       18    -97.5%    -98.6%       -      78%
-tokens analysed: 1034 | helius credits today: 6923/25000
+tokens analysed: 1034 | helius credits today: 6986/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -87,29 +87,26 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $329.92       $346.35
-return                        -34.0%        -30.7%
-closed trades                     98            79
+equity                       $307.32       $346.35
+return                        -38.5%        -30.7%
+closed trades                     99            79
 win rate                         22%           22%
-avg net / trade                -8.4%         -8.9%
-expectancy $/trade            $-1.80        $-1.94
-max drawdown                  -37.7%        -37.3%
-open now                           1             0
+avg net / trade                -9.3%         -8.9%
+expectancy $/trade            $-1.95        $-1.94
+max drawdown                  -40.9%        -37.3%
+open now                           0             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $329.92 (-34.0%) | cash $307.32 | open 1 | max drawdown -37.7%
+equity $307.32 (-38.5%) | cash $307.32 | open 0 | max drawdown -40.9%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 98 | win 22/98 (22%) | avg net -8.4% | realized $-176.50 | expectancy $-1.80/trade
-exits: stop 72, trail 26
-  (n=98 < 100: noise, not evidence)
-open:
-  MCAT         cost $16.18  now $22.60 (+39.7%)  held 1.8h
+closed 99 | win 22/99 (22%) | avg net -9.3% | realized $-192.68 | expectancy $-1.95/trade
+exits: stop 72, trail 26, dead_no_route 1
+  (n=99 < 100: noise, not evidence)
 last trades:
-  XV           $16.69 -> $14.12 (-15.4%)  stop  0.2h
   Bigfoot      $16.46 -> $12.98 (-21.2%)  stop  0.2h
   HOUSE        $16.29 -> $14.03 (-13.9%)  stop  0.2h
   SIDOOR       $16.18 -> $17.90 (+10.6%)  trail  0.7h
@@ -117,7 +114,8 @@ last trades:
   snowball     $16.45 -> $15.21 (-7.5%)  trail  0.3h
   UCASH        $16.39 -> $14.30 (-12.8%)  stop  0.7h
   MCAT         $16.28 -> $14.16 (-13.0%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 553, daily_loss_limit 310, cooldown_after_loss 18, max_open_positions 5
+  MCAT         $16.18 -> $0.00 (-100.0%)  dead_no_route  1.8h
+signals skipped by the sizer/risk rules: already_traded_token 554, daily_loss_limit 310, cooldown_after_loss 18, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
