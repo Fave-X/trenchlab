@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-22 02:32 UTC
+Updated: 2026-11-22 02:38 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           118252
+pools seen           118293
 passed SCOUT         225
   killed by SCORE    33
   killed by AUDIT    48
 FINAL PASS           144
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   116580
-  few_unique_buyers           111362
-  liquidity_low               109547
-  volume_below_liquidity       83372
-  sells_dominate               31252
-  wash_churn                   24816
-  overheated                   10579
+  too_young                   116621
+  few_unique_buyers           111403
+  liquidity_low               109587
+  volume_below_liquidity       83397
+  sells_dominate               31263
+  wash_churn                   24823
+  overheated                   10580
   missing                       3207
   too_old                       1223
   rc_danger                       18
 
-OUTCOMES (median price change from first sighting / first pass; 7134 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 7138 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  144    -5.2%   -13.2%   -44.7%   -87.5%    58%
+FINAL PASS                  144    -5.2%   -13.0%   -44.7%   -87.5%    58%
 SCOUT PASS, killed later     81    +4.7%    +4.4%   -30.1%   -74.6%    52%
-KILLED (tracked)          16275    +0.0%   -61.2%   -84.8%    +0.4%    28%
+KILLED (tracked)          16278    +0.0%   -61.0%   -84.8%    +0.4%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -61,7 +61,7 @@ none      762     -0.1%     -2.7%    -31.1%    26%
 <20%      297     -3.6%    -58.4%    -92.8%    30%
 20%+       51     -0.4%    -99.0%       -      80%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1059     -0.1%     -7.3%    -35.1%    27%
+<20%     1059     -0.0%     -7.3%    -35.1%    27%
 20-40%     34     -4.5%    -99.0%    -99.1%    76%
 40%+       17    -98.5%    -98.6%       -      82%
 tokens analysed: 956 | helius credits today: 1005/25000
@@ -94,7 +94,7 @@ win rate                         23%           22%
 avg net / trade                -8.3%         -8.9%
 expectancy $/trade            $-1.80        $-1.95
 max drawdown                  -37.7%        -37.3%
-open now                           0             0
+open now                           0             1
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -121,11 +121,13 @@ signals skipped by the sizer/risk rules: already_traded_token 523, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $349.92 (-30.0%) | cash $349.92 | open 0 | max drawdown -37.3%
+equity $349.92 (-30.0%) | cash $332.42 | open 1 | max drawdown -37.3%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 77 | win 17/77 (22%) | avg net -8.9% | realized $-150.08 | expectancy $-1.95/trade
 exits: stop 59, trail 18
   (n=77 < 100: noise, not evidence)
+open:
+  STREETS      cost $17.50  now $17.50 (+0.0%)  held 0.0h
 last trades:
   HNYDRIP      $17.12 -> $38.11 (+122.6%)  trail  0.7h
   AMC          $18.09 -> $15.90 (-12.1%)  stop  0.2h
