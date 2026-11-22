@@ -1,40 +1,40 @@
 # TrenchLab report
 
-Updated: 2026-11-22 19:42 UTC
+Updated: 2026-11-22 19:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           123381
+pools seen           123419
 passed SCOUT         241
   killed by SCORE    34
   killed by AUDIT    57
 FINAL PASS           150
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   121686
-  few_unique_buyers           116140
-  liquidity_low               114279
-  volume_below_liquidity       87018
-  sells_dominate               32580
-  wash_churn                   25952
-  overheated                   11084
-  missing                       3318
+  too_young                   121723
+  few_unique_buyers           116172
+  liquidity_low               114311
+  volume_below_liquidity       87045
+  sells_dominate               32589
+  wash_churn                   25957
+  overheated                   11087
+  missing                       3319
   too_old                       1236
   rc_danger                       18
 
-OUTCOMES (median price change from first sighting / first pass; 7390 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 7393 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  150    -5.0%   -12.5%   -44.0%   -86.9%    58%
 SCOUT PASS, killed later     91    +5.4%   +11.1%   -23.8%   -74.6%    48%
-KILLED (tracked)          17039    +0.1%   -59.5%   -84.6%    +0.4%    28%
+KILLED (tracked)          17048    +0.1%   -59.4%   -84.6%    +0.4%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     330    -95.0%    -68.9%    27%
-wash_churn                     53    -23.3%    -85.6%    26%
+too_young                     331    -95.0%    -68.9%    27%
+wash_churn                     54    -23.3%    -85.6%    26%
 too_old                        47     -0.6%     -0.4%    11%
 liquidity_low                  33    -69.9%    -49.8%    61%
 overheated                     10     -3.6%    -56.0%    40%
@@ -53,18 +53,18 @@ CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
 none      934     +0.0%    -11.9%    -45.5%    27%
-<15%      195     +1.2%    -13.7%    -32.9%    35%
+<15%      196     +1.2%    -13.7%    -32.9%    35%
 15-30%     38     -1.2%     -2.4%     +0.4%    34%
-30%+       33     -0.5%     -0.7%     +1.9%    30%
+30%+       34     -0.5%     -0.7%     +1.9%    29%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      815     +0.0%     -2.5%    -31.6%    25%
-<20%      332     +0.2%    -59.6%    -93.0%    30%
-20%+       53     +4.3%    -98.9%       -      79%
+<20%      333     +0.2%    -59.6%    -93.0%    30%
+20%+       54     +4.3%    -98.9%       -      78%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1148     +0.0%     -7.4%    -39.2%    27%
+<20%     1149     +0.1%     -7.4%    -39.2%    27%
 20-40%     34     -4.6%    -99.0%    -99.1%    79%
-40%+       18    -97.5%    -98.6%       -      78%
-tokens analysed: 1044 | helius credits today: 7817/25000
+40%+       19    -97.5%    -98.6%       -      74%
+tokens analysed: 1046 | helius credits today: 8005/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -75,10 +75,10 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -10%     20%  150    27%     -9.9%   -18.0%   -99.7%
   -10%     30%  150    25%     -9.7%   -18.6%   -99.7%
   -15%     12%  150    29%     -9.0%   -19.4%   -99.7%
-  -15%     20%  150    32%     -9.4%   -20.3%   -99.7%
+  -15%     20%  150    32%     -9.5%   -20.4%   -99.7%
   -15%     30%  150    30%     -9.6%   -21.0%   -99.7%
   -25%     12%  150    33%    -11.3%   -17.4%   -99.7%
-  -25%     20%  150    37%    -13.1%   -29.7%   -99.7%
+  -25%     20%  150    37%    -13.2%   -29.7%   -99.7%
   -25%     30%  150    34%    -13.7%   -30.9%   -99.7%
   best so far: stop -15%, trail from +12% -> avg -9.0% per trade over n=150
 
@@ -135,7 +135,7 @@ last trades:
   Bigfoot      $17.60 -> $15.48 (-12.1%)  stop  0.5h
   STREETS      $17.50 -> $15.68 (-10.4%)  stop  0.2h
   SIDOOR       $17.41 -> $15.65 (-10.1%)  stop  0.3h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 424, daily_loss_limit 239, setup_rejected:dumping_now 140, setup_rejected:sellers_dominate_now 134, setup_rejected:b_bundled 72, setup_rejected:volume_dried_up 59, setup_rejected:operator_cluster 41, setup_rejected:lp_not_locked 34, setup_rejected:top10_concentrated 33, setup_rejected:clustered_supply 30, setup_rejected:bundled_buys 23, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 424, daily_loss_limit 239, setup_rejected:dumping_now 140, setup_rejected:sellers_dominate_now 134, setup_rejected:b_bundled 73, setup_rejected:volume_dried_up 59, setup_rejected:operator_cluster 41, setup_rejected:lp_not_locked 34, setup_rejected:top10_concentrated 33, setup_rejected:clustered_supply 30, setup_rejected:bundled_buys 23, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
