@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-22 01:32 UTC
+Updated: 2026-11-22 01:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           117985
+pools seen           118025
 passed SCOUT         225
   killed by SCORE    33
   killed by AUDIT    48
 FINAL PASS           144
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   116321
-  few_unique_buyers           111110
-  liquidity_low               109299
-  volume_below_liquidity       83176
-  sells_dominate               31161
-  wash_churn                   24764
-  overheated                   10551
+  too_young                   116361
+  few_unique_buyers           111150
+  liquidity_low               109338
+  volume_below_liquidity       83208
+  sells_dominate               31173
+  wash_churn                   24769
+  overheated                   10552
   missing                       3205
   too_old                       1216
   rc_danger                       18
 
-OUTCOMES (median price change from first sighting / first pass; 7112 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 7116 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  144    -5.3%   -13.2%   -44.7%   -87.5%    58%
 SCOUT PASS, killed later     81    +4.7%    +4.4%   -30.1%   -74.6%    52%
-KILLED (tracked)          16233    +0.1%   -61.2%   -84.8%    +0.4%    28%
+KILLED (tracked)          16239    +0.1%   -61.2%   -84.8%    +0.4%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -53,41 +53,41 @@ CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
 none      863     -0.2%    -11.7%    -44.5%    28%
-<15%      171     +0.7%    -13.1%    -32.7%    36%
+<15%      172     +0.7%    -13.1%    -32.7%    35%
 15-30%     37     -1.4%     -2.7%     +0.4%    35%
 30%+       32     -0.5%     -0.7%     +1.9%    28%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      761     -0.1%     -2.8%    -31.1%    26%
-<20%      292     -3.6%    -58.4%    -92.8%    30%
+<20%      293     -3.6%    -58.4%    -92.8%    30%
 20%+       50     -0.4%    -98.9%       -      80%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1053     -0.0%     -7.3%    -35.1%    27%
+<20%     1054     -0.0%     -7.3%    -35.1%    27%
 20-40%     33     -4.5%    -99.0%    -99.1%    76%
 40%+       17    -98.5%    -98.6%       -      82%
-tokens analysed: 949 | helius credits today: 496/25000
+tokens analysed: 950 | helius credits today: 557/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%  143    22%    -10.0%   -14.9%   -99.7%
-   -6%     20%  143    23%    -10.3%   -15.1%   -99.7%
-   -6%     30%  143    21%    -10.2%   -17.1%   -99.7%
-  -10%     12%  143    25%     -9.9%   -18.6%   -99.7%
-  -10%     20%  143    27%    -10.3%   -18.6%   -99.7%
-  -10%     30%  143    25%     -9.9%   -19.0%   -99.7%
-  -15%     12%  143    29%     -9.6%   -19.9%   -99.7%
-  -15%     20%  143    31%    -10.0%   -20.4%   -99.7%
-  -15%     30%  143    29%    -10.0%   -21.0%   -99.7%
-  -25%     12%  143    32%    -12.2%   -27.9%   -99.7%
-  -25%     20%  143    36%    -14.0%   -29.9%   -99.7%
-  -25%     30%  143    34%    -14.1%   -30.9%   -99.7%
-  best so far: stop -15%, trail from +12% -> avg -9.6% per trade over n=143
+   -6%     12%  144    22%     -9.9%   -14.9%   -99.7%
+   -6%     20%  144    24%    -10.2%   -15.0%   -99.7%
+   -6%     30%  144    22%    -10.2%   -17.0%   -99.7%
+  -10%     12%  144    26%     -9.8%   -18.4%   -99.7%
+  -10%     20%  144    27%    -10.2%   -18.6%   -99.7%
+  -10%     30%  144    26%     -9.9%   -18.9%   -99.7%
+  -15%     12%  144    29%     -9.6%   -19.8%   -99.7%
+  -15%     20%  144    32%     -9.9%   -20.4%   -99.7%
+  -15%     30%  144    30%     -9.9%   -21.0%   -99.7%
+  -25%     12%  144    33%    -12.1%   -24.6%   -99.7%
+  -25%     20%  144    36%    -13.9%   -29.9%   -99.7%
+  -25%     30%  144    34%    -14.0%   -30.9%   -99.7%
+  best so far: stop -15%, trail from +12% -> avg -9.6% per trade over n=144
 
 ================================================================
 A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $325.27       $349.92
+equity                       $325.65       $349.92
 return                        -34.9%        -30.0%
 closed trades                     94            77
 win rate                         22%           22%
@@ -101,13 +101,13 @@ Judge on expectancy after >=100 trades each, not on win rate or a few days.
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $325.27 (-34.9%) | cash $309.01 | open 1 | max drawdown -37.7%
+equity $325.65 (-34.9%) | cash $309.01 | open 1 | max drawdown -37.7%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 94 | win 21/94 (22%) | avg net -8.6% | realized $-174.73 | expectancy $-1.86/trade
 exits: stop 70, trail 24
   (n=94 < 100: noise, not evidence)
 open:
-  STREETS      cost $16.26  now $16.26 (+0.0%)  held 0.0h
+  STREETS      cost $16.26  now $16.64 (+2.3%)  held 0.2h
 last trades:
   AMC          $17.17 -> $13.19 (-23.2%)  stop  0.2h
   RUDY         $16.97 -> $15.02 (-11.5%)  stop  0.2h
@@ -117,7 +117,7 @@ last trades:
   Bigfoot      $16.46 -> $12.98 (-21.2%)  stop  0.2h
   HOUSE        $16.29 -> $14.03 (-13.9%)  stop  0.2h
   SIDOOR       $16.18 -> $17.90 (+10.6%)  trail  0.7h
-signals skipped by the sizer/risk rules: already_traded_token 522, daily_loss_limit 310, cooldown_after_loss 18, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 523, daily_loss_limit 310, cooldown_after_loss 18, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
