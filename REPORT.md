@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-22 23:02 UTC
+Updated: 2026-11-22 23:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           124342
-passed SCOUT         243
-  killed by SCORE    34
+pools seen           124385
+passed SCOUT         244
+  killed by SCORE    35
   killed by AUDIT    58
 FINAL PASS           151
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   122639
-  few_unique_buyers           117051
-  liquidity_low               115176
-  volume_below_liquidity       87742
-  sells_dominate               32849
-  wash_churn                   26145
-  overheated                   11172
+  too_young                   122682
+  few_unique_buyers           117092
+  liquidity_low               115219
+  volume_below_liquidity       87774
+  sells_dominate               32858
+  wash_churn                   26150
+  overheated                   11174
   missing                       3324
   too_old                       1241
   rc_danger                       20
 
 OUTCOMES (median price change from first sighting / first pass; 7431 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  151    -5.0%   -13.2%   -43.9%   -86.9%    58%
-SCOUT PASS, killed later     92    +5.2%   +11.1%   -23.8%   -74.6%    49%
-KILLED (tracked)          17169    +0.1%   -59.3%   -84.6%    -0.1%    27%
+FINAL PASS                  151    -5.0%   -13.2%   -43.9%   -86.5%    58%
+SCOUT PASS, killed later     93    +5.4%   +11.6%   -23.8%   -74.6%    48%
+KILLED (tracked)          17172    +0.1%   -59.3%   -84.6%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -45,26 +45,26 @@ SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        67    -52.9%    -93.3%    61%
-70-79      93    -44.7%    -71.8%    51%
+70-79      93    -44.7%    -71.4%    51%
 60-69      58    -34.6%    -92.5%    57%
-<60        25     -7.4%    -63.7%    48%
+<60        26     -7.4%    -63.7%    46%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      947     +0.0%    -12.0%    -45.5%    27%
+none      948     +0.0%    -12.0%    -46.0%    27%
 <15%      200     +1.2%    -13.7%    -32.9%    36%
 15-30%     40     -1.2%     -2.4%     +0.4%    32%
 30%+       34     -0.6%     -0.7%     +1.9%    32%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      829     +0.0%     -2.7%    -31.6%    25%
-<20%      338     +0.4%    -58.5%    -93.0%    30%
+none      830     +0.0%     -2.7%    -31.6%    25%
+<20%      338     +0.4%    -58.5%    -92.9%    30%
 20%+       54     -0.4%    -99.0%       -      80%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1167     +0.1%     -7.5%    -39.2%    26%
+<20%     1168     +0.1%     -7.5%    -39.4%    26%
 20-40%     35     -4.5%    -99.0%    -99.1%    77%
 40%+       19    -98.5%    -98.6%       -      79%
-tokens analysed: 1062 | helius credits today: 9213/25000
+tokens analysed: 1063 | helius credits today: 9270/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -115,7 +115,7 @@ last trades:
   UCASH        $16.39 -> $14.30 (-12.8%)  stop  0.7h
   MCAT         $16.28 -> $14.16 (-13.0%)  stop  0.2h
   MCAT         $16.18 -> $0.00 (-100.0%)  dead_no_route  1.8h
-signals skipped by the sizer/risk rules: already_traded_token 574, daily_loss_limit 319, cooldown_after_loss 18, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 574, daily_loss_limit 320, cooldown_after_loss 18, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
