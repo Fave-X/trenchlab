@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-22 14:22 UTC
+Updated: 2026-11-22 14:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           121842
+pools seen           121878
 passed SCOUT         237
   killed by SCORE    34
   killed by AUDIT    57
 FINAL PASS           146
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   120154
-  few_unique_buyers           114701
-  liquidity_low               112844
-  volume_below_liquidity       85887
-  sells_dominate               32196
-  wash_churn                   25707
-  overheated                   10929
-  missing                       3296
+  too_young                   120190
+  few_unique_buyers           114735
+  liquidity_low               112874
+  volume_below_liquidity       85914
+  sells_dominate               32202
+  wash_churn                   25713
+  overheated                   10934
+  missing                       3300
   too_old                       1232
   rc_danger                       18
 
-OUTCOMES (median price change from first sighting / first pass; 7324 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 7325 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  146    -5.0%   -13.0%   -44.0%   -87.5%    59%
 SCOUT PASS, killed later     91    +5.4%   +11.1%   -23.8%   -74.6%    47%
-KILLED (tracked)          16812    +0.1%   -59.8%   -84.6%    +0.4%    28%
+KILLED (tracked)          16815    +0.1%   -59.8%   -84.6%    +0.4%    28%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     318    -95.5%    -68.9%    28%
+too_young                     319    -95.5%    -68.9%    28%
 wash_churn                     53     -1.2%    -85.6%    26%
 too_old                        46     -0.6%     -0.4%    11%
 liquidity_low                  33    -69.9%    -49.8%    61%
@@ -52,19 +52,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      906     -0.0%    -12.5%    -45.5%    28%
+none      907     -0.0%    -12.5%    -45.5%    28%
 <15%      192     +0.7%    -13.1%    -32.7%    35%
 15-30%     38     -1.2%     -2.4%     +0.4%    34%
 30%+       33     -0.5%     -0.7%     +1.9%    30%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      789     -0.0%     -2.7%    -31.6%    26%
-<20%      327     -0.2%    -58.4%    -92.9%    30%
+<20%      328     -0.2%    -58.4%    -92.9%    30%
 20%+       53     +4.3%    -98.9%       -      79%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1117     +0.0%     -7.5%    -38.9%    27%
+<20%     1118     +0.0%     -7.5%    -38.9%    27%
 20-40%     34     -4.6%    -99.0%    -99.1%    79%
 40%+       18    -97.5%    -98.6%       -      78%
-tokens analysed: 1014 | helius credits today: 5590/25000
+tokens analysed: 1015 | helius credits today: 5651/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -76,7 +76,7 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -10%     30%  146    25%     -9.9%   -18.9%   -99.7%
   -15%     12%  146    29%     -9.3%   -19.6%   -99.7%
   -15%     20%  146    32%     -9.6%   -20.4%   -99.7%
-  -15%     30%  146    30%     -9.8%   -21.0%   -99.7%
+  -15%     30%  146    30%     -9.7%   -21.0%   -99.7%
   -25%     12%  146    33%    -11.8%   -20.0%   -99.7%
   -25%     20%  146    36%    -13.5%   -29.8%   -99.7%
   -25%     30%  146    34%    -13.8%   -30.9%   -99.7%
