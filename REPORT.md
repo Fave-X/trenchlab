@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-23 10:42 UTC
+Updated: 2026-11-23 10:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           127793
+pools seen           127841
 passed SCOUT         253
   killed by SCORE    36
   killed by AUDIT    62
 FINAL PASS           155
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   126072
-  few_unique_buyers           120248
-  liquidity_low               118348
-  volume_below_liquidity       90176
-  sells_dominate               33824
-  wash_churn                   26922
-  overheated                   11513
+  too_young                   126120
+  few_unique_buyers           120291
+  liquidity_low               118391
+  volume_below_liquidity       90213
+  sells_dominate               33839
+  wash_churn                   26934
+  overheated                   11520
   missing                       3406
   too_old                       1252
   rc_danger                       20
 
-OUTCOMES (median price change from first sighting / first pass; 7614 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 7616 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  155    -4.9%   -11.7%   -42.6%   -86.5%    57%
 SCOUT PASS, killed later     98    +5.2%   +11.1%   -13.5%   -74.6%    47%
-KILLED (tracked)          17688    +0.1%   -59.1%   -84.6%    -0.1%    27%
+KILLED (tracked)          17696    +0.1%   -59.1%   -84.6%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     369    -93.5%    -68.9%    26%
+too_young                     369    -93.8%    -68.9%    26%
 wash_churn                     55    -23.3%    -85.6%    25%
 too_old                        49     -0.6%     -0.4%    10%
 liquidity_low                  33    -69.9%    -49.8%    61%
@@ -53,7 +53,7 @@ CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
 none      991     +0.0%     -9.9%    -46.6%    27%
-<15%      225     +2.4%    -13.7%    -32.9%    33%
+<15%      225     +2.4%    -14.2%    -32.9%    33%
 15-30%     44     -0.7%     -2.0%     +0.4%    32%
 30%+       34     -0.6%     -0.7%     +1.9%    32%
 bundled     n   +1h med   +4h med  +24h med   rug%
@@ -61,7 +61,7 @@ none      871     +0.0%     -2.5%    -32.1%    25%
 <20%      368     +3.0%    -58.2%    -92.9%    29%
 20%+       55     -0.7%    -99.0%       -      80%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1241     +0.2%     -6.1%    -39.7%    26%
+<20%     1241     +0.2%     -6.2%    -39.7%    26%
 20-40%     34     -4.6%    -99.0%    -99.1%    79%
 40%+       19    -98.5%    -98.6%       -      79%
 tokens analysed: 1132 | helius credits today: 5038/25000
@@ -114,7 +114,7 @@ last trades:
   COPIUM       $15.21 -> $13.38 (-12.0%)  stop  1.0h
   Fly          $15.11 -> $13.32 (-11.9%)  stop  0.2h
   cCAT         $15.02 -> $17.11 (+13.9%)  trail  0.3h
-signals skipped by the sizer/risk rules: already_traded_token 584, daily_loss_limit 322, cooldown_after_loss 18, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 585, daily_loss_limit 322, cooldown_after_loss 18, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
