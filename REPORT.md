@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-23 20:22 UTC
+Updated: 2026-11-23 20:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           130802
+pools seen           130852
 passed SCOUT         257
   killed by SCORE    36
   killed by AUDIT    65
 FINAL PASS           156
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   129043
-  few_unique_buyers           123084
-  liquidity_low               120982
-  volume_below_liquidity       92204
-  sells_dominate               34750
-  wash_churn                   27454
-  overheated                   11782
+  too_young                   129093
+  few_unique_buyers           123132
+  liquidity_low               121031
+  volume_below_liquidity       92249
+  sells_dominate               34770
+  wash_churn                   27460
+  overheated                   11785
   missing                       3624
   too_old                       1283
   rc_danger                       20
 
-OUTCOMES (median price change from first sighting / first pass; 7738 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 7743 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  156    -4.7%   -12.0%   -42.6%   -85.9%    58%
 SCOUT PASS, killed later    101    +5.4%    +9.1%   -13.5%   -74.6%    49%
-KILLED (tracked)          18084    +0.1%   -59.5%   -84.8%    -0.1%    27%
+KILLED (tracked)          18093    +0.1%   -59.6%   -84.9%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     382    -90.5%    -68.9%    25%
+too_young                     383    -90.5%    -68.9%    25%
 wash_churn                     55    -23.3%    -85.6%    25%
 too_old                        50     -0.6%     -0.4%    10%
 liquidity_low                  35    -69.9%    -49.8%    57%
@@ -52,19 +52,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1019     +0.0%     -9.9%    -47.5%    27%
-<15%      233     +2.3%    -14.2%    -36.5%    33%
+none     1020     +0.0%     -9.9%    -47.5%    27%
+<15%      234     +2.3%    -14.2%    -36.5%    33%
 15-30%     43     -0.5%     -2.4%     +0.4%    33%
 30%+       34     -0.6%     -0.7%     +1.9%    32%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      894     +0.0%     -2.5%    -32.5%    25%
-<20%      379     +2.8%    -58.2%    -92.8%    28%
+none      895     +0.0%     -2.5%    -32.5%    25%
+<20%      380     +2.8%    -58.2%    -92.8%    28%
 20%+       56     -2.9%    -99.0%       -      80%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1276     +0.2%     -6.4%    -40.0%    26%
+<20%     1278     +0.2%     -6.4%    -40.0%    26%
 20-40%     34     -4.6%    -99.0%    -99.1%    79%
 40%+       19    -98.5%    -98.6%       -      79%
-tokens analysed: 1167 | helius credits today: 8313/25000
+tokens analysed: 1169 | helius credits today: 8495/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -79,7 +79,7 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     30%  156    30%     -9.7%   -21.0%   -99.7%
   -25%     12%  156    35%    -10.9%   -15.3%   -99.7%
   -25%     20%  156    38%    -12.7%   -29.3%   -99.7%
-  -25%     30%  156    35%    -12.7%   -30.5%   -99.7%
+  -25%     30%  156    35%    -12.8%   -30.5%   -99.7%
   best so far: stop -15%, trail from +12% -> avg -8.9% per trade over n=156
 
 ================================================================
