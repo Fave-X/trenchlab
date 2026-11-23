@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-23 18:52 UTC
+Updated: 2026-11-23 19:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           130373
-passed SCOUT         256
+pools seen           130427
+passed SCOUT         257
   killed by SCORE    36
   killed by AUDIT    65
-FINAL PASS           155
+FINAL PASS           156
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   128619
-  few_unique_buyers           122678
-  liquidity_low               120609
-  volume_below_liquidity       91918
-  sells_dominate               34623
-  wash_churn                   27384
-  overheated                   11751
+  too_young                   128673
+  few_unique_buyers           122728
+  liquidity_low               120662
+  volume_below_liquidity       91951
+  sells_dominate               34640
+  wash_churn                   27393
+  overheated                   11755
   missing                       3587
   too_old                       1278
   rc_danger                       20
 
 OUTCOMES (median price change from first sighting / first pass; 7713 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  155    -4.9%   -11.7%   -42.6%   -86.0%    58%
-SCOUT PASS, killed later    101    +5.4%   +10.7%   -13.5%   -74.6%    47%
-KILLED (tracked)          18028    +0.1%   -59.3%   -84.9%    -0.1%    27%
+FINAL PASS                  156    -4.9%   -11.7%   -42.6%   -86.0%    58%
+SCOUT PASS, killed later    101    +5.4%    +9.1%   -13.5%   -74.6%    47%
+KILLED (tracked)          18036    +0.1%   -59.3%   -84.9%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -44,7 +44,7 @@ sells_dominate                  3    -75.0%       -      67%
 SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
-80+        70    -51.8%    -93.3%    59%
+80+        71    -51.8%    -93.3%    58%
 70-79     100    -43.9%    -71.8%    50%
 60-69      61    -30.1%    -92.5%    56%
 <60        25     -7.4%    -63.7%    48%
@@ -53,13 +53,13 @@ CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
 none     1015     +0.0%     -9.2%    -46.6%    27%
-<15%      231     +2.8%    -13.7%    -36.5%    32%
+<15%      231     +2.4%    -13.7%    -36.5%    32%
 15-30%     43     -0.5%     -2.4%     +0.4%    33%
 30%+       34     -0.6%     -0.7%     +1.9%    32%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      889     +0.0%     -2.4%    -32.1%    25%
 <20%      378     +3.0%    -58.2%    -92.8%    28%
-20%+       56     -0.7%    -99.0%       -      79%
+20%+       56     -2.9%    -99.0%       -      79%
 fresh       n   +1h med   +4h med  +24h med   rug%
 <20%     1270     +0.2%     -6.1%    -39.9%    26%
 20-40%     34     -4.6%    -99.0%    -99.1%    79%
@@ -94,17 +94,19 @@ win rate                         22%           23%
 avg net / trade                -9.3%         -9.2%
 expectancy $/trade            $-1.92        $-1.97
 max drawdown                  -42.2%        -38.5%
-open now                           0             0
+open now                           1             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $302.57 (-39.5%) | cash $302.57 | open 0 | max drawdown -42.2%
+equity $302.57 (-39.5%) | cash $287.44 | open 1 | max drawdown -42.2%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 103 | win 23/103 (22%) | avg net -9.3% | realized $-197.43 | expectancy $-1.92/trade
 exits: stop 75, trail 27, dead_no_route 1
+open:
+  JENSEN       cost $15.13  now $15.13 (+0.0%)  held 0.0h
 last trades:
   snowball     $16.45 -> $15.21 (-7.5%)  trail  0.3h
   UCASH        $16.39 -> $14.30 (-12.8%)  stop  0.7h
