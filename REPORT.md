@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-23 23:12 UTC
+Updated: 2026-11-23 23:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           131651
+pools seen           131699
 passed SCOUT         259
   killed by SCORE    36
   killed by AUDIT    65
 FINAL PASS           158
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   129886
-  few_unique_buyers           123878
-  liquidity_low               121755
-  volume_below_liquidity       92804
-  sells_dominate               34988
-  wash_churn                   27582
-  overheated                   11855
+  too_young                   129932
+  few_unique_buyers           123923
+  liquidity_low               121802
+  volume_below_liquidity       92840
+  sells_dominate               35006
+  wash_churn                   27588
+  overheated                   11859
   missing                       3665
-  too_old                       1287
+  too_old                       1288
   rc_danger                       20
 
-OUTCOMES (median price change from first sighting / first pass; 7826 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 7829 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  158    -4.9%   -12.0%   -41.3%   -85.9%    58%
+FINAL PASS                  158    -5.0%   -12.0%   -41.3%   -85.9%    58%
 SCOUT PASS, killed later    101    +5.4%    +9.1%   -19.5%   -75.1%    49%
-KILLED (tracked)          18198    +0.1%   -59.7%   -85.0%    -0.1%    27%
+KILLED (tracked)          18204    +0.1%   -59.6%   -85.0%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -58,7 +58,7 @@ none     1031     +0.0%    -10.5%    -48.4%    26%
 30%+       35     -0.7%     -0.7%     +1.9%    34%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      901     +0.1%     -2.5%    -33.1%    25%
-<20%      387     +2.8%    -58.2%    -92.1%    28%
+<20%      387     +2.9%    -58.2%    -92.1%    28%
 20%+       57     -5.1%    -99.0%       -      81%
 fresh       n   +1h med   +4h med  +24h med   rug%
 <20%     1291     +0.3%     -6.8%    -40.8%    26%
@@ -74,13 +74,13 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -10%     12%  158    25%     -9.6%   -17.1%   -99.7%
   -10%     20%  158    27%    -10.0%   -17.6%   -99.7%
   -10%     30%  158    25%    -10.1%   -18.6%   -99.7%
-  -15%     12%  158    30%     -9.1%   -19.2%   -99.7%
-  -15%     20%  158    32%     -9.5%   -20.3%   -99.7%
-  -15%     30%  158    30%     -9.9%   -21.0%   -99.7%
-  -25%     12%  158    34%    -11.1%   -15.5%   -99.7%
-  -25%     20%  158    37%    -12.9%   -29.3%   -99.7%
-  -25%     30%  158    35%    -13.0%   -30.7%   -99.7%
-  best so far: stop -15%, trail from +12% -> avg -9.1% per trade over n=158
+  -15%     12%  158    30%     -9.2%   -19.4%   -99.7%
+  -15%     20%  158    32%     -9.7%   -20.4%   -99.7%
+  -15%     30%  158    30%    -10.1%   -21.1%   -99.7%
+  -25%     12%  158    34%    -11.2%   -16.3%   -99.7%
+  -25%     20%  158    37%    -13.0%   -29.5%   -99.7%
+  -25%     30%  158    35%    -13.2%   -30.8%   -99.7%
+  best so far: stop -15%, trail from +12% -> avg -9.2% per trade over n=158
 
 ================================================================
 A vs B (same sizing, exits and costs; only the entry rule differs)
