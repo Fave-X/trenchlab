@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-23 05:02 UTC
+Updated: 2026-11-23 05:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           126163
+pools seen           126216
 passed SCOUT         248
   killed by SCORE    35
   killed by AUDIT    59
 FINAL PASS           154
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   124450
-  few_unique_buyers           118752
-  liquidity_low               116849
-  volume_below_liquidity       89026
-  sells_dominate               33359
-  wash_churn                   26507
-  overheated                   11337
-  missing                       3377
-  too_old                       1246
+  too_young                   124501
+  few_unique_buyers           118799
+  liquidity_low               116898
+  volume_below_liquidity       89066
+  sells_dominate               33373
+  wash_churn                   26517
+  overheated                   11342
+  missing                       3378
+  too_old                       1248
   rc_danger                       20
 
-OUTCOMES (median price change from first sighting / first pass; 7533 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 7535 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  154    -4.9%   -12.5%   -43.9%   -86.9%    57%
+FINAL PASS                  154    -5.0%   -12.5%   -43.9%   -86.9%    57%
 SCOUT PASS, killed later     94    +5.6%   +10.7%   -13.5%   -74.6%    49%
-KILLED (tracked)          17429    +0.1%   -59.1%   -84.4%    -0.1%    27%
+KILLED (tracked)          17437    +0.1%   -59.1%   -84.4%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -77,7 +77,7 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     12%  154    29%     -9.1%   -19.2%   -99.7%
   -15%     20%  154    32%     -9.6%   -20.3%   -99.7%
   -15%     30%  154    29%     -9.9%   -21.0%   -99.7%
-  -25%     12%  154    33%    -11.3%   -16.3%   -99.7%
+  -25%     12%  154    33%    -11.4%   -16.9%   -99.7%
   -25%     20%  154    36%    -13.2%   -29.5%   -99.7%
   -25%     30%  154    34%    -13.6%   -30.7%   -99.7%
   best so far: stop -15%, trail from +12% -> avg -9.1% per trade over n=154
