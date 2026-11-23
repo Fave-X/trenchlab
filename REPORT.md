@@ -1,25 +1,25 @@
 # TrenchLab report
 
-Updated: 2026-11-23 17:42 UTC
+Updated: 2026-11-23 17:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           130001
+pools seen           130043
 passed SCOUT         255
   killed by SCORE    36
   killed by AUDIT    64
 FINAL PASS           155
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   128251
-  few_unique_buyers           122328
-  liquidity_low               120256
-  volume_below_liquidity       91635
-  sells_dominate               34519
-  wash_churn                   27332
-  overheated                   11718
+  too_young                   128293
+  few_unique_buyers           122367
+  liquidity_low               120296
+  volume_below_liquidity       91669
+  sells_dominate               34524
+  wash_churn                   27340
+  overheated                   11723
   missing                       3585
   too_old                       1276
   rc_danger                       20
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 7702 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  155    -4.9%   -11.7%   -42.6%   -86.5%    57%
 SCOUT PASS, killed later    100    +5.2%   +10.7%   -13.5%   -74.6%    47%
-KILLED (tracked)          17972    +0.1%   -59.3%   -84.8%    -0.1%    27%
+KILLED (tracked)          17977    +0.1%   -59.3%   -84.8%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -53,18 +53,18 @@ CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
 none     1013     +0.0%     -9.2%    -46.6%    27%
-<15%      229     +2.4%    -13.7%    -32.9%    33%
+<15%      230     +2.4%    -13.7%    -32.9%    33%
 15-30%     43     -0.5%     -2.4%     +0.4%    33%
 30%+       34     -0.6%     -0.7%     +1.9%    32%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      887     +0.0%     -2.4%    -32.1%    25%
-<20%      377     +3.0%    -57.8%    -92.9%    28%
+<20%      378     +3.0%    -57.8%    -92.9%    28%
 20%+       55     -0.7%    -99.0%       -      80%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1266     +0.3%     -6.0%    -39.7%    26%
+<20%     1267     +0.3%     -6.0%    -39.7%    26%
 20-40%     34     -4.6%    -99.0%    -99.1%    79%
 40%+       19    -98.5%    -98.6%       -      79%
-tokens analysed: 1157 | helius credits today: 7357/25000
+tokens analysed: 1158 | helius credits today: 7413/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -94,7 +94,7 @@ win rate                         22%           23%
 avg net / trade                -9.3%         -8.9%
 expectancy $/trade            $-1.92        $-1.93
 max drawdown                  -42.2%        -37.5%
-open now                           0             0
+open now                           0             1
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -120,11 +120,13 @@ signals skipped by the sizer/risk rules: already_traded_token 587, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $339.73 (-32.1%) | cash $339.73 | open 0 | max drawdown -37.5%
+equity $339.73 (-32.1%) | cash $322.74 | open 1 | max drawdown -37.5%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 83 | win 19/83 (23%) | avg net -8.9% | realized $-160.27 | expectancy $-1.93/trade
 exits: stop 63, trail 20
   (n=83 < 100: noise, not evidence)
+open:
+  sexcoin      cost $16.99  now $16.99 (+0.0%)  held 0.0h
 last trades:
   XV           $17.74 -> $15.04 (-15.2%)  stop  0.2h
   Bigfoot      $17.60 -> $15.48 (-12.1%)  stop  0.5h
