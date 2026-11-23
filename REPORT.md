@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-23 22:23 UTC
+Updated: 2026-11-23 22:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           131377
+pools seen           131436
 passed SCOUT         258
   killed by SCORE    36
   killed by AUDIT    65
 FINAL PASS           157
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   129614
-  few_unique_buyers           123628
-  liquidity_low               121496
-  volume_below_liquidity       92611
-  sells_dominate               34908
-  wash_churn                   27537
-  overheated                   11831
+  too_young                   129673
+  few_unique_buyers           123680
+  liquidity_low               121552
+  volume_below_liquidity       92655
+  sells_dominate               34927
+  wash_churn                   27549
+  overheated                   11836
   missing                       3664
   too_old                       1285
   rc_danger                       20
 
-OUTCOMES (median price change from first sighting / first pass; 7775 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 7776 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  157    -4.7%   -12.0%   -42.6%   -85.9%    57%
 SCOUT PASS, killed later    101    +5.4%    +9.1%   -19.5%   -75.1%    49%
-KILLED (tracked)          18155    +0.1%   -59.6%   -85.0%    -0.1%    27%
+KILLED (tracked)          18165    +0.1%   -59.6%   -85.0%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -68,47 +68,44 @@ tokens analysed: 1176 | helius credits today: 9103/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%  156    22%     -9.5%   -14.3%   -99.7%
-   -6%     20%  156    24%     -9.8%   -14.7%   -99.7%
-   -6%     30%  156    21%    -10.0%   -15.3%   -99.7%
-  -10%     12%  156    26%     -9.4%   -17.1%   -99.7%
-  -10%     20%  156    27%     -9.8%   -17.6%   -99.7%
-  -10%     30%  156    25%     -9.9%   -18.6%   -99.7%
-  -15%     12%  156    30%     -8.9%   -19.2%   -99.7%
-  -15%     20%  156    33%     -9.3%   -20.3%   -99.7%
-  -15%     30%  156    30%     -9.7%   -21.0%   -99.7%
-  -25%     12%  156    35%    -10.9%   -15.3%   -99.7%
-  -25%     20%  156    38%    -12.7%   -29.3%   -99.7%
-  -25%     30%  156    35%    -12.9%   -30.7%   -99.7%
-  best so far: stop -15%, trail from +12% -> avg -8.9% per trade over n=156
+   -6%     12%  157    22%     -9.6%   -14.5%   -99.7%
+   -6%     20%  157    24%     -9.9%   -14.9%   -99.7%
+   -6%     30%  157    21%    -10.1%   -15.6%   -99.7%
+  -10%     12%  157    25%     -9.6%   -17.1%   -99.7%
+  -10%     20%  157    27%    -10.0%   -17.7%   -99.7%
+  -10%     30%  157    25%    -10.0%   -18.6%   -99.7%
+  -15%     12%  157    30%     -9.0%   -19.3%   -99.7%
+  -15%     20%  157    32%     -9.5%   -20.4%   -99.7%
+  -15%     30%  157    30%     -9.9%   -21.0%   -99.7%
+  -25%     12%  157    34%    -11.1%   -15.6%   -99.7%
+  -25%     20%  157    38%    -12.8%   -29.3%   -99.7%
+  -25%     30%  157    35%    -13.0%   -30.8%   -99.7%
+  best so far: stop -15%, trail from +12% -> avg -9.0% per trade over n=157
 
 ================================================================
 A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $301.94       $330.06
-return                        -39.6%        -34.0%
-closed trades                    104            85
+equity                       $296.83       $330.06
+return                        -40.6%        -34.0%
+closed trades                    105            85
 win rate                         22%           22%
-avg net / trade                -9.2%         -9.4%
-expectancy $/trade            $-1.90        $-2.00
-max drawdown                  -42.2%        -39.3%
-open now                           1             0
+avg net / trade                -9.4%         -9.4%
+expectancy $/trade            $-1.93        $-2.00
+max drawdown                  -42.9%        -39.3%
+open now                           0             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $301.94 (-39.6%) | cash $286.84 | open 1 | max drawdown -42.2%
+equity $296.83 (-40.6%) | cash $296.83 | open 0 | max drawdown -42.9%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 104 | win 23/104 (22%) | avg net -9.2% | realized $-198.06 | expectancy $-1.90/trade
-exits: stop 75, trail 28, dead_no_route 1
-open:
-  ChristmASS   cost $15.10  now $15.10 (+0.0%)  held 0.1h
+closed 105 | win 23/105 (22%) | avg net -9.4% | realized $-203.17 | expectancy $-1.93/trade
+exits: stop 76, trail 28, dead_no_route 1
 last trades:
-  UCASH        $16.39 -> $14.30 (-12.8%)  stop  0.7h
   MCAT         $16.28 -> $14.16 (-13.0%)  stop  0.2h
   MCAT         $16.18 -> $0.00 (-100.0%)  dead_no_route  1.8h
   OpenIndex    $15.37 -> $12.15 (-20.9%)  stop  0.3h
@@ -116,6 +113,7 @@ last trades:
   Fly          $15.11 -> $13.32 (-11.9%)  stop  0.2h
   cCAT         $15.02 -> $17.11 (+13.9%)  trail  0.3h
   JENSEN       $15.13 -> $14.50 (-4.2%)  trail  0.8h
+  ChristmASS   $15.10 -> $9.98 (-33.9%)  stop  0.2h
 signals skipped by the sizer/risk rules: already_traded_token 588, daily_loss_limit 322, cooldown_after_loss 18, max_open_positions 5
 
 ================================================================
