@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-23 11:12 UTC
+Updated: 2026-11-23 11:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           127955
+pools seen           127988
 passed SCOUT         254
   killed by SCORE    36
   killed by AUDIT    63
 FINAL PASS           155
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   126232
-  few_unique_buyers           120392
-  liquidity_low               118475
-  volume_below_liquidity       90281
-  sells_dominate               33868
-  wash_churn                   26960
-  overheated                   11531
-  missing                       3422
+  too_young                   126265
+  few_unique_buyers           120421
+  liquidity_low               118503
+  volume_below_liquidity       90303
+  sells_dominate               33876
+  wash_churn                   26965
+  overheated                   11536
+  missing                       3425
   too_old                       1252
   rc_danger                       20
 
-OUTCOMES (median price change from first sighting / first pass; 7623 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 7628 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  155    -4.9%   -11.7%   -42.6%   -86.5%    57%
 SCOUT PASS, killed later     99    +5.4%   +11.1%   -13.5%   -74.6%    46%
-KILLED (tracked)          17721    +0.1%   -59.1%   -84.6%    -0.1%    27%
+KILLED (tracked)          17726    +0.1%   -59.1%   -84.6%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -52,19 +52,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none      995     +0.0%    -10.5%    -46.6%    27%
-<15%      225     +2.4%    -14.2%    -32.9%    33%
+none      997     +0.0%     -9.9%    -46.6%    26%
+<15%      224     +2.3%    -14.9%    -32.9%    33%
 15-30%     44     -0.7%     -2.0%     +0.4%    32%
 30%+       34     -0.6%     -0.7%     +1.9%    32%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      875     +0.0%     -2.5%    -32.1%    25%
+none      876     +0.0%     -2.5%    -32.1%    25%
 <20%      368     +3.0%    -58.2%    -92.9%    29%
 20%+       55     -0.7%    -99.0%       -      80%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1245     +0.2%     -6.4%    -39.7%    26%
+<20%     1246     +0.2%     -6.4%    -39.7%    26%
 20-40%     34     -4.6%    -99.0%    -99.1%    79%
 40%+       19    -98.5%    -98.6%       -      79%
-tokens analysed: 1136 | helius credits today: 5275/25000
+tokens analysed: 1137 | helius credits today: 5420/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -94,7 +94,7 @@ win rate                         22%           23%
 avg net / trade                -9.3%         -8.8%
 expectancy $/trade            $-1.92        $-1.91
 max drawdown                  -42.2%        -37.3%
-open now                           0             0
+open now                           0             1
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -120,11 +120,13 @@ signals skipped by the sizer/risk rules: already_traded_token 586, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $343.59 (-31.3%) | cash $343.59 | open 0 | max drawdown -37.3%
+equity $343.59 (-31.3%) | cash $326.41 | open 1 | max drawdown -37.3%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 82 | win 19/82 (23%) | avg net -8.8% | realized $-156.41 | expectancy $-1.91/trade
 exits: stop 62, trail 20
   (n=82 < 100: noise, not evidence)
+open:
+  FSDV15       cost $17.18  now $17.18 (+0.0%)  held 0.0h
 last trades:
   JENSEN       $17.61 -> $20.21 (+14.8%)  trail  0.5h
   XV           $17.74 -> $15.04 (-15.2%)  stop  0.2h
