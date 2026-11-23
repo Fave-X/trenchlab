@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-23 17:52 UTC
+Updated: 2026-11-23 18:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           130043
+pools seen           130085
 passed SCOUT         255
   killed by SCORE    36
   killed by AUDIT    64
 FINAL PASS           155
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   128293
-  few_unique_buyers           122367
-  liquidity_low               120296
-  volume_below_liquidity       91669
-  sells_dominate               34524
-  wash_churn                   27340
-  overheated                   11723
+  too_young                   128335
+  few_unique_buyers           122407
+  liquidity_low               120334
+  volume_below_liquidity       91702
+  sells_dominate               34535
+  wash_churn                   27345
+  overheated                   11728
   missing                       3585
   too_old                       1276
   rc_danger                       20
 
-OUTCOMES (median price change from first sighting / first pass; 7702 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 7704 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  155    -4.9%   -11.7%   -42.6%   -86.5%    57%
 SCOUT PASS, killed later    100    +5.2%   +10.7%   -13.5%   -74.6%    47%
-KILLED (tracked)          17977    +0.1%   -59.3%   -84.8%    -0.1%    27%
+KILLED (tracked)          17985    +0.1%   -59.3%   -84.8%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -58,10 +58,10 @@ none     1013     +0.0%     -9.2%    -46.6%    27%
 30%+       34     -0.6%     -0.7%     +1.9%    32%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      887     +0.0%     -2.4%    -32.1%    25%
-<20%      378     +3.0%    -57.8%    -92.9%    28%
+<20%      378     +2.9%    -57.8%    -92.9%    28%
 20%+       55     -0.7%    -99.0%       -      80%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1267     +0.3%     -6.0%    -39.7%    26%
+<20%     1267     +0.2%     -6.0%    -39.7%    26%
 20-40%     34     -4.6%    -99.0%    -99.1%    79%
 40%+       19    -98.5%    -98.6%       -      79%
 tokens analysed: 1158 | helius credits today: 7413/25000
@@ -87,8 +87,8 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $302.57       $339.73
-return                        -39.5%        -32.1%
+equity                       $302.57       $341.61
+return                        -39.5%        -31.7%
 closed trades                    103            83
 win rate                         22%           23%
 avg net / trade                -9.3%         -8.9%
@@ -120,13 +120,13 @@ signals skipped by the sizer/risk rules: already_traded_token 587, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $339.73 (-32.1%) | cash $322.74 | open 1 | max drawdown -37.5%
+equity $341.61 (-31.7%) | cash $322.74 | open 1 | max drawdown -37.5%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 83 | win 19/83 (23%) | avg net -8.9% | realized $-160.27 | expectancy $-1.93/trade
 exits: stop 63, trail 20
   (n=83 < 100: noise, not evidence)
 open:
-  sexcoin      cost $16.99  now $16.99 (+0.0%)  held 0.0h
+  sexcoin      cost $16.99  now $18.87 (+11.1%)  held 0.2h
 last trades:
   XV           $17.74 -> $15.04 (-15.2%)  stop  0.2h
   Bigfoot      $17.60 -> $15.48 (-12.1%)  stop  0.5h
@@ -136,7 +136,7 @@ last trades:
   cCAT         $17.38 -> $13.20 (-24.0%)  stop  0.2h
   UCASH        $17.17 -> $17.37 (+1.2%)  trail  0.8h
   FSDV15       $17.18 -> $13.32 (-22.5%)  stop  0.7h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 436, daily_loss_limit 239, setup_rejected:sellers_dominate_now 142, setup_rejected:dumping_now 141, setup_rejected:b_bundled 74, setup_rejected:volume_dried_up 59, setup_rejected:operator_cluster 41, setup_rejected:clustered_supply 36, setup_rejected:lp_not_locked 34, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 436, daily_loss_limit 239, setup_rejected:sellers_dominate_now 142, setup_rejected:dumping_now 141, setup_rejected:b_bundled 74, setup_rejected:volume_dried_up 59, setup_rejected:operator_cluster 41, setup_rejected:clustered_supply 37, setup_rejected:lp_not_locked 34, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
