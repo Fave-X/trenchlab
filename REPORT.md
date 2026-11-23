@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-23 01:22 UTC
+Updated: 2026-11-23 01:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           125055
+pools seen           125099
 passed SCOUT         245
   killed by SCORE    34
   killed by AUDIT    59
 FINAL PASS           152
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   123346
-  few_unique_buyers           117724
-  liquidity_low               115844
-  volume_below_liquidity       88260
-  sells_dominate               33052
-  wash_churn                   26277
-  overheated                   11234
+  too_young                   123390
+  few_unique_buyers           117765
+  liquidity_low               115887
+  volume_below_liquidity       88293
+  sells_dominate               33062
+  wash_churn                   26281
+  overheated                   11237
   missing                       3335
   too_old                       1245
   rc_danger                       20
 
-OUTCOMES (median price change from first sighting / first pass; 7469 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 7471 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  152    -5.0%   -13.0%   -43.9%   -86.5%    58%
 SCOUT PASS, killed later     93    +5.4%   +11.1%   -23.8%   -74.6%    48%
-KILLED (tracked)          17264    +0.1%   -59.3%   -84.6%    -0.1%    27%
+KILLED (tracked)          17273    +0.1%   -59.3%   -84.4%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -70,16 +70,16 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
    -6%     12%  152    22%     -9.6%   -14.7%   -99.7%
    -6%     20%  152    24%     -9.9%   -14.9%   -99.7%
-   -6%     30%  152    21%     -9.9%   -15.7%   -99.7%
+   -6%     30%  152    22%     -9.9%   -15.7%   -99.7%
   -10%     12%  152    26%     -9.5%   -17.6%   -99.7%
   -10%     20%  152    27%     -9.9%   -18.0%   -99.7%
-  -10%     30%  152    25%     -9.8%   -18.6%   -99.7%
+  -10%     30%  152    26%     -9.8%   -18.6%   -99.7%
   -15%     12%  152    30%     -9.1%   -19.4%   -99.7%
   -15%     20%  152    32%     -9.6%   -20.4%   -99.7%
   -15%     30%  152    30%     -9.7%   -21.0%   -99.7%
   -25%     12%  152    34%    -11.4%   -17.4%   -99.7%
   -25%     20%  152    37%    -13.2%   -29.7%   -99.7%
-  -25%     30%  152    34%    -13.8%   -30.8%   -99.7%
+  -25%     30%  152    34%    -13.7%   -30.8%   -99.7%
   best so far: stop -15%, trail from +12% -> avg -9.1% per trade over n=152
 
 ================================================================
@@ -87,29 +87,25 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $308.62       $344.64
-return                        -38.3%        -31.1%
-closed trades                     99            79
+equity                       $304.11       $346.12
+return                        -39.2%        -30.8%
+closed trades                    100            79
 win rate                         22%           22%
-avg net / trade                -9.3%         -8.9%
-expectancy $/trade            $-1.95        $-1.94
-max drawdown                  -40.9%        -37.3%
-open now                           1             1
+avg net / trade                -9.4%         -8.9%
+expectancy $/trade            $-1.96        $-1.94
+max drawdown                  -41.5%        -37.3%
+open now                           0             1
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $308.62 (-38.3%) | cash $291.95 | open 1 | max drawdown -40.9%
+equity $304.11 (-39.2%) | cash $304.11 | open 0 | max drawdown -41.5%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 99 | win 22/99 (22%) | avg net -9.3% | realized $-192.68 | expectancy $-1.95/trade
-exits: stop 72, trail 26, dead_no_route 1
-  (n=99 < 100: noise, not evidence)
-open:
-  OpenIndex    cost $15.37  now $16.67 (+8.5%)  held 0.2h
+closed 100 | win 22/100 (22%) | avg net -9.4% | realized $-195.89 | expectancy $-1.96/trade
+exits: stop 73, trail 26, dead_no_route 1
 last trades:
-  Bigfoot      $16.46 -> $12.98 (-21.2%)  stop  0.2h
   HOUSE        $16.29 -> $14.03 (-13.9%)  stop  0.2h
   SIDOOR       $16.18 -> $17.90 (+10.6%)  trail  0.7h
   STREETS      $16.26 -> $19.94 (+22.7%)  trail  1.0h
@@ -117,19 +113,20 @@ last trades:
   UCASH        $16.39 -> $14.30 (-12.8%)  stop  0.7h
   MCAT         $16.28 -> $14.16 (-13.0%)  stop  0.2h
   MCAT         $16.18 -> $0.00 (-100.0%)  dead_no_route  1.8h
-signals skipped by the sizer/risk rules: already_traded_token 574, daily_loss_limit 322, cooldown_after_loss 18, max_open_positions 5
+  OpenIndex    $15.37 -> $12.15 (-20.9%)  stop  0.3h
+signals skipped by the sizer/risk rules: already_traded_token 575, daily_loss_limit 322, cooldown_after_loss 18, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $344.64 (-31.1%) | cash $329.03 | open 1 | max drawdown -37.3%
+equity $346.12 (-30.8%) | cash $329.03 | open 1 | max drawdown -37.3%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 79 | win 17/79 (22%) | avg net -8.9% | realized $-153.65 | expectancy $-1.94/trade
 exits: stop 61, trail 18
   (n=79 < 100: noise, not evidence)
 open:
-  MCAT         cost $17.32  now $15.62 (-9.8%)  held 0.7h
+  MCAT         cost $17.32  now $17.09 (-1.3%)  held 0.9h
 last trades:
   AI           $17.98 -> $19.59 (+8.9%)  trail  0.3h
   RIEMANN      $18.06 -> $13.90 (-23.0%)  stop  0.3h
