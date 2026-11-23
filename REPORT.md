@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-23 09:32 UTC
+Updated: 2026-11-23 09:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           127459
+pools seen           127508
 passed SCOUT         252
   killed by SCORE    36
   killed by AUDIT    61
 FINAL PASS           155
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   125738
-  few_unique_buyers           119940
-  liquidity_low               118043
-  volume_below_liquidity       89933
-  sells_dominate               33731
-  wash_churn                   26840
-  overheated                   11475
-  missing                       3397
+  too_young                   125787
+  few_unique_buyers           119986
+  liquidity_low               118086
+  volume_below_liquidity       89965
+  sells_dominate               33740
+  wash_churn                   26857
+  overheated                   11481
+  missing                       3402
   too_old                       1252
   rc_danger                       20
 
-OUTCOMES (median price change from first sighting / first pass; 7595 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 7599 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  155    -4.9%   -11.7%   -43.2%   -86.5%    57%
-SCOUT PASS, killed later     97    +5.4%   +10.7%   -19.5%   -74.6%    47%
-KILLED (tracked)          17632    +0.1%   -58.9%   -84.6%    -0.1%    27%
+SCOUT PASS, killed later     97    +5.4%   +11.1%   -13.5%   -74.6%    47%
+KILLED (tracked)          17636    +0.1%   -59.1%   -84.6%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -45,7 +45,7 @@ SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        69    -51.8%    -93.3%    59%
-70-79      97    -44.7%    -71.8%    49%
+70-79      97    -44.3%    -71.8%    49%
 60-69      61    -30.1%    -93.0%    54%
 <60        25     -7.4%    -63.7%    48%
 
@@ -53,15 +53,15 @@ CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
 none      987     +0.0%    -10.5%    -46.6%    27%
-<15%      222     +2.3%    -13.1%    -32.9%    33%
-15-30%     44     -0.7%     -2.4%     +0.4%    32%
+<15%      222     +2.4%    -12.6%    -32.9%    33%
+15-30%     44     -0.7%     -2.0%     +0.4%    32%
 30%+       34     -0.6%     -0.7%     +1.9%    32%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      867     +0.0%     -2.5%    -32.1%    25%
-<20%      365     +2.9%    -58.2%    -92.9%    28%
+<20%      365     +3.0%    -58.2%    -92.9%    28%
 20%+       55     -0.7%    -99.0%       -      80%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1234     +0.2%     -6.2%    -39.7%    26%
+<20%     1234     +0.2%     -6.1%    -39.7%    26%
 20-40%     34     -4.6%    -99.0%    -99.1%    79%
 40%+       19    -98.5%    -98.6%       -      79%
 tokens analysed: 1125 | helius credits today: 4600/25000
@@ -94,7 +94,7 @@ win rate                         22%           22%
 avg net / trade                -9.3%         -8.9%
 expectancy $/trade            $-1.92        $-1.93
 max drawdown                  -42.2%        -37.3%
-open now                           0             0
+open now                           0             1
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -120,11 +120,13 @@ signals skipped by the sizer/risk rules: already_traded_token 584, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $343.38 (-31.3%) | cash $343.38 | open 0 | max drawdown -37.3%
+equity $343.38 (-31.3%) | cash $326.21 | open 1 | max drawdown -37.3%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 81 | win 18/81 (22%) | avg net -8.9% | realized $-156.62 | expectancy $-1.93/trade
 exits: stop 62, trail 19
   (n=81 < 100: noise, not evidence)
+open:
+  UCASH        cost $17.17  now $17.17 (+0.0%)  held 0.0h
 last trades:
   Trader       $17.85 -> $12.98 (-27.3%)  stop  0.2h
   JENSEN       $17.61 -> $20.21 (+14.8%)  trail  0.5h
