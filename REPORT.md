@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-23 07:42 UTC
+Updated: 2026-11-23 07:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           126917
+pools seen           126959
 passed SCOUT         251
   killed by SCORE    36
   killed by AUDIT    60
 FINAL PASS           155
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   125198
-  few_unique_buyers           119442
-  liquidity_low               117542
-  volume_below_liquidity       89561
-  sells_dominate               33587
-  wash_churn                   26704
-  overheated                   11430
+  too_young                   125240
+  few_unique_buyers           119482
+  liquidity_low               117581
+  volume_below_liquidity       89590
+  sells_dominate               33596
+  wash_churn                   26716
+  overheated                   11433
   missing                       3397
   too_old                       1250
   rc_danger                       20
 
-OUTCOMES (median price change from first sighting / first pass; 7561 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 7563 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  155    -4.9%   -11.7%   -43.9%   -86.9%    57%
 SCOUT PASS, killed later     96    +5.2%   +10.7%   -19.5%   -74.6%    48%
-KILLED (tracked)          17541    +0.1%   -58.9%   -84.7%    -0.1%    27%
+KILLED (tracked)          17547    +0.1%   -58.9%   -84.6%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -53,18 +53,18 @@ CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
 none      979     +0.0%    -10.5%    -46.0%    27%
-<15%      216     +1.7%    -13.1%    -32.9%    34%
+<15%      217     +2.0%    -13.1%    -32.9%    34%
 15-30%     44     -0.7%     -2.4%     +0.4%    32%
 30%+       34     -0.6%     -0.7%     +1.9%    32%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      860     +0.0%     -2.5%    -31.6%    25%
-<20%      358     +1.9%    -58.2%    -92.9%    29%
+<20%      359     +2.5%    -58.2%    -92.9%    29%
 20%+       55     -0.7%    -99.0%       -      80%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1220     +0.2%     -6.4%    -39.4%    26%
+<20%     1221     +0.2%     -6.4%    -39.4%    26%
 20-40%     34     -4.6%    -99.0%    -99.1%    79%
 40%+       19    -98.5%    -98.6%       -      79%
-tokens analysed: 1111 | helius credits today: 3643/25000
+tokens analysed: 1112 | helius credits today: 3694/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -74,13 +74,13 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -10%     12%  155    26%     -9.5%   -17.1%   -99.7%
   -10%     20%  155    27%     -9.9%   -17.7%   -99.7%
   -10%     30%  155    25%     -9.8%   -18.6%   -99.7%
-  -15%     12%  155    30%     -8.8%   -19.3%   -99.7%
-  -15%     20%  155    33%     -9.3%   -20.4%   -99.7%
+  -15%     12%  155    30%     -8.9%   -19.3%   -99.7%
+  -15%     20%  155    33%     -9.4%   -20.4%   -99.7%
   -15%     30%  155    30%     -9.6%   -21.0%   -99.7%
-  -25%     12%  155    34%    -10.9%   -15.6%   -99.7%
-  -25%     20%  155    37%    -12.7%   -29.3%   -99.7%
-  -25%     30%  155    35%    -13.0%   -30.6%   -99.7%
-  best so far: stop -15%, trail from +12% -> avg -8.8% per trade over n=155
+  -25%     12%  155    34%    -11.0%   -15.6%   -99.7%
+  -25%     20%  155    37%    -12.8%   -29.3%   -99.7%
+  -25%     30%  155    35%    -13.1%   -30.6%   -99.7%
+  best so far: stop -15%, trail from +12% -> avg -8.9% per trade over n=155
 
 ================================================================
 A vs B (same sizing, exits and costs; only the entry rule differs)
@@ -114,7 +114,7 @@ last trades:
   COPIUM       $15.21 -> $13.38 (-12.0%)  stop  1.0h
   Fly          $15.11 -> $13.32 (-11.9%)  stop  0.2h
   cCAT         $15.02 -> $17.11 (+13.9%)  trail  0.3h
-signals skipped by the sizer/risk rules: already_traded_token 583, daily_loss_limit 322, cooldown_after_loss 18, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 584, daily_loss_limit 322, cooldown_after_loss 18, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
