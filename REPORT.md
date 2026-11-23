@@ -1,26 +1,26 @@
 # TrenchLab report
 
-Updated: 2026-11-23 21:42 UTC
+Updated: 2026-11-23 21:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           131225
+pools seen           131254
 passed SCOUT         257
   killed by SCORE    36
   killed by AUDIT    65
 FINAL PASS           156
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   129464
-  few_unique_buyers           123483
-  liquidity_low               121373
-  volume_below_liquidity       92512
-  sells_dominate               34870
-  wash_churn                   27518
-  overheated                   11820
-  missing                       3643
+  too_young                   129493
+  few_unique_buyers           123512
+  liquidity_low               121384
+  volume_below_liquidity       92521
+  sells_dominate               34875
+  wash_churn                   27519
+  overheated                   11822
+  missing                       3661
   too_old                       1284
   rc_danger                       20
 
@@ -52,16 +52,16 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1025     +0.0%    -10.5%    -47.5%    27%
+none     1025     +0.0%     -9.9%    -47.5%    27%
 <15%      234     +2.3%    -14.2%    -40.1%    33%
 15-30%     43     -0.5%     -2.4%     +0.4%    33%
 30%+       34     -0.6%     -0.7%     +1.9%    32%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      899     +0.0%     -2.5%    -32.9%    25%
+none      899     +0.0%     -2.4%    -32.9%    25%
 <20%      381     +2.8%    -58.3%    -92.8%    28%
 20%+       56     -2.9%    -99.0%       -      80%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1283     +0.2%     -6.6%    -40.1%    26%
+<20%     1283     +0.2%     -6.4%    -40.1%    26%
 20-40%     34     -4.6%    -99.0%    -99.1%    79%
 40%+       19    -98.5%    -98.6%       -      79%
 tokens analysed: 1173 | helius credits today: 8892/25000
