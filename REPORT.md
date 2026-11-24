@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-24 06:22 UTC
+Updated: 2026-11-24 06:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           133798
+pools seen           133845
 passed SCOUT         262
   killed by SCORE    37
   killed by AUDIT    65
 FINAL PASS           160
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   132026
-  few_unique_buyers           125849
-  liquidity_low               123746
-  volume_below_liquidity       94252
-  sells_dominate               35576
-  wash_churn                   28062
-  overheated                   12064
+  too_young                   132073
+  few_unique_buyers           125892
+  liquidity_low               123792
+  volume_below_liquidity       94279
+  sells_dominate               35591
+  wash_churn                   28071
+  overheated                   12072
   missing                       3707
   too_old                       1291
   rc_danger                       20
 
-OUTCOMES (median price change from first sighting / first pass; 8135 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8140 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  160    -5.0%   -13.2%   -42.6%   -85.3%    57%
+FINAL PASS                  160    -5.2%   -13.2%   -42.6%   -85.3%    58%
 SCOUT PASS, killed later    102    +5.6%    +7.5%   -19.5%   -75.1%    49%
-KILLED (tracked)          18527    +0.1%   -60.9%   -85.2%    +0.1%    27%
+KILLED (tracked)          18532    +0.1%   -60.9%   -85.2%    +0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     404    -90.6%    -68.9%    25%
+too_young                     405    -90.6%    -68.9%    25%
 wash_churn                     55    -23.3%    -85.6%    25%
 too_old                        51     -0.7%     -0.4%    10%
 liquidity_low                  35    -69.9%    -49.8%    57%
@@ -44,7 +44,7 @@ sells_dominate                  3    -75.0%       -      67%
 SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
-80+        73    -54.0%    -93.2%    59%
+80+        73    -54.0%    -93.2%    60%
 70-79     102    -41.9%    -73.6%    52%
 60-69      62    -30.1%    -89.0%    55%
 <60        25     -7.4%    -63.7%    48%
@@ -52,19 +52,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1048     +0.0%    -10.5%    -47.5%    26%
-<15%      246     +2.8%    -14.2%    -40.1%    32%
+none     1050     +0.0%    -10.5%    -47.5%    26%
+<15%      247     +2.8%    -14.2%    -40.1%    32%
 15-30%     45     -0.2%     -1.7%     +0.4%    31%
 30%+       37     -0.7%     -0.8%     +1.9%    35%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      915     +0.0%     -2.3%    -33.1%    24%
-<20%      402     +3.0%    -58.2%    -92.8%    27%
+none      916     +0.0%     -2.3%    -33.1%    24%
+<20%      404     +3.0%    -58.2%    -92.8%    27%
 20%+       59     -5.1%    -99.0%       -      81%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1319     +0.2%     -6.2%    -40.1%    26%
+<20%     1322     +0.2%     -6.4%    -40.1%    26%
 20-40%     35     -4.5%    -99.0%    -99.1%    77%
 40%+       22    -98.6%    -99.4%       -      77%
-tokens analysed: 1211 | helius credits today: 2219/25000
+tokens analysed: 1214 | helius credits today: 2399/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
