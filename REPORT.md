@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-24 02:02 UTC
+Updated: 2026-11-24 02:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           132435
+pools seen           132491
 passed SCOUT         260
   killed by SCORE    36
   killed by AUDIT    65
 FINAL PASS           159
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   130667
-  few_unique_buyers           124604
-  liquidity_low               122473
-  volume_below_liquidity       93330
-  sells_dominate               35169
-  wash_churn                   27746
-  overheated                   11928
+  too_young                   130721
+  few_unique_buyers           124656
+  liquidity_low               122526
+  volume_below_liquidity       93365
+  sells_dominate               35186
+  wash_churn                   27758
+  overheated                   11936
   missing                       3695
-  too_old                       1289
+  too_old                       1291
   rc_danger                       20
 
-OUTCOMES (median price change from first sighting / first pass; 8054 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8056 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  159    -5.0%   -13.2%   -41.3%   -85.9%    58%
 SCOUT PASS, killed later    101    +5.4%    +9.1%   -19.5%   -75.1%    50%
-KILLED (tracked)          18289    +0.1%   -60.6%   -85.1%    +0.1%    27%
+KILLED (tracked)          18298    +0.1%   -60.6%   -85.1%    +0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -114,7 +114,7 @@ last trades:
   ChristmASS   $15.10 -> $9.98 (-33.9%)  stop  0.2h
   PONK         $14.84 -> $12.70 (-14.4%)  stop  0.2h
   JIMMY        $14.73 -> $12.48 (-15.3%)  stop  0.3h
-signals skipped by the sizer/risk rules: already_traded_token 596, daily_loss_limit 322, cooldown_after_loss 20, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 597, daily_loss_limit 322, cooldown_after_loss 20, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
