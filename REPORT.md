@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-24 09:42 UTC
+Updated: 2026-11-24 09:53 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           134817
+pools seen           134873
 passed SCOUT         262
   killed by SCORE    37
   killed by AUDIT    65
 FINAL PASS           160
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   133041
-  few_unique_buyers           126765
-  liquidity_low               124673
-  volume_below_liquidity       94911
-  sells_dominate               35890
-  wash_churn                   28250
-  overheated                   12178
+  too_young                   133097
+  few_unique_buyers           126815
+  liquidity_low               124725
+  volume_below_liquidity       94947
+  sells_dominate               35904
+  wash_churn                   28258
+  overheated                   12184
   missing                       3742
   too_old                       1293
   rc_danger                       20
 
-OUTCOMES (median price change from first sighting / first pass; 8183 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8185 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  160    -5.2%   -13.3%   -42.6%   -83.7%    58%
 SCOUT PASS, killed later    102    +5.6%    +7.5%   -13.5%   -75.1%    49%
-KILLED (tracked)          18687    +0.1%   -61.1%   -85.5%    +0.1%    27%
+KILLED (tracked)          18699    +0.1%   -61.1%   -85.5%    +0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     417    -90.6%    -68.9%    24%
+too_young                     417    -90.6%    -68.9%    25%
 wash_churn                     55    -23.3%    -85.6%    25%
 too_old                        51     -0.7%     -0.4%    10%
 liquidity_low                  35    -69.9%    -49.8%    57%
@@ -53,7 +53,7 @@ CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
 none     1057     +0.0%     -9.2%    -46.6%    26%
-<15%      255     +2.4%    -14.9%    -40.1%    33%
+<15%      255     +2.4%    -14.9%    -40.1%    34%
 15-30%     45     -0.2%     -1.7%     +0.4%    31%
 30%+       38     -0.7%     -0.8%     +1.9%    34%
 bundled     n   +1h med   +4h med  +24h med   rug%
@@ -135,7 +135,7 @@ last trades:
   sexcoin      $16.99 -> $11.40 (-32.9%)  stop  0.5h
   JENSEN       $16.71 -> $12.63 (-24.4%)  stop  0.7h
   JIMMY        $16.50 -> $14.30 (-13.3%)  stop  0.3h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 442, daily_loss_limit 240, setup_rejected:dumping_now 144, setup_rejected:sellers_dominate_now 142, setup_rejected:b_bundled 76, setup_rejected:volume_dried_up 59, setup_rejected:operator_cluster 41, setup_rejected:clustered_supply 38, setup_rejected:lp_not_locked 34, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 443, daily_loss_limit 240, setup_rejected:dumping_now 144, setup_rejected:sellers_dominate_now 142, setup_rejected:b_bundled 76, setup_rejected:volume_dried_up 59, setup_rejected:operator_cluster 41, setup_rejected:clustered_supply 38, setup_rejected:lp_not_locked 34, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
 
 ================================================================
 PAPER BOOK C: copy-trading watched wallets (30s delay, mirror exits)
@@ -143,8 +143,9 @@ PAPER BOOK C: copy-trading watched wallets (30s delay, mirror exits)
 ================================================================
 equity $500.00 (+0.0%) | cash $500.00 | open 0 | max drawdown 0.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
+signals skipped by the sizer/risk rules: copy:no_price_at_delay 1, copy:liquidity_too_low 1
 
-BOOK C per wallet  (watching 8 wallets, 0 wallet trades seen)
+BOOK C per wallet  (watching 8 wallets, 9 wallet trades seen)
   no copied trades yet
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
