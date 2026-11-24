@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-24 21:06 UTC
+Updated: 2026-11-24 21:14 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           138208
+pools seen           138269
 passed SCOUT         269
   killed by SCORE    37
   killed by AUDIT    67
 FINAL PASS           165
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   136370
-  few_unique_buyers           129922
-  liquidity_low               127837
-  volume_below_liquidity       97336
-  sells_dominate               36892
-  wash_churn                   28846
-  overheated                   12517
+  too_young                   136431
+  few_unique_buyers           129978
+  liquidity_low               127893
+  volume_below_liquidity       97371
+  sells_dominate               36903
+  wash_churn                   28856
+  overheated                   12523
   missing                       3791
   too_old                       1349
   rc_danger                       20
 
-OUTCOMES (median price change from first sighting / first pass; 8352 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8355 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  165    -5.0%   -14.1%   -43.9%   -85.3%    58%
 SCOUT PASS, killed later    104    +5.6%    +7.5%   -19.5%   -75.1%    49%
-KILLED (tracked)          19172    +0.1%   -59.7%   -85.3%    -0.1%    27%
+KILLED (tracked)          19182    +0.1%   -59.7%   -85.3%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -65,7 +65,7 @@ fresh       n   +1h med   +4h med  +24h med   rug%
 <20%     1392     +0.2%     -7.2%    -41.6%    26%
 20-40%     36     -2.6%    -99.0%    -99.1%    78%
 40%+       22    -98.6%    -99.0%       -      77%
-tokens analysed: 1279 | helius credits today: 7770/25000
+tokens analysed: 1279 | helius credits today: 7837/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -80,7 +80,7 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     30%  165    29%    -11.0%   -21.2%   -99.7%
   -25%     12%  165    33%    -12.1%   -18.6%   -99.7%
   -25%     20%  165    37%    -13.6%   -29.3%   -99.7%
-  -25%     30%  165    34%    -13.9%   -30.8%   -99.7%
+  -25%     30%  165    34%    -14.2%   -30.9%   -99.7%
   best so far: stop -15%, trail from +12% -> avg -10.1% per trade over n=165
 
 ================================================================
@@ -116,7 +116,7 @@ last trades:
   Jesus        $14.62 -> $4.59 (-68.6%)  stop  0.2h
   Scamsem      $14.12 -> $12.59 (-10.9%)  stop  0.2h
   DUVAL        $14.04 -> $8.66 (-38.3%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 620, daily_loss_limit 330, cooldown_after_loss 20, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 620, daily_loss_limit 331, cooldown_after_loss 20, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -149,9 +149,9 @@ exits: mirror_sell 1
   (n=1 < 100: noise, not evidence)
 last trades:
   BLACKBALLED  $25.00 -> $21.48 (-14.1%)  mirror_sell  0.0h
-signals skipped by the sizer/risk rules: copy:liquidity_too_low 53, copy:no_price_at_delay 3
+signals skipped by the sizer/risk rules: copy:liquidity_too_low 58, copy:no_price_at_delay 3
 
-BOOK C per wallet  (watching 8 wallets, 642 wallet trades seen)
+BOOK C per wallet  (watching 8 wallets, 656 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
 EDBMUo…Zfj7   t2-GTAVI/XV-a       1     0    0%   -14.1%    -3.52
 Drop wallets with negative expectancy after ~20 copied trades each.
