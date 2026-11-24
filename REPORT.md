@@ -1,26 +1,26 @@
 # TrenchLab report
 
-Updated: 2026-11-24 15:32 UTC
+Updated: 2026-11-24 15:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           136611
+pools seen           136671
 passed SCOUT         264
   killed by SCORE    37
   killed by AUDIT    65
 FINAL PASS           162
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   134786
-  few_unique_buyers           128434
-  liquidity_low               126329
-  volume_below_liquidity       96232
-  sells_dominate               36411
-  wash_churn                   28567
-  overheated                   12352
-  missing                       3756
+  too_young                   134846
+  few_unique_buyers           128492
+  liquidity_low               126387
+  volume_below_liquidity       96271
+  sells_dominate               36430
+  wash_churn                   28581
+  overheated                   12358
+  missing                       3758
   too_old                       1337
   rc_danger                       20
 
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 8292 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  162    -5.2%   -14.9%   -43.9%   -83.7%    58%
 SCOUT PASS, killed later    102    +5.6%    +7.5%   -13.5%   -75.1%    49%
-KILLED (tracked)          18966    +0.1%   -59.5%   -85.3%    +0.1%    27%
+KILLED (tracked)          18972    +0.1%   -59.6%   -85.3%    +0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -89,13 +89,13 @@ C copies watched wallets with a 30s delay and mirror exits)
 ================================================================
                                    A             B             C
 started                  11-06 08:00   11-07 04:00   11-24 09:00
-equity                       $275.49       $323.15       $496.48
-return                        -44.9%        -35.4%         -0.7%
+equity                       $275.49       $322.41       $496.48
+return                        -44.9%        -35.5%         -0.7%
 closed trades                    110            87             1
 win rate                         21%           22%            0%
 avg net / trade               -10.4%         -9.7%        -14.1%
 expectancy $/trade            $-2.04        $-2.03        $-3.52
-max drawdown                  -47.0%        -40.6%         -0.7%
+max drawdown                  -47.0%        -40.7%         -0.7%
 open now                           0             1             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
@@ -122,13 +122,13 @@ signals skipped by the sizer/risk rules: already_traded_token 618, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $323.15 (-35.4%) | cash $307.16 | open 1 | max drawdown -40.6%
+equity $322.41 (-35.5%) | cash $307.16 | open 1 | max drawdown -40.7%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 87 | win 19/87 (22%) | avg net -9.7% | realized $-176.67 | expectancy $-2.03/trade
 exits: stop 67, trail 20
   (n=87 < 100: noise, not evidence)
 open:
-  GROKIA       cost $16.17  now $15.99 (-1.1%)  held 0.2h
+  GROKIA       cost $16.17  now $15.25 (-5.7%)  held 0.4h
 last trades:
   MCAT         $17.32 -> $18.54 (+7.0%)  trail  3.5h
   cCAT         $17.38 -> $13.20 (-24.0%)  stop  0.2h
@@ -153,7 +153,7 @@ last trades:
   BLACKBALLED  $25.00 -> $21.48 (-14.1%)  mirror_sell  0.0h
 signals skipped by the sizer/risk rules: copy:liquidity_too_low 30, copy:no_price_at_delay 2
 
-BOOK C per wallet  (watching 8 wallets, 244 wallet trades seen)
+BOOK C per wallet  (watching 8 wallets, 254 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
 EDBMUo…Zfj7   t2-GTAVI/XV-a       1     0    0%   -14.1%    -3.52
 Drop wallets with negative expectancy after ~20 copied trades each.
