@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-24 11:32 UTC
+Updated: 2026-11-24 11:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           135395
+pools seen           135432
 passed SCOUT         263
   killed by SCORE    37
   killed by AUDIT    65
 FINAL PASS           161
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   133574
-  few_unique_buyers           127294
-  liquidity_low               125190
-  volume_below_liquidity       95327
-  sells_dominate               36100
-  wash_churn                   28334
-  overheated                   12234
+  too_young                   133611
+  few_unique_buyers           127329
+  liquidity_low               125224
+  volume_below_liquidity       95356
+  sells_dominate               36110
+  wash_churn                   28338
+  overheated                   12236
   missing                       3746
   too_old                       1333
   rc_danger                       20
 
-OUTCOMES (median price change from first sighting / first pass; 8199 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8202 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  161    -5.0%   -14.1%   -43.2%   -83.7%    58%
 SCOUT PASS, killed later    102    +5.6%    +7.5%   -13.5%   -75.1%    49%
-KILLED (tracked)          18798    +0.1%   -61.4%   -85.6%    +0.1%    27%
+KILLED (tracked)          18804    +0.1%   -61.4%   -85.6%    +0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -54,18 +54,18 @@ CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
 none     1062     +0.0%     -9.2%    -46.6%    26%
-<15%      257     +2.3%    -16.8%    -40.1%    34%
+<15%      258     +2.3%    -16.8%    -40.1%    34%
 15-30%     45     -0.2%     -1.7%     +0.4%    31%
 30%+       38     -0.6%     -0.8%     +1.9%    37%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      928     +0.0%     -2.2%    -33.1%    24%
-<20%      415     +2.8%    -58.5%    -92.1%    29%
+<20%      416     +2.8%    -58.5%    -92.1%    29%
 20%+       59     -5.1%    -99.0%       -      81%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1345     +0.2%     -6.8%    -40.0%    26%
+<20%     1346     +0.2%     -6.8%    -40.0%    26%
 20-40%     35     -4.5%    -99.0%    -99.1%    77%
 40%+       22    -98.6%    -99.0%       -      77%
-tokens analysed: 1235 | helius credits today: 4114/25000
+tokens analysed: 1236 | helius credits today: 4172/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -80,7 +80,7 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     30%  161    29%    -10.7%   -21.2%   -99.7%
   -25%     12%  161    34%    -11.8%   -17.8%   -99.7%
   -25%     20%  161    37%    -13.6%   -29.6%   -99.7%
-  -25%     30%  161    34%    -13.8%   -30.9%   -99.7%
+  -25%     30%  161    34%    -13.7%   -30.9%   -99.7%
   best so far: stop -15%, trail from +12% -> avg -9.9% per trade over n=161
 
 ================================================================
@@ -151,7 +151,7 @@ last trades:
   BLACKBALLED  $25.00 -> $21.48 (-14.1%)  mirror_sell  0.0h
 signals skipped by the sizer/risk rules: copy:liquidity_too_low 11, copy:no_price_at_delay 2
 
-BOOK C per wallet  (watching 8 wallets, 78 wallet trades seen)
+BOOK C per wallet  (watching 8 wallets, 79 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
 EDBMUo…Zfj7   t2-GTAVI/XV-a       1     0    0%   -14.1%    -3.52
 Drop wallets with negative expectancy after ~20 copied trades each.
