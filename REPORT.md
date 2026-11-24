@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-24 18:02 UTC
+Updated: 2026-11-24 18:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           137337
+pools seen           137390
 passed SCOUT         265
   killed by SCORE    37
   killed by AUDIT    66
 FINAL PASS           162
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   135510
-  few_unique_buyers           129117
-  liquidity_low               127007
-  volume_below_liquidity       96720
-  sells_dominate               36647
-  wash_churn                   28694
-  overheated                   12426
+  too_young                   135557
+  few_unique_buyers           129167
+  liquidity_low               127057
+  volume_below_liquidity       96758
+  sells_dominate               36666
+  wash_churn                   28705
+  overheated                   12430
   missing                       3781
-  too_old                       1338
+  too_old                       1344
   rc_danger                       20
 
 OUTCOMES (median price change from first sighting / first pass; 8306 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  162    -5.2%   -14.9%   -43.9%   -83.7%    59%
 SCOUT PASS, killed later    103    +5.4%    +7.5%   -13.5%   -75.1%    49%
-KILLED (tracked)          19051    +0.1%   -59.6%   -85.3%    -0.1%    27%
+KILLED (tracked)          19062    +0.1%   -59.6%   -85.3%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -151,7 +151,7 @@ last trades:
   BLACKBALLED  $25.00 -> $21.48 (-14.1%)  mirror_sell  0.0h
 signals skipped by the sizer/risk rules: copy:liquidity_too_low 38, copy:no_price_at_delay 2
 
-BOOK C per wallet  (watching 8 wallets, 446 wallet trades seen)
+BOOK C per wallet  (watching 8 wallets, 460 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
 EDBMUo…Zfj7   t2-GTAVI/XV-a       1     0    0%   -14.1%    -3.52
 Drop wallets with negative expectancy after ~20 copied trades each.
