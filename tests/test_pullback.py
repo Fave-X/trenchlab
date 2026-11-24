@@ -130,7 +130,7 @@ class TestRun(unittest.TestCase):
         self.assertEqual(pullback.run(db, FakeGecko(live), FakeAuditor(), FakeCabal(), tb, cfg, NOW + 600,
                                       log=lambda *a: None), 0)
         rep = comparison_report(db)
-        self.assertIn("A vs B", rep)
+        self.assertIn("PAPER BOOKS COMPARED", rep)
         self.assertIn("PAPER BOOK B", paper_report(db, cfg, "B"))
         self.assertIn("ledger reconciles: YES", paper_report(db, cfg, "B"))
         self.assertAlmostEqual(db.paper_cash("A"), 500.0)

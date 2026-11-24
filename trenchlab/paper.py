@@ -334,7 +334,8 @@ def comparison_report(db):
     if len(books) < 2:
         return ""
     stats = {b: book_stats(db, b) for b in books}
-    lines = ["", "=" * 64, "A vs B (same sizing, exits and costs; only the entry rule differs)", "=" * 64]
+    lines = ["", "=" * 64, "PAPER BOOKS COMPARED (A and B: same sizing/exits, only the entry differs;",
+             "C copies watched wallets with a 30s delay and mirror exits)", "=" * 64]
     hdr = f"{'':<22}" + "".join(f"{b:>14}" for b in books)
     lines.append(hdr)
 
