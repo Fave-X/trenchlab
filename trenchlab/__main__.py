@@ -67,7 +67,7 @@ def print_table(rows, show_all=False, now=None):
 
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="trenchlab")
-    ap.add_argument("cmd", choices=["scan", "run", "report", "probe"])
+    ap.add_argument("cmd", choices=["scan", "run", "report", "probe", "wallets"])
     ap.add_argument("mint", nargs="?")
     ap.add_argument("--config", default="config.json")
     ap.add_argument("--db", default="trenchlab.db")
@@ -103,6 +103,21 @@ def main(argv=None):
         return 0
 
     db = DB(args.db)
+    if args.cmd == "wallets":
+        from . import walletfinder
+        winners = json.load(open("research/coresight_winners.json"))["tokens"]
+        n = cfg["walletfinder"]["dead_controls"]
+        dead = [r[0] for r in db.conn.execute(
+            """SELECT p.token_mint FROM pools p
+               WHERE p.first_liq >= 30000 AND p.token_mint LIKE '%pump' AND p.first_seen_ts >= ?
+                 AND EXISTS (SELECT 1 FROM samples s WHERE s.pool_address = p.pool_address
+                             AND s.price_usd <= p.first_price * 0.1)
+               GROUP BY p.token_mint ORDER BY p.first_seen_ts DESC LIMIT ?""",
+            (time.time() - 14 * 86400, n))]
+        print(f"[wallets] {len(winners)} winners, {len(dead)} dead control tokens")
+        rows = walletfinder.run(cfg, winners, dead)
+        print(f"[wallets] wrote {len(rows)} rows; copy candidates: {sum(r['copy_candidate'] == 'YES' for r in rows)}")
+        return 0
     if args.cmd == "report":
         print(build_report(db, cfg, time.time()))
         return 0

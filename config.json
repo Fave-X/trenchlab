@@ -133,5 +133,20 @@
     "jitoSOL",
     "bSOL",
     "JupSOL"
-  ]
+  ],
+  "walletfinder": {
+    "early_txs": 300,
+    "max_sig_pages": 400,
+    "min_interval": 0.13,
+    "min_winners": 2,
+    "max_candidates": 200,
+    "max_tokens_per_wallet": 6,
+    "max_pnl_txs": 60,
+    "sniper_max_slot_offset": 2,
+    "bot_txs_per_day": 300,
+    "max_dead_frac": 0.15,
+    "min_median_hold_min": 3,
+    "credit_budget": 60000,
+    "dead_controls": 20
+  }
 }

@@ -1,0 +1,42 @@
+name: wallet-finder
+
+# Manual job: Actions tab -> wallet-finder -> Run workflow.
+# Finds early, profitable, non-bot buyers of the tokens in research/coresight_winners.json,
+# using dead tokens from the scanner database as a control group. Read-only, never trades.
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: wallet-finder
+  cancel-in-progress: false
+
+jobs:
+  wallets:
+    runs-on: ubuntu-latest
+    timeout-minutes: 170
+    env:
+      GH_TOKEN: ${{ github.token }}
+      HELIUS_API_KEY: ${{ secrets.HELIUS_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Get scanner database (for dead-token controls)
+        run: gh release download data -p trenchlab.db.gz --clobber && gunzip -f trenchlab.db.gz
+      - name: Find wallets
+        run: python -m trenchlab wallets --db trenchlab.db
+      - name: Commit results
+        if: always()
+        run: |
+          git config user.name "trenchlab-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add WALLETS.md research/ 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "wallet finder: $(date -u '+%Y-%m-%d %H:%M')"
+            for i in 1 2 3; do git pull --rebase -q && git push -q && break || sleep 5; done
+          fi
