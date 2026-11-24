@@ -1,25 +1,25 @@
 # TrenchLab report
 
-Updated: 2026-11-24 00:52 UTC
+Updated: 2026-11-24 01:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           132140
+pools seen           132167
 passed SCOUT         260
   killed by SCORE    36
   killed by AUDIT    65
 FINAL PASS           159
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   130373
-  few_unique_buyers           124333
-  liquidity_low               122205
-  volume_below_liquidity       93140
-  sells_dominate               35106
-  wash_churn                   27683
-  overheated                   11901
+  too_young                   130400
+  few_unique_buyers           124358
+  liquidity_low               122232
+  volume_below_liquidity       93163
+  sells_dominate               35113
+  wash_churn                   27691
+  overheated                   11904
   missing                       3681
   too_old                       1288
   rc_danger                       20
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 7860 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  159    -5.0%   -13.2%   -41.3%   -85.9%    58%
 SCOUT PASS, killed later    101    +5.4%    +9.1%   -19.5%   -75.1%    50%
-KILLED (tracked)          18251    +0.1%   -60.2%   -85.1%    +0.1%    27%
+KILLED (tracked)          18252    +0.1%   -60.2%   -85.1%    +0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -52,16 +52,16 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1037     +0.0%    -10.5%    -47.5%    26%
+none     1037     +0.0%    -10.5%    -47.5%    27%
 <15%      236     +2.3%    -14.2%    -40.1%    33%
 15-30%     43     -0.5%     -2.4%     +0.4%    33%
 30%+       36     -0.7%     -0.7%     +1.9%    36%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      902     +0.0%     -2.4%    -33.0%    25%
-<20%      392     +2.6%    -58.2%    -92.1%    27%
+none      902     +0.0%     -2.5%    -33.0%    25%
+<20%      392     +2.6%    -58.2%    -92.1%    28%
 20%+       58     -5.2%    -99.0%       -      83%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1297     +0.2%     -6.6%    -40.1%    26%
+<20%     1297     +0.2%     -6.8%    -40.1%    26%
 20-40%     34     -4.6%    -99.0%    -99.1%    79%
 40%+       21    -98.6%    -98.6%       -      81%
 tokens analysed: 1188 | helius credits today: 474/25000
@@ -114,7 +114,7 @@ last trades:
   ChristmASS   $15.10 -> $9.98 (-33.9%)  stop  0.2h
   PONK         $14.84 -> $12.70 (-14.4%)  stop  0.2h
   JIMMY        $14.73 -> $12.48 (-15.3%)  stop  0.3h
-signals skipped by the sizer/risk rules: already_traded_token 591, daily_loss_limit 322, cooldown_after_loss 20, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 592, daily_loss_limit 322, cooldown_after_loss 20, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
