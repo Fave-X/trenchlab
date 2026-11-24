@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-24 22:55 UTC
+Updated: 2026-11-24 23:04 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           138795
+pools seen           138820
 passed SCOUT         269
   killed by SCORE    37
   killed by AUDIT    67
 FINAL PASS           165
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   136951
-  few_unique_buyers           130472
-  liquidity_low               128377
-  volume_below_liquidity       97723
-  sells_dominate               37057
-  wash_churn                   28957
-  overheated                   12574
+  too_young                   136976
+  few_unique_buyers           130495
+  liquidity_low               128402
+  volume_below_liquidity       97744
+  sells_dominate               37067
+  wash_churn                   28961
+  overheated                   12577
   missing                       3809
   too_old                       1353
   rc_danger                       20
 
-OUTCOMES (median price change from first sighting / first pass; 8428 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8430 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  165    -5.0%   -14.1%   -43.9%   -85.3%    58%
 SCOUT PASS, killed later    104    +5.6%    +7.5%   -19.5%   -75.1%    49%
-KILLED (tracked)          19244    +0.1%   -60.4%   -85.4%    -0.1%    27%
+KILLED (tracked)          19245    +0.1%   -60.2%   -85.4%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -40,7 +40,7 @@ liquidity_low                  35    -69.9%    -49.8%    57%
 overheated                     11    -21.9%    -56.0%    55%
 volume_below_liquidity          8     +1.2%    +30.3%    38%
 sells_dominate                  3    -75.0%       -      67%
-copy_trade                      3    -95.5%       -      67%
+copy_trade                      3    -95.5%       -     100%
 
 SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
@@ -65,7 +65,7 @@ fresh       n   +1h med   +4h med  +24h med   rug%
 <20%     1402     +0.2%     -7.3%    -41.6%    26%
 20-40%     36     -2.6%    -99.0%    -99.1%    78%
 40%+       22    -98.6%    -99.0%       -      77%
-tokens analysed: 1288 | helius credits today: 8500/25000
+tokens analysed: 1288 | helius credits today: 8581/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -151,9 +151,9 @@ last trades:
   BLACKBALLED  $25.00 -> $21.48 (-14.1%)  mirror_sell  0.0h
   DCTY         $24.82 -> $24.39 (-1.7%)  mirror_sell  0.0h
   BEAST        $24.80 -> $29.54 (+19.1%)  mirror_sell  0.2h
-signals skipped by the sizer/risk rules: copy:liquidity_too_low 78, copy:no_price_at_delay 6
+signals skipped by the sizer/risk rules: copy:liquidity_too_low 82, copy:no_price_at_delay 6
 
-BOOK C per wallet  (watching 8 wallets, 737 wallet trades seen)
+BOOK C per wallet  (watching 8 wallets, 744 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
 EDBMUo…Zfj7   t2-GTAVI/XV-a       3     0   33%    +1.1%    +0.79
 Drop wallets with negative expectancy after ~20 copied trades each.
