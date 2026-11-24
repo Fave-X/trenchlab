@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-24 03:12 UTC
+Updated: 2026-11-24 03:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           132816
+pools seen           132876
 passed SCOUT         260
   killed by SCORE    36
   killed by AUDIT    65
 FINAL PASS           159
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   131044
-  few_unique_buyers           124953
-  liquidity_low               122830
-  volume_below_liquidity       93589
-  sells_dominate               35277
-  wash_churn                   27836
-  overheated                   11969
+  too_young                   131104
+  few_unique_buyers           125013
+  liquidity_low               122886
+  volume_below_liquidity       93635
+  sells_dominate               35293
+  wash_churn                   27846
+  overheated                   11972
   missing                       3698
   too_old                       1291
   rc_danger                       20
 
-OUTCOMES (median price change from first sighting / first pass; 8075 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8076 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  159    -5.0%   -13.2%   -42.6%   -85.6%    58%
+FINAL PASS                  159    -5.0%   -13.2%   -43.2%   -85.6%    58%
 SCOUT PASS, killed later    101    +5.4%    +9.1%   -19.5%   -75.1%    50%
-KILLED (tracked)          18351    +0.1%   -60.6%   -85.1%    +0.1%    27%
+KILLED (tracked)          18360    +0.1%   -60.6%   -85.1%    +0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -45,7 +45,7 @@ SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        72    -54.0%    -93.2%    60%
-70-79     102    -41.9%    -73.6%    52%
+70-79     102    -43.9%    -73.6%    52%
 60-69      61    -30.1%    -92.1%    56%
 <60        25     -7.4%    -63.7%    48%
 
@@ -61,7 +61,7 @@ none      909     +0.0%     -2.3%    -33.0%    25%
 <20%      393     +2.9%    -58.2%    -92.8%    27%
 20%+       58     -5.2%    -99.0%       -      83%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1305     +0.2%     -6.4%    -40.0%    26%
+<20%     1305     +0.2%     -6.6%    -40.0%    26%
 20-40%     34     -4.6%    -99.0%    -99.1%    79%
 40%+       21    -98.6%    -99.0%       -      81%
 tokens analysed: 1196 | helius credits today: 1127/25000
