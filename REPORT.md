@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-24 14:12 UTC
+Updated: 2026-11-24 14:24 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           136187
+pools seen           136240
 passed SCOUT         264
   killed by SCORE    37
   killed by AUDIT    65
 FINAL PASS           162
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   134362
-  few_unique_buyers           128032
-  liquidity_low               125931
-  volume_below_liquidity       95925
-  sells_dominate               36299
-  wash_churn                   28490
-  overheated                   12321
+  too_young                   134415
+  few_unique_buyers           128083
+  liquidity_low               125981
+  volume_below_liquidity       95963
+  sells_dominate               36312
+  wash_churn                   28495
+  overheated                   12326
   missing                       3746
   too_old                       1337
   rc_danger                       20
 
-OUTCOMES (median price change from first sighting / first pass; 8268 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8275 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  162    -5.2%   -14.1%   -43.2%   -83.7%    58%
 SCOUT PASS, killed later    102    +5.6%    +7.5%   -13.5%   -75.1%    49%
-KILLED (tracked)          18910    +0.1%   -59.4%   -85.6%    +0.1%    27%
+KILLED (tracked)          18920    +0.1%   -59.4%   -85.6%    +0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -149,9 +149,9 @@ exits: mirror_sell 1
   (n=1 < 100: noise, not evidence)
 last trades:
   BLACKBALLED  $25.00 -> $21.48 (-14.1%)  mirror_sell  0.0h
-signals skipped by the sizer/risk rules: copy:liquidity_too_low 21, copy:no_price_at_delay 2
+signals skipped by the sizer/risk rules: copy:liquidity_too_low 26, copy:no_price_at_delay 2
 
-BOOK C per wallet  (watching 8 wallets, 193 wallet trades seen)
+BOOK C per wallet  (watching 8 wallets, 212 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
 EDBMUo…Zfj7   t2-GTAVI/XV-a       1     0    0%   -14.1%    -3.52
 Drop wallets with negative expectancy after ~20 copied trades each.
