@@ -67,7 +67,7 @@ def print_table(rows, show_all=False, now=None):
 
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="trenchlab")
-    ap.add_argument("cmd", choices=["scan", "run", "report", "probe", "wallets"])
+    ap.add_argument("cmd", choices=["scan", "run", "report", "probe", "wallets", "alive"])
     ap.add_argument("mint", nargs="?")
     ap.add_argument("--config", default="config.json")
     ap.add_argument("--db", default="trenchlab.db")
@@ -103,6 +103,18 @@ def main(argv=None):
         return 0
 
     db = DB(args.db)
+    if args.cmd == "alive":
+        from . import alive
+        src = json.load(open("research/coresight_winners.json"))
+        rows = alive.run(src["tokens"], gecko, Auditor(cfg), CabalFinder(cfg, db))
+        db.commit()
+        with open("ALIVE.md", "w") as f:
+            f.write(alive.markdown(rows, src.get("captured_at", "?")))
+        with open("research/alive.json", "w") as f:
+            json.dump(rows, f, indent=1)
+        print("[alive] " + ", ".join(f"{s} {sum(r['status'] == s for r in rows)}"
+                                     for s in ("thriving", "alive", "fading", "dead")))
+        return 0
     if args.cmd == "wallets":
         from . import walletfinder
         winners = json.load(open("research/coresight_winners.json"))["tokens"]

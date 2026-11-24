@@ -1,0 +1,35 @@
+name: alive-check
+
+# Manual job: Actions tab -> alive-check -> Run workflow.
+# Checks which tokens in research/coresight_winners.json are still alive and thriving.
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  alive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+      HELIUS_API_KEY: ${{ secrets.HELIUS_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Alive check
+        run: python -m trenchlab alive --db alive_scratch.db
+      - name: Commit results
+        if: always()
+        run: |
+          git config user.name "trenchlab-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ALIVE.md research/alive.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "alive check: $(date -u '+%Y-%m-%d %H:%M')"
+            for i in 1 2 3; do git pull --rebase -q && git push -q && break || sleep 5; done
+          fi
