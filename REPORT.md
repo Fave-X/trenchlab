@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-24 14:02 UTC
+Updated: 2026-11-24 14:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           136139
+pools seen           136187
 passed SCOUT         264
   killed by SCORE    37
   killed by AUDIT    65
 FINAL PASS           162
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   134314
-  few_unique_buyers           127986
-  liquidity_low               125886
-  volume_below_liquidity       95884
-  sells_dominate               36292
-  wash_churn                   28486
-  overheated                   12315
+  too_young                   134362
+  few_unique_buyers           128032
+  liquidity_low               125931
+  volume_below_liquidity       95925
+  sells_dominate               36299
+  wash_churn                   28490
+  overheated                   12321
   missing                       3746
   too_old                       1337
   rc_danger                       20
 
-OUTCOMES (median price change from first sighting / first pass; 8263 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8268 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  162    -5.2%   -14.1%   -43.2%   -83.7%    58%
 SCOUT PASS, killed later    102    +5.6%    +7.5%   -13.5%   -75.1%    49%
-KILLED (tracked)          18903    +0.1%   -59.5%   -85.6%    +0.1%    27%
+KILLED (tracked)          18910    +0.1%   -59.4%   -85.6%    +0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -116,7 +116,7 @@ last trades:
   Jesus        $14.62 -> $4.59 (-68.6%)  stop  0.2h
   Scamsem      $14.12 -> $12.59 (-10.9%)  stop  0.2h
   DUVAL        $14.04 -> $8.66 (-38.3%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 615, daily_loss_limit 322, cooldown_after_loss 20, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 616, daily_loss_limit 322, cooldown_after_loss 20, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -136,7 +136,7 @@ last trades:
   JENSEN       $16.71 -> $12.63 (-24.4%)  stop  0.7h
   JIMMY        $16.50 -> $14.30 (-13.3%)  stop  0.3h
   Scamsem      $16.39 -> $11.86 (-27.7%)  stop  0.7h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 450, daily_loss_limit 240, setup_rejected:dumping_now 144, setup_rejected:sellers_dominate_now 142, setup_rejected:b_bundled 77, setup_rejected:volume_dried_up 59, setup_rejected:operator_cluster 41, setup_rejected:clustered_supply 38, setup_rejected:lp_not_locked 34, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Low Liquidity 5, setup_rejected:rc_danger:Creator history of rugged tokens 3, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 450, daily_loss_limit 240, setup_rejected:dumping_now 145, setup_rejected:sellers_dominate_now 142, setup_rejected:b_bundled 77, setup_rejected:volume_dried_up 59, setup_rejected:operator_cluster 41, setup_rejected:clustered_supply 38, setup_rejected:lp_not_locked 34, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Low Liquidity 5, setup_rejected:rc_danger:Creator history of rugged tokens 3, max_open_positions 1
 
 ================================================================
 PAPER BOOK C: copy-trading watched wallets (30s delay, mirror exits)
@@ -151,7 +151,7 @@ last trades:
   BLACKBALLED  $25.00 -> $21.48 (-14.1%)  mirror_sell  0.0h
 signals skipped by the sizer/risk rules: copy:liquidity_too_low 21, copy:no_price_at_delay 2
 
-BOOK C per wallet  (watching 8 wallets, 183 wallet trades seen)
+BOOK C per wallet  (watching 8 wallets, 193 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
 EDBMUo…Zfj7   t2-GTAVI/XV-a       1     0    0%   -14.1%    -3.52
 Drop wallets with negative expectancy after ~20 copied trades each.
