@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-24 06:12 UTC
+Updated: 2026-11-24 06:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           133737
+pools seen           133798
 passed SCOUT         262
   killed by SCORE    37
   killed by AUDIT    65
 FINAL PASS           160
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   131965
-  few_unique_buyers           125795
-  liquidity_low               123685
-  volume_below_liquidity       94209
-  sells_dominate               35556
-  wash_churn                   28045
-  overheated                   12054
+  too_young                   132026
+  few_unique_buyers           125849
+  liquidity_low               123746
+  volume_below_liquidity       94252
+  sells_dominate               35576
+  wash_churn                   28062
+  overheated                   12064
   missing                       3707
   too_old                       1291
   rc_danger                       20
 
-OUTCOMES (median price change from first sighting / first pass; 8134 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8135 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  160    -5.0%   -13.2%   -42.6%   -85.3%    57%
 SCOUT PASS, killed later    102    +5.6%    +7.5%   -19.5%   -75.1%    49%
-KILLED (tracked)          18518    +0.1%   -60.9%   -85.2%    +0.1%    27%
+KILLED (tracked)          18527    +0.1%   -60.9%   -85.2%    +0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -44,8 +44,8 @@ sells_dominate                  3    -75.0%       -      67%
 SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
-80+        72    -54.0%    -93.2%    60%
-70-79     103    -41.9%    -73.6%    51%
+80+        73    -54.0%    -93.2%    59%
+70-79     102    -41.9%    -73.6%    52%
 60-69      62    -30.1%    -89.0%    55%
 <60        25     -7.4%    -63.7%    48%
 
@@ -68,47 +68,44 @@ tokens analysed: 1211 | helius credits today: 2219/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%  159    22%     -9.7%   -14.5%   -99.7%
-   -6%     20%  159    23%    -10.0%   -14.9%   -99.7%
-   -6%     30%  159    21%    -10.2%   -15.4%   -99.7%
-  -10%     12%  159    25%     -9.7%   -17.1%   -99.7%
-  -10%     20%  159    26%    -10.1%   -17.5%   -99.7%
-  -10%     30%  159    25%    -10.1%   -18.6%   -99.7%
-  -15%     12%  159    30%     -9.4%   -19.5%   -99.7%
-  -15%     20%  159    32%     -9.9%   -20.4%   -99.7%
-  -15%     30%  159    30%    -10.3%   -21.1%   -99.7%
-  -25%     12%  159    34%    -11.4%   -17.1%   -99.7%
-  -25%     20%  159    37%    -13.2%   -29.6%   -99.7%
-  -25%     30%  159    35%    -13.3%   -30.9%   -99.7%
-  best so far: stop -15%, trail from +12% -> avg -9.4% per trade over n=159
+   -6%     12%  160    22%    -10.1%   -14.6%   -99.7%
+   -6%     20%  160    23%    -10.4%   -14.9%   -99.7%
+   -6%     30%  160    21%    -10.5%   -15.5%   -99.7%
+  -10%     12%  160    25%    -10.0%   -17.1%   -99.7%
+  -10%     20%  160    26%    -10.4%   -17.6%   -99.7%
+  -10%     30%  160    24%    -10.5%   -18.6%   -99.7%
+  -15%     12%  160    29%     -9.8%   -19.6%   -99.7%
+  -15%     20%  160    32%    -10.2%   -20.4%   -99.7%
+  -15%     30%  160    29%    -10.6%   -21.1%   -99.7%
+  -25%     12%  160    34%    -11.8%   -17.4%   -99.7%
+  -25%     20%  160    37%    -13.5%   -29.7%   -99.7%
+  -25%     30%  160    34%    -13.7%   -30.9%   -99.7%
+  best so far: stop -15%, trail from +12% -> avg -9.8% per trade over n=160
 
 ================================================================
 A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $292.43       $327.86
-return                        -41.5%        -34.4%
-closed trades                    107            86
+equity                       $282.40       $327.86
+return                        -43.5%        -34.4%
+closed trades                    108            86
 win rate                         21%           22%
-avg net / trade                -9.6%         -9.5%
-expectancy $/trade            $-1.94        $-2.00
-max drawdown                  -43.7%        -39.7%
-open now                           1             0
+avg net / trade               -10.1%         -9.5%
+expectancy $/trade            $-2.01        $-2.00
+max drawdown                  -45.7%        -39.7%
+open now                           0             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $292.43 (-41.5%) | cash $277.81 | open 1 | max drawdown -43.7%
+equity $282.40 (-43.5%) | cash $282.40 | open 0 | max drawdown -45.7%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 107 | win 23/107 (21%) | avg net -9.6% | realized $-207.57 | expectancy $-1.94/trade
-exits: stop 78, trail 28, dead_no_route 1
-open:
-  Jesus        cost $14.62  now $14.62 (+0.0%)  held 0.0h
+closed 108 | win 23/108 (21%) | avg net -10.1% | realized $-217.60 | expectancy $-2.01/trade
+exits: stop 79, trail 28, dead_no_route 1
 last trades:
-  OpenIndex    $15.37 -> $12.15 (-20.9%)  stop  0.3h
   COPIUM       $15.21 -> $13.38 (-12.0%)  stop  1.0h
   Fly          $15.11 -> $13.32 (-11.9%)  stop  0.2h
   cCAT         $15.02 -> $17.11 (+13.9%)  trail  0.3h
@@ -116,7 +113,8 @@ last trades:
   ChristmASS   $15.10 -> $9.98 (-33.9%)  stop  0.2h
   PONK         $14.84 -> $12.70 (-14.4%)  stop  0.2h
   JIMMY        $14.73 -> $12.48 (-15.3%)  stop  0.3h
-signals skipped by the sizer/risk rules: already_traded_token 606, daily_loss_limit 322, cooldown_after_loss 20, max_open_positions 5
+  Jesus        $14.62 -> $4.59 (-68.6%)  stop  0.2h
+signals skipped by the sizer/risk rules: already_traded_token 607, daily_loss_limit 322, cooldown_after_loss 20, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
