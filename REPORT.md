@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-24 19:03 UTC
+Updated: 2026-11-24 19:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           137619
+pools seen           137662
 passed SCOUT         266
   killed by SCORE    37
   killed by AUDIT    66
 FINAL PASS           163
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   135781
-  few_unique_buyers           129379
-  liquidity_low               127274
-  volume_below_liquidity       96930
-  sells_dominate               36730
-  wash_churn                   28752
-  overheated                   12457
+  too_young                   135824
+  few_unique_buyers           129415
+  liquidity_low               127315
+  volume_below_liquidity       96954
+  sells_dominate               36737
+  wash_churn                   28760
+  overheated                   12467
   missing                       3783
   too_old                       1349
   rc_danger                       20
 
-OUTCOMES (median price change from first sighting / first pass; 8320 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8321 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  163    -5.2%   -14.9%   -43.9%   -83.7%    58%
 SCOUT PASS, killed later    103    +5.4%    +7.5%   -13.5%   -75.1%    49%
-KILLED (tracked)          19094    +0.1%   -60.2%   -85.3%    -0.1%    27%
+KILLED (tracked)          19105    +0.1%   -59.7%   -85.3%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -69,19 +69,19 @@ tokens analysed: 1269 | helius credits today: 6960/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%  162    22%    -10.2%   -14.6%   -99.7%
-   -6%     20%  162    23%    -10.5%   -14.9%   -99.7%
-   -6%     30%  162    20%    -10.7%   -15.5%   -99.7%
-  -10%     12%  162    25%    -10.3%   -17.3%   -99.7%
-  -10%     20%  162    26%    -10.7%   -17.8%   -99.7%
-  -10%     30%  162    24%    -10.7%   -18.6%   -99.7%
-  -15%     12%  162    29%    -10.0%   -19.6%   -99.7%
-  -15%     20%  162    31%    -10.5%   -20.6%   -99.7%
-  -15%     30%  162    29%    -10.9%   -21.2%   -99.7%
-  -25%     12%  162    33%    -12.0%   -18.2%   -99.7%
-  -25%     20%  162    37%    -13.6%   -29.7%   -99.7%
-  -25%     30%  162    34%    -14.0%   -30.9%   -99.7%
-  best so far: stop -15%, trail from +12% -> avg -10.0% per trade over n=162
+   -6%     12%  163    21%    -10.4%   -14.7%   -99.7%
+   -6%     20%  163    23%    -10.6%   -14.9%   -99.7%
+   -6%     30%  163    20%    -10.8%   -15.6%   -99.7%
+  -10%     12%  163    25%    -10.4%   -17.5%   -99.7%
+  -10%     20%  163    26%    -10.8%   -17.8%   -99.7%
+  -10%     30%  163    24%    -10.8%   -18.6%   -99.7%
+  -15%     12%  163    29%    -10.2%   -19.6%   -99.7%
+  -15%     20%  163    31%    -10.6%   -20.7%   -99.7%
+  -15%     30%  163    29%    -11.0%   -21.3%   -99.7%
+  -25%     12%  163    33%    -12.1%   -18.6%   -99.7%
+  -25%     20%  163    37%    -13.7%   -29.6%   -99.7%
+  -25%     30%  163    34%    -14.0%   -30.9%   -99.7%
+  best so far: stop -15%, trail from +12% -> avg -10.2% per trade over n=163
 
 ================================================================
 PAPER BOOKS COMPARED (A and B: same sizing/exits, only the entry differs;
@@ -149,9 +149,9 @@ exits: mirror_sell 1
   (n=1 < 100: noise, not evidence)
 last trades:
   BLACKBALLED  $25.00 -> $21.48 (-14.1%)  mirror_sell  0.0h
-signals skipped by the sizer/risk rules: copy:liquidity_too_low 43, copy:no_price_at_delay 2
+signals skipped by the sizer/risk rules: copy:liquidity_too_low 44, copy:no_price_at_delay 2
 
-BOOK C per wallet  (watching 8 wallets, 559 wallet trades seen)
+BOOK C per wallet  (watching 8 wallets, 568 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
 EDBMUo…Zfj7   t2-GTAVI/XV-a       1     0    0%   -14.1%    -3.52
 Drop wallets with negative expectancy after ~20 copied trades each.
