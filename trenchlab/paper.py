@@ -121,7 +121,8 @@ def make_quoter(cfg, api_key=None, fetch=get_json):
 class PaperTrader:
     def __init__(self, cfg, db, quoter=None, log=print, notify=None, book="A"):
         self.cfg = cfg
-        self.c = cfg["paper"]
+        # per-book overrides, e.g. book C (copy-trading) uses a wider stop and mirror exits
+        self.c = {**cfg["paper"], **cfg.get("paper_books", {}).get(book, {})}
         self.db = db
         self.book = book
         self.q = quoter or make_quoter(cfg)
@@ -164,7 +165,10 @@ class PaperTrader:
         last_loss = self.db.paper_last_loss_ts(self.book)
         if last_loss and now - last_loss < c["cooldown_after_loss_min"] * 60:
             return self._skip(pool, now, "cooldown_after_loss")
-        frac = min(c["risk_per_trade_pct"] / abs(c["stop_pct"]), c["max_position_pct"] / 100)
+        if c.get("fixed_position_pct"):
+            frac = c["fixed_position_pct"] / 100
+        else:
+            frac = min(c["risk_per_trade_pct"] / abs(c["stop_pct"]), c["max_position_pct"] / 100)
         size = round(eq * frac, 2)
         exposure = sum(p["cost_usd"] for p in opens)
         if exposure + size > eq * c["max_exposure_pct"] / 100:
@@ -222,13 +226,23 @@ class PaperTrader:
             peak_ret = peak / pos["cost_usd"] - 1
             if ret <= c["stop_pct"] / 100:
                 self._close(pos, now, value, "stop")
-            elif peak_ret >= c["trail_activate_pct"] / 100 and value <= peak * (1 - c["trail_distance_pct"] / 100):
+            elif (c.get("trail_activate_pct") is not None and peak_ret >= c["trail_activate_pct"] / 100
+                  and value <= peak * (1 - c["trail_distance_pct"] / 100)):
                 self._close(pos, now, value, "trail")
             elif now - pos["entry_ts"] >= c["max_hold_hours"] * 3600:
                 self._close(pos, now, value, "time")
         self.db.paper_snapshot(now, self.equity(now, marks), self.db.paper_cash(self.book),
                                len(self.db.open_positions(self.book)), self.book)
         self.db.commit()
+
+    def close_at(self, pos, now, state, reason):
+        """Close a position at a given price state (used for mirror exits priced at wallet time + delay)."""
+        value, _ = self._value(pos, state)
+        if value is None:
+            return None
+        self._close(pos, now, value, reason)
+        self.db.commit()
+        return value
 
     def _close(self, pos, now, value, reason):
         self.db.paper_close(pos["id"], now, value, reason)
@@ -239,7 +253,8 @@ class PaperTrader:
 
 
 # ---------------------------------------------------------------- report
-BOOK_LABELS = {"A": "A: momentum (thread filters)", "B": "B: pullback (safety-first, buy the dip)"}
+BOOK_LABELS = {"A": "A: momentum (thread filters)", "B": "B: pullback (safety-first, buy the dip)",
+               "C": "C: copy-trading watched wallets (30s delay, mirror exits)"}
 
 
 def book_stats(db, book):

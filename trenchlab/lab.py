@@ -305,6 +305,9 @@ def build_report(db, cfg, now):
             pr = paper_report(db, cfg, book)
             if pr:
                 lines.extend(pr.split("\n"))
+            if book == "C":
+                from .copytrade import wallet_report
+                lines.extend(wallet_report(db).split("\n"))
     w("")
     w("Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.")
     w("Not financial advice. Paper results overstate live results.")

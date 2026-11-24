@@ -1,0 +1,2 @@
+# Book C watchlist: one Solana wallet per line, optional "  # label".
+# Wallets are bookmarked on first sight; only NEW trades after that are paper-copied.

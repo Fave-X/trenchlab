@@ -105,6 +105,23 @@ CREATE TABLE IF NOT EXISTS paper_equity (
     n_open          INTEGER,
     book            TEXT DEFAULT 'A'
 );
+CREATE TABLE IF NOT EXISTS copy_wallets (
+    wallet          TEXT PRIMARY KEY,
+    label           TEXT,
+    last_sig        TEXT,
+    last_check_ts   REAL,
+    added_ts        REAL
+);
+CREATE TABLE IF NOT EXISTS copy_events (
+    ts              REAL,
+    wallet          TEXT,
+    sig             TEXT,
+    token_mint      TEXT,
+    side            TEXT,
+    tokens          REAL,
+    sol             REAL,
+    block_time      REAL
+);
 CREATE TABLE IF NOT EXISTS alerts (
     pool_address    TEXT PRIMARY KEY,
     ts              REAL
@@ -319,6 +336,21 @@ class DB:
 
     def paper_snapshots(self, book="A"):
         return self.conn.execute("SELECT * FROM paper_equity WHERE book=? ORDER BY ts", (book,)).fetchall()
+
+    # ---- copy-trading (book C) ----
+    def copy_wallet(self, wallet):
+        return self.conn.execute("SELECT * FROM copy_wallets WHERE wallet=?", (wallet,)).fetchone()
+
+    def copy_wallet_set(self, wallet, label, last_sig, now):
+        self.conn.execute(
+            """INSERT INTO copy_wallets VALUES (?,?,?,?,?)
+               ON CONFLICT(wallet) DO UPDATE SET label=excluded.label,
+                 last_sig=COALESCE(excluded.last_sig, copy_wallets.last_sig), last_check_ts=excluded.last_check_ts""",
+            (wallet, label, last_sig, now, now))
+
+    def copy_event(self, now, wallet, sig, mint, side, tokens, sol, block_time):
+        self.conn.execute("INSERT INTO copy_events VALUES (?,?,?,?,?,?,?,?)",
+                          (now, wallet, sig, mint, side, tokens, sol, block_time))
 
     def latest_sample(self, addr, since):
         return self.conn.execute(

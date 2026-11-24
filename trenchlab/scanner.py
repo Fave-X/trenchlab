@@ -6,6 +6,7 @@ from .score import score as score_pool
 from .notify import telegram
 from . import dexscreener
 from . import pullback
+from . import copytrade
 
 
 def fetch_candidates(gecko, cfg, log=print):
@@ -27,7 +28,7 @@ def fetch_candidates(gecko, cfg, log=print):
 
 
 def run_cycle(gecko, auditor, db, cfg, now=None, log=print, alert=True, cabal=None, dex_fetch=None,
-              trader=None, trader_b=None):
+              trader=None, trader_b=None, trader_c=None):
     now = now if now is not None else time.time()
     if dex_fetch is None:
         from .http import get_json as dex_fetch
@@ -152,4 +153,12 @@ def run_cycle(gecko, auditor, db, cfg, now=None, log=print, alert=True, cabal=No
         except Exception as e:  # book B must never break the main scan
             log(f"[B] pullback scan failed: {e}")
         trader_b.manage(now)
+    if trader_c is not None:
+        try:
+            ne, nx = copytrade.run(db, trader_c, cfg, now, log=log)
+            if ne or nx:
+                log(f"[C] copied {ne} buy(s), mirrored {nx} sell(s)")
+        except Exception as e:  # book C must never break the main scan
+            log(f"[C] copy-trading cycle failed: {e}")
+        trader_c.manage(now)
     return [r for r in results if r[0] == "pool"], len(to_track)
