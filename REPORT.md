@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-23 23:52 UTC
+Updated: 2026-11-24 00:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           131850
+pools seen           131891
 passed SCOUT         260
   killed by SCORE    36
   killed by AUDIT    65
 FINAL PASS           159
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   130083
-  few_unique_buyers           124063
-  liquidity_low               121943
-  volume_below_liquidity       92942
-  sells_dominate               35040
-  wash_churn                   27627
-  overheated                   11873
+  too_young                   130124
+  few_unique_buyers           124099
+  liquidity_low               121981
+  volume_below_liquidity       92967
+  sells_dominate               35049
+  wash_churn                   27640
+  overheated                   11879
   missing                       3665
   too_old                       1288
   rc_danger                       20
 
-OUTCOMES (median price change from first sighting / first pass; 7837 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 7840 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  159    -5.0%   -12.5%   -41.3%   -85.9%    57%
+FINAL PASS                  159    -5.0%   -13.0%   -41.3%   -85.9%    57%
 SCOUT PASS, killed later    101    +5.4%    +9.1%   -19.5%   -75.1%    50%
-KILLED (tracked)          18222    +0.1%   -59.6%   -85.0%    -0.1%    27%
+KILLED (tracked)          18226    +0.1%   -59.7%   -85.0%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     390    -90.5%    -68.9%    25%
+too_young                     392    -90.5%    -68.9%    25%
 wash_churn                     55    -23.3%    -85.6%    25%
 too_old                        51     -0.6%     -0.4%    10%
 liquidity_low                  35    -69.9%    -49.8%    57%
@@ -52,19 +52,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1032     +0.0%    -10.5%    -48.4%    26%
-<15%      236     +2.4%    -14.2%    -40.1%    33%
+none     1034     +0.0%    -10.5%    -48.4%    26%
+<15%      236     +2.3%    -14.2%    -40.1%    33%
 15-30%     43     -0.5%     -2.4%     +0.4%    33%
 30%+       36     -0.7%     -0.7%     +1.9%    33%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      901     +0.0%     -2.5%    -33.1%    25%
-<20%      388     +2.8%    -58.2%    -92.1%    28%
+<20%      390     +2.8%    -58.2%    -92.1%    27%
 20%+       58     -5.1%    -99.0%       -      81%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1292     +0.2%     -6.8%    -40.8%    26%
+<20%     1294     +0.2%     -6.8%    -40.8%    26%
 20-40%     34     -4.6%    -99.0%    -99.1%    79%
 40%+       21    -98.6%    -98.6%       -      76%
-tokens analysed: 1183 | helius credits today: 9692/25000
+tokens analysed: 1185 | helius credits today: 120/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -87,13 +87,13 @@ A vs B (same sizing, exits and costs; only the entry rule differs)
 ================================================================
                                    A             B
 started                  11-06 08:00   11-07 04:00
-equity                       $294.69       $330.06
-return                        -41.1%        -34.0%
+equity                       $293.56       $330.06
+return                        -41.3%        -34.0%
 closed trades                    106            85
 win rate                         22%           22%
 avg net / trade                -9.5%         -9.4%
 expectancy $/trade            $-1.94        $-2.00
-max drawdown                  -43.3%        -39.3%
+max drawdown                  -43.5%        -39.3%
 open now                           1             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
@@ -101,12 +101,12 @@ Judge on expectancy after >=100 trades each, not on win rate or a few days.
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $294.69 (-41.1%) | cash $279.96 | open 1 | max drawdown -43.3%
+equity $293.56 (-41.3%) | cash $279.96 | open 1 | max drawdown -43.5%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 106 | win 23/106 (22%) | avg net -9.5% | realized $-205.31 | expectancy $-1.94/trade
 exits: stop 77, trail 28, dead_no_route 1
 open:
-  JIMMY        cost $14.73  now $14.73 (+0.0%)  held 0.0h
+  JIMMY        cost $14.73  now $13.61 (-7.6%)  held 0.2h
 last trades:
   MCAT         $16.18 -> $0.00 (-100.0%)  dead_no_route  1.8h
   OpenIndex    $15.37 -> $12.15 (-20.9%)  stop  0.3h
@@ -116,7 +116,7 @@ last trades:
   JENSEN       $15.13 -> $14.50 (-4.2%)  trail  0.8h
   ChristmASS   $15.10 -> $9.98 (-33.9%)  stop  0.2h
   PONK         $14.84 -> $12.70 (-14.4%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 589, daily_loss_limit 322, cooldown_after_loss 20, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 590, daily_loss_limit 322, cooldown_after_loss 20, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -136,7 +136,7 @@ last trades:
   FSDV15       $17.18 -> $13.32 (-22.5%)  stop  0.7h
   sexcoin      $16.99 -> $11.40 (-32.9%)  stop  0.5h
   JENSEN       $16.71 -> $12.63 (-24.4%)  stop  0.7h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 436, daily_loss_limit 240, setup_rejected:sellers_dominate_now 142, setup_rejected:dumping_now 142, setup_rejected:b_bundled 74, setup_rejected:volume_dried_up 59, setup_rejected:operator_cluster 41, setup_rejected:clustered_supply 38, setup_rejected:lp_not_locked 34, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 436, daily_loss_limit 240, setup_rejected:dumping_now 143, setup_rejected:sellers_dominate_now 142, setup_rejected:b_bundled 74, setup_rejected:volume_dried_up 59, setup_rejected:operator_cluster 41, setup_rejected:clustered_supply 38, setup_rejected:lp_not_locked 34, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Creator history of rugged tokens 3, setup_rejected:rc_danger:Low Liquidity 2, max_open_positions 1
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
 Not financial advice. Paper results overstate live results.
