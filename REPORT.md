@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-25 01:42 UTC
+Updated: 2026-11-25 01:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           139645
+pools seen           139699
 passed SCOUT         270
   killed by SCORE    37
   killed by AUDIT    68
 FINAL PASS           165
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   137798
-  few_unique_buyers           131272
-  liquidity_low               129186
-  volume_below_liquidity       98307
-  sells_dominate               37296
-  wash_churn                   29149
-  overheated                   12669
-  missing                       3822
+  too_young                   137852
+  few_unique_buyers           131323
+  liquidity_low               129236
+  volume_below_liquidity       98348
+  sells_dominate               37312
+  wash_churn                   29164
+  overheated                   12675
+  missing                       3824
   too_old                       1355
   rc_danger                       20
 
-OUTCOMES (median price change from first sighting / first pass; 8453 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8454 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  165    -5.0%   -14.1%   -43.9%   -83.7%    58%
 SCOUT PASS, killed later    105    +5.6%    +8.0%   -13.5%   -75.1%    49%
-KILLED (tracked)          19335    +0.1%   -59.7%   -85.5%    -0.1%    27%
+KILLED (tracked)          19339    +0.1%   -59.7%   -85.5%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -151,9 +151,9 @@ last trades:
   BLACKBALLED  $25.00 -> $21.48 (-14.1%)  mirror_sell  0.0h
   DCTY         $24.82 -> $24.39 (-1.7%)  mirror_sell  0.0h
   BEAST        $24.80 -> $29.54 (+19.1%)  mirror_sell  0.2h
-signals skipped by the sizer/risk rules: copy:liquidity_too_low 88, copy:no_price_at_delay 6
+signals skipped by the sizer/risk rules: copy:liquidity_too_low 89, copy:no_price_at_delay 6
 
-BOOK C per wallet  (watching 8 wallets, 901 wallet trades seen)
+BOOK C per wallet  (watching 8 wallets, 906 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
 EDBMUo…Zfj7   t2-GTAVI/XV-a       3     0   33%    +1.1%    +0.79
 Drop wallets with negative expectancy after ~20 copied trades each.
