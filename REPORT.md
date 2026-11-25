@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-25 11:33 UTC
+Updated: 2026-11-25 11:44 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           142592
+pools seen           142651
 passed SCOUT         281
   killed by SCORE    38
   killed by AUDIT    73
 FINAL PASS           170
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   140707
-  few_unique_buyers           134026
-  liquidity_low               131940
-  volume_below_liquidity      100348
-  sells_dominate               38160
-  wash_churn                   29883
-  overheated                   12990
-  missing                       3887
+  too_young                   140764
+  few_unique_buyers           134080
+  liquidity_low               131995
+  volume_below_liquidity      100384
+  sells_dominate               38177
+  wash_churn                   29895
+  overheated                   12995
+  missing                       3888
   too_old                       1370
   rc_danger                       21
 
-OUTCOMES (median price change from first sighting / first pass; 8651 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8652 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  170    -5.2%   -13.3%   -43.9%   -83.3%    57%
 SCOUT PASS, killed later    111    +5.6%   +10.7%    -7.4%   -74.6%    47%
-KILLED (tracked)          19694    +0.2%   -59.6%   -85.6%    -0.1%    27%
+KILLED (tracked)          19699    +0.2%   -59.6%   -85.6%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -37,15 +37,15 @@ too_young                     479    -93.5%    -68.9%    24%
 wash_churn                     55    -23.3%    -85.6%    25%
 too_old                        52     -0.6%     -0.4%    10%
 liquidity_low                  36    -69.3%    -49.8%    56%
+copy_trade                     14    -96.3%    -95.6%    29%
 overheated                     12    -21.9%    -56.0%    50%
-copy_trade                     12    -96.3%    -95.6%    33%
 volume_below_liquidity          8     +1.2%    +30.3%    38%
 sells_dominate                  3    -75.0%       -      67%
 
 SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
-80+        79    -55.0%    -93.2%    57%
+80+        79    -54.0%    -93.2%    57%
 70-79     112    -43.9%    -73.6%    50%
 60-69      65    -29.5%    -86.0%    55%
 <60        25     -7.4%    -63.7%    48%
@@ -53,13 +53,13 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1135     +0.2%    -11.0%    -46.6%    26%
+none     1135     +0.2%    -10.9%    -46.6%    26%
 <15%      300     +2.3%    -13.1%    -36.5%    31%
 15-30%     46     -0.1%     -2.0%     +0.4%    33%
 30%+       36     -0.7%     -1.1%     +0.8%    36%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      988     +0.1%     -2.3%    -35.1%    24%
-<20%      469     +3.4%    -58.5%    -91.4%    27%
+<20%      469     +3.4%    -58.4%    -91.4%    27%
 20%+       60     -2.9%    -99.0%       -      83%
 fresh       n   +1h med   +4h med  +24h med   rug%
 <20%     1458     +0.4%     -7.2%    -40.1%    26%
@@ -152,9 +152,9 @@ last trades:
   DCTY         $24.82 -> $24.39 (-1.7%)  mirror_sell  0.0h
   BEAST        $24.80 -> $29.54 (+19.1%)  mirror_sell  0.2h
   JENSEN       $25.04 -> $0.93 (-96.3%)  stop  0.3h
-signals skipped by the sizer/risk rules: copy:liquidity_too_low 260, copy:no_price_at_delay 25, daily_loss_limit 10, copy:no_pool 3
+signals skipped by the sizer/risk rules: copy:liquidity_too_low 264, copy:no_price_at_delay 26, daily_loss_limit 12, copy:no_pool 5
 
-BOOK C per wallet  (watching 8 wallets, 1551 wallet trades seen)
+BOOK C per wallet  (watching 8 wallets, 1567 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
 EDBMUo…Zfj7   t2-GTAVI/XV-a       4     0   25%   -23.2%   -23.31
 Drop wallets with negative expectancy after ~20 copied trades each.
