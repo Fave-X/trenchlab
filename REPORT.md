@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-25 19:13 UTC
+Updated: 2026-11-25 19:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           144782
+pools seen           144835
 passed SCOUT         283
   killed by SCORE    38
   killed by AUDIT    73
 FINAL PASS           172
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   142847
-  few_unique_buyers           136054
-  liquidity_low               133732
-  volume_below_liquidity      101515
-  sells_dominate               38816
-  wash_churn                   30318
-  overheated                   13191
+  too_young                   142900
+  few_unique_buyers           136103
+  liquidity_low               133783
+  volume_below_liquidity      101556
+  sells_dominate               38836
+  wash_churn                   30325
+  overheated                   13196
   missing                       4202
   too_old                       1376
   copy_trade                      49
 
-OUTCOMES (median price change from first sighting / first pass; 8779 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8784 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  172    -5.4%   -13.2%   -43.2%   -83.0%    57%
+FINAL PASS                  172    -5.4%   -13.2%   -43.2%   -83.0%    58%
 SCOUT PASS, killed later    111    +5.6%   +10.7%    -7.2%   -74.6%    47%
-KILLED (tracked)          19898    +0.2%   -59.6%   -85.6%    -0.1%    27%
+KILLED (tracked)          19902    +0.2%   -59.6%   -85.6%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -46,7 +46,7 @@ SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        79    -52.9%    -93.2%    57%
-70-79     114    -43.9%    -75.0%    50%
+70-79     114    -43.9%    -75.0%    51%
 60-69      65    -30.1%    -86.0%    55%
 <60        25     -7.4%    -63.7%    48%
 
@@ -136,7 +136,7 @@ last trades:
   4CHAN        $15.51 -> $12.17 (-21.5%)  stop  0.2h
   Amend        $15.34 -> $12.38 (-19.3%)  stop  0.5h
   JaoJiu       $15.31 -> $11.47 (-25.1%)  stop  0.3h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 452, daily_loss_limit 265, setup_rejected:dumping_now 157, setup_rejected:sellers_dominate_now 146, setup_rejected:b_bundled 90, setup_rejected:volume_dried_up 59, setup_rejected:operator_cluster 43, setup_rejected:lp_not_locked 41, setup_rejected:clustered_supply 38, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:rc_danger:Creator history of rugged tokens 7, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Low Liquidity 5, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 452, daily_loss_limit 265, setup_rejected:dumping_now 157, setup_rejected:sellers_dominate_now 146, setup_rejected:b_bundled 90, setup_rejected:volume_dried_up 60, setup_rejected:operator_cluster 43, setup_rejected:lp_not_locked 41, setup_rejected:clustered_supply 38, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:rc_danger:Creator history of rugged tokens 7, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Low Liquidity 5, max_open_positions 1
 
 ================================================================
 PAPER BOOK C: copy-trading watched wallets (30s delay, mirror exits)
@@ -154,9 +154,9 @@ last trades:
   JENSEN       $25.04 -> $0.93 (-96.3%)  stop  0.3h
   JENSEN       $23.83 -> $7.18 (-69.9%)  mirror_sell  0.0h
   JENSEN       $23.83 -> $1.96 (-91.8%)  mirror_sell  0.0h
-signals skipped by the sizer/risk rules: copy:liquidity_too_low 264, copy:no_pool 52, daily_loss_limit 50, copy:no_price_at_delay 29
+signals skipped by the sizer/risk rules: copy:liquidity_too_low 264, copy:no_pool 53, daily_loss_limit 50, copy:no_price_at_delay 29
 
-BOOK C per wallet  (watching 2 wallets, 1765 wallet trades seen)
+BOOK C per wallet  (watching 2 wallets, 1771 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
 EDBMUo…Zfj7   t2-GTAVI/XV-a       6     0   17%   -42.4%   -61.84
 Drop wallets with negative expectancy after ~20 copied trades each.
