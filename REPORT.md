@@ -1,32 +1,32 @@
 # TrenchLab report
 
-Updated: 2026-11-25 19:42 UTC
+Updated: 2026-11-25 19:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           144942
+pools seen           144983
 passed SCOUT         284
   killed by SCORE    38
   killed by AUDIT    73
 FINAL PASS           173
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   143007
-  few_unique_buyers           136200
-  liquidity_low               133886
-  volume_below_liquidity      101601
-  sells_dominate               38878
-  wash_churn                   30344
-  overheated                   13204
+  too_young                   143048
+  few_unique_buyers           136240
+  liquidity_low               133927
+  volume_below_liquidity      101628
+  sells_dominate               38894
+  wash_churn                   30353
+  overheated                   13209
   missing                       4203
   too_old                       1376
   copy_trade                      49
 
-OUTCOMES (median price change from first sighting / first pass; 8790 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8791 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  173    -5.4%   -13.3%   -43.2%   -83.0%    57%
+FINAL PASS                  173    -5.3%   -13.3%   -43.2%   -83.3%    57%
 SCOUT PASS, killed later    111    +5.6%   +10.7%    -7.2%   -74.6%    47%
 KILLED (tracked)          19908    +0.2%   -59.6%   -85.6%    -0.1%    27%
 
@@ -39,44 +39,44 @@ too_old                        52     -0.6%     -0.4%    10%
 copy_trade                     49    -95.9%    -95.6%     8%
 liquidity_low                  36    -69.3%    -49.8%    56%
 overheated                     12    -21.9%    -56.0%    50%
-volume_below_liquidity          8     +1.2%    +30.3%    38%
+volume_below_liquidity          8     +1.2%    +40.3%    38%
 sells_dominate                  3    -75.0%       -      67%
 
 SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        79    -52.9%    -93.2%    57%
-70-79     115    -43.9%    -75.0%    50%
+70-79     115    -43.9%    -75.3%    50%
 60-69      65    -30.1%    -86.0%    55%
 <60        25     -7.4%    -63.7%    48%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1154     +0.2%    -11.0%    -51.4%    26%
-<15%      305     +1.7%    -11.2%    -32.5%    30%
+none     1154     +0.2%    -11.0%    -52.1%    26%
+<15%      305     +1.7%    -11.2%    -24.8%    30%
 15-30%     36     -0.1%     -2.9%     +0.4%    44%
 30%+       36     -0.7%     -1.1%     +0.8%    36%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      997     +0.1%     -2.2%    -35.1%    24%
-<20%      473     +3.3%    -58.4%    -87.0%    27%
+none      997     +0.1%     -2.2%    -37.0%    24%
+<20%      473     +3.3%    -58.4%    -82.6%    27%
 20%+       61     -0.7%    -99.0%       -      84%
 fresh       n   +1h med   +4h med  +24h med   rug%
 <20%     1472     +0.4%     -7.1%    -40.8%    26%
 20-40%     36     -2.6%    -99.0%    -99.1%    78%
 40%+       23    -98.5%    -99.4%       -      78%
-tokens analysed: 1353 | helius credits today: 5464/25000
+tokens analysed: 1353 | helius credits today: 5517/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%  173    23%     -9.8%   -14.9%   -99.7%
+   -6%     12%  173    23%     -9.7%   -14.9%   -99.7%
    -6%     20%  173    24%    -10.0%   -15.0%   -99.7%
    -6%     30%  173    21%    -10.2%   -15.6%   -99.7%
-  -10%     12%  173    25%     -9.8%   -17.1%   -99.7%
-  -10%     20%  173    27%    -10.2%   -17.7%   -99.7%
+  -10%     12%  173    25%     -9.7%   -17.1%   -99.7%
+  -10%     20%  173    27%    -10.1%   -17.7%   -99.7%
   -10%     30%  173    25%    -10.2%   -18.6%   -99.7%
   -15%     12%  173    29%     -9.6%   -19.6%   -99.7%
-  -15%     20%  173    32%    -10.1%   -20.7%   -99.7%
+  -15%     20%  173    32%    -10.0%   -20.7%   -99.7%
   -15%     30%  173    29%    -10.4%   -21.2%   -99.7%
   -25%     12%  173    34%    -11.9%   -18.6%   -99.7%
   -25%     20%  173    38%    -13.1%   -29.2%   -99.7%
@@ -89,8 +89,8 @@ C copies watched wallets with a 30s delay and mirror exits)
 ================================================================
                                    A             B             C
 started                  11-06 08:00   11-07 04:00   11-24 09:00
-equity                       $279.13       $299.99       $438.16
-return                        -44.2%        -40.0%        -12.4%
+equity                       $280.21       $299.99       $438.16
+return                        -44.0%        -40.0%        -12.4%
 closed trades                    117            94             6
 win rate                         21%           20%           17%
 avg net / trade                -9.6%        -10.5%        -42.4%
@@ -103,12 +103,12 @@ Judge on expectancy after >=100 trades each, not on win rate or a few days.
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $279.13 (-44.2%) | cash $263.52 | open 1 | max drawdown -47.4%
+equity $280.21 (-44.0%) | cash $263.52 | open 1 | max drawdown -47.4%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 117 | win 25/117 (21%) | avg net -9.6% | realized $-222.61 | expectancy $-1.90/trade
 exits: stop 86, trail 30, dead_no_route 1
 open:
-  4CHAN        cost $13.87  now $15.60 (+12.5%)  held 0.2h
+  4CHAN        cost $13.87  now $16.69 (+20.3%)  held 0.4h
 last trades:
   DUVAL        $14.04 -> $8.66 (-38.3%)  stop  0.2h
   BOOBS        $13.77 -> $10.97 (-20.4%)  stop  0.2h
@@ -138,7 +138,7 @@ last trades:
   4CHAN        $15.51 -> $12.17 (-21.5%)  stop  0.2h
   Amend        $15.34 -> $12.38 (-19.3%)  stop  0.5h
   JaoJiu       $15.31 -> $11.47 (-25.1%)  stop  0.3h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 452, daily_loss_limit 265, setup_rejected:dumping_now 157, setup_rejected:sellers_dominate_now 146, setup_rejected:b_bundled 90, setup_rejected:volume_dried_up 61, setup_rejected:operator_cluster 43, setup_rejected:lp_not_locked 41, setup_rejected:clustered_supply 38, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:rc_danger:Creator history of rugged tokens 7, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Low Liquidity 5, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 452, daily_loss_limit 266, setup_rejected:dumping_now 157, setup_rejected:sellers_dominate_now 146, setup_rejected:b_bundled 90, setup_rejected:volume_dried_up 61, setup_rejected:operator_cluster 43, setup_rejected:lp_not_locked 41, setup_rejected:clustered_supply 38, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:rc_danger:Creator history of rugged tokens 7, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Low Liquidity 5, max_open_positions 1
 
 ================================================================
 PAPER BOOK C: copy-trading watched wallets (30s delay, mirror exits)
