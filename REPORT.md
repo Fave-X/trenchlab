@@ -1,25 +1,25 @@
 # TrenchLab report
 
-Updated: 2026-11-25 23:27 UTC
+Updated: 2026-11-25 23:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           146111
+pools seen           146143
 passed SCOUT         287
   killed by SCORE    38
   killed by AUDIT    73
 FINAL PASS           176
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   144168
-  few_unique_buyers           137248
-  liquidity_low               135023
-  volume_below_liquidity      102251
-  sells_dominate               39407
-  wash_churn                   30643
-  overheated                   13299
+  too_young                   144200
+  few_unique_buyers           137280
+  liquidity_low               135054
+  volume_below_liquidity      102276
+  sells_dominate               39425
+  wash_churn                   30651
+  overheated                   13303
   missing                       4209
   too_old                       1381
   copy_trade                      51
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 8868 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  176    -5.6%   -16.1%   -43.2%   -83.3%    59%
 SCOUT PASS, killed later    111    +5.6%   +10.7%    -7.2%   -74.6%    48%
-KILLED (tracked)          19980    +0.1%   -59.1%   -85.6%    -0.2%    27%
+KILLED (tracked)          19981    +0.1%   -59.1%   -85.6%    -0.2%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -55,17 +55,17 @@ CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 cluster     n   +1h med   +4h med  +24h med   rug%
 none     1163     +0.2%    -11.2%    -52.1%    26%
 <15%      310     +1.4%    -11.2%    -24.8%    31%
-15-30%     37     -0.1%     -1.3%     +0.4%    43%
+15-30%     38     -0.1%     -1.3%     +0.4%    42%
 30%+       37     -0.7%     -1.1%     +0.5%    35%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none     1007     +0.0%     -2.2%    -35.1%    25%
 <20%      479     +3.3%    -58.4%    -82.6%    27%
-20%+       61     -0.7%    -99.0%       -      84%
+20%+       62     -0.7%    -99.0%       -      82%
 fresh       n   +1h med   +4h med  +24h med   rug%
 <20%     1488     +0.4%     -7.2%    -40.1%    26%
 20-40%     36     -2.6%    -99.0%    -99.1%    78%
-40%+       23    -98.5%    -99.4%       -      78%
-tokens analysed: 1368 | helius credits today: 6710/25000
+40%+       24    -98.5%    -99.4%       -      75%
+tokens analysed: 1369 | helius credits today: 6792/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
