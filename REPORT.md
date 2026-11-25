@@ -1,32 +1,32 @@
 # TrenchLab report
 
-Updated: 2026-11-25 23:32 UTC
+Updated: 2026-11-25 23:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           146143
+pools seen           146199
 passed SCOUT         287
   killed by SCORE    38
   killed by AUDIT    73
 FINAL PASS           176
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   144200
-  few_unique_buyers           137280
-  liquidity_low               135054
-  volume_below_liquidity      102276
-  sells_dominate               39425
-  wash_churn                   30651
-  overheated                   13303
+  too_young                   144256
+  few_unique_buyers           137333
+  liquidity_low               135110
+  volume_below_liquidity      102302
+  sells_dominate               39453
+  wash_churn                   30662
+  overheated                   13308
   missing                       4209
   too_old                       1381
   copy_trade                      51
 
-OUTCOMES (median price change from first sighting / first pass; 8868 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8869 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  176    -5.6%   -16.1%   -43.2%   -83.3%    59%
+FINAL PASS                  176    -5.6%   -17.3%   -43.9%   -83.3%    59%
 SCOUT PASS, killed later    111    +5.6%   +10.7%    -7.2%   -74.6%    48%
 KILLED (tracked)          19981    +0.1%   -59.1%   -85.6%    -0.2%    27%
 
@@ -46,19 +46,19 @@ SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        79    -52.9%    -93.2%    57%
-70-79     118    -43.9%    -75.3%    53%
+70-79     118    -44.3%    -75.3%    53%
 60-69      65    -30.1%    -86.0%    57%
 <60        25     -7.4%    -63.7%    48%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1163     +0.2%    -11.2%    -52.1%    26%
+none     1163     +0.2%    -11.4%    -52.1%    26%
 <15%      310     +1.4%    -11.2%    -24.8%    31%
 15-30%     38     -0.1%     -1.3%     +0.4%    42%
 30%+       37     -0.7%     -1.1%     +0.5%    35%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none     1007     +0.0%     -2.2%    -35.1%    25%
+none     1007     +0.0%     -2.3%    -35.1%    25%
 <20%      479     +3.3%    -58.4%    -82.6%    27%
 20%+       62     -0.7%    -99.0%       -      82%
 fresh       n   +1h med   +4h med  +24h med   rug%
@@ -154,9 +154,9 @@ last trades:
   JENSEN       $25.04 -> $0.93 (-96.3%)  stop  0.3h
   JENSEN       $23.83 -> $7.18 (-69.9%)  mirror_sell  0.0h
   JENSEN       $23.83 -> $1.96 (-91.8%)  mirror_sell  0.0h
-signals skipped by the sizer/risk rules: copy:liquidity_too_low 264, copy:no_pool 57, daily_loss_limit 53, copy:no_price_at_delay 29
+signals skipped by the sizer/risk rules: copy:liquidity_too_low 265, copy:no_pool 57, daily_loss_limit 53, copy:no_price_at_delay 29
 
-BOOK C per wallet  (watching 1 wallets, 1786 wallet trades seen)
+BOOK C per wallet  (watching 1 wallets, 1787 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
 EDBMUo…Zfj7   t2-GTAVI/XV-a       6     0   17%   -42.4%   -61.84
 Drop wallets with negative expectancy after ~20 copied trades each.
