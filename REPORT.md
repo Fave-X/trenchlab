@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-25 15:02 UTC
+Updated: 2026-11-25 15:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           143650
+pools seen           143701
 passed SCOUT         282
   killed by SCORE    39
   killed by AUDIT    73
 FINAL PASS           170
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   141720
-  few_unique_buyers           134992
-  liquidity_low               132876
-  volume_below_liquidity      100962
-  sells_dominate               38478
-  wash_churn                   30116
-  overheated                   13087
+  too_young                   141771
+  few_unique_buyers           135038
+  liquidity_low               132925
+  volume_below_liquidity      101000
+  sells_dominate               38489
+  wash_churn                   30123
+  overheated                   13091
   missing                       3954
   too_old                       1375
   copy_trade                      47
 
-OUTCOMES (median price change from first sighting / first pass; 8690 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8691 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  170    -5.2%   -13.3%   -43.2%   -83.0%    58%
 SCOUT PASS, killed later    112    +5.7%   +11.1%    -7.2%   -74.6%    46%
-KILLED (tracked)          19815    +0.2%   -59.7%   -85.6%    -0.1%    27%
+KILLED (tracked)          19821    +0.2%   -59.7%   -85.6%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -154,9 +154,9 @@ last trades:
   JENSEN       $25.04 -> $0.93 (-96.3%)  stop  0.3h
   JENSEN       $23.83 -> $7.18 (-69.9%)  mirror_sell  0.0h
   JENSEN       $23.83 -> $1.96 (-91.8%)  mirror_sell  0.0h
-signals skipped by the sizer/risk rules: copy:liquidity_too_low 264, daily_loss_limit 48, copy:no_pool 43, copy:no_price_at_delay 29
+signals skipped by the sizer/risk rules: copy:liquidity_too_low 264, daily_loss_limit 48, copy:no_pool 45, copy:no_price_at_delay 29
 
-BOOK C per wallet  (watching 8 wallets, 1729 wallet trades seen)
+BOOK C per wallet  (watching 8 wallets, 1735 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
 EDBMUo…Zfj7   t2-GTAVI/XV-a       6     0   17%   -42.4%   -61.84
 Drop wallets with negative expectancy after ~20 copied trades each.
