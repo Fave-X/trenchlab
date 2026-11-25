@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-25 12:24 UTC
+Updated: 2026-11-25 12:33 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           142864
+pools seen           142904
 passed SCOUT         281
   killed by SCORE    38
   killed by AUDIT    73
 FINAL PASS           170
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   140963
-  few_unique_buyers           134270
-  liquidity_low               132156
-  volume_below_liquidity      100483
-  sells_dominate               38235
-  wash_churn                   29943
-  overheated                   13008
+  too_young                   141001
+  few_unique_buyers           134306
+  liquidity_low               132193
+  volume_below_liquidity      100514
+  sells_dominate               38247
+  wash_churn                   29948
+  overheated                   13013
   missing                       3924
   too_old                       1373
-  copy_trade                      24
+  copy_trade                      26
 
-OUTCOMES (median price change from first sighting / first pass; 8659 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8662 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  170    -5.2%   -13.3%   -43.9%   -83.3%    57%
 SCOUT PASS, killed later    111    +5.6%   +10.7%    -7.4%   -74.6%    47%
-KILLED (tracked)          19730    +0.2%   -59.6%   -85.6%    -0.1%    27%
+KILLED (tracked)          19736    +0.2%   -59.6%   -85.6%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -37,7 +37,7 @@ too_young                     479    -93.5%    -68.9%    24%
 wash_churn                     56    -23.3%    -85.6%    25%
 too_old                        52     -0.6%     -0.4%    10%
 liquidity_low                  36    -69.3%    -49.8%    56%
-copy_trade                     24    -96.3%    -95.6%    17%
+copy_trade                     26    -96.3%    -95.6%    15%
 overheated                     12    -21.9%    -56.0%    50%
 volume_below_liquidity          8     +1.2%    +30.3%    38%
 sells_dominate                  3    -75.0%       -      67%
@@ -154,9 +154,9 @@ last trades:
   JENSEN       $25.04 -> $0.93 (-96.3%)  stop  0.3h
   JENSEN       $23.83 -> $7.18 (-69.9%)  mirror_sell  0.0h
   JENSEN       $23.83 -> $1.96 (-91.8%)  mirror_sell  0.0h
-signals skipped by the sizer/risk rules: copy:liquidity_too_low 264, copy:no_price_at_delay 28, daily_loss_limit 22, copy:no_pool 5
+signals skipped by the sizer/risk rules: copy:liquidity_too_low 264, copy:no_price_at_delay 28, daily_loss_limit 24, copy:no_pool 5
 
-BOOK C per wallet  (watching 8 wallets, 1597 wallet trades seen)
+BOOK C per wallet  (watching 8 wallets, 1600 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
 EDBMUo…Zfj7   t2-GTAVI/XV-a       6     0   17%   -42.4%   -61.84
 Drop wallets with negative expectancy after ~20 copied trades each.
