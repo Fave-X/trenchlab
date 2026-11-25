@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-25 16:52 UTC
+Updated: 2026-11-25 17:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           144076
+pools seen           144119
 passed SCOUT         282
   killed by SCORE    38
   killed by AUDIT    73
 FINAL PASS           171
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   142145
-  few_unique_buyers           135400
-  liquidity_low               133158
-  volume_below_liquidity      101146
-  sells_dominate               38594
-  wash_churn                   30185
-  overheated                   13121
-  missing                       4092
+  too_young                   142188
+  few_unique_buyers           135442
+  liquidity_low               133180
+  volume_below_liquidity      101162
+  sells_dominate               38611
+  wash_churn                   30186
+  overheated                   13124
+  missing                       4113
   too_old                       1375
   copy_trade                      47
 
-OUTCOMES (median price change from first sighting / first pass; 8732 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8734 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  171    -5.3%   -13.3%   -43.2%   -83.0%    57%
 SCOUT PASS, killed later    111    +5.6%   +10.7%    -7.2%   -74.6%    47%
-KILLED (tracked)          19839    +0.2%   -59.6%   -85.6%    -0.1%    27%
+KILLED (tracked)          19841    +0.2%   -59.6%   -85.6%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -136,7 +136,7 @@ last trades:
   4CHAN        $15.51 -> $12.17 (-21.5%)  stop  0.2h
   Amend        $15.34 -> $12.38 (-19.3%)  stop  0.5h
   JaoJiu       $15.31 -> $11.47 (-25.1%)  stop  0.3h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 452, daily_loss_limit 257, setup_rejected:dumping_now 156, setup_rejected:sellers_dominate_now 146, setup_rejected:b_bundled 90, setup_rejected:volume_dried_up 59, setup_rejected:operator_cluster 43, setup_rejected:lp_not_locked 41, setup_rejected:clustered_supply 38, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:rc_danger:Creator history of rugged tokens 7, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Low Liquidity 5, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 452, daily_loss_limit 258, setup_rejected:dumping_now 156, setup_rejected:sellers_dominate_now 146, setup_rejected:b_bundled 90, setup_rejected:volume_dried_up 59, setup_rejected:operator_cluster 43, setup_rejected:lp_not_locked 41, setup_rejected:clustered_supply 38, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:rc_danger:Creator history of rugged tokens 7, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Low Liquidity 5, max_open_positions 1
 
 ================================================================
 PAPER BOOK C: copy-trading watched wallets (30s delay, mirror exits)
