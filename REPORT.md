@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-25 05:32 UTC
+Updated: 2026-11-25 05:45 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           140806
+pools seen           140856
 passed SCOUT         277
   killed by SCORE    38
   killed by AUDIT    71
 FINAL PASS           168
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   138948
-  few_unique_buyers           132364
-  liquidity_low               130285
-  volume_below_liquidity       99152
-  sells_dominate               37616
-  wash_churn                   29372
-  overheated                   12799
+  too_young                   138997
+  few_unique_buyers           132411
+  liquidity_low               130334
+  volume_below_liquidity       99187
+  sells_dominate               37630
+  wash_churn                   29385
+  overheated                   12806
   missing                       3844
-  too_old                       1360
+  too_old                       1361
   rc_danger                       21
 
-OUTCOMES (median price change from first sighting / first pass; 8564 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8565 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  168    -5.2%   -14.1%   -43.9%   -83.7%    57%
+FINAL PASS                  168    -5.2%   -13.3%   -43.9%   -83.7%    57%
 SCOUT PASS, killed later    109    +5.6%    +9.5%    -7.4%   -74.6%    48%
-KILLED (tracked)          19460    +0.2%   -59.9%   -85.6%    -0.1%    27%
+KILLED (tracked)          19470    +0.2%   -60.2%   -85.6%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -54,7 +54,7 @@ CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
 none     1112     +0.0%    -11.2%    -46.0%    26%
-<15%      294     +2.0%    -14.2%    -40.1%    31%
+<15%      294     +1.7%    -14.2%    -40.1%    31%
 15-30%     46     -0.1%     -1.7%     +0.4%    33%
 30%+       36     -0.7%     -1.1%     +0.8%    36%
 bundled     n   +1h med   +4h med  +24h med   rug%
@@ -78,7 +78,7 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     12%  168    29%     -9.7%   -19.6%   -99.7%
   -15%     20%  168    32%    -10.1%   -20.5%   -99.7%
   -15%     30%  168    29%    -10.5%   -21.1%   -99.7%
-  -25%     12%  168    33%    -12.0%   -19.5%   -99.7%
+  -25%     12%  168    33%    -12.0%   -18.2%   -99.7%
   -25%     20%  168    37%    -13.5%   -29.3%   -99.7%
   -25%     30%  168    34%    -14.1%   -30.8%   -99.7%
   best so far: stop -15%, trail from +12% -> avg -9.7% per trade over n=168
@@ -116,7 +116,7 @@ last trades:
   BOOBS        $13.77 -> $10.97 (-20.4%)  stop  0.2h
   4CHAN        $13.77 -> $25.64 (+86.2%)  trail  1.3h
   PERRO        $14.45 -> $12.30 (-14.8%)  stop  0.3h
-signals skipped by the sizer/risk rules: already_traded_token 623, daily_loss_limit 331, cooldown_after_loss 20, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 624, daily_loss_limit 331, cooldown_after_loss 20, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -136,7 +136,7 @@ last trades:
   ChristmASS   $15.84 -> $11.21 (-29.2%)  stop  0.3h
   PERRO        $15.87 -> $13.75 (-13.4%)  stop  0.2h
   4CHAN        $15.51 -> $12.17 (-21.5%)  stop  0.2h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 450, daily_loss_limit 240, setup_rejected:dumping_now 149, setup_rejected:sellers_dominate_now 146, setup_rejected:b_bundled 83, setup_rejected:volume_dried_up 59, setup_rejected:operator_cluster 43, setup_rejected:lp_not_locked 40, setup_rejected:clustered_supply 38, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Low Liquidity 5, setup_rejected:rc_danger:Creator history of rugged tokens 3, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 450, daily_loss_limit 240, setup_rejected:dumping_now 149, setup_rejected:sellers_dominate_now 146, setup_rejected:b_bundled 84, setup_rejected:volume_dried_up 59, setup_rejected:operator_cluster 43, setup_rejected:lp_not_locked 40, setup_rejected:clustered_supply 38, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Low Liquidity 5, setup_rejected:rc_danger:Creator history of rugged tokens 3, max_open_positions 1
 
 ================================================================
 PAPER BOOK C: copy-trading watched wallets (30s delay, mirror exits)
@@ -152,9 +152,9 @@ last trades:
   DCTY         $24.82 -> $24.39 (-1.7%)  mirror_sell  0.0h
   BEAST        $24.80 -> $29.54 (+19.1%)  mirror_sell  0.2h
   JENSEN       $25.04 -> $0.93 (-96.3%)  stop  0.3h
-signals skipped by the sizer/risk rules: copy:liquidity_too_low 194, copy:no_price_at_delay 17, copy:no_pool 1
+signals skipped by the sizer/risk rules: copy:liquidity_too_low 201, copy:no_price_at_delay 17, copy:no_pool 1
 
-BOOK C per wallet  (watching 8 wallets, 1374 wallet trades seen)
+BOOK C per wallet  (watching 8 wallets, 1386 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
 EDBMUo…Zfj7   t2-GTAVI/XV-a       4     0   25%   -23.2%   -23.31
 Drop wallets with negative expectancy after ~20 copied trades each.
