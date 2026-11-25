@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-25 06:22 UTC
+Updated: 2026-11-25 06:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           141055
+pools seen           141103
 passed SCOUT         277
   killed by SCORE    38
   killed by AUDIT    71
 FINAL PASS           168
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   139194
-  few_unique_buyers           132593
-  liquidity_low               130517
-  volume_below_liquidity       99322
-  sells_dominate               37685
-  wash_churn                   29449
-  overheated                   12834
+  too_young                   139241
+  few_unique_buyers           132637
+  liquidity_low               130564
+  volume_below_liquidity       99356
+  sells_dominate               37695
+  wash_churn                   29461
+  overheated                   12841
   missing                       3847
   too_old                       1362
   rc_danger                       21
 
-OUTCOMES (median price change from first sighting / first pass; 8580 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8583 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  168    -5.2%   -13.3%   -43.9%   -83.7%    57%
 SCOUT PASS, killed later    109    +5.6%    +9.5%   -13.5%   -74.6%    48%
-KILLED (tracked)          19506    +0.2%   -59.7%   -85.6%    -0.1%    27%
+KILLED (tracked)          19512    +0.2%   -59.6%   -85.6%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -136,7 +136,7 @@ last trades:
   ChristmASS   $15.84 -> $11.21 (-29.2%)  stop  0.3h
   PERRO        $15.87 -> $13.75 (-13.4%)  stop  0.2h
   4CHAN        $15.51 -> $12.17 (-21.5%)  stop  0.2h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 450, daily_loss_limit 240, setup_rejected:dumping_now 150, setup_rejected:sellers_dominate_now 146, setup_rejected:b_bundled 87, setup_rejected:volume_dried_up 59, setup_rejected:operator_cluster 43, setup_rejected:lp_not_locked 40, setup_rejected:clustered_supply 38, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Low Liquidity 5, setup_rejected:rc_danger:Creator history of rugged tokens 3, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 450, daily_loss_limit 240, setup_rejected:dumping_now 150, setup_rejected:sellers_dominate_now 146, setup_rejected:b_bundled 88, setup_rejected:volume_dried_up 59, setup_rejected:operator_cluster 43, setup_rejected:lp_not_locked 40, setup_rejected:clustered_supply 38, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Low Liquidity 5, setup_rejected:rc_danger:Creator history of rugged tokens 3, max_open_positions 1
 
 ================================================================
 PAPER BOOK C: copy-trading watched wallets (30s delay, mirror exits)
