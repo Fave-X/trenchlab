@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-25 18:32 UTC
+Updated: 2026-11-25 18:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           144552
-passed SCOUT         282
+pools seen           144615
+passed SCOUT         283
   killed by SCORE    38
   killed by AUDIT    73
-FINAL PASS           171
+FINAL PASS           172
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   142619
-  few_unique_buyers           135855
-  liquidity_low               133524
-  volume_below_liquidity      101411
-  sells_dominate               38746
-  wash_churn                   30254
-  overheated                   13167
-  missing                       4189
+  too_young                   142682
+  few_unique_buyers           135913
+  liquidity_low               133576
+  volume_below_liquidity      101448
+  sells_dominate               38764
+  wash_churn                   30266
+  overheated                   13173
+  missing                       4199
   too_old                       1375
   copy_trade                      49
 
-OUTCOMES (median price change from first sighting / first pass; 8770 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8773 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  171    -5.3%   -13.2%   -43.2%   -83.0%    57%
+FINAL PASS                  172    -5.3%   -13.2%   -43.2%   -83.0%    57%
 SCOUT PASS, killed later    111    +5.6%   +10.7%    -7.2%   -74.6%    47%
-KILLED (tracked)          19876    +0.2%   -59.7%   -85.7%    -0.1%    27%
+KILLED (tracked)          19882    +0.2%   -59.6%   -85.6%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -46,14 +46,14 @@ SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        79    -52.9%    -93.2%    57%
-70-79     113    -43.9%    -75.0%    50%
+70-79     114    -43.9%    -75.0%    50%
 60-69      65    -30.1%    -86.0%    55%
 <60        25     -7.4%    -63.7%    48%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1149     +0.2%    -10.9%    -51.4%    26%
+none     1149     +0.2%    -11.0%    -51.4%    26%
 <15%      305     +1.7%    -11.2%    -32.5%    30%
 15-30%     36     -0.1%     -2.9%     +0.4%    42%
 30%+       36     -0.7%     -1.1%     +0.8%    36%
@@ -62,7 +62,7 @@ none      993     +0.1%     -2.2%    -35.1%    25%
 <20%      472     +3.4%    -58.4%    -87.0%    27%
 20%+       61     -0.7%    -99.0%       -      82%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1467     +0.4%     -6.9%    -40.8%    26%
+<20%     1467     +0.4%     -7.1%    -40.8%    26%
 20-40%     36     -2.6%    -99.0%    -99.1%    78%
 40%+       23    -98.5%    -99.4%       -      78%
 tokens analysed: 1349 | helius credits today: 5092/25000
@@ -96,17 +96,19 @@ win rate                         22%           20%           17%
 avg net / trade                -9.4%        -10.5%        -42.4%
 expectancy $/trade            $-1.87        $-2.13       $-10.31
 max drawdown                  -47.4%        -44.8%        -13.0%
-open now                           0             0             0
+open now                           1             0             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $282.71 (-43.5%) | cash $282.71 | open 0 | max drawdown -47.4%
+equity $282.71 (-43.5%) | cash $268.57 | open 1 | max drawdown -47.4%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 116 | win 25/116 (22%) | avg net -9.4% | realized $-217.29 | expectancy $-1.87/trade
 exits: stop 85, trail 30, dead_no_route 1
+open:
+  GRAUDIA      cost $14.14  now $14.14 (+0.0%)  held 0.0h
 last trades:
   Scamsem      $14.12 -> $12.59 (-10.9%)  stop  0.2h
   DUVAL        $14.04 -> $8.66 (-38.3%)  stop  0.2h
@@ -156,7 +158,7 @@ last trades:
   JENSEN       $23.83 -> $1.96 (-91.8%)  mirror_sell  0.0h
 signals skipped by the sizer/risk rules: copy:liquidity_too_low 264, copy:no_pool 51, daily_loss_limit 50, copy:no_price_at_delay 29
 
-BOOK C per wallet  (watching 2 wallets, 1762 wallet trades seen)
+BOOK C per wallet  (watching 1 wallets, 1763 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
 EDBMUo…Zfj7   t2-GTAVI/XV-a       6     0   17%   -42.4%   -61.84
 Drop wallets with negative expectancy after ~20 copied trades each.
