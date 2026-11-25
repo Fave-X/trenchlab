@@ -242,7 +242,8 @@ def wallet_report(db):
             ret = p["exit_value"] / p["cost_usd"] - 1
             r["rets"].append(ret)
             r["wins"] += ret > 0
-    watched = db.conn.execute("SELECT COUNT(*) FROM copy_wallets").fetchone()[0]
+    watched = db.conn.execute("SELECT COUNT(*) FROM copy_wallets WHERE last_check_ts >= "
+                              "(SELECT MAX(last_check_ts) FROM copy_wallets) - 3600").fetchone()[0]
     events = db.conn.execute("SELECT COUNT(*) FROM copy_events").fetchone()[0]
     lines = ["", f"BOOK C per wallet  (watching {watched} wallets, {events} wallet trades seen)"]
     if not rows:
