@@ -155,7 +155,7 @@
     "max_new_txs_per_wallet": 50,
     "max_signal_age_min": 30,
     "min_wallet_buy_sol": 0.1,
-    "min_liquidity_usd": 10000
+    "min_liquidity_usd": 3000
   },
   "paper_books": {
     "C": {

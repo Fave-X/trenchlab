@@ -176,15 +176,17 @@ def _copy_buy(db, trader, pricer, cfg, wallet, label, mint, sig, sol, now, log):
         if pool is None:
             db.paper_skip(now, _Stub(mint), "copy:no_pool", "C")
             return 0
+        if (pool.liquidity_usd or 0) < c["min_liquidity_usd"]:   # cheap check first: no candle call
+            db.paper_skip(now, pool, "copy:liquidity_too_low", "C")
+            return 0
+        if db.paper_traded_token(mint, "C"):
+            return 0
         px = pricer.price_at(pool.address, sig["blockTime"] + c["delay_s"], "buy")
     except Exception as e:
         log(f"[C] pricing {mint[:6]} failed: {e}")
         return 0
     if not px:
         db.paper_skip(now, pool, "copy:no_price_at_delay", "C")
-        return 0
-    if (pool.liquidity_usd or 0) < c["min_liquidity_usd"]:
-        db.paper_skip(now, pool, "copy:liquidity_too_low", "C")
         return 0
     pool.price_usd = px
     db.upsert_first_seen(pool, now, ["copy_trade"], now + 72 * 3600)
