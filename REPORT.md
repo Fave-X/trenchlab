@@ -1,26 +1,26 @@
 # TrenchLab report
 
-Updated: 2026-11-25 17:02 UTC
+Updated: 2026-11-25 17:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           144119
+pools seen           144166
 passed SCOUT         282
   killed by SCORE    38
   killed by AUDIT    73
 FINAL PASS           171
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   142188
-  few_unique_buyers           135442
-  liquidity_low               133180
-  volume_below_liquidity      101162
-  sells_dominate               38611
-  wash_churn                   30186
-  overheated                   13124
-  missing                       4113
+  too_young                   142235
+  few_unique_buyers           135488
+  liquidity_low               133194
+  volume_below_liquidity      101170
+  sells_dominate               38626
+  wash_churn                   30192
+  overheated                   13128
+  missing                       4145
   too_old                       1375
   copy_trade                      47
 
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 8734 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  171    -5.3%   -13.3%   -43.2%   -83.0%    57%
 SCOUT PASS, killed later    111    +5.6%   +10.7%    -7.2%   -74.6%    47%
-KILLED (tracked)          19841    +0.2%   -59.6%   -85.6%    -0.1%    27%
+KILLED (tracked)          19842    +0.2%   -59.6%   -85.6%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -53,8 +53,8 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1157     +0.2%     -9.2%    -46.0%    26%
-<15%      296     +3.3%    -14.9%    -45.0%    31%
+none     1148     +0.2%    -10.9%    -51.4%    26%
+<15%      305     +1.7%    -11.2%    -32.5%    30%
 15-30%     36     -0.2%     -2.9%     +0.4%    42%
 30%+       36     -0.7%     -1.1%     +0.8%    36%
 bundled     n   +1h med   +4h med  +24h med   rug%
@@ -65,7 +65,7 @@ fresh       n   +1h med   +4h med  +24h med   rug%
 <20%     1466     +0.4%     -6.9%    -40.8%    26%
 20-40%     36     -2.6%    -99.0%    -99.1%    78%
 40%+       23    -98.5%    -99.4%       -      78%
-tokens analysed: 1348 | helius credits today: 4828/25000
+tokens analysed: 1348 | helius credits today: 4886/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -136,7 +136,7 @@ last trades:
   4CHAN        $15.51 -> $12.17 (-21.5%)  stop  0.2h
   Amend        $15.34 -> $12.38 (-19.3%)  stop  0.5h
   JaoJiu       $15.31 -> $11.47 (-25.1%)  stop  0.3h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 452, daily_loss_limit 258, setup_rejected:dumping_now 156, setup_rejected:sellers_dominate_now 146, setup_rejected:b_bundled 90, setup_rejected:volume_dried_up 59, setup_rejected:operator_cluster 43, setup_rejected:lp_not_locked 41, setup_rejected:clustered_supply 38, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:rc_danger:Creator history of rugged tokens 7, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Low Liquidity 5, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 452, daily_loss_limit 260, setup_rejected:dumping_now 156, setup_rejected:sellers_dominate_now 146, setup_rejected:b_bundled 90, setup_rejected:volume_dried_up 59, setup_rejected:operator_cluster 43, setup_rejected:lp_not_locked 41, setup_rejected:clustered_supply 38, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:rc_danger:Creator history of rugged tokens 7, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Low Liquidity 5, max_open_positions 1
 
 ================================================================
 PAPER BOOK C: copy-trading watched wallets (30s delay, mirror exits)
