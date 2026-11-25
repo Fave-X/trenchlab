@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-25 22:52 UTC
+Updated: 2026-11-25 23:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           145906
+pools seen           145958
 passed SCOUT         287
   killed by SCORE    38
   killed by AUDIT    73
 FINAL PASS           176
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   143966
-  few_unique_buyers           137056
-  liquidity_low               134820
-  volume_below_liquidity      102130
-  sells_dominate               39291
-  wash_churn                   30598
-  overheated                   13288
+  too_young                   144017
+  few_unique_buyers           137103
+  liquidity_low               134871
+  volume_below_liquidity      102158
+  sells_dominate               39313
+  wash_churn                   30612
+  overheated                   13293
   missing                       4209
-  too_old                       1378
+  too_old                       1379
   copy_trade                      51
 
-OUTCOMES (median price change from first sighting / first pass; 8855 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8863 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  176    -5.5%   -16.1%   -43.2%   -83.3%    59%
+FINAL PASS                  176    -5.6%   -16.1%   -43.2%   -83.3%    59%
 SCOUT PASS, killed later    111    +5.6%   +10.7%    -7.2%   -74.6%    48%
-KILLED (tracked)          19976    +0.1%   -59.3%   -85.6%    -0.2%    27%
+KILLED (tracked)          19978    +0.1%   -59.3%   -85.6%    -0.2%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -69,19 +69,19 @@ tokens analysed: 1368 | helius credits today: 6630/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%  176    22%    -10.0%   -15.0%   -99.7%
-   -6%     20%  176    23%    -10.2%   -15.1%   -99.7%
-   -6%     30%  176    21%    -10.4%   -15.8%   -99.7%
-  -10%     12%  176    25%    -10.0%   -17.6%   -99.7%
-  -10%     20%  176    26%    -10.3%   -18.0%   -99.7%
-  -10%     30%  176    24%    -10.4%   -18.7%   -99.7%
-  -15%     12%  176    29%     -9.8%   -20.0%   -99.7%
-  -15%     20%  176    31%    -10.3%   -20.8%   -99.7%
-  -15%     30%  176    29%    -10.6%   -21.3%   -99.7%
-  -25%     12%  176    33%    -12.1%   -21.0%   -99.7%
-  -25%     20%  176    37%    -13.2%   -29.3%   -99.7%
-  -25%     30%  176    34%    -13.9%   -30.9%   -99.7%
-  best so far: stop -15%, trail from +12% -> avg -9.8% per trade over n=176
+   -6%     12%  176    22%    -10.8%   -15.1%   -99.7%
+   -6%     20%  176    23%    -11.1%   -15.2%   -99.7%
+   -6%     30%  176    20%    -11.3%   -16.1%   -99.7%
+  -10%     12%  176    24%    -10.9%   -17.8%   -99.7%
+  -10%     20%  176    26%    -11.2%   -18.4%   -99.7%
+  -10%     30%  176    24%    -11.3%   -18.9%   -99.7%
+  -15%     12%  176    28%    -10.7%   -20.1%   -99.7%
+  -15%     20%  176    31%    -11.1%   -21.0%   -99.7%
+  -15%     30%  176    28%    -11.5%   -21.3%   -99.7%
+  -25%     12%  176    32%    -12.9%   -21.3%   -99.7%
+  -25%     20%  176    36%    -14.1%   -29.5%   -99.7%
+  -25%     30%  176    34%    -14.8%   -30.9%   -99.7%
+  best so far: stop -15%, trail from +12% -> avg -10.7% per trade over n=176
 
 ================================================================
 PAPER BOOKS COMPARED (A and B: same sizing/exits, only the entry differs;
@@ -89,28 +89,25 @@ C copies watched wallets with a 30s delay and mirror exits)
 ================================================================
                                    A             B             C
 started                  11-06 08:00   11-07 04:00   11-24 09:00
-equity                       $276.23       $299.99       $438.16
-return                        -44.8%        -40.0%        -12.4%
-closed trades                    120            94             6
+equity                       $255.70       $299.99       $438.16
+return                        -48.9%        -40.0%        -12.4%
+closed trades                    121            94             6
 win rate                         21%           20%           17%
-avg net / trade               -10.1%        -10.5%        -42.4%
-expectancy $/trade            $-1.96        $-2.13       $-10.31
-max drawdown                  -49.1%        -44.8%        -13.0%
-open now                           1             0             0
+avg net / trade               -10.6%        -10.5%        -42.4%
+expectancy $/trade            $-2.02        $-2.13       $-10.31
+max drawdown                  -50.8%        -44.8%        -13.0%
+open now                           0             0             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $276.23 (-44.8%) | cash $251.43 | open 1 | max drawdown -49.1%
+equity $255.70 (-48.9%) | cash $255.70 | open 0 | max drawdown -50.8%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 120 | win 25/120 (21%) | avg net -10.1% | realized $-235.34 | expectancy $-1.96/trade
-exits: stop 89, trail 30, dead_no_route 1
-open:
-  Squirrel     cost $13.23  now $24.80 (+87.4%)  held 0.2h
+closed 121 | win 25/121 (21%) | avg net -10.6% | realized $-244.30 | expectancy $-2.02/trade
+exits: stop 90, trail 30, dead_no_route 1
 last trades:
-  PERRO        $14.45 -> $12.30 (-14.8%)  stop  0.3h
   BASKET       $14.12 -> $19.47 (+37.9%)  trail  1.0h
   JaoJiu       $14.39 -> $11.41 (-20.7%)  stop  0.2h
   Pompom       $14.24 -> $12.17 (-14.5%)  stop  0.2h
@@ -118,6 +115,7 @@ last trades:
   4CHAN        $13.87 -> $10.88 (-21.6%)  stop  0.5h
   OnlyUp       $13.72 -> $6.99 (-49.0%)  stop  0.2h
   Pompompurin  $13.38 -> $10.37 (-22.5%)  stop  0.2h
+  Squirrel     $13.23 -> $4.27 (-67.7%)  stop  0.3h
 signals skipped by the sizer/risk rules: already_traded_token 664, daily_loss_limit 331, cooldown_after_loss 21, max_open_positions 5
 
 ================================================================
