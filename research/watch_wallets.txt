@@ -1,14 +1,9 @@
 # Book C watchlist: one Solana wallet per line, optional "  # label".
 # Wallets are bookmarked on first sight; only NEW trades after that are paper-copied.
-# Source: wallet finder run 2026-11-24 (WALLETS.md). tier1 = passed every check;
-# tier2 = automated but copyable (holds 20-100 min, profitable on all winners checked,
-# never early on dead tokens, not a launch sniper, <= 1500 tx/day).
-# NOTE: six share GTAVI + XV -> possibly one operator or insiders; judge each separately.
-AuFATHV3LgePzjwRnGoUB7bNL7SpkwYPgcSquZMfHxMr  # t1-GTAVI/XV
-2fqTBPyXstDZ37dQGivcDRZRSuCRjc2NzbbcnQGnkdpW  # t1-PIPI/chud
-G9HvvpGgUNUhpB7YxWMp3NYEUCLJGQZc1skzX7uHJWkG  # t2-6winners
-2ktGXV3KJnMXGsvdZS4BiMznoEptWqwiyKzeHMYRv5rw  # t2-JEANPHIL/XV
-EDBMUojNAkZGCBpX9m3dv5Z5oUGqwDSGUkZ4wAfXZfj7  # t2-GTAVI/XV-a
-EDwJnwikX3iczAk8KrXMpGXhFXxPYcSLnXXCxwKCnAeY  # t2-GTAVI/XV-b
-8X7JZdSR3VQM8YWwvVFA8c1fBb1KHxGPuqbconqLW8Ns  # t2-GTAVI/XV-c
-DhtWE63TimD4qUx5LuLMYNtu3giPj8vY4WiBvKCGrHtc  # t2-GTAVI/XV-d
+#
+# Rebuilt 2026-11-25 from wallet finder v2 (WALLETS_V2.md): judged on recent overall trading with the
+# CoreSight winners removed. The first list (2026-11-24) was mostly spray bots (300-400 small buys/day)
+# or inactive, so it was dropped; its 6 copied trades stay in the book's history.
+CdF2qkiKCWPAKDTdiYtNAmxm1c1AGrgzzrxZ1ohdTyLu  # v2-pass
+HSq83tgUjtU1RShgpQrmM55Y5hpPyvMQhVmhdBjvYPbW  # v2-near-hold4m
+HqzAdd1BcvXFBuw2S1jSaA8C8dHykhcphGYTiL9FfV6X  # v2-near-hold3m
