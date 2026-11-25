@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-25 07:34 UTC
+Updated: 2026-11-25 07:43 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           141412
-passed SCOUT         278
+pools seen           141459
+passed SCOUT         279
   killed by SCORE    38
   killed by AUDIT    72
-FINAL PASS           168
+FINAL PASS           169
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   139546
-  few_unique_buyers           132932
-  liquidity_low               130854
-  volume_below_liquidity       99547
-  sells_dominate               37784
-  wash_churn                   29565
-  overheated                   12877
-  missing                       3856
+  too_young                   139593
+  few_unique_buyers           132977
+  liquidity_low               130890
+  volume_below_liquidity       99574
+  sells_dominate               37791
+  wash_churn                   29576
+  overheated                   12883
+  missing                       3864
   too_old                       1364
   rc_danger                       21
 
-OUTCOMES (median price change from first sighting / first pass; 8596 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8598 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  168    -5.2%   -13.3%   -43.9%   -83.7%    57%
+FINAL PASS                  169    -5.2%   -13.3%   -43.9%   -83.7%    57%
 SCOUT PASS, killed later    110    +5.7%    +9.5%    -7.4%   -74.6%    47%
-KILLED (tracked)          19544    +0.2%   -59.6%   -85.6%    -0.1%    27%
+KILLED (tracked)          19549    +0.2%   -59.6%   -85.6%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -47,7 +47,7 @@ if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        77    -55.0%    -93.2%    58%
 70-79     112    -44.3%    -72.2%    49%
-60-69      64    -29.5%    -86.0%    56%
+60-69      65    -29.5%    -86.0%    55%
 <60        25     -7.4%    -63.7%    48%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
@@ -59,7 +59,7 @@ none     1119     +0.0%    -11.2%    -46.0%    26%
 30%+       36     -0.7%     -1.1%     +0.8%    36%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none      974     +0.0%     -2.2%    -35.1%    25%
-<20%      462     +3.2%    -59.6%    -91.4%    27%
+<20%      462     +3.3%    -59.6%    -91.4%    27%
 20%+       60     -2.9%    -99.0%       -      83%
 fresh       n   +1h med   +4h med  +24h med   rug%
 <20%     1437     +0.3%     -7.3%    -40.1%    26%
@@ -96,17 +96,19 @@ win rate                         21%           21%           25%
 avg net / trade                -9.6%        -10.3%        -23.2%
 expectancy $/trade            $-1.93        $-2.10        $-5.83
 max drawdown                  -47.4%        -43.6%         -5.3%
-open now                           0             0             0
+open now                           1             0             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $282.41 (-43.5%) | cash $282.41 | open 0 | max drawdown -47.4%
+equity $282.41 (-43.5%) | cash $268.29 | open 1 | max drawdown -47.4%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 113 | win 24/113 (21%) | avg net -9.6% | realized $-217.59 | expectancy $-1.93/trade
 exits: stop 83, trail 29, dead_no_route 1
+open:
+  BASKET       cost $14.12  now $14.12 (+0.0%)  held 0.1h
 last trades:
   PONK         $14.84 -> $12.70 (-14.4%)  stop  0.2h
   JIMMY        $14.73 -> $12.48 (-15.3%)  stop  0.3h
@@ -116,7 +118,7 @@ last trades:
   BOOBS        $13.77 -> $10.97 (-20.4%)  stop  0.2h
   4CHAN        $13.77 -> $25.64 (+86.2%)  trail  1.3h
   PERRO        $14.45 -> $12.30 (-14.8%)  stop  0.3h
-signals skipped by the sizer/risk rules: already_traded_token 632, daily_loss_limit 331, cooldown_after_loss 20, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 633, daily_loss_limit 331, cooldown_after_loss 20, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -152,9 +154,9 @@ last trades:
   DCTY         $24.82 -> $24.39 (-1.7%)  mirror_sell  0.0h
   BEAST        $24.80 -> $29.54 (+19.1%)  mirror_sell  0.2h
   JENSEN       $25.04 -> $0.93 (-96.3%)  stop  0.3h
-signals skipped by the sizer/risk rules: copy:liquidity_too_low 229, copy:no_price_at_delay 23, copy:no_pool 1
+signals skipped by the sizer/risk rules: copy:liquidity_too_low 231, copy:no_price_at_delay 23, copy:no_pool 1
 
-BOOK C per wallet  (watching 8 wallets, 1461 wallet trades seen)
+BOOK C per wallet  (watching 8 wallets, 1466 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
 EDBMUo…Zfj7   t2-GTAVI/XV-a       4     0   25%   -23.2%   -23.31
 Drop wallets with negative expectancy after ~20 copied trades each.
