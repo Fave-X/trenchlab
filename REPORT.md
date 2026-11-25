@@ -1,26 +1,26 @@
 # TrenchLab report
 
-Updated: 2026-11-25 16:42 UTC
+Updated: 2026-11-25 16:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           144019
+pools seen           144076
 passed SCOUT         282
   killed by SCORE    38
   killed by AUDIT    73
 FINAL PASS           171
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   142088
-  few_unique_buyers           135346
-  liquidity_low               133132
-  volume_below_liquidity      101128
-  sells_dominate               38574
-  wash_churn                   30178
-  overheated                   13114
-  missing                       4062
+  too_young                   142145
+  few_unique_buyers           135400
+  liquidity_low               133158
+  volume_below_liquidity      101146
+  sells_dominate               38594
+  wash_churn                   30185
+  overheated                   13121
+  missing                       4092
   too_old                       1375
   copy_trade                      47
 
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 8732 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  171    -5.3%   -13.3%   -43.2%   -83.0%    57%
 SCOUT PASS, killed later    111    +5.6%   +10.7%    -7.2%   -74.6%    47%
-KILLED (tracked)          19834    +0.2%   -59.6%   -85.6%    -0.1%    27%
+KILLED (tracked)          19839    +0.2%   -59.6%   -85.6%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -75,13 +75,13 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -10%     12%  171    25%     -9.7%   -17.1%   -99.7%
   -10%     20%  171    26%    -10.1%   -17.7%   -99.7%
   -10%     30%  171    25%    -10.2%   -18.6%   -99.7%
-  -15%     12%  171    29%     -9.5%   -19.6%   -99.7%
-  -15%     20%  171    32%    -10.0%   -20.4%   -99.7%
-  -15%     30%  171    29%    -10.3%   -21.1%   -99.7%
-  -25%     12%  171    33%    -11.8%   -17.8%   -99.7%
-  -25%     20%  171    37%    -13.0%   -29.2%   -99.7%
+  -15%     12%  171    29%     -9.6%   -19.6%   -99.7%
+  -15%     20%  171    32%    -10.0%   -20.7%   -99.7%
+  -15%     30%  171    29%    -10.4%   -21.2%   -99.7%
+  -25%     12%  171    33%    -11.9%   -18.6%   -99.7%
+  -25%     20%  171    37%    -13.1%   -29.2%   -99.7%
   -25%     30%  171    35%    -13.6%   -30.8%   -99.7%
-  best so far: stop -15%, trail from +12% -> avg -9.5% per trade over n=171
+  best so far: stop -15%, trail from +12% -> avg -9.6% per trade over n=171
 
 ================================================================
 PAPER BOOKS COMPARED (A and B: same sizing/exits, only the entry differs;
