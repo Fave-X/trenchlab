@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-25 11:04 UTC
+Updated: 2026-11-25 11:13 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           142442
+pools seen           142493
 passed SCOUT         281
   killed by SCORE    38
   killed by AUDIT    73
 FINAL PASS           170
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   140557
-  few_unique_buyers           133881
-  liquidity_low               131793
-  volume_below_liquidity      100248
-  sells_dominate               38105
-  wash_churn                   29844
-  overheated                   12972
+  too_young                   140608
+  few_unique_buyers           133929
+  liquidity_low               131843
+  volume_below_liquidity      100282
+  sells_dominate               38124
+  wash_churn                   29856
+  overheated                   12974
   missing                       3887
   too_old                       1370
   rc_danger                       21
 
-OUTCOMES (median price change from first sighting / first pass; 8644 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8647 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  170    -5.2%   -13.2%   -43.9%   -83.3%    56%
 SCOUT PASS, killed later    111    +5.6%   +10.7%    -7.4%   -74.6%    47%
-KILLED (tracked)          19683    +0.2%   -59.7%   -85.6%    -0.1%    27%
+KILLED (tracked)          19688    +0.2%   -59.6%   -85.6%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -152,9 +152,9 @@ last trades:
   DCTY         $24.82 -> $24.39 (-1.7%)  mirror_sell  0.0h
   BEAST        $24.80 -> $29.54 (+19.1%)  mirror_sell  0.2h
   JENSEN       $25.04 -> $0.93 (-96.3%)  stop  0.3h
-signals skipped by the sizer/risk rules: copy:liquidity_too_low 255, copy:no_price_at_delay 24, daily_loss_limit 10, copy:no_pool 1
+signals skipped by the sizer/risk rules: copy:liquidity_too_low 258, copy:no_price_at_delay 24, daily_loss_limit 10, copy:no_pool 1
 
-BOOK C per wallet  (watching 8 wallets, 1534 wallet trades seen)
+BOOK C per wallet  (watching 8 wallets, 1540 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
 EDBMUo…Zfj7   t2-GTAVI/XV-a       4     0   25%   -23.2%   -23.31
 Drop wallets with negative expectancy after ~20 copied trades each.
