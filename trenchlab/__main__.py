@@ -67,7 +67,7 @@ def print_table(rows, show_all=False, now=None):
 
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="trenchlab")
-    ap.add_argument("cmd", choices=["scan", "run", "report", "probe", "wallets", "alive"])
+    ap.add_argument("cmd", choices=["scan", "run", "report", "probe", "wallets", "wallets2", "alive"])
     ap.add_argument("mint", nargs="?")
     ap.add_argument("--config", default="config.json")
     ap.add_argument("--db", default="trenchlab.db")
@@ -114,6 +114,12 @@ def main(argv=None):
             json.dump(rows, f, indent=1)
         print("[alive] " + ", ".join(f"{s} {sum(r['status'] == s for r in rows)}"
                                      for s in ("thriving", "alive", "fading", "dead")))
+        return 0
+    if args.cmd == "wallets2":
+        from . import walletfinder
+        winners = json.load(open("research/coresight_winners.json"))["tokens"]
+        rows = walletfinder.run_v2(cfg, winners)
+        print(f"[v2] {len(rows)} profiled; copy candidates: {sum(r['verdict'] == 'COPY CANDIDATE' for r in rows)}")
         return 0
     if args.cmd == "wallets":
         from . import walletfinder

@@ -147,7 +147,16 @@
     "max_dead_frac": 0.15,
     "min_median_hold_min": 3,
     "credit_budget": 60000,
-    "dead_controls": 20
+    "dead_controls": 20,
+    "v2_min_avg_buy_sol": 0.3,
+    "v2_max_tokens_per_day": 20,
+    "v2_min_closed_trades": 10,
+    "v2_max_top_win_share": 0.5,
+    "v2_min_median_hold_min": 5,
+    "v2_max_tx_per_day": 200,
+    "v2_profile_txs": 100,
+    "v2_max_profiles": 250,
+    "v2_credit_budget": 32000
   },
   "copytrade": {
     "enabled": true,

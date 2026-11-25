@@ -5,7 +5,13 @@ name: wallet-finder
 # using dead tokens from the scanner database as a control group. Read-only, never trades.
 
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "v1 = early buyers of winners; v2 = judge them on recent overall trading"
+        default: "v2"
+        type: choice
+        options: ["v1", "v2"]
 
 permissions:
   contents: write
@@ -28,14 +34,18 @@ jobs:
           python-version: "3.12"
       - name: Get scanner database (for dead-token controls)
         run: gh release download data -p trenchlab.db.gz --clobber && gunzip -f trenchlab.db.gz
-      - name: Find wallets
+      - name: Find wallets (v1)
+        if: ${{ inputs.mode == 'v1' }}
         run: python -m trenchlab wallets --db trenchlab.db
+      - name: Judge wallets (v2)
+        if: ${{ inputs.mode != 'v1' }}
+        run: python -m trenchlab wallets2 --db trenchlab.db
       - name: Commit results
         if: always()
         run: |
           git config user.name "trenchlab-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add WALLETS.md research/ 2>/dev/null || true
+          git add WALLETS.md WALLETS_V2.md research/ 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "wallet finder: $(date -u '+%Y-%m-%d %H:%M')"
             for i in 1 2 3; do git pull --rebase -q && git push -q && break || sleep 5; done
