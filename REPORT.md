@@ -1,33 +1,33 @@
 # TrenchLab report
 
-Updated: 2026-11-25 02:34 UTC
+Updated: 2026-11-25 02:45 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           139921
-passed SCOUT         270
+pools seen           139973
+passed SCOUT         271
   killed by SCORE    37
-  killed by AUDIT    68
+  killed by AUDIT    69
 FINAL PASS           165
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   138073
-  few_unique_buyers           131536
-  liquidity_low               129441
-  volume_below_liquidity       98512
-  sells_dominate               37378
-  wash_churn                   29211
-  overheated                   12699
-  missing                       3836
+  too_young                   138125
+  few_unique_buyers           131587
+  liquidity_low               129492
+  volume_below_liquidity       98552
+  sells_dominate               37390
+  wash_churn                   29223
+  overheated                   12704
+  missing                       3837
   too_old                       1356
   rc_danger                       20
 
-OUTCOMES (median price change from first sighting / first pass; 8460 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8462 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  165    -5.0%   -14.1%   -43.9%   -83.7%    58%
-SCOUT PASS, killed later    105    +5.6%    +8.0%   -13.5%   -75.1%    49%
+SCOUT PASS, killed later    106    +5.6%    +8.0%   -13.5%   -75.1%    48%
 KILLED (tracked)          19356    +0.1%   -60.2%   -85.5%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
@@ -47,25 +47,25 @@ if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        75    -55.0%    -93.2%    60%
 70-79     108    -44.7%    -72.2%    51%
-60-69      62    -29.5%    -89.0%    56%
+60-69      63    -29.5%    -89.0%    56%
 <60        25     -7.4%    -63.7%    48%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1103     +0.0%    -11.0%    -46.6%    27%
+none     1104     +0.0%    -11.0%    -46.6%    27%
 <15%      288     +2.1%    -14.2%    -40.1%    32%
 15-30%     46     -0.2%     -1.7%     +0.4%    30%
 30%+       36     -0.7%     -1.1%     +0.8%    36%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none      961     +0.0%     -2.2%    -37.0%    25%
+none      962     +0.0%     -2.2%    -37.0%    25%
 <20%      451     +3.2%    -60.7%    -91.4%    27%
 20%+       61     -2.9%    -99.0%       -      80%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1413     +0.3%     -7.3%    -40.8%    26%
+<20%     1414     +0.3%     -7.3%    -40.8%    26%
 20-40%     37     -0.7%    -99.0%    -99.1%    76%
 40%+       23    -98.6%    -99.0%       -      74%
-tokens analysed: 1300 | helius credits today: 742/25000
+tokens analysed: 1301 | helius credits today: 798/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -136,7 +136,7 @@ last trades:
   Scamsem      $16.39 -> $11.86 (-27.7%)  stop  0.7h
   GROKIA       $16.17 -> $13.16 (-18.6%)  stop  0.7h
   Holders      $16.02 -> $12.58 (-21.4%)  stop  0.2h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 450, daily_loss_limit 240, setup_rejected:dumping_now 146, setup_rejected:sellers_dominate_now 143, setup_rejected:b_bundled 77, setup_rejected:volume_dried_up 59, setup_rejected:operator_cluster 41, setup_rejected:clustered_supply 38, setup_rejected:lp_not_locked 34, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Low Liquidity 5, setup_rejected:rc_danger:Creator history of rugged tokens 3, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 450, daily_loss_limit 240, setup_rejected:dumping_now 147, setup_rejected:sellers_dominate_now 143, setup_rejected:b_bundled 77, setup_rejected:volume_dried_up 59, setup_rejected:operator_cluster 41, setup_rejected:clustered_supply 38, setup_rejected:lp_not_locked 34, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Low Liquidity 5, setup_rejected:rc_danger:Creator history of rugged tokens 3, max_open_positions 1
 
 ================================================================
 PAPER BOOK C: copy-trading watched wallets (30s delay, mirror exits)
@@ -151,9 +151,9 @@ last trades:
   BLACKBALLED  $25.00 -> $21.48 (-14.1%)  mirror_sell  0.0h
   DCTY         $24.82 -> $24.39 (-1.7%)  mirror_sell  0.0h
   BEAST        $24.80 -> $29.54 (+19.1%)  mirror_sell  0.2h
-signals skipped by the sizer/risk rules: copy:liquidity_too_low 98, copy:no_price_at_delay 6
+signals skipped by the sizer/risk rules: copy:liquidity_too_low 104, copy:no_price_at_delay 6
 
-BOOK C per wallet  (watching 8 wallets, 946 wallet trades seen)
+BOOK C per wallet  (watching 8 wallets, 973 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
 EDBMUo…Zfj7   t2-GTAVI/XV-a       3     0   33%    +1.1%    +0.79
 Drop wallets with negative expectancy after ~20 copied trades each.
