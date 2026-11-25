@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-25 15:22 UTC
+Updated: 2026-11-25 15:33 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           143726
+pools seen           143779
 passed SCOUT         282
   killed by SCORE    39
   killed by AUDIT    73
 FINAL PASS           170
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   141796
-  few_unique_buyers           135063
-  liquidity_low               132937
-  volume_below_liquidity      101009
-  sells_dominate               38497
-  wash_churn                   30125
-  overheated                   13094
-  missing                       3967
+  too_young                   141849
+  few_unique_buyers           135114
+  liquidity_low               132983
+  volume_below_liquidity      101035
+  sells_dominate               38511
+  wash_churn                   30134
+  overheated                   13098
+  missing                       3973
   too_old                       1375
   copy_trade                      47
 
-OUTCOMES (median price change from first sighting / first pass; 8693 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8694 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  170    -5.2%   -13.3%   -43.2%   -83.0%    58%
 SCOUT PASS, killed later    112    +5.7%   +11.1%    -7.2%   -74.6%    46%
-KILLED (tracked)          19821    +0.2%   -59.6%   -85.6%    -0.1%    27%
+KILLED (tracked)          19825    +0.2%   -59.6%   -85.6%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -136,7 +136,7 @@ last trades:
   4CHAN        $15.51 -> $12.17 (-21.5%)  stop  0.2h
   Amend        $15.34 -> $12.38 (-19.3%)  stop  0.5h
   JaoJiu       $15.31 -> $11.47 (-25.1%)  stop  0.3h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 452, daily_loss_limit 252, setup_rejected:dumping_now 156, setup_rejected:sellers_dominate_now 146, setup_rejected:b_bundled 90, setup_rejected:volume_dried_up 59, setup_rejected:operator_cluster 43, setup_rejected:lp_not_locked 41, setup_rejected:clustered_supply 38, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:rc_danger:Creator history of rugged tokens 7, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Low Liquidity 5, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 452, daily_loss_limit 254, setup_rejected:dumping_now 156, setup_rejected:sellers_dominate_now 146, setup_rejected:b_bundled 90, setup_rejected:volume_dried_up 59, setup_rejected:operator_cluster 43, setup_rejected:lp_not_locked 41, setup_rejected:clustered_supply 38, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 10, cooldown_after_loss 8, setup_rejected:rc_danger:Creator history of rugged tokens 7, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Low Liquidity 5, max_open_positions 1
 
 ================================================================
 PAPER BOOK C: copy-trading watched wallets (30s delay, mirror exits)
@@ -154,9 +154,9 @@ last trades:
   JENSEN       $25.04 -> $0.93 (-96.3%)  stop  0.3h
   JENSEN       $23.83 -> $7.18 (-69.9%)  mirror_sell  0.0h
   JENSEN       $23.83 -> $1.96 (-91.8%)  mirror_sell  0.0h
-signals skipped by the sizer/risk rules: copy:liquidity_too_low 264, daily_loss_limit 48, copy:no_pool 45, copy:no_price_at_delay 29
+signals skipped by the sizer/risk rules: copy:liquidity_too_low 264, copy:no_pool 50, daily_loss_limit 48, copy:no_price_at_delay 29
 
-BOOK C per wallet  (watching 8 wallets, 1737 wallet trades seen)
+BOOK C per wallet  (watching 8 wallets, 1746 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
 EDBMUo…Zfj7   t2-GTAVI/XV-a       6     0   17%   -42.4%   -61.84
 Drop wallets with negative expectancy after ~20 copied trades each.
