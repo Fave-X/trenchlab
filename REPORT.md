@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-25 12:52 UTC
+Updated: 2026-11-25 13:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           143007
+pools seen           143061
 passed SCOUT         281
   killed by SCORE    38
   killed by AUDIT    73
 FINAL PASS           170
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   141104
-  few_unique_buyers           134403
-  liquidity_low               132295
-  volume_below_liquidity      100573
-  sells_dominate               38287
-  wash_churn                   29971
-  overheated                   13023
+  too_young                   141158
+  few_unique_buyers           134454
+  liquidity_low               132348
+  volume_below_liquidity      100615
+  sells_dominate               38303
+  wash_churn                   29980
+  overheated                   13027
   missing                       3924
   too_old                       1373
   copy_trade                      26
 
-OUTCOMES (median price change from first sighting / first pass; 8663 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8664 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  170    -5.2%   -13.3%   -43.9%   -83.3%    57%
 SCOUT PASS, killed later    111    +5.6%   +10.7%    -7.4%   -74.6%    47%
-KILLED (tracked)          19742    +0.2%   -59.6%   -85.6%    -0.1%    27%
+KILLED (tracked)          19747    +0.2%   -59.6%   -85.6%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -116,7 +116,7 @@ last trades:
   PERRO        $14.45 -> $12.30 (-14.8%)  stop  0.3h
   BASKET       $14.12 -> $19.47 (+37.9%)  trail  1.0h
   JaoJiu       $14.39 -> $11.41 (-20.7%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 651, daily_loss_limit 331, cooldown_after_loss 20, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 652, daily_loss_limit 331, cooldown_after_loss 20, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
