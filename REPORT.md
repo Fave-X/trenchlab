@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-25 12:02 UTC
+Updated: 2026-11-25 12:16 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           142748
+pools seen           142818
 passed SCOUT         281
   killed by SCORE    38
   killed by AUDIT    73
 FINAL PASS           170
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   140860
-  few_unique_buyers           134174
-  liquidity_low               132072
-  volume_below_liquidity      100425
-  sells_dominate               38211
-  wash_churn                   29917
-  overheated                   12999
+  too_young                   140921
+  few_unique_buyers           134232
+  liquidity_low               132133
+  volume_below_liquidity      100468
+  sells_dominate               38230
+  wash_churn                   29932
+  overheated                   13004
   missing                       3907
-  too_old                       1370
+  too_old                       1373
   rc_danger                       21
 
 OUTCOMES (median price change from first sighting / first pass; 8658 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  170    -5.2%   -13.3%   -43.9%   -83.3%    57%
 SCOUT PASS, killed later    111    +5.6%   +10.7%    -7.4%   -74.6%    47%
-KILLED (tracked)          19705    +0.2%   -59.6%   -85.6%    -0.1%    27%
+KILLED (tracked)          19723    +0.2%   -59.6%   -85.6%    -0.1%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -37,7 +37,7 @@ too_young                     479    -93.5%    -68.9%    24%
 wash_churn                     55    -23.3%    -85.6%    25%
 too_old                        52     -0.6%     -0.4%    10%
 liquidity_low                  36    -69.3%    -49.8%    56%
-copy_trade                     15    -96.3%    -95.6%    27%
+copy_trade                     21    -96.3%    -95.6%    19%
 overheated                     12    -21.9%    -56.0%    50%
 volume_below_liquidity          8     +1.2%    +30.3%    38%
 sells_dominate                  3    -75.0%       -      67%
@@ -89,13 +89,13 @@ C copies watched wallets with a 30s delay and mirror exits)
 ================================================================
                                    A             B             C
 started                  11-06 08:00   11-07 04:00   11-24 09:00
-equity                       $284.78       $299.99       $476.69
-return                        -43.0%        -40.0%         -4.7%
-closed trades                    115            94             4
-win rate                         22%           20%           25%
-avg net / trade                -9.3%        -10.5%        -23.2%
-expectancy $/trade            $-1.87        $-2.13        $-5.83
-max drawdown                  -47.4%        -44.8%         -5.3%
+equity                       $284.78       $299.99       $438.16
+return                        -43.0%        -40.0%        -12.4%
+closed trades                    115            94             6
+win rate                         22%           20%           17%
+avg net / trade                -9.3%        -10.5%        -42.4%
+expectancy $/trade            $-1.87        $-2.13       $-10.31
+max drawdown                  -47.4%        -44.8%        -13.0%
 open now                           0             0             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
@@ -142,21 +142,23 @@ signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 450, dail
 PAPER BOOK C: copy-trading watched wallets (30s delay, mirror exits)
   pricing: model | start $500.00 on 2026-11-24 09:00 UTC
 ================================================================
-equity $476.69 (-4.7%) | cash $476.69 | open 0 | max drawdown -5.3%
+equity $438.16 (-12.4%) | cash $438.16 | open 0 | max drawdown -13.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 4 | win 1/4 (25%) | avg net -23.2% | realized $-23.31 | expectancy $-5.83/trade
-exits: mirror_sell 3, stop 1
-  (n=4 < 100: noise, not evidence)
+closed 6 | win 1/6 (17%) | avg net -42.4% | realized $-61.84 | expectancy $-10.31/trade
+exits: mirror_sell 5, stop 1
+  (n=6 < 100: noise, not evidence)
 last trades:
   BLACKBALLED  $25.00 -> $21.48 (-14.1%)  mirror_sell  0.0h
   DCTY         $24.82 -> $24.39 (-1.7%)  mirror_sell  0.0h
   BEAST        $24.80 -> $29.54 (+19.1%)  mirror_sell  0.2h
   JENSEN       $25.04 -> $0.93 (-96.3%)  stop  0.3h
-signals skipped by the sizer/risk rules: copy:liquidity_too_low 264, copy:no_price_at_delay 26, daily_loss_limit 13, copy:no_pool 5
+  JENSEN       $23.83 -> $7.18 (-69.9%)  mirror_sell  0.0h
+  JENSEN       $23.83 -> $1.96 (-91.8%)  mirror_sell  0.0h
+signals skipped by the sizer/risk rules: copy:liquidity_too_low 264, copy:no_price_at_delay 27, daily_loss_limit 19, copy:no_pool 5
 
-BOOK C per wallet  (watching 8 wallets, 1569 wallet trades seen)
+BOOK C per wallet  (watching 8 wallets, 1586 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
-EDBMUo…Zfj7   t2-GTAVI/XV-a       4     0   25%   -23.2%   -23.31
+EDBMUo…Zfj7   t2-GTAVI/XV-a       6     0   17%   -42.4%   -61.84
 Drop wallets with negative expectancy after ~20 copied trades each.
 
 Sampling is every scan cycle (~10 min), so intra-candle wicks are missed.
