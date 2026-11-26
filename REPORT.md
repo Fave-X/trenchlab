@@ -1,6 +1,6 @@
 # TrenchLab report
 
-Updated: 2026-11-25 23:52 UTC
+Updated: 2026-11-26 00:02 UTC
 
 ```
 ================================================================
@@ -65,7 +65,7 @@ fresh       n   +1h med   +4h med  +24h med   rug%
 <20%     1488     +0.4%     -7.2%    -40.1%    26%
 20-40%     36     -2.6%    -99.0%    -99.1%    78%
 40%+       24    -98.5%    -99.4%       -      75%
-tokens analysed: 1369 | helius credits today: 6792/25000
+tokens analysed: 1369 | helius credits today: 0/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
