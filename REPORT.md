@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-26 13:22 UTC
+Updated: 2026-11-26 13:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           150073
+pools seen           150130
 passed SCOUT         301
   killed by SCORE    41
   killed by AUDIT    80
 FINAL PASS           180
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   148064
-  few_unique_buyers           140847
-  liquidity_low               138777
-  volume_below_liquidity      104769
-  sells_dominate               40676
-  wash_churn                   31609
-  overheated                   13680
-  missing                       4226
+  too_young                   148121
+  few_unique_buyers           140900
+  liquidity_low               138826
+  volume_below_liquidity      104804
+  sells_dominate               40683
+  wash_churn                   31618
+  overheated                   13688
+  missing                       4232
   too_old                       1406
   copy_trade                      55
 
-OUTCOMES (median price change from first sighting / first pass; 9099 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9105 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  180    -5.6%   -17.3%   -44.4%   -82.6%    59%
 SCOUT PASS, killed later    121    +5.9%    +8.4%    -7.4%   -74.6%    47%
-KILLED (tracked)          20435    +0.1%   -57.5%   -85.0%    -0.3%    27%
+KILLED (tracked)          20444    +0.1%   -57.5%   -85.0%    -0.3%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -53,7 +53,7 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1227     +0.2%     -9.0%    -48.4%    25%
+none     1227     +0.1%     -9.0%    -48.4%    25%
 <15%      317     +2.3%    -17.3%    -49.8%    32%
 15-30%     38     -0.1%     -1.0%     +0.4%    42%
 30%+       37     -0.7%     -0.9%     +0.5%    35%
@@ -136,7 +136,7 @@ last trades:
   MONEY        $15.00 -> $13.27 (-11.5%)  stop  0.3h
   Grodia       $14.91 -> $13.02 (-12.7%)  stop  0.3h
   NORFEATH     $14.82 -> $12.87 (-13.2%)  stop  0.5h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 457, daily_loss_limit 269, setup_rejected:dumping_now 165, setup_rejected:sellers_dominate_now 149, setup_rejected:b_bundled 96, setup_rejected:volume_dried_up 61, setup_rejected:operator_cluster 53, setup_rejected:lp_not_locked 43, setup_rejected:clustered_supply 38, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 20, setup_rejected:rc_danger:Low Liquidity 10, cooldown_after_loss 8, setup_rejected:rc_danger:Creator history of rugged tokens 7, setup_rejected:unknown:lp_lock 6, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 457, daily_loss_limit 269, setup_rejected:dumping_now 165, setup_rejected:sellers_dominate_now 149, setup_rejected:b_bundled 96, setup_rejected:volume_dried_up 61, setup_rejected:operator_cluster 53, setup_rejected:lp_not_locked 43, setup_rejected:clustered_supply 38, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 20, setup_rejected:rc_danger:Low Liquidity 11, cooldown_after_loss 8, setup_rejected:rc_danger:Creator history of rugged tokens 7, setup_rejected:unknown:lp_lock 6, max_open_positions 1
 
 ================================================================
 PAPER BOOK C: copy-trading watched wallets (30s delay, mirror exits)
