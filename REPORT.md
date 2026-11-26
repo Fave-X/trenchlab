@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-26 10:42 UTC
+Updated: 2026-11-26 10:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           149343
+pools seen           149382
 passed SCOUT         299
   killed by SCORE    41
   killed by AUDIT    78
 FINAL PASS           180
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   147336
-  few_unique_buyers           140186
-  liquidity_low               138090
-  volume_below_liquidity      104261
-  sells_dominate               40486
-  wash_churn                   31455
-  overheated                   13612
+  too_young                   147375
+  few_unique_buyers           140221
+  liquidity_low               138128
+  volume_below_liquidity      104291
+  sells_dominate               40497
+  wash_churn                   31464
+  overheated                   13616
   missing                       4221
   too_old                       1406
   copy_trade                      54
 
-OUTCOMES (median price change from first sighting / first pass; 9045 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9047 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  180    -5.6%   -17.3%   -44.7%   -82.6%    59%
 SCOUT PASS, killed later    119    +5.9%   +10.7%    -7.4%   -74.6%    46%
-KILLED (tracked)          20333    +0.1%   -57.4%   -85.1%    -0.3%    27%
+KILLED (tracked)          20338    +0.1%   -57.4%   -85.1%    -0.3%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -54,12 +54,12 @@ CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
 none     1212     +0.2%     -9.2%    -48.4%    25%
-<15%      315     +2.4%    -17.3%    -49.8%    32%
+<15%      315     +2.3%    -17.3%    -49.8%    32%
 15-30%     38     -0.1%     -1.0%     +0.4%    42%
 30%+       37     -0.7%     -0.9%     +0.5%    35%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none     1041     +0.1%     -2.1%    -39.2%    24%
-<20%      498     +3.2%    -58.5%    -87.0%    27%
+<20%      498     +3.1%    -58.5%    -87.0%    27%
 20%+       63     +0.9%    -99.0%       -      83%
 fresh       n   +1h med   +4h med  +24h med   rug%
 <20%     1541     +0.4%     -7.2%    -42.6%    25%
@@ -116,7 +116,7 @@ last trades:
   PVE          $12.79 -> $8.22 (-35.7%)  stop  0.3h
   Zero         $12.56 -> $11.06 (-12.0%)  stop  0.2h
   Elonmas      $12.48 -> $15.86 (+27.1%)  trail  1.0h
-signals skipped by the sizer/risk rules: already_traded_token 673, daily_loss_limit 331, cooldown_after_loss 24, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 674, daily_loss_limit 331, cooldown_after_loss 24, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
