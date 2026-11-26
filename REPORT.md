@@ -1,26 +1,26 @@
 # TrenchLab report
 
-Updated: 2026-11-26 17:43 UTC
+Updated: 2026-11-26 17:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           151459
+pools seen           151516
 passed SCOUT         304
   killed by SCORE    41
   killed by AUDIT    81
 FINAL PASS           182
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   149443
-  few_unique_buyers           142119
-  liquidity_low               140097
-  volume_below_liquidity      105750
-  sells_dominate               41030
-  wash_churn                   31837
-  overheated                   13815
-  missing                       4236
+  too_young                   149500
+  few_unique_buyers           142171
+  liquidity_low               140147
+  volume_below_liquidity      105790
+  sells_dominate               41047
+  wash_churn                   31846
+  overheated                   13822
+  missing                       4241
   too_old                       1407
   copy_trade                      57
 
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 9192 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  182    -5.6%   -16.1%   -44.4%   -83.0%    59%
 SCOUT PASS, killed later    122    +6.0%    +8.4%   -19.5%   -74.6%    48%
-KILLED (tracked)          20636    +0.1%   -58.0%   -85.0%    -0.3%    27%
+KILLED (tracked)          20646    +0.1%   -57.9%   -85.0%    -0.3%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -53,19 +53,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1233     +0.1%     -9.1%    -49.9%    26%
-<15%      324     +2.3%    -19.5%    -49.8%    31%
+none     1234     +0.2%     -9.1%    -49.9%    26%
+<15%      324     +2.4%    -19.5%    -49.8%    31%
 15-30%     39     -0.1%     -1.0%     +0.4%    44%
 30%+       37     -0.7%     -0.9%     +0.5%    35%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none     1061     +0.1%     -2.1%    -39.4%    24%
-<20%      508     +2.9%    -59.6%    -87.0%    27%
+none     1062     +0.1%     -2.1%    -39.4%    24%
+<20%      508     +3.0%    -59.6%    -87.0%    27%
 20%+       64     +0.9%    -99.0%       -      83%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1571     +0.4%     -7.2%    -43.0%    25%
+<20%     1572     +0.4%     -7.2%    -43.0%    25%
 20-40%     38     -0.7%    -99.0%    -99.1%    79%
 40%+       24    -97.5%    -99.0%       -      75%
-tokens analysed: 1453 | helius credits today: 5900/25000
+tokens analysed: 1454 | helius credits today: 6033/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -89,8 +89,8 @@ C copies watched wallets with a 30s delay and mirror exits)
 ================================================================
                                    A             B             C
 started                  11-06 08:00   11-07 04:00   11-24 09:00
-equity                       $253.74       $292.12       $434.93
-return                        -49.3%        -41.6%        -13.0%
+equity                       $253.74       $292.12       $434.16
+return                        -49.3%        -41.6%        -13.2%
 closed trades                    126            98            13
 win rate                         21%           19%           23%
 avg net / trade               -10.3%        -10.6%        -20.6%
@@ -142,13 +142,13 @@ signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 457, dail
 PAPER BOOK C: copy-trading watched wallets (30s delay, mirror exits)
   pricing: model | start $500.00 on 2026-11-24 09:00 UTC
 ================================================================
-equity $434.93 (-13.0%) | cash $413.18 | open 1 | max drawdown -15.0%
+equity $434.16 (-13.2%) | cash $413.18 | open 1 | max drawdown -15.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 13 | win 3/13 (23%) | avg net -20.6% | realized $-65.07 | expectancy $-5.01/trade
 exits: mirror_sell 11, stop 2
   (n=13 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $21.75 (+0.0%)  held 0.0h
+  santa        cost $21.75  now $20.98 (-3.5%)  held 0.2h
 last trades:
   JENSEN       $23.83 -> $1.96 (-91.8%)  mirror_sell  0.0h
   Caiolo       $21.91 -> $11.85 (-45.9%)  stop  0.2h
