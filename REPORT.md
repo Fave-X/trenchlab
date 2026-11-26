@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-26 15:32 UTC
+Updated: 2026-11-26 15:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           150769
+pools seen           150865
 passed SCOUT         303
   killed by SCORE    41
   killed by AUDIT    81
 FINAL PASS           181
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   148756
-  few_unique_buyers           141485
-  liquidity_low               139439
-  volume_below_liquidity      105249
-  sells_dominate               40852
-  wash_churn                   31717
-  overheated                   13749
+  too_young                   148852
+  few_unique_buyers           141573
+  liquidity_low               139531
+  volume_below_liquidity      105320
+  sells_dominate               40873
+  wash_churn                   31734
+  overheated                   13757
   missing                       4234
   too_old                       1407
   copy_trade                      56
 
-OUTCOMES (median price change from first sighting / first pass; 9146 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9160 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  181    -5.6%   -17.3%   -44.4%   -82.6%    59%
 SCOUT PASS, killed later    122    +6.0%    +8.4%    -7.4%   -74.6%    48%
-KILLED (tracked)          20541    +0.2%   -57.9%   -85.0%    -0.3%    27%
+KILLED (tracked)          20560    +0.2%   -57.9%   -85.0%    -0.3%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -69,19 +69,19 @@ tokens analysed: 1447 | helius credits today: 5489/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%  180    22%    -10.9%   -15.1%   -99.7%
-   -6%     20%  180    23%    -11.1%   -15.2%   -99.7%
-   -6%     30%  180    21%    -11.2%   -16.1%   -99.7%
-  -10%     12%  180    24%    -11.0%   -17.8%   -99.7%
-  -10%     20%  180    26%    -11.2%   -18.4%   -99.7%
-  -10%     30%  180    24%    -11.2%   -18.9%   -99.7%
-  -15%     12%  180    28%    -10.8%   -20.1%   -99.7%
-  -15%     20%  180    31%    -11.1%   -21.0%   -99.7%
-  -15%     30%  180    29%    -11.4%   -21.3%   -99.7%
-  -25%     12%  180    32%    -13.0%   -21.3%   -99.7%
-  -25%     20%  180    37%    -14.0%   -29.5%   -99.7%
-  -25%     30%  180    34%    -14.6%   -30.9%   -99.7%
-  best so far: stop -15%, trail from +12% -> avg -10.8% per trade over n=180
+   -6%     12%  181    22%    -10.9%   -15.1%   -99.7%
+   -6%     20%  181    23%    -11.0%   -15.1%   -99.7%
+   -6%     30%  181    21%    -11.2%   -15.9%   -99.7%
+  -10%     12%  181    24%    -11.0%   -17.7%   -99.7%
+  -10%     20%  181    26%    -11.2%   -18.2%   -99.7%
+  -10%     30%  181    24%    -11.2%   -18.7%   -99.7%
+  -15%     12%  181    28%    -10.8%   -20.1%   -99.7%
+  -15%     20%  181    31%    -11.1%   -21.0%   -99.7%
+  -15%     30%  181    29%    -11.4%   -21.3%   -99.7%
+  -25%     12%  181    32%    -13.0%   -21.3%   -99.7%
+  -25%     20%  181    36%    -14.0%   -29.3%   -99.7%
+  -25%     30%  181    34%    -14.6%   -30.9%   -99.7%
+  best so far: stop -15%, trail from +12% -> avg -10.8% per trade over n=181
 
 ================================================================
 PAPER BOOKS COMPARED (A and B: same sizing/exits, only the entry differs;
@@ -89,26 +89,26 @@ C copies watched wallets with a 30s delay and mirror exits)
 ================================================================
                                    A             B             C
 started                  11-06 08:00   11-07 04:00   11-24 09:00
-equity                       $253.01       $294.42       $436.34
-return                        -49.4%        -41.1%        -12.7%
-closed trades                    124            97            12
-win rate                         21%           20%           25%
-avg net / trade               -10.5%        -10.6%        -21.8%
-expectancy $/trade            $-1.99        $-2.12        $-5.31
+equity                       $251.82       $294.42       $434.93
+return                        -49.6%        -41.1%        -13.0%
+closed trades                    124            97            13
+win rate                         21%           20%           23%
+avg net / trade               -10.5%        -10.6%        -20.6%
+expectancy $/trade            $-1.99        $-2.12        $-5.01
 max drawdown                  -52.2%        -45.8%        -15.0%
-open now                           1             0             1
+open now                           1             0             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $253.01 (-49.4%) | cash $240.36 | open 1 | max drawdown -52.2%
+equity $251.82 (-49.6%) | cash $240.36 | open 1 | max drawdown -52.2%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 124 | win 26/124 (21%) | avg net -10.5% | realized $-246.99 | expectancy $-1.99/trade
 exits: stop 92, trail 31, dead_no_route 1
 open:
-  PAIR         cost $12.65  now $12.65 (+0.0%)  held 0.0h
+  PAIR         cost $12.65  now $11.47 (-9.4%)  held 0.2h
 last trades:
   GRAUDIA      $14.14 -> $8.83 (-37.6%)  stop  0.3h
   4CHAN        $13.87 -> $10.88 (-21.6%)  stop  0.5h
@@ -118,7 +118,7 @@ last trades:
   PVE          $12.79 -> $8.22 (-35.7%)  stop  0.3h
   Zero         $12.56 -> $11.06 (-12.0%)  stop  0.2h
   Elonmas      $12.48 -> $15.86 (+27.1%)  trail  1.0h
-signals skipped by the sizer/risk rules: already_traded_token 677, daily_loss_limit 331, cooldown_after_loss 24, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 679, daily_loss_limit 331, cooldown_after_loss 24, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -144,15 +144,12 @@ signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 457, dail
 PAPER BOOK C: copy-trading watched wallets (30s delay, mirror exits)
   pricing: model | start $500.00 on 2026-11-24 09:00 UTC
 ================================================================
-equity $436.34 (-12.7%) | cash $414.52 | open 1 | max drawdown -15.0%
+equity $434.93 (-13.0%) | cash $434.93 | open 0 | max drawdown -15.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 12 | win 3/12 (25%) | avg net -21.8% | realized $-63.66 | expectancy $-5.31/trade
-exits: mirror_sell 10, stop 2
-  (n=12 < 100: noise, not evidence)
-open:
-  Pnp          cost $21.82  now $21.82 (+0.0%)  held 0.0h
+closed 13 | win 3/13 (23%) | avg net -20.6% | realized $-65.07 | expectancy $-5.01/trade
+exits: mirror_sell 11, stop 2
+  (n=13 < 100: noise, not evidence)
 last trades:
-  JENSEN       $23.83 -> $7.18 (-69.9%)  mirror_sell  0.0h
   JENSEN       $23.83 -> $1.96 (-91.8%)  mirror_sell  0.0h
   Caiolo       $21.91 -> $11.85 (-45.9%)  stop  0.2h
   Caiolo       $21.41 -> $33.10 (+54.6%)  mirror_sell  0.5h
@@ -160,11 +157,12 @@ last trades:
   LOBBY        $21.81 -> $30.42 (+39.5%)  mirror_sell  0.0h
   GIVE         $22.24 -> $17.38 (-21.9%)  mirror_sell  0.0h
   COSMOS       $21.99 -> $18.46 (-16.0%)  mirror_sell  0.0h
+  Pnp          $21.82 -> $20.41 (-6.5%)  mirror_sell  0.2h
 signals skipped by the sizer/risk rules: copy:liquidity_too_low 266, copy:no_pool 57, daily_loss_limit 53, copy:no_price_at_delay 30
 
-BOOK C per wallet  (watching 3 wallets, 1820 wallet trades seen)
+BOOK C per wallet  (watching 3 wallets, 1821 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
-HSq83t…YPbW   v2-near-hold4       5     1   40%    +7.9%    +8.23
+HSq83t…YPbW   v2-near-hold4       6     0   33%    +5.5%    +6.83
 CdF2qk…TyLu   v2-pass             1     0    0%   -45.9%   -10.06
 EDBMUo…Zfj7   t2-GTAVI/XV-a       6     0   17%   -42.4%   -61.84
 Drop wallets with negative expectancy after ~20 copied trades each.
