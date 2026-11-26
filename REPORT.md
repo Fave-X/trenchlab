@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-26 09:02 UTC
+Updated: 2026-11-26 09:11 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           148837
+pools seen           148899
 passed SCOUT         298
   killed by SCORE    41
   killed by AUDIT    77
 FINAL PASS           180
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   146840
-  few_unique_buyers           139717
-  liquidity_low               137614
-  volume_below_liquidity      103901
-  sells_dominate               40348
-  wash_churn                   31343
-  overheated                   13575
+  too_young                   146893
+  few_unique_buyers           139774
+  liquidity_low               137673
+  volume_below_liquidity      103946
+  sells_dominate               40369
+  wash_churn                   31356
+  overheated                   13579
   missing                       4218
-  too_old                       1397
+  too_old                       1406
   copy_trade                      54
 
 OUTCOMES (median price change from first sighting / first pass; 9011 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  180    -5.6%   -18.2%   -44.7%   -82.6%    59%
 SCOUT PASS, killed later    118    +5.8%   +10.7%    -7.4%   -74.6%    47%
-KILLED (tracked)          20265    +0.1%   -57.8%   -85.3%    -0.2%    27%
+KILLED (tracked)          20278    +0.1%   -57.7%   -85.3%    -0.3%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -69,19 +69,19 @@ tokens analysed: 1411 | helius credits today: 3223/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%  180    22%    -10.9%   -15.1%   -99.7%
-   -6%     20%  180    23%    -11.0%   -15.2%   -99.7%
-   -6%     30%  180    21%    -11.2%   -16.1%   -99.7%
+   -6%     12%  180    22%    -10.8%   -15.1%   -99.7%
+   -6%     20%  180    23%    -10.9%   -15.2%   -99.7%
+   -6%     30%  180    21%    -11.1%   -16.1%   -99.7%
   -10%     12%  180    24%    -10.9%   -17.8%   -99.7%
   -10%     20%  180    26%    -11.1%   -18.4%   -99.7%
   -10%     30%  180    24%    -11.1%   -18.9%   -99.7%
-  -15%     12%  180    28%    -10.8%   -20.1%   -99.7%
+  -15%     12%  180    28%    -10.7%   -20.1%   -99.7%
   -15%     20%  180    31%    -11.0%   -21.0%   -99.7%
   -15%     30%  180    29%    -11.3%   -21.3%   -99.7%
   -25%     12%  180    32%    -12.9%   -21.3%   -99.7%
   -25%     20%  180    37%    -13.9%   -29.5%   -99.7%
-  -25%     30%  180    34%    -14.6%   -30.9%   -99.7%
-  best so far: stop -15%, trail from +12% -> avg -10.8% per trade over n=180
+  -25%     30%  180    34%    -14.5%   -30.9%   -99.7%
+  best so far: stop -15%, trail from +12% -> avg -10.7% per trade over n=180
 
 ================================================================
 PAPER BOOKS COMPARED (A and B: same sizing/exits, only the entry differs;
@@ -89,8 +89,8 @@ C copies watched wallets with a 30s delay and mirror exits)
 ================================================================
                                    A             B             C
 started                  11-06 08:00   11-07 04:00   11-24 09:00
-equity                       $254.71       $294.42       $439.87
-return                        -49.1%        -41.1%        -12.0%
+equity                       $255.48       $294.42       $439.87
+return                        -48.9%        -41.1%        -12.0%
 closed trades                    123            97            11
 win rate                         20%           20%           27%
 avg net / trade               -10.8%        -10.6%        -22.3%
@@ -103,12 +103,12 @@ Judge on expectancy after >=100 trades each, not on win rate or a few days.
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $254.71 (-49.1%) | cash $237.15 | open 1 | max drawdown -52.2%
+equity $255.48 (-48.9%) | cash $237.15 | open 1 | max drawdown -52.2%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 123 | win 25/123 (20%) | avg net -10.8% | realized $-250.37 | expectancy $-2.04/trade
 exits: stop 92, trail 30, dead_no_route 1
 open:
-  Elonmas      cost $12.48  now $17.56 (+40.7%)  held 0.4h
+  Elonmas      cost $12.48  now $18.33 (+46.9%)  held 0.5h
 last trades:
   Pompom       $14.24 -> $12.17 (-14.5%)  stop  0.2h
   GRAUDIA      $14.14 -> $8.83 (-37.6%)  stop  0.3h
