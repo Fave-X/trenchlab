@@ -1,25 +1,25 @@
 # TrenchLab report
 
-Updated: 2026-11-26 04:22 UTC
+Updated: 2026-11-26 04:33 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           147493
+pools seen           147555
 passed SCOUT         295
   killed by SCORE    41
   killed by AUDIT    75
 FINAL PASS           179
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   145534
-  few_unique_buyers           138513
-  liquidity_low               136347
-  volume_below_liquidity      103060
-  sells_dominate               39925
-  wash_churn                   31001
-  overheated                   13423
+  too_young                   145589
+  few_unique_buyers           138564
+  liquidity_low               136407
+  volume_below_liquidity      103091
+  sells_dominate               39954
+  wash_churn                   31016
+  overheated                   13432
   missing                       4214
   too_old                       1389
   copy_trade                      52
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 8927 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  179    -5.7%   -18.2%   -44.0%   -83.3%    58%
 SCOUT PASS, killed later    116    +5.8%   +10.7%    -7.4%   -74.6%    47%
-KILLED (tracked)          20094    +0.1%   -58.7%   -85.5%    -0.2%    27%
+KILLED (tracked)          20099    +0.1%   -58.7%   -85.5%    -0.2%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -136,7 +136,7 @@ last trades:
   Amend        $15.34 -> $12.38 (-19.3%)  stop  0.5h
   JaoJiu       $15.31 -> $11.47 (-25.1%)  stop  0.3h
   MONEY        $15.00 -> $13.27 (-11.5%)  stop  0.3h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 453, daily_loss_limit 269, setup_rejected:dumping_now 159, setup_rejected:sellers_dominate_now 148, setup_rejected:b_bundled 96, setup_rejected:volume_dried_up 61, setup_rejected:operator_cluster 49, setup_rejected:lp_not_locked 41, setup_rejected:clustered_supply 38, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 14, cooldown_after_loss 8, setup_rejected:rc_danger:Creator history of rugged tokens 7, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Low Liquidity 5, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 453, daily_loss_limit 269, setup_rejected:dumping_now 160, setup_rejected:sellers_dominate_now 148, setup_rejected:b_bundled 96, setup_rejected:volume_dried_up 61, setup_rejected:operator_cluster 49, setup_rejected:lp_not_locked 41, setup_rejected:clustered_supply 38, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 15, cooldown_after_loss 8, setup_rejected:rc_danger:Creator history of rugged tokens 7, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Low Liquidity 5, max_open_positions 1
 
 ================================================================
 PAPER BOOK C: copy-trading watched wallets (30s delay, mirror exits)
