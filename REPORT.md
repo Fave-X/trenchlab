@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-26 01:02 UTC
+Updated: 2026-11-26 01:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           146441
+pools seen           146503
 passed SCOUT         288
   killed by SCORE    38
   killed by AUDIT    74
 FINAL PASS           176
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   144495
-  few_unique_buyers           137553
-  liquidity_low               135341
-  volume_below_liquidity      102432
-  sells_dominate               39540
-  wash_churn                   30728
-  overheated                   13339
+  too_young                   144555
+  few_unique_buyers           137612
+  liquidity_low               135400
+  volume_below_liquidity      102476
+  sells_dominate               39572
+  wash_churn                   30741
+  overheated                   13341
   missing                       4210
-  too_old                       1382
+  too_old                       1383
   copy_trade                      51
 
-OUTCOMES (median price change from first sighting / first pass; 8869 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8872 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  176    -5.6%   -17.3%   -43.9%   -83.3%    59%
 SCOUT PASS, killed later    112    +5.7%    +9.5%    -7.2%   -74.6%    47%
-KILLED (tracked)          19997    +0.1%   -58.8%   -85.6%    -0.2%    27%
+KILLED (tracked)          20005    +0.1%   -58.8%   -85.6%    -0.2%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -38,7 +38,7 @@ wash_churn                     60     -1.2%    -85.6%    25%
 too_old                        52     -0.6%     -0.4%    10%
 copy_trade                     51    -94.4%    -96.1%    12%
 liquidity_low                  36    -69.3%    -49.8%    56%
-overheated                     12    -21.9%    -56.0%    50%
+overheated                     13    -21.9%    -56.0%    46%
 volume_below_liquidity          8     +1.2%    +40.3%    38%
 sells_dominate                  3    -75.0%       -      67%
 
@@ -53,19 +53,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1164     +0.2%    -11.4%    -52.1%    26%
-<15%      311     +1.4%    -11.2%    -24.8%    31%
+none     1174     +0.0%     -9.9%    -46.6%    26%
+<15%      303     +2.8%    -14.9%    -40.1%    31%
 15-30%     38     -0.1%     -1.3%     +0.4%    42%
 30%+       37     -0.7%     -1.1%     +0.5%    35%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none     1007     +0.0%     -2.3%    -35.1%    25%
+none     1008     +0.0%     -2.3%    -35.1%    25%
 <20%      481     +3.3%    -58.4%    -82.6%    27%
-20%+       62     -1.0%    -99.0%       -      82%
+20%+       63     -1.0%    -99.0%       -      81%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1490     +0.4%     -7.2%    -40.1%    26%
-20-40%     36     -2.6%    -99.0%    -99.1%    78%
+<20%     1491     +0.4%     -7.2%    -40.1%    26%
+20-40%     37     -2.6%    -99.0%    -99.1%    76%
 40%+       24    -97.5%    -99.4%       -      75%
-tokens analysed: 1371 | helius credits today: 190/25000
+tokens analysed: 1373 | helius credits today: 396/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -156,7 +156,7 @@ last trades:
   JENSEN       $23.83 -> $1.96 (-91.8%)  mirror_sell  0.0h
 signals skipped by the sizer/risk rules: copy:liquidity_too_low 266, copy:no_pool 57, daily_loss_limit 53, copy:no_price_at_delay 29
 
-BOOK C per wallet  (watching 1 wallets, 1789 wallet trades seen)
+BOOK C per wallet  (watching 1 wallets, 1790 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
 EDBMUo…Zfj7   t2-GTAVI/XV-a       6     0   17%   -42.4%   -61.84
 Drop wallets with negative expectancy after ~20 copied trades each.
