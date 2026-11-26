@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-26 12:52 UTC
+Updated: 2026-11-26 13:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           149928
+pools seen           149966
 passed SCOUT         301
   killed by SCORE    41
   killed by AUDIT    80
 FINAL PASS           180
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   147919
-  few_unique_buyers           140718
-  liquidity_low               138643
-  volume_below_liquidity      104681
-  sells_dominate               40647
-  wash_churn                   31583
-  overheated                   13662
+  too_young                   147957
+  few_unique_buyers           140751
+  liquidity_low               138679
+  volume_below_liquidity      104705
+  sells_dominate               40652
+  wash_churn                   31589
+  overheated                   13668
   missing                       4225
   too_old                       1406
   copy_trade                      55
 
-OUTCOMES (median price change from first sighting / first pass; 9088 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9090 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  180    -5.6%   -17.3%   -44.7%   -82.6%    59%
-SCOUT PASS, killed later    121    +5.9%   +10.7%    -7.4%   -74.6%    46%
-KILLED (tracked)          20409    +0.1%   -57.4%   -85.0%    -0.3%    27%
+FINAL PASS                  180    -5.6%   -17.3%   -44.4%   -82.6%    59%
+SCOUT PASS, killed later    121    +5.9%    +9.5%    -7.4%   -74.6%    47%
+KILLED (tracked)          20417    +0.1%   -57.5%   -85.0%    -0.3%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     529    -87.2%    -68.9%    22%
+too_young                     530    -87.2%    -68.9%    22%
 wash_churn                     61     -1.2%    -85.6%    25%
 copy_trade                     55    -80.7%    -95.9%    13%
 too_old                        52     -0.6%     -0.4%    10%
@@ -46,26 +46,26 @@ SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        82    -51.8%    -92.9%    57%
-70-79     126    -51.5%    -76.1%    52%
+70-79     126    -50.8%    -76.1%    52%
 60-69      67    -32.0%    -86.0%    57%
 <60        26     -7.4%    -63.7%    46%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1223     +0.2%     -9.0%    -48.4%    25%
-<15%      316     +2.3%    -17.3%    -49.8%    32%
+none     1223     +0.2%     -9.1%    -48.4%    26%
+<15%      317     +2.3%    -17.3%    -49.8%    32%
 15-30%     38     -0.1%     -1.0%     +0.4%    42%
 30%+       37     -0.7%     -0.9%     +0.5%    35%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none     1052     +0.1%     -2.1%    -39.2%    24%
-<20%      499     +3.0%    -58.5%    -87.0%    27%
+<20%      500     +3.0%    -58.5%    -87.0%    27%
 20%+       63     +0.9%    -99.0%       -      83%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1553     +0.4%     -6.9%    -42.6%    25%
+<20%     1554     +0.4%     -7.1%    -42.6%    25%
 20-40%     37     -0.7%    -99.0%    -99.1%    78%
 40%+       24    -97.5%    -99.0%       -      75%
-tokens analysed: 1434 | helius credits today: 4738/25000
+tokens analysed: 1435 | helius credits today: 4772/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
