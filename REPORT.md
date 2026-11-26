@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-26 05:42 UTC
+Updated: 2026-11-26 05:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           147866
+pools seen           147921
 passed SCOUT         295
   killed by SCORE    41
   killed by AUDIT    75
 FINAL PASS           179
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   145890
-  few_unique_buyers           138837
-  liquidity_low               136699
-  volume_below_liquidity      103275
-  sells_dominate               40060
-  wash_churn                   31100
-  overheated                   13470
+  too_young                   145945
+  few_unique_buyers           138885
+  liquidity_low               136753
+  volume_below_liquidity      103305
+  sells_dominate               40084
+  wash_churn                   31111
+  overheated                   13476
   missing                       4214
   too_old                       1391
   copy_trade                      52
 
-OUTCOMES (median price change from first sighting / first pass; 8946 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8949 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  179    -5.7%   -18.2%   -44.0%   -83.0%    58%
 SCOUT PASS, killed later    116    +5.8%   +10.7%   -13.5%   -74.6%    47%
-KILLED (tracked)          20141    +0.1%   -58.5%   -85.4%    -0.2%    27%
+KILLED (tracked)          20147    +0.1%   -58.5%   -85.4%    -0.2%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     502    -89.6%    -68.9%    23%
+too_young                     503    -89.6%    -68.9%    23%
 wash_churn                     60     -1.2%    -85.6%    25%
 too_old                        52     -0.6%     -0.4%    10%
 copy_trade                     52    -85.6%    -96.1%    12%
@@ -53,19 +53,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1189     +0.0%     -9.2%    -49.9%    26%
+none     1190     +0.0%     -9.2%    -49.9%    26%
 <15%      308     +2.4%    -17.3%    -49.8%    32%
 15-30%     38     -0.1%     -1.3%     +0.4%    42%
 30%+       37     -0.7%     -0.9%     +0.5%    35%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none     1022     +0.0%     -2.1%    -39.2%    24%
+none     1023     +0.0%     -2.1%    -39.2%    24%
 <20%      487     +3.2%    -58.5%    -91.4%    27%
 20%+       63     +0.9%    -99.0%       -      83%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1511     +0.3%     -7.2%    -43.0%    26%
+<20%     1512     +0.3%     -7.2%    -43.0%    26%
 20-40%     37     -0.7%    -99.0%    -99.1%    78%
 40%+       24    -97.5%    -99.4%       -      75%
-tokens analysed: 1392 | helius credits today: 1943/25000
+tokens analysed: 1393 | helius credits today: 2004/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -89,14 +89,14 @@ C copies watched wallets with a 30s delay and mirror exits)
 ================================================================
                                    A             B             C
 started                  11-06 08:00   11-07 04:00   11-24 09:00
-equity                       $249.63       $296.84       $428.10
-return                        -50.1%        -40.6%        -14.4%
-closed trades                    123            95             7
+equity                       $249.63       $296.37       $428.10
+return                        -50.1%        -40.7%        -14.4%
+closed trades                    123            96             7
 win rate                         20%           20%           14%
-avg net / trade               -10.8%        -10.5%        -42.9%
+avg net / trade               -10.8%        -10.6%        -42.9%
 expectancy $/trade            $-2.04        $-2.12       $-10.27
-max drawdown                  -52.0%        -45.4%        -15.0%
-open now                           0             1             0
+max drawdown                  -52.0%        -45.5%        -15.0%
+open now                           0             0             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -122,15 +122,12 @@ signals skipped by the sizer/risk rules: already_traded_token 667, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $296.84 (-40.6%) | cash $283.35 | open 1 | max drawdown -45.4%
+equity $296.37 (-40.7%) | cash $296.37 | open 0 | max drawdown -45.5%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 95 | win 19/95 (20%) | avg net -10.5% | realized $-201.74 | expectancy $-2.12/trade
-exits: stop 75, trail 20
-  (n=95 < 100: noise, not evidence)
-open:
-  Grodia       cost $14.91  now $13.49 (-9.5%)  held 0.2h
+closed 96 | win 19/96 (20%) | avg net -10.6% | realized $-203.63 | expectancy $-2.12/trade
+exits: stop 76, trail 20
+  (n=96 < 100: noise, not evidence)
 last trades:
-  GROKIA       $16.17 -> $13.16 (-18.6%)  stop  0.7h
   Holders      $16.02 -> $12.58 (-21.4%)  stop  0.2h
   ChristmASS   $15.84 -> $11.21 (-29.2%)  stop  0.3h
   PERRO        $15.87 -> $13.75 (-13.4%)  stop  0.2h
@@ -138,6 +135,7 @@ last trades:
   Amend        $15.34 -> $12.38 (-19.3%)  stop  0.5h
   JaoJiu       $15.31 -> $11.47 (-25.1%)  stop  0.3h
   MONEY        $15.00 -> $13.27 (-11.5%)  stop  0.3h
+  Grodia       $14.91 -> $13.02 (-12.7%)  stop  0.3h
 signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 453, daily_loss_limit 269, setup_rejected:dumping_now 164, setup_rejected:sellers_dominate_now 148, setup_rejected:b_bundled 96, setup_rejected:volume_dried_up 61, setup_rejected:operator_cluster 53, setup_rejected:lp_not_locked 41, setup_rejected:clustered_supply 38, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 19, cooldown_after_loss 8, setup_rejected:rc_danger:Creator history of rugged tokens 7, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Low Liquidity 5, max_open_positions 1
 
 ================================================================
