@@ -1,41 +1,41 @@
 # TrenchLab report
 
-Updated: 2026-11-26 07:12 UTC
+Updated: 2026-11-26 07:23 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           148332
+pools seen           148394
 passed SCOUT         296
   killed by SCORE    41
   killed by AUDIT    76
 FINAL PASS           179
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   146338
-  few_unique_buyers           139246
-  liquidity_low               137131
-  volume_below_liquidity      103572
-  sells_dominate               40214
-  wash_churn                   31226
-  overheated                   13519
+  too_young                   146399
+  few_unique_buyers           139303
+  liquidity_low               137191
+  volume_below_liquidity      103612
+  sells_dominate               40235
+  wash_churn                   31239
+  overheated                   13525
   missing                       4214
   too_old                       1396
-  copy_trade                      53
+  copy_trade                      54
 
-OUTCOMES (median price change from first sighting / first pass; 8979 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8985 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  179    -5.7%   -18.2%   -44.7%   -83.0%    59%
 SCOUT PASS, killed later    117    +5.7%    +9.5%    -7.4%   -74.6%    46%
-KILLED (tracked)          20212    +0.1%   -58.0%   -85.4%    -0.2%    27%
+KILLED (tracked)          20219    +0.1%   -58.0%   -85.4%    -0.2%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
 too_young                     508    -89.6%    -68.9%    23%
 wash_churn                     61     -1.2%    -85.6%    25%
-copy_trade                     53    -85.6%    -96.1%    11%
+copy_trade                     54    -85.6%    -96.1%    11%
 too_old                        52     -0.6%     -0.4%    10%
 liquidity_low                  37    -69.3%    -72.0%    57%
 overheated                     13    -21.9%    -56.0%    46%
@@ -89,12 +89,12 @@ C copies watched wallets with a 30s delay and mirror exits)
 ================================================================
                                    A             B             C
 started                  11-06 08:00   11-07 04:00   11-24 09:00
-equity                       $249.63       $294.42       $439.80
-return                        -50.1%        -41.1%        -12.0%
-closed trades                    123            97             8
-win rate                         20%           20%           25%
-avg net / trade               -10.8%        -10.6%        -30.7%
-expectancy $/trade            $-2.04        $-2.12        $-7.53
+equity                       $249.63       $294.42       $436.12
+return                        -50.1%        -41.1%        -12.8%
+closed trades                    123            97             9
+win rate                         20%           20%           22%
+avg net / trade               -10.8%        -10.6%        -29.2%
+expectancy $/trade            $-2.04        $-2.12        $-7.10
 max drawdown                  -52.0%        -45.8%        -15.0%
 open now                           0             0             0
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
@@ -136,19 +136,18 @@ last trades:
   MONEY        $15.00 -> $13.27 (-11.5%)  stop  0.3h
   Grodia       $14.91 -> $13.02 (-12.7%)  stop  0.3h
   NORFEATH     $14.82 -> $12.87 (-13.2%)  stop  0.5h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 453, daily_loss_limit 269, setup_rejected:dumping_now 165, setup_rejected:sellers_dominate_now 148, setup_rejected:b_bundled 96, setup_rejected:volume_dried_up 61, setup_rejected:operator_cluster 53, setup_rejected:lp_not_locked 41, setup_rejected:clustered_supply 38, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 20, cooldown_after_loss 8, setup_rejected:rc_danger:Low Liquidity 7, setup_rejected:rc_danger:Creator history of rugged tokens 7, setup_rejected:unknown:lp_lock 6, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 453, daily_loss_limit 269, setup_rejected:dumping_now 165, setup_rejected:sellers_dominate_now 148, setup_rejected:b_bundled 96, setup_rejected:volume_dried_up 61, setup_rejected:operator_cluster 53, setup_rejected:lp_not_locked 41, setup_rejected:clustered_supply 38, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 20, setup_rejected:rc_danger:Low Liquidity 8, cooldown_after_loss 8, setup_rejected:rc_danger:Creator history of rugged tokens 7, setup_rejected:unknown:lp_lock 6, max_open_positions 1
 
 ================================================================
 PAPER BOOK C: copy-trading watched wallets (30s delay, mirror exits)
   pricing: model | start $500.00 on 2026-11-24 09:00 UTC
 ================================================================
-equity $439.80 (-12.0%) | cash $439.80 | open 0 | max drawdown -15.0%
+equity $436.12 (-12.8%) | cash $436.12 | open 0 | max drawdown -15.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 8 | win 2/8 (25%) | avg net -30.7% | realized $-60.20 | expectancy $-7.53/trade
-exits: mirror_sell 6, stop 2
-  (n=8 < 100: noise, not evidence)
+closed 9 | win 2/9 (22%) | avg net -29.2% | realized $-63.88 | expectancy $-7.10/trade
+exits: mirror_sell 7, stop 2
+  (n=9 < 100: noise, not evidence)
 last trades:
-  BLACKBALLED  $25.00 -> $21.48 (-14.1%)  mirror_sell  0.0h
   DCTY         $24.82 -> $24.39 (-1.7%)  mirror_sell  0.0h
   BEAST        $24.80 -> $29.54 (+19.1%)  mirror_sell  0.2h
   JENSEN       $25.04 -> $0.93 (-96.3%)  stop  0.3h
@@ -156,11 +155,12 @@ last trades:
   JENSEN       $23.83 -> $1.96 (-91.8%)  mirror_sell  0.0h
   Caiolo       $21.91 -> $11.85 (-45.9%)  stop  0.2h
   Caiolo       $21.41 -> $33.10 (+54.6%)  mirror_sell  0.5h
+  test         $21.99 -> $18.31 (-16.7%)  mirror_sell  0.0h
 signals skipped by the sizer/risk rules: copy:liquidity_too_low 266, copy:no_pool 57, daily_loss_limit 53, copy:no_price_at_delay 30
 
-BOOK C per wallet  (watching 1 wallets, 1805 wallet trades seen)
+BOOK C per wallet  (watching 1 wallets, 1807 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
-HSq83t…YPbW   v2-near-hold4       1     0  100%   +54.6%   +11.69
+HSq83t…YPbW   v2-near-hold4       2     0   50%   +18.9%    +8.02
 CdF2qk…TyLu   v2-pass             1     0    0%   -45.9%   -10.06
 EDBMUo…Zfj7   t2-GTAVI/XV-a       6     0   17%   -42.4%   -61.84
 Drop wallets with negative expectancy after ~20 copied trades each.
