@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-26 08:22 UTC
+Updated: 2026-11-26 08:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           148682
+pools seen           148719
 passed SCOUT         297
   killed by SCORE    41
   killed by AUDIT    77
 FINAL PASS           179
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   146686
-  few_unique_buyers           139570
-  liquidity_low               137468
-  volume_below_liquidity      103790
-  sells_dominate               40324
-  wash_churn                   31311
-  overheated                   13562
-  missing                       4215
+  too_young                   146723
+  few_unique_buyers           139604
+  liquidity_low               137503
+  volume_below_liquidity      103813
+  sells_dominate               40329
+  wash_churn                   31318
+  overheated                   13568
+  missing                       4216
   too_old                       1396
   copy_trade                      54
 
-OUTCOMES (median price change from first sighting / first pass; 9004 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9006 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  179    -5.7%   -18.2%   -44.7%   -82.6%    59%
 SCOUT PASS, killed later    118    +5.8%   +10.7%    -7.4%   -74.6%    47%
-KILLED (tracked)          20248    +0.1%   -57.6%   -85.4%    -0.2%    27%
+KILLED (tracked)          20252    +0.1%   -57.7%   -85.4%    -0.2%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -37,7 +37,7 @@ too_young                     513    -89.1%    -68.9%    23%
 wash_churn                     61     -1.2%    -85.6%    25%
 copy_trade                     54    -85.6%    -96.1%    11%
 too_old                        52     -0.6%     -0.4%    10%
-liquidity_low                  37    -69.3%    -72.0%    57%
+liquidity_low                  37    -68.7%    -72.0%    57%
 overheated                     13    -21.9%    -56.0%    46%
 volume_below_liquidity          8     +1.2%    +40.3%    38%
 sells_dominate                  3    -75.0%       -      67%
@@ -158,7 +158,7 @@ last trades:
   GIVE         $22.24 -> $17.38 (-21.9%)  mirror_sell  0.0h
 signals skipped by the sizer/risk rules: copy:liquidity_too_low 266, copy:no_pool 57, daily_loss_limit 53, copy:no_price_at_delay 30
 
-BOOK C per wallet  (watching 3 wallets, 1812 wallet trades seen)
+BOOK C per wallet  (watching 3 wallets, 1813 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
 HSq83t…YPbW   v2-near-hold4       4     0   50%   +13.9%   +11.76
 CdF2qk…TyLu   v2-pass             1     0    0%   -45.9%   -10.06
