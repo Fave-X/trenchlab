@@ -1,6 +1,6 @@
 # TrenchLab report
 
-Updated: 2026-11-26 04:52 UTC
+Updated: 2026-11-26 05:02 UTC
 
 ```
 ================================================================
@@ -24,7 +24,7 @@ top kill reasons at first sighting (a pool can have several):
   too_old                       1391
   copy_trade                      52
 
-OUTCOMES (median price change from first sighting / first pass; 8931 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 8932 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  179    -5.7%   -18.2%   -44.0%   -83.0%    58%
 SCOUT PASS, killed later    116    +5.8%   +10.7%   -13.5%   -74.6%    47%
@@ -136,7 +136,7 @@ last trades:
   Amend        $15.34 -> $12.38 (-19.3%)  stop  0.5h
   JaoJiu       $15.31 -> $11.47 (-25.1%)  stop  0.3h
   MONEY        $15.00 -> $13.27 (-11.5%)  stop  0.3h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 453, daily_loss_limit 269, setup_rejected:dumping_now 160, setup_rejected:sellers_dominate_now 148, setup_rejected:b_bundled 96, setup_rejected:volume_dried_up 61, setup_rejected:operator_cluster 51, setup_rejected:lp_not_locked 41, setup_rejected:clustered_supply 38, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 17, cooldown_after_loss 8, setup_rejected:rc_danger:Creator history of rugged tokens 7, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Low Liquidity 5, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 453, daily_loss_limit 269, setup_rejected:dumping_now 162, setup_rejected:sellers_dominate_now 148, setup_rejected:b_bundled 96, setup_rejected:volume_dried_up 61, setup_rejected:operator_cluster 51, setup_rejected:lp_not_locked 41, setup_rejected:clustered_supply 38, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 17, cooldown_after_loss 8, setup_rejected:rc_danger:Creator history of rugged tokens 7, setup_rejected:unknown:lp_lock 6, setup_rejected:rc_danger:Low Liquidity 5, max_open_positions 1
 
 ================================================================
 PAPER BOOK C: copy-trading watched wallets (30s delay, mirror exits)
@@ -157,7 +157,7 @@ last trades:
   Caiolo       $21.91 -> $11.85 (-45.9%)  stop  0.2h
 signals skipped by the sizer/risk rules: copy:liquidity_too_low 266, copy:no_pool 57, daily_loss_limit 53, copy:no_price_at_delay 30
 
-BOOK C per wallet  (watching 1 wallets, 1799 wallet trades seen)
+BOOK C per wallet  (watching 1 wallets, 1800 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
 CdF2qk…TyLu   v2-pass             1     0    0%   -45.9%   -10.06
 EDBMUo…Zfj7   t2-GTAVI/XV-a       6     0   17%   -42.4%   -61.84
