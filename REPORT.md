@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-26 10:22 UTC
+Updated: 2026-11-26 10:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           149248
-passed SCOUT         298
+pools seen           149293
+passed SCOUT         299
   killed by SCORE    41
-  killed by AUDIT    77
+  killed by AUDIT    78
 FINAL PASS           180
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   147241
-  few_unique_buyers           140096
-  liquidity_low               138000
-  volume_below_liquidity      104193
-  sells_dominate               40454
-  wash_churn                   31433
-  overheated                   13607
+  too_young                   147286
+  few_unique_buyers           140140
+  liquidity_low               138044
+  volume_below_liquidity      104229
+  sells_dominate               40468
+  wash_churn                   31445
+  overheated                   13608
   missing                       4221
   too_old                       1406
   copy_trade                      54
 
-OUTCOMES (median price change from first sighting / first pass; 9041 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9044 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  180    -5.6%   -17.3%   -44.7%   -82.6%    59%
-SCOUT PASS, killed later    118    +5.8%   +10.7%    -7.2%   -74.6%    47%
-KILLED (tracked)          20326    +0.1%   -57.4%   -85.1%    -0.3%    27%
+SCOUT PASS, killed later    119    +5.9%   +10.7%    -7.2%   -74.6%    46%
+KILLED (tracked)          20328    +0.1%   -57.3%   -85.1%    -0.3%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     521    -89.1%    -68.9%    22%
+too_young                     520    -89.1%    -68.9%    22%
 wash_churn                     61     -1.2%    -85.6%    25%
 copy_trade                     54    -80.7%    -95.9%    11%
 too_old                        52     -0.6%     -0.4%    10%
@@ -45,7 +45,7 @@ sells_dominate                  3    -75.0%       -      67%
 SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
-80+        80    -51.8%    -92.9%    57%
+80+        81    -51.8%    -92.9%    57%
 70-79     125    -50.8%    -76.1%    52%
 60-69      67    -32.0%    -86.0%    57%
 <60        26     -7.4%    -63.7%    46%
