@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-26 19:02 UTC
+Updated: 2026-11-26 19:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           151851
+pools seen           151913
 passed SCOUT         306
   killed by SCORE    41
   killed by AUDIT    82
 FINAL PASS           183
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   149833
-  few_unique_buyers           142481
-  liquidity_low               140467
-  volume_below_liquidity      106030
-  sells_dominate               41135
-  wash_churn                   31906
-  overheated                   13861
-  missing                       4244
+  too_young                   149895
+  few_unique_buyers           142537
+  liquidity_low               140524
+  volume_below_liquidity      106062
+  sells_dominate               41147
+  wash_churn                   31920
+  overheated                   13868
+  missing                       4246
   too_old                       1408
   copy_trade                      57
 
-OUTCOMES (median price change from first sighting / first pass; 9213 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9217 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  183    -5.5%   -17.3%   -44.4%   -83.0%    60%
+FINAL PASS                  183    -5.5%   -18.2%   -44.4%   -83.0%    60%
 SCOUT PASS, killed later    123    +6.1%    +8.4%   -19.5%   -74.6%    47%
-KILLED (tracked)          20688    +0.1%   -58.0%   -85.1%    -0.3%    27%
+KILLED (tracked)          20695    +0.1%   -58.0%   -85.1%    -0.3%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -65,7 +65,7 @@ fresh       n   +1h med   +4h med  +24h med   rug%
 <20%     1577     +0.4%     -7.2%    -43.0%    25%
 20-40%     38     -2.6%    -99.0%    -99.1%    79%
 40%+       24    -97.5%    -99.0%       -      75%
-tokens analysed: 1459 | helius credits today: 6319/25000
+tokens analysed: 1459 | helius credits today: 6469/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -116,7 +116,7 @@ last trades:
   PAIR         $12.65 -> $17.22 (+36.2%)  trail  1.3h
   duk          $12.88 -> $9.04 (-29.8%)  stop  0.2h
   KURO         $12.69 -> $15.15 (+19.4%)  trail  0.3h
-signals skipped by the sizer/risk rules: already_traded_token 690, daily_loss_limit 331, cooldown_after_loss 24, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 691, daily_loss_limit 331, cooldown_after_loss 24, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -148,7 +148,7 @@ closed 13 | win 3/13 (23%) | avg net -20.6% | realized $-65.07 | expectancy $-5.
 exits: mirror_sell 11, stop 2
   (n=13 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $20.98 (-3.5%)  held 1.4h
+  santa        cost $21.75  now $20.98 (-3.5%)  held 1.5h
 last trades:
   JENSEN       $23.83 -> $1.96 (-91.8%)  mirror_sell  0.0h
   Caiolo       $21.91 -> $11.85 (-45.9%)  stop  0.2h
