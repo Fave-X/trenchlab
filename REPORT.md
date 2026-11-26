@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-26 19:42 UTC
+Updated: 2026-11-26 19:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           152091
+pools seen           152149
 passed SCOUT         306
   killed by SCORE    41
   killed by AUDIT    82
 FINAL PASS           183
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   150071
-  few_unique_buyers           142704
-  liquidity_low               140695
-  volume_below_liquidity      106187
-  sells_dominate               41197
-  wash_churn                   31950
-  overheated                   13885
+  too_young                   150129
+  few_unique_buyers           142756
+  liquidity_low               140750
+  volume_below_liquidity      106217
+  sells_dominate               41219
+  wash_churn                   31963
+  overheated                   13892
   missing                       4246
   too_old                       1410
   copy_trade                      57
 
-OUTCOMES (median price change from first sighting / first pass; 9226 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9229 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  183    -5.5%   -18.2%   -44.7%   -83.0%    60%
 SCOUT PASS, killed later    123    +6.1%    +8.4%   -19.5%   -74.6%    47%
-KILLED (tracked)          20715    +0.1%   -57.8%   -85.1%    -0.3%    27%
+KILLED (tracked)          20721    +0.1%   -57.8%   -85.2%    -0.3%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -59,10 +59,10 @@ none     1237     +0.1%     -9.2%    -48.4%    26%
 30%+       37     -0.7%     -0.9%     +0.5%    35%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none     1065     +0.1%     -2.1%    -39.2%    24%
-<20%      512     +3.0%    -59.6%    -87.0%    27%
+<20%      512     +3.0%    -60.6%    -87.0%    27%
 20%+       64     +0.1%    -99.0%       -      83%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1579     +0.4%     -7.2%    -42.6%    25%
+<20%     1579     +0.4%     -7.3%    -42.6%    25%
 20-40%     38     -2.6%    -99.0%    -99.1%    79%
 40%+       24    -97.5%    -99.0%       -      75%
 tokens analysed: 1460 | helius credits today: 6588/25000
@@ -148,7 +148,7 @@ closed 13 | win 3/13 (23%) | avg net -20.6% | realized $-65.07 | expectancy $-5.
 exits: mirror_sell 11, stop 2
   (n=13 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $20.98 (-3.5%)  held 2.0h
+  santa        cost $21.75  now $20.98 (-3.5%)  held 2.2h
 last trades:
   JENSEN       $23.83 -> $1.96 (-91.8%)  mirror_sell  0.0h
   Caiolo       $21.91 -> $11.85 (-45.9%)  stop  0.2h
