@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-26 12:22 UTC
+Updated: 2026-11-26 12:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           149802
-passed SCOUT         299
+pools seen           149848
+passed SCOUT         300
   killed by SCORE    41
-  killed by AUDIT    78
+  killed by AUDIT    79
 FINAL PASS           180
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   147794
-  few_unique_buyers           140602
-  liquidity_low               138528
-  volume_below_liquidity      104580
-  sells_dominate               40616
-  wash_churn                   31559
-  overheated                   13649
-  missing                       4224
+  too_young                   147840
+  few_unique_buyers           140645
+  liquidity_low               138567
+  volume_below_liquidity      104617
+  sells_dominate               40623
+  wash_churn                   31571
+  overheated                   13654
+  missing                       4225
   too_old                       1406
   copy_trade                      54
 
 OUTCOMES (median price change from first sighting / first pass; 9076 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  180    -5.6%   -17.3%   -44.7%   -82.6%    59%
-SCOUT PASS, killed later    119    +5.9%   +10.7%    -7.4%   -74.6%    46%
-KILLED (tracked)          20388    +0.1%   -57.4%   -85.0%    -0.3%    27%
+SCOUT PASS, killed later    120    +5.8%   +10.7%    -7.4%   -74.6%    46%
+KILLED (tracked)          20397    +0.1%   -57.4%   -85.0%    -0.3%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     528    -87.2%    -68.9%    22%
+too_young                     529    -87.2%    -68.9%    22%
 wash_churn                     61     -1.2%    -85.6%    25%
 copy_trade                     54    -80.7%    -95.9%    13%
 too_old                        52     -0.6%     -0.4%    10%
@@ -45,7 +45,7 @@ sells_dominate                  3    -75.0%       -      67%
 SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
-80+        81    -51.8%    -92.9%    57%
+80+        82    -51.8%    -92.9%    56%
 70-79     125    -51.5%    -76.1%    52%
 60-69      67    -32.0%    -86.0%    57%
 <60        26     -7.4%    -63.7%    46%
@@ -53,19 +53,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1219     +0.2%     -9.0%    -48.4%    25%
+none     1222     +0.2%     -9.0%    -48.4%    25%
 <15%      316     +2.3%    -17.3%    -49.8%    32%
 15-30%     38     -0.1%     -1.0%     +0.4%    42%
 30%+       37     -0.7%     -0.9%     +0.5%    35%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none     1048     +0.1%     -2.1%    -39.2%    24%
-<20%      499     +3.1%    -58.5%    -87.0%    27%
+none     1050     +0.1%     -2.1%    -39.2%    24%
+<20%      500     +3.1%    -58.5%    -87.0%    27%
 20%+       63     +0.9%    -99.0%       -      83%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1549     +0.4%     -6.9%    -42.6%    25%
+<20%     1552     +0.4%     -6.9%    -42.6%    25%
 20-40%     37     -0.7%    -99.0%    -99.1%    78%
 40%+       24    -97.5%    -99.0%       -      75%
-tokens analysed: 1430 | helius credits today: 4432/25000
+tokens analysed: 1433 | helius credits today: 4613/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -158,7 +158,7 @@ last trades:
   GIVE         $22.24 -> $17.38 (-21.9%)  mirror_sell  0.0h
 signals skipped by the sizer/risk rules: copy:liquidity_too_low 266, copy:no_pool 57, daily_loss_limit 53, copy:no_price_at_delay 30
 
-BOOK C per wallet  (watching 3 wallets, 1815 wallet trades seen)
+BOOK C per wallet  (watching 3 wallets, 1817 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
 HSq83t…YPbW   v2-near-hold4       4     0   50%   +13.9%   +11.76
 CdF2qk…TyLu   v2-pass             1     0    0%   -45.9%   -10.06
