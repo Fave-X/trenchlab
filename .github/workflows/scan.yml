@@ -57,9 +57,11 @@ jobs:
           if [ -f trenchlab.db ]; then
             gzip -kf trenchlab.db
             gh release upload data trenchlab.db.gz --clobber
-            # rolling daily backup, one slot per weekday (7 days of history)
-            cp trenchlab.db.gz "backup-$(date -u +%a).db.gz"
-            gh release upload data "backup-$(date -u +%a).db.gz" --clobber
+            # rolling daily backup, one slot per weekday (7 days of history); only in the last UTC hour
+            if [ "$(date -u +%H)" = "23" ]; then
+              cp trenchlab.db.gz "backup-$(date -u +%a).db.gz"
+              gh release upload data "backup-$(date -u +%a).db.gz" --clobber
+            fi
           fi
 
       - name: Commit report (and probe files on first run)

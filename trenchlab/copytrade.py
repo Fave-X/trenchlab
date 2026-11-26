@@ -146,9 +146,9 @@ def run(db, trader, cfg, now, rpc=None, pricer=None, log=print, watch_path="rese
         except RpcError as e:
             log(f"[C] {wallet[:6]} check failed: {e}")
             continue
+        db.copy_wallet_set(wallet, label, sigs[0]["signature"] if sigs else None, now)
         if not sigs:
             continue
-        db.copy_wallet_set(wallet, label, sigs[0]["signature"], now)
         for s in reversed(sigs):                       # oldest first
             if s.get("err") is not None or not s.get("blockTime"):
                 continue
