@@ -1,6 +1,6 @@
 # TrenchLab report
 
-Updated: 2026-11-26 00:02 UTC
+Updated: 2026-11-26 00:12 UTC
 
 ```
 ================================================================
@@ -27,7 +27,7 @@ top kill reasons at first sighting (a pool can have several):
 OUTCOMES (median price change from first sighting / first pass; 8869 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  176    -5.6%   -17.3%   -43.9%   -83.3%    59%
-SCOUT PASS, killed later    112    +5.7%   +10.7%    -7.2%   -74.6%    47%
+SCOUT PASS, killed later    112    +5.7%    +9.5%    -7.2%   -74.6%    47%
 KILLED (tracked)          19981    +0.1%   -59.1%   -85.6%    -0.2%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
@@ -60,11 +60,11 @@ none     1163     +0.2%    -11.4%    -52.1%    26%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none     1007     +0.0%     -2.3%    -35.1%    25%
 <20%      479     +3.3%    -58.4%    -82.6%    27%
-20%+       62     -0.7%    -99.0%       -      82%
+20%+       62     -1.0%    -99.0%       -      82%
 fresh       n   +1h med   +4h med  +24h med   rug%
 <20%     1488     +0.4%     -7.2%    -40.1%    26%
 20-40%     36     -2.6%    -99.0%    -99.1%    78%
-40%+       24    -98.5%    -99.4%       -      75%
+40%+       24    -97.5%    -99.4%       -      75%
 tokens analysed: 1369 | helius credits today: 0/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
