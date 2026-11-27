@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-27 13:43 UTC
+Updated: 2026-11-27 13:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           157705
+pools seen           157753
 passed SCOUT         328
   killed by SCORE    42
   killed by AUDIT    95
 FINAL PASS           191
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   155635
-  few_unique_buyers           147874
-  liquidity_low               145970
-  volume_below_liquidity      110077
-  sells_dominate               42603
-  wash_churn                   33361
-  overheated                   14499
-  missing                       4265
+  too_young                   155683
+  few_unique_buyers           147916
+  liquidity_low               146001
+  volume_below_liquidity      110099
+  sells_dominate               42611
+  wash_churn                   33371
+  overheated                   14502
+  missing                       4281
   too_old                       1435
   copy_trade                      61
 
-OUTCOMES (median price change from first sighting / first pass; 9545 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9548 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  191    -5.3%   -18.2%   -45.0%   -82.6%    60%
 SCOUT PASS, killed later    137    +6.7%   +11.6%   -13.5%   -74.6%    45%
-KILLED (tracked)          21503    +0.2%   -56.1%   -85.1%    -0.4%    26%
+KILLED (tracked)          21508    +0.2%   -56.1%   -85.1%    -0.4%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -147,7 +147,7 @@ closed 17 | win 3/17 (18%) | avg net -24.0% | realized $-94.98 | expectancy $-5.
 exits: mirror_sell 15, stop 2
   (n=17 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $25.66 (+18.0%)  held 20.1h
+  santa        cost $21.75  now $25.66 (+18.0%)  held 20.2h
 last trades:
   LOBBY        $21.81 -> $30.42 (+39.5%)  mirror_sell  0.0h
   GIVE         $22.24 -> $17.38 (-21.9%)  mirror_sell  0.0h
