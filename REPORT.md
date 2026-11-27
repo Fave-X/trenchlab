@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-27 21:22 UTC
+Updated: 2026-11-27 21:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           160095
+pools seen           160145
 passed SCOUT         334
   killed by SCORE    42
   killed by AUDIT    97
 FINAL PASS           195
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   157989
-  few_unique_buyers           150099
-  liquidity_low               148185
-  volume_below_liquidity      111725
-  sells_dominate               43269
-  wash_churn                   33831
-  overheated                   14718
+  too_young                   158036
+  few_unique_buyers           150146
+  liquidity_low               148235
+  volume_below_liquidity      111767
+  sells_dominate               43280
+  wash_churn                   33843
+  overheated                   14722
   missing                       4346
-  too_old                       1454
+  too_old                       1456
   copy_trade                      63
 
-OUTCOMES (median price change from first sighting / first pass; 9679 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9681 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  195    -5.5%   -19.4%   -44.4%   -82.6%    61%
 SCOUT PASS, killed later    139    +6.7%   +11.6%   -19.5%   -74.6%    46%
-KILLED (tracked)          21809    +0.2%   -55.6%   -85.0%    -0.3%    26%
+KILLED (tracked)          21814    +0.2%   -55.6%   -85.0%    -0.3%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -135,7 +135,7 @@ last trades:
   DIHBALL      $14.30 -> $9.82 (-31.3%)  stop  0.2h
   Split        $13.92 -> $10.35 (-25.6%)  stop  0.7h
   MEMECARD     $13.92 -> $20.01 (+43.7%)  trail  1.3h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 457, daily_loss_limit 269, setup_rejected:dumping_now 178, setup_rejected:sellers_dominate_now 149, setup_rejected:b_bundled 105, setup_rejected:volume_dried_up 61, setup_rejected:operator_cluster 53, setup_rejected:lp_not_locked 51, setup_rejected:clustered_supply 47, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 20, cooldown_after_loss 12, setup_rejected:rc_danger:Low Liquidity 11, setup_rejected:rc_danger:Creator history of rugged tokens 7, setup_rejected:unknown:lp_lock 6, setup_rejected:unknown:rugcheck_no_report 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 457, daily_loss_limit 269, setup_rejected:dumping_now 178, setup_rejected:sellers_dominate_now 149, setup_rejected:b_bundled 106, setup_rejected:volume_dried_up 61, setup_rejected:operator_cluster 53, setup_rejected:lp_not_locked 51, setup_rejected:clustered_supply 47, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 20, cooldown_after_loss 12, setup_rejected:rc_danger:Low Liquidity 11, setup_rejected:rc_danger:Creator history of rugged tokens 7, setup_rejected:unknown:lp_lock 6, setup_rejected:unknown:rugcheck_no_report 1, max_open_positions 1
 
 ================================================================
 PAPER BOOK C: copy-trading watched wallets (30s delay, mirror exits)
@@ -147,7 +147,7 @@ closed 19 | win 3/19 (16%) | avg net -23.7% | realized $-103.44 | expectancy $-5
 exits: mirror_sell 17, stop 2
   (n=19 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $25.89 (+19.0%)  held 27.7h
+  santa        cost $21.75  now $25.89 (+19.0%)  held 27.9h
 last trades:
   COSMOS       $21.99 -> $18.46 (-16.0%)  mirror_sell  0.0h
   Pnp          $21.82 -> $20.41 (-6.5%)  mirror_sell  0.2h
