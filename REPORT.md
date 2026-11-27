@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-27 16:02 UTC
+Updated: 2026-11-27 16:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           158361
+pools seen           158420
 passed SCOUT         329
   killed by SCORE    42
   killed by AUDIT    95
 FINAL PASS           192
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   156272
-  few_unique_buyers           148473
-  liquidity_low               146559
-  volume_below_liquidity      110495
-  sells_dominate               42775
-  wash_churn                   33464
-  overheated                   14565
+  too_young                   156331
+  few_unique_buyers           148529
+  liquidity_low               146616
+  volume_below_liquidity      110537
+  sells_dominate               42790
+  wash_churn                   33474
+  overheated                   14569
   missing                       4310
   too_old                       1445
   copy_trade                      62
 
-OUTCOMES (median price change from first sighting / first pass; 9577 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9578 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  192    -5.4%   -19.1%   -44.7%   -83.0%    60%
 SCOUT PASS, killed later    137    +6.7%   +11.6%    -7.4%   -74.6%    45%
-KILLED (tracked)          21595    +0.2%   -55.7%   -85.1%    -0.4%    26%
+KILLED (tracked)          21603    +0.2%   -55.7%   -85.1%    -0.4%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -53,16 +53,16 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1328     +0.4%     -9.0%    -52.9%    25%
+none     1328     +0.4%     -9.1%    -52.9%    25%
 <15%      355     +4.0%    -19.5%    -53.6%    31%
 15-30%     41     -0.2%     -2.9%     +1.0%    46%
 30%+       39     -0.7%     -1.1%     +0.5%    36%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none     1142     +0.2%     -2.1%    -40.1%    24%
-<20%      551     +3.4%    -59.6%    -92.1%    26%
+<20%      551     +3.4%    -60.6%    -92.1%    26%
 20%+       70     +0.1%    -99.2%  +1071.7%    83%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1697     +0.7%     -7.1%    -45.0%    25%
+<20%     1697     +0.7%     -7.2%    -45.0%    25%
 20-40%     39     -0.7%    -99.0%    -99.1%    79%
 40%+       27    -98.5%    -99.4%  +1071.7%    78%
 tokens analysed: 1579 | helius credits today: 6217/25000
@@ -147,7 +147,7 @@ closed 18 | win 3/18 (17%) | avg net -24.1% | realized $-100.19 | expectancy $-5
 exits: mirror_sell 16, stop 2
   (n=18 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $24.84 (+14.2%)  held 22.4h
+  santa        cost $21.75  now $24.84 (+14.2%)  held 22.5h
 last trades:
   GIVE         $22.24 -> $17.38 (-21.9%)  mirror_sell  0.0h
   COSMOS       $21.99 -> $18.46 (-16.0%)  mirror_sell  0.0h
