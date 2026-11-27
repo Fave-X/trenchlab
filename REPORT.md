@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-27 15:42 UTC
+Updated: 2026-11-27 15:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           158271
+pools seen           158312
 passed SCOUT         329
   killed by SCORE    42
   killed by AUDIT    95
 FINAL PASS           192
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   156186
-  few_unique_buyers           148388
-  liquidity_low               146473
-  volume_below_liquidity      110431
-  sells_dominate               42752
-  wash_churn                   33454
-  overheated                   14557
-  missing                       4308
+  too_young                   156226
+  few_unique_buyers           148426
+  liquidity_low               146511
+  volume_below_liquidity      110458
+  sells_dominate               42762
+  wash_churn                   33457
+  overheated                   14560
+  missing                       4310
   too_old                       1444
   copy_trade                      62
 
-OUTCOMES (median price change from first sighting / first pass; 9568 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9572 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  192    -5.4%   -19.1%   -44.7%   -83.0%    60%
 SCOUT PASS, killed later    137    +6.7%   +11.6%    -7.4%   -74.6%    45%
-KILLED (tracked)          21583    +0.2%   -55.7%   -85.1%    -0.4%    26%
+KILLED (tracked)          21590    +0.2%   -55.7%   -85.1%    -0.4%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -89,8 +89,8 @@ C copies watched wallets with a 30s delay and mirror exits)
 ================================================================
                                    A             B             C
 started                  11-06 08:00   11-07 04:00   11-24 09:00
-equity                       $252.34       $286.10       $405.33
-return                        -49.5%        -42.8%        -18.9%
+equity                       $252.34       $286.10       $403.36
+return                        -49.5%        -42.8%        -19.3%
 closed trades                    135           103            17
 win rate                         22%           20%           18%
 avg net / trade                -9.7%        -10.5%        -24.0%
@@ -141,14 +141,14 @@ signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 457, dail
 PAPER BOOK C: copy-trading watched wallets (30s delay, mirror exits)
   pricing: model | start $500.00 on 2026-11-24 09:00 UTC
 ================================================================
-equity $405.33 (-18.9%) | cash $363.08 | open 2 | max drawdown -20.0%
+equity $403.36 (-19.3%) | cash $363.08 | open 2 | max drawdown -20.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 17 | win 3/17 (18%) | avg net -24.0% | realized $-94.98 | expectancy $-5.59/trade
 exits: mirror_sell 15, stop 2
   (n=17 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $24.84 (+14.2%)  held 22.0h
-  DOPAMINE     cost $20.19  now $17.41 (-13.8%)  held 0.2h
+  santa        cost $21.75  now $24.84 (+14.2%)  held 22.2h
+  DOPAMINE     cost $20.19  now $15.45 (-23.5%)  held 0.4h
 last trades:
   LOBBY        $21.81 -> $30.42 (+39.5%)  mirror_sell  0.0h
   GIVE         $22.24 -> $17.38 (-21.9%)  mirror_sell  0.0h
