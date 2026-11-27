@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-27 16:43 UTC
+Updated: 2026-11-27 16:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           158584
+pools seen           158631
 passed SCOUT         329
   killed by SCORE    42
   killed by AUDIT    95
 FINAL PASS           192
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   156495
-  few_unique_buyers           148679
-  liquidity_low               146775
-  volume_below_liquidity      110648
-  sells_dominate               42839
-  wash_churn                   33509
-  overheated                   14576
+  too_young                   156542
+  few_unique_buyers           148722
+  liquidity_low               146821
+  volume_below_liquidity      110680
+  sells_dominate               42853
+  wash_churn                   33516
+  overheated                   14583
   missing                       4310
   too_old                       1445
   copy_trade                      62
 
-OUTCOMES (median price change from first sighting / first pass; 9584 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9587 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  192    -5.4%   -19.1%   -44.7%   -83.0%    60%
 SCOUT PASS, killed later    137    +6.7%   +11.6%    -7.4%   -74.6%    45%
-KILLED (tracked)          21621    +0.2%   -55.7%   -85.0%    -0.4%    26%
+KILLED (tracked)          21626    +0.2%   -55.7%   -85.0%    -0.4%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -65,7 +65,7 @@ fresh       n   +1h med   +4h med  +24h med   rug%
 <20%     1697     +0.7%     -7.2%    -45.0%    25%
 20-40%     39     -0.7%    -99.0%    -99.1%    79%
 40%+       27    -98.5%    -99.4%  +1071.7%    78%
-tokens analysed: 1579 | helius credits today: 6217/25000
+tokens analysed: 1579 | helius credits today: 6276/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -89,7 +89,7 @@ C copies watched wallets with a 30s delay and mirror exits)
 ================================================================
                                    A             B             C
 started                  11-06 08:00   11-07 04:00   11-24 09:00
-equity                       $252.34       $286.10       $404.65
+equity                       $252.34       $286.10       $404.35
 return                        -49.5%        -42.8%        -19.1%
 closed trades                    135           103            18
 win rate                         22%           20%           17%
@@ -116,7 +116,7 @@ last trades:
   SpaceXCoin   $12.25 -> $21.94 (+79.1%)  trail  2.2h
   Kibo         $12.81 -> $11.47 (-10.4%)  stop  0.5h
   WINSTON      $12.74 -> $10.21 (-19.8%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 728, daily_loss_limit 331, cooldown_after_loss 26, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 729, daily_loss_limit 331, cooldown_after_loss 26, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -141,13 +141,13 @@ signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 457, dail
 PAPER BOOK C: copy-trading watched wallets (30s delay, mirror exits)
   pricing: model | start $500.00 on 2026-11-24 09:00 UTC
 ================================================================
-equity $404.65 (-19.1%) | cash $378.06 | open 1 | max drawdown -20.0%
+equity $404.35 (-19.1%) | cash $378.06 | open 1 | max drawdown -20.0%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 18 | win 3/18 (17%) | avg net -24.1% | realized $-100.19 | expectancy $-5.57/trade
 exits: mirror_sell 16, stop 2
   (n=18 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $26.59 (+22.3%)  held 23.1h
+  santa        cost $21.75  now $26.29 (+20.9%)  held 23.2h
 last trades:
   GIVE         $22.24 -> $17.38 (-21.9%)  mirror_sell  0.0h
   COSMOS       $21.99 -> $18.46 (-16.0%)  mirror_sell  0.0h
