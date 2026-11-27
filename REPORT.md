@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-27 11:52 UTC
+Updated: 2026-11-27 12:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           157102
+pools seen           157159
 passed SCOUT         327
   killed by SCORE    42
   killed by AUDIT    94
 FINAL PASS           191
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   155046
-  few_unique_buyers           147314
-  liquidity_low               145411
-  volume_below_liquidity      109645
-  sells_dominate               42441
-  wash_churn                   33232
-  overheated                   14444
+  too_young                   155103
+  few_unique_buyers           147368
+  liquidity_low               145466
+  volume_below_liquidity      109690
+  sells_dominate               42453
+  wash_churn                   33242
+  overheated                   14449
   missing                       4265
   too_old                       1426
   copy_trade                      59
 
 OUTCOMES (median price change from first sighting / first pass; 9519 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  191    -5.3%   -19.1%   -45.0%   -82.6%    60%
-SCOUT PASS, killed later    136    +6.7%   +11.6%   -13.5%   -74.6%    46%
-KILLED (tracked)          21413    +0.2%   -56.6%   -85.2%    -0.4%    26%
+FINAL PASS                  191    -5.3%   -18.2%   -45.0%   -82.6%    60%
+SCOUT PASS, killed later    136    +6.7%   +11.1%   -13.5%   -74.6%    46%
+KILLED (tracked)          21418    +0.2%   -56.6%   -85.2%    -0.4%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -116,7 +116,7 @@ last trades:
   KAI          $12.36 -> $13.64 (+10.3%)  trail  3.3h
   SpaceXCoin   $12.25 -> $21.94 (+79.1%)  trail  2.2h
   Kibo         $12.81 -> $11.47 (-10.4%)  stop  0.5h
-signals skipped by the sizer/risk rules: already_traded_token 718, daily_loss_limit 331, cooldown_after_loss 26, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 719, daily_loss_limit 331, cooldown_after_loss 26, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -135,7 +135,7 @@ last trades:
   DEXDATA      $14.23 -> $12.68 (-10.9%)  stop  0.7h
   KAI          $14.15 -> $15.35 (+8.5%)  trail  2.2h
   DragonRiders $14.14 -> $16.08 (+13.7%)  trail  3.3h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 457, daily_loss_limit 269, setup_rejected:dumping_now 167, setup_rejected:sellers_dominate_now 149, setup_rejected:b_bundled 96, setup_rejected:volume_dried_up 61, setup_rejected:operator_cluster 53, setup_rejected:lp_not_locked 50, setup_rejected:clustered_supply 41, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 20, setup_rejected:rc_danger:Low Liquidity 11, cooldown_after_loss 9, setup_rejected:rc_danger:Creator history of rugged tokens 7, setup_rejected:unknown:lp_lock 6, setup_rejected:unknown:rugcheck_no_report 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 457, daily_loss_limit 269, setup_rejected:dumping_now 167, setup_rejected:sellers_dominate_now 149, setup_rejected:b_bundled 96, setup_rejected:volume_dried_up 61, setup_rejected:operator_cluster 53, setup_rejected:lp_not_locked 51, setup_rejected:clustered_supply 41, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 20, setup_rejected:rc_danger:Low Liquidity 11, cooldown_after_loss 9, setup_rejected:rc_danger:Creator history of rugged tokens 7, setup_rejected:unknown:lp_lock 6, setup_rejected:unknown:rugcheck_no_report 1, max_open_positions 1
 
 ================================================================
 PAPER BOOK C: copy-trading watched wallets (30s delay, mirror exits)
@@ -147,7 +147,7 @@ closed 15 | win 3/15 (20%) | avg net -22.5% | realized $-80.24 | expectancy $-5.
 exits: mirror_sell 13, stop 2
   (n=15 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $25.91 (+19.1%)  held 18.2h
+  santa        cost $21.75  now $25.91 (+19.1%)  held 18.4h
 last trades:
   Caiolo       $21.41 -> $33.10 (+54.6%)  mirror_sell  0.5h
   test         $21.99 -> $18.31 (-16.7%)  mirror_sell  0.0h
