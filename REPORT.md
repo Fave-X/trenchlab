@@ -1,25 +1,25 @@
 # TrenchLab report
 
-Updated: 2026-11-27 16:52 UTC
+Updated: 2026-11-27 17:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           158631
+pools seen           158684
 passed SCOUT         329
   killed by SCORE    42
   killed by AUDIT    95
 FINAL PASS           192
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   156542
-  few_unique_buyers           148722
-  liquidity_low               146821
-  volume_below_liquidity      110680
-  sells_dominate               42853
-  wash_churn                   33516
-  overheated                   14583
+  too_young                   156594
+  few_unique_buyers           148764
+  liquidity_low               146868
+  volume_below_liquidity      110708
+  sells_dominate               42874
+  wash_churn                   33529
+  overheated                   14589
   missing                       4310
   too_old                       1445
   copy_trade                      62
@@ -28,12 +28,12 @@ OUTCOMES (median price change from first sighting / first pass; 9587 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  192    -5.4%   -19.1%   -44.7%   -83.0%    60%
 SCOUT PASS, killed later    137    +6.7%   +11.6%    -7.4%   -74.6%    45%
-KILLED (tracked)          21626    +0.2%   -55.7%   -85.0%    -0.4%    26%
+KILLED (tracked)          21635    +0.2%   -55.7%   -85.0%    -0.4%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     601    -85.4%    -68.9%    21%
+too_young                     604    -85.4%    -68.9%    21%
 copy_trade                     62    -75.8%    -94.9%    11%
 wash_churn                     61     -1.2%    -85.6%    25%
 too_old                        52     -0.6%     -0.4%    10%
@@ -53,19 +53,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1328     +0.4%     -9.1%    -52.9%    25%
+none     1331     +0.4%     -9.1%    -52.9%    25%
 <15%      355     +4.0%    -19.5%    -53.6%    31%
 15-30%     41     -0.2%     -2.9%     +1.0%    46%
 30%+       39     -0.7%     -1.1%     +0.5%    36%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none     1142     +0.2%     -2.1%    -40.1%    24%
+none     1145     +0.2%     -2.1%    -40.1%    24%
 <20%      551     +3.4%    -60.6%    -92.1%    26%
 20%+       70     +0.1%    -99.2%  +1071.7%    83%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1697     +0.7%     -7.2%    -45.0%    25%
+<20%     1700     +0.7%     -7.2%    -45.0%    25%
 20-40%     39     -0.7%    -99.0%    -99.1%    79%
 40%+       27    -98.5%    -99.4%  +1071.7%    78%
-tokens analysed: 1579 | helius credits today: 6276/25000
+tokens analysed: 1582 | helius credits today: 6460/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -116,7 +116,7 @@ last trades:
   SpaceXCoin   $12.25 -> $21.94 (+79.1%)  trail  2.2h
   Kibo         $12.81 -> $11.47 (-10.4%)  stop  0.5h
   WINSTON      $12.74 -> $10.21 (-19.8%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 729, daily_loss_limit 331, cooldown_after_loss 26, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 730, daily_loss_limit 331, cooldown_after_loss 26, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -147,7 +147,7 @@ closed 18 | win 3/18 (17%) | avg net -24.1% | realized $-100.19 | expectancy $-5
 exits: mirror_sell 16, stop 2
   (n=18 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $26.29 (+20.9%)  held 23.2h
+  santa        cost $21.75  now $26.29 (+20.9%)  held 23.4h
 last trades:
   GIVE         $22.24 -> $17.38 (-21.9%)  mirror_sell  0.0h
   COSMOS       $21.99 -> $18.46 (-16.0%)  mirror_sell  0.0h
