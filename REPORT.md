@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-27 15:02 UTC
+Updated: 2026-11-27 15:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           158095
+pools seen           158137
 passed SCOUT         329
   killed by SCORE    42
   killed by AUDIT    95
 FINAL PASS           192
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   156012
-  few_unique_buyers           148225
-  liquidity_low               146321
-  volume_below_liquidity      110324
-  sells_dominate               42699
-  wash_churn                   33420
-  overheated                   14538
-  missing                       4286
+  too_young                   156053
+  few_unique_buyers           148264
+  liquidity_low               146347
+  volume_below_liquidity      110341
+  sells_dominate               42710
+  wash_churn                   33428
+  overheated                   14544
+  missing                       4302
   too_old                       1444
   copy_trade                      61
 
 OUTCOMES (median price change from first sighting / first pass; 9565 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  192    -5.4%   -18.2%   -45.0%   -82.6%    60%
+FINAL PASS                  192    -5.4%   -18.2%   -44.7%   -82.6%    60%
 SCOUT PASS, killed later    137    +6.7%   +11.6%    -7.4%   -74.6%    45%
-KILLED (tracked)          21566    +0.2%   -55.9%   -85.1%    -0.4%    26%
+KILLED (tracked)          21568    +0.2%   -55.7%   -85.1%    -0.4%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -46,7 +46,7 @@ SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        94    -52.9%    -92.9%    53%
-70-79     137    -52.5%    -76.6%    55%
+70-79     137    -52.0%    -76.6%    55%
 60-69      71    -30.1%    -89.0%    56%
 <60        27     -7.2%    -63.7%    48%
 
@@ -147,7 +147,7 @@ closed 17 | win 3/17 (18%) | avg net -24.0% | realized $-94.98 | expectancy $-5.
 exits: mirror_sell 15, stop 2
   (n=17 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $25.66 (+18.0%)  held 21.4h
+  santa        cost $21.75  now $25.66 (+18.0%)  held 21.5h
 last trades:
   LOBBY        $21.81 -> $30.42 (+39.5%)  mirror_sell  0.0h
   GIVE         $22.24 -> $17.38 (-21.9%)  mirror_sell  0.0h
