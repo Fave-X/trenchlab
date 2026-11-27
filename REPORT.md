@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-27 23:22 UTC
+Updated: 2026-11-27 23:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           160676
+pools seen           160736
 passed SCOUT         338
   killed by SCORE    42
   killed by AUDIT    98
 FINAL PASS           198
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   158563
-  few_unique_buyers           150648
-  liquidity_low               148751
-  volume_below_liquidity      112161
-  sells_dominate               43418
-  wash_churn                   33991
-  overheated                   14776
+  too_young                   158623
+  few_unique_buyers           150704
+  liquidity_low               148808
+  volume_below_liquidity      112201
+  sells_dominate               43430
+  wash_churn                   34009
+  overheated                   14780
   missing                       4350
   too_old                       1459
   copy_trade                      63
 
-OUTCOMES (median price change from first sighting / first pass; 9701 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9703 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  198    -5.2%   -19.1%   -44.0%   -83.0%    60%
 SCOUT PASS, killed later    140    +6.7%   +13.2%   -19.5%   -74.6%    46%
-KILLED (tracked)          21873    +0.2%   -55.6%   -85.0%    -0.3%    26%
+KILLED (tracked)          21883    +0.2%   -55.6%   -84.9%    -0.3%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     610    -82.1%    -68.9%    21%
+too_young                     611    -82.1%    -68.9%    21%
 copy_trade                     63    -75.8%    -94.2%    11%
 wash_churn                     62     -1.2%    -85.6%    24%
 too_old                        52     -0.6%     -0.4%    10%
@@ -53,24 +53,24 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1346     +0.4%     -9.0%    -53.4%    25%
+none     1347     +0.4%     -9.0%    -53.4%    25%
 <15%      362     +3.7%    -22.8%    -57.4%    31%
 15-30%     42     -0.1%     -2.9%     +1.0%    45%
 30%+       40     -0.7%     -1.4%     +0.5%    40%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none     1157     +0.2%     -2.1%    -40.8%    24%
-<20%      560     +3.4%    -58.5%    -92.8%    26%
+<20%      561     +3.4%    -58.5%    -92.8%    26%
 20%+       73     +0.9%    -99.2%  +1071.7%    82%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1720     +0.6%     -7.1%    -46.0%    25%
+<20%     1721     +0.6%     -7.1%    -46.0%    25%
 20-40%     42     -0.7%    -99.2%    -99.1%    79%
 40%+       28    -97.5%    -99.4%  +1071.7%    75%
-tokens analysed: 1606 | helius credits today: 8550/25000
+tokens analysed: 1607 | helius credits today: 8611/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
    -6%     12%  198    22%    -10.3%   -14.9%   -99.7%
-   -6%     20%  198    24%    -10.4%   -15.0%   -99.7%
+   -6%     20%  198    24%    -10.3%   -15.0%   -99.7%
    -6%     30%  198    21%    -10.7%   -15.8%   -99.7%
   -10%     12%  198    25%    -10.4%   -17.3%   -99.7%
   -10%     20%  198    27%    -10.6%   -18.0%   -99.7%
@@ -89,7 +89,7 @@ C copies watched wallets with a 30s delay and mirror exits)
 ================================================================
                                    A             B             C
 started                  11-06 08:00   11-07 04:00   11-24 09:00
-equity                       $232.01       $289.05       $400.70
+equity                       $232.01       $289.22       $400.70
 return                        -53.6%        -42.2%        -19.9%
 closed trades                    138           107            19
 win rate                         22%           21%           16%
@@ -116,18 +116,18 @@ last trades:
   MEMECARD     $12.62 -> $7.43 (-41.1%)  stop  0.2h
   VICAT        $12.36 -> $0.05 (-99.6%)  stop  0.7h
   Zhaki        $12.38 -> $9.55 (-22.9%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 746, daily_loss_limit 338, cooldown_after_loss 26, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 746, daily_loss_limit 339, cooldown_after_loss 26, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $289.05 (-42.2%) | cash $266.89 | open 1 | max drawdown -49.4%
+equity $289.22 (-42.2%) | cash $266.89 | open 1 | max drawdown -49.4%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 107 | win 22/107 (21%) | avg net -10.5% | realized $-219.06 | expectancy $-2.05/trade
 exits: stop 84, trail 23
 open:
-  MoonBoy      cost $14.05  now $22.15 (+57.7%)  held 0.2h
+  MoonBoy      cost $14.05  now $22.33 (+58.9%)  held 0.4h
 last trades:
   Hoppy        $14.36 -> $11.68 (-18.7%)  stop  0.5h
   DEXDATA      $14.23 -> $12.68 (-10.9%)  stop  0.7h
@@ -149,7 +149,7 @@ closed 19 | win 3/19 (16%) | avg net -23.7% | realized $-103.44 | expectancy $-5
 exits: mirror_sell 17, stop 2
   (n=19 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $25.89 (+19.0%)  held 29.7h
+  santa        cost $21.75  now $25.89 (+19.0%)  held 29.9h
 last trades:
   COSMOS       $21.99 -> $18.46 (-16.0%)  mirror_sell  0.0h
   Pnp          $21.82 -> $20.41 (-6.5%)  mirror_sell  0.2h
