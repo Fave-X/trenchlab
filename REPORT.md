@@ -1,25 +1,25 @@
 # TrenchLab report
 
-Updated: 2026-11-27 17:42 UTC
+Updated: 2026-11-27 17:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           158912
+pools seen           158961
 passed SCOUT         331
   killed by SCORE    42
   killed by AUDIT    97
 FINAL PASS           192
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   156818
-  few_unique_buyers           148981
-  liquidity_low               147075
-  volume_below_liquidity      110867
-  sells_dominate               42936
-  wash_churn                   33571
-  overheated                   14611
+  too_young                   156867
+  few_unique_buyers           149028
+  liquidity_low               147124
+  volume_below_liquidity      110904
+  sells_dominate               42951
+  wash_churn                   33581
+  overheated                   14615
   missing                       4318
   too_old                       1448
   copy_trade                      62
@@ -28,12 +28,12 @@ OUTCOMES (median price change from first sighting / first pass; 9598 pools had z
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  192    -5.4%   -19.1%   -44.7%   -82.6%    61%
 SCOUT PASS, killed later    139    +6.7%   +13.2%    -7.4%   -74.6%    45%
-KILLED (tracked)          21657    +0.2%   -55.7%   -85.0%    -0.3%    26%
+KILLED (tracked)          21666    +0.2%   -55.7%   -85.0%    -0.3%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     607    -84.5%    -68.9%    21%
+too_young                     607    -82.8%    -68.9%    21%
 copy_trade                     62    -75.8%    -94.2%    11%
 wash_churn                     61     -1.2%    -85.6%    25%
 too_old                        52     -0.6%     -0.4%    10%
@@ -62,7 +62,7 @@ none     1147     +0.2%     -2.1%    -40.8%    24%
 <20%      552     +3.4%    -60.6%    -92.1%    26%
 20%+       72     +0.9%    -99.1%  +1071.7%    81%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1703     +0.7%     -6.9%    -45.5%    25%
+<20%     1703     +0.7%     -6.8%    -45.5%    25%
 20-40%     41     -0.4%    -99.0%    -99.1%    76%
 40%+       27    -98.5%    -99.4%  +1071.7%    78%
 tokens analysed: 1587 | helius credits today: 6882/25000
@@ -147,7 +147,7 @@ closed 18 | win 3/18 (17%) | avg net -24.1% | realized $-100.19 | expectancy $-5
 exits: mirror_sell 16, stop 2
   (n=18 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $26.29 (+20.9%)  held 24.0h
+  santa        cost $21.75  now $26.29 (+20.9%)  held 24.2h
 last trades:
   GIVE         $22.24 -> $17.38 (-21.9%)  mirror_sell  0.0h
   COSMOS       $21.99 -> $18.46 (-16.0%)  mirror_sell  0.0h
