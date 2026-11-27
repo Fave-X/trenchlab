@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-27 19:52 UTC
+Updated: 2026-11-27 20:03 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           159647
+pools seen           159693
 passed SCOUT         333
   killed by SCORE    42
   killed by AUDIT    97
 FINAL PASS           194
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   157546
-  few_unique_buyers           149677
-  liquidity_low               147765
-  volume_below_liquidity      111389
-  sells_dominate               43143
-  wash_churn                   33728
-  overheated                   14670
+  too_young                   157592
+  few_unique_buyers           149721
+  liquidity_low               147810
+  volume_below_liquidity      111422
+  sells_dominate               43158
+  wash_churn                   33742
+  overheated                   14673
   missing                       4337
   too_old                       1450
   copy_trade                      63
 
-OUTCOMES (median price change from first sighting / first pass; 9659 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9662 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  194    -5.5%   -18.2%   -44.4%   -82.6%    60%
+FINAL PASS                  194    -5.4%   -18.2%   -44.4%   -82.6%    60%
 SCOUT PASS, killed later    139    +6.7%   +11.6%    -7.4%   -74.6%    46%
-KILLED (tracked)          21745    +0.2%   -55.6%   -85.0%    -0.3%    26%
+KILLED (tracked)          21750    +0.2%   -55.6%   -85.0%    -0.3%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -73,10 +73,10 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
    -6%     20%  194    23%    -11.0%   -15.1%   -99.7%
    -6%     30%  194    21%    -11.2%   -15.8%   -99.7%
   -10%     12%  194    25%    -10.6%   -17.3%   -99.7%
-  -10%     20%  194    27%    -10.8%   -18.0%   -99.7%
-  -10%     30%  194    25%    -11.0%   -18.9%   -99.7%
-  -15%     12%  194    28%    -11.0%   -20.1%   -99.7%
-  -15%     20%  194    31%    -11.2%   -21.0%   -99.7%
+  -10%     20%  194    27%    -10.7%   -18.0%   -99.7%
+  -10%     30%  194    25%    -10.9%   -18.9%   -99.7%
+  -15%     12%  194    28%    -10.9%   -20.1%   -99.7%
+  -15%     20%  194    31%    -11.1%   -21.0%   -99.7%
   -15%     30%  194    29%    -11.6%   -21.3%   -99.7%
   -25%     12%  194    32%    -13.1%   -21.3%   -99.7%
   -25%     20%  194    37%    -14.1%   -29.6%   -99.7%
@@ -89,26 +89,26 @@ C copies watched wallets with a 30s delay and mirror exits)
 ================================================================
                                    A             B             C
 started                  11-06 08:00   11-07 04:00   11-24 09:00
-equity                       $245.99       $278.42       $401.10
-return                        -50.8%        -44.3%        -19.8%
+equity                       $246.72       $278.42       $401.10
+return                        -50.7%        -44.3%        -19.8%
 closed trades                    136           105            19
 win rate                         22%           20%           16%
 avg net / trade                -9.9%        -10.8%        -23.7%
 expectancy $/trade            $-1.86        $-2.11        $-5.44
 max drawdown                  -52.9%        -48.8%        -20.3%
-open now                           1             0             1
+open now                           1             2             1
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $245.99 (-50.8%) | cash $234.79 | open 1 | max drawdown -52.9%
+equity $246.72 (-50.7%) | cash $234.79 | open 1 | max drawdown -52.9%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 136 | win 30/136 (22%) | avg net -9.9% | realized $-252.85 | expectancy $-1.86/trade
 exits: stop 100, trail 35, dead_no_route 1
 open:
-  VICAT        cost $12.36  now $11.20 (-9.4%)  held 0.2h
+  VICAT        cost $12.36  now $11.92 (-3.5%)  held 0.4h
 last trades:
   Vetocat      $12.52 -> $10.86 (-13.3%)  stop  0.2h
   DEXDATA      $12.52 -> $11.02 (-12.0%)  stop  0.5h
@@ -118,16 +118,19 @@ last trades:
   Kibo         $12.81 -> $11.47 (-10.4%)  stop  0.5h
   WINSTON      $12.74 -> $10.21 (-19.8%)  stop  0.2h
   MEMECARD     $12.62 -> $7.43 (-41.1%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 738, daily_loss_limit 331, cooldown_after_loss 26, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 740, daily_loss_limit 331, cooldown_after_loss 26, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $278.42 (-44.3%) | cash $278.42 | open 0 | max drawdown -48.8%
+equity $278.42 (-44.3%) | cash $250.58 | open 2 | max drawdown -48.8%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 105 | win 21/105 (20%) | avg net -10.8% | realized $-221.58 | expectancy $-2.11/trade
 exits: stop 83, trail 22
+open:
+  MEMECARD     cost $13.92  now $13.92 (+0.0%)  held 0.1h
+  Split        cost $13.92  now $13.92 (+0.0%)  held 0.1h
 last trades:
   duk          $14.72 -> $12.42 (-15.6%)  stop  0.2h
   PAIR         $14.61 -> $9.69 (-33.7%)  stop  0.5h
@@ -149,7 +152,7 @@ closed 19 | win 3/19 (16%) | avg net -23.7% | realized $-103.44 | expectancy $-5
 exits: mirror_sell 17, stop 2
   (n=19 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $26.29 (+20.9%)  held 26.2h
+  santa        cost $21.75  now $26.29 (+20.9%)  held 26.4h
 last trades:
   COSMOS       $21.99 -> $18.46 (-16.0%)  mirror_sell  0.0h
   Pnp          $21.82 -> $20.41 (-6.5%)  mirror_sell  0.2h
