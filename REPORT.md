@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-27 21:52 UTC
+Updated: 2026-11-27 22:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           160230
+pools seen           160289
 passed SCOUT         336
   killed by SCORE    42
   killed by AUDIT    98
 FINAL PASS           196
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   158121
-  few_unique_buyers           150230
-  liquidity_low               148317
-  volume_below_liquidity      111831
-  sells_dominate               43297
-  wash_churn                   33871
-  overheated                   14730
+  too_young                   158179
+  few_unique_buyers           150285
+  liquidity_low               148375
+  volume_below_liquidity      111870
+  sells_dominate               43309
+  wash_churn                   33883
+  overheated                   14734
   missing                       4348
-  too_old                       1456
+  too_old                       1457
   copy_trade                      63
 
-OUTCOMES (median price change from first sighting / first pass; 9684 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9685 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  196    -5.5%   -19.4%   -44.4%   -82.6%    61%
+FINAL PASS                  196    -5.4%   -19.4%   -44.4%   -82.6%    61%
 SCOUT PASS, killed later    140    +6.7%   +11.6%   -19.5%   -74.6%    46%
-KILLED (tracked)          21821    +0.2%   -55.6%   -84.9%    -0.3%    26%
+KILLED (tracked)          21830    +0.2%   -55.6%   -85.0%    -0.3%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -53,35 +53,35 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1344     +0.4%     -9.0%    -53.4%    25%
+none     1345     +0.4%     -9.0%    -53.4%    25%
 <15%      360     +3.4%    -21.2%    -53.6%    31%
 15-30%     42     -0.2%     -2.9%     +1.0%    45%
 30%+       40     -0.7%     -1.4%     +0.5%    40%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none     1156     +0.2%     -2.1%    -40.8%    24%
+none     1157     +0.2%     -2.1%    -40.8%    24%
 <20%      557     +3.3%    -58.5%    -92.1%    26%
 20%+       73     +0.1%    -99.2%  +1071.7%    82%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1717     +0.6%     -7.1%    -45.5%    25%
+<20%     1718     +0.6%     -7.1%    -45.5%    25%
 20-40%     41     -0.7%    -99.2%    -99.1%    80%
 40%+       28    -98.5%    -99.4%  +1071.7%    75%
-tokens analysed: 1602 | helius credits today: 8163/25000
+tokens analysed: 1603 | helius credits today: 8229/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%  196    21%    -11.0%   -15.0%   -99.7%
+   -6%     12%  196    21%    -10.9%   -15.0%   -99.7%
    -6%     20%  196    23%    -11.0%   -15.1%   -99.7%
-   -6%     30%  196    20%    -11.3%   -15.8%   -99.7%
-  -10%     12%  196    24%    -11.1%   -17.6%   -99.7%
-  -10%     20%  196    27%    -11.3%   -18.4%   -99.7%
-  -10%     30%  196    24%    -11.5%   -19.1%   -99.7%
-  -15%     12%  196    28%    -11.5%   -20.2%   -99.7%
-  -15%     20%  196    31%    -11.7%   -21.0%   -99.7%
+   -6%     30%  196    21%    -11.2%   -15.8%   -99.7%
+  -10%     12%  196    25%    -11.1%   -17.6%   -99.7%
+  -10%     20%  196    27%    -11.2%   -18.4%   -99.7%
+  -10%     30%  196    25%    -11.4%   -19.1%   -99.7%
+  -15%     12%  196    29%    -11.4%   -20.2%   -99.7%
+  -15%     20%  196    32%    -11.6%   -21.0%   -99.7%
   -15%     30%  196    29%    -12.1%   -21.4%   -99.7%
-  -25%     12%  196    32%    -13.7%   -21.8%   -99.7%
-  -25%     20%  196    36%    -14.6%   -29.7%   -99.7%
-  -25%     30%  196    33%    -15.7%   -31.0%   -99.7%
-  best so far: stop -6%, trail from +12% -> avg -11.0% per trade over n=196
+  -25%     12%  196    32%    -13.6%   -21.8%   -99.7%
+  -25%     20%  196    37%    -14.6%   -29.7%   -99.7%
+  -25%     30%  196    34%    -15.7%   -31.0%   -99.7%
+  best so far: stop -6%, trail from +12% -> avg -10.9% per trade over n=196
 
 ================================================================
 PAPER BOOKS COMPARED (A and B: same sizing/exits, only the entry differs;
@@ -116,7 +116,7 @@ last trades:
   MEMECARD     $12.62 -> $7.43 (-41.1%)  stop  0.2h
   VICAT        $12.36 -> $0.05 (-99.6%)  stop  0.7h
   Zhaki        $12.38 -> $9.55 (-22.9%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 745, daily_loss_limit 333, cooldown_after_loss 26, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 745, daily_loss_limit 334, cooldown_after_loss 26, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -147,7 +147,7 @@ closed 19 | win 3/19 (16%) | avg net -23.7% | realized $-103.44 | expectancy $-5
 exits: mirror_sell 17, stop 2
   (n=19 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $25.89 (+19.0%)  held 28.2h
+  santa        cost $21.75  now $25.89 (+19.0%)  held 28.4h
 last trades:
   COSMOS       $21.99 -> $18.46 (-16.0%)  mirror_sell  0.0h
   Pnp          $21.82 -> $20.41 (-6.5%)  mirror_sell  0.2h
