@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-27 23:42 UTC
+Updated: 2026-11-27 23:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           160795
+pools seen           160854
 passed SCOUT         338
   killed by SCORE    42
   killed by AUDIT    98
 FINAL PASS           198
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   158682
-  few_unique_buyers           150762
-  liquidity_low               148862
-  volume_below_liquidity      112247
-  sells_dominate               43450
-  wash_churn                   34020
-  overheated                   14784
+  too_young                   158741
+  few_unique_buyers           150818
+  liquidity_low               148920
+  volume_below_liquidity      112291
+  sells_dominate               43468
+  wash_churn                   34034
+  overheated                   14790
   missing                       4355
   too_old                       1459
   copy_trade                      63
 
-OUTCOMES (median price change from first sighting / first pass; 9706 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9707 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  198    -5.2%   -18.2%   -44.0%   -83.0%    60%
 SCOUT PASS, killed later    140    +6.7%   +13.2%   -19.5%   -74.6%    46%
-KILLED (tracked)          21889    +0.2%   -55.6%   -84.9%    -0.3%    26%
+KILLED (tracked)          21896    +0.2%   -55.6%   -84.9%    -0.3%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -69,19 +69,19 @@ tokens analysed: 1608 | helius credits today: 8726/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
-   -6%     12%  198    22%    -10.3%   -14.9%   -99.7%
-   -6%     20%  198    24%    -10.3%   -15.0%   -99.7%
-   -6%     30%  198    21%    -10.7%   -15.8%   -99.7%
-  -10%     12%  198    25%    -10.4%   -17.3%   -99.7%
-  -10%     20%  198    27%    -10.6%   -18.0%   -99.7%
-  -10%     30%  198    25%    -10.8%   -18.9%   -99.7%
-  -15%     12%  198    29%    -10.8%   -20.1%   -99.7%
-  -15%     20%  198    32%    -11.0%   -21.0%   -99.7%
-  -15%     30%  198    29%    -11.5%   -21.4%   -99.7%
-  -25%     12%  198    32%    -13.0%   -21.3%   -99.7%
-  -25%     20%  198    37%    -13.9%   -29.6%   -99.7%
-  -25%     30%  198    34%    -15.0%   -30.9%   -99.7%
-  best so far: stop -6%, trail from +12% -> avg -10.3% per trade over n=198
+   -6%     12%  198    22%    -10.1%   -14.9%   -99.7%
+   -6%     20%  198    24%    -10.1%   -15.0%   -99.7%
+   -6%     30%  198    21%    -10.5%   -15.8%   -99.7%
+  -10%     12%  198    25%    -10.2%   -17.3%   -99.7%
+  -10%     20%  198    27%    -10.4%   -18.0%   -99.7%
+  -10%     30%  198    25%    -10.6%   -18.9%   -99.7%
+  -15%     12%  198    29%    -10.6%   -20.1%   -99.7%
+  -15%     20%  198    32%    -10.8%   -21.0%   -99.7%
+  -15%     30%  198    29%    -11.3%   -21.4%   -99.7%
+  -25%     12%  198    32%    -12.8%   -21.3%   -99.7%
+  -25%     20%  198    37%    -13.7%   -29.6%   -99.7%
+  -25%     30%  198    34%    -14.9%   -30.9%   -99.7%
+  best so far: stop -6%, trail from +12% -> avg -10.1% per trade over n=198
 
 ================================================================
 PAPER BOOKS COMPARED (A and B: same sizing/exits, only the entry differs;
@@ -89,8 +89,8 @@ C copies watched wallets with a 30s delay and mirror exits)
 ================================================================
                                    A             B             C
 started                  11-06 08:00   11-07 04:00   11-24 09:00
-equity                       $232.01       $289.71       $400.70
-return                        -53.6%        -42.1%        -19.9%
+equity                       $232.01       $295.56       $400.70
+return                        -53.6%        -40.9%        -19.9%
 closed trades                    138           107            19
 win rate                         22%           21%           16%
 avg net / trade               -10.7%        -10.5%        -23.7%
@@ -122,12 +122,12 @@ signals skipped by the sizer/risk rules: already_traded_token 747, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $289.71 (-42.1%) | cash $266.89 | open 1 | max drawdown -49.4%
+equity $295.56 (-40.9%) | cash $266.89 | open 1 | max drawdown -49.4%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 107 | win 22/107 (21%) | avg net -10.5% | realized $-219.06 | expectancy $-2.05/trade
 exits: stop 84, trail 23
 open:
-  MoonBoy      cost $14.05  now $22.81 (+62.4%)  held 0.5h
+  MoonBoy      cost $14.05  now $28.66 (+104.0%)  held 0.7h
 last trades:
   Hoppy        $14.36 -> $11.68 (-18.7%)  stop  0.5h
   DEXDATA      $14.23 -> $12.68 (-10.9%)  stop  0.7h
@@ -149,7 +149,7 @@ closed 19 | win 3/19 (16%) | avg net -23.7% | realized $-103.44 | expectancy $-5
 exits: mirror_sell 17, stop 2
   (n=19 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $25.89 (+19.0%)  held 30.0h
+  santa        cost $21.75  now $25.89 (+19.0%)  held 30.2h
 last trades:
   COSMOS       $21.99 -> $18.46 (-16.0%)  mirror_sell  0.0h
   Pnp          $21.82 -> $20.41 (-6.5%)  mirror_sell  0.2h
