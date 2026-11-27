@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-27 14:04 UTC
+Updated: 2026-11-27 14:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           157775
+pools seen           157844
 passed SCOUT         328
   killed by SCORE    42
   killed by AUDIT    95
 FINAL PASS           191
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   155705
-  few_unique_buyers           147936
-  liquidity_low               146021
-  volume_below_liquidity      110116
-  sells_dominate               42616
-  wash_churn                   33372
-  overheated                   14504
-  missing                       4281
-  too_old                       1435
+  too_young                   155765
+  few_unique_buyers           147998
+  liquidity_low               146086
+  volume_below_liquidity      110166
+  sells_dominate               42640
+  wash_churn                   33380
+  overheated                   14511
+  missing                       4284
+  too_old                       1441
   copy_trade                      61
 
-OUTCOMES (median price change from first sighting / first pass; 9548 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9551 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  191    -5.3%   -18.2%   -45.0%   -82.6%    60%
 SCOUT PASS, killed later    137    +6.7%   +11.6%   -13.5%   -74.6%    45%
-KILLED (tracked)          21513    +0.2%   -56.1%   -85.1%    -0.4%    26%
+KILLED (tracked)          21526    +0.2%   -56.0%   -85.1%    -0.4%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -37,7 +37,7 @@ too_young                     601    -85.4%    -68.9%    21%
 wash_churn                     61     -1.2%    -85.6%    25%
 copy_trade                     61    -75.8%    -94.9%    11%
 too_old                        52     -0.6%     -0.4%    10%
-liquidity_low                  37    -68.7%    -72.0%    57%
+liquidity_low                  38    -68.7%    -72.0%    55%
 overheated                     19    -12.8%    -56.0%    37%
 volume_below_liquidity          8     +1.2%    +40.3%    38%
 sells_dominate                  3    -75.0%       -      67%
@@ -147,7 +147,7 @@ closed 17 | win 3/17 (18%) | avg net -24.0% | realized $-94.98 | expectancy $-5.
 exits: mirror_sell 15, stop 2
   (n=17 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $25.66 (+18.0%)  held 20.4h
+  santa        cost $21.75  now $25.66 (+18.0%)  held 20.5h
 last trades:
   LOBBY        $21.81 -> $30.42 (+39.5%)  mirror_sell  0.0h
   GIVE         $22.24 -> $17.38 (-21.9%)  mirror_sell  0.0h
