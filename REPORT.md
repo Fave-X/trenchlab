@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-27 07:02 UTC
+Updated: 2026-11-27 07:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           155697
+pools seen           155759
 passed SCOUT         323
   killed by SCORE    42
   killed by AUDIT    91
 FINAL PASS           190
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   153653
-  few_unique_buyers           146003
-  liquidity_low               144083
-  volume_below_liquidity      108646
-  sells_dominate               42094
-  wash_churn                   32861
-  overheated                   14308
+  too_young                   153715
+  few_unique_buyers           146055
+  liquidity_low               144143
+  volume_below_liquidity      108687
+  sells_dominate               42113
+  wash_churn                   32879
+  overheated                   14311
   missing                       4261
   too_old                       1421
   copy_trade                      58
 
-OUTCOMES (median price change from first sighting / first pass; 9458 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9461 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  190    -5.4%   -19.1%   -45.0%   -83.0%    59%
 SCOUT PASS, killed later    133    +6.7%   +10.7%    -7.4%   -74.6%    46%
-KILLED (tracked)          21205    +0.2%   -57.4%   -85.3%    -0.4%    27%
+KILLED (tracked)          21216    +0.2%   -57.4%   -85.4%    -0.4%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -38,7 +38,7 @@ wash_churn                     61     -1.2%    -85.6%    25%
 copy_trade                     58    -75.8%    -94.9%    12%
 too_old                        52     -0.6%     -0.4%    10%
 liquidity_low                  37    -68.7%    -72.0%    57%
-overheated                     17     -3.6%    -56.0%    35%
+overheated                     17     -3.6%    -56.0%    41%
 volume_below_liquidity          8     +1.2%    +40.3%    38%
 sells_dominate                  3    -75.0%       -      67%
 
@@ -53,25 +53,25 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1294     +0.2%     -9.2%    -51.4%    25%
+none     1297     +0.2%     -9.2%    -51.4%    25%
 <15%      347     +3.3%    -21.2%    -53.6%    31%
 15-30%     41     -0.2%     -2.9%     +1.0%    46%
 30%+       38     -0.7%     -1.1%     +0.5%    37%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none     1114     +0.1%     -2.2%    -39.9%    24%
-<20%      537     +3.1%    -60.8%    -92.1%    26%
+none     1116     +0.1%     -2.2%    -39.9%    24%
+<20%      538     +3.1%    -60.8%    -92.1%    26%
 20%+       69     -0.7%    -99.2%  +1071.7%    83%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1654     +0.5%     -7.2%    -44.0%    25%
+<20%     1657     +0.5%     -7.2%    -44.0%    25%
 20-40%     39     -0.7%    -99.0%    -99.1%    79%
 40%+       27    -98.5%    -99.4%  +1071.7%    78%
-tokens analysed: 1537 | helius credits today: 3286/25000
+tokens analysed: 1540 | helius credits today: 3486/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
    -6%     12%  190    22%    -10.7%   -15.0%   -99.7%
    -6%     20%  190    24%    -10.8%   -15.1%   -99.7%
-   -6%     30%  190    22%    -11.0%   -15.8%   -99.7%
+   -6%     30%  190    21%    -11.0%   -15.8%   -99.7%
   -10%     12%  190    25%    -10.5%   -17.3%   -99.7%
   -10%     20%  190    27%    -10.7%   -18.0%   -99.7%
   -10%     30%  190    25%    -10.8%   -18.7%   -99.7%
@@ -89,8 +89,8 @@ C copies watched wallets with a 30s delay and mirror exits)
 ================================================================
                                    A             B             C
 started                  11-06 08:00   11-07 04:00   11-24 09:00
-equity                       $256.21       $284.76       $429.42
-return                        -48.8%        -43.0%        -14.1%
+equity                       $256.21       $284.71       $429.42
+return                        -48.8%        -43.1%        -14.1%
 closed trades                    133           102            14
 win rate                         23%           20%           21%
 avg net / trade                -9.6%        -10.8%        -22.0%
@@ -122,12 +122,12 @@ signals skipped by the sizer/risk rules: already_traded_token 711, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $284.76 (-43.0%) | cash $270.02 | open 1 | max drawdown -48.1%
+equity $284.71 (-43.1%) | cash $270.02 | open 1 | max drawdown -48.1%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 102 | win 20/102 (20%) | avg net -10.8% | realized $-215.84 | expectancy $-2.12/trade
 exits: stop 81, trail 21
 open:
-  DragonRiders cost $14.14  now $14.73 (+4.2%)  held 1.9h
+  DragonRiders cost $14.14  now $14.69 (+3.9%)  held 2.0h
 last trades:
   MONEY        $15.00 -> $13.27 (-11.5%)  stop  0.3h
   Grodia       $14.91 -> $13.02 (-12.7%)  stop  0.3h
@@ -149,7 +149,7 @@ closed 14 | win 3/14 (21%) | avg net -22.0% | realized $-73.77 | expectancy $-5.
 exits: mirror_sell 12, stop 2
   (n=14 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $24.93 (+14.6%)  held 13.4h
+  santa        cost $21.75  now $24.93 (+14.6%)  held 13.5h
 last trades:
   Caiolo       $21.91 -> $11.85 (-45.9%)  stop  0.2h
   Caiolo       $21.41 -> $33.10 (+54.6%)  mirror_sell  0.5h
