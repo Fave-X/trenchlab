@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-27 14:12 UTC
+Updated: 2026-11-27 14:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           157844
+pools seen           157889
 passed SCOUT         328
   killed by SCORE    42
   killed by AUDIT    95
 FINAL PASS           191
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   155765
-  few_unique_buyers           147998
-  liquidity_low               146086
-  volume_below_liquidity      110166
-  sells_dominate               42640
-  wash_churn                   33380
-  overheated                   14511
+  too_young                   155807
+  few_unique_buyers           148040
+  liquidity_low               146128
+  volume_below_liquidity      110198
+  sells_dominate               42646
+  wash_churn                   33386
+  overheated                   14516
   missing                       4284
-  too_old                       1441
+  too_old                       1443
   copy_trade                      61
 
 OUTCOMES (median price change from first sighting / first pass; 9551 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  191    -5.3%   -18.2%   -45.0%   -82.6%    60%
-SCOUT PASS, killed later    137    +6.7%   +11.6%   -13.5%   -74.6%    45%
-KILLED (tracked)          21526    +0.2%   -56.0%   -85.1%    -0.4%    26%
+SCOUT PASS, killed later    137    +6.7%   +11.6%    -7.4%   -74.6%    45%
+KILLED (tracked)          21534    +0.2%   -55.9%   -85.1%    -0.4%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -46,20 +46,20 @@ SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+        94    -52.9%    -92.9%    53%
-70-79     137    -52.8%    -76.6%    54%
+70-79     137    -52.5%    -76.6%    54%
 60-69      70    -30.1%    -89.0%    57%
 <60        27     -7.2%    -63.7%    48%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1326     +0.4%     -9.2%    -52.1%    25%
+none     1326     +0.4%     -9.1%    -52.1%    25%
 <15%      354     +4.1%    -19.5%    -53.6%    31%
 15-30%     41     -0.2%     -2.9%     +1.0%    46%
 30%+       39     -0.7%     -1.1%     +0.5%    36%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none     1140     +0.2%     -2.2%    -40.0%    24%
-<20%      550     +3.5%    -60.6%    -92.1%    26%
+<20%      550     +3.5%    -59.6%    -92.1%    26%
 20%+       70     +0.1%    -99.2%  +1071.7%    83%
 fresh       n   +1h med   +4h med  +24h med   rug%
 <20%     1694     +0.7%     -7.2%    -44.5%    25%
@@ -147,7 +147,7 @@ closed 17 | win 3/17 (18%) | avg net -24.0% | realized $-94.98 | expectancy $-5.
 exits: mirror_sell 15, stop 2
   (n=17 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $25.66 (+18.0%)  held 20.5h
+  santa        cost $21.75  now $25.66 (+18.0%)  held 20.7h
 last trades:
   LOBBY        $21.81 -> $30.42 (+39.5%)  mirror_sell  0.0h
   GIVE         $22.24 -> $17.38 (-21.9%)  mirror_sell  0.0h
