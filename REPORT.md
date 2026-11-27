@@ -1,44 +1,44 @@
 # TrenchLab report
 
-Updated: 2026-11-27 09:42 UTC
+Updated: 2026-11-27 09:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           156497
+pools seen           156557
 passed SCOUT         324
   killed by SCORE    42
   killed by AUDIT    92
 FINAL PASS           190
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   154448
-  few_unique_buyers           146736
-  liquidity_low               144832
-  volume_below_liquidity      109206
-  sells_dominate               42280
-  wash_churn                   33071
-  overheated                   14390
+  too_young                   154508
+  few_unique_buyers           146795
+  liquidity_low               144889
+  volume_below_liquidity      109248
+  sells_dominate               42296
+  wash_churn                   33094
+  overheated                   14393
   missing                       4264
   too_old                       1424
   copy_trade                      58
 
-OUTCOMES (median price change from first sighting / first pass; 9498 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9500 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  190    -5.4%   -19.1%   -45.0%   -82.6%    60%
 SCOUT PASS, killed later    134    +6.7%   +11.1%    -7.4%   -74.6%    46%
-KILLED (tracked)          21342    +0.2%   -56.7%   -85.2%    -0.4%    26%
+KILLED (tracked)          21348    +0.2%   -56.7%   -85.2%    -0.4%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     588    -86.3%    -68.9%    21%
+too_young                     589    -86.3%    -68.9%    21%
 wash_churn                     61     -1.2%    -85.6%    25%
 copy_trade                     58    -75.8%    -94.9%    12%
 too_old                        52     -0.6%     -0.4%    10%
 liquidity_low                  37    -68.7%    -72.0%    57%
-overheated                     19     -3.6%    -56.0%    37%
+overheated                     19    -12.8%    -56.0%    37%
 volume_below_liquidity          8     +1.2%    +40.3%    38%
 sells_dominate                  3    -75.0%       -      67%
 
@@ -53,19 +53,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1309     +0.3%     -9.2%    -52.1%    25%
+none     1310     +0.3%     -9.2%    -52.1%    25%
 <15%      349     +3.3%    -19.5%    -53.6%    31%
 15-30%     41     -0.2%     -2.9%     +1.0%    46%
 30%+       39     -0.7%     -1.1%     +0.5%    36%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none     1127     +0.2%     -2.2%    -40.0%    24%
-<20%      542     +3.2%    -60.7%    -92.1%    26%
+<20%      543     +3.2%    -60.7%    -92.1%    26%
 20%+       69     -0.7%    -99.2%  +1071.7%    83%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1672     +0.6%     -7.2%    -44.5%    25%
+<20%     1673     +0.6%     -7.3%    -44.5%    25%
 20-40%     39     -0.7%    -99.0%    -99.1%    79%
 40%+       27    -98.5%    -99.4%  +1071.7%    78%
-tokens analysed: 1555 | helius credits today: 4625/25000
+tokens analysed: 1556 | helius credits today: 4686/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -147,7 +147,7 @@ closed 14 | win 3/14 (21%) | avg net -22.0% | realized $-73.77 | expectancy $-5.
 exits: mirror_sell 12, stop 2
   (n=14 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $24.93 (+14.6%)  held 16.0h
+  santa        cost $21.75  now $24.93 (+14.6%)  held 16.2h
 last trades:
   Caiolo       $21.91 -> $11.85 (-45.9%)  stop  0.2h
   Caiolo       $21.41 -> $33.10 (+54.6%)  mirror_sell  0.5h
