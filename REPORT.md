@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-27 16:22 UTC
+Updated: 2026-11-27 16:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           158481
+pools seen           158527
 passed SCOUT         329
   killed by SCORE    42
   killed by AUDIT    95
 FINAL PASS           192
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   156392
-  few_unique_buyers           148585
-  liquidity_low               146675
-  volume_below_liquidity      110577
-  sells_dominate               42806
-  wash_churn                   33486
-  overheated                   14572
+  too_young                   156438
+  few_unique_buyers           148625
+  liquidity_low               146719
+  volume_below_liquidity      110609
+  sells_dominate               42821
+  wash_churn                   33490
+  overheated                   14575
   missing                       4310
   too_old                       1445
   copy_trade                      62
 
-OUTCOMES (median price change from first sighting / first pass; 9579 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9581 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  192    -5.4%   -19.1%   -44.7%   -83.0%    60%
 SCOUT PASS, killed later    137    +6.7%   +11.6%    -7.4%   -74.6%    45%
-KILLED (tracked)          21611    +0.2%   -55.7%   -85.0%    -0.4%    26%
+KILLED (tracked)          21615    +0.2%   -55.7%   -85.0%    -0.4%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -116,7 +116,7 @@ last trades:
   SpaceXCoin   $12.25 -> $21.94 (+79.1%)  trail  2.2h
   Kibo         $12.81 -> $11.47 (-10.4%)  stop  0.5h
   WINSTON      $12.74 -> $10.21 (-19.8%)  stop  0.2h
-signals skipped by the sizer/risk rules: already_traded_token 726, daily_loss_limit 331, cooldown_after_loss 26, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 727, daily_loss_limit 331, cooldown_after_loss 26, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -147,7 +147,7 @@ closed 18 | win 3/18 (17%) | avg net -24.1% | realized $-100.19 | expectancy $-5
 exits: mirror_sell 16, stop 2
   (n=18 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $26.59 (+22.3%)  held 22.7h
+  santa        cost $21.75  now $26.59 (+22.3%)  held 22.9h
 last trades:
   GIVE         $22.24 -> $17.38 (-21.9%)  mirror_sell  0.0h
   COSMOS       $21.99 -> $18.46 (-16.0%)  mirror_sell  0.0h
