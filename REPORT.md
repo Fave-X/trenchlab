@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-27 06:32 UTC
+Updated: 2026-11-27 06:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           155542
+pools seen           155584
 passed SCOUT         323
   killed by SCORE    42
   killed by AUDIT    91
 FINAL PASS           190
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   153498
-  few_unique_buyers           145856
-  liquidity_low               143936
-  volume_below_liquidity      108535
-  sells_dominate               42057
-  wash_churn                   32820
-  overheated                   14289
+  too_young                   153540
+  few_unique_buyers           145895
+  liquidity_low               143975
+  volume_below_liquidity      108565
+  sells_dominate               42069
+  wash_churn                   32829
+  overheated                   14295
   missing                       4261
   too_old                       1421
   copy_trade                      58
 
-OUTCOMES (median price change from first sighting / first pass; 9453 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9454 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  190    -5.4%   -19.1%   -45.0%   -83.0%    59%
-SCOUT PASS, killed later    133    +6.4%   +10.7%   -13.5%   -74.6%    46%
-KILLED (tracked)          21181    +0.2%   -57.4%   -85.3%    -0.4%    27%
+SCOUT PASS, killed later    133    +6.7%   +10.7%   -13.5%   -74.6%    46%
+KILLED (tracked)          21192    +0.2%   -57.4%   -85.3%    -0.4%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -80,7 +80,7 @@ EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   -15%     30%  190    29%    -11.4%   -21.4%   -99.7%
   -25%     12%  190    32%    -13.0%   -21.3%   -99.7%
   -25%     20%  190    37%    -13.9%   -29.6%   -99.7%
-  -25%     30%  190    34%    -14.5%   -30.9%   -99.7%
+  -25%     30%  190    34%    -14.6%   -30.9%   -99.7%
   best so far: stop -10%, trail from +12% -> avg -10.5% per trade over n=190
 
 ================================================================
@@ -89,8 +89,8 @@ C copies watched wallets with a 30s delay and mirror exits)
 ================================================================
                                    A             B             C
 started                  11-06 08:00   11-07 04:00   11-24 09:00
-equity                       $256.21       $286.81       $429.39
-return                        -48.8%        -42.6%        -14.1%
+equity                       $256.21       $285.36       $429.42
+return                        -48.8%        -42.9%        -14.1%
 closed trades                    133           102            14
 win rate                         23%           20%           21%
 avg net / trade                -9.6%        -10.8%        -22.0%
@@ -122,12 +122,12 @@ signals skipped by the sizer/risk rules: already_traded_token 711, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $286.81 (-42.6%) | cash $270.02 | open 1 | max drawdown -48.1%
+equity $285.36 (-42.9%) | cash $270.02 | open 1 | max drawdown -48.1%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 102 | win 20/102 (20%) | avg net -10.8% | realized $-215.84 | expectancy $-2.12/trade
 exits: stop 81, trail 21
 open:
-  DragonRiders cost $14.14  now $16.79 (+18.7%)  held 1.4h
+  DragonRiders cost $14.14  now $15.34 (+8.5%)  held 1.5h
 last trades:
   MONEY        $15.00 -> $13.27 (-11.5%)  stop  0.3h
   Grodia       $14.91 -> $13.02 (-12.7%)  stop  0.3h
@@ -143,13 +143,13 @@ signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 457, dail
 PAPER BOOK C: copy-trading watched wallets (30s delay, mirror exits)
   pricing: model | start $500.00 on 2026-11-24 09:00 UTC
 ================================================================
-equity $429.39 (-14.1%) | cash $404.48 | open 1 | max drawdown -15.5%
+equity $429.42 (-14.1%) | cash $404.48 | open 1 | max drawdown -15.5%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 14 | win 3/14 (21%) | avg net -22.0% | realized $-73.77 | expectancy $-5.27/trade
 exits: mirror_sell 12, stop 2
   (n=14 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $24.91 (+14.5%)  held 12.9h
+  santa        cost $21.75  now $24.93 (+14.6%)  held 13.0h
 last trades:
   Caiolo       $21.91 -> $11.85 (-45.9%)  stop  0.2h
   Caiolo       $21.41 -> $33.10 (+54.6%)  mirror_sell  0.5h
