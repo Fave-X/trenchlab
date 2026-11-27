@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-27 12:22 UTC
+Updated: 2026-11-27 12:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           157260
+pools seen           157301
 passed SCOUT         328
   killed by SCORE    42
   killed by AUDIT    95
 FINAL PASS           191
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   155194
-  few_unique_buyers           147458
-  liquidity_low               145553
-  volume_below_liquidity      109765
-  sells_dominate               42486
-  wash_churn                   33263
-  overheated                   14457
+  too_young                   155234
+  few_unique_buyers           147498
+  liquidity_low               145593
+  volume_below_liquidity      109794
+  sells_dominate               42495
+  wash_churn                   33275
+  overheated                   14460
   missing                       4265
   too_old                       1435
   copy_trade                      59
 
-OUTCOMES (median price change from first sighting / first pass; 9529 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9532 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  191    -5.3%   -18.2%   -45.0%   -82.6%    60%
 SCOUT PASS, killed later    137    +6.7%   +11.6%   -13.5%   -74.6%    45%
-KILLED (tracked)          21442    +0.2%   -56.5%   -85.2%    -0.4%    26%
+KILLED (tracked)          21446    +0.2%   -56.5%   -85.2%    -0.4%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -147,7 +147,7 @@ closed 15 | win 3/15 (20%) | avg net -22.5% | realized $-80.24 | expectancy $-5.
 exits: mirror_sell 13, stop 2
   (n=15 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $25.91 (+19.1%)  held 18.7h
+  santa        cost $21.75  now $25.91 (+19.1%)  held 18.9h
 last trades:
   Caiolo       $21.41 -> $33.10 (+54.6%)  mirror_sell  0.5h
   test         $21.99 -> $18.31 (-16.7%)  mirror_sell  0.0h
