@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-27 12:02 UTC
+Updated: 2026-11-27 12:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           157159
+pools seen           157212
 passed SCOUT         327
   killed by SCORE    42
   killed by AUDIT    94
 FINAL PASS           191
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   155103
-  few_unique_buyers           147368
-  liquidity_low               145466
-  volume_below_liquidity      109690
-  sells_dominate               42453
-  wash_churn                   33242
-  overheated                   14449
+  too_young                   155148
+  few_unique_buyers           147418
+  liquidity_low               145511
+  volume_below_liquidity      109735
+  sells_dominate               42471
+  wash_churn                   33256
+  overheated                   14451
   missing                       4265
-  too_old                       1426
+  too_old                       1434
   copy_trade                      59
 
-OUTCOMES (median price change from first sighting / first pass; 9519 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9526 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  191    -5.3%   -18.2%   -45.0%   -82.6%    60%
 SCOUT PASS, killed later    136    +6.7%   +11.1%   -13.5%   -74.6%    46%
-KILLED (tracked)          21418    +0.2%   -56.6%   -85.2%    -0.4%    26%
+KILLED (tracked)          21430    +0.2%   -56.4%   -85.2%    -0.4%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -53,19 +53,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1316     +0.3%     -9.2%    -52.1%    25%
+none     1317     +0.4%     -9.2%    -52.1%    25%
 <15%      350     +3.7%    -19.5%    -53.6%    31%
 15-30%     41     -0.2%     -2.9%     +1.0%    46%
 30%+       39     -0.7%     -1.1%     +0.5%    36%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none     1130     +0.2%     -2.2%    -40.0%    24%
+none     1131     +0.2%     -2.2%    -40.0%    24%
 <20%      547     +3.4%    -60.7%    -92.1%    26%
 20%+       69     -0.7%    -99.2%  +1071.7%    83%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1680     +0.6%     -7.2%    -44.5%    25%
+<20%     1681     +0.6%     -7.2%    -44.5%    25%
 20-40%     39     -0.7%    -99.0%    -99.1%    79%
 40%+       27    -98.5%    -99.4%  +1071.7%    78%
-tokens analysed: 1563 | helius credits today: 5115/25000
+tokens analysed: 1564 | helius credits today: 5176/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -116,7 +116,7 @@ last trades:
   KAI          $12.36 -> $13.64 (+10.3%)  trail  3.3h
   SpaceXCoin   $12.25 -> $21.94 (+79.1%)  trail  2.2h
   Kibo         $12.81 -> $11.47 (-10.4%)  stop  0.5h
-signals skipped by the sizer/risk rules: already_traded_token 719, daily_loss_limit 331, cooldown_after_loss 26, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 720, daily_loss_limit 331, cooldown_after_loss 26, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -147,7 +147,7 @@ closed 15 | win 3/15 (20%) | avg net -22.5% | realized $-80.24 | expectancy $-5.
 exits: mirror_sell 13, stop 2
   (n=15 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $25.91 (+19.1%)  held 18.4h
+  santa        cost $21.75  now $25.91 (+19.1%)  held 18.5h
 last trades:
   Caiolo       $21.41 -> $33.10 (+54.6%)  mirror_sell  0.5h
   test         $21.99 -> $18.31 (-16.7%)  mirror_sell  0.0h
