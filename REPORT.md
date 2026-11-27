@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-27 07:32 UTC
+Updated: 2026-11-27 07:42 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           155873
+pools seen           155934
 passed SCOUT         324
   killed by SCORE    42
   killed by AUDIT    92
 FINAL PASS           190
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   153829
-  few_unique_buyers           146160
-  liquidity_low               144247
-  volume_below_liquidity      108770
-  sells_dominate               42146
-  wash_churn                   32913
-  overheated                   14325
+  too_young                   153890
+  few_unique_buyers           146216
+  liquidity_low               144303
+  volume_below_liquidity      108812
+  sells_dominate               42163
+  wash_churn                   32926
+  overheated                   14333
   missing                       4261
   too_old                       1421
   copy_trade                      58
 
-OUTCOMES (median price change from first sighting / first pass; 9470 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9473 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  190    -5.4%   -19.1%   -44.7%   -83.0%    59%
-SCOUT PASS, killed later    134    +6.7%   +10.7%    -7.4%   -74.6%    46%
-KILLED (tracked)          21237    +0.2%   -57.4%   -85.3%    -0.4%    27%
+SCOUT PASS, killed later    134    +6.7%   +11.1%    -7.4%   -74.6%    46%
+KILLED (tracked)          21248    +0.2%   -57.3%   -85.3%    -0.4%    27%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -53,19 +53,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1299     +0.2%     -9.2%    -51.4%    25%
+none     1300     +0.2%     -9.2%    -51.4%    25%
 <15%      347     +3.3%    -19.5%    -53.6%    31%
 15-30%     41     -0.2%     -2.9%     +1.0%    46%
 30%+       38     -0.7%     -1.1%     +0.5%    37%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none     1118     +0.2%     -2.2%    -39.9%    24%
-<20%      538     +3.1%    -60.7%    -92.1%    26%
+<20%      539     +3.2%    -60.7%    -92.1%    26%
 20%+       69     -0.7%    -99.2%  +1071.7%    83%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1659     +0.5%     -7.3%    -44.0%    25%
+<20%     1660     +0.5%     -7.3%    -44.0%    25%
 20-40%     39     -0.7%    -99.0%    -99.1%    79%
 40%+       27    -98.5%    -99.4%  +1071.7%    78%
-tokens analysed: 1542 | helius credits today: 3599/25000
+tokens analysed: 1543 | helius credits today: 3680/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -89,8 +89,8 @@ C copies watched wallets with a 30s delay and mirror exits)
 ================================================================
                                    A             B             C
 started                  11-06 08:00   11-07 04:00   11-24 09:00
-equity                       $256.21       $286.06       $429.42
-return                        -48.8%        -42.8%        -14.1%
+equity                       $256.21       $287.26       $429.42
+return                        -48.8%        -42.5%        -14.1%
 closed trades                    133           102            14
 win rate                         23%           20%           21%
 avg net / trade                -9.6%        -10.8%        -22.0%
@@ -116,18 +116,18 @@ last trades:
   DragonRiders $12.44 -> $10.43 (-16.2%)  stop  0.2h
   KAI          $12.36 -> $13.64 (+10.3%)  trail  3.3h
   SpaceXCoin   $12.25 -> $21.94 (+79.1%)  trail  2.2h
-signals skipped by the sizer/risk rules: already_traded_token 713, daily_loss_limit 331, cooldown_after_loss 26, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 714, daily_loss_limit 331, cooldown_after_loss 26, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $286.06 (-42.8%) | cash $270.02 | open 1 | max drawdown -48.1%
+equity $287.26 (-42.5%) | cash $270.02 | open 1 | max drawdown -48.1%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 102 | win 20/102 (20%) | avg net -10.8% | realized $-215.84 | expectancy $-2.12/trade
 exits: stop 81, trail 21
 open:
-  DragonRiders cost $14.14  now $16.04 (+13.4%)  held 2.4h
+  DragonRiders cost $14.14  now $17.23 (+21.9%)  held 2.5h
 last trades:
   MONEY        $15.00 -> $13.27 (-11.5%)  stop  0.3h
   Grodia       $14.91 -> $13.02 (-12.7%)  stop  0.3h
@@ -149,7 +149,7 @@ closed 14 | win 3/14 (21%) | avg net -22.0% | realized $-73.77 | expectancy $-5.
 exits: mirror_sell 12, stop 2
   (n=14 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $24.93 (+14.6%)  held 13.9h
+  santa        cost $21.75  now $24.93 (+14.6%)  held 14.0h
 last trades:
   Caiolo       $21.91 -> $11.85 (-45.9%)  stop  0.2h
   Caiolo       $21.41 -> $33.10 (+54.6%)  mirror_sell  0.5h
