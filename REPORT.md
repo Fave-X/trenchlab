@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-27 13:12 UTC
+Updated: 2026-11-27 13:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           157535
+pools seen           157581
 passed SCOUT         328
   killed by SCORE    42
   killed by AUDIT    95
 FINAL PASS           191
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   155467
-  few_unique_buyers           147716
-  liquidity_low               145812
-  volume_below_liquidity      109952
-  sells_dominate               42555
-  wash_churn                   33321
-  overheated                   14487
+  too_young                   155513
+  few_unique_buyers           147762
+  liquidity_low               145856
+  volume_below_liquidity      109991
+  sells_dominate               42564
+  wash_churn                   33335
+  overheated                   14492
   missing                       4265
   too_old                       1435
   copy_trade                      59
 
-OUTCOMES (median price change from first sighting / first pass; 9541 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9543 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  191    -5.3%   -18.2%   -45.0%   -82.6%    60%
 SCOUT PASS, killed later    137    +6.7%   +11.6%   -13.5%   -74.6%    45%
-KILLED (tracked)          21481    +0.2%   -56.4%   -85.1%    -0.4%    26%
+KILLED (tracked)          21486    +0.2%   -56.1%   -85.1%    -0.4%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     598    -86.3%    -68.9%    21%
+too_young                     598    -85.4%    -68.9%    21%
 wash_churn                     61     -1.2%    -85.6%    25%
 copy_trade                     59    -75.8%    -94.9%    12%
 too_old                        52     -0.6%     -0.4%    10%
@@ -54,12 +54,12 @@ CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
 none     1323     +0.4%     -9.2%    -52.1%    25%
-<15%      352     +3.7%    -19.5%    -53.6%    31%
+<15%      352     +4.0%    -19.5%    -53.6%    31%
 15-30%     41     -0.2%     -2.9%     +1.0%    46%
 30%+       39     -0.7%     -1.1%     +0.5%    36%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none     1136     +0.2%     -2.2%    -40.0%    24%
-<20%      550     +3.5%    -60.7%    -92.1%    26%
+<20%      550     +3.7%    -60.6%    -92.1%    26%
 20%+       69     -0.7%    -99.2%  +1071.7%    84%
 fresh       n   +1h med   +4h med  +24h med   rug%
 <20%     1689     +0.6%     -7.2%    -44.5%    25%
@@ -116,7 +116,7 @@ last trades:
   KAI          $12.36 -> $13.64 (+10.3%)  trail  3.3h
   SpaceXCoin   $12.25 -> $21.94 (+79.1%)  trail  2.2h
   Kibo         $12.81 -> $11.47 (-10.4%)  stop  0.5h
-signals skipped by the sizer/risk rules: already_traded_token 722, daily_loss_limit 331, cooldown_after_loss 26, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 723, daily_loss_limit 331, cooldown_after_loss 26, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -147,7 +147,7 @@ closed 15 | win 3/15 (20%) | avg net -22.5% | realized $-80.24 | expectancy $-5.
 exits: mirror_sell 13, stop 2
   (n=15 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $25.66 (+18.0%)  held 19.5h
+  santa        cost $21.75  now $25.66 (+18.0%)  held 19.7h
 last trades:
   Caiolo       $21.41 -> $33.10 (+54.6%)  mirror_sell  0.5h
   test         $21.99 -> $18.31 (-16.7%)  mirror_sell  0.0h
