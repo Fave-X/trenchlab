@@ -1,25 +1,25 @@
 # TrenchLab report
 
-Updated: 2026-11-28 16:52 UTC
+Updated: 2026-11-28 17:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           166053
+pools seen           166104
 passed SCOUT         354
   killed by SCORE    42
   killed by AUDIT    110
 FINAL PASS           202
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   163897
-  few_unique_buyers           155641
-  liquidity_low               153767
-  volume_below_liquidity      115826
-  sells_dominate               44884
-  wash_churn                   35372
-  overheated                   15317
+  too_young                   163948
+  few_unique_buyers           155685
+  liquidity_low               153815
+  volume_below_liquidity      115856
+  sells_dominate               44904
+  wash_churn                   35384
+  overheated                   15324
   missing                       4426
   too_old                       1478
   copy_trade                      68
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 10085 pools had 
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  202    -5.4%   -19.1%   -43.9%   -84.3%    60%
 SCOUT PASS, killed later    152    +7.4%   +15.2%    -7.2%   -74.6%    43%
-KILLED (tracked)          22586    +0.3%   -55.4%   -84.8%    -0.3%    26%
+KILLED (tracked)          22594    +0.2%   -55.5%   -84.8%    -0.3%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -54,18 +54,18 @@ CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
 none     1415     +0.5%     -9.2%    -56.1%    24%
-<15%      399     +5.3%    -26.1%    -57.5%    32%
+<15%      400     +5.3%    -26.1%    -57.5%    32%
 15-30%     44     -0.2%     -2.9%     +1.0%    45%
 30%+       40     -0.7%     -1.4%     +0.5%    40%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none     1221     +0.3%     -2.2%    -43.5%    24%
-<20%      601     +4.9%    -60.8%    -92.8%    26%
+<20%      602     +4.9%    -60.8%    -92.8%    26%
 20%+       76     +4.3%    -99.0%  +1071.7%    82%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1827     +0.7%     -7.4%    -49.1%    25%
+<20%     1828     +0.7%     -7.4%    -49.1%    25%
 20-40%     42     -0.4%    -99.3%    -99.1%    81%
 40%+       29    -97.5%    -99.4%  +1071.7%    76%
-tokens analysed: 1712 | helius credits today: 7237/25000
+tokens analysed: 1713 | helius credits today: 7293/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -135,7 +135,7 @@ last trades:
   MoonBoy      $14.05 -> $25.11 (+78.7%)  trail  0.8h
   NBA          $14.60 -> $19.15 (+31.2%)  trail  1.3h
   STEADY       $14.83 -> $11.52 (-22.3%)  stop  0.2h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 458, daily_loss_limit 269, setup_rejected:dumping_now 183, setup_rejected:sellers_dominate_now 149, setup_rejected:b_bundled 124, setup_rejected:operator_cluster 71, setup_rejected:volume_dried_up 61, setup_rejected:lp_not_locked 55, setup_rejected:clustered_supply 47, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 20, setup_rejected:unknown:rugcheck_no_report 14, cooldown_after_loss 12, setup_rejected:rc_danger:Low Liquidity 11, setup_rejected:rc_danger:Creator history of rugged tokens 7, setup_rejected:unknown:lp_lock 6, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 458, daily_loss_limit 269, setup_rejected:dumping_now 184, setup_rejected:sellers_dominate_now 149, setup_rejected:b_bundled 124, setup_rejected:operator_cluster 71, setup_rejected:volume_dried_up 61, setup_rejected:lp_not_locked 55, setup_rejected:clustered_supply 47, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 20, setup_rejected:unknown:rugcheck_no_report 14, cooldown_after_loss 12, setup_rejected:rc_danger:Low Liquidity 11, setup_rejected:rc_danger:Creator history of rugged tokens 7, setup_rejected:unknown:lp_lock 6, max_open_positions 1
 
 ================================================================
 PAPER BOOK C: copy-trading watched wallets (30s delay, mirror exits)
@@ -147,7 +147,7 @@ closed 26 | win 4/26 (15%) | avg net -20.3% | realized $-118.72 | expectancy $-4
 exits: mirror_sell 24, stop 2
   (n=26 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $25.23 (+16.0%)  held 47.2h
+  santa        cost $21.75  now $25.23 (+16.0%)  held 47.4h
 last trades:
   JVRS         $20.22 -> $16.97 (-16.1%)  mirror_sell  0.3h
   ukiki        $20.04 -> $11.38 (-43.2%)  mirror_sell  0.0h
