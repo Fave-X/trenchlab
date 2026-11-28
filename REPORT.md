@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-28 04:02 UTC
+Updated: 2026-11-28 04:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           162247
+pools seen           162291
 passed SCOUT         344
   killed by SCORE    42
   killed by AUDIT    102
 FINAL PASS           200
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   160118
-  few_unique_buyers           152113
-  liquidity_low               150228
-  volume_below_liquidity      113266
-  sells_dominate               43847
-  wash_churn                   34406
-  overheated                   14937
+  too_young                   160161
+  few_unique_buyers           152156
+  liquidity_low               150270
+  volume_below_liquidity      113298
+  sells_dominate               43857
+  wash_churn                   34417
+  overheated                   14944
   missing                       4370
-  too_old                       1463
+  too_old                       1464
   copy_trade                      65
 
-OUTCOMES (median price change from first sighting / first pass; 9880 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9883 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  200    -5.2%   -17.3%   -44.0%   -83.3%    60%
-SCOUT PASS, killed later    144    +6.7%   +11.1%   -13.5%   -74.6%    46%
-KILLED (tracked)          22084    +0.2%   -55.6%   -84.9%    -0.3%    26%
+FINAL PASS                  200    -5.2%   -17.3%   -44.0%   -84.3%    60%
+SCOUT PASS, killed later    144    +6.7%   +11.1%    -7.4%   -74.6%    46%
+KILLED (tracked)          22090    +0.2%   -55.6%   -84.9%    -0.3%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -45,24 +45,24 @@ sells_dominate                  3    -75.0%       -      67%
 SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
-80+        98    -51.8%    -93.2%    54%
-70-79     144    -51.5%    -77.5%    56%
+80+        98    -51.8%    -93.3%    54%
+70-79     144    -50.8%    -77.5%    56%
 60-69      75    -34.0%    -92.1%    55%
 <60        27     -7.2%    -63.7%    48%
 
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1367     +0.5%     -9.0%    -53.8%    25%
+none     1367     +0.5%     -9.0%    -54.9%    25%
 <15%      369     +4.2%    -25.2%    -57.4%    31%
 15-30%     43     -0.2%     -2.1%     +1.0%    47%
 30%+       40     -0.7%     -1.4%     +0.5%    40%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none     1177     +0.2%     -2.2%    -41.6%    24%
+none     1177     +0.2%     -2.2%    -42.1%    24%
 <20%      568     +4.1%    -59.6%    -92.8%    26%
 20%+       74     +2.6%    -99.2%  +1071.7%    82%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1749     +0.7%     -7.2%    -46.6%    25%
+<20%     1749     +0.7%     -7.2%    -47.5%    25%
 20-40%     42     -0.4%    -99.3%    -99.1%    81%
 40%+       28    -97.5%    -99.4%  +1071.7%    79%
 tokens analysed: 1634 | helius credits today: 1796/25000
@@ -116,7 +116,7 @@ last trades:
   STEADY       $11.53 -> $8.80 (-23.7%)  stop  0.2h
   MAYA         $11.40 -> $8.34 (-26.9%)  stop  0.2h
   Memeball     $11.40 -> $10.10 (-11.4%)  stop  2.0h
-signals skipped by the sizer/risk rules: already_traded_token 766, daily_loss_limit 341, cooldown_after_loss 27, max_open_positions 5
+signals skipped by the sizer/risk rules: already_traded_token 767, daily_loss_limit 341, cooldown_after_loss 27, max_open_positions 5
 
 ================================================================
 PAPER BOOK B: pullback (safety-first, buy the dip)
@@ -147,7 +147,7 @@ closed 22 | win 3/22 (14%) | avg net -23.1% | realized $-114.99 | expectancy $-5
 exits: mirror_sell 20, stop 2
   (n=22 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $26.19 (+20.4%)  held 34.4h
+  santa        cost $21.75  now $26.19 (+20.4%)  held 34.5h
 last trades:
   SOL          $21.51 -> $15.04 (-30.1%)  mirror_sell  0.7h
   VCAT         $21.18 -> $17.92 (-15.4%)  mirror_sell  0.2h
