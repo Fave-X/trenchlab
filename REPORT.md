@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-28 18:52 UTC
+Updated: 2026-11-28 19:02 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           166721
+pools seen           166776
 passed SCOUT         357
   killed by SCORE    42
   killed by AUDIT    112
 FINAL PASS           203
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   164562
-  few_unique_buyers           156269
-  liquidity_low               154401
-  volume_below_liquidity      116305
-  sells_dominate               45094
-  wash_churn                   35507
-  overheated                   15370
+  too_young                   164617
+  few_unique_buyers           156322
+  liquidity_low               154452
+  volume_below_liquidity      116343
+  sells_dominate               45112
+  wash_churn                   35518
+  overheated                   15372
   missing                       4434
   too_old                       1479
   copy_trade                      69
 
-OUTCOMES (median price change from first sighting / first pass; 10117 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 10121 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  203    -5.3%   -18.2%   -43.9%   -85.3%    60%
 SCOUT PASS, killed later    154    +7.6%   +15.2%    -7.2%   -74.6%    43%
-KILLED (tracked)          22658    +0.2%   -55.6%   -84.9%    -0.4%    26%
+KILLED (tracked)          22662    +0.2%   -55.6%   -84.8%    -0.4%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -96,7 +96,7 @@ win rate                         21%           22%           15%
 avg net / trade               -10.0%         -9.4%        -20.5%
 expectancy $/trade            $-1.84        $-1.88        $-4.59
 max drawdown                  -57.9%        -49.4%        -24.6%
-open now                           0             0             1
+open now                           0             1             1
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -122,10 +122,12 @@ signals skipped by the sizer/risk rules: already_traded_token 768, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $293.25 (-41.3%) | cash $293.25 | open 0 | max drawdown -49.4%
+equity $293.25 (-41.3%) | cash $278.59 | open 1 | max drawdown -49.4%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 110 | win 24/110 (22%) | avg net -9.4% | realized $-206.75 | expectancy $-1.88/trade
 exits: stop 85, trail 25
+open:
+  Artcoin      cost $14.66  now $14.66 (+0.0%)  held 0.0h
 last trades:
   DragonRiders $14.14 -> $16.08 (+13.7%)  trail  3.3h
   Fireball     $14.30 -> $11.10 (-22.3%)  stop  0.3h
@@ -147,7 +149,7 @@ closed 27 | win 4/27 (15%) | avg net -20.5% | realized $-123.94 | expectancy $-4
 exits: mirror_sell 25, stop 2
   (n=27 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $25.23 (+16.0%)  held 49.2h
+  santa        cost $21.75  now $25.23 (+16.0%)  held 49.4h
 last trades:
   ukiki        $20.04 -> $11.38 (-43.2%)  mirror_sell  0.0h
   BUIDL        $19.62 -> $18.95 (-3.4%)  mirror_sell  0.3h
