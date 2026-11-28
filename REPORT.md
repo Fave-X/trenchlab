@@ -1,44 +1,44 @@
 # TrenchLab report
 
-Updated: 2026-11-28 04:52 UTC
+Updated: 2026-11-28 05:03 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           162472
+pools seen           162517
 passed SCOUT         345
   killed by SCORE    42
   killed by AUDIT    103
 FINAL PASS           200
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   160342
-  few_unique_buyers           152318
-  liquidity_low               150436
-  volume_below_liquidity      113421
-  sells_dominate               43908
-  wash_churn                   34458
-  overheated                   14966
+  too_young                   160385
+  few_unique_buyers           152356
+  liquidity_low               150475
+  volume_below_liquidity      113454
+  sells_dominate               43920
+  wash_churn                   34465
+  overheated                   14970
   missing                       4372
-  too_old                       1464
+  too_old                       1465
   copy_trade                      65
 
-OUTCOMES (median price change from first sighting / first pass; 9892 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9894 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  200    -5.2%   -17.3%   -44.0%   -84.3%    60%
 SCOUT PASS, killed later    145    +6.7%   +11.6%    -7.4%   -74.6%    46%
-KILLED (tracked)          22122    +0.2%   -55.6%   -84.9%    -0.3%    26%
+KILLED (tracked)          22131    +0.2%   -55.6%   -84.9%    -0.3%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     629    -82.1%    -68.9%    20%
+too_young                     630    -81.9%    -68.9%    20%
 copy_trade                     65    -75.8%    -94.2%    11%
 wash_churn                     63     -1.1%    -85.6%    24%
 too_old                        52     -0.6%     -0.4%    10%
 liquidity_low                  37    -68.7%    -72.0%    57%
-overheated                     20    -12.8%    -56.0%    35%
+overheated                     21    -12.8%    -56.0%    33%
 volume_below_liquidity          9     -2.8%    +40.3%    33%
 sells_dominate                  3    -75.0%       -      67%
 
@@ -53,19 +53,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1371     +0.5%     -9.0%    -54.9%    24%
+none     1374     +0.5%     -9.0%    -54.9%    24%
 <15%      372     +4.2%    -24.4%    -57.4%    31%
 15-30%     43     -0.2%     -2.1%     +1.0%    47%
 30%+       40     -0.7%     -1.4%     +0.5%    40%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none     1181     +0.2%     -2.2%    -42.1%    24%
-<20%      571     +4.1%    -59.6%    -92.8%    26%
+none     1183     +0.2%     -2.1%    -42.1%    23%
+<20%      572     +4.1%    -59.6%    -92.8%    26%
 20%+       74     +2.6%    -99.1%  +1071.7%    82%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1756     +0.7%     -7.1%    -47.5%    25%
+<20%     1759     +0.7%     -6.9%    -47.5%    25%
 20-40%     42     -0.4%    -99.3%    -99.1%    81%
 40%+       28    -97.5%    -99.4%  +1071.7%    79%
-tokens analysed: 1641 | helius credits today: 2203/25000
+tokens analysed: 1644 | helius credits today: 2329/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -147,7 +147,7 @@ closed 22 | win 3/22 (14%) | avg net -23.1% | realized $-114.99 | expectancy $-5
 exits: mirror_sell 20, stop 2
   (n=22 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $25.80 (+18.6%)  held 35.2h
+  santa        cost $21.75  now $25.80 (+18.6%)  held 35.4h
 last trades:
   SOL          $21.51 -> $15.04 (-30.1%)  mirror_sell  0.7h
   VCAT         $21.18 -> $17.92 (-15.4%)  mirror_sell  0.2h
