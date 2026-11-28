@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-28 07:42 UTC
+Updated: 2026-11-28 07:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           163335
+pools seen           163382
 passed SCOUT         346
   killed by SCORE    42
   killed by AUDIT    104
 FINAL PASS           200
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   161192
-  few_unique_buyers           153114
-  liquidity_low               151241
-  volume_below_liquidity      114014
-  sells_dominate               44149
-  wash_churn                   34677
-  overheated                   15047
+  too_young                   161239
+  few_unique_buyers           153156
+  liquidity_low               151283
+  volume_below_liquidity      114048
+  sells_dominate               44161
+  wash_churn                   34690
+  overheated                   15049
   missing                       4379
   too_old                       1468
   copy_trade                      67
 
-OUTCOMES (median price change from first sighting / first pass; 9932 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9936 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  200    -5.2%   -17.3%   -44.0%   -84.3%    61%
 SCOUT PASS, killed later    146    +6.7%   +13.2%   -19.5%   -74.6%    45%
-KILLED (tracked)          22239    +0.2%   -55.6%   -84.8%    -0.3%    26%
+KILLED (tracked)          22245    +0.2%   -55.6%   -84.8%    -0.3%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     636    -81.6%    -68.9%    21%
+too_young                     636    -81.7%    -68.9%    21%
 copy_trade                     67    -72.4%    -94.2%    10%
 wash_churn                     63     -1.1%    -85.6%    25%
 too_old                        52     -0.6%     -0.4%    10%
@@ -53,19 +53,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1376     +0.5%     -8.9%    -54.9%    25%
+none     1377     +0.5%     -9.0%    -54.9%    25%
 <15%      379     +4.1%    -24.4%    -57.4%    32%
 15-30%     44     -0.1%     -2.9%     +1.0%    45%
 30%+       40     -0.7%     -1.4%     +0.5%    40%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none     1184     +0.2%     -2.1%    -42.1%    24%
-<20%      579     +3.5%    -59.6%    -92.8%    27%
-20%+       76     +4.3%    -99.1%  +1071.7%    82%
+none     1185     +0.2%     -2.2%    -42.1%    24%
+<20%      579     +3.4%    -59.6%    -92.8%    27%
+20%+       76     +5.9%    -99.1%  +1071.7%    82%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1768     +0.7%     -6.9%    -47.5%    25%
+<20%     1769     +0.7%     -7.1%    -47.5%    25%
 20-40%     42     -0.4%    -99.3%    -99.1%    81%
 40%+       29    -96.5%    -99.4%  +1071.7%    76%
-tokens analysed: 1654 | helius credits today: 3023/25000
+tokens analysed: 1655 | helius credits today: 3172/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -147,7 +147,7 @@ closed 24 | win 4/24 (17%) | avg net -20.4% | realized $-111.65 | expectancy $-4
 exits: mirror_sell 22, stop 2
   (n=24 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $25.80 (+18.6%)  held 38.0h
+  santa        cost $21.75  now $25.80 (+18.6%)  held 38.2h
 last trades:
   BAOBAO       $21.02 -> $9.54 (-54.6%)  mirror_sell  0.0h
   DOPAMINE     $20.19 -> $14.98 (-25.8%)  mirror_sell  0.5h
