@@ -1,41 +1,41 @@
 # TrenchLab report
 
-Updated: 2026-11-28 04:12 UTC
+Updated: 2026-11-28 04:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           162291
+pools seen           162318
 passed SCOUT         344
   killed by SCORE    42
   killed by AUDIT    102
 FINAL PASS           200
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   160161
-  few_unique_buyers           152156
-  liquidity_low               150270
-  volume_below_liquidity      113298
-  sells_dominate               43857
-  wash_churn                   34417
-  overheated                   14944
+  too_young                   160188
+  few_unique_buyers           152180
+  liquidity_low               150296
+  volume_below_liquidity      113319
+  sells_dominate               43868
+  wash_churn                   34421
+  overheated                   14946
   missing                       4370
   too_old                       1464
   copy_trade                      65
 
-OUTCOMES (median price change from first sighting / first pass; 9883 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9886 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  200    -5.2%   -17.3%   -44.0%   -84.3%    60%
 SCOUT PASS, killed later    144    +6.7%   +11.1%    -7.4%   -74.6%    46%
-KILLED (tracked)          22090    +0.2%   -55.6%   -84.9%    -0.3%    26%
+KILLED (tracked)          22096    +0.2%   -55.6%   -84.9%    -0.3%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
 too_young                     623    -82.1%    -68.9%    21%
 copy_trade                     65    -75.8%    -94.2%    11%
-wash_churn                     63     -1.2%    -85.6%    24%
+wash_churn                     63     -1.1%    -85.6%    24%
 too_old                        52     -0.6%     -0.4%    10%
 liquidity_low                  37    -68.7%    -72.0%    57%
 overheated                     20    -12.8%    -56.0%    35%
@@ -54,15 +54,15 @@ CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
 none     1367     +0.5%     -9.0%    -54.9%    25%
-<15%      369     +4.2%    -25.2%    -57.4%    31%
+<15%      369     +4.2%    -24.4%    -57.4%    31%
 15-30%     43     -0.2%     -2.1%     +1.0%    47%
 30%+       40     -0.7%     -1.4%     +0.5%    40%
 bundled     n   +1h med   +4h med  +24h med   rug%
 none     1177     +0.2%     -2.2%    -42.1%    24%
 <20%      568     +4.1%    -59.6%    -92.8%    26%
-20%+       74     +2.6%    -99.2%  +1071.7%    82%
+20%+       74     +2.6%    -99.1%  +1071.7%    82%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1749     +0.7%     -7.2%    -47.5%    25%
+<20%     1749     +0.7%     -7.1%    -47.5%    25%
 20-40%     42     -0.4%    -99.3%    -99.1%    81%
 40%+       28    -97.5%    -99.4%  +1071.7%    79%
 tokens analysed: 1634 | helius credits today: 1796/25000
@@ -89,8 +89,8 @@ C copies watched wallets with a 30s delay and mirror exits)
 ================================================================
                                    A             B             C
 started                  11-06 08:00   11-07 04:00   11-24 09:00
-equity                       $223.57       $296.56       $389.46
-return                        -55.3%        -40.7%        -22.1%
+equity                       $223.57       $296.56       $389.06
+return                        -55.3%        -40.7%        -22.2%
 closed trades                    142           109            22
 win rate                         21%           22%           14%
 avg net / trade               -10.9%         -9.3%        -23.1%
@@ -141,13 +141,13 @@ signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 458, dail
 PAPER BOOK C: copy-trading watched wallets (30s delay, mirror exits)
   pricing: model | start $500.00 on 2026-11-24 09:00 UTC
 ================================================================
-equity $389.46 (-22.1%) | cash $363.26 | open 1 | max drawdown -22.7%
+equity $389.06 (-22.2%) | cash $363.26 | open 1 | max drawdown -22.7%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 22 | win 3/22 (14%) | avg net -23.1% | realized $-114.99 | expectancy $-5.23/trade
 exits: mirror_sell 20, stop 2
   (n=22 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $26.19 (+20.4%)  held 34.5h
+  santa        cost $21.75  now $25.80 (+18.6%)  held 34.7h
 last trades:
   SOL          $21.51 -> $15.04 (-30.1%)  mirror_sell  0.7h
   VCAT         $21.18 -> $17.92 (-15.4%)  mirror_sell  0.2h
@@ -159,7 +159,7 @@ last trades:
   HUSS         $19.58 -> $17.36 (-11.3%)  mirror_sell  0.5h
 signals skipped by the sizer/risk rules: copy:liquidity_too_low 268, copy:no_pool 57, daily_loss_limit 53, copy:no_price_at_delay 31
 
-BOOK C per wallet  (watching 3 wallets, 1845 wallet trades seen)
+BOOK C per wallet  (watching 3 wallets, 1847 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
 CdF2qk…TyLu   v2-pass             1     0    0%   -45.9%   -10.06
 HSq83t…YPbW   v2-near-hold4      15     1   13%   -13.8%   -43.09
