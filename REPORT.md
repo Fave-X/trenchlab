@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-28 14:52 UTC
+Updated: 2026-11-28 15:03 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           165516
+pools seen           165563
 passed SCOUT         353
   killed by SCORE    42
   killed by AUDIT    109
 FINAL PASS           202
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   163364
-  few_unique_buyers           155147
-  liquidity_low               153248
-  volume_below_liquidity      115427
-  sells_dominate               44723
-  wash_churn                   35272
-  overheated                   15253
+  too_young                   163411
+  few_unique_buyers           155188
+  liquidity_low               153294
+  volume_below_liquidity      115456
+  sells_dominate               44734
+  wash_churn                   35280
+  overheated                   15258
   missing                       4424
   too_old                       1474
   copy_trade                      68
 
-OUTCOMES (median price change from first sighting / first pass; 10064 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 10067 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
-FINAL PASS                  202    -5.4%   -19.1%   -43.9%   -83.3%    60%
+FINAL PASS                  202    -5.4%   -19.1%   -43.9%   -84.3%    60%
 SCOUT PASS, killed later    151    +7.3%   +15.1%    -7.2%   -74.6%    44%
-KILLED (tracked)          22519    +0.2%   -55.4%   -84.8%    -0.3%    26%
+KILLED (tracked)          22528    +0.2%   -55.4%   -84.8%    -0.3%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -46,7 +46,7 @@ SCORE CHECK: scout passers by score (higher buckets should do better;
 if they don't, the score is decoration - change it)
 score       n   +4h med  +24h med   rug%
 80+       102    -49.4%    -93.3%    52%
-70-79     148    -50.8%    -77.7%    55%
+70-79     148    -50.8%    -78.0%    55%
 60-69      76    -32.0%    -92.1%    54%
 <60        27     -7.2%    -63.7%    48%
 
@@ -54,18 +54,18 @@ CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
 none     1408     +0.5%     -9.2%    -54.9%    24%
-<15%      401     +5.9%    -24.4%    -57.4%    31%
+<15%      401     +5.9%    -24.4%    -57.5%    31%
 15-30%     44     -0.2%     -2.9%     +1.0%    45%
 30%+       40     -0.7%     -1.4%     +0.5%    40%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none     1216     +0.3%     -2.2%    -42.1%    24%
+none     1216     +0.3%     -2.2%    -42.6%    24%
 <20%      601     +4.9%    -60.8%    -92.8%    26%
 20%+       76     +4.3%    -99.0%  +1071.7%    82%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1822     +0.7%     -7.3%    -47.5%    25%
+<20%     1822     +0.7%     -7.3%    -48.4%    25%
 20-40%     42     -0.4%    -99.3%    -99.1%    81%
 40%+       29    -97.5%    -99.4%  +1071.7%    76%
-tokens analysed: 1707 | helius credits today: 6537/25000
+tokens analysed: 1707 | helius credits today: 6607/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -89,13 +89,13 @@ C copies watched wallets with a 30s delay and mirror exits)
 ================================================================
                                    A             B             C
 started                  11-06 08:00   11-07 04:00   11-24 09:00
-equity                       $218.65       $296.56       $390.36
-return                        -56.3%        -40.7%        -21.9%
-closed trades                    144           109            25
-win rate                         21%           22%           16%
-avg net / trade               -11.0%         -9.3%        -19.9%
-expectancy $/trade            $-1.95        $-1.87        $-4.52
-max drawdown                  -57.9%        -49.4%        -22.7%
+equity                       $218.65       $296.56       $384.76
+return                        -56.3%        -40.7%        -23.0%
+closed trades                    144           109            26
+win rate                         21%           22%           15%
+avg net / trade               -11.0%         -9.3%        -20.3%
+expectancy $/trade            $-1.95        $-1.87        $-4.57
+max drawdown                  -57.9%        -49.4%        -23.6%
 open now                           0             0             1
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
@@ -141,15 +141,14 @@ signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 458, dail
 PAPER BOOK C: copy-trading watched wallets (30s delay, mirror exits)
   pricing: model | start $500.00 on 2026-11-24 09:00 UTC
 ================================================================
-equity $390.36 (-21.9%) | cash $365.13 | open 1 | max drawdown -22.7%
+equity $384.76 (-23.0%) | cash $359.53 | open 1 | max drawdown -23.6%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 25 | win 4/25 (16%) | avg net -19.9% | realized $-113.12 | expectancy $-4.52/trade
-exits: mirror_sell 23, stop 2
-  (n=25 < 100: noise, not evidence)
+closed 26 | win 4/26 (15%) | avg net -20.3% | realized $-118.72 | expectancy $-4.57/trade
+exits: mirror_sell 24, stop 2
+  (n=26 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $25.23 (+16.0%)  held 45.2h
+  santa        cost $21.75  now $25.23 (+16.0%)  held 45.4h
 last trades:
-  DOPAMINE     $20.19 -> $14.98 (-25.8%)  mirror_sell  0.5h
   JVRS         $20.22 -> $16.97 (-16.1%)  mirror_sell  0.3h
   ukiki        $20.04 -> $11.38 (-43.2%)  mirror_sell  0.0h
   BUIDL        $19.62 -> $18.95 (-3.4%)  mirror_sell  0.3h
@@ -157,12 +156,13 @@ last trades:
   RALLY        $19.45 -> $26.94 (+38.5%)  mirror_sell  0.5h
   SKS          $19.45 -> $15.29 (-21.4%)  mirror_sell  0.5h
   WARENBUFET   $19.59 -> $18.12 (-7.5%)  mirror_sell  1.2h
+  RWA          $19.52 -> $13.92 (-28.7%)  mirror_sell  0.0h
 signals skipped by the sizer/risk rules: copy:liquidity_too_low 268, copy:no_pool 57, daily_loss_limit 53, copy:no_price_at_delay 31
 
-BOOK C per wallet  (watching 3 wallets, 1856 wallet trades seen)
+BOOK C per wallet  (watching 3 wallets, 1858 wallet trades seen)
 wallet        label          closed  open  win%  avg net    P&L $
 CdF2qk…TyLu   v2-pass             1     0    0%   -45.9%   -10.06
-HSq83t…YPbW   v2-near-hold4      18     1   17%   -11.0%   -41.22
+HSq83t…YPbW   v2-near-hold4      19     1   16%   -11.9%   -46.83
 EDBMUo…Zfj7   t2-GTAVI/XV-a       6     0   17%   -42.4%   -61.84
 Drop wallets with negative expectancy after ~20 copied trades each.
 
