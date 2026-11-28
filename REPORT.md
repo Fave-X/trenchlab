@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-28 05:22 UTC
+Updated: 2026-11-28 05:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           162602
+pools seen           162652
 passed SCOUT         345
   killed by SCORE    42
   killed by AUDIT    103
 FINAL PASS           200
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   160468
-  few_unique_buyers           152439
-  liquidity_low               150555
-  volume_below_liquidity      113522
-  sells_dominate               43942
-  wash_churn                   34485
-  overheated                   14978
+  too_young                   160517
+  few_unique_buyers           152483
+  liquidity_low               150603
+  volume_below_liquidity      113559
+  sells_dominate               43952
+  wash_churn                   34495
+  overheated                   14983
   missing                       4376
   too_old                       1465
   copy_trade                      65
 
-OUTCOMES (median price change from first sighting / first pass; 9901 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9902 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  200    -5.2%   -17.3%   -44.0%   -84.3%    61%
 SCOUT PASS, killed later    145    +6.7%   +11.6%    -7.4%   -74.6%    46%
-KILLED (tracked)          22137    +0.2%   -55.6%   -84.9%    -0.3%    26%
+KILLED (tracked)          22145    +0.2%   -55.6%   -84.9%    -0.3%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -147,7 +147,7 @@ closed 22 | win 3/22 (14%) | avg net -23.1% | realized $-114.99 | expectancy $-5
 exits: mirror_sell 20, stop 2
   (n=22 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $25.80 (+18.6%)  held 35.7h
+  santa        cost $21.75  now $25.80 (+18.6%)  held 35.9h
 last trades:
   SOL          $21.51 -> $15.04 (-30.1%)  mirror_sell  0.7h
   VCAT         $21.18 -> $17.92 (-15.4%)  mirror_sell  0.2h
