@@ -1,44 +1,44 @@
 # TrenchLab report
 
-Updated: 2026-11-28 10:22 UTC
+Updated: 2026-11-28 10:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           164164
+pools seen           164215
 passed SCOUT         349
   killed by SCORE    42
   killed by AUDIT    105
 FINAL PASS           202
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   162019
-  few_unique_buyers           153868
-  liquidity_low               151976
-  volume_below_liquidity      114529
-  sells_dominate               44359
-  wash_churn                   34920
-  overheated                   15135
+  too_young                   162070
+  few_unique_buyers           153913
+  liquidity_low               152024
+  volume_below_liquidity      114558
+  sells_dominate               44368
+  wash_churn                   34934
+  overheated                   15141
   missing                       4410
   too_old                       1469
   copy_trade                      67
 
-OUTCOMES (median price change from first sighting / first pass; 10004 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 10008 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  202    -5.4%   -19.1%   -44.0%   -84.3%    60%
 SCOUT PASS, killed later    147    +6.7%   +14.7%   -13.5%   -74.6%    45%
-KILLED (tracked)          22372    +0.2%   -55.6%   -84.7%    -0.3%    26%
+KILLED (tracked)          22380    +0.2%   -55.6%   -84.7%    -0.3%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     655    -80.4%    -68.9%    21%
-copy_trade                     67    -72.4%    -94.2%    10%
+too_young                     655    -79.3%    -68.9%    21%
+copy_trade                     67    -69.0%    -94.2%    10%
 wash_churn                     63     -1.1%    -85.6%    25%
 too_old                        52     -0.6%     -0.4%    10%
 liquidity_low                  37    -68.7%    -72.0%    57%
-overheated                     21     -3.6%    -56.0%    33%
+overheated                     21     -3.6%    -56.0%    38%
 volume_below_liquidity          9     -2.8%    +40.3%    33%
 sells_dominate                  3    -75.0%       -      67%
 
@@ -53,19 +53,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1395     +0.5%     -9.0%    -54.9%    24%
-<15%      387     +4.3%    -26.5%    -57.4%    32%
+none     1394     +0.5%     -9.0%    -54.9%    24%
+<15%      388     +4.4%    -25.2%    -57.4%    32%
 15-30%     45     -0.1%     -2.1%     +1.0%    44%
 30%+       40     -0.7%     -1.4%     +0.5%    40%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none     1202     +0.2%     -2.2%    -42.1%    23%
+none     1202     +0.2%     -2.2%    -42.1%    24%
 <20%      588     +3.5%    -60.8%    -92.8%    26%
 20%+       77     +5.9%    -99.0%  +1071.7%    81%
 fresh       n   +1h med   +4h med  +24h med   rug%
-<20%     1796     +0.7%     -7.3%    -47.5%    25%
+<20%     1796     +0.7%     -7.2%    -47.5%    25%
 20-40%     42     -0.4%    -99.3%    -99.1%    81%
 40%+       29    -96.5%    -99.4%  +1071.7%    76%
-tokens analysed: 1682 | helius credits today: 4687/25000
+tokens analysed: 1682 | helius credits today: 4829/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -147,7 +147,7 @@ closed 24 | win 4/24 (17%) | avg net -20.4% | realized $-111.65 | expectancy $-4
 exits: mirror_sell 22, stop 2
   (n=24 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $25.80 (+18.6%)  held 40.7h
+  santa        cost $21.75  now $25.80 (+18.6%)  held 40.9h
 last trades:
   BAOBAO       $21.02 -> $9.54 (-54.6%)  mirror_sell  0.0h
   DOPAMINE     $20.19 -> $14.98 (-25.8%)  mirror_sell  0.5h
