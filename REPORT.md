@@ -1,25 +1,25 @@
 # TrenchLab report
 
-Updated: 2026-11-28 16:22 UTC
+Updated: 2026-11-28 16:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           165947
+pools seen           165984
 passed SCOUT         354
   killed by SCORE    42
   killed by AUDIT    110
 FINAL PASS           202
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   163791
-  few_unique_buyers           155543
-  liquidity_low               153666
-  volume_below_liquidity      115749
-  sells_dominate               44855
-  wash_churn                   35348
-  overheated                   15299
+  too_young                   163828
+  few_unique_buyers           155578
+  liquidity_low               153700
+  volume_below_liquidity      115778
+  sells_dominate               44867
+  wash_churn                   35362
+  overheated                   15304
   missing                       4424
   too_old                       1478
   copy_trade                      68
@@ -28,7 +28,7 @@ OUTCOMES (median price change from first sighting / first pass; 10082 pools had 
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  202    -5.4%   -19.1%   -43.9%   -84.3%    60%
 SCOUT PASS, killed later    152    +7.4%   +15.2%    -7.2%   -74.6%    43%
-KILLED (tracked)          22571    +0.3%   -55.5%   -84.8%    -0.3%    26%
+KILLED (tracked)          22576    +0.3%   -55.5%   -84.8%    -0.3%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -89,14 +89,14 @@ C copies watched wallets with a 30s delay and mirror exits)
 ================================================================
                                    A             B             C
 started                  11-06 08:00   11-07 04:00   11-24 09:00
-equity                       $218.65       $296.56       $384.76
-return                        -56.3%        -40.7%        -23.0%
-closed trades                    144           109            26
+equity                       $218.65       $293.25       $384.76
+return                        -56.3%        -41.3%        -23.0%
+closed trades                    144           110            26
 win rate                         21%           22%           15%
-avg net / trade               -11.0%         -9.3%        -20.3%
-expectancy $/trade            $-1.95        $-1.87        $-4.57
+avg net / trade               -11.0%         -9.4%        -20.3%
+expectancy $/trade            $-1.95        $-1.88        $-4.57
 max drawdown                  -57.9%        -49.4%        -23.6%
-open now                           0             1             1
+open now                           0             0             1
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
@@ -122,14 +122,11 @@ signals skipped by the sizer/risk rules: already_traded_token 767, daily_loss_li
 PAPER BOOK B: pullback (safety-first, buy the dip)
   pricing: model | start $500.00 on 2026-11-07 04:00 UTC
 ================================================================
-equity $296.56 (-40.7%) | cash $281.73 | open 1 | max drawdown -49.4%
+equity $293.25 (-41.3%) | cash $293.25 | open 0 | max drawdown -49.4%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
-closed 109 | win 24/109 (22%) | avg net -9.3% | realized $-203.44 | expectancy $-1.87/trade
-exits: stop 84, trail 25
-open:
-  STEADY       cost $14.83  now $14.83 (+0.0%)  held 0.0h
+closed 110 | win 24/110 (22%) | avg net -9.4% | realized $-206.75 | expectancy $-1.88/trade
+exits: stop 85, trail 25
 last trades:
-  KAI          $14.15 -> $15.35 (+8.5%)  trail  2.2h
   DragonRiders $14.14 -> $16.08 (+13.7%)  trail  3.3h
   Fireball     $14.30 -> $11.10 (-22.3%)  stop  0.3h
   DIHBALL      $14.30 -> $9.82 (-31.3%)  stop  0.2h
@@ -137,6 +134,7 @@ last trades:
   MEMECARD     $13.92 -> $20.01 (+43.7%)  trail  1.3h
   MoonBoy      $14.05 -> $25.11 (+78.7%)  trail  0.8h
   NBA          $14.60 -> $19.15 (+31.2%)  trail  1.3h
+  STEADY       $14.83 -> $11.52 (-22.3%)  stop  0.2h
 signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 458, daily_loss_limit 269, setup_rejected:dumping_now 182, setup_rejected:sellers_dominate_now 149, setup_rejected:b_bundled 124, setup_rejected:operator_cluster 71, setup_rejected:volume_dried_up 61, setup_rejected:lp_not_locked 55, setup_rejected:clustered_supply 47, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 20, setup_rejected:unknown:rugcheck_no_report 13, cooldown_after_loss 12, setup_rejected:rc_danger:Low Liquidity 11, setup_rejected:rc_danger:Creator history of rugged tokens 7, setup_rejected:unknown:lp_lock 6, max_open_positions 1
 
 ================================================================
@@ -149,7 +147,7 @@ closed 26 | win 4/26 (15%) | avg net -20.3% | realized $-118.72 | expectancy $-4
 exits: mirror_sell 24, stop 2
   (n=26 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $25.23 (+16.0%)  held 46.7h
+  santa        cost $21.75  now $25.23 (+16.0%)  held 46.9h
 last trades:
   JVRS         $20.22 -> $16.97 (-16.1%)  mirror_sell  0.3h
   ukiki        $20.04 -> $11.38 (-43.2%)  mirror_sell  0.0h
