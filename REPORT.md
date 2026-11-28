@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-28 00:02 UTC
+Updated: 2026-11-28 00:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           160915
+pools seen           160967
 passed SCOUT         339
   killed by SCORE    42
   killed by AUDIT    99
 FINAL PASS           198
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   158801
-  few_unique_buyers           150877
-  liquidity_low               148980
-  volume_below_liquidity      112337
-  sells_dominate               43501
-  wash_churn                   34048
-  overheated                   14794
+  too_young                   158852
+  few_unique_buyers           150927
+  liquidity_low               149031
+  volume_below_liquidity      112377
+  sells_dominate               43517
+  wash_churn                   34061
+  overheated                   14803
   missing                       4355
   too_old                       1459
   copy_trade                      63
 
-OUTCOMES (median price change from first sighting / first pass; 9709 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9710 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  198    -5.2%   -17.3%   -44.4%   -83.0%    60%
 SCOUT PASS, killed later    141    +6.7%   +13.2%   -19.5%   -74.6%    45%
-KILLED (tracked)          21899    +0.2%   -55.6%   -84.9%    -0.3%    26%
+KILLED (tracked)          21905    +0.2%   -55.6%   -85.0%    -0.3%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -96,17 +96,19 @@ win rate                         22%           21%           16%
 avg net / trade               -10.7%         -9.6%        -23.7%
 expectancy $/trade            $-1.94        $-1.93        $-5.44
 max drawdown                  -55.4%        -49.4%        -20.4%
-open now                           0             0             1
+open now                           1             0             1
 Judge on expectancy after >=100 trades each, not on win rate or a few days.
 
 ================================================================
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $232.01 (-53.6%) | cash $232.01 | open 0 | max drawdown -55.4%
+equity $232.01 (-53.6%) | cash $220.41 | open 1 | max drawdown -55.4%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 138 | win 30/138 (22%) | avg net -10.7% | realized $-267.99 | expectancy $-1.94/trade
 exits: stop 102, trail 35, dead_no_route 1
+open:
+  MoonBoy      cost $11.60  now $11.60 (+0.0%)  held 0.0h
 last trades:
   DragonRiders $12.44 -> $10.43 (-16.2%)  stop  0.2h
   KAI          $12.36 -> $13.64 (+10.3%)  trail  3.3h
@@ -135,7 +137,7 @@ last trades:
   Split        $13.92 -> $10.35 (-25.6%)  stop  0.7h
   MEMECARD     $13.92 -> $20.01 (+43.7%)  trail  1.3h
   MoonBoy      $14.05 -> $25.11 (+78.7%)  trail  0.8h
-signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 458, daily_loss_limit 269, setup_rejected:dumping_now 178, setup_rejected:sellers_dominate_now 149, setup_rejected:b_bundled 109, setup_rejected:volume_dried_up 61, setup_rejected:operator_cluster 57, setup_rejected:lp_not_locked 51, setup_rejected:clustered_supply 47, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 20, cooldown_after_loss 12, setup_rejected:rc_danger:Low Liquidity 11, setup_rejected:rc_danger:Creator history of rugged tokens 7, setup_rejected:unknown:lp_lock 6, setup_rejected:unknown:rugcheck_no_report 1, max_open_positions 1
+signals skipped by the sizer/risk rules: setup_rejected:few_buyers_now 458, daily_loss_limit 269, setup_rejected:dumping_now 178, setup_rejected:sellers_dominate_now 149, setup_rejected:b_bundled 110, setup_rejected:volume_dried_up 61, setup_rejected:operator_cluster 57, setup_rejected:lp_not_locked 51, setup_rejected:clustered_supply 47, setup_rejected:top10_concentrated 33, setup_rejected:bundled_buys 24, setup_rejected:b_received 20, cooldown_after_loss 12, setup_rejected:rc_danger:Low Liquidity 11, setup_rejected:rc_danger:Creator history of rugged tokens 7, setup_rejected:unknown:lp_lock 6, setup_rejected:unknown:rugcheck_no_report 1, max_open_positions 1
 
 ================================================================
 PAPER BOOK C: copy-trading watched wallets (30s delay, mirror exits)
@@ -147,7 +149,7 @@ closed 19 | win 3/19 (16%) | avg net -23.7% | realized $-103.44 | expectancy $-5
 exits: mirror_sell 17, stop 2
   (n=19 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $25.89 (+19.0%)  held 30.4h
+  santa        cost $21.75  now $25.89 (+19.0%)  held 30.5h
 last trades:
   COSMOS       $21.99 -> $18.46 (-16.0%)  mirror_sell  0.0h
   Pnp          $21.82 -> $20.41 (-6.5%)  mirror_sell  0.2h
