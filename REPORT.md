@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-28 11:42 UTC
+Updated: 2026-11-28 11:52 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           164581
+pools seen           164627
 passed SCOUT         351
   killed by SCORE    42
   killed by AUDIT    107
 FINAL PASS           202
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   162435
-  few_unique_buyers           154265
-  liquidity_low               152364
-  volume_below_liquidity      114796
-  sells_dominate               44467
-  wash_churn                   35039
-  overheated                   15161
+  too_young                   162481
+  few_unique_buyers           154311
+  liquidity_low               152409
+  volume_below_liquidity      114824
+  sells_dominate               44480
+  wash_churn                   35052
+  overheated                   15162
   missing                       4420
   too_old                       1470
   copy_trade                      67
 
-OUTCOMES (median price change from first sighting / first pass; 10025 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 10026 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  202    -5.4%   -19.1%   -44.0%   -83.3%    60%
 SCOUT PASS, killed later    149    +6.8%   +15.0%   -13.5%   -74.6%    44%
-KILLED (tracked)          22414    +0.2%   -55.6%   -84.7%    -0.3%    26%
+KILLED (tracked)          22417    +0.2%   -55.6%   -84.7%    -0.3%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -147,7 +147,7 @@ closed 24 | win 4/24 (17%) | avg net -20.4% | realized $-111.65 | expectancy $-4
 exits: mirror_sell 22, stop 2
   (n=24 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $25.23 (+16.0%)  held 42.0h
+  santa        cost $21.75  now $25.23 (+16.0%)  held 42.2h
 last trades:
   BAOBAO       $21.02 -> $9.54 (-54.6%)  mirror_sell  0.0h
   DOPAMINE     $20.19 -> $14.98 (-25.8%)  mirror_sell  0.5h
