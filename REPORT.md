@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-28 10:42 UTC
+Updated: 2026-11-28 10:53 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           164273
+pools seen           164330
 passed SCOUT         349
   killed by SCORE    42
   killed by AUDIT    105
 FINAL PASS           202
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   162128
-  few_unique_buyers           153968
-  liquidity_low               152078
-  volume_below_liquidity      114591
-  sells_dominate               44389
-  wash_churn                   34951
-  overheated                   15144
-  missing                       4410
-  too_old                       1469
+  too_young                   162184
+  few_unique_buyers           154023
+  liquidity_low               152133
+  volume_below_liquidity      114629
+  sells_dominate               44407
+  wash_churn                   34972
+  overheated                   15148
+  missing                       4411
+  too_old                       1470
   copy_trade                      67
 
-OUTCOMES (median price change from first sighting / first pass; 10010 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 10012 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  202    -5.4%   -19.1%   -44.0%   -84.3%    60%
 SCOUT PASS, killed later    147    +6.7%   +14.7%   -13.5%   -74.6%    45%
-KILLED (tracked)          22387    +0.2%   -55.6%   -84.8%    -0.3%    26%
+KILLED (tracked)          22394    +0.2%   -55.6%   -84.8%    -0.3%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     658    -79.3%    -68.9%    21%
+too_young                     658    -78.3%    -68.9%    21%
 copy_trade                     67    -69.0%    -94.2%    10%
 wash_churn                     63     -1.1%    -85.6%    25%
 too_old                        52     -0.6%     -0.4%    10%
@@ -147,7 +147,7 @@ closed 24 | win 4/24 (17%) | avg net -20.4% | realized $-111.65 | expectancy $-4
 exits: mirror_sell 22, stop 2
   (n=24 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $25.23 (+16.0%)  held 41.0h
+  santa        cost $21.75  now $25.23 (+16.0%)  held 41.2h
 last trades:
   BAOBAO       $21.02 -> $9.54 (-54.6%)  mirror_sell  0.0h
   DOPAMINE     $20.19 -> $14.98 (-25.8%)  mirror_sell  0.5h
