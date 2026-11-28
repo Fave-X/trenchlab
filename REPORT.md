@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-28 15:03 UTC
+Updated: 2026-11-28 15:12 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           165563
+pools seen           165598
 passed SCOUT         353
   killed by SCORE    42
   killed by AUDIT    109
 FINAL PASS           202
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   163411
-  few_unique_buyers           155188
-  liquidity_low               153294
-  volume_below_liquidity      115456
-  sells_dominate               44734
-  wash_churn                   35280
-  overheated                   15258
+  too_young                   163444
+  few_unique_buyers           155219
+  liquidity_low               153328
+  volume_below_liquidity      115481
+  sells_dominate               44742
+  wash_churn                   35284
+  overheated                   15263
   missing                       4424
-  too_old                       1474
+  too_old                       1476
   copy_trade                      68
 
-OUTCOMES (median price change from first sighting / first pass; 10067 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 10069 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  202    -5.4%   -19.1%   -43.9%   -84.3%    60%
 SCOUT PASS, killed later    151    +7.3%   +15.1%    -7.2%   -74.6%    44%
-KILLED (tracked)          22528    +0.2%   -55.4%   -84.8%    -0.3%    26%
+KILLED (tracked)          22532    +0.3%   -55.5%   -84.8%    -0.3%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -54,7 +54,7 @@ CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
 none     1408     +0.5%     -9.2%    -54.9%    24%
-<15%      401     +5.9%    -24.4%    -57.5%    31%
+<15%      401     +5.9%    -24.4%    -57.5%    32%
 15-30%     44     -0.2%     -2.9%     +1.0%    45%
 30%+       40     -0.7%     -1.4%     +0.5%    40%
 bundled     n   +1h med   +4h med  +24h med   rug%
@@ -147,7 +147,7 @@ closed 26 | win 4/26 (15%) | avg net -20.3% | realized $-118.72 | expectancy $-4
 exits: mirror_sell 24, stop 2
   (n=26 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $25.23 (+16.0%)  held 45.4h
+  santa        cost $21.75  now $25.23 (+16.0%)  held 45.5h
 last trades:
   JVRS         $20.22 -> $16.97 (-16.1%)  mirror_sell  0.3h
   ukiki        $20.04 -> $11.38 (-43.2%)  mirror_sell  0.0h
