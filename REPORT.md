@@ -1,34 +1,34 @@
 # TrenchLab report
 
-Updated: 2026-11-28 03:12 UTC
+Updated: 2026-11-28 03:22 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           161984
+pools seen           162044
 passed SCOUT         344
   killed by SCORE    42
   killed by AUDIT    102
 FINAL PASS           200
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   159855
-  few_unique_buyers           151874
-  liquidity_low               149989
-  volume_below_liquidity      113075
-  sells_dominate               43786
-  wash_churn                   34336
-  overheated                   14911
+  too_young                   159915
+  few_unique_buyers           151932
+  liquidity_low               150047
+  volume_below_liquidity      113123
+  sells_dominate               43800
+  wash_churn                   34353
+  overheated                   14917
   missing                       4370
   too_old                       1463
   copy_trade                      65
 
-OUTCOMES (median price change from first sighting / first pass; 9860 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 9868 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  200    -5.2%   -17.3%   -44.0%   -83.0%    60%
 SCOUT PASS, killed later    144    +6.7%   +11.1%   -13.5%   -74.6%    46%
-KILLED (tracked)          22039    +0.2%   -55.6%   -84.8%    -0.3%    26%
+KILLED (tracked)          22047    +0.2%   -55.6%   -84.8%    -0.3%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
@@ -89,8 +89,8 @@ C copies watched wallets with a 30s delay and mirror exits)
 ================================================================
                                    A             B             C
 started                  11-06 08:00   11-07 04:00   11-24 09:00
-equity                       $225.32       $296.56       $389.46
-return                        -54.9%        -40.7%        -22.1%
+equity                       $225.83       $296.56       $389.46
+return                        -54.8%        -40.7%        -22.1%
 closed trades                    141           109            22
 win rate                         21%           22%           14%
 avg net / trade               -10.9%         -9.3%        -23.1%
@@ -103,12 +103,12 @@ Judge on expectancy after >=100 trades each, not on win rate or a few days.
 PAPER BOOK A: momentum (thread filters)
   pricing: model | start $500.00 on 2026-11-06 08:00 UTC
 ================================================================
-equity $225.32 (-54.9%) | cash $213.47 | open 1 | max drawdown -56.9%
+equity $225.83 (-54.8%) | cash $213.47 | open 1 | max drawdown -56.9%
 ledger reconciles: YES (cash + open cost = start + realized P&L)
 closed 141 | win 30/141 (21%) | avg net -10.9% | realized $-275.13 | expectancy $-1.95/trade
 exits: stop 105, trail 35, dead_no_route 1
 open:
-  Memeball     cost $11.40  now $11.85 (+4.0%)  held 1.2h
+  Memeball     cost $11.40  now $12.36 (+8.4%)  held 1.4h
 last trades:
   Kibo         $12.81 -> $11.47 (-10.4%)  stop  0.5h
   WINSTON      $12.74 -> $10.21 (-19.8%)  stop  0.2h
@@ -149,7 +149,7 @@ closed 22 | win 3/22 (14%) | avg net -23.1% | realized $-114.99 | expectancy $-5
 exits: mirror_sell 20, stop 2
   (n=22 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $26.19 (+20.4%)  held 33.5h
+  santa        cost $21.75  now $26.19 (+20.4%)  held 33.7h
 last trades:
   SOL          $21.51 -> $15.04 (-30.1%)  mirror_sell  0.7h
   VCAT         $21.18 -> $17.92 (-15.4%)  mirror_sell  0.2h
