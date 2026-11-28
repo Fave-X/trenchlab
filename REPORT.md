@@ -1,39 +1,39 @@
 # TrenchLab report
 
-Updated: 2026-11-28 11:22 UTC
+Updated: 2026-11-28 11:32 UTC
 
 ```
 ================================================================
 TRENCHLAB REPORT
 ================================================================
-pools seen           164478
+pools seen           164525
 passed SCOUT         351
   killed by SCORE    42
   killed by AUDIT    107
 FINAL PASS           202
 
 top kill reasons at first sighting (a pool can have several):
-  too_young                   162332
-  few_unique_buyers           154167
-  liquidity_low               152274
-  volume_below_liquidity      114729
-  sells_dominate               44443
-  wash_churn                   35014
-  overheated                   15156
+  too_young                   162379
+  few_unique_buyers           154210
+  liquidity_low               152316
+  volume_below_liquidity      114761
+  sells_dominate               44454
+  wash_churn                   35031
+  overheated                   15160
   missing                       4414
   too_old                       1470
   copy_trade                      67
 
-OUTCOMES (median price change from first sighting / first pass; 10018 pools had zero-liquidity/frozen-price data gaps, ignored)
+OUTCOMES (median price change from first sighting / first pass; 10021 pools had zero-liquidity/frozen-price data gaps, ignored)
 group                         n     +15m      +1h      +4h     +24h   rug%
 FINAL PASS                  202    -5.4%   -19.1%   -44.0%   -83.3%    60%
-SCOUT PASS, killed later    149    +6.8%   +14.7%   -13.5%   -74.6%    44%
-KILLED (tracked)          22405    +0.2%   -55.6%   -84.7%    -0.3%    26%
+SCOUT PASS, killed later    149    +6.8%   +15.0%   -13.5%   -74.6%    44%
+KILLED (tracked)          22411    +0.2%   -55.6%   -84.7%    -0.3%    26%
 
 NEAR MISSES: pools killed by exactly ONE rule
 (if these do as well as FINAL PASS, that rule may be killing winners)
 rule                            n   +4h med  +24h med   rug%
-too_young                     657    -77.2%    -68.9%    21%
+too_young                     658    -77.2%    -68.9%    21%
 copy_trade                     67    -69.0%    -94.2%    10%
 wash_churn                     63     -1.1%    -85.6%    25%
 too_old                        52     -0.6%     -0.4%    10%
@@ -53,19 +53,19 @@ score       n   +4h med  +24h med   rug%
 CABAL CHECK: tracked pools by largest linked-wallet cluster (% of supply)
 (bigger clusters should rug more / do worse; if not, the cluster rule is noise)
 cluster     n   +1h med   +4h med  +24h med   rug%
-none     1399     +0.5%     -9.0%    -56.1%    24%
-<15%      389     +4.6%    -26.1%    -57.4%    32%
+none     1400     +0.5%     -9.0%    -56.1%    24%
+<15%      389     +5.0%    -26.1%    -57.4%    32%
 15-30%     45     -0.1%     -2.1%     +1.0%    44%
 30%+       40     -0.7%     -1.4%     +0.5%    40%
 bundled     n   +1h med   +4h med  +24h med   rug%
-none     1207     +0.3%     -2.2%    -42.6%    24%
-<20%      589     +4.1%    -60.9%    -92.8%    26%
+none     1208     +0.3%     -2.2%    -42.6%    24%
+<20%      589     +4.6%    -60.9%    -92.8%    26%
 20%+       77     +5.9%    -99.0%  +1071.7%    81%
 fresh       n   +1h med   +4h med  +24h med   rug%
 <20%     1802     +0.7%     -7.3%    -48.4%    25%
 20-40%     42     -0.4%    -99.3%    -99.1%    81%
-40%+       29    -96.5%    -99.4%  +1071.7%    76%
-tokens analysed: 1688 | helius credits today: 5206/25000
+40%+       30    -96.5%    -99.4%  +1071.7%    73%
+tokens analysed: 1689 | helius credits today: 5272/25000
 
 EXIT GRID on FINAL PASS entries (round-trip cost 4.0%, trail distance 10%)
   stop  trail@    n   win%   avg net   median    worst
@@ -147,7 +147,7 @@ closed 24 | win 4/24 (17%) | avg net -20.4% | realized $-111.65 | expectancy $-4
 exits: mirror_sell 22, stop 2
   (n=24 < 100: noise, not evidence)
 open:
-  santa        cost $21.75  now $25.23 (+16.0%)  held 41.7h
+  santa        cost $21.75  now $25.23 (+16.0%)  held 41.9h
 last trades:
   BAOBAO       $21.02 -> $9.54 (-54.6%)  mirror_sell  0.0h
   DOPAMINE     $20.19 -> $14.98 (-25.8%)  mirror_sell  0.5h
